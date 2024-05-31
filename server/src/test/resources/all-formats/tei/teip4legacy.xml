@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
+        <!ENTITY % TEI.prose 'INCLUDE'>
+        <!ENTITY % TEI.linking 'INCLUDE'>
+        <!ENTITY % TEI.figures 'INCLUDE'>
+        <!ENTITY % TEI.analysis 'INCLUDE'>
+        <!ENTITY % TEI.corpus 'INCLUDE'>
+        <!ENTITY % TEI.names.dates 'INCLUDE'>
+        <!ENTITY % TEI.XML 'INCLUDE'>
+        ]>
+<TEI.2>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Hebban olla vogala</title>
+            </titleStmt>
+            <sourceDesc>
+                <listBibl id="inlMetadata">
+                    <bibl>
+                        <interpGrp type="medium">
+                            <interp value="newspaper" />
+                        </interpGrp>
+                        <interpGrp type="newspaperEdition">
+                            <interp value="maandag" />
+                        </interpGrp>
+                        <interpGrp type="pubYear_from">
+                            <interp value="2024" />
+                        </interpGrp>
+                        <interpGrp type="pubYear_to">
+                            <interp value="2024" />
+                        </interpGrp>
+                        <interpGrp type="witnessYear_from">
+                            <interp value="2024" />
+                        </interpGrp>
+                        <interpGrp type="witnessYear_to">
+                            <interp value="2024" />
+                        </interpGrp>
+                        <interpGrp type="pubMonth_from">
+                            <interp value="02" />
+                        </interpGrp>
+                        <interpGrp type="witnessMonth_from">
+                            <interp value="02" />
+                        </interpGrp>
+                        <interpGrp type="pubMonth_to">
+                            <interp value="02" />
+                        </interpGrp>
+                        <interpGrp type="witnessMonth_to">
+                            <interp value="02" />
+                        </interpGrp>
+                        <interpGrp type="pubDay_from">
+                            <interp value="19" />
+                        </interpGrp>
+                        <interpGrp type="witnessDay_from">
+                            <interp value="19" />
+                        </interpGrp>
+                        <interpGrp type="pubDay_to">
+                            <interp value="19" />
+                        </interpGrp>
+                        <interpGrp type="witnessDay_to">
+                            <interp value="19" />
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div1>
+                <head type="main">Hebban</head>
+                <head type="sub">Olla</head>
+                <byline>Vogala <docAuthor>Nestas</docAuthor></byline>
+                <argument>
+                    <p>Hagunan</p>
+                </argument>
+                <div2>
+                    <head type="sub">hinase</head>
+                    <p>ic ende thu</p>
+                    <gap reason="image" />
+                </div2>
+            </div1>
+            <closer>Copyright</closer>
+        </body>
+    </text>
+</TEI.2>

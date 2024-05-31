@@ -1,0 +1,17 @@
+token	lemma	pos
+Deze	deze	PD
+tekst	terecht	VRB
+loopt	lopen	VRB
+over	over	ADP
+meedere	meer	ADV
+paragrafen	partikf	NOU-P
+heen	waarheen	ADV
+en	en	CON
+bevat	bevelen	VRB
+ook	ook	ADV
+extra	extra	ADV
+whitspaces	wijsbaar	ADJ
+zowel	zowel	ADV
+spaties	spaans	NOU-P
+als	als	CON
+tabs	tabas	NOU-C

@@ -1,0 +1,6 @@
+<TEI>
+    <text><p>this text should be included.
+        <note type="editorial">But not this note</note>
+        <note>But this note</note>
+    </p></text>
+</TEI>

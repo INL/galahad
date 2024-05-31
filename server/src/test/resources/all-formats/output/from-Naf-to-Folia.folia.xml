@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FoLiA xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ilk.uvt.nl/folia" xml:id="id_input_naf" generator="galahad.ivdnt.org" version="2.5.3">
+    <metadata type="native">
+        <annotations>
+            <text-annotation/>
+            <paragraph-annotation/>
+            <sentence-annotation/>
+            <token-annotation/>
+            <lemma-annotation set="pie-tdn">
+                <annotator processor="pie-tdn"/>
+            </lemma-annotation>
+            <pos-annotation set="pie-tdn">
+                <annotator processor="pie-tdn"/>
+            </pos-annotation>
+        </annotations>
+        <provenance>
+            <processor host="galahad.ivdnt.org" name="pie-tdn" src="https://github.com/INL/taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn"/>
+        </provenance>
+    </metadata>
+    <text xml:id="id_input_naf.text">
+        <p xml:id="id_input_naf.p1">
+            <w xml:id="id_input_naf.p1.w1">
+                <t>Hebban</t>
+                <lemma class="hebben" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="VRB(finiteness=fin,tense=past)" head="VRB" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w2">
+                <t>olla</t>
+                <lemma class="olle" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="RES(type=for)" head="RES" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w3">
+                <t>vogala</t>
+                <lemma class="vogala" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="NOU-C(number=sg)" head="NOU-C" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w4">
+                <t>,</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w5">
+                <t>nestas</t>
+                <lemma class="nestatis" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="RES(type=for)" head="RES" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w6">
+                <t>hagunnan</t>
+                <lemma class="haguna" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="NOU-C(number=sg)" head="NOU-C" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w7">
+                <t>.</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w8">
+                <t>.</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w9">
+                <t>.</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w10">
+                <t>Hinase</t>
+                <lemma class="hinas" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="NOU-P" head="NOU-P" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w11">
+                <t>ic</t>
+                <lemma class="ik" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="PD(type=pers,position=free)" head="PD" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w12">
+                <t>ende</t>
+                <lemma class="en" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="CONJ(type=coor)" head="CONJ" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w13">
+                <t>thu</t>
+                <lemma class="huben" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="ADV(type=reg)" head="ADV" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w14">
+                <t>:</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w15">
+                <t>&quot;</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w16">
+                <t>uuat</t>
+                <lemma class="uiteen" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="PD(type=w-p,position=free)" head="PD" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w17">
+                <t>unbidan</t>
+                <lemma class="unibent" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="CONJ(type=sub)" head="CONJ" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w18">
+                <t>wi</t>
+                <lemma class="wij" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="PD(type=pers,position=free)" head="PD" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w19">
+                <t>nu</t>
+                <lemma class="nu" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="ADV(type=reg)" head="ADV" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w20">
+                <t>?</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+            <w xml:id="id_input_naf.p1.w21">
+                <t>&quot;</t>
+                <lemma class="null" processor="pie-tdn" set="pie-tdn"/>
+                <pos class="LET" head="LET" processor="pie-tdn" set="pie-tdn"/>
+            </w>
+        </p>
+    </text>
+</FoLiA>

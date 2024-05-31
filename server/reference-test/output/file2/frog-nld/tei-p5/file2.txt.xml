@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>file2.txt</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date>0000-00-00 00:00:00</date>
+                    <idno type="sourceID">What if source id is undefined?</idno>
+                    <idno type="pid">What if no pid is defined?</idno>
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl xml:id="inlMetadata">
+                    <bibl>
+                        <interpGrp type="questions">
+                            <interp>Welke inl data?</interp>
+                            <interp>wat als er geen is?</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+                <listBibl xml:id="galahadMetadata">
+                    <bibl>
+                        <interpGrp type="model">
+                            <interp>frog-nld</interp>
+                        </interpGrp>
+                        <interpGrp type="tagset">
+                            <interp>CGN</interp>
+                        </interpGrp>
+                        <interpGrp type="corpus_name">
+                            <interp>testcorpus</interp>
+                        </interpGrp>
+                        <interpGrp type="corpus_uuid">
+                            <interp>00000000-0000-0000-0000-000000000000</interp>
+                        </interpGrp>
+                        <interpGrp type="date">
+                            <interp>0000-00-00 00:00:00</interp>
+                        </interpGrp>
+                        <interpGrp type="user_id">
+                            <interp>you</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+<p><w lemma="dit" pos="VNW(aanw,pron,stan,vol,3o,ev)" xml:id="w0">Dit</w> <w lemma="zijn" pos="WW(pv,tgw,ev)" xml:id="w1">is</w> <w lemma="de" pos="LID(bep,stan,rest)" xml:id="w2">de</w> <w lemma="twee" pos="TW(rang,prenom,stan)" xml:id="w3">tweede</w> <w lemma="testfile." pos="N(soort,ev,basis,zijd,stan)" xml:id="w4">testfile.</w></p>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,6 @@
+token	lemma	pos
+Dit	dit	VNW(aanw,pron,stan,vol,3o,ev)
+is	zijn	WW(pv,tgw,ev)
+de	de	LID(bep,stan,rest)
+eerste	een	TW(rang,prenom,stan)
+testfile.	testfile.	WW(vd,vrij,zonder)

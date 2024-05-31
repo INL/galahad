@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GalahadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <envs>
+      <env name="spring.profiles.active" value="dev" />
+    </envs>
+    <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+    <module name="galahad.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.ivdnt.galahad.app.GalahadApplicationKt" />
+    <option name="VM_PARAMETERS" value="-Xms3g -Xmx6g" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

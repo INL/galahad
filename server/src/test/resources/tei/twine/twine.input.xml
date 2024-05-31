@@ -1,0 +1,164 @@
+<TEI xmlns:egXML="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dump="http://www.masereeuw.nl/xslt/dump-xml" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+    </teiHeader>
+<text>
+<body>
+<p>n<hi rend="bold">e</hi>t <milestone n="1va" unit="fol"/> <hi rend="bold">w</hi><hi rend="bold">a</hi><hi rend="bold">s</hi> ik <hi rend="bold">n</hi>aar sc<hi rend="bold">h</hi><hi rend="bold">o</hi>o<hi rend="bold">l</hi> heen en t<hi rend="bold">e</hi>r<hi rend="bold">u</hi>g w<hi rend="bold">eze</hi>n lope<hi rend="bold">n</hi> <hi rend="bold">enz</hi>o</p>
+
+<pc lemma="onzin">.</pc>
+<pc pos="onzin">.</pc>
+<pc>.</pc>
+<w lemma="onzin">scholen</w>
+<w pos="onzin">scholen</w>
+
+<w> scholen </w>
+<w>scho len</w>
+<w>scho
+len</w>
+
+<p>
+    electu<p>arien zijnde</p>
+</p>
+
+<p>
+    electu<p>
+    arien</p>
+</p>
+
+<q>
+    electu<p>arien</p>
+</q>
+
+<q>
+    electu<p>
+    arien</p>
+    </q>
+
+<p><hi rend="bold">test</hi>en</p>
+
+<p><hi rend="bold">test</hi>en woord</p>
+
+<p><hi rend="bold">cba fed<expan>abc def</expan>ghi jkl</hi>mno</p>
+<p>
+abc <hi class="bold">def ghi<hi class="italic">jkl</hi><hi class="red"><hi class="sub">mno</hi> pqr</hi>stu xyz</hi>abc def
+</p>
+<p>
+To ob<hi class="italic">ey</hi> or n<hi class="bold">o</hi>t to be,<br />that is the <hi class="bold">one <hi class="red">question</hi> that y<hi class="italic">re</hi>main</hi>ed.
+</p>
+
+<!-- 2 levels deep-->
+<p><hi rend="bold"><expan>abc</expan></hi></p>
+<p><hi rend="bold"><expan>abc</expan></hi>def</p>
+<p>abc<hi rend="bold"><expan>def</expan></hi></p>
+
+<p><hi rend="bold">abc<expan>def</expan></hi></p>
+<p>abc<hi rend="bold">def<expan>ghi</expan></hi></p>
+<p><hi rend="bold">def<expan>ghi</expan></hi>jkl</p>
+<p>abc<hi rend="bold">def<expan>ghi</expan></hi>jkl</p>
+
+<p><hi rend="bold"><expan>abc</expan>def</hi></p>
+<p><hi rend="bold"><expan>abc</expan>def</hi>ghi</p>
+<p>abc<hi rend="bold"><expan>def</expan>ghi</hi></p>
+<p>abc<hi rend="bold"><expan>def</expan>ghi</hi>jkl</p>
+
+<p><hi rend="bold">cba<expan>abc</expan>def</hi></p>
+<p><hi rend="bold">cba<expan>abc</expan>def</hi>ghi</p>
+<p>abc<hi rend="bold">cba<expan>def</expan>ghi</hi></p>
+<p>abc<hi rend="bold">cba<expan>def</expan>ghi</hi>jkl</p>
+
+
+<p>
+    <w xml:id="enge022vand01_01.TEI.2.text.body.div.lg.7633.s.1.w.11" pos="PD(type=d-p,subtype=art,position=prenom)" lemma="de">die</w>
+    <w xml:id="enge022vand01_01.TEI.2.text.body.div.lg.7633.s.1.w.12" pos="NOU-C(number=sg)" n="mw_288" lemma="droogheid">droecheit<join n="mw_288"/>
+    </w>
+    <w pos="NOU-C(number=pl)" xml:id="w.185" lemma="rebel" lexicon="molex"><seg>rebellen</seg></w><pc xml:id="pc.000005" type="." lemma="e." pos="LET">.</pc>
+</p>
+
+<p>
+scholen.
+</p>
+
+<p>
+wilt v<expan>er</expan>wittigen.
+
+Eersame vrome
+</p>
+
+<p><milestone n="1va" unit="fol"/>test</p>
+
+<p>
+Copie
+
+Wert belast en<expan>de</expan> bevolen
+</p>
+
+<p>
+andere offic<expan ana="#add2expan" resp="ed">i</expan>eren.
+
+Concludeert daeromme
+</p>
+
+<p>
+na de <ref target="http://de-wit.net/bronnen/histo/politieke_ordonnantie_holland-1580.htm">Ordonnantie en Placaaten van de Politie</ref>, haare af kundinge
+</p>
+
+
+<p><hi rend="italic">Hoe Walewein Lancelote bescudde en enen camp voor hem vacht. </hi></p>
+
+<p>ter putie<expan>ntie<expan ana="#add2expan" resp="ed">?</expan></expan> van mijn heer</p>
+
+<p>alhier <del>noe</del> hoechnoedich</p>
+
+<p>met noch <gap reason="illegible"/>dlik<expan ana="#add2expan" resp="ed">?</expan> uuyt desen</p>
+
+<p>hopluyden <del>oftmeden<expan>de</expan></del> knechten</p>
+
+<p>
+naemen van de K<expan ana="#add2expan" resp="ed">eyserlicke</expan> M<expan ana="#add2expan" resp="ed">ajestey</expan>t de jus<expan ana="#add2expan" resp="ed">t</expan>icie om vergiffenisse. 
+</p>
+
+
+<p>nyet en es, <del><gap extent="word" reason="illegible"/></del>
+maer der selver</p> <!--the newline here is important-->
+
+<p>ik loop <hi>naar</hi>
+school</p> <!--the newline here is important-->
+
+<p>ik loop naar
+<hi>huis</hi></p> <!--the newline here is important-->
+
+<p>stadt Sutphen
+<add place="margin"> R<expan>ecept</expan>ae 16 Martii</add></p>
+
+<p>frunde<expan>n</expan> <add place="onder"> R<expan>ecept</expan>ae 16 Martii</add></p>
+
+<p>mir das <gap reason="illegible"/>ring, das sonst</p>
+
+<p>test-en</p>
+
+<p>genige voirs<expan>chreven</expan> <add place="begin">dan dat oick die fia<expan>n</expan>dt ahm gesyn sich v<expan>er</expan>sammelen und sines arlisztes gewelttig moth sijn,</add> vifftig <del>oders</del></p>
+
+<!--hoe moet dit überhaupt-->
+<p>blievet froeme dat l<gap reason="illegible"/> g<gap reason="illegible"/><del> i</del> in gesontheid</p>
+
+<p>wij <add place="begin">in dese weszhae zeer verfallene und geoppressirde nots <del>ke</del> ghiene provisi va<expan>n</expan> holt</add> bij</p>
+
+<p>gunstige here, wij <del>hebben hierbevoerens</del> hadden</p>
+
+<p><add place="margin"> An d<expan>en</expan> scholtis to Zutphe<expan>n</expan> of sijne<expan>n</expan> stathold<expan>er</expan></add> Erentfeste</p>
+
+<p>welcker voirs<expan>creuen</expan> <add place="left"> LVj </add><del>LXj</del> rydders die</p>
+
+<p>desse breiff. <add place="left">vermeldet</add> Soe is</p>
+
+
+<p>vyfftich <del>auerkomen en<expan>de</expan></del><expan/> met</p>
+
+<p>pater toe <hi rend="font-weight:bold">Aelsum </hi>(bij Akkrum), ende</p>
+
+<p>Mijnen gans goetwijlleghen dijens[t] na allen vermoeghen altijt tibi honorem<ref target="N044"><hi rend="font-size:8pt;font-weight:bold"> * </hi></ref> . Eerbare,</p>
+
+
+</body>
+</text>
+</TEI>

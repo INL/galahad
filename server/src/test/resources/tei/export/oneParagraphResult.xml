@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>mocktei</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date>__DATE_IGNORED_BY_TEST__</date>
+                    <idno type="sourceID">What if source id is undefined?</idno>
+                    <idno type="pid">What if no pid is defined?</idno>
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl xml:id="inlMetadata">
+                    <bibl>
+                        <interpGrp type="questions">
+                            <interp>Welke inl data?</interp>
+                            <interp>wat als er geen is?</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+                <listBibl xml:id="galahadMetadata">
+                    <bibl>
+                        <interpGrp type="model">
+                            <interp>pie-tdn</interp>
+                        </interpGrp>
+                        <interpGrp type="tagset">
+                            <interp>UNKNOWN</interp>
+                            <interp>Unknown Tagset</interp>
+                        </interpGrp>
+                        <interpGrp type="corpus_name">
+                            <interp>testcorpus</interp>
+                        </interpGrp>
+                        <interpGrp type="corpus_uuid">
+                            <interp>__UUID_IGNORED_BY_TEST__</interp>
+                        </interpGrp>
+                        <interpGrp type="date">
+                            <interp>__DATE_IGNORED_BY_TEST__</interp>
+                        </interpGrp>
+                        <interpGrp type="user_id">
+                            <interp>testUser</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>
+<w lemma="dit" pos="PD" xml:id="w0">Dit</w> <w lemma="zijn" pos="VRB" xml:id="w1">is</w> <w lemma="wat" pos="PD" xml:id="w2">wat</w> <w lemma="oeftig" pos="ADJ" xml:id="w3">oefentekst.</w>
+</p>
+            </div>
+        </body>
+    </text>
+</TEI>

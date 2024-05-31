@@ -1,0 +1,8 @@
+token	lemma	pos
+Deze	deze	PD
+tekst	terecht	VRB
+loopt	lopen	VRB
+over	over	ADP
+meedere	meer	ADV
+paragrafen	partikf	NOU-P
+heen	waarheen	ADV

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><teiCorpus><TEI>
+      <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>Ordinarisse middel-weeckse courante, 1651-09-19; , Wt Franckfort den 13 dito.</title>
+            <respStmt>
+              <resp>compiled by</resp>
+              <name>Nicoline van der Sijs and volunteers</name>
+            </respStmt>
+          </titleStmt>
+          <publicationStmt>
+            <availability><licence>This file may not be redistributed!! It is a preliminary version</licence></availability>
+          </publicationStmt>
+        <sourceDesc><listBibl xml:id="galahadMetadata"><bibl><interpGrp type="model"><interp>pie</interp>
+</interpGrp><interpGrp type="tagset"><interp>UNKNOWN</interp>
+<interp>Unknown Tagset</interp>
+</interpGrp><interpGrp type="corpus_name"><interp>testcorpus</interp>
+</interpGrp><interpGrp type="corpus_uuid"><interp>__UUID_IGNORED_BY_TEST__</interp>
+</interpGrp><interpGrp type="date"><interp>__DATE_IGNORED_BY_TEST__</interp>
+</interpGrp><interpGrp type="user_id"><interp>testUser</interp>
+</interpGrp></bibl></listBibl></sourceDesc></fileDesc>
+        <sourceDesc>
+        <listBibl type="inlMetadata">
+          <bibl>
+            <interpGrp type="pid"><interp>kranten_17_30562</interp></interpGrp>
+            <interpGrp type="sourceID"><interp>30562</interp></interpGrp>
+            <interpGrp type="witnessYearLevel1_from"><interp>1651</interp></interpGrp>
+            <interpGrp type="witnessMonthLevel1_from"><interp>09</interp></interpGrp>
+            <interpGrp type="witnessDayLevel1_from"><interp>19</interp></interpGrp>
+            <interpGrp type="witnessYearLevel1_to"><interp>1651</interp></interpGrp>
+            <interpGrp type="witnessMonthLevel1_tp"><interp>09</interp></interpGrp>
+            <interpGrp type="witnessDayLevel1_to"><interp>19</interp></interpGrp>
+
+            <interpGrp type="witnessYearLevel2_from"><interp>1651</interp></interpGrp>
+            <interpGrp type="witnessMonthLevel2_from"><interp>09</interp></interpGrp>
+            <interpGrp type="witnessDayLevel2_from"><interp>19</interp></interpGrp>
+            <interpGrp type="witnessYearLevel2_to"><interp>1651</interp></interpGrp>
+            <interpGrp type="witnessMonthLevel2_to"><interp>09</interp></interpGrp>
+            <interpGrp type="witnessDayLevel2_to"><interp>19</interp></interpGrp>
+
+
+            <interpGrp type="sourceUrl"><interp>https://www.delpher.nl/nl/kranten/view?coll=ddd&amp;identifier=ddd:010900328:mpeg21:a0008</interp></interpGrp>
+            <interpGrp type="corpusProvenance"><interp>The van der Sijs newspaper Corpus</interp></interpGrp>
+            <interpGrp type="editorLevel3"><interp>Nicoline van der Sijs</interp></interpGrp>
+
+            <interpGrp type="articleClass"><interp>buitenlands nieuws</interp></interpGrp>
+            <interpGrp type="titleLevel2"><interp>Ordinarisse middel-weeckse courante</interp></interpGrp>
+            <interpGrp type="newspaperSection"><interp/></interpGrp>
+            <interpGrp type="titleLevel1"><interp>Wt Franckfort den 13 dito.</interp></interpGrp>
+            <interpGrp type="settingLocation_country"><interp>Duitsland</interp></interpGrp>
+            <interpGrp type="settingLocation_place"><interp>Frankfurt</interp></interpGrp>
+            <interpGrp type="colophon"><interp>Ghedruckt tot Amsterdam. Voor de Weduwe van Francoys Lies-houdt, Boeck-verkoopster op den Dam, int Groot-Boeck den 19 Septembris Anno 1651.</interp></interpGrp>
+          </bibl>
+        </listBibl>
+        </sourceDesc>
+        <revisionDesc>
+          <list>
+            <item>Preliminary version, exported <date>2021-09-23</date> with duplicates, issue issues, segmentation errors and metadata inaccuracies!!!!!!</item>
+          </list>
+        </revisionDesc>
+      </teiHeader>
+     
+<text> 
+<div> 
+<head xml:lang="nl"><s><w lemma="uit" pos="ADP" type="ADP" xml:id="INT___UUID_IGNORED_BY_TEST__.w.0">Wt</w> <w lemma="frankrijn" pos="NOU-P" type="NELOC" xml:id="INT___UUID_IGNORED_BY_TEST__.w.1">Franckfort</w> <w lemma="de" pos="PD" type="ART" xml:id="INT___UUID_IGNORED_BY_TEST__.w.2">den</w> <w lemma="dertiende" pos="NUM" type="NUM" xml:id="INT___UUID_IGNORED_BY_TEST__.w.3">13</w> <w lemma="dito" pos="ADJ" type="ADJ" xml:id="INT___UUID_IGNORED_BY_TEST__.w.4">dito</w><pc lemma="e." type="." xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000001">.</pc></s></head>
+ 
+<p xml:lang="nl"><s><w lemma="de" pos="PD" type="ART" xml:id="INT___UUID_IGNORED_BY_TEST__.w.5">De</w> <w lemma="heer" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.6">Heere</w> <w lemma="bloeders - weel" pos="NOU-P" type="NEPER" xml:id="INT___UUID_IGNORED_BY_TEST__.w.7">Bloemendael</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000002">,</pc> <w lemma="zijn" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.8">is</w> <w lemma="stillijk" pos="NOU-C" type="ADJ" xml:id="INT___UUID_IGNORED_BY_TEST__.w.9">stillekens</w> <w lemma="zonder" pos="CON" type="ADP" xml:id="INT___UUID_IGNORED_BY_TEST__.w.10">sonder</w> <w lemma="zich" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.11">sich</w> <w lemma="aangaan" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.12">aen</w> <w lemma="te" pos="ADP" type="ADP" xml:id="INT___UUID_IGNORED_BY_TEST__.w.13">te</w> <w lemma="overgeven" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.14">gheven</w> <w lemma="hier" pos="ADV" type="ADV" xml:id="INT___UUID_IGNORED_BY_TEST__.w.15">hier</w> <w lemma="doorkomen" pos="ADV" type="ADV" xml:id="INT___UUID_IGNORED_BY_TEST__.w.16">deur</w> <w lemma="passeren" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.17">gepasseert</w><pc lemma="e." type="." xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000003">.</pc></s> <s><w lemma="de" pos="PD" type="ART" xml:id="INT___UUID_IGNORED_BY_TEST__.w.18">De</w> <w lemma="vertiening" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.19">vestinge</w> <w lemma="franselaer" pos="NOU-C" type="NEPER" xml:id="INT___UUID_IGNORED_BY_TEST__.w.20">Franckendael</w> <w lemma="zijn" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.21">sijn</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000004">,</pc> <w lemma="de" pos="PD" type="ART" xml:id="INT___UUID_IGNORED_BY_TEST__.w.22">de</w> <w lemma="spaanse zee" pos="NOU-P" type="NELOC" xml:id="INT___UUID_IGNORED_BY_TEST__.w.23">Spaensche</w> <w lemma="en" pos="CON" type="CON" xml:id="INT___UUID_IGNORED_BY_TEST__.w.24">ende</w> <w lemma="kersteellijk" pos="ADJ" type="ADJ" xml:id="INT___UUID_IGNORED_BY_TEST__.w.25">Keyserlijcken</w> <w lemma="plantage" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.26">Plenipotentiarisen</w> <w lemma="resolveren" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.27">resolveert</w> <w lemma="te" pos="ADP" type="ADP" xml:id="INT___UUID_IGNORED_BY_TEST__.w.28">te</w> <w lemma="resterven" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.29">restitueren</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000005">,</pc> <w lemma="zo" pos="ADV" type="ADV" xml:id="INT___UUID_IGNORED_BY_TEST__.w.30">so</w> <w lemma="zohaast" pos="ADV" type="ADV" xml:id="INT___UUID_IGNORED_BY_TEST__.w.31">haest</w> <w lemma="dat" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.32">dat</w> <w lemma="geld" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.33">gelt</w> <w lemma="vastelen" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.34">getelt</w> <w lemma="en" pos="CON" type="CON" xml:id="INT___UUID_IGNORED_BY_TEST__.w.35">ende</w> <w lemma="betalen" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.36">betaelt</w> <w lemma="zijn" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.37">is</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000006">,</pc> <w lemma="beginnen" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.38">Beyeren</w> <w lemma="en" pos="CON" type="CON" xml:id="INT___UUID_IGNORED_BY_TEST__.w.39">ende</w> <w lemma="palies" pos="NOU-P" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.40">Palts</w> <w lemma="hebben" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.41">hebben</w> <w lemma="sterk" pos="ADJ" type="ADJ" xml:id="INT___UUID_IGNORED_BY_TEST__.w.42">stercke</w> <w lemma="dispost" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.43">disputen</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000007">,</pc> <w lemma="over" pos="ADP" type="ADP" xml:id="INT___UUID_IGNORED_BY_TEST__.w.44">over</w> <w lemma="enig" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.45">eenige</w> <w lemma="punt" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.46">puncten</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000008">,</pc> <w lemma="die" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.47">die</w> <w lemma="aldaar" pos="ADV" type="ADV" xml:id="INT___UUID_IGNORED_BY_TEST__.w.48">aldaer</w> <w lemma="zijn" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.49">sijne</w> <w lemma="amsterdam" pos="NOU-C" type="NOU" xml:id="INT___UUID_IGNORED_BY_TEST__.w.50">Ambassadeurs</w><pc type="," xml:id="INT___UUID_IGNORED_BY_TEST__.pc.post.0000009">,</pc> <w lemma="bemoeien" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.51">bemoeyen</w> <w lemma="zich" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.52">sich</w> <w lemma="sterk" pos="ADV" type="ADV" xml:id="INT___UUID_IGNORED_BY_TEST__.w.53">sterck</w> <w lemma="zij" pos="PD" type="PRN" xml:id="INT___UUID_IGNORED_BY_TEST__.w.54">haer</w> <w lemma="te" pos="ADP" type="ADP" xml:id="INT___UUID_IGNORED_BY_TEST__.w.55">te</w> <w lemma="vereigen" pos="VRB" type="VRB" xml:id="INT___UUID_IGNORED_BY_TEST__.w.56">vereenigen</w> <w lemma="en" pos="CON" type="CON" xml:id="INT___UUID_IGNORED_BY_TEST__.w.57">ende</w> <w lemma="dewijl" pos="CON

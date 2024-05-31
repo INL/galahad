@@ -1,0 +1,35 @@
+<TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title><title-container>${TITLE}</title-container></title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date><date-container>${DATE}</date-container></date>
+                    <idno type="sourceID"><source-id-container>${SOURCE_ID}</source-id-container></idno>
+                    <idno type="pid"><pid-container>${DOCUMENT_PID}</pid-container></idno>
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl xml:id="inlMetadata">
+                    <bibl>
+                        <inlMetadata-container>${SEQUENCE_OF_INTERP_GROUPS_WITH_SOURCE_METADATA}</inlMetadata-container>
+                    </bibl>
+                </listBibl>
+                <listBibl xml:id="galahadMetadata">
+                    <bibl>
+                        <galahadMetadata-container>${SEQUENCE_OF_INTERP_GROUPS_WITH_GALAHAD_METADATA}</galahadMetadata-container>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p><text-container>${SEQUENCE_OF_S_W_AND_PC}</text-container></p>
+            </div>
+        </body>
+    </text>
+</TEI>

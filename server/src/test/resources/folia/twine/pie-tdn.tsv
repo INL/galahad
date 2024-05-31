@@ -1,0 +1,22 @@
+word	lemma	pos
+To	te	ADP(type=pre)
+obey	obedië	NOU-C(number=sg)
+or	or	INT
+not	not	NOU-C(number=sg)
+to	te	ADP(type=pre)
+be	bedie	NOU-C(number=sg)
+,		LET
+that	het+hat	PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)
+is	zijn	VRB(finiteness=fin,tense=pres)
+the	the	RES(type=for)
+one	one	RES(type=for)
+question	question	RES(type=for)
+that	het+hat	PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)
+yremained	jermina	NOU-C(number=sg)
+.		LET
+abc	abchak	NOU-C(number=sg)
+def	door	CONJ(type=coor)
+ghijklmno	geminnel	NOU-P
+pqrstu	christus	RES(type=for)
+xyzabc	sint-jazoris	NOU-C(number=sg)
+def	doen	VRB(finiteness=fin,tense=past)

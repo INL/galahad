@@ -1,0 +1,21 @@
+id: pie-tdn
+description: "PIE trained on DBNL excerpts & GTB dictionary quotations"
+tagset: "TDN-Core"
+eraFrom: "1400"
+eraTo: "1900"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: pie-tdn
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/0.9.0/pie/tdn
+software:
+  name: int-pie
+  href: https://github.com/INL/int-pie/tree/0.9.0
+dataset:
+  name: DBNL excerpts & GTB dictionary quotations
+  href: https://github.com/INL/galahad-corpus-data/tree/v0.9
+trainedBy: "INT"
+date: "2024-05-31"
+devport: 8101

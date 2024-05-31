@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:dump="http://www.masereeuw.nl/xslt/dump-xml" xmlns:egXML="http://www.tei-c.org/ns/Examples" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <teiHeader>
+    <fileDesc><sourceDesc><listBibl xml:id="galahadMetadata">
+    <bibl>
+        <interpGrp type="model">
+            <interp>pie-tdn</interp>
+        </interpGrp>
+        <interpGrp type="tagset">
+            <interp>TDN-Core</interp>
+        </interpGrp>
+        <interpGrp type="corpus_name">
+            <interp>testCorpus</interp>
+        </interpGrp>
+        <interpGrp type="corpus_uuid">
+            <interp>872e7126-848d-4603-a57d-bc8abb889b96</interp>
+        </interpGrp>
+        <interpGrp type="date">
+            <interp>2024-03-12 10:34:09</interp>
+        </interpGrp>
+        <interpGrp type="user_id">
+            <interp>testUser</interp>
+        </interpGrp>
+        <interpGrp type="pid">
+            <interp>814bd005-ac80-4ee9-96fc-8582438714e1</interp>
+        </interpGrp>
+        <interpGrp type="title">
+            <interp>twine.input</interp>
+        </interpGrp>
+    </bibl>
+</listBibl></sourceDesc></fileDesc></teiHeader>
+<text>
+<body>
+<p><w lemma="net" pos="AA(degree=pos,position=free)">n<hi rend="bold">e</hi>t</w> <milestone n="1va" unit="fol"/> <w lemma="zijn" pos="VRB(finiteness=fin,tense=past)"><hi rend="bold">w</hi><hi rend="bold">a</hi><hi rend="bold">s</hi></w> <w lemma="ik" pos="PD(type=pers,position=free)">ik</w> <w lemma="naar" pos="ADP(type=pre)"><hi rend="bold">n</hi>aar</w> <w lemma="school" pos="NOU-C(number=sg)">sc<hi rend="bold">h</hi><hi rend="bold">o</hi>o<hi rend="bold">l</hi></w> <w lemma="heengaan" pos="ADV(type=reg)">heen</w> <w lemma="en" pos="CONJ(type=coor)">en</w> <w lemma="terugkomen" pos="VRB(finiteness=fin,tense=past)">t<hi rend="bold">e</hi>r<hi rend="bold">u</hi>g</w> <w lemma="wezen" pos="VRB(finiteness=inf)">w<hi rend="bold">eze</hi>n</w> <w lemma="lopen" pos="VRB(finiteness=inf)">lope<hi rend="bold">n</hi></w> <w lemma="hetzovoor" pos="ADV(type=reg)"><hi rend="bold">enz</hi>o</w></p>
+
+<pc lemma="onzin" pos="LET">.</pc>
+<pc pos="LET">.</pc>
+<pc pos="LET">.</pc>
+<w lemma="school" pos="NOU-C(number=pl)">scholen</w>
+<w lemma="school" pos="NOU-C(number=pl)">scholen</w>
+
+<w lemma="school" pos="NOU-C(number=pl)"> scholen </w>
+<w lemma="school" pos="NOU-C(number=pl)">scho len</w>
+<w lemma="school" pos="NOU-C(number=pl)">scho
+len</w>
+
+<p> <w lemma="electus" pos="VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)">electu</w><p><w lemma="arie" pos="NOU-C(number=pl)">arien</w> <w lemma="zijn" pos="VRB(finiteness=prespart)">zijnde</w></p> </p>
+
+<p> <w lemma="electus" pos="VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)">electu</w><p> <w lemma="arie" pos="NOU-C(number=pl)">arien</w></p> </p>
+
+<q> <w lemma="electus" pos="VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)">electu</w><p><w lemma="arie" pos="NOU-C(number=pl)">arien</w></p> </q>
+
+<q> <w lemma="electus" pos="VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)">electu</w><p> <w lemma="arie" pos="NOU-C(number=pl)">arien</w></p> </q>
+
+<p><w lemma="te+esten" pos="PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)"><hi rend="bold">test</hi>en</w></p>
+
+<p><w lemma="te+eest" pos="NUM(type=ord,position=prenom,representation=let)"><hi rend="bold">test</hi>en</w> <w lemma="woord" pos="NOU-C(number=sg)">woord</w></p>
+
+<p><w lemma="imlond" pos="RES(type=for)"><hi rend="bold"><w lemma="kabel" pos="AA(degree=pos,position=free)">cba</w> <w lemma="fedacht" pos="NOU-C(number=sg)">fed<expan>abc</expan></w><w lemma="defigen" pos="NOU-C(number=sg)"><expan> def</expan>ghi</w> jkl</hi>mno</w></p>
+<p> <w lemma="abchak" pos="NOU-C(number=sg)">abc</w> <w lemma="sint-jazoris" pos="NOU-C(number=sg)"><hi class="bold"><w lemma="door" pos="CONJ(type=coor)">def</w> <w lemma="geminnel" pos="NOU-P">ghi<hi class="italic">jkl</hi><hi class="red"><hi class="sub">mno</hi></hi></w><w lemma="christus" pos="RES(type=for)"><hi class="red"><hi class="sub"/> pqr</hi>stu</w> xyz</hi>abc</w> <w lemma="doen" pos="VRB(finiteness=fin,tense=past)">def</w> </p>
+<p> <w lemma="te" pos="ADP(type=pre)">To</w> <w lemma="obedië" pos="INT">ob<hi class="italic">ey</hi></w> <w lemma="ord" pos="INT">or</w> <w lemma="not" pos="NOU-C(number=sg)">n<hi class="bold">o</hi>t</w> <w lemma="te" pos="ADP(type=pre)">to</w> <w lemma="zij" pos="RES(type=meta)">be</w><w lemma="" pos="LET">,</w><br/><w lemma="het+hat" pos="PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)">that</w> <w lemma="zijn" pos="VRB(finiteness=fin,tense=pres)">is</w> <w lemma="the" pos="RES(type=for)">the</w> <w lemma="jermina" pos="NOU-C(number=sg)"><hi class="bold"><w lemma="one" pos="RES(type=for)">one</w> <hi class="red"><w lemma="cussitus" pos="RES(type=for)">question</w></hi> <w lemma="het+hat" pos="PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)">that</w> y<hi class="italic">re</hi>main</hi>ed</w><w lemma="" pos="LET">.</w> </p>
+
+<!-- 2 levels deep-->
+<p><hi rend="bold"><expan><w lemma="acht" pos="ADV(type=reg)">abc</w></expan></hi></p>
+<p><w lemma="achterblijven" pos="NOU-C(number=sg)"><hi rend="bold"><expan>abc</expan></hi>def</w></p>
+<p><w lemma="achterblijven" pos="NOU-C(number=sg)">abc<hi rend="bold"><expan>def</expan></hi></w></p>
+
+<p><hi rend="bold"><w lemma="achterblijven" pos="NOU-C(number=sg)">abc<expan>def</expan></w></hi></p>
+<p><w lemma="asgebid" pos="NOU-C(number=sg)">abc<hi rend="bold">def<expan>ghi</expan></hi></w></p>
+<p><w lemma="defgelijk" pos="PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)"><hi rend="bold">def<expan>ghi</expan></hi>jkl</w></p>
+<p><w lemma="afgebicht" pos="NOU-C(number=sg)">abc<hi rend="bold">def<expan>ghi</expan></hi>jkl</w></p>
+
+<p><hi rend="bold"><w lemma="achterblijven" pos="NOU-C(number=sg)"><expan>abc</expan>def</w></hi></p>
+<p><w lemma="asgebid" pos="NOU-C(number=sg)"><hi rend="bold"><expan>abc</expan>def</hi>ghi</w></p>
+<p><w lemma="asgebid" pos="NOU-C(number=sg)">abc<hi rend="bold"><expan>def</expan>ghi</hi></w></p>
+<p><w lemma="afgebicht" pos="NOU-C(number=sg)">abc<hi rend="bold"><expan>def</expan>ghi</hi>jkl</w></p>
+
+<p><hi rend="bold"><w lemma="kabacht" pos="NOU-C(number=sg)">cba<expan>abc</expan>def</w></hi></p>
+<p><w lemma="kabachten+gij" pos="NOU-C(number=sg)"><hi rend="bold">cba<expan>abc</expan>def</hi>ghi</w></p>
+<p><w lemma="accobbedige" pos="NOU-C(number=sg)">abc<hi rend="bold">cba<expan>def</expan>ghi</hi></w></p>
+<p><w lemma="achtbakkerijk" pos="NOU-C(number=sg)">abc<hi rend="bold">cba<expan>def</expan>ghi</hi>jkl</w></p>
+
+
+<p> <w lemma="de" pos="PD(type=d-p,subtype=art,position=prenom)" xml:id="enge022vand01_01.TEI.2.text.body.div.lg.7633.s.1.w.11">die</w> <w lemma="droogheid" n="mw_288" pos="NOU-C(number=sg)" xml:id="enge022vand01_01.TEI.2.text.body.div.lg.7633.s.1.w.12">droecheit<join n="mw_288"/>
+    </w> <w lemma="rebellen" lexicon="molex" pos="VRB(finiteness=fin,tense=pres)" xml:id="w.185"><seg>rebellen</seg></w><pc lemma="e." pos="LET" xml:id="pc.000005">.</pc> </p>
+
+<p> <w lemma="school" pos="NOU-C(number=pl)">scholen</w><w lemma="" pos="LET">.</w> </p>
+
+<p> <w lemma="willen" pos="VRB(finiteness=fin,tense=pres)">wilt</w> <w lemma="verwittigen" pos="VRB(finiteness=inf)">v<expan>er</expan>wittigen</w><w lemma="" pos="LET">.</w> <w lemma="eerzaam" pos="AA(degree=pos,position=prenom)">Eersame</w> <w lemma="vroom" pos="AA(degree=pos,position=prenom)">vrome</w> </p>
+
+<p><milestone n="1va" unit="fol"/><w lemma="te+de" pos="NOU-C(number=sg)">test</w></p>
+
+<p> <w lemma="copie" pos="NOU-C(number=sg)">Copie</w> <w lemma="worden" pos="VRB(finiteness=fin,tense=past)">Wert</w> <w lemma="belasten" pos="VRB(finiteness=pastpart)">belast</w> <w lemma="en" pos="CONJ(type=coor)">en<expan>de</expan></w> <w lemma="bevelen" pos="VRB(finiteness=pastpart)">bevolen</w> </p>
+
+<p> <w lemma="ander" pos="PD(type=indef,subtype=oth,position=prenom)">andere</w> <w lemma="officier" pos="NOU-C(number=pl)">offic<expan ana="#add2expan" resp="ed">i</expan>eren</w><w lemma="" pos="LET">.</w> <w lemma="concluderen" pos="NOU-C(number=sg)">Concludeert</w> <w lemma="daarom" pos="ADV(type=pron)">daeromme</w> </p>
+
+<p> <w lemma="na" pos="ADP(type=pre)">na</w> <w lemma="de" pos="PD(type=d-p,subtype=art,position=prenom)">de</w> <ref target="http://de-wit.net/bronnen/histo/politieke_ordonnantie_holland-1580.htm"><w lemma="ordonnantie" pos="NOU-C(number=sg)">Ordonnantie</w> <w lemma="en" pos="CONJ(type=coor)">en</w> <w lemma="plakkaat" pos="NOU-C(number=pl)">Placaaten</w> <w lemma="van" pos="ADP(type=pre)">van</w> <w lemma="de" pos="PD(type=d-p,subtype=art,position=prenom)">de</w> <w lemma="politie" pos="NOU-C(number=sg)">Politie</w></ref><w lemma="" pos="LET">,</w> <w lemma="haar" pos="PD(type=poss,position=prenom)">haare</w> <w lemma="af" pos="ADP(type=circ)">af</w> <w lemma="kunding" pos="NOU-C(number=sg)">kundinge</w> </p>
+
+
+<p><hi rend="italic"><w lemma="hoe" pos="ADV(type=reg)">Hoe</w> <w lemma="walwein" pos="NOU-P">Walewein</w> <w lemma="landkoop" pos="NOU-C(number=sg)">Lancelote</w> <w lemma="beschudden" pos="NOU-C(number=sg)">bescudde</w> <w lemma="en" pos="CONJ(type=coor)">en</w> <w lemma="een" pos="PD(type=indef,subtype=art,position=prenom)">enen</w> <w lemma="kamp" pos="NOU-C(number=sg)">camp</w> <w lemma="voor" pos="ADP(type=pre)">voor</w> <w lemma="hij" pos="PD(type=pers,position=free)">hem</w> <w lemma="vachten" pos="VRB(finiteness=fin,tense=past)">vacht</w><w lemma="" pos="LET">.</w> </hi></p>
+
+<p><w lemma="te+de" pos="ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)">ter</w> <w lemma="putiëntie" pos="NOU-C(number=sg)">putie<expan>ntie<expan ana="#add2expan" resp="ed"/></expan></w><expan><expan ana="#add2expan" resp="ed"><w lemma="" pos="LET">?</w></expan></expan> <w lemma="van" pos="ADP(type=pre)">van</w> <w lemma="mijn" pos="PD(type=poss,position=prenom)">mijn</w> <w lemma="heer" pos="NOU-C(number=sg)">heer</w></p>
+
+<p><w lemma="alhier" pos="ADV(type=reg)">alhier</w> <del><w lemma="nog" pos="ADV(type=reg)">noe</w></del> <w lemma="hoognechtig" pos="AA(degree=pos,position=free)">hoechnoedich</w></p>
+
+<p><w lemma="met" pos="ADP(type=pre)">met</w> <w lemma="nog" pos="ADV(type=reg)">noch</w> <gap reason="illegible"/><w lemma="dalk" pos="AA(degree=pos,position=free)">dlik</w><expan ana="#add2expan" resp="ed"><w lemma="" pos="LET">?</w></expan> <w lemma="uit" pos="ADP(type=pre)">uuyt</w> <w lemma="deze" pos="PD(type=d-p,subtype=oth,position=prenom)">desen</w></p>
+
+<p><w lemma="houplieden" pos="NOU-C(number=pl)">hopluyden</w> <del><w lemma="oftenden" pos="VRB(finiteness=prespart)">oftmeden<expan>de</expan></w></del> <w lemma="knecht" pos="NOU-C(number=pl)">knechten</w></p>
+
+<p> <w lemma="nemen" pos="VRB(finiteness=fin,tense=past)">naemen</w> <w lemma="van" pos="ADP(type=pre)">van</w> <w lemma="de" pos="PD(type=d-p,subtype=art,position=prenom)">de</w> <w lemma="keizerlijk" pos="AA(degree=pos,position=prenom)">K<expan ana="#add2expan" resp="ed">eyserlicke</expan></w> <w lemma="majesteit" pos="NOU-C(number=sg)">M<expan ana="#add2expan" resp="ed">ajestey</expan>t</w> <w lemma="de" pos="PD(type=d-p,subtype=art,position=prenom)">de</w> <w lemma="justitie" pos="NOU-C(number=sg)">jus<expan ana="#add2expan" resp="ed">t</expan>icie</w> <w lemma="om" pos="ADP(type=pre)">om</w> <w lemma="vergiffenis" pos="NOU-C(number=sg)">vergiffenisse</w><w lemma="" pos="LET">.</w> </p>
+
+
+<p><w lemma="niet" pos="ADV(type=reg)">nyet</w> <w lemma="ne" pos="ADV(type=reg)">en</w> <w lemma="zijn" pos="VRB(finiteness=fin,tense=pres)">es</w><w lemma="" pos="LET">,</w> <del><gap extent="word" reason="illegible"/></del> <w lemma="maar" pos="CONJ(type=coor)">maer</w> <w lemma="die" pos="PD(type=d-p,position=free)">der</w> <w lemma="zelf" pos="PD(type=d-p,position=free)">selver</w></p> <!--the newline here is important-->
+
+<p><w lemma="ik" pos="PD(type=pers,position=free)">ik</w> <w lemma="lopen" pos="VRB(finiteness=fin,tense=pres)">loop</w> <hi><w lemma="naar" pos="ADP(type=pre)">naar</w></hi> <w lemma="school" pos="NOU-C(number=sg)">school</w></p> <!--the newline here is important-->
+
+<p><w lemma="ik" pos="PD(type=pers,position=free)">ik</w> <w lemma="lopen" pos="VRB(finiteness=fin,tense=pres)">loop</w> <w lemma="naar" pos="ADP(type=pre)">naar</w> <hi><w lemma="huis" pos="NOU-C(number=sg)">huis</w></hi></p> <!--the newline here is important-->
+
+<p><w lemma="stad" pos="NOU-C(number=sg)">stadt</w> <w lemma="supthop" pos="NOU-P">Sutphen</w> <add place="margin"> <w lemma="receptio" pos="RES(type=for)">R<expan>ecept</expan>ae</w> <w lemma="zestien" pos="NUM(type=card,position=prenom,representation=dig)">16</w> <w lemma="martii" pos="NOU-P">Martii</w></add></p>
+
+<p><w lemma="frunde" pos="NOU-C(number=pl)">frunde<expan>n</expan></w> <add place="onder"> <w lemma="receptio" pos="RES(type=for)">R<expan>ecept</expan>ae</w> <w lemma="zestien" pos="NUM(type=card,position=prenom,representation=dig)">16</w> <w lemma="martii" pos="NOU-P">Martii</w></add></p>
+
+<p><w lemma="mijr" pos="CONJ(type=sub)">mir</w> <w lemma="dat" pos="NOU-C(number=sg)">das</w> <gap reason="illegible"/><w lemma="ring" pos="NOU-C(number=sg)">ring</w><w lemma="" pos="LET">,</w> <w lemma="das" pos="NOU-C(number=sg)">das</w> <w lemma="zonst" pos="VRB(finiteness=fin,tense=past)">sonst</w></p>
+
+<p><w lemma="te+eten" pos="ADP(type=pre)+VRB(finiteness=inf)">test-en</w></p>
+
+<p><w lemma="geneig" pos="PD(type=indef,position=free)">genige</w> <w lemma="voorschrijven" pos="AA(degree=pos,position=free)">voirs<expan>chreven</expan></w> <add place="begin"><w lemma="dan" pos="CONJ(type=coor)">dan</w> <w lemma="dat" pos="CONJ(type=sub)">dat</w> <w lemma="ook" pos="ADV(type=reg)">oick</w> <w lemma="die" pos="PD(type=d-p,subtype=oth,position=prenom)">die</w> <w lemma="fijn" pos="NOU-C(number=sg)">fia<expan>n</expan>dt</w> <w lemma="am dam" pos="NOU-C(number=sg)">ahm</w> <w lemma="gezijn" pos="VRB(finiteness=fin,tense=pres)">gesyn</w> <w lemma="zich" pos="PD(type=refl,position=free)">sich</w> <w lemma="versmalen" pos="VRB(finiteness=inf)">v<expan>er</expan>sammelen</w> <w lemma="en" pos="CONJ(type=coor)">und</w> <w lemma="zin" pos="NOU-C(number=pl)">sines</w> <w lemma="arlisse" pos="NOU-C(number=sg)">arlisztes</w> <w lemma="geweldig" pos="AA(degree=pos,position=free)">gewelttig</w> <w lemma="mogen" pos="AA(degree=pos,position=free)">moth</w> <w lemma="zijn" pos="VRB(finiteness=inf)">sijn</w><w lemma="" pos="LET">,</w></add> <w lemma="vijftig" pos="NUM(type=card,position=prenom,representation=let)">vifftig</w> <del><w lemma="oors" pos="ADV(type=reg)">oders</w></del></p>
+
+<!--hoe moet dit überhaupt-->
+<p><w lemma="blijven" pos="VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)">blievet</w> <w lemma="frome" pos="VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)">froeme</w> <w lemma="dat" pos="CONJ(type=sub)">dat</w> <w lemma="le" pos="NOU-C(number=sg)">l</w><gap reason="illegible"/> <w lemma="gij" pos="PD(type=pers,position=free)">g</w><gap reason="illegible"/><del> <w lemma="i" pos="NOU-C(number=sg)">i</w></del> <w lemma="in" pos="ADP(type=pre)">in</w> <w lemma="gezondheid" pos="NOU-C(number=sg)">gesontheid</w></p>
+
+<p><w lemma="wij" pos="PD(type=pers,position=free)">wij</w> <add place="begin"><w lemma="in" pos="ADP(type=pre)">in</w> <w lemma="deze" pos="PD(type=d-p,subtype=oth,position=prenom)">dese</w> <w lemma="wessaad" pos="NOU-C(number=sg)">weszhae</w> <w lemma="zeer" pos="AA(degree=pos,position=free)">zeer</w> <w lemma="verfallen" pos="VRB(finiteness=fin,tense=pres)">verfallene</w> <w lemma="en" pos="CONJ(type=coor)">und</w> <w lemma="geporsepd" pos="AA(degree=pos,position=prenom)">geoppressirde</w> <w lemma="not" pos="CONJ(type=coor)">nots</w> <del><w lemma="ke" pos="PD(type=pers,position=free)">ke</w></del> <w lemma="geen" pos="PD(type=indef,subtype=oth,position=prenom)">ghiene</w> <w lemma="provisie" pos="NOU-C(number=sg)">provisi</w> <w lemma="van" pos="ADP(type=pre)">va<expan>n</expan></w> <w lemma="hout" pos="NOU-C(number=sg)">holt</w></add> <w lemma="bij" pos="ADP(type=pre)">bij</w></p>
+
+<p><w lemma="gunstig" pos="AA(degree=pos,position=prenom)">gunstige</w> <w lemma="heer" pos="NOU-C(number=sg)">here</w><w lemma="" pos="LET">,</w> <w lemma="wij" pos="PD(type=pers,position=free)">wij</w> <del><w lemma="hebben" pos="VRB(finiteness=fin,tense=pres)">hebben</w> <w lemma="hiervoren" pos="ADV(type=pron)">hierbevoerens</w></del> <w lemma="hebben" pos="VRB(finiteness=fin,tense=past)">hadden</w></p>
+
+<p><add place="margin"> <w lemma="aan" pos="ADP(type=pre)">An</w> <w lemma="de" pos="PD(type=d-p,subtype=art,position=prenom)">d<expan>en</expan></w> <w lemma="schout" pos="NOU-C(number=sg)">scholtis</w> <w lemma="te" pos="ADP(type=pre)">to</w> <w lemma="zutphen" pos="NOU-P">Zutphe<expan>n</expan></w> <w lemma="of" pos="CONJ(type=coor)">of</w> <w lemma="zijn" pos="PD(type=poss,position=prenom)">sijne<expan>n</expan></w> <w lemma="statholoder" pos="NOU-C(number=sg)">stathold<expan>er</expan></w></add> <w lemma="erfente" pos="NOU-C(number=sg)">Erentfeste</w></p>
+
+<p><w lemma="welk" pos="PD(type=w-p,position=free)">welcker</w> <w lemma="voorschreven" pos="AA(degree=pos,position=prenom)">voirs<expan>creuen</expan></w> <add place="left"> <w lemma="les" pos="NUM(type=card,position=prenom,representation=rom)">LVj</w> </add><del><w lemma="150" pos="NUM(type=card,position=prenom,representation=rom)">LXj</w></del> <w lemma="ridder" pos="NOU-C(number=pl)">rydders</w> <w lemma="die" pos="PD(type=d-p,position=free)">die</w></p>
+
+<p><w lemma="deze" pos="PD(type=d-p,subtype=oth,position=prenom)">desse</w> <w lemma="brief" pos="NOU-C(number=sg)">breiff</w><w lemma="" pos="LET">.</w> <add place="left"><w lemma="vermelden" pos="VRB(finiteness=pastpart)">vermeldet</w></add> <w lemma="zo" pos="ADV(type=reg)">Soe</w> <w lemma="zijn" pos="VRB(finiteness=fin,tense=pres)">is</w></p>
+
+
+<p><w lemma="vijftig" pos="NUM(type=card,position=prenom,representation=let)">vyfftich</w> <del><w lemma="overkomen" pos="NOU-C(number=sg)">auerkomen</w> <w lemma="en" pos="CONJ(type=coor)">en<expan>de</expan></w></del><expan/> <w lemma="met" pos="ADP(type=pre)">met</w></p>
+
+<p><w lemma="pater" pos="NOU-C(number=sg)">pater</w> <w lemma="toe" pos="ADP(type=pre)">toe</w> <hi rend="font-weight:bold"><w lemma="ael+zij" pos="NOU-P">Aelsum</w> </hi><w lemma="" pos="LET">(</w><w lemma="" pos="">bij</w> <w lemma="" pos="">Akkrum</w><w lemma="" pos="LET">)</w><w lemma="" pos="LET">,</w> <w lemma="en" pos="CONJ(type=coor)">ende</w></p>
+
+<p><w lemma="mijn" pos="PD(type=poss,position=prenom)">Mijnen</w> <w lemma="gans" pos="NOU-C(number=sg)">gans</w> <w lemma="goedwillengelijk" pos="AA(degree=pos,position=prenom)">goetwijlleghen</w> <w lemma="dienst" pos="NOU-C(number=sg)">dijens[t]</w> <w lemma="na" pos="ADP(type=pre)">na</w> <w lemma="al" pos="PD(type=indef,position=free)">allen</w> <w lemma="vermogen" pos="VRB(finiteness=fin,tense=pres)">vermoeghen</w> <w lemma="altijd" pos="ADV(type=reg)">altijt</w> <w lemma="tibus" pos="RES(type=for)">tibi</w> <w lemma="hoorn" pos="NOU-P">honorem</w><ref target="N044"><hi rend="font-size:8pt;font-weight:bold"> <w lemma="een+derde" pos="NOU-P(WF=abbr)">*</w> </hi></ref> <w lemma="" pos="LET">.</w> <w lemma="eerbaar" pos="AA(degree=pos,position=free)">Eerbare</w><w lemma="" pos="LET">,</w></p>
+
+
+</body>
+</text>
+</TEI>

@@ -1,0 +1,5 @@
+﻿sep=,
+"grouped by","precision","recall","f1","count","true positive count","false positive count","false negative count","no match count"
+"NO_LEMMA","0.000","0.000","0.000","1","0","1","0","0"
+"WRONG","0.000","0.000","0.000","1","0","1","0","0"
+"dummy","1.000","0.846","0.917","14","11","0","2","1"

@@ -1,0 +1,4 @@
+id	word	punct	lemma	pos	feat
+1	scholen	false	dummy	pos	num=pl
+# some comment
+2	loop	true	dummy	pos	form=fin

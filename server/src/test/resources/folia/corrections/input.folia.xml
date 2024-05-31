@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FoLiA xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ilk.uvt.nl/folia" version="1.5.1" xml:id="page1263" generator="pynlpl.formats.folia-v1.5.1.88">
+  <metadata type="native">
+    <annotations>
+      <style-annotation set="https://raw.githubusercontent.com/proycon/folia/master/setdefinitions/styles.foliaset.xml"/>
+      <token-annotation annotator="ucto" annotatortype="auto" datetime="2017-10-01T17:32:49" set="tokconfig-nld"/>
+      <observation-annotation set="https://raw.githubusercontent.com/proycon/folia/master/setdefinitions/spellingcorrection.foliaset.xml"/>
+      <correction-annotation set="https://raw.githubusercontent.com/proycon/folia/master/setdefinitions/spellingcorrection.foliaset.xml"/>
+    </annotations>
+    <meta id="language">nld</meta>
+  </metadata>
+  <text xml:id="page1263.text">
+    <p xml:id="page1263.text.p.1">
+      <s xml:id="page1263.text.p.1.s.1">
+        <w class="WORD" xml:id="page1263.text.p.1.s.1.w.1">
+          <t>word1</t>
+        </w>
+        <correction annotator="duchs" annotatortype="manual" class="merge" datetime="2018-01-08T11:34:58" xml:id="page1263.text.p.1.s.1.correction.1">
+          <new>
+            <w xml:id="corrected.6bbb0a87">
+              <t>word2</t>
+            </w>
+          </new>
+          <original auth="no">
+            <w class="WORD" xml:id="page1263.text.p.1.s.1.w.15">
+              <t>error2a</t>
+            </w>
+            <w space="no" class="WORD" xml:id="page1263.text.p.1.s.1.w.16">
+              <t>error2b</t>
+            </w>
+          </original>
+        </correction>
+      </s>
+      <s xml:id="page1263.text.p.1.s.2">
+        <w>
+          <correction xml:id="example.correction.1" class="spelling" processor="johndoe">
+            <new>
+              <t>word3</t>
+            </new>
+            <suggestion confidence="0.8">
+              <t>error3a</t>
+            </suggestion>
+            <suggestion confidence="0.2">
+              <t>error3b</t>
+            </suggestion>
+            <original>
+              <t>error3c</t>
+            </original>
+          </correction>
+        </w>
+        <w xml:id="example.s.1.w.3">
+          <t>word4</t>
+          <correction xml:id="example.correction.2" class="spelling"
+            processor="p1" confidence="1.0">
+            <new>
+              <pos class="pos4" />
+            </new>
+            <original>
+              <pos class="error4" />
+            </original>
+          </correction>
+        </w>
+      </s>
+      <s xml:id="example.p.1.s.1">
+        <correction xml:id="example.p.1.s.1.c.1" class="splot">
+          <new>
+            <w xml:id="example.p.1.s.1.w.1">
+              <t>word5</t>
+            </w>
+            <w xml:id="example.p.1.s.1.w.2">
+              <t>word6</t>
+            </w>
+          </new>
+          <original>
+            <w xml:id="example.p.1.s.1.w.1">
+              <t>error5-6</t>
+            </w>
+          </original>
+        </correction>
+        <correction xml:id="example.p.1.s.1.c.1" class="duplicate">
+          <new />
+          <original>
+            <w xml:id="example.p.1.s.1.w.2">
+              <t>error6-7</t>
+            </w>
+          </original>
+        </correction>
+        <correction xml:id="example.p.1.s.1.c.1" class="duplicate">
+          <new>
+            <w xml:id="example.p.1.s.1.w.2">
+              <t>word7</t>
+            </w>
+          </new>
+          <original />
+        </correction>
+      </s>
+      <s xml:id="example.p.1.s.1">
+        <correction xml:id="example.p.1.s.1.c.1" class="split">
+          <current>
+            <w xml:id="example.p.1.s.1.w.1">
+              <t>word8</t>
+            </w>
+          </current>
+          <suggestion>
+            <w xml:id="example.p.1.s.1.w.1_1">
+              <t>error8</t>
+            </w>
+          </suggestion>
+        </correction>
+        <w xml:id="example.s.1.w.3">
+          <correction xml:id="example.correction.2" class="spelling"
+            processor="janedoe" confidence="1.0">
+              <new>
+                  <t>word9</t>
+              </new>
+              <original>
+                <correction xml:id="example.correction.1"
+                 class="spelling" processor="johndoe" confidence="0.6">
+                 <new>
+                     <t>error9a</t>
+                 </new>
+                 <original>
+                     <t>eror9b</t>
+                 </original>
+                </correction>
+              </original>
+          </correction>
+        </w>
+        <w class="WORD" xml:id="page1263.text.p.1.s.1.w.1">
+          <t>word10</t>
+          <pos class="pos10"/>
+          <lemma class="lemma10"/>
+        </w>
+      </s>
+    </p>
+  </text>
+</FoLiA>

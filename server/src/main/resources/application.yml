@@ -1,0 +1,17 @@
+server:
+    port: 8010
+spring:
+    servlet:
+        multipart:
+            # We actually want to set a limit for the user of 10MB.
+            # However, the limit here is global, and also for the application internally.
+            # With a user file size 10MB the result of the taggers can be a multiple of that.
+            # Therefore, we set the limit to 100MB, to avoid tagger results being rejected.
+            # It is now the client's responsibility to not upload files larger than 10MB.
+            # see also https://stackoverflow.com/questions/72125091/spring-boot-change-the-upload-max-size-for-a-single-endpoint
+            max-file-size:
+                150MB
+            max-request-size:
+                150MB
+workDir:
+    data

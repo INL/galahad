@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><FoLiA xmlns="http://ilk.uvt.nl/folia" xmlns:xlink="http://www.w3.org/1999/xlink" generator="libfolia-v1.12" version="1.5" xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3">
+  <metadata type="native">
+    <annotations>
+      <gap-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/gap"/>
+      <style-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/style"/>
+      <text-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/text"/>
+      <part-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/part"/>
+      <paragraph-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/paragraph"/>
+      <correction-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/correction"/>
+      <note-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/note"/>
+      <string-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/string"/>
+      <event-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/event"/>
+      <division-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/division"/>
+      <linebreak-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/linebreak"/>
+      <lang-annotation set="http://raw.github.com/proycon/folia/master/setdefinitions/iso639_3.foliaset"/>
+    <sentence-annotation/><token-annotation/><lemma-annotation set="pie-tdn"><annotator processor="pie-tdn"/></lemma-annotation><pos-annotation set="pie-tdn"><annotator processor="pie-tdn"/></pos-annotation></annotations>
+    <provenance>
+      <!-- empty -->
+    <processor host="galahad.ivdnt.org" name="pie-tdn" src="https://github.com/INL/galahad-taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn"/></provenance>
+  </metadata>
+  <text xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.TEI.1">
+    <part class="body">
+      <div class="div" xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.text.1.body.1.div.1">
+        <p class="p" xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.text.1.body.1.div.1.p.1">
+          <!-- Note the "be,<br />that": this should be parsed as "be,that". No space! Why? Because some documents contain words like "be<br/>kijken" -> "bekijken"-->
+          <w><t>To</t><lemma class="te" processor="path" set="path"/><pos class="ADP(type=pre)" head="ADP" processor="path" set="path"/></w> <w><t>ob<t-style class="italic">ey</t-style></t><lemma class="obedië" processor="path" set="path"/><pos class="NOU-C(number=sg)" head="NOU-C" processor="path" set="path"/></w>  <w><t>or</t><lemma class="or" processor="path" set="path"/><pos class="INT" head="INT" processor="path" set="path"/></w> <w><t>n<t-style class="bold">o</t-style>t</t><lemma class="not" processor="path" set="path"/><pos class="NOU-C(number=sg)" head="NOU-C" processor="path" set="path"/></w> <w><t>to</t><lemma class="te" processor="path" set="path"/><pos class="ADP(type=pre)" head="ADP" processor="path" set="path"/></w> <w><t>be</t><lemma class="bedie" processor="path" set="path"/><pos class="NOU-C(number=sg)" head="NOU-C" processor="path" set="path"/></w><w><t>,</t><lemma class="null" processor="path" set="path"/><pos class="LET" head="LET" processor="path" set="path"/></w><br/><w><t>that</t><lemma class="het+hat" processor="path" set="path"/><pos class="PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)" head="PD+NOU-C" processor="path" set="path"/></w> <w><t>is</t><lemma class="zijn" processor="path" set="path"/><pos class="VRB(finiteness=fin,tense=pres)" head="VRB" processor="path" set="path"/></w> <w><t>the</t><lemma class="the" processor="path" set="path"/><pos class="RES(type=for)" head="RES" processor="path" set="path"/></w> <w><t><t-style class="bold">one</t-style></t><lemma class="one" processor="path" set="path"/><pos class="RES(type=for)" head="RES" processor="path" set="path"/></w> <w><t><t-style class="bold"><t-style class="red">question</t-style></t-style></t><lemma class="question" processor="path" set="path"/><pos class="RES(type=for)" head="RES" processor="path" set="path"/></w> <w><t><t-style class="bold">that</t-style></t><lemma class="het+hat" processor="path" set="path"/><pos class="PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)" head="PD+NOU-C" processor="path" set="path"/></w> <w><t><t-style class="bold">y<t-style class="italic">re</t-style>main</t-style>ed</t><lemma class="jermina" processor="path" set="path"/><pos class="NOU-C(number=sg)" head="NOU-C" processor="path" set="path"/></w><w><t>.</t><lemma class="null" processor="path" set="path"/><pos class="LET" head="LET" processor="path" set="path"/></w>
+          <lang class="nld"/>
+        </p>
+        <p class="p" xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.text.1.body.1.div.1.p.2">
+          <!-- abc def ghijklmno pqrstu xyzabc def-->
+          <w><t>abc</t><lemma class="abchak" processor="path" set="path"/><pos class="NOU-C(number=sg)" head="NOU-C" processor="path" set="path"/></w> <w><t><t-style class="bold">def</t-style></t><lemma class="door" processor="path" set="path"/><pos class="CONJ(type=coor)" head="CONJ" processor="path" set="path"/></w> <w><t><t-style class="bold">ghi<t-style class="italic">jkl</t-style><t-style class="red"><t-style class="sub">mno</t-style></t-style></t-style></t><lemma class="geminnel" processor="path" set="path"/><pos class="NOU-P" head="NOU-P" processor="path" set="path"/></w> <w><t><t-style class="bold"><t-style class="red">pqr</t-style>stu</t-style></t><lemma class="christus" processor="path" set="path"/><pos class="RES(type=for)" head="RES" processor="path" set="path"/></w> <w><t><t-style class="bold">xyz</t-style>abc</t><lemma class="sint-jazoris" processor="path" set="path"/><pos class="NOU-C(number=sg)" head="NOU-C" processor="path" set="path"/></w> <w><t>def</t><lemma class="doen" processor="path" set="path"/><pos class="VRB(finiteness=fin,tense=past)" head="VRB" processor="path" set="path"/></w>
+          <lang class="nld"/>
+        </p>
+      </div>
+    </part>
+  </text>
+</FoLiA>

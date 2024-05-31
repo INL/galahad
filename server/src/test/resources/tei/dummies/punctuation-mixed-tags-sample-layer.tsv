@@ -1,0 +1,11 @@
+token	lemma	pos
+Punctuatie	punctuatie	DUM
+,	_	PC
+zin	zin	DUM
+zonder	zonder	DUM
+tags	tags	DUM
+.	_	PC
+Zin	zin	DUM
+met	met	DUM
+tags	tags	DUM
+.	_	PC

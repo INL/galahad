@@ -1,0 +1,7 @@
+<TEI>
+    <text><p>text1</p></text>
+    nottextA
+    <text><p>text2</p></text>
+    nottextB
+    <text><w>text3</w></text>
+</TEI>

@@ -1,0 +1,13 @@
+<TEI>
+    <text>
+        <p>Deze tekst loopt</p>
+        <p>over meedere       </p>
+
+
+        <p>paragrafen heen</p>
+
+        <p>en bevat ook</p>
+        <p>extra whitspaces</p>
+
+      <p>zowel spaties als tabs</p>    </text>
+</TEI>

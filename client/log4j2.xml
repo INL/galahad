@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" monitorInterval="30">
+    <Properties>
+        <Property name="APPLICATION_LOG_DIR">/vol1/weblogs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>[%date{dd/MM/yyyy:HH:mm:ss Z}] %threadName %-5level %msg%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <RollingFile
+            name="rollingFile"
+            fileName="${sys:APPLICATION_LOG_DIR}/application.log"
+            filePattern="${sys:APPLICATION_LOG_DIR}/application.%i.log.gz"
+            ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>[%date{dd/MM/yyyy:HH:mm:ss Z}] %threadName %-5level %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="5" />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="rollingFile" />
+        </Root>
+    </Loggers>
+</Configuration>

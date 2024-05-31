@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader><fileDesc><sourceDesc><listBibl xml:id="galahadMetadata">
+    <bibl>
+        <interpGrp type="model">
+            <interp>pie-tdn</interp>
+        </interpGrp>
+        <interpGrp type="tagset">
+            <interp>TDN-Core</interp>
+        </interpGrp>
+        <interpGrp type="corpus_name">
+            <interp>testCorpus</interp>
+        </interpGrp>
+        <interpGrp type="corpus_uuid">
+            <interp>__UUID_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="date">
+            <interp>__DATE_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="user_id">
+            <interp>testUser</interp>
+        </interpGrp>
+        <interpGrp type="pid">
+            <interp>__UUID_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="title">
+            <interp>punctutation-mixed-tags</interp>
+        </interpGrp>
+    </bibl>
+</listBibl></sourceDesc></fileDesc></teiHeader>
+    <text><p><w lemma="punctuatie" pos="DUM">Punctuatie</w><pc pos="PC">,</pc> <w lemma="zin" pos="DUM">zin</w> <w lemma="zonder" pos="DUM">zonder</w> <w lemma="tags" pos="DUM">tags</w><pc pos="PC">.</pc> <w lemma="zin" pos="DUM">Zin</w> <w lemma="met" pos="DUM">met</w> <w lemma="tags" pos="DUM">tags</w><pc pos="PC">.</pc></p></text>
+</TEI>

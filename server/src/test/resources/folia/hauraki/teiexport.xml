@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>folia1.xml</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date>__DATE_IGNORED_BY_TEST__</date>
+                    <idno type="sourceID">What if source id is undefined?</idno>
+                    <idno type="pid">What if no pid is defined?</idno>
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl xml:id="inlMetadata">
+                    <bibl>
+                        <interpGrp type="questions">
+                            <interp>Welke inl data?</interp>
+                            <interp>wat als er geen is?</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+<listBibl xml:id="galahadMetadata">
+    <bibl>
+        <interpGrp type="model">
+            <interp>pie-tdn</interp>
+        </interpGrp>
+        <interpGrp type="tagset">
+            <interp>TDN</interp>
+        </interpGrp>
+        <interpGrp type="corpus_name">
+            <interp>testCorpus</interp>
+        </interpGrp>
+        <interpGrp type="corpus_uuid">
+            <interp>__UUID_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="date">
+            <interp>__DATE_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="user_id">
+            <interp>testUser</interp>
+        </interpGrp>
+        <interpGrp type="pid">
+            <interp>__UUID_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="title">
+            <interp>folia1</interp>
+        </interpGrp>
+    </bibl>
+</listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>
+<w lemma="gouda" pos="NOU-P" xml:id="w0">Golf</w> <w lemma="van" pos="ADP" xml:id="w1">van</w> <w lemma="harmaijers" pos="NOU-C" xml:id="w2">Hauraki</w>
+
+<w lemma="de" pos="PD" xml:id="w3">De</w> <w lemma="gouda" pos="NOU-P" xml:id="w4">Golf</w> <w lemma="van" pos="ADP" xml:id="w5">van</w> <w lemma="harm" pos="NOU-C" xml:id="w6">Hauraki</w> <w lemma="zijn" pos="VRB" xml:id="w7">is</w> <w lemma="een" pos="PD" xml:id="w8">een</w> <w lemma="baai" pos="NOU-C" xml:id="w9">baai</w> <w lemma="in" pos="ADP" xml:id="w10">in</w> <w lemma="het" pos="PD" xml:id="w11">het</w> <w lemma="noord-heid" pos="NOU-C" xml:id="w12">noorden</w> <w lemma="van" pos="ADP" xml:id="w13">van</w> <w lemma="het" pos="PD" xml:id="w14">het</w> <w lemma="nieuw-nederland" pos="NOU-P" xml:id="w15">Nieuw-Zeeland</w> <w lemma="zeer" pos="NOU-P" xml:id="w16">se</w> <w lemma="noord-amerika" pos="NOU-P" xml:id="w17">Noordereiland.</w>
+
+<w lemma="aan" pos="ADP" xml:id="w18">Aan</w> <w lemma="het" pos="PD" xml:id="w19">het</w> <w lemma="oosten" pos="NOU-C" xml:id="w20">oosten</w> <w lemma="groente" pos="VRB" xml:id="w21">grenst</w> <w lemma="de" pos="PD" xml:id="w22">de</w> <w lemma="de baas" pos="NOU-C" xml:id="w23">baai</w> <w lemma="aan" pos="ADP" xml:id="w24">aan</w> <w lemma="de" pos="PD" xml:id="w25">de</w> <w lemma="komkommer" pos="NOU-P" xml:id="w26">Coromandel</w> <w lemma="pennel" pos="NOU-P" xml:id="w27">Peninsula,</w> <w lemma="het" pos="PD" xml:id="w28">ten</w> <w lemma="zeggen" pos="VRB" xml:id="w29">zuiden</w> <w lemma="liggen" pos="VRB" xml:id="w30">liggen</w> <w lemma="de" pos="PD" xml:id="w31">de</w> <w lemma="hargenst" pos="NOU-C" xml:id="w32">Hauraki-vlakte</w> <w lemma="s[...]" pos="RES" xml:id="w33">s</w> <w lemma="en" pos="CON" xml:id="w34">en</w> <w lemma="aan" pos="ADP" xml:id="w35">aan</w> <w lemma="de" pos="PD" xml:id="w36">de</w> <w lemma="west-indischhaard" pos="NOU-C" xml:id="w37">westkust</w> <w lemma="licht" pos="ADV" xml:id="w38">ligt</w> <w lemma="de" pos="PD" xml:id="w39">de</w> <w lemma="bepouwing" pos="NOU-C" xml:id="w40">bebouwing</w> <w lemma="van" pos="ADP" xml:id="w41">van</w> <w lemma="van halmen" pos="NOU-P" xml:id="w42">Auckland.</w>
+<w lemma="in" pos="ADP" xml:id="w43">In</w> <w lemma="het" pos="PD" xml:id="w44">het</w> <w lemma="noord-amerika" pos="NOU-C" xml:id="w45">noorden</w> <w lemma="worden" pos="VRB" xml:id="w46">wordt</w> <w lemma="het" pos="PD" xml:id="w47">het</w> <w lemma="groetenis" pos="NOU-C" xml:id="w48">grotendeels</w> <w lemma="afkomen" pos="VRB" xml:id="w49">afgeschermd</w> <w lemma="van" pos="ADP" xml:id="w50">van</w> <w lemma="de" pos="PD" xml:id="w51">de</w> <w lemma="groot" pos="ADJ" xml:id="w52">Grote</w> <w lemma="okshoofd" pos="NOU-C" xml:id="w53">Oceaan</w> <w lemma="door" pos="ADP" xml:id="w54">door</w> <w lemma="de" pos="PD" xml:id="w55">de</w> <w lemma="groet" pos="NOU-C" xml:id="w56">Great</w> <w lemma="barbier" pos="NOU-C" xml:id="w57">Barrier-</w> <w lemma="en" pos="CON" xml:id="w58">en</w> <w lemma="lief" pos="NOU-P" xml:id="w59">Little</w> <w lemma="barbier" pos="NOU-P" xml:id="w60">Barrier</w> <w lemma="eiland" pos="NOU-P" xml:id="w61">eilanden.</w>
+<w lemma="in" pos="ADP" xml:id="w62">In</w> <w lemma="de" pos="PD" xml:id="w63">de</w> <w lemma="baai" pos="NOU-C" xml:id="w64">baai</w> <w lemma="zelf" pos="PD" xml:id="w65">zelf</w> <w lemma="liggen" pos="VRB" xml:id="w66">liggen</w> <w lemma="ook" pos="ADV" xml:id="w67">ook</w> <w lemma="een" pos="PD" xml:id="w68">een</w> <w lemma="aantal" pos="NOU-C" xml:id="w69">aantal</w> <w lemma="eiland" pos="NOU-C" xml:id="w70">eilanden,</w> <w lemma="wonder" pos="ADV" xml:id="w71">waaronder</w> <w lemma="waterhand" pos="NOU-C" xml:id="w72">Waiheke-eiland</w> <w lemma="en" pos="CON" xml:id="w73">en</w> <w lemma="rangon" pos="NOU-C" xml:id="w74">Rangitoto;</w> <w lemma="een" pos="PD" xml:id="w75">een</w> <w lemma="uitgevoed" pos="ADJ" xml:id="w76">uitgedoofde</w> <w lemma="vlies" pos="NOU-C" xml:id="w77">vulkaan.</w>
+<w lemma="aan" pos="ADP" xml:id="w78">Aan</w> <w lemma="de" pos="PD" xml:id="w79">de</w> <w lemma="kust" pos="NOU-C" xml:id="w80">kust</w> <w lemma="van" pos="ADP" xml:id="w81">van</w> <w lemma="de" pos="PD" xml:id="w82">de</w> <w lemma="baai" pos="NOU-C" xml:id="w83">baai</w> <w lemma="bevinden" pos="VRB" xml:id="w84">bevinden</w> <w lemma="zich" pos="PD" xml:id="w85">zich</w> <w lemma="tallerliefst" pos="ADJ" xml:id="w86">talloze</w> <w lemma="strand" pos="NOU-C" xml:id="w87">strand</w> <w lemma="en" pos="CON" xml:id="w88">en.</w>
+
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

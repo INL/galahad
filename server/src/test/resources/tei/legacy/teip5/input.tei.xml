@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <p>
+            <w lemma="hebben" type="VRB(finiteness=fin,tense=past)" xml:id="w0">Hebban</w>
+            <w lemma="olle" type="RES(type=for)" xml:id="w1">olla</w>
+            <w lemma="vogala" type="NOU-C(number=sg)" xml:id="w2">vogala</w>
+            <pc xml:id="w3">,</pc>
+            <w lemma="nestatis" type="RES(type=for)" xml:id="w4">nestas</w>
+            <w lemma="haguna" type="NOU-C(number=sg)" xml:id="w5">hagunnan</w>
+            <pc xml:id="w6">.</pc>
+            <pc xml:id="w7">.</pc>
+            <pc xml:id="w8">.</pc>
+            <w lemma="hinas" type="NOU-P" xml:id="w9">Hinase</w>
+            <w lemma="ik" type="PD(type=pers,position=free)" xml:id="w10">ic</w>
+            <w lemma="en" type="CONJ(type=coor)" xml:id="w11">ende</w>
+            <w lemma="huben" type="ADV(type=reg)" xml:id="w12">thu</w>
+            <pc xml:id="w13">:</pc>
+            <pc xml:id="w14">"</pc>
+            <w lemma="uiteen" type="PD(type=w-p,position=free)" xml:id="w15">uuat</w>
+            <w lemma="unibent" type="CONJ(type=sub)" xml:id="w16">unbidan</w>
+            <w lemma="wij" type="PD(type=pers,position=free)" xml:id="w17">wi</w>
+            <w lemma="nu" type="ADV(type=reg)" xml:id="w18">nu</w>
+            <pc xml:id="w19">?</pc>
+            <pc xml:id="w20">"</pc>
+        </p>
+    </text>
+</TEI>

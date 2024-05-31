@@ -1,0 +1,930 @@
+01_Archief_Delfland_1531gDelfland.tei.xml -- 6da1b4cd-cc83-45a1-9c4a-f81441271689
+[SUCCESS] Found all tags with advanced matching.
+
+
+01_Archief_Delfland_1532jDelfland.tei.xml -- e01f38ff-bc1c-4afe-97fb-c7fd9d71cc3c
+[SUCCESS] Found all tags with advanced matching.
+
+
+02_Archief_Elburg_1580aElburg.tei.xml -- 080ab7de-3f9a-4f79-9a0b-7fd0ab4a6274
+[ERROR] Could not resolve mismatch:
+	Truth: H..t
+	Pred: H
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_ALKMAAR_10-4-1573_TS.tei.xml -- 0abb6244-876f-459c-8b27-013a57b61df8
+[SUCCESS] Found all tags with advanced matching.
+
+
+03_ArchiefAlkmaar_Alkmaar_10-6-1575_TS.tei.xml -- 6e6de06f-df3e-4e97-a6b1-6d641ab8de6b
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t.
+	Pred: s
+[ERROR] Could not resolve mismatch:
+	Truth: Ordre
+	Pred: L
+[ERROR] Could not resolve mismatch:
+	Truth: van
+	Pred: .
+[ERROR] Could not resolve mismatch:
+	Truth: Senoy
+	Pred: Coren
+[ERROR] Could not resolve mismatch:
+	Truth: gouverneur
+	Pred: s
+[FAIL] Advanced matching misses 5 tags.
+
+
+03_ArchiefAlkmaar_Alkmaar_16-2-1574_TS.tei.xml -- 00176f3c-9ac2-443c-a0ef-c4d55e77a8ad
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t.
+	Pred: s
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Alkmaar_8-2-1574_TS.tei.xml -- 5a582f5c-ac0b-4531-8148-9207123a9b06
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t
+	Pred: s
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Delft_18-6-1573_TS.tei.xml -- d9a75dc7-1f29-4b8c-b1f5-c2b46e96d762
+[ERROR] Could not resolve mismatch:
+	Truth: [v]rienden
+	Pred: [
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Delft_24-3-1573_TS.tei.xml -- 966eb985-2519-4005-ae04-5ca873d07598
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t
+	Pred: s
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Den_Haag_15-9-1572_TS.tei.xml -- a5fb4752-9bf7-4a53-bf1f-15193b986ec0
+[SUCCESS] Found all tags with advanced matching.
+
+
+03_ArchiefAlkmaar_Den_Haag_2-10-1586_TS.tei.xml -- 3d82bbca-c0c8-487d-aed4-890366549878
+[ERROR] Could not resolve mismatch:
+	Truth: d'onkosten
+	Pred: d
+[ERROR] Could not resolve mismatch:
+	Truth: d'oncosten
+	Pred: d
+[FAIL] Advanced matching misses 2 tags.
+
+
+03_ArchiefAlkmaar_Diemerdijk_7-6-1573_TS.tei.xml -- f6fb158a-7a8e-40bb-a389-354cf6c073b1
+[SUCCESS] Found all tags with advanced matching.
+
+
+03_ArchiefAlkmaar_Dordrecht_23-8-1573_TS.tei.xml -- 1db709e8-40d7-436e-b2dc-d119797b01e1
+[ERROR] Could not resolve mismatch:
+	Truth: u[lieden]
+	Pred: u
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t
+	Pred: s
+[ERROR] Could not resolve mismatch:
+	Truth: [sc]hepenen
+	Pred: [
+[FAIL] Advanced matching misses 3 tags.
+
+
+03_ArchiefAlkmaar_Edam_15-9-1573_TS.tei.xml -- af78dcc3-6273-45c2-ad6b-3a0489f2717a
+[SUCCESS] Found all tags with advanced matching.
+
+
+03_ArchiefAlkmaar_Enkhuizen_5-4-1574_TS_b.tei.xml -- 61ee3744-69d2-4d5b-ab31-411742f049e9
+[SUCCESS] Found all tags with advanced matching.
+
+
+03_ArchiefAlkmaar_Enkhuizen__27-10-1572_TS.tei.xml -- ae4722c1-82fc-4dad-8301-40c57180196c
+[ERROR] Could not resolve mismatch:
+	Truth: [ci]to
+	Pred: [
+[ERROR] Could not resolve mismatch:
+	Truth: [ci]to
+	Pred: ci
+[FAIL] Advanced matching misses 2 tags.
+
+
+03_ArchiefAlkmaar_Hoorn_17-8-1573_TS.tei.xml -- 63d6d61f-0322-40d3-8a17-c11cfb95f12c
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t
+	Pred: s
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Hoorn_8-3-1573_TS.tei.xml -- b23d1e66-d8e5-4039-9e20-3cde43430b93
+[SUCCESS] Found all tags with advanced matching.
+
+
+03_ArchiefAlkmaar_Leiden_13-7-1573_TS_b.tei.xml -- a40a7b23-1bf3-46f7-bb1c-f671e90c1657
+[ERROR] Could not resolve mismatch:
+	Truth: N.Brunynck
+	Pred: N
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Leiden_16-6-1573_TS.tei.xml -- b1bb7282-6b16-49d8-8d9c-e0793a0163a2
+[ERROR] Could not resolve mismatch:
+	Truth: N.Brunynck
+	Pred: N
+[ERROR] Could not resolve mismatch:
+	Truth: s.s.s.t
+	Pred: .
+[FAIL] Advanced matching misses 2 tags.
+
+
+03_ArchiefAlkmaar_Middelburg_15-3-1574_TS.tei.xml -- cf1b73d5-cb24-4473-90d6-b603e216123f
+[ERROR] Could not resolve mismatch:
+	Truth: [c]ito
+	Pred: .
+[ERROR] Could not resolve mismatch:
+	Truth: [c]ito
+	Pred: [
+[ERROR] Could not resolve mismatch:
+	Truth: [m]ijne
+	Pred: [
+[FAIL] Advanced matching misses 3 tags.
+
+
+03_ArchiefAlkmaar_Purmerend_2-5-1574_TS.tei.xml -- ffb5c177-8589-4632-af14-a9bb8f695eb8
+[ERROR] Could not resolve mismatch:
+	Truth: Gunsty[ge]
+	Pred: Gunsty
+[FAIL] Advanced matching misses 1 tags.
+
+
+03_ArchiefAlkmaar_Purmerend_4-6-1574_TS.tei.xml -- c6611cf7-368e-4cf5-a643-94d1ecb4f22b
+[SUCCESS] Found all tags with advanced matching.
+
+
+04_ArchiefEnschede_1596eEnschede.tei.xml -- a436f3d0-1203-4140-bf96-b155c6850ed5
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_12maarta.tei.xml -- ba0db231-1e82-474b-8a9a-6b9132dda26e
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_12maartb.tei.xml -- 78eafa2f-c636-44f7-8b46-520dee8ce338
+[ERROR] Could not resolve mismatch:
+	Truth: J.M.W
+	Pred: J
+[FAIL] Advanced matching misses 1 tags.
+
+
+05_ArchiefZutphen_1552Zua.tei.xml -- 106757d0-fd5e-434b-b163-ac190fababf4
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_1571le.tei.xml -- 213e8a4e-527e-4d1c-ae61-64ac85db0b34
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_1571zur.tei.xml -- 6aaa3c61-403d-4c60-b5fd-ee5409c735c8
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_1572eZutphen.tei.xml -- 93730ee4-0c6c-48d2-abc9-e168d9045090
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_1572iiZutphen.tei.xml -- 4b2956a0-c8ad-4894-af69-fd00ba08cd17
+[ERROR] Could not resolve mismatch:
+	Truth: capiteyn-generael
+	Pred: capiteyn
+[FAIL] Advanced matching misses 1 tags.
+
+
+05_ArchiefZutphen_1572uZutphen.tei.xml -- 34fef94c-57c1-48d6-9551-6df00a3c0162
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_1575fZutphen.tei.xml -- 43811525-9e0e-4111-9956-b6c2d562cee2
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_20juli.tei.xml -- d45a0a0a-0181-4254-8145-9529691b8a29
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_23novembera.tei.xml -- d7b617cc-5947-40b5-9175-390c92d7b212
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_28juli.tei.xml -- 19f6e25f-537e-4a4d-9d47-d32662dc1d81
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_29decembera.tei.xml -- 493122fe-4b98-4241-9033-844e7dab295e
+[SUCCESS] Found all tags with advanced matching.
+
+
+05_ArchiefZutphen_apr25a.tei.xml -- 69b16e9f-b987-4004-9eec-484834a2744d
+[SUCCESS] Found all tags with advanced matching.
+
+
+06_DiT-Corpus_1594ara.tei.xml -- eeffd88f-6175-49af-8f5b-6dc93b8a8bb6
+[SUCCESS] Found all tags with advanced matching.
+
+
+06_DiT-Corpus_1594are.tei.xml -- 78f35131-937b-4c79-86e9-8c84ceaddaf7
+[SUCCESS] Found all tags with advanced matching.
+
+
+06_DiT-Corpus_1594arf.tei.xml -- 594e3f82-b6c2-473d-9a3f-464dd0b5224d
+[ERROR] Could not resolve mismatch:
+	Truth: B+B+S+R
+	Pred: B
+[FAIL] Advanced matching misses 1 tags.
+
+
+06_DiT-Corpus_1595ar.tei.xml -- 0ff13fe1-0ccc-4c5f-b1a5-2446e771629b
+[ERROR] Could not resolve mismatch:
+	Truth: zynddat
+	Pred: zynd
+[FAIL] Advanced matching misses 1 tags.
+
+
+06_DiT-Corpus_1596ara.tei.xml -- ac2bfaee-1008-4eee-bf36-81313482d4ba
+[SUCCESS] Found all tags with advanced matching.
+
+
+06_DiT-Corpus_1598ara.tei.xml -- e1b9b51e-1161-4c86-8e67-8bc9ffe51b66
+[ERROR] Could not resolve mismatch:
+	Truth: B.Cannoye
+	Pred: B
+[FAIL] Advanced matching misses 1 tags.
+
+
+06_DiT-Corpus_1598arb.tei.xml -- 6763b79b-60e3-4856-b22a-f31510e25551
+[SUCCESS] Found all tags with advanced matching.
+
+
+06_DiT-Corpus_1599ar.tei.xml -- 8c55df51-86c3-4cb0-8d1e-ad8dafbdb918
+[ERROR] Could not resolve mismatch:
+	Truth: B+B
+	Pred: B
+[FAIL] Advanced matching misses 1 tags.
+
+
+08_HeemkundekringGemert_1501.tei.xml -- 4afdbeea-e2fb-4b28-832e-ae529129efb7
+[SUCCESS] Found all tags with advanced matching.
+
+
+08_HeemkundekringGemert_1509.tei.xml -- f0c0943a-4e45-4db1-85bf-1cd900b4b9dc
+[SUCCESS] Found all tags with advanced matching.
+
+
+08_HeemkundekringGemert_1513.tei.xml -- 4fa404a2-9e2b-4537-a5bc-c70fbbae7ef6
+[SUCCESS] Found all tags with advanced matching.
+
+
+08_HeemkundekringGemert_1541.tei.xml -- 0e2c4d9d-a168-4d9c-b8ed-fd60a5e449bf
+[SUCCESS] Found all tags with advanced matching.
+
+
+08_HeemkundekringGemert_1543.tei.xml -- 1c7d1939-0d3b-403b-aea7-19b631012563
+[SUCCESS] Found all tags with advanced matching.
+
+
+08_HeemkundekringGemert_1547sep.tei.xml -- d381fe9a-7103-4404-aee2-38fc3f1534b2
+[ERROR] Could not resolve mismatch:
+	Truth: u[no]l[atere]
+	Pred: u
+[ERROR] Could not resolve mismatch:
+	Truth: a[lio]
+	Pred: no
+[ERROR] Could not resolve mismatch:
+	Truth: l[atere]
+	Pred: ]
+[ERROR] Could not resolve mismatch:
+	Truth: Jennekens
+	Pred: l
+[ERROR] Could not resolve mismatch:
+	Truth: voerscreven
+	Pred: [
+[ERROR] Could not resolve mismatch:
+	Truth: hebbende
+	Pred: atere
+[ERROR] Could not resolve mismatch:
+	Truth: aenden
+	Pred: ]
+[ERROR] Could not resolve mismatch:
+	Truth: pat
+	Pred: ,
+[ERROR] Could not resolve mismatch:
+	Truth: in
+	Pred: a
+[ERROR] Could not resolve mismatch:
+	Truth: breyde
+	Pred: [
+[ERROR] Could not resolve mismatch:
+	Truth: ander
+	Pred: lio
+[ERROR] Could not resolve mismatch:
+	Truth: halff
+	Pred: ]
+[ERROR] Could not resolve mismatch:
+	Truth: roey
+	Pred: l
+[ERROR] Could not resolve mismatch:
+	Truth: ende
+	Pred: [
+[ERROR] Could not resolve mismatch:
+	Truth: vijftalven
+	Pred: atere
+[ERROR] Could not resolve mismatch:
+	Truth: voet
+	Pred: ]
+[ERROR] Could not resolve mismatch:
+	Truth: ende
+	Pred: Jennekens
+[ERROR] Could not resolve mismatch:
+	Truth: aende
+	Pred: voerscreven
+[ERROR] Could not resolve mismatch:
+	Truth: Alde
+	Pred: hebbende
+[ERROR] Could not resolve mismatch:
+	Truth: Straet
+	Pred: aenden
+[ERROR] Could not resolve mismatch:
+	Truth: derdalff
+	Pred: pat
+[FAIL] Advanced matching misses 21 tags.
+
+
+08_HeemkundekringGemert_1555.tei.xml -- 7a132d35-1df3-49e2-bb8f-d10efc9b2efc
+[ERROR] Could not resolve mismatch:
+	Truth: d'andere
+	Pred: d
+[FAIL] Advanced matching misses 1 tags.
+
+
+12_Seyger-metmetadata_1521Oldenzaalregio.tei.xml -- 12e08234-7728-47fc-9064-9a3e56016038
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-gijlde
+	Pred: Vrouwen
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-gijlde
+	Pred: Vrouwen
+[FAIL] Advanced matching misses 2 tags.
+
+
+12_Seyger-metmetadata_1532bOldenzaalregio.tei.xml -- 15dac08a-e58c-44ed-977e-6a416b4020a7
+[ERROR] Could not resolve mismatch:
+	Truth: Annen-altaer
+	Pred: Annen
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-gijlde
+	Pred: Vrouwen
+[FAIL] Advanced matching misses 2 tags.
+
+
+12_Seyger-metmetadata_1545bOldenzaalregio.tei.xml -- 87ef0b91-014b-48a2-9742-f516cf2f7ac6
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-gylde
+	Pred: Vrouwen
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-gylde
+	Pred: Vrouwen
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-register
+	Pred: Vrouwen
+[ERROR] Could not resolve mismatch:
+	Truth: bewij[singhe]
+	Pred: bewij
+[FAIL] Advanced matching misses 4 tags.
+
+
+12_Seyger-metmetadata_1548aOldenzaalregio.tei.xml -- 371894d5-7cbc-4ff4-ba05-d14303e98d42
+[ERROR] Could not resolve mismatch:
+	Truth: Vrouwen-gijlde
+	Pred: Vrouwen
+[FAIL] Advanced matching misses 1 tags.
+
+
+12_Seyger-metmetadata_1549Oldenzaalregio.tei.xml -- 59d21350-cd7c-401f-bf49-eedc116dcc88
+[SUCCESS] Found all tags with advanced matching.
+
+
+12_Seyger-metmetadata_1550bOldenzaalregio.tei.xml -- 2961107f-44a2-4e5a-9fed-27220e3f8bfd
+[SUCCESS] Found all tags with advanced matching.
+
+
+BRA-BRE-152_25.tei.xml -- c8c734b9-c9c9-4061-84c3-abecbaafd445
+[ERROR] Could not resolve mismatch:
+	Truth: XVC.XXVII
+	Pred: XVC
+[FAIL] Advanced matching misses 1 tags.
+
+
+BRA-BRE-158_30.tei.xml -- 36c08d5e-ae82-4f77-8d09-4282c7e83581
+[ERROR] Could not resolve mismatch:
+	Truth: cnoeckhouders-ambachte
+	Pred: cnoeckhouders
+[FAIL] Advanced matching misses 1 tags.
+
+
+BRA-OIR-153_257.tei.xml -- 84ac1032-1066-4f62-8d92-acc4a2ad70f7
+[ERROR] Could not resolve mismatch:
+	Truth: t's
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: t'samen
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: of't
+	Pred: of
+[ERROR] Could not resolve mismatch:
+	Truth: t's
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: t's
+	Pred: t
+[FAIL] Advanced matching misses 5 tags.
+
+
+FRL-LEE-151_332.tei.xml -- 2cd57d36-e571-4791-ab1d-0f2d98de8b44
+[ERROR] Could not resolve mismatch:
+	Truth: observanten-cloester
+	Pred: observanten
+[ERROR] Could not resolve mismatch:
+	Truth: =Kollum
+	Pred: =
+[ERROR] Could not resolve mismatch:
+	Truth: L-nrs
+	Pred: L
+[FAIL] Advanced matching misses 3 tags.
+
+
+FRL-ZVW-150_354.tei.xml -- ddc22d82-2f0f-4cb1-bf48-06cf12135079
+[ERROR] Could not resolve mismatch:
+	Truth: ee<r>st
+	Pred: ee
+[ERROR] Could not resolve mismatch:
+	Truth: =Kolderwolde
+	Pred: =
+[ERROR] Could not resolve mismatch:
+	Truth: [al]s
+	Pred: [
+[FAIL] Advanced matching misses 3 tags.
+
+
+FRL-ZVW-151_355.tei.xml -- c8529065-e4a0-4314-a6a3-09203af5b10a
+[ERROR] Could not resolve mismatch:
+	Truth: pleec[h
+	Pred: pleec
+[FAIL] Advanced matching misses 1 tags.
+
+
+FRL-ZVW-152_356.tei.xml -- e30da0a2-0744-4a90-bc76-6d1b6ee53371
+[SUCCESS] Found all tags with advanced matching.
+
+
+FRL-ZVW-153_357.tei.xml -- cec70de9-1642-438d-b4d0-ccff382f234f
+[SUCCESS] Found all tags with advanced matching.
+
+
+OSL-BRV-154_139.tei.xml -- f8a43337-ba8c-45d5-99e3-6dfa1c1784e8
+[ERROR] Could not resolve mismatch:
+	Truth: dijens[t]
+	Pred: dijens
+[ERROR] Could not resolve mismatch:
+	Truth: hij[er
+	Pred: hij
+[ERROR] Could not resolve mismatch:
+	Truth: t]ho
+	Pred: [
+[FAIL] Advanced matching misses 3 tags.
+
+
+OSL-RLT-158_465.tei.xml -- 96b58a7d-1d96-4522-ad10-4fe730df0ac1
+[ERROR] Could not resolve mismatch:
+	Truth: ge‹nseriert
+	Pred: ge
+[FAIL] Advanced matching misses 1 tags.
+
+
+OVL-BKH-156_441.tei.xml -- c4318a7c-ed79-474c-b1ae-b3e167178deb
+[SUCCESS] Found all tags with advanced matching.
+
+
+OVL-DNM-156_444.tei.xml -- 47b0381d-09a4-4764-85bb-6d6b43ff12b3
+[ERROR] Could not resolve mismatch:
+	Truth: info-file
+	Pred: info
+[FAIL] Advanced matching misses 1 tags.
+
+
+OVL-GNT-150_451.tei.xml -- 324180e8-f1e6-48b7-9490-f306145f8298
+[ERROR] Could not resolve mismatch:
+	Truth: f°65v-67r
+	Pred: f°65v
+[ERROR] Could not resolve mismatch:
+	Truth: N.S
+	Pred: N
+[FAIL] Advanced matching misses 2 tags.
+
+
+OVL-GRB-156_454.tei.xml -- e87aee0a-f060-41a5-99ab-ab19bfb0b553
+[ERROR] Could not resolve mismatch:
+	Truth: luitenant-baljuw
+	Pred: luitenant
+[ERROR] Could not resolve mismatch:
+	Truth: Sint-Maria-Lierde
+	Pred: Sint
+[FAIL] Advanced matching misses 2 tags.
+
+
+OVL-GRB-157_455.tei.xml -- 7237b809-c945-4c93-b020-ce554fd95930
+[ERROR] Could not resolve mismatch:
+	Truth: Mercy-Argenteau
+	Pred: Mercy
+[FAIL] Advanced matching misses 1 tags.
+
+
+OVL-OUD-156_457.tei.xml -- 84c9fd24-8399-4f95-b03d-0794abdc578a
+[ERROR] Could not resolve mismatch:
+	Truth: info-file
+	Pred: info
+[FAIL] Advanced matching misses 1 tags.
+
+
+OVL-RNS-156_458.tei.xml -- 104b7cfc-539f-4adf-9d25-6b7e2ee4db27
+[SUCCESS] Found all tags with advanced matching.
+
+
+VBR-ERP-157_484.tei.xml -- 27efeb21-3915-4b85-baaa-81583aa1b7ea
+[ERROR] Could not resolve mismatch:
+	Truth: Ouder-hove
+	Pred: Ouder
+[ERROR] Could not resolve mismatch:
+	Truth: som-meren
+	Pred: som
+[ERROR] Could not resolve mismatch:
+	Truth: d'aenleggere
+	Pred: d
+[ERROR] Could not resolve mismatch:
+	Truth: hoff-weerdich
+	Pred: hoff
+[ERROR] Could not resolve mismatch:
+	Truth: d'ons
+	Pred: d
+[ERROR] Could not resolve mismatch:
+	Truth: stuy-vers
+	Pred: stuy
+[ERROR] Could not resolve mismatch:
+	Truth: Diede-gem
+	Pred: Diede
+[ERROR] Could not resolve mismatch:
+	Truth: haer-lieden
+	Pred: haer
+[ERROR] Could not resolve mismatch:
+	Truth: ont-erven
+	Pred: ont
+[ERROR] Could not resolve mismatch:
+	Truth: hooft-bancke
+	Pred: hooft
+[ERROR] Could not resolve mismatch:
+	Truth: over-hooren
+	Pred: over
+[ERROR] Could not resolve mismatch:
+	Truth: naer-beschreven
+	Pred: naer
+[ERROR] Could not resolve mismatch:
+	Truth: belee-ninghe
+	Pred: belee
+[ERROR] Could not resolve mismatch:
+	Truth: stadt-houdere
+	Pred: stadt
+[ERROR] Could not resolve mismatch:
+	Truth: t'ontgoeden
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: t'onder-houden
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: t'aboleren
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: t'sedert
+	Pred: t
+[ERROR] Could not resolve mismatch:
+	Truth: stadt-houdere
+	Pred: stadt
+[ERROR] Could not resolve mismatch:
+	Truth: goe-dinghe
+	Pred: goe
+[ERROR] Could not resolve mismatch:
+	Truth: stadt-houdere
+	Pred: stadt
+[ERROR] Could not resolve mismatch:
+	Truth: heerend'erf-laeten
+	Pred: heerend
+[ERROR] Could not resolve mismatch:
+	Truth: thol-kamere
+	Pred: thol
+[ERROR] Could not resolve mismatch:
+	Truth: thol-kamere
+	Pred: thol
+[ERROR] Could not resolve mismatch:
+	Truth: endethol-kamere
+	Pred: endethol
+[ERROR] Could not resolve mismatch:
+	Truth: sche-penen
+	Pred: sche
+[ERROR] Could not resolve mismatch:
+	Truth: hooft-banck
+	Pred: hooft
+[ERROR] Could not resolve mismatch:
+	Truth: wet-houderen
+	Pred: wet
+[ERROR] Could not resolve mismatch:
+	Truth: per-sonele
+	Pred: per
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: uyt-ghedinght
+	Pred: uyt
+[ERROR] Could not resolve mismatch:
+	Truth: uyt-ghedaeght
+	Pred: uyt
+[ERROR] Could not resolve mismatch:
+	Truth: vangront-chynsen
+	Pred: vangront
+[ERROR] Could not resolve mismatch:
+	Truth: landt-charteren
+	Pred: landt
+[ERROR] Could not resolve mismatch:
+	Truth: blyde-incompsten
+	Pred: charteren
+[ERROR] Could not resolve mismatch:
+	Truth: erf-laten
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: d'erf-laeten
+	Pred: d
+[ERROR] Could not resolve mismatch:
+	Truth: voor-schreven
+	Pred: voor
+[ERROR] Could not resolve mismatch:
+	Truth: erf-laeten
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: laet-hove
+	Pred: laet
+[ERROR] Could not resolve mismatch:
+	Truth: vanhoef-goedinge
+	Pred: vanhoef
+[ERROR] Could not resolve mismatch:
+	Truth: over-heer
+	Pred: over
+[ERROR] Could not resolve mismatch:
+	Truth: erf-laeten
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goe-den
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: appel-latien
+	Pred: appel
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: hooft-banck
+	Pred: hooft
+[ERROR] Could not resolve mismatch:
+	Truth: d'welck
+	Pred: d
+[FAIL] Advanced matching misses 48 tags.
+
+
+VBR-OVY-157_495.tei.xml -- 9b86423b-4de5-4e5b-b1c2-015f003518a8
+[ERROR] Could not resolve mismatch:
+	Truth: D'ISQUE
+	Pred: D
+[ERROR] Could not resolve mismatch:
+	Truth: onder-teeckent
+	Pred: onder
+[ERROR] Could not resolve mismatch:
+	Truth: lest-leden
+	Pred: lest
+[ERROR] Could not resolve mismatch:
+	Truth: voor-gaenden
+	Pred: voor
+[ERROR] Could not resolve mismatch:
+	Truth: clock-slagh
+	Pred: -
+[ERROR] Could not resolve mismatch:
+	Truth: die-men
+	Pred: die
+[ERROR] Could not resolve mismatch:
+	Truth: al-hier
+	Pred: -
+[ERROR] Could not resolve mismatch:
+	Truth: imme-diaet
+	Pred: imme
+[ERROR] Could not resolve mismatch:
+	Truth: schepen-dom
+	Pred: schepen
+[ERROR] Could not resolve mismatch:
+	Truth: laet-hoven
+	Pred: laet
+[ERROR] Could not resolve mismatch:
+	Truth: voor-schreven
+	Pred: voor
+[ERROR] Could not resolve mismatch:
+	Truth: hun-lieden
+	Pred: hun
+[ERROR] Could not resolve mismatch:
+	Truth: banck-recht
+	Pred: banck
+[ERROR] Could not resolve mismatch:
+	Truth: daer-en-boven
+	Pred: daer
+[ERROR] Could not resolve mismatch:
+	Truth: d'administratie
+	Pred: d
+[ERROR] Could not resolve mismatch:
+	Truth: leen-hof
+	Pred: leen
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: twin-tichsten
+	Pred: twin
+[ERROR] Could not resolve mismatch:
+	Truth: pont-ghelt
+	Pred: pont
+[ERROR] Could not resolve mismatch:
+	Truth: dray-boomsgelegen
+	Pred: dray
+[ERROR] Could not resolve mismatch:
+	Truth: dray-booms
+	Pred: dray
+[ERROR] Could not resolve mismatch:
+	Truth: handt-teecken
+	Pred: handt
+[FAIL] Advanced matching misses 22 tags.
+
+
+VBR-SOZ-157_497.tei.xml -- 82c088f8-a7c7-49d2-9672-88c8ea902370
+[ERROR] Could not resolve mismatch:
+	Truth: cance-lier
+	Pred: cance
+[ERROR] Could not resolve mismatch:
+	Truth: in't
+	Pred: i
+[ERROR] Could not resolve mismatch:
+	Truth: d'inhouden
+	Pred: d
+[ERROR] Could not resolve mismatch:
+	Truth: hooft-banck
+	Pred: hooft
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: compe-terende
+	Pred: compe
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: uyt-gewonnen
+	Pred: uyt
+[ERROR] Could not resolve mismatch:
+	Truth: gront-chynsen
+	Pred: gront
+[ERROR] Could not resolve mismatch:
+	Truth: evinceert-men
+	Pred: -
+[ERROR] Could not resolve mismatch:
+	Truth: mets'dinghs
+	Pred: evinceert
+[ERROR] Could not resolve mismatch:
+	Truth: voor-schreven
+	Pred: voor
+[ERROR] Could not resolve mismatch:
+	Truth: erf-goeden
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: belee-ninghe
+	Pred: belee
+[ERROR] Could not resolve mismatch:
+	Truth: thol-camere
+	Pred: thol
+[ERROR] Could not resolve mismatch:
+	Truth: erf-laeten
+	Pred: erf
+[ERROR] Could not resolve mismatch:
+	Truth: thol-camere
+	Pred: thol
+[ERROR] Could not resolve mismatch:
+	Truth: ghena-dichs
+	Pred: ghena
+[ERROR] Could not resolve mismatch:
+	Truth: over-midts
+	Pred: over
+[ERROR] Could not resolve mismatch:
+	Truth: lant-charteren
+	Pred: lant
+[ERROR] Could not resolve mismatch:
+	Truth: plac-caerte
+	Pred: plac
+[ERROR] Could not resolve mismatch:
+	Truth: gheswo-ren
+	Pred: gheswo
+[ERROR] Could not resolve mismatch:
+	Truth: ende't
+	Pred: ende
+[ERROR] Could not resolve mismatch:
+	Truth: ghe-daenhebbe
+	Pred: ghe
+[FAIL] Advanced matching misses 25 tags.
+
+
+WVL-BRG-153_178.tei.xml -- 55d589f7-b9b9-4c5a-a82e-f5c6ed248fe9
+[SUCCESS] Found all tags with advanced matching.
+
+
+WVL-KRT-156_518.tei.xml -- 4de000d7-2f0b-4bb4-9c1a-4b8da0fc0a17
+[SUCCESS] Found all tags with advanced matching.
+
+
+WVL-MEN-156_522.tei.xml -- 9ea0bee6-48dd-46ab-9f24-30949a89a76d
+[SUCCESS] Found all tags with advanced matching.
+
+
+WVL-NWP-156_524.tei.xml -- 203455c8-e545-4f50-aebd-97178a954b09
+[SUCCESS] Found all tags with advanced matching.
+
+
+WVL-OST-156_532.tei.xml -- 2a6dc163-9292-450a-92f6-5cedba4a6513
+[ERROR] Could not resolve mismatch:
+	Truth: info-file
+	Pred: info
+[FAIL] Advanced matching misses 1 tags.
+
+
+WVL-VDH-157_534.tei.xml -- 06525725-1796-4e46-976b-ce378df2c547
+[SUCCESS] Found all tags with advanced matching.
+
+
+WVL-VRN-156_535.tei.xml -- 3a5afaf6-cb17-440a-9f49-9cb98eb54c64
+[ERROR] Could not resolve mismatch:
+	Truth: VEURNE-AMBACHT
+	Pred: VEURNE
+[ERROR] Could not resolve mismatch:
+	Truth: VEURNE-AMBACHT
+	Pred: VEURNE
+[ERROR] Could not resolve mismatch:
+	Truth: Veurne-Ambacht
+	Pred: Veurne
+[ERROR] Could not resolve mismatch:
+	Truth: info-file
+	Pred: info
+[ERROR] Could not resolve mismatch:
+	Truth: info-file
+	Pred: info
+[FAIL] Advanced matching misses 5 tags.
+
+
+WVL-WVK-156_536.tei.xml -- 890b851f-0ce7-4e8c-a5cb-3fcc4946e767
+[ERROR] Could not resolve mismatch:
+	Truth: Mercy-Argenteau
+	Pred: Mercy
+[ERROR] Could not resolve mismatch:
+	Truth: f°188r-188v
+	Pred: f°188r
+[FAIL] Advanced matching misses 2 tags.
+
+
+ZHL-LEI-156_386.tei.xml -- 58ae1cf8-ea29-497b-bab3-a8e97fc89ca5
+[SUCCESS] Found all tags with advanced matching.
+
+
+ZHL-SDM-158_561.tei.xml -- 03fef532-1276-4a1a-8c26-6c32b7fb8861
+[SUCCESS] Found all tags with advanced matching.
+
+
+Summary:
+	Simple matches: 19
+	Advanced matches: 44
+	Total files: 89

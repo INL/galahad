@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Addens, Johannes aan Vloten, Katharina van | 1892-07-15</title>
+        
+      </titleStmt>
+      <publicationStmt>
+        <p>
+          <date>1892</date>
+          <idno type="sourceID">brieven-correspondenten-1900:0017</idno>
+          <idno type="pid">INT___UUID_IGNORED_BY_TEST__</idno>
+        </p>
+      </publicationStmt>
+      <notesStmt>
+        <note/>
+      </notesStmt>
+      <sourceDesc><listBibl xml:id="galahadMetadata">
+    <bibl>
+        <interpGrp type="model">
+            <interp>pie-tdn</interp>
+        </interpGrp>
+        <interpGrp type="tagset">
+            <interp>TDN-Core</interp>
+        </interpGrp>
+        <interpGrp type="corpus_name">
+            <interp>testCorpus</interp>
+        </interpGrp>
+        <interpGrp type="corpus_uuid">
+            <interp>__UUID_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="date">
+            <interp>__DATE_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="user_id">
+            <interp>testUser</interp>
+        </interpGrp>
+        <interpGrp type="pid">
+            <interp>__UUID_IGNORED_BY_TEST__</interp>
+        </interpGrp>
+        <interpGrp type="title">
+            <interp>Addens, Johannes aan Vloten, Katharina van | 1892-07-15</interp>
+        </interpGrp>
+    </bibl>
+</listBibl>
+        <listBibl xml:id="inlMetadata">
+          <bibl>
+            <interpGrp type="sourceID">
+              <interp>brieven-correspondenten-1900:0017</interp>
+              
+            </interpGrp>
+            <interpGrp type="pid">
+              <interp>INT___UUID_IGNORED_BY_TEST__</interp>
+              
+            </interpGrp>
+            <interpGrp type="titleLevel1">
+              <interp>Addens, Johannes aan Vloten, Katharina van | 1892-07-15</interp>
+              
+            </interpGrp>
+            <interpGrp type="subtitleLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="titleLevel2">
+              <interp>Brieven en Correspondenten rond 1900</interp>
+              
+            </interpGrp>
+            <interpGrp type="subtitleLevel2">
+              <interp>Digitale editie</interp>
+            </interpGrp>
+            <interpGrp type="titleLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="subtitleLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="authorLevel1">
+              <interp n="__UUID_IGNORED_BY_TEST__">Addens, Johannes</interp>
+              
+            </interpGrp>
+            <interpGrp type="authorLevel2">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="authorLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="categoryLevel1">
+              <interp>uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="categoryLevel2">
+              <interp>uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="editionLevel1">
+              <interp>1</interp>
+              
+            </interpGrp>
+            <interpGrp type="editionLevel2">
+              <interp>1</interp>
+              
+            </interpGrp>
+            <interpGrp type="editorLevel1">
+              <interp n="__UUID_IGNORED_BY_TEST__">Annemarie Kets</interp>
+              
+            </interpGrp>
+            <interpGrp type="editorLevel2">
+              <interp n="__UUID_IGNORED_BY_TEST__">Annemarie Kets</interp>
+              
+            </interpGrp>
+            <interpGrp type="editorLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="mediumLevel1">
+              <interp>digitale uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="mediumLevel2">
+              <interp>digitale uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="resourceURILevel1">
+              <interp>http://brieven-correspondenten-1900.huygens.knaw.nl/edition/search</interp>
+              
+            </interpGrp>
+            <interpGrp type="resourceURILevel2">
+              <interp>http://brieven-correspondenten-1900.huygens.knaw.nl/edition/search</interp>
+              
+            </interpGrp>
+            <interpGrp type="placePublicationLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="placePublicationLevel2">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="publisherLevel1">
+              <interp>Huygens ING</interp>
+              
+            </interpGrp>
+            <interpGrp type="publisherLevel2">
+              <interp>Huygens ING</interp>
+              
+            </interpGrp>
+            <interpGrp type="isbn">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="pubYearLevel1_from">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubYearLevel1_to">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubYearLevel2_from">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubYearLevel2_to">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel1_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel1_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel2_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel2_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel1_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel1_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel2_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel2_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="witnessYearLevel1_from">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="witnessYearLevel1_to">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel1_from">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel1_to">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel1_from">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel1_to">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel1_from">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel1_to">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel1_from">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel1_to">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel1_from">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel1_to">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="witnessYearLevel2_from">
+              <interp>1877</interp>
+            </interpGrp>
+            <interpGrp type="witnessYearLevel2_to">
+              <interp>1925</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel2_from">
+              <interp>02</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel2_to">
+              <interp>11</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel2_from">
+              <interp>12</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel2_to">
+              <interp>24</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel2_from">
+              <interp>1877</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel2_to">
+              <interp>1925</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel2_from">
+              <interp>02</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel2_to">
+              <interp>11</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel2_from">
+              <interp>12</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel2_to">
+              <interp>24</interp>
+            </interpGrp>
+            <interpGrp type="localization_placeLevel1">
+              <interp>Helsingfors</interp><interp>Helsinki</interp>
+              
+            </interpGrp>
+            <interpGrp type="localization_provinceLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="localization_countryLevel1">
+              <interp>Finland</interp>
+            </interpGrp>
+            <interpGrp type="localization_regionLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="localization_kloekecodeLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="localization_placeLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_provinceLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_countryLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_regionLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_kloekecodeLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="ingestTime">
+              <interp>2018-05-31T12:07</interp>
+              
+            </interpGrp>
+            <interpGrp type="genreLevel1">
+              <interp>egodocumenten</interp>
+            </interpGrp>
+            <interpGrp type="genreLevel2">
+              <interp>egodocumenten</interp>
+            </interpGrp>
+            <interpGrp type="subgenreLevel1">
+              <interp>brieven</interp>
+            </interpGrp>
+            <interpGrp type="subgenreLevel2">
+              <interp>brieven</interp>
+            </interpGrp>
+            <interpGrp type="factualityLevel1">
+              <interp>non-fictie</interp>
+            </interpGrp>
+            <interpGrp type="factualityLevel2">
+              <interp>non-fictie</interp>
+            </interpGrp>
+            <interpGrp type="statusTextLevel1">
+              <interp>geen vertaling</interp>
+            </interpGrp>
+            <interpGrp type="statusTextLevel2">
+              <interp>geen vertaling</interp>
+            </interpGrp>
+            <interpGrp type="sourceLanguageLevel1">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="sourceLanguageLevel2">
+              <interp/>
+              
+            </interpGrp>
+            
+            <interpGrp type="primaryLanguageLevel1"><interp>nld</interp><interp>deu</interp><!--de oorspronkelijke taalinformatie luidde: "Nederlands en Duits"--></interpGrp>
+            <interpGrp type="primaryLanguageLevel2">
+              <interp>deu</interp>
+              <interp>eng</interp>
+              <interp>fra</interp>
+              <interp>nld</interp>
+                        </interpGrp>
+            <interpGrp type="settingLocation">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="settingPerson">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="settingOrganization">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="ipr">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="copyrightHolder">
+              <interp>Huygens ING</interp>
+            </interpGrp>
+            <interpGrp type="copyrightOwner">
+              <interp>Huygens ING</interp>
+            </interpGrp>
+            <interpGrp type="corpusProvenance">
+              <interp>HuygensING-brieven-correspondenten-1900</interp>
+            </interpGrp>
+            <interpGrp type="biblScope_pageLevel1">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="biblScope_pageLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="biblScope_volumeLevel1">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="biblScope_volumeLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="processingMethod">
+              <interp>born digital</interp>
+            </interpGrp>
+          </bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader><text>
+
+<body><head resp="editor"><w lemma="advies" pos="NOU-P">Addens,</w> <w lemma="johannes" pos="NOU-P">Johannes</w> <w lemma="aan" pos="ADP">aan</w> <w lemma="vloot" pos="NOU-P">Vloten,</w> <w lemma="catharina" pos="NOU-P">Katharina</w> <w lemma="van" pos="ADP">van</w> <w lemma="van der meije" pos="PD">|</w> <w lemma="zestienhonderdvijfen" pos="NUM">1892-07-15</w></head><p> <pb/><w lemma="held worderijs ?" pos="NOU-P">Helsingfors,</w> <w lemma="de" pos="PD">den</w> <w lemma="vijftiende" pos="NUM">15</w> <w lemma="juli" pos="NOU-C">Juli</w> <w lemma="zestienhonderdtweeën" pos="NUM">1892</w></p><p> </p><p> <w lemma="best" pos="ADJ">Beste</w> <w lemma="mevrouw" pos="NOU-C">Mevr.</w> <w lemma="kritijnk" pos="NOU-P">Kitty</w> <w lemma="verwerken" pos="VRB">Verwey-v.</w> <w lemma="vloot" pos="NOU-P">Vloten.</w></p><p> </p><p> <w lemma="het" pos="ADV">'t</w> <w lemma="zijn" pos="VRB">Was</w> <w lemma="zeer" pos="ADV">zeer</w> <w lemma="lief" pos="ADJ">lief</w> <w lemma="van" pos="ADP">van</w> <w lemma="u" pos="PD">U</w> <w lemma="ik" pos="PD">my</w> <w lemma="die" pos="PD">die</w> <w lemma="boek" pos="NOU-C">boeken</w> <w lemma="te" pos="ADP">te</w> <w lemma="sturen" pos="VRB">sturen,</w> <w lemma="zeer" pos="ADV">zeer</w> <w lemma="lief" pos="ADJ">lief.</w> <w lemma="dank" pos="VRB">Dank</w> <w lemma="best" pos="ADJ">beste</w> <w lemma="kitaaltje" pos="NOU-C">Kitty,</w> <w lemma="mevrouw" pos="NOU-C">Mevrouw</w> <w lemma="willen" pos="VRB">wilde</w> <w lemma="ik" pos="PD">ik</w> <w lemma="zeggen" pos="NOU-C">zeggen.</w> <w lemma="krittentie" pos="NOU-P">Kitty</w> <w lemma="vinden" pos="VRB">vind</w> <w lemma="ik" pos="PD">ik</w> <w lemma="moeten" pos="VRB">mooier,</w> <w lemma="mevrouw" pos="NOU-C">Mevrouw</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="te" pos="ADP">te</w> <w lemma="deugdriet" pos="NUM">deftig,</w> <w lemma="beteren" pos="VRB">beteekent:</w> <w lemma="komen" pos="VRB">Kom</w> <w lemma="mee" pos="ADV">me</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="te" pos="ADP">te</w> <w lemma="na" pos="ADV">na.</w> <w lemma="ue." pos="NUM">-</w> <w lemma="met" pos="ADP">Met</w> <w lemma="het" pos="PD">het</w> <w lemma="oordeel" pos="NOU-C">oordeel</w> <w lemma="de" pos="PD">der</w> <w lemma="schelmer" pos="NOU-P">Schiedammer</w> <w lemma="stellen" pos="VRB">stem</w> <w lemma="ik" pos="PD">ik</w> <w lemma="volkomen" pos="ADV">volkomen</w> <w lemma="in" pos="ADP">in.</w> <w lemma="hart" pos="ADJ">'De</w> <w lemma="joden" pos="NOU-C">Joden'</w> <w lemma="zijn" pos="VRB">zijn</w> <w lemma="schoon" pos="CON">schoon,</w> <w lemma="onvreeddelijk" pos="ADV">onovertreffelijk</w> <w lemma="schoon" pos="ADJ">schoon.</w> <w lemma="die" pos="CON">-</w> <w lemma="de" pos="PD">De</w> <w lemma="belracht" pos="NOU-C">beeldenpracht</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="heerlijk" pos="ADV">heerlijk,</w> <w lemma="de" pos="PD">de</w> <w lemma="verhalen" pos="VRB">verhalen</w> <w lemma="zijn" pos="PD">zijn</w> <w lemma="natuurlijk" pos="ADJ">naif-kinderlijk,</w> <w lemma="tinnen" pos="NOU-C">tintelen</w> <w lemma="van" pos="ADP">van</w> <w lemma="gevoel" pos="NOU-C">gevoel.</w> <w lemma="die" pos="VRB">-</w> <w lemma="dat" pos="CON">Dat</w> <w lemma="men" pos="PD">men</w> <w lemma="eraf" pos="ADV">hierby</w> <w lemma="liggen" pos="VRB">lachen</w> <w lemma="kunnen" pos="VRB">kon,</w> <w lemma="zoals" pos="CON">zooals</w> <w lemma="gij" pos="PD">Gij</w> <w lemma="schrijven" pos="VRB">schrijft,</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="de" pos="PD">de</w> <w lemma="schelmer" pos="NOU-P">Schiedammer</w> <w lemma="zeggen" pos="VRB">zegt</w> <w lemma="allerheil" pos="CON">het,</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="ik" pos="PD">mij</w> <w lemma="onbepreken" pos="ADJ">onbegrijpelijk.</w> <w lemma="unresolved" pos="RES">-</w> <w lemma="waarom" pos="ADV">Waarom</w> <w lemma="laten" pos="VRB">lachtte</w> <w lemma="het" pos="PD">'t</w> <w lemma="publiek" pos="NOU-C">publiek</w> <w lemma="doen" pos="VRB">-?-</w> <w lemma="de" pos="PD">De</w> <w lemma="verzet" pos="NOU-C">verzen</w> <w lemma="geven" pos="VRB">geven</w> <w lemma="er" pos="ADV">er</w> <w lemma="toch" pos="ADV">toch</w> <w lemma="geen" pos="PD">geene</w> <w lemma="aanleiding" pos="NOU-C">aanleiding</w> <w lemma="toe" pos="ADV">toe</w> <w lemma="en" pos="CON">en</w> <w lemma="daar" pos="ADV">daar</w> <w lemma="verzeten" pos="VRB">verzen</w> <w lemma="en" pos="CON">en</w> <w lemma="bedende" pos="ADP">beelden</w> <w lemma="zeker" pos="ADJ">zeker</w> <w lemma="elkaar" pos="PD">elkaâr</w> <w lemma="waardig" pos="ADJ">waardig</w> <w lemma="dekenken" pos="NOU-C">dekken</w> <w lemma="zijn" pos="VRB">waren,</w> <w lemma="bestaan" pos="VRB">bestond</w> <w lemma="er" pos="ADV">er</w> <w lemma="geen" pos="PD">geen</w> <w lemma="grond" pos="NOU-C">grond</w> <w lemma="iets" pos="PD">iets</w> <w lemma="belijken" pos="ADJ">belachelyk</w> <w lemma="te" pos="ADP">te</w> <w lemma="vinden" pos="VRB">vinden.</w> <w lemma="ue." pos="RES">-</w> <w lemma="unresolved" pos="ADV">-</w> <w lemma="wat" pos="PD">Wat</w> <w lemma="plaats" pos="NOU-C">Plox</w> <w lemma="over" pos="ADP">over</w> <w lemma="de" pos="PD">de</w> <w lemma="taal" pos="NOU-C">taal</w> <w lemma="zeggen" pos="VRB">zegt,</w> <w lemma="steed" pos="VRB">stem</w> <w lemma="ik" pos="PD">ik</w> <w lemma="het" pos="PD">ten</w> <w lemma="deel" pos="NOU-C">deele</w> <w lemma="toezenden" pos="VRB">toe.</w> <w lemma="ue." pos="PD">-</w> <w lemma="ook" pos="ADV">Ook</w> <w lemma="ik" pos="PD">ik</w> <w lemma="zullen" pos="VRB">zou</w> <w lemma="het" pos="PD">'t</w> <w lemma="beter" pos="ADV">beter</w> <w lemma="achten" pos="VRB">achten,</w> <w lemma="als" pos="CON">als</w> <w lemma="uw" pos="PD">Uw</w> <w lemma="man" pos="NOU-C">man</w> <w lemma="gewoon" pos="VRB">gewoon</w> <w lemma="kussen" pos="VRB">gekuischt</w> <w lemma="hollands" pos="ADJ">Hollands</w> <w lemma="willen" pos="VRB">wou</w> <w lemma="schrijven" pos="VRB">schrijven,</w> <w lemma="zoals" pos="CON">zooals</w> <w lemma="de" pos="PD">de</w> <w lemma="genezent" pos="NOU-C">Genestett</w> <w lemma="en" pos="CON">en</w> <w lemma="ander" pos="PD">anderen,</w> <w lemma="die" pos="PD">die</w> <w lemma="er" pos="ADV">er</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="iets" pos="PD">iets</w> <w lemma="daarvan" pos="ADV">van</w> <w lemma="weten" pos="VRB">wisten,</w> <w lemma="overlijden" pos="VRB">deden.</w> <w lemma="de" pos="PD">De</w> <w lemma="schoolheid" pos="NOU-C">schoonheid</w> <w lemma="zijn" pos="PD">zijner</w> <w lemma="verzetten" pos="NOU-C">verzen</w> <w lemma="behoeven" pos="VRB">behoefde</w> <w lemma="daardoor" pos="ADV">daardoor</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="te" pos="ADP">te</w> <w lemma="lijden" pos="VRB">lyden,</w> <w lemma="en" pos="CON">en</w> <w lemma="hij" pos="PD">hij</w> <w lemma="zullen" pos="VRB">zou</w> <w lemma="meer" pos="PD">meer</w> <w lemma="les" pos="NOU-C">lezers</w> <w lemma="vinden" pos="VRB">vinden.</w> <w lemma="tegen" pos="ADP">Tegen</w> <w lemma="de" pos="PD">de</w> <w lemma="zonderling" pos="ADJ">zonderlinge</w> <w lemma="afbreking" pos="NOU-C">afbreking</w> <w lemma="van" pos="ADP">van</w> <w lemma="woord" pos="NOU-C">woorden</w> <w lemma="getrouwd" pos="ADJ">ge-scepterde</w> <w lemma="familia" pos="NOU-C">farao.</w> <w lemma="et cetera" pos="ADV">etc.</w> <pb/><w lemma="bij" pos="ADP">bij</w> <w lemma="deze" pos="PD">deze</w> <w lemma="soort" pos="NOU-C">soort</w> <w lemma="daarvan" pos="ADV">van</w> <w lemma="verzien" pos="VRB">verzen,</w> <w lemma="hebben" pos="VRB">heb</w> <w lemma="ik" pos="PD">ik</w> <w lemma="geen" pos="PD">geen</w> <w lemma="bezorgen" pos="VRB">bezwaar,</w> <w lemma="enins" pos="PD">evenmin</w> <w lemma="als" pos="CON">als</w> <w lemma="tegen" pos="ADP">tegen</w> <w lemma="de" pos="PD">de</w> <w lemma="wellang" pos="NOU-C">weglating</w> <w lemma="de" pos="PD">der</w> <w lemma="leiden" pos="VRB">lidwoorden:</w></p><p> </p><p> <w lemma="hart" pos="NOU-P">'Binnen</w> <w lemma="in" pos="ADP">in</w> <w lemma="unresolved" pos="NOU-C">zaal</w> <w lemma="van" pos="ADP">van</w> <w lemma="cheid" pos="NOU-C">cederhout.'</w></p><p> </p><p> <w lemma="de" pos="PD">De</w> <w lemma="taal" pos="NOU-C">taal</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="zo" pos="ADV">zoo</w> <w lemma="terusten" pos="VRB">teer,</w> <w lemma="zo" pos="ADV">zoo</w> <w lemma="vinden" pos="VRB">fijn,</w> <w lemma="zo" pos="ADV">zoo</w> <w lemma="evers" pos="ADV">etherisch</w> <w lemma="dat" pos="CON">dat</w> <w lemma="zij" pos="PD">ze</w> <w lemma="toch" pos="ADV">toch</w> <w lemma="nauw" pos="ADV">nauw</w> <w lemma="of" pos="CON">of</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="uitstrekken" pos="VRB">uitgesproken</w> <w lemma="worden" pos="VRB">worden.</w> <w lemma="willen" pos="VRB">Wil</w> <w lemma="men" pos="PD">men</w> <w lemma="zij" pos="PD">ze</w> <w lemma="zien" pos="VRB">zien,</w> <w lemma="dan" pos="ADV">dan</w> <w lemma="zullen" pos="VRB">zou</w> <w lemma="ik" pos="PD">ik</w> <w lemma="schrijven" pos="VRB">schrijven:</w></p><p> </p><p> <w lemma="binnenkomen" pos="ADV">Binnen</w> <w lemma="in" pos="ADP">in</w> <hi rend="superscript"><w lemma="de" pos="PD">de</w></hi> <w lemma="de salt" pos="NOU-C">zaal</w> <w lemma="unresolved" pos="RES">-</w></p><p> <w lemma="dat" pos="CON">dat</w> <hi rend="superscript"><w lemma="de" pos="PD">de</w></hi> <w lemma="wind" pos="NOU-C">wind</w> <w lemma="bewegen" pos="VRB">beweegt.</w> <w lemma="ue." pos="PD">-</w></p><p> </p><p> <w lemma="tegen" pos="ADP">Tegen</w> <w lemma="de" pos="PD">D'</w> <w lemma="joden" pos="NOU-C">Joden</w> <w lemma="hebben" pos="VRB">heb</w> <w lemma="ik" pos="PD">ik</w> <w lemma="niets" pos="PD">niets,</w> <w lemma="het" pos="PD">'t</w> <w lemma="komen" pos="VRB">komt</w> <w lemma="ik" pos="PD">mij</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="honderdaads" pos="ADJ">'onmelodisch'</w> <w lemma="voor" pos="ADP">voor.</w> <w lemma="ue." pos="RES">-</w> <w lemma="zulk" pos="PD">Zulke</w> <w lemma="verbling" pos="NOU-C">verbindingen</w> <w lemma="zijn" pos="VRB">zijn</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="ophouden" pos="VRB">geoorloofd,</w> <w lemma="zeggen" pos="VRB">zegt</w> <w lemma="plaas" pos="NOU-C">Plox.</w> <w lemma="waarom" pos="ADV">Waarom</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="een" pos="CON">-?.</w> <w lemma="zij" pos="PD">Ze</w> <w lemma="komen" pos="VRB">komen</w> <w lemma="in" pos="ADP">in</w> <w lemma="de" pos="PD">de</w> <w lemma="spectimical" pos="NOU-C">spreektaal</w> <w lemma="voorts" pos="ADV">voor,</w> <w lemma="en" pos="CON">en</w> <w lemma="deze" pos="PD">deze</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="toch" pos="ADV">toch</w> <w lemma="de" pos="PD">de</w> <w lemma="weter" pos="NOU-C">wetgever</w> <w lemma="van" pos="ADP">van</w> <w lemma="ons" pos="PD">ons</w> <w lemma="tamak" pos="NOU-C">taal-wetboek,</w> <w lemma="van" pos="ADP">van</w> <w lemma="de" pos="PD">de</w> <w lemma="graafschap" pos="NOU-C">gramatica.</w> <w lemma="unresolved" pos="RES">-</w> <w lemma="ik" pos="PD">Ik</w> <w lemma="maken" pos="VRB">maak</w> <w lemma="jij" pos="PD">je</w> <w lemma="mijn" pos="PD">mijn</w> <w lemma="compliment" pos="NOU-C">compliment</w> <w lemma="over" pos="ADP">over</w> <w lemma="een" pos="PD">een</w> <w lemma="man" pos="NOU-C">man,</w> <w lemma="die" pos="PD">die</w> <w lemma="zulk" pos="PD">zulke</w> <w lemma="verzen" pos="VRB">verzen</w> <w lemma="schrijven" pos="VRB">schrijft.</w></p><p> <w lemma="edele" pos="ADJ">'De</w> <w lemma="joden" pos="NOU-C">Joden'</w> <w lemma="behouden" pos="VRB">behoud</w> <w lemma="eken" pos="INT">ik;</w> <w lemma="mogen" pos="VRB">mag</w> <w lemma="ik" pos="PD">ik</w> <w lemma="die" pos="PD">die</w> <w lemma="schelm" pos="NOU-C">Schiedamsche</w> <w lemma="er" pos="ADV">er</w> <w lemma="daarbij" pos="ADV">bij</w> <w lemma="liggen" pos="VRB">leggen</w> <w lemma="en" pos="CON">en</w> <w lemma="behouden" pos="VRB">behouden?</w> <w lemma="het" pos="CON">'t</w> <w lemma="johannes" pos="NOU-P">Johannes</w> <w lemma="engelse" pos="NOU-P">Evangelie</w> <w lemma="stuur" pos="VRB">stuur</w> <w lemma="ik" pos="PD">ik</w> <w lemma="u" pos="PD">U</w> <w lemma="laat" pos="ADV">later</w> <w lemma="te" pos="VRB">terug,</w> <w lemma="en" pos="CON">en</w> <w lemma="tevens" pos="ADV">tevens</w> <w lemma="geld" pos="NOU-C">geld</w> <w lemma="voor" pos="ADP">voor</w> <w lemma="het" pos="PD">'t</w> <w lemma="eerst" pos="ADJ">eerste.</w> <w lemma="gij" pos="PD">Gij</w> <w lemma="zijn" pos="VRB">zijt</w> <w lemma="huisvrouw" pos="NOU-C">huismoeder,</w> <w lemma="vrouw" pos="NOU-C">vrouw.;</w> <w lemma="te" pos="ADP">te</w> <w lemma="prachtig" pos="NOU-P">praktiesch</w> <w lemma="om" pos="CON">om</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="voor" pos="ADP">voor</w> <w lemma="uw" pos="PD">Uw'</w> <w lemma="huislonding" pos="NOU-C">huishouding</w> <w lemma="te" pos="ADP">te</w> <w lemma="zorgen" pos="VRB">zorgen</w> <w lemma="en" pos="CON">en</w> <w lemma="geven" pos="VRB">geeft</w> <w lemma="mee" pos="ADV">me</w> <w lemma="de" pos="PD">den</w> <w lemma="prijs" pos="NOU-C">prijs</w> <w lemma="opperstuurman" pos="RES">[op?].</w> </p><p> <w lemma="heer" pos="VRB">'K</w> <w lemma="vinden" pos="VRB">vond</w> <w lemma="in" pos="CON">in</w> <w lemma="dat" pos="CON">dat</w> <w lemma="engelse" pos="NOU-C">Evangelie</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="een" pos="PD">een</w> <w lemma="geducht" pos="NOU-C">gedicht</w> <w lemma="van" pos="ADP">van</w> <w lemma="uw" pos="PD">Uw</w> <w lemma="albert" pos="NOU-P">Albert:</w> <w lemma="dat" pos="CON">dat</w> <w lemma="ik" pos="PD">ik</w> <w lemma="mijn" pos="PD">mijner</w> <w lemma="vrouw" pos="NOU-C">vrouw</w> <w lemma="met" pos="ADP">met</w> <w lemma="een" pos="PD">eene</w> <w lemma="huisvrouw" pos="NOU-C">'Uebersetzung</w> <w lemma="in" pos="ADP">in</w> <w lemma="het" pos="PD">het</w> <w lemma="duits" pos="NOU-C">Duitsch,</w> <w lemma="overkomen" pos="VRB">overgebriefd</w> <w lemma="hebben" pos="VRB">heb.</w> </p><p> </p><p> <w lemma="o" pos="INT">O</w> <w lemma="man" pos="NOU-C">Mann</w> <w lemma="van spall" pos="ADP">von</w> <w lemma="schelmen" pos="NOU-P">Schmerzen</w> <w lemma="met" pos="ADP">mit</w> <w lemma="de" pos="PD">der</w> <w lemma="donker van hoek" pos="NOU-P">Dornenkrohn'</w></p><p> <w lemma="o" pos="INT">O</w> <w lemma="blijks" pos="NOU-C">bleiches</w> <w lemma="blijdschap" pos="ADJ">blut'-Gesicht,</w> <w lemma="daags" pos="NOU-C">dass</w> <w lemma="in" pos="ADP">in</w> <w lemma="van der saen" pos="NOU-C">der</w> <w lemma="schout-bij-nacht" pos="NOU-C">Nacht</w></p><p> <w lemma="geven" pos="VRB">Glüht</w> <w lemma="met" pos="ADP">mit</w> <w lemma="een" pos="PD">ein'</w> <w lemma="groetenis" pos="NOU-C">grosser</w> <w lemma="blijder" pos="NOU-C">bleicher</w> <w lemma="flom" pos="NOU-C">flamm',</w> <w lemma="zijn" pos="VRB">wass</w> <w lemma="macht" pos="NOU-C">macht</w></p><p> <w lemma="bij" pos="ADP">Bei</w> <w lemma="engels" pos="NOU-P">endlos'</w> <w lemma="lijden" pos="NOU-P">Leiden</w> <w lemma="doch" pos="CON">doch</w> <w lemma="de" pos="PD">dein</w> <w lemma="bijl" pos="NOU-C">Bild</w> <w lemma="zo" pos="ADV">so</w> <w lemma="schoon" pos="ADJ">schön?</w> </p><p> </p><p> <pb/><w lemma="guavens" pos="ADJ">Glänzende</w> <w lemma="liefste" pos="NOU-P">Liebe</w> <w lemma="in" pos="ADP">in</w> <w lemma="in" pos="PD">ein</w> <w lemma="deurde" pos="NOU-C">Dampf</w> <w lemma="van" pos="ADP">von</w> <w lemma="johan" pos="NOU-P">Hohn,</w></p><p> <w lemma="wie" pos="PD">Wie</w> <w lemma="zijn" pos="VRB">sind</w> <w lemma="de" pos="PD">dein'</w> <w lemma="lijf" pos="VRB">Lippen</w> <w lemma="stil" pos="VRB">still,</w> <w lemma="wie" pos="PD">wie</w> <w lemma="hoeven" pos="VRB">ohne</w> <w lemma="klagen" pos="NOU-P">Klag?</w> </p><p> <w lemma="blijkst" pos="NOU-C">Blickst</w> <w lemma="niemender" pos="PD">nieder</w> <w lemma="de" pos="PD">du</w> <w lemma="voer" pos="NOU-C">vom</w> <w lemma="cornelis" pos="NOU-P">Kreuz,</w> <w lemma="wie" pos="PD">wie</w> <w lemma="lucht" pos="VRB">lächelst</w> <w lemma="de" pos="VRB">du</w> <w lemma="zo" pos="ADV">zo</w> <w lemma="millen" pos="ADJ">mild,</w></p><p> <w lemma="god" pos="NOU-P">Gott</w> <w lemma="van" pos="ADP">von</w> <w lemma="geenszoon" pos="NOU-P">Geheimniss',</w> <w lemma="god" pos="NOU-P">Gottes</w> <w lemma="liebheer" pos="NOU-P">liebster</w> <w lemma="soer" pos="NOU-P">Sohn!</w></p><p> </p><p> <w lemma="o" pos="INT">O</w> <w lemma="flam" pos="INT">flamm'</w> <w lemma="vol" pos="ADJ">voll</w> <w lemma="gulden" pos="NOU-C">Gluth</w> <w lemma="af" pos="ADP">auf</w> <w lemma="deze" pos="PD">dieser</w> <w lemma="klein" pos="VRB">kalten</w> <w lemma="welgemet" pos="VRB">Welt,</w></p><p> <w lemma="schrijven" pos="NOU-C">Schönheit</w> <w lemma="er" pos="ADV">der</w> <w lemma="van" pos="ADP">von</w> <w lemma="schermensen" pos="NOU-P">Schmerzen</w> <w lemma="afdoen" pos="ADP">auf</w> <w lemma="de" pos="PD">der</w> <w lemma="deelte" pos="ADJ">dunklen</w> <w lemma="unresolved" pos="ADJ">Erd'</w></p><p> <w lemma="welder" pos="NOU-P">Wunder</w> <w lemma="de" pos="PD">der</w> <w lemma="liefhebben" pos="ADJ">Liebe,</w> <w lemma="durig" pos="ADJ">durch</w> <w lemma="keizersgracht" pos="NOU-C">kein</w> <w lemma="mens" pos="NOU-C">Mensch</w> <w lemma="erkeren" pos="ADJ">erklärt.</w></p><p> </p><p> <w lemma="weg" pos="PD">Weh</w> <w lemma="mei" pos="NOU-C">mir!</w> <w lemma="ik" pos="PD">ich</w> <w lemma="horen" pos="VRB">hor'</w> <w lemma="allesbehande" pos="ADV">allzeit</w> <w lemma="de" pos="PD">den</w> <w lemma="trauwel" pos="NOU-C">traur'gn</w> <w lemma="vallen" pos="VRB">fall</w></p><p> <w lemma="de" pos="PD">Der</w> <w lemma="trouwen" pos="ADJ">Tropfen</w> <w lemma="blucht" pos="NOU-C">Bluth</w> <w lemma="en" pos="PD">und</w> <w lemma="bijzetten" pos="NOU-C">bis</w> <w lemma="zuidoorts" pos="ADJ">zum</w> <w lemma="morgen" pos="NOU-C">Morgen</w> <w lemma="zien" pos="VRB">sieht</w></p><p> <w lemma="er" pos="ADV">Er</w> <w lemma="micht" pos="ADJ">mich</w> <w lemma="aan" pos="ADP">an</w> <w lemma="met" pos="ADP">mit</w> <w lemma="groene kloker" pos="NOU-P">grosser</w> <w lemma="liefhebben" pos="NOU-P">Liebe</w> <w lemma="en" pos="CON">und</w> <w lemma="engels" pos="ADJ">endlos'</w> <w lemma="leiden" pos="VRB">Leid.</w> </p><p> </p><p> <w lemma="wat" pos="PD">Wat</w> <w lemma="vrijen" pos="NOU-C">vrij,</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="waard" pos="VRB">waar?</w> <w lemma="schelen" pos="VRB">Scheldt</w> <w lemma="gij" pos="PD">Gy</w> <w lemma="verhopen" pos="VRB">-?-</w> <w lemma="zijn" pos="VRB">Waren</w> <w lemma="de" pos="PD">de</w> <w lemma="duits" pos="ADJ">duitsche</w> <w lemma="uitreksenie" pos="NOU-C">uitdrukking</w> <w lemma="voor" pos="ADP">voor</w> <w lemma="mijn" pos="PD"><hi rend="underline"><w lemma="aan" pos="PD">Ai</w> my</hi>!</w> <w lemma="en" pos="RES">-</w> <w lemma="mijn" pos="PD">Mijn</w> <w lemma="hollands" pos="ADJ">Hollandsch</w> <w lemma="beginnen" pos="VRB">begint</w> <w lemma="ik" pos="PD">my</w> <w lemma="te" pos="ADP">te</w> <w lemma="vergeten" pos="VRB">vergeten.</w> <w lemma="unresolved" pos="CON">-</w> <w lemma="ik" pos="PD">Ik</w> <w lemma="maken" pos="VRB">maak</w> <w lemma="somwijs" pos="ADV">soms</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="verzien" pos="VRB">verzen,</w> <w lemma="zoals" pos="CON">zooals</w> <w lemma="gij" pos="PD">Gij</w> <w lemma="weten" pos="VRB">weet.</w> <w lemma="waarom" pos="ADV">Waarom?</w> <w lemma="wijl" pos="CON">Wijl</w> <w lemma="ik" pos="PD">ik</w> <w lemma="er" pos="ADV">er</w> <w lemma="plezier" pos="ADJ">pleizier</w> <w lemma="aan" pos="ADV">aan</w> <w lemma="hebben" pos="VRB">heb.</w> <w lemma="verleden" pos="ADJ">Verleden</w> <w lemma="winter" pos="NOU-C">winter</w> <w lemma="zijn" pos="VRB">ben</w> <w lemma="ik" pos="PD">ik</w> <w lemma="unresolved" pos="RES">[Mr.</w> <w lemma="unresolved" pos="RES">st.?]</w> <w lemma="worden" pos="VRB">geworden</w> <w lemma="bij" pos="ADP">bij</w> <w lemma="ons" pos="PD">onze</w> <w lemma="louw" pos="NOU-C">Loge,</w> <w lemma="en" pos="CON">en</w> <w lemma="hebben" pos="VRB">heb</w> <w lemma="toen" pos="CON">toen</w> <w lemma="iets" pos="PD">iets</w> <w lemma="veroorzaken" pos="VRB">voorgedragen,</w> <w lemma="waarvoor" pos="ADV">waarvoor</w> <w lemma="ik" pos="PD">ik</w> <w lemma="veel" pos="PD">veel</w> <w lemma="lof" pos="NOU-C">lof</w> <w lemma="in" pos="ADP">in</w> <w lemma="oogst" pos="NOU-C">oogste.</w> <w lemma="in" pos="ADP">In</w> <w lemma="de" pos="PD">de</w> <w lemma="eerst" pos="NUM">eerste</w> <w lemma="aflegening" pos="NOU-C">afdeeling</w> <w lemma="vierde" pos="VRB">vierde</w> <w lemma="ik" pos="PD">ik</w> <w lemma="het" pos="PD">het</w> <w lemma="licht" pos="NOU-C">Licht,</w> <w lemma="geven" pos="VRB">gaf</w> <w lemma="ik" pos="PD">ik</w> <w lemma="mijn" pos="PD">mijn</w> <w lemma="begrijpen" pos="NOU-C">begrip</w> <w lemma="van" pos="ADP">van</w> <w lemma="het" pos="PD">'t</w> <w lemma="missterrie" pos="NOU-C">Mysterie,</w> <w lemma="god" pos="NOU-C">(God?),</w> <w lemma="waarin" pos="ADV">waarin</w> <w lemma="wij" pos="PD">wij</w> <w lemma="leven" pos="NOU-C">leven,</w> <w lemma="een" pos="PD">eene</w> <w lemma="eeuwigheid" pos="NOU-C">eenheid</w> <w lemma="van" pos="ADP">van</w> <w lemma="stof" pos="NOU-C">stof</w> <w lemma="en" pos="CON">en</w> <w lemma="kracht" pos="NOU-C">kracht</w> <w lemma="et cetera" pos="NOU-P">etc.;</w> <w lemma="de" pos="PD">de</w> <w lemma="tweede" pos="NUM">tweede</w> <w lemma="zijn" pos="VRB">was</w> <w lemma="voor" pos="ADP">voor</w> <w lemma="de" pos="PD">den</w> <w lemma="voorsteen" pos="NOU-C">Voorzitter;</w> <w lemma="in" pos="ADP">in</w> <w lemma="de" pos="PD">de</w> <w lemma="derde" pos="NUM">derde</w> <w lemma="afkomen" pos="VRB">afd.</w> <w lemma="geven" pos="VRB">gaf</w> <w lemma="ik" pos="PD">ik</w> <w lemma="mijn" pos="PD">mijne</w> <w lemma="openbaring" pos="NOU-C">opvatting</w> <w lemma="de" pos="PD">der</w> <w lemma="haven" pos="NOU-C">'Mauerei';</w> <w lemma="ofschoon" pos="CON">Ofschoon</w> <w lemma="ik" pos="PD">ik</w> <w lemma="verklaren" pos="VRB">verklaarde,</w> <w lemma="dat" pos="CON">dat</w> <w lemma="ik" pos="PD">ik</w> <w lemma="geen" pos="PD">geene</w> <w lemma="waard" pos="ADJ">waarde</w> <w lemma="heet" pos="NOU-C">hechte</w> <w lemma="aan" pos="ADP">aan</w> <w lemma="de" pos="PD">de</w> <w lemma="form" pos="NOU-C">formules</w> <w lemma="dienstwillig" pos="PD">d.</w> <w lemma="mandje" pos="NOU-C">Mauerei,</w> <w lemma="daar" pos="ADV">daar</w> <w lemma="mijn" pos="PD">mijn</w> <w lemma="liggen" pos="VRB">Loge</w> <w lemma="de" pos="PD">de</w> <w lemma="wereld" pos="NOU-C">wereld</w> <w lemma="zijn" pos="VRB">was</w> <w lemma="et cetera" pos="ADV">etc.</w> <w lemma="zijn" pos="VRB">was</w> <w lemma="men" pos="PD">men</w> <w lemma="ervan" pos="ADV">er</w> <w lemma="toch" pos="ADV">toch</w> <w lemma="daarmee" pos="ADV">meê</w> <w lemma="innemen" pos="VRB">ingenomen.</w> <w lemma="al" pos="PD">Alles</w> <w lemma="rok" pos="ADV">rook</w> <w lemma="keters" pos="RES">kettersch.</w> <w lemma="unresolved" pos="RES">-</w> <w lemma="zij" pos="PD">Zij</w> <w lemma="vinden" pos="VRB">vonden</w> <w lemma="het" pos="CON">'t</w> <w lemma="wel" pos="ADV">wel</w> <w lemma="moei" pos="NOU-C">mooi,</w> <w lemma="willen" pos="CON">wijl</w> <w lemma="ik" pos="PD">ik</w> <w lemma="een" pos="PD">een</w> <w lemma="consumblief" pos="NOU-C">consul</w> <w lemma="zijn" pos="VRB">ben.</w> <w lemma="de" pos="PD">De</w> <w lemma="stand" pos="NOU-C">stand</w> <w lemma="en" pos="CON">en</w> <w lemma="materig" pos="ADJ">maatschappelijke</w> <w lemma="postje" pos="NOU-C">positie</w> <w lemma="hebben" pos="VRB">heeft</w> <w lemma="machtig" pos="ADJ">machtig</w> <w lemma="veel" pos="PD">veel</w> <w lemma="inloden" pos="NOU-C">invloed</w> <w lemma="op" pos="ADV">op</w> <w lemma="het" pos="PD">'t</w> <w lemma="oordeel" pos="NOU-C">oordeel</w> <w lemma="de" pos="PD">der</w> <w lemma="mens" pos="NOU-C">menschen,</w> <w lemma="zodra" pos="CON">zooals</w> <w lemma="wij" pos="PD">ons</w> <w lemma="spercheren" pos="VRB">spreekwoord:</w> <w lemma="edele" pos="ADJ">'de</w> <w lemma="rok" pos="NOU-C">rok</w> <w lemma="maken" pos="VRB">maakt</w> <w lemma="de" pos="PD">den</w> <w lemma="mens" pos="NOU-C">mensch'</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="zeggen" pos="VRB">zegt.</w> <w lemma="die" pos="RES">-</w> <w lemma="de" pos="PD">De</w> <w lemma="heer" pos="NOU-C">Heeren</w> <w lemma="zijn" pos="VRB">zijn</w> <w lemma="anders" pos="ADJ">anders</w> <w lemma="erg" pos="ADJ">erg</w> <w lemma="contant" pos="NOU-C">conservatief;</w> <w lemma="zij" pos="PD">ze</w> <w lemma="houden" pos="VRB">houden</w> <w lemma="vast" pos="ADV">vast,</w> <w lemma="wat" pos="PD">wat</w> <w lemma="zij" pos="PD">ze</w> <w lemma="hebben" pos="VRB">hebben,</w> <w lemma="en" pos="CON">en</w> <w lemma="zien" pos="VRB">zien</w> <pb/><w lemma="goed" pos="VRB">goed</w> <w lemma="uitvaren" pos="VRB">uit,</w> <w lemma="hoe" pos="ADV">hoe</w> <w lemma="de" pos="PD">de</w> <w lemma="wind" pos="NOU-C">wind</w> <w lemma="waaien" pos="VRB">waait:</w> <w lemma="praten" pos="VRB">praten</w> <w lemma="bij" pos="ADP">bij</w> <w lemma="een" pos="PD">een</w> <w lemma="goed" pos="ADJ">goed</w> <w lemma="glas" pos="NOU-C">glas</w> <w lemma="wijn" pos="NOU-C">wijn</w> <w lemma="en" pos="CON">en</w> <w lemma="een" pos="PD">eene</w> <w lemma="fijn" pos="ADJ">fijne</w> <w lemma="sint maria a aacte c" pos="ADJ">sigaar</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="wel" pos="ADV">wel</w> <w lemma="eens" pos="ADV">eens</w> <w lemma="over" pos="ADP">over</w> <w lemma="de" pos="PD">de</w> <w lemma="verbeerdening" pos="NOU-C">verbetering</w> <w lemma="van" pos="ADP">van</w> <w lemma="het" pos="PD">'t</w> <w lemma="lotelijk" pos="NOU-C">lot</w> <w lemma="de" pos="PD">der</w> <w lemma="arm" pos="NOU-C">armen,</w> <w lemma="die" pos="PD">die</w> <w lemma="zijn" pos="VRB">zij,</w> <w lemma="als" pos="CON">als</w> <w lemma="deze" pos="PD">deze</w> <w lemma="er" pos="ADV">er</w> <w lemma="zelf" pos="PD">zelf</w> <w lemma="daarover" pos="ADV">over</w> <w lemma="denken" pos="VRB">denken</w> <w lemma="en" pos="CON">en</w> <w lemma="spreken" pos="VRB">spreken</w> <w lemma="kant" pos="NOU-C">canaille</w> <w lemma="noemen" pos="VRB">noemen;</w> <w lemma="te" pos="CON">'t</w> <w lemma="zijn" pos="PD">zijn</w> <w lemma="prachtig" pos="ADJ">prachtige</w> <w lemma="mens" pos="NOU-C">menschen</w> <w lemma="en" pos="CON">en</w> <w lemma="goed" pos="ADJ">goede</w> <w lemma="stark" pos="NOU-C">Staatsburgers,</w> <w lemma="die" pos="PD">die</w> <w lemma="god" pos="NOU-P">God</w> <w lemma="en" pos="CON">en</w> <w lemma="de" pos="PD">den</w> <w lemma="keizer" pos="NOU-C">Keizer</w> <w lemma="geven" pos="VRB">geven,</w> <w lemma="wat" pos="PD">wat</w> <w lemma="zij" pos="PD">ze</w> <w lemma="toekomen" pos="VRB">toekomt</w> <w lemma="en" pos="CON">en</w> <w lemma="daarom" pos="ADV">daarom</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="zeker" pos="ADJ">zeker</w> <w lemma="al" pos="PD">allen</w> <w lemma="in" pos="ADP">in</w> <w lemma="de" pos="PD">den</w> <w lemma="hemel" pos="NOU-C">Hemel</w> <w lemma="komen" pos="VRB">komen,</w> <w lemma="ofschoon" pos="CON">ofschoon</w> <w lemma="zij" pos="PD">ze</w> <w lemma="bij" pos="ADP">bij</w> <w lemma="de" pos="PD">de</w> <w lemma="intreuring" pos="NOU-C">invoering</w> <w lemma="er" pos="ADV">der</w> <w lemma="weten" pos="VRB">Wet</w> <w lemma="op" pos="ADV">op</w> <w lemma="het" pos="PD">'t</w> <w lemma="inkomen" pos="NOU-C">inkomen</w> <w lemma="enkland" pos="NOU-C">eclatant</w> <w lemma="bewijzen" pos="VRB">bewezen</w> <w lemma="hebben" pos="VRB">hebben,</w> <w lemma="dat" pos="PD">dat</w> <w lemma="provision" pos="NOU-C">Proudhon'</w> <w lemma="gelijk" pos="ADV">gelijk</w> <w lemma="hebben" pos="VRB">had,</w> <w lemma="als" pos="CON">als</w> <w lemma="hij" pos="PD">hij</w> <w lemma="eigendom" pos="NOU-C">'eigendom</w> <w lemma="ditstaal" pos="NOU-C">diefstal'</w> <w lemma="noemen" pos="VRB">noemde.</w> <w lemma="unresolved" pos="RES">[60?]</w> <w lemma="missivoor" pos="NOU-C">miljoen</w> <w lemma="brengen" pos="VRB">bracht</w> <w lemma="de" pos="PD">de</w> <w lemma="nieuw" pos="ADJ">nieuwe</w> <w lemma="weten" pos="VRB">wet</w> <w lemma="meer" pos="ADV">meer</w> <w lemma="opstaan" pos="VRB">op,</w> <w lemma="dan" pos="ADV">dan</w> <w lemma="vrouw" pos="ADJ">vroeger,</w> <w lemma="hebben" pos="VRB">hebben</w> <w lemma="die" pos="PD">die</w> <w lemma="heer" pos="NOU-C">Heeren</w> <w lemma="dus" pos="ADV">dus</w> <w lemma="ue." pos="NUM">-</w> <w lemma="huisloven" pos="NOU-C">'gestolen',</w> <w lemma="willen" pos="VRB">wil</w> <w lemma="ik" pos="PD">ik</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="zeggen" pos="VRB">zeggen,</w> <w lemma="die" pos="PD">-</w> <w lemma="te" pos="ADV">te</w> <w lemma="mijn" pos="PD">min</w> <w lemma="betalen" pos="VRB">betaald.</w> <w lemma="ue." pos="RES">-</w> <w lemma="unresolved" pos="RES">.</w> <w lemma="unresolved" pos="PD">-</w> <w lemma="zullen" pos="VRB">Stelen</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="een" pos="PD">een</w> <w lemma="te" pos="ADP">te</w> <w lemma="bark" pos="ADJ">barsch</w> <w lemma="woord" pos="NOU-C">woord</w> <w lemma="voor" pos="ADP">voor</w> <w lemma="deftig" pos="ADJ">deftige</w> <w lemma="verrijk" pos="ADJ">rijke</w> <w lemma="lieden" pos="NOU-C">lui..</w> <w lemma="ue." pos="RES">-</w> <w lemma="genoeg" pos="PD">Genoeg</w> <w lemma="unresolved" pos="RES">-</w> <w lemma="zo" pos="ADV">zoo</w> <w lemma="schijnen" pos="VRB">schijnen</w> <w lemma="zij" pos="PD">ze</w> <w lemma="overal" pos="ADV">overal</w> <w lemma="te" pos="ADP">te</w> <w lemma="zijn" pos="VRB">zijn.</w> <w lemma="ue." pos="VRB">-</w> </p><p> <w lemma="kattenhoeve" pos="NOU-P">Kathi</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="thans" pos="ADV">thans</w> <w lemma="in" pos="ADP">in</w> <w lemma="de" pos="PD">de</w> <w lemma="stad" pos="NOU-C">stad;</w> <w lemma="zijn" pos="PD">zij</w> <w lemma="zoeken" pos="VRB">zoekt</w> <w lemma="winker" pos="NOU-C">werk,</w> <w lemma="een" pos="PD">eene</w> <w lemma="betrekken" pos="NOU-C">betrekking,</w> <w lemma="de" pos="PD">-</w> <w lemma="kunnen" pos="VRB">kan</w> <w lemma="echter" pos="ADV">echter</w> <w lemma="niets" pos="PD">niets</w> <w lemma="vinden" pos="VRB">vinden.</w> <w lemma="waar" pos="ADV">Waar</w> <w lemma="een" pos="PD">een</w> <w lemma="nodig" pos="ADJ">noodig</w> <w lemma="zijn" pos="VRB">is,</w> <w lemma="bidden" pos="VRB">bieden</w> <w lemma="ziekte" pos="NOU-C">zich,</w> <w lemma="vijftig" pos="NUM">vijftig,</w> <w lemma="honderd" pos="NOU-C">honderd,</w> <w lemma="daaraan" pos="ADV">aan.</w> <w lemma="de" pos="RES">-</w> <w lemma="wat" pos="PD">Wat</w> <w lemma="daaruit" pos="ADV">daaruit</w> <w lemma="worden" pos="VRB">worden</w> <w lemma="zullen" pos="VRB">zal,</w> <w lemma="weten" pos="VRB">weet</w> <w lemma="ik" pos="PD">ik</w> <w lemma="niet" pos="ADV">niet.</w> <w lemma="ue." pos="NUM">-</w> </p><p> <w lemma="hoe" pos="ADV">Hoe</w> <w lemma="gaan" pos="VRB">gaat</w> <w lemma="het" pos="PD">het</w> <w lemma="u" pos="PD">U</w> <w lemma="en" pos="CON">en</w> <w lemma="uw" pos="PD">Uwe</w> <w lemma="kind" pos="NOU-C">kinderen.</w> <w lemma="toch" pos="ADV">Toch</w> <w lemma="wel" pos="ADV">wel</w> <w lemma="uiteinde" pos="VRB">-?-</w> <w lemma="liggen" pos="VRB">Leg</w> <w lemma="zij" pos="PD">ze</w> <w lemma="nog" pos="ADV">nog</w> <w lemma="maar" pos="ADV">maar</w> <w lemma="weer" pos="ADV">weer</w> <w lemma="eens" pos="ADV">eens</w> <w lemma="op" pos="ADP">op</w> <w lemma="hun" pos="PD">hun</w> <w lemma="rugaard" pos="NOU-C">rug,</w> <w lemma="om" pos="CON">om</w> <w lemma="enig" pos="PD">eenige</w> <w lemma="letter" pos="NOU-C">letteren</w> <w lemma="te" pos="ADP">te</w> <w lemma="schrijven" pos="VRB">schrijven.</w> <w lemma="ue." pos="PD">-</w> <w lemma="nog" pos="ADV">Nog</w> <w lemma="iets" pos="PD">iets.</w> <w lemma="ue." pos="PD">-</w> <w lemma="stuur" pos="NOU-C">Stuur</w> <w lemma="mee" pos="ADV">me</w> <w lemma="toch" pos="ADV">toch</w> <w lemma="een" pos="PD">eene</w> <w lemma="facotie" pos="NOU-C">fotografie</w> <w lemma="van" pos="ADP">van</w> <w lemma="jij" pos="PD">je</w> <w lemma="man" pos="NOU-C">man.</w> <w lemma="ik" pos="PD">Ik</w> <w lemma="mogen" pos="VRB">mocht</w> <w lemma="hij" pos="PD">hem</w> <w lemma="hebben" pos="VRB">hebben,</w> <w lemma="voor" pos="ADP">voor</w> <w lemma="de" pos="PD">de</w> <w lemma="heel" pos="ADJ">heele</w> <w lemma="wereld" pos="NOU-C">wereld</w> <w lemma="hij" pos="PD">hem</w> <w lemma="hebben" pos="VRB">heeft.</w> <w lemma="u" pos="PD">U</w> <w lemma="vinden" pos="VRB">vindt</w> <w lemma="dit" pos="PD">dit</w> <w lemma="verlangen" pos="NOU-C">verlangen</w> <w lemma="toch" pos="ADV">toch</w> <w lemma="natuurlijk" pos="ADJ">natuurlijk</w> <w lemma="en" pos="CON">en</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="onbescheiden" pos="ADJ">onbescheiden,</w> <w lemma="hopen" pos="VRB">hoop</w> <w lemma="ik" pos="PD">ik.</w> <w lemma="voegen" pos="VRB">Voeg</w> <w lemma="jij" pos="PD">je</w> <w lemma="zelf" pos="PD">zelf</w> <w lemma="er" pos="ADV">er</w> <w lemma="dan" pos="ADV">dan</w> <w lemma="maar" pos="ADV">maar</w> <w lemma="bij" pos="ADP">bij.</w> <w lemma="mijn" pos="PD">Mijn</w> <w lemma="vrouw" pos="NOU-C">vrouw</w> <w lemma="zullen" pos="VRB">zal</w> <w lemma="er" pos="ADV">er</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="erg" pos="ADJ">erg</w> <w lemma="blij" pos="ADJ">blij</w> <w lemma="over" pos="ADV">over</w> <w lemma="zijn" pos="VRB">zijn,</w> <w lemma="als" pos="CON">als</w> <w lemma="ik" pos="PD">ik</w> <w lemma="met" pos="ADP">met</w> <w lemma="uw" pos="PD">Uw</w> <w lemma="beide" pos="PD">beiden</w> <w lemma="aankomen" pos="VRB">aankom.</w></p><p> </p><p> <w lemma="hartelijk" pos="ADV">Hartelijke</w> <w lemma="groeten" pos="VRB">groeten,</w> <w lemma="ook" pos="ADV">ook</w> <w lemma="aan" pos="ADP">aan</w> <w lemma="uw" pos="PD">Uw</w> <w lemma="man" pos="NOU-C">man</w></p><p> <w lemma="het" pos="ADP">TT.</w></p><p> <w lemma="johannes" pos="NOU-P">Johs.</w> <w lemma="advies" pos="NOU-P">Addens</w></p><p> </p><p> <w lemma="bij" pos="ADP">Bij</w> <w lemma="mijn" pos="PD">mijn</w> <w lemma="adamino" pos="NOU-C">adr.</w> <w lemma="behoeven" pos="VRB">behoef</w> <w lemma="jij" pos="PD">je</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="schrijven" pos="VRB">Skilnaden</w> <w lemma="of" pos="CON">of</w> <w lemma="bruijnberg" pos="NOU-C">Brunsparken</w> <w lemma="te" pos="ADP">te</w> <w lemma="zetten" pos="VRB">zetten;</w> <w lemma="de" pos="PD">-</w> <w lemma="een" pos="PD">een</w> <w lemma="handeraak" pos="NOU-C">handelszaak</w> <w lemma="hebben" pos="VRB">heb</w> <w lemma="ik" pos="PD">ik</w> <w lemma="niet" pos="ADV">niet</w> <w lemma="meer" pos="ADV">meer,</w> <w lemma="te" pos="ADP">te</w> <w lemma="schrijven" pos="VRB">Skilnaden</w> <w lemma="staan" pos="VRB">staat</w> <w lemma="nu" pos="ADV">nu</w> <w lemma="een" pos="PD">een</w> <w lemma="millesorant" pos="ADJ">millioenenhuis.</w></p><p> </p><p> <w lemma="ik" pos="PD">Ik</w> <w lemma="lezen" pos="VRB">lees</w> <w lemma="een" pos="PD">eene</w> <w lemma="krock" pos="NOU-C">Kritiek</w> <w lemma="de" pos="PD">der</w> <w lemma="moeder" pos="NOU-C">moderne</w> <w lemma="teergeliefde" pos="NOU-C">Theosophie</w> <w lemma="van" pos="ADP">van</w> <w lemma="gerritseling" pos="NOU-P">G.</w> <w lemma="af" pos="ADP">af</w> <w lemma="gerasma" pos="ADJ">Geiersam:</w> <w lemma="moeder" pos="NOU-C">Modern</w> <w lemma="unresolved" pos="NOU-P">[xxxxxxxxxxx]'</w></p><p> </p><p> <w lemma="zijn" pos="VRB">Is</w> <w lemma="uw" pos="PD">Uw</w> <w lemma="man" pos="NOU-C">man</w> <w lemma="geen" pos="PD">geen</w> <w lemma="hand" pos="NOU-C">Hagenaar;</w> <w lemma="daar" pos="ADV">daar</w> <w lemma="wonen" pos="VRB">woonde</w> <w lemma="vroeger" pos="ADV">vroeger</w> <w lemma="een" pos="PD">een</w> <w lemma="domineer" pos="NOU-C">Dr.</w> <w lemma="verwijl" pos="ADJ">Verwey.</w></p><p> <pb/></p><p> <pb/> </p></body></text></TEI>

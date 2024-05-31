@@ -1,0 +1,11 @@
+﻿sep=,
+"lemma","pos","count","literals"
+"dummy","LET","4","{,=1, .=3}"
+"dummy","PD","3","{dummy=3}"
+"dummy","VRB","3","{dummy=3}"
+"dummy","ADJ","2","{dummy=2}"
+"dummy","ADV","1","{dummy=1}"
+"dummy","NOU","1","{dummy=1}"
+"dummy","WRONG","1","{dummy=1}"
+"het+boek","PD+NOU-C","1","{tboek=1}"
+"WRONG","ADJ","1","{dummy=1}"

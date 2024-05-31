@@ -1,0 +1,5 @@
+token	lemma	pos
+Dit	dit	PD
+is	zijn	VRB
+wat	wat	PD
+oefentekst.	oeftig	ADJ

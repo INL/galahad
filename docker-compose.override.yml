@@ -1,0 +1,7 @@
+# Docker compose override file for galahad client, server and proxy
+
+version: '3'
+services:
+    server:
+        ports:
+            - 8010:8010 # used for the reference test, which directly calls the server

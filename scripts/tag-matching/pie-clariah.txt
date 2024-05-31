@@ -1,0 +1,52 @@
+blom013aenm01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+cast005cons01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+craa001wand03_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+enge022vand01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+ferm001nieu01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+mult001maxh14_01.xml -- None
+[SUCCESS] Found all tags with advanced matching.
+
+
+stev001wisc02_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+_ams015amst01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+_boe007boec01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+_hoe003hoer01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+_vol002volm01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+_wal002walv01_01.xml -- No ID
+[SUCCESS] Found all tags with advanced matching.
+
+
+Summary:
+	Simple matches: 12
+	Advanced matches: 12
+	Total files: 12

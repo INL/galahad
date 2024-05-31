@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>input</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <date>2024-03-12 16:41:49</date>
+                    <idno type="sourceID">What if source id is undefined?</idno>
+                    <idno type="pid">What if no pid is defined?</idno>
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl xml:id="inlMetadata">
+                    <bibl>
+                        <interpGrp type="questions">
+                            <interp>Welke inl data?</interp>
+                            <interp>wat als er geen is?</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+                <listBibl xml:id="galahadMetadata">
+                    <bibl>
+                        <interpGrp type="model">
+                            <interp>pie-tdn</interp>
+                        </interpGrp>
+                        <interpGrp type="tagset">
+                            <interp>TDN</interp>
+                        </interpGrp>
+                        <interpGrp type="corpus_name">
+                            <interp>testCorpus</interp>
+                        </interpGrp>
+                        <interpGrp type="corpus_uuid">
+                            <interp>583b9725-ea82-4c48-a55a-2df538b5bddc</interp>
+                        </interpGrp>
+                        <interpGrp type="date">
+                            <interp>2024-03-12 16:41:49</interp>
+                        </interpGrp>
+                        <interpGrp type="user_id">
+                            <interp>testUser</interp>
+                        </interpGrp>
+                        <interpGrp type="pid">
+                            <interp>dcf728ec-8ae4-42e4-9b75-78271cc41c46</interp>
+                        </interpGrp>
+                        <interpGrp type="title">
+                            <interp>input</interp>
+                        </interpGrp>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>
+                    <w lemma="hebben" pos="VRB(finiteness=fin,tense=past)" xml:id="w0">Hebban</w>
+                    <w lemma="olle" pos="RES(type=for)" xml:id="w1">olla</w>
+                    <w lemma="vogala" pos="NOU-C(number=sg)" xml:id="w2">vogala</w>
+                    <pc xml:id="w3">,</pc>
+                    <w lemma="nestatis" pos="RES(type=for)" xml:id="w4">nestas</w>
+                    <w lemma="haguna" pos="NOU-C(number=sg)" xml:id="w5">hagunnan</w>
+                    <pc xml:id="w6">.</pc>
+                    <pc xml:id="w7">.</pc>
+                    <pc xml:id="w8">.</pc>
+                    <w lemma="hinas" pos="NOU-P" xml:id="w9">Hinase</w>
+                    <w lemma="ik" pos="PD(type=pers,position=free)" xml:id="w10">ic</w>
+                    <w lemma="en" pos="CONJ(type=coor)" xml:id="w11">ende</w>
+                    <w lemma="huben" pos="ADV(type=reg)" xml:id="w12">thu</w>
+                    <pc xml:id="w13">:</pc>
+                    <pc xml:id="w14">"</pc>
+                    <w lemma="uiteen" pos="PD(type=w-p,position=free)" xml:id="w15">uuat</w>
+                    <w lemma="unibent" pos="CONJ(type=sub)" xml:id="w16">unbidan</w>
+                    <w lemma="wij" pos="PD(type=pers,position=free)" xml:id="w17">wi</w>
+                    <w lemma="nu" pos="ADV(type=reg)" xml:id="w18">nu</w>
+                    <pc xml:id="w19">?</pc>
+                    <pc xml:id="w20">"</pc>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

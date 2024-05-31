@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI><teiHeader><fileDesc><sourceDesc><listBibl xml:id="galahadMetadata"><bibl><interpGrp type="model"><interp>mappedLayer</interp>
+</interpGrp><interpGrp type="tagset"><interp>UNKNOWN</interp>
+<interp>Unknown Tagset</interp>
+</interpGrp><interpGrp type="corpus_name"><interp>testcorpus</interp>
+</interpGrp><interpGrp type="corpus_uuid"><interp>__UUID_IGNORED_BY_TEST__</interp>
+</interpGrp><interpGrp type="date"><interp>__DATE_IGNORED_BY_TEST__</interp>
+</interpGrp><interpGrp type="user_id"><interp>testUser</interp>
+</interpGrp></bibl></listBibl></sourceDesc></fileDesc></teiHeader>
+<text>
+<p><w lemma="dit" pos="PD">Dit</w> <w lemma="zijn" pos="VRB">is</w> <w lemma="wat" pos="PD">wat</w> <w lemma="oeftig" pos="ADJ">oefentekst.</w></p>
+</text>
+</TEI>

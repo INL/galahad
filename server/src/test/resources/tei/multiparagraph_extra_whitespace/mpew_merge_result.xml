@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI><teiHeader><fileDesc><sourceDesc><listBibl xml:id="galahadMetadata"><bibl><interpGrp type="model"><interp>mappedLayer</interp>
+</interpGrp><interpGrp type="tagset"><interp>UNKNOWN</interp>
+<interp>Unknown Tagset</interp>
+</interpGrp><interpGrp type="corpus_name"><interp>testcorpus</interp>
+</interpGrp><interpGrp type="corpus_uuid"><interp>__UUID_IGNORED_BY_TEST__</interp>
+</interpGrp><interpGrp type="date"><interp>__DATE_IGNORED_BY_TEST__</interp>
+</interpGrp><interpGrp type="user_id"><interp>testUser</interp>
+</interpGrp></bibl></listBibl></sourceDesc></fileDesc></teiHeader>
+    <text>
+        <p><w lemma="deze" pos="PD">Deze</w> <w lemma="terecht" pos="VRB">tekst</w> <w lemma="lopen" pos="VRB">loopt</w></p>
+        <p><w lemma="over" pos="ADP">over</w> <w lemma="meer" pos="ADV">meedere</w>       </p>
+
+
+        <p><w lemma="partikf" pos="NOU-P">paragrafen</w> <w lemma="waarheen" pos="ADV">heen</w></p>
+
+        <p><w lemma="en" pos="CON">en</w> <w lemma="bevelen" pos="VRB">bevat</w> <w lemma="ook" pos="ADV">ook</w></p>
+        <p><w lemma="extra" pos="ADV">extra</w> <w lemma="wijsbaar" pos="ADJ">whitspaces</w></p>
+
+      <p><w lemma="zowel" pos="ADV">zowel</w> <w lemma="spaans" pos="NOU-P">spaties</w> <w lemma="als" pos="CON">als</w> <w lemma="tabas" pos="NOU-C">tabs</w></p>    </text>
+</TEI>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FoLiA xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ilk.uvt.nl/folia" xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3" generator="libfolia-v1.12" version="1.5">
+  <metadata type="native">
+    <annotations>
+      <gap-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/gap" />
+      <style-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/style" />
+      <text-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/text" />
+      <part-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/part" />
+      <paragraph-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/paragraph" />
+      <correction-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/correction" />
+      <note-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/note" />
+      <string-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/string" />
+      <event-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/event" />
+      <division-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/division" />
+      <linebreak-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/linebreak" />
+      <lang-annotation set="http://raw.github.com/proycon/folia/master/setdefinitions/iso639_3.foliaset" />
+    </annotations>
+    <provenance>
+      <!-- empty -->
+    </provenance>
+  </metadata>
+  <text xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.TEI.1">
+    <part class="body">
+      <div xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.text.1.body.1.div.1" class="div">
+        <p xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.text.1.body.1.div.1.p.1" class="p">
+          <!-- Note the "be,<br />that": this should be parsed as "be,that". No space! Why? Because some documents contain words like "be<br/>kijken" -> "bekijken"-->
+          <t>To ob<t-style class="italic">ey </t-style> or n<t-style class="bold">o</t-style>t to be,<br />that is the <t-style class="bold">one <t-style class="red">question</t-style> that y<t-style class="italic">re</t-style>main</t-style>ed.</t>
+          <lang class="nld" />
+        </p>
+        <p xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.text.1.body.1.div.1.p.2" class="p">
+          <!-- abc def ghijklmno pqrstu xyzabc def-->
+          <t>abc <t-style class="bold">def ghi<t-style class="italic">jkl</t-style><t-style class="red"><t-style class="sub">mno</t-style> pqr</t-style>stu xyz</t-style>abc def</t>
+          <lang class="nld" />
+        </p>
+      </div>
+    </part>
+  </text>
+</FoLiA>

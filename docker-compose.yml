@@ -1,0 +1,76 @@
+# Docker compose file for galahad client, server and proxy
+# Note: outside of swarm mode, the deploy key requires use of the --compatibility flag
+
+version: '3'
+services:
+    client:
+        image: instituutnederlandsetaal/galahad-client:${APP_VERSION}
+        restart: unless-stopped
+        networks:
+            - proxy_network
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.50'
+                    memory: 512M
+                reservations:
+                    cpus: '0.25'
+                    memory: 128M
+    server:
+        image: instituutnederlandsetaal/galahad-server:${APP_VERSION}
+        restart: unless-stopped
+        volumes:
+            - user-corpora-volume:/data/corpora/custom
+            - preset-corpora-volume:/data/corpora/presets
+            - formats-volume:/data/formats
+            - taggers-volume:/data/taggers
+            - tagsets-volume:/data/tagsets
+            - admins-volume:/data/admins
+        networks:
+            - proxy_network
+            - taggers
+        deploy:
+            resources:
+                limits:
+                    cpus: '2.00'
+                    memory: 8G # should be higher that the java heap size
+                reservations:
+                    cpus: '1.00'
+                    memory: 2G
+        environment: # Otherwise container doesn't restart on OutOfMemory
+            - "JAVA_OPTS=-XX:+ExitOnOutOfMemoryError"
+    # Simple nginx reverse proxy to combine front- and backend
+    proxy:
+        image: instituutnederlandsetaal/galahad-proxy:${APP_VERSION}
+        depends_on:
+            - client
+            - server
+        ports:
+            - "80:80"
+        restart: unless-stopped
+        networks:
+            - proxy_network
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.50'
+                    memory: 256M
+                reservations:
+                    cpus: '0.25'
+                    memory: 128M
+
+networks:
+    front:
+        driver: bridge
+    proxy_network:
+        driver: bridge
+    taggers:
+        external: true
+        name: $taggers_network
+volumes:
+    user-corpora-volume:
+    preset-corpora-volume:
+    formats-volume:
+    taggers-volume:
+    tagsets-volume:
+    admins-volume:

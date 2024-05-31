@@ -1,0 +1,69 @@
+# This workflow will launch the latest docker containers of Galahad server and some taggers
+# and will run the reference test against it.
+# If the test fails, it will create a branch with the changes.
+
+name: Reference Test (currently runs on LAST(!) succesful build)
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main, development ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        
+      - name: Pull taggers and up taggers
+      # This need to happen first because we need to connect to the tagger network.
+        run: |
+          # Make sure that these file names do not override existing files in the git repo.
+          curl -o docker-compose-taggers.yml https://${{ secrets.GHA_TOKEN }}@raw.githubusercontent.com/INL/taggers-dockerized/development/docker-compose.yml
+          curl -o .taggers.env https://${{ secrets.GHA_TOKEN }}@raw.githubusercontent.com/INL/taggers-dockerized/development/.env
+          # TODO figure out which version we actually want to get and test against.
+          docker-compose -f docker-compose-taggers.yml --env-file .taggers.env pull --quiet # TODO this might be to much, we only need the INCLUDED_TAGGERS for the test
+          docker-compose -f docker-compose-taggers.yml -p taggers-dockerized --compatibility --env-file .taggers.env up -d # TODO see if we can handle the project name more cleanly
+          
+      - name: Pull and up Galahad server
+        run: |
+          docker-compose pull --quiet server # This should be the correct version
+          docker-compose up -d server
+      
+      - name: Setup git
+        run: |
+          git config user.email "<>"
+          git config user.name "GHA reference action"
+          
+      - name: Inspect containers
+        run: |
+          sleep 60 # give the containers some time to start up
+          # inspect containers (useful for debug)
+          docker stats --all --no-stream
+          docker-compose logs
+          docker-compose -f docker-compose-taggers.yml -p taggers-dockerized logs
+          
+      - name: Clean changes
+        run: |          
+          rm docker-compose-taggers.yml # Needed to keep the git clean, otherwise test refuses to run
+          rm .taggers.env
+      
+      - name: Run reference test
+        run: |         
+          cd server/reference-test
+          # Run the test and push the differences branch if error, and exit if error.
+          yes | ./test.sh || (echo "Test failed. See branch with differences." && git push origin $(git branch | grep test_corpus_update_) && exit 1)

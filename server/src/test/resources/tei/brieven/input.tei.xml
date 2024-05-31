@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Addens, Johannes aan Vloten, Katharina van | 1892-07-15</title>
+        
+      </titleStmt>
+      <publicationStmt>
+        <p>
+          <date>1892</date>
+          <idno type="sourceID">brieven-correspondenten-1900:0017</idno>
+          <idno type="pid">INT_3a96ec22-1346-40ea-9dad-97a85a73d0d2</idno>
+        </p>
+      </publicationStmt>
+      <notesStmt>
+        <note/>
+      </notesStmt>
+      <sourceDesc>
+        <listBibl xml:id="inlMetadata">
+          <bibl>
+            <interpGrp type="sourceID">
+              <interp>brieven-correspondenten-1900:0017</interp>
+              
+            </interpGrp>
+            <interpGrp type="pid">
+              <interp>INT_3a96ec22-1346-40ea-9dad-97a85a73d0d2</interp>
+              
+            </interpGrp>
+            <interpGrp type="titleLevel1">
+              <interp>Addens, Johannes aan Vloten, Katharina van | 1892-07-15</interp>
+              
+            </interpGrp>
+            <interpGrp type="subtitleLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="titleLevel2">
+              <interp>Brieven en Correspondenten rond 1900</interp>
+              
+            </interpGrp>
+            <interpGrp type="subtitleLevel2">
+              <interp>Digitale editie</interp>
+            </interpGrp>
+            <interpGrp type="titleLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="subtitleLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="authorLevel1">
+              <interp n="4671445a-3cf3-db09-641a-05590c893203">Addens, Johannes</interp>
+              
+            </interpGrp>
+            <interpGrp type="authorLevel2">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="authorLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="categoryLevel1">
+              <interp>uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="categoryLevel2">
+              <interp>uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="editionLevel1">
+              <interp>1</interp>
+              
+            </interpGrp>
+            <interpGrp type="editionLevel2">
+              <interp>1</interp>
+              
+            </interpGrp>
+            <interpGrp type="editorLevel1">
+              <interp n="8132d2fe-011b-11e4-b0ff-51bcbd7c379f">Annemarie Kets</interp>
+              
+            </interpGrp>
+            <interpGrp type="editorLevel2">
+              <interp n="8132d2fe-011b-11e4-b0ff-51bcbd7c379f">Annemarie Kets</interp>
+              
+            </interpGrp>
+            <interpGrp type="editorLevel3">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="mediumLevel1">
+              <interp>digitale uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="mediumLevel2">
+              <interp>digitale uitgave</interp>
+              
+            </interpGrp>
+            <interpGrp type="resourceURILevel1">
+              <interp>http://brieven-correspondenten-1900.huygens.knaw.nl/edition/search</interp>
+              
+            </interpGrp>
+            <interpGrp type="resourceURILevel2">
+              <interp>http://brieven-correspondenten-1900.huygens.knaw.nl/edition/search</interp>
+              
+            </interpGrp>
+            <interpGrp type="placePublicationLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="placePublicationLevel2">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="publisherLevel1">
+              <interp>Huygens ING</interp>
+              
+            </interpGrp>
+            <interpGrp type="publisherLevel2">
+              <interp>Huygens ING</interp>
+              
+            </interpGrp>
+            <interpGrp type="isbn">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="pubYearLevel1_from">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubYearLevel1_to">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubYearLevel2_from">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubYearLevel2_to">
+              <interp>2016</interp>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel1_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel1_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel2_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubMonthLevel2_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel1_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel1_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel2_from">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="pubDayLevel2_to">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="witnessYearLevel1_from">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="witnessYearLevel1_to">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel1_from">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel1_to">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel1_from">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel1_to">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel1_from">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel1_to">
+              
+              <interp>1892</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel1_from">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel1_to">
+              
+              <interp>07</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel1_from">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel1_to">
+              
+              <interp>15</interp>
+            </interpGrp>
+            <interpGrp type="witnessYearLevel2_from">
+              <interp>1877</interp>
+            </interpGrp>
+            <interpGrp type="witnessYearLevel2_to">
+              <interp>1925</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel2_from">
+              <interp>02</interp>
+            </interpGrp>
+            <interpGrp type="witnessMonthLevel2_to">
+              <interp>11</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel2_from">
+              <interp>12</interp>
+            </interpGrp>
+            <interpGrp type="witnessDayLevel2_to">
+              <interp>24</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel2_from">
+              <interp>1877</interp>
+            </interpGrp>
+            <interpGrp type="textYearLevel2_to">
+              <interp>1925</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel2_from">
+              <interp>02</interp>
+            </interpGrp>
+            <interpGrp type="textMonthLevel2_to">
+              <interp>11</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel2_from">
+              <interp>12</interp>
+            </interpGrp>
+            <interpGrp type="textDayLevel2_to">
+              <interp>24</interp>
+            </interpGrp>
+            <interpGrp type="localization_placeLevel1">
+              <interp>Helsingfors</interp><interp>Helsinki</interp>
+              
+            </interpGrp>
+            <interpGrp type="localization_provinceLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="localization_countryLevel1">
+              <interp>Finland</interp>
+            </interpGrp>
+            <interpGrp type="localization_regionLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="localization_kloekecodeLevel1">
+              <interp/>
+            </interpGrp>
+            <interpGrp type="localization_placeLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_provinceLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_countryLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_regionLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="localization_kloekecodeLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="ingestTime">
+              <interp>2018-05-31T12:07</interp>
+              
+            </interpGrp>
+            <interpGrp type="genreLevel1">
+              <interp>egodocumenten</interp>
+            </interpGrp>
+            <interpGrp type="genreLevel2">
+              <interp>egodocumenten</interp>
+            </interpGrp>
+            <interpGrp type="subgenreLevel1">
+              <interp>brieven</interp>
+            </interpGrp>
+            <interpGrp type="subgenreLevel2">
+              <interp>brieven</interp>
+            </interpGrp>
+            <interpGrp type="factualityLevel1">
+              <interp>non-fictie</interp>
+            </interpGrp>
+            <interpGrp type="factualityLevel2">
+              <interp>non-fictie</interp>
+            </interpGrp>
+            <interpGrp type="statusTextLevel1">
+              <interp>geen vertaling</interp>
+            </interpGrp>
+            <interpGrp type="statusTextLevel2">
+              <interp>geen vertaling</interp>
+            </interpGrp>
+            <interpGrp type="sourceLanguageLevel1">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="sourceLanguageLevel2">
+              <interp/>
+              
+            </interpGrp>
+            
+            <interpGrp type="primaryLanguageLevel1"><interp>nld</interp><interp>deu</interp><!--de oorspronkelijke taalinformatie luidde: "Nederlands en Duits"--></interpGrp>
+            <interpGrp type="primaryLanguageLevel2">
+              <interp>deu</interp>
+              <interp>eng</interp>
+              <interp>fra</interp>
+              <interp>nld</interp>
+                        </interpGrp>
+            <interpGrp type="settingLocation">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="settingPerson">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="settingOrganization">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="ipr">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="copyrightHolder">
+              <interp>Huygens ING</interp>
+            </interpGrp>
+            <interpGrp type="copyrightOwner">
+              <interp>Huygens ING</interp>
+            </interpGrp>
+            <interpGrp type="corpusProvenance">
+              <interp>HuygensING-brieven-correspondenten-1900</interp>
+            </interpGrp>
+            <interpGrp type="biblScope_pageLevel1">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="biblScope_pageLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="biblScope_volumeLevel1">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="biblScope_volumeLevel2">
+              <interp/>
+              
+            </interpGrp>
+            <interpGrp type="processingMethod">
+              <interp>born digital</interp>
+            </interpGrp>
+          </bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader><text>
+
+<body><head resp="editor">Addens, Johannes aan Vloten, Katharina van | 1892-07-15</head><p>
+<pb/>Helsingfors, den 15 Juli 1892</p><p>
+</p><p>
+Beste Mevr. Kitty Verwey-v. Vloten.</p><p>
+</p><p>
+'t Was zeer lief van U my die boeken te sturen, zeer lief. Dank beste Kitty, Mevrouw wilde ik zeggen. Kitty vind ik mooier, Mevrouw is te deftig, beteekent: Kom me niet te na. - Met het oordeel der Schiedammer stem ik volkomen in. 'De Joden' zijn schoon, onovertreffelijk schoon. - De beeldenpracht is heerlijk, de verhalen zijn naif-kinderlijk, tintelen van gevoel. - Dat men hierby lachen kon, zooals Gij schrijft, ook de Schiedammer zegt het, is mij onbegrijpelijk. - Waarom lachtte 't publiek -?- De verzen geven er toch geene aanleiding toe en daar verzen en beelden zeker elkaâr waardig dekken waren, bestond er geen grond iets belachelyk te vinden. - - Wat Plox over de taal zegt, stem ik ten deele toe. - Ook ik zou 't beter achten, als Uw man gewoon gekuischt Hollands wou schrijven, zooals de Genestett en anderen, die er ook iets van wisten, deden. De schoonheid zijner verzen behoefde daardoor niet te lyden, en hij zou meer lezers vinden. Tegen de zonderlinge afbreking van woorden ge-scepterde farao. etc. <pb/>bij deze soort van verzen, heb ik geen bezwaar, evenmin als tegen de weglating der lidwoorden:</p><p>
+</p><p>
+'Binnen in zaal van cederhout.'</p><p>
+</p><p>
+De taal is zoo teer, zoo fijn, zoo etherisch dat ze toch nauw of niet uitgesproken worden. Wil men ze zien, dan zou ik schrijven:</p><p>
+</p><p>
+Binnen in <hi rend="superscript">de</hi> zaal -</p><p>
+dat <hi rend="superscript">de</hi> wind beweegt. -</p><p>
+</p><p>
+Tegen D' Joden heb ik niets, 't komt mij ook niet 'onmelodisch' voor. - Zulke verbindingen zijn niet geoorloofd, zegt Plox. Waarom niet -?. Ze komen in de spreektaal voor, en deze is toch de wetgever van ons taal-wetboek, van de gramatica. - Ik maak je mijn compliment over een man, die zulke verzen schrijft.</p><p>
+'De Joden' behoud ik; mag ik die Schiedamsche er bij leggen en behouden? 't Johannes Evangelie stuur ik U later terug, en tevens geld voor 't eerste. Gij zijt huismoeder, vrouw.; te praktiesch om niet voor Uw' huishouding te zorgen en geeft me den prijs [op?]. </p><p>
+'K vond in dat Evangelie ook een gedicht van Uw Albert: dat ik mijner vrouw met eene 'Uebersetzung in het Duitsch, overgebriefd heb. </p><p>
+</p><p>
+O Mann von Schmerzen mit der Dornenkrohn'</p><p>
+O bleiches blut'-Gesicht, dass in der Nacht</p><p>
+Glüht mit ein' grosser bleicher flamm', wass macht</p><p>
+Bei endlos' Leiden doch dein Bild so schön? </p><p>
+</p><p>
+<pb/>Glänzende Liebe in ein Dampf von Hohn,</p><p>
+Wie sind dein' Lippen still, wie ohne Klag? </p><p>
+Blickst nieder du vom Kreuz, wie lächelst du zo mild,</p><p>
+Gott von Geheimniss', Gottes liebster Sohn!</p><p>
+</p><p>
+O flamm' voll Gluth auf dieser kalten Welt,</p><p>
+Schönheit der von Schmerzen auf der dunklen Erd'</p><p>
+Wunder der Liebe, durch kein Mensch erklärt.</p><p>
+</p><p>
+Weh mir! ich hor' allzeit den traur'gn fall</p><p>
+Der Tropfen Bluth und bis zum Morgen sieht</p><p>
+Er mich an mit grosser Liebe und endlos' Leid. </p><p>
+</p><p>
+Wat vrij, niet waar? Scheldt Gy -?- Waren de duitsche uitdrukking voor <hi rend="underline">Ai my</hi>! - Mijn Hollandsch begint my te vergeten. - Ik maak soms ook verzen, zooals Gij weet. Waarom? Wijl ik er pleizier aan heb. Verleden winter ben ik [Mr. st.?] geworden bij onze Loge, en heb toen iets voorgedragen, waarvoor ik veel lof in oogste. In de eerste afdeeling vierde ik het Licht, gaf ik mijn begrip van 't Mysterie, (God?), waarin wij leven, eene eenheid van stof en kracht etc.; de tweede was voor den Voorzitter; in de derde afd. gaf ik mijne opvatting der 'Mauerei'; Ofschoon ik verklaarde, dat ik geene waarde hechte aan de formules d. Mauerei, daar mijn Loge de wereld was etc. was men er toch meê ingenomen. Alles rook kettersch. - Zij vonden 't wel mooi, wijl ik een consul ben. De stand en maatschappelijke positie heeft machtig veel invloed op 't oordeel der menschen, zooals ons spreekwoord: 'de rok maakt den mensch' ook zegt. - De Heeren zijn anders erg conservatief; ze houden vast, wat ze hebben, en zien <pb/>goed uit, hoe de wind waait: praten bij een goed glas wijn en eene fijne sigaar ook wel eens over de verbetering van 't lot der armen, die zij, als deze er zelf over denken en spreken canaille noemen; 't zijn prachtige menschen en goede Staatsburgers, die God en den Keizer geven, wat ze toekomt en daarom ook zeker allen in den Hemel komen, ofschoon ze bij de invoering der Wet op 't inkomen eclatant bewezen hebben, dat Proudhon' gelijk had, als hij 'eigendom diefstal' noemde. [60?] miljoen bracht de nieuwe wet meer op, dan vroeger, hebben die Heeren dus - 'gestolen', wil ik niet zeggen, - te min betaald. - . - Stelen is een te barsch woord voor deftige rijke lui.. - Genoeg - zoo schijnen ze overal te zijn. - </p><p>
+Kathi is thans in de stad; zij zoekt werk, eene betrekking, - kan echter niets vinden. Waar een noodig is, bieden zich, vijftig, honderd, aan. - Wat daaruit worden zal, weet ik niet. - </p><p>
+Hoe gaat het U en Uwe kinderen. Toch wel -?- Leg ze nog maar weer eens op hun rug, om eenige letteren te schrijven. - Nog iets. - Stuur me toch eene fotografie van je man. Ik mocht hem hebben, voor de heele wereld hem heeft. U vindt dit verlangen toch natuurlijk en niet onbescheiden, hoop ik. Voeg je zelf er dan maar bij. Mijn vrouw zal er ook erg blij over zijn, als ik met Uw beiden aankom.</p><p>
+</p><p>
+Hartelijke groeten, ook aan Uw man</p><p>
+TT.</p><p>
+Johs. Addens</p><p>
+</p><p>
+Bij mijn adr. behoef je niet Skilnaden of Brunsparken te zetten; - een handelszaak heb ik niet meer, te Skilnaden staat nu een millioenenhuis.</p><p>
+</p><p>
+Ik lees eene Kritiek der moderne Theosophie van G. af Geiersam: Modern [xxxxxxxxxxx]'</p><p>
+</p><p>
+Is Uw man geen Hagenaar; daar woonde vroeger een Dr. Verwey.</p><p>
+<pb/></p><p>
+<pb/>
+</p></body></text></TEI>

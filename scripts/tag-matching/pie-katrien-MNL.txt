@@ -1,0 +1,26 @@
+roman_van_lancelot_proza.xml -- INT_0648bf05-8f52-44eb-b906-3f109d598bf2
+[ERROR] Could not resolve mismatch:
+	Truth: bego[...]se
+	Pred: bego[
+[ERROR] Could not resolve mismatch:
+	Truth: m[.]nne
+	Pred: m[
+[FAIL] Advanced matching misses 2 tags.
+
+
+tweede_martijn.xml -- INT_ab75a1bc-f63d-4a7f-9ab4-1358385004d1
+[SUCCESS] Found all tags with advanced matching.
+
+
+van_den_vos_reynaerde.xml -- INT_68d11107-06d3-488a-8c77-4bf95587fb46
+[SUCCESS] Found all tags with advanced matching.
+
+
+walewein_ende_keye.xml -- INT_f7eb888b-ef43-4139-a9f6-9213f6db6f2c
+[SUCCESS] Found all tags with advanced matching.
+
+
+Summary:
+	Simple matches: 0
+	Advanced matches: 3
+	Total files: 4
