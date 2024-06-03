@@ -1,0 +1,21 @@
+id: pie-tdn-clvn
+description: "PIE trained on CLVN"
+tagset: "TDN-Core"
+eraFrom: "1500"
+eraTo: "1600"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: pie-tdn-clvn
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/TDN-CLVN
+software:
+  name: int-pie
+  href: https://github.com/INL/int-pie/tree/1.0.0
+dataset:
+  name: CLVN
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/CLVN.combination.json
+trainedBy: "INT"
+date: "2024-06-03"
+devport: 8104

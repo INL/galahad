@@ -1,0 +1,21 @@
+id: pie-tdn-bab
+description: "PIE trained on letters as loot (Brieven als Buit)"
+tagset: "TDN-Core"
+eraFrom: "1600"
+eraTo: "1800"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: pie-tdn-bab
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/TDN-BAB
+software:
+  name: int-pie
+  href: https://github.com/INL/int-pie/tree/1.0.0
+dataset:
+  name: letters-as-loot
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/BAB.combination.json
+trainedBy: "INT"
+date: "2024-06-03"
+devport: 8103

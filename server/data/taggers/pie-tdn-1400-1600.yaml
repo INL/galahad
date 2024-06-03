@@ -1,0 +1,21 @@
+id: pie-tdn-1400-1600
+description: "PIE trained on DBNL excerpts, GTB dictionary quotations & CLVN (1400-1600)"
+tagset: "TDN-Core"
+eraFrom: "1400"
+eraTo: "1600"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: pie-tdn-1400-1600
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/tdn-1400-1600
+software:
+  name: int-pie
+  href: https://github.com/INL/int-pie/tree/1.0.0
+dataset:
+  name: 1400-1600
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/1400-1600.combination.json
+trainedBy: "INT"
+date: "2024-06-03"
+devport: 8100
