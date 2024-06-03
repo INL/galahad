@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "dictionary-quotations-15",
+    "eraFrom": "1400",
+    "eraTo": "1500",
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "dictionary-quotations-15",
+    "sourceURL": "https://gtb.ivdnt.org/"
+}

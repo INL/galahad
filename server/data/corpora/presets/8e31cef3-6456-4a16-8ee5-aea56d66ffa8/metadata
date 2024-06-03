@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "dbnl + dictionary-quotations",
+    "eraFrom": 1400,
+    "eraTo": 1900,
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "galahad-corpus-data",
+    "sourceURL": "https://github.com/INL/galahad-corpus-data"
+}

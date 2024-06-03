@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "clvn",
+    "eraFrom": "1500",
+    "eraTo": "1600",
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "clvn",
+    "sourceURL": "https://ivdnt.org/actueel/nieuws/digitaaljaar-2024-databanken-van-nicoline/"
+}

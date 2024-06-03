@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "couranten",
+    "eraFrom": "1600",
+    "eraTo": "1700",
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "couranten",
+    "sourceURL": "https://couranten.ivdnt.org/"
+}

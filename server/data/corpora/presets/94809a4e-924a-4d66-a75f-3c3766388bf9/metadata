@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "tdn-1600-1900",
+    "eraFrom": 1600,
+    "eraTo": 1900,
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "galahad-corpus-data",
+    "sourceURL": "https://github.com/INL/galahad-corpus-data"
+}
