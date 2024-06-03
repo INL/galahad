@@ -77,7 +77,7 @@ const assaysStore = stores.useAssays() as AssaysStore
 const corporaStore = stores.useCorpora()
 
 // Fields
-const datasetOptions = computed(() => corporaStore.datasetCorpora.map((d) => ({ value: d.uuid, text: d.name })))
+const datasetOptions = computed(() => corporaStore.datasetCorpora.map((d) => ({ value: d.uuid, text: d.name })).sort((a, b) => a.text.localeCompare(b.text)))
 const selectedDatasetUuid = ref(null)
 const selectedDatasetName = computed(() => corporaStore.datasetCorpora.find((d) => d.uuid == selectedDatasetUuid.value)?.name)
 const metricsFilter = ref(null)
