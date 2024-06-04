@@ -13,10 +13,10 @@
       <division-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/division"/>
       <linebreak-annotation annotatortype="auto" set="http://rdf.ivdnt.org/nederlab/folia/sets/linebreak"/>
       <lang-annotation set="http://raw.github.com/proycon/folia/master/setdefinitions/iso639_3.foliaset"/>
-    <sentence-annotation/><token-annotation/><lemma-annotation set="pie-tdn"><annotator processor="pie-tdn"/></lemma-annotation><pos-annotation set="pie-tdn"><annotator processor="pie-tdn"/></pos-annotation></annotations>
+    <sentence-annotation/><token-annotation/><lemma-annotation set="pie-tdn-all"><annotator processor="pie-tdn-all"/></lemma-annotation><pos-annotation set="pie-tdn-all"><annotator processor="pie-tdn-all"/></pos-annotation></annotations>
     <provenance>
       <!-- empty -->
-    <processor host="galahad.ivdnt.org" name="pie-tdn" src="https://github.com/INL/galahad-taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn"/></provenance>
+    <processor host="galahad.ivdnt.org" name="pie-tdn-all" src="https://github.com/INL/galahad-taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn-all"/></provenance>
   </metadata>
   <text xml:id="CLVN-1-1_71c1b8b5-a9c8-4c73-b214-5a926126eab3.TEI.1">
     <part class="body">

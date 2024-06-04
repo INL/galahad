@@ -1,0 +1,2839 @@
+token	pos	lemma	group_id
+Wels	NOU-P	Wels	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+28	NUM(type=ord,position=prenom,representation=dig)	achtentwintigste	
+April	NOU-C(number=sg)	april	
+.	PC		
+
+Men	PD(type=pers,position=free)	men	
+wil	VRB(finiteness=fin,tense=pres)	willen	
+,	PC		
+dat	CONJ(type=sub)	dat	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Teckeley	NOU-P	Teckeley	
+door	ADP(type=pre)	door	
+2	NUM(type=card,position=prenom,representation=dig)	twee	
+Couriers	NOU-C(number=pl)	koerier	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+geciteert	VRB(finiteness=pastpart)	citeren	
+,	PC		
+om	ADP(type=pre)	om	
+na	ADP(type=pre)	na	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Ottomannise	AA(degree=pos,position=prenom)	Ottomanisch	
+Porte	NOU-C(number=sg)	poort	
+te	ADP(type=pre)	te	
+komen	VRB(finiteness=inf)	komen	
+,	PC		
+en	CONJ(type=coor)	en	
+dat	CONJ(type=sub)	dat	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Gemalinne	NOU-C(number=sg)	gemalin	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Grave	NOU-C(number=sg)	graaf	
+Erdoldi	NOU-P	Erdődy	
+,	PC		
+welcke	PD(type=w-p,position=free)	welk	
+sig	PD(type=refl,position=free)	zich	
+met	ADP(type=pre)	met	
+haer	PD(type=poss,position=prenom)	haar	
+beste	AA(degree=sup,position=prenom)	best	
+Goederen	NOU-C(number=pl)	goed	
+na	ADP(type=pre)	na	
+Polen	NOU-P	Polen	
+meende	VRB(finiteness=fin,tense=past)	menen	
+te	ADP(type=pre)	te	
+retireren	VRB(finiteness=inf)	retireren	
+,	PC		
+betrapt	VRB(finiteness=pastpart)	betrappen	
+,	PC		
+en	CONJ(type=coor)	en	
+in	ADP(type=pre)	in	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Slot	NOU-C(number=sg)	slot	
+Mohowitz	NOU-P	Mohowitz	
+in	ADP(type=pre)	in	
+Arrest	NOU-C(number=sg)	arrest	
+genomen	VRB(finiteness=pastpart)	nemen	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+.	PC		
+
+Tot	ADP(type=pre)	tot	
+Caschauw	NOU-P	Košice	
+en	CONJ(type=coor)	en	
+Esperies	NOU-P	Prešov	
+,	PC		
+alwaer	ADV(type=reg)	alwaar	
+men	PD(type=pers,position=free)	men	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+groot	AA(degree=pos,position=prenom)	groot	
+getal	NOU-C(number=sg)	getal	
+Janitsaren	NOU-C(number=pl)	janitsaar	
+verwacht	VRB(finiteness=fin,tense=pres)	verwachten	
+,	PC		
+willen	VRB(finiteness=fin,tense=pres)	willen	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Inwoonders	NOU-C(number=pl)	inwoner	
+sig	PD(type=refl,position=free)	zich	
+defenderen	VRB(finiteness=inf)	defenderen	
+.	PC		
+
+Tot	ADP(type=pre)	tot	
+Weenen	NOU-P	Wenen	
+dal	VRB(finiteness=fin,tense=pres,WF=mis)	zullen	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+halve	AA(degree=pos,position=prenom)	half	
+Leopold	NOU-P	Leopoldstadt	mw_629305
+stadt	NOU-P	Leopoldstadt	mw_629305
+ter	VRB(finiteness=pastpart)	ternedersmijten	mw_420431
+neder	VRB(finiteness=pastpart)	ternedersmijten	mw_420431
+werden	VRB(finiteness=fin,tense=pres)	worden	
+gesmeten	VRB(finiteness=pastpart)	ternedersmijten	mw_420431
+,	PC		
+en	CONJ(type=coor)	en	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+ten	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	te+het	
+dien	PD(type=d-p,subtype=oth,position=prenom)	die	
+eynde	NOU-C(number=sg)	einde	
+aldaer	ADV(type=reg)	aldaar	
+2000	NUM(type=card,position=prenom,representation=dig)	tweeduizend	
+Man	NOU-C(number=sg)	man	
+uyt	ADP(type=pre)	uit	
+Moravien	NOU-P	Moravië	
+gearriveert	VRB(finiteness=pastpart)	arriveren	
+.	PC		
+
+Daer	ADV(type=reg)	daar	
+werden	VRB(finiteness=fin,tense=pres)	worden	
+dubbelde	AA(degree=pos,position=prenom)	dubbel	
+Schip-Bruggen	NOU-C(number=pl)	schipbrug	
+over	ADP(type=pre)	over	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Donauw	NOU-P	Donau	
+geslagen	VRB(finiteness=pastpart)	slaan	
+,	PC		
+om	ADP(type=pre)	om	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Keyserlijke	AA(degree=pos,position=prenom)	keizerlijk	
+Volckeren	NOU-C(number=pl)	volk	
+daer	ADV(type=pron)	daarover	mw_910221
+over	ADV(type=pron)	daarover	mw_910221
+te	ADP(type=pre)	te	
+doen	VRB(finiteness=inf)	doen	
+marcheren	VRB(finiteness=inf)	marcheren	
+.	PC		
+
+De	PD(type=d-p,subtype=art,position=prenom)	de	
+Keyserlijke	AA(degree=pos,position=prenom)	keizerlijk	
+Reyse	NOU-C(number=sg)	reis	
+na	ADP(type=pre)	na	
+Crembs	NOU-P	Krems	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+op	ADP(type=pre)	op	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+aenhouden	NOU-C(number=sg)	aanhouden	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Pauselijcken	AA(degree=pos,position=prenom)	pauselijk	
+Nuntius	NOU-C(number=sg)	nuntius	
+en	CONJ(type=coor)	en	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Spaenssen	AA(degree=pos,position=prenom)	Spaans	
+Ambasadeur	NOU-C(number=sg)	ambasadeur	
+,	PC		
+tot	ADP(type=pre)	tot	
+in	ADP(type=pre)	in	
+July	NOU-C(number=sg)	julius	
+uytgestelt	VRB(finiteness=pastpart)	uitstellen	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Generael	NOU-C(number=sg)	generaal	
+Mercy	NOU-P	Mercy	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+tegenwoordig	AA(degree=pos,position=free)	tegenwoordig	
+Nieuhuysel	NOU-P	Nové Zámky	
+volkomen	AA(degree=pos,position=free)	volkomen	
+geblocqueert	VRB(finiteness=pastpart)	blokkeren	
+.	PC		
+
+Uyt	ADP(type=pre)	uit	
+Polen	NOU-P	Polen	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+men	PD(type=pers,position=free)	men	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+confirmatie	NOU-C(number=sg)	confirmatie	
+,	PC		
+dat	CONJ(type=sub)	dat	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Vestingh	NOU-C(number=sg)	vesting	
+Jaslowic	NOU-P	Jaslowic	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+verovert	VRB(finiteness=pastpart)	veroveren	
+,	PC		
+en	CONJ(type=coor)	en	
+hoopt	VRB(finiteness=fin,tense=pres)	hopen	
+men	PD(type=pers,position=free)	men	
+daer	ADV(type=pron)	daardoor	mw_311975
+door	ADV(type=pron)	daardoor	mw_311975
+,	PC		
+dat	CONJ(type=sub)	dat	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Turcken	NOU-C(number=pl)	Turk	
+soo	ADV(type=reg)	zo	
+formidabel	AA(degree=pos,position=free)	formidabel	
+als	CONJ(type=sub)	als	
+voorheen	ADV(type=reg)	voorheen	
+niet	ADV(type=reg)	niet	
+meer	ADV(type=reg)	meer	
+in	ADP(type=pre)	in	
+Ongaryen	NOU-P	Hongarije	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+komen	VRB(finiteness=inf)	komen	
+.	PC		
+
+De	PD(type=d-p,subtype=art,position=prenom)	de	
+saecken	NOU-C(number=pl)	zaak	
+,	PC		
+die	PD(type=d-p,position=free)	die	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Gesant	NOU-C(number=sg)	gezant	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Teckeley	NOU-P	Teckeley	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+aengebracht	VRB(finiteness=pastpart)	aanbrengen	
+,	PC		
+werden	VRB(finiteness=fin,tense=pres)	worden	
+seer	AA(degree=pos,position=free)	zeer	
+gesecreteert	VRB(finiteness=pastpart)	secreteren	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heer	NOU-C(number=sg)	heer	
+Frobenius	NOU-P	Frobenius	
+van	ADP(type=pre)	van	
+Furstenberg	NOU-P	Furstenberg	
+gaet	VRB(finiteness=fin,tense=pres)	gaan	
+op	ADP(type=pre)	op	
+morgen	ADV(type=reg)	morgen	
+als	CONJ(type=sub)	als	
+Keyserl	AA(degree=pos,position=prenom,WF=abbr)	keizerlijk	
+:	PC		
+Gesant	NOU-C(number=sg)	gezant	
+na	ADP(type=pre)	na	
+Ulm	NOU-P	Ulm	
+,	PC		
+om	ADP(type=pre)	om	
+by	ADP(type=pre)	bij	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Vergadering	NOU-C(number=sg)	vergadering	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Swabisen	AA(degree=pos,position=prenom)	Zwabisch	
+Creytz	NOU-C(number=sg)	kreits	
+te	ADP(type=pre)	te	
+zijn	VRB(finiteness=inf)	zijn	
+.	PC		
+
+Wt	ADP(type=pre)	uit	
+Antwerpen	NOU-P	Antwerpen	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+30	NUM(type=ord,position=free,representation=dig)	dertigste	
+dito	NOU-C(number=sg)	dito	
+.	PC		
+
+De	PD(type=d-p,subtype=art,position=prenom)	de	
+belegeringe	NOU-C(number=sg)	belegering	
+van	ADP(type=pre)	van	
+Yperen	NOU-P	Ieper	
+,	PC		
+werdt	VRB(finiteness=fin,tense=pres)	worden	
+met	ADP(type=pre)	met	
+allen	PD(type=indef,subtype=oth,position=prenom)	al	
+Ernst	NOU-C(number=sg)	ernst	
+ende	CONJ(type=coor)	en	
+sorchvuldigheyt	NOU-C(number=sg)	zorgvuldigheid	
+gecontinueert	VRB(finiteness=pastpart)	continueren	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+onse	NOU-C(number=pl)	onze	
+sijn	VRB(finiteness=fin,tense=pres)	zijn	
+al	ADV(type=reg)	al	
+van	ADP(type=pre)	van	
+eenighe	PD(type=indef,position=free)	enig	
+,	PC		
+van	ADP(type=pre)	van	
+des	PD(type=d-p,subtype=art,position=prenom)	de	
+vyands	NOU-C(number=sg)	vijand	
+buyten	NOU-C(number=pl)	buitenwerk	mw_955175
+wercken	NOU-C(number=pl)	buitenwerk	mw_955175
+,	PC		
+meester	NOU-C(number=sg)	meester	
+gheworden	VRB(finiteness=pastpart)	worden	
+,	PC		
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Fort	NOU-C(number=sg)	fort	
+Cnoke	NOU-P	Cnoke	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+24	NUM(type=ord,position=free,representation=dig)	vierentwintigste	
+deses	PD(type=d-p,position=free)	deze	
+stormender	ADV(type=reg)	stormenderhand	mw_997167
+handt	ADV(type=reg)	stormenderhand	mw_997167
+verovert	VRB(finiteness=pastpart)	veroveren	
+,	PC		
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+25	NUM(type=ord,position=free,representation=dig)	vijfentwintigste	
+deses	PD(type=d-p,subtype=oth,position=prenom)	deze	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+St.	NOU-P(WF=abbr)	Sint-Venant	mw_621528
+Venant	NOU-P(WF=abbr)	Sint-Venant	mw_621528
+,	PC		
+met	ADP(type=pre)	met	
+accoort	NOU-C(number=sg)	akkoord	
+over	VRB(finiteness=pastpart)	overgeven	mw_344678
+ghegeven	VRB(finiteness=pastpart)	overgeven	mw_344678
+,	PC		
+400	NUM(type=card,position=prenom,representation=dig)	vierhonderd	
+man	NOU-C(number=sg)	man	
+sijn	VRB(finiteness=fin,tense=pres)	zijn	
+daer	ADV(type=reg)	daar	
+uyt	VRB(finiteness=pastpart)	uittrekken	mw_12339
+ghetrocken	VRB(finiteness=pastpart)	uittrekken	mw_12339
+ende	CONJ(type=coor)	en	
+altemael	ADV(type=reg)	altemaal	
+Prisonniers	NOU-C(number=pl)	prisonnier de guerre	mw_566024
+de	NOU-C(number=pl)	prisonnier de guerre	mw_566024
+guerre	NOU-C(number=pl)	prisonnier de guerre	mw_566024
+ghemaeckt	VRB(finiteness=pastpart)	maken	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Fransse	AA(degree=pos,position=prenom)	Frans	
+sijn	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+met	ADP(type=pre)	met	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+convoy	NOU-C(number=sg)	konvooi	
+van	ADP(type=pre)	van	
+Arras	NOU-P	Arras	
+gekomen	VRB(finiteness=pastpart)	komen	
+,	PC		
+om	ADP(type=pre)	om	
+Bettune	NOU-P	Béthune	
+te	ADP(type=pre)	te	
+secoureren	VRB(finiteness=inf)	secoureren	
+,	PC		
+sterck	AA(degree=pos,position=free)	sterk	
+200	NUM(type=card,position=prenom,representation=dig)	tweehonderd	
+Ruyters	NOU-C(number=pl)	ruiter	
+ende	CONJ(type=coor)	en	
+200	NUM(type=card,position=free,representation=dig)	tweehonderd	
+te	ADP(type=pre)	te	
+voet	NOU-C(number=sg)	voet	
+,	PC		
+het	PD(type=w-p,position=free)	hetwelk	mw_543601
+welcke	PD(type=w-p,position=free)	hetwelk	mw_543601
+7	NUM(type=card,position=prenom,representation=dig)	zeven	
+Compagnien	NOU-C(number=pl)	compagnie	
+Crabaten	NOU-C(number=pl)	Kroaat	
+,	PC		
+ter	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	te+de	
+oooren	NOU-C(number=pl)	oor	
+gekommen	VRB(finiteness=pastpart)	komen	
+sijnde	VRB(finiteness=prespart)	zijn	
+,	PC		
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+op	ADP(type=pre)	op	
+dat	PD(type=d-p,subtype=oth,position=prenom)	dat	
+Convoy	NOU-C(number=sg)	konvooi	
+gepast	VRB(finiteness=pastpart)	passen	
+ende	CONJ(type=coor)	en	
+het	PD(type=d-p,position=free)	hetzelve	mw_365498
+selve	PD(type=d-p,position=free)	hetzelve	mw_365498
+t'eenemael	ADP(type=pre)+NUM(type=card,position=prenom,representation=let)+NOU-C(number=sg)	te+een+maal	
+in	ADP(type=pre)	in	
+route	NOU-C(number=sg)	route	
+gebracht	VRB(finiteness=pastpart)	brengen	
+,	PC		
+soo	CONJ(type=sub)	zodat	mw_251801
+dat	CONJ(type=sub)	zodat	mw_251801
+maer	ADV(type=reg)	maar	
+13	NUM(type=card,position=prenom,representation=dig)	dertien	
+a	ADP(type=pre)	à	
+14	NUM(type=card,position=prenom,representation=dig)	veertien	
+paerden	NOU-C(number=pl)	paard	
+ontvlucht	VRB(finiteness=pastpart)	ontvluchten	
+sijn	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+stedeken	NOU-C(number=sg)	stedetje	
+Leleirs	NOU-P(WF=mis)	Lillers	
+,	PC		
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Fransse	AA(degree=pos,position=prenom)	Frans	
+verlaten	VRB(finiteness=pastpart)	verlaten	
+ende	CONJ(type=coor)	en	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+garnisoen	NOU-C(number=sg)	garnizoen	
+,	PC		
+sterck	AA(degree=pos,position=free)	sterk	
+200	NUM(type=card,position=prenom,representation=dig)	tweehonderd	
+man	NOU-C(number=sg)	man	
+,	PC		
+binnen	ADP(type=pre)	binnen	
+Betune	NOU-P	Béthune	
+gebracht	VRB(finiteness=pastpart)	brengen	
+.	PC		
+
+De	PD(type=d-p,subtype=art,position=prenom)	de	
+Fransse	AA(degree=pos,position=prenom)	Frans	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+Marveille	NOU-P	Meregem	
+ende	CONJ(type=coor)	en	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+brugge	NOU-C(number=sg)	brug	
+van	ADP(type=pre)	van	
+stegeren	NOU-C(number=pl)	steiger	
+,	PC		
+mede	ADV(type=reg)	mede	
+verlaten	VRB(finiteness=pastpart)	verlaten	
+,	PC		
+waer	ADV(type=pron)	waardoor	mw_424773
+door	ADV(type=pron)	waardoor	mw_424773
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+reviere	NOU-C(number=sg)	rivier	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Leije	NOU-P	Leie	
+heel	AA(degree=pos,position=free)	heel	
+vrij	AA(degree=pos,position=free)	vrij	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Brief	NOU-C(number=sg)	brief	
+van	ADP(type=pre)	van	
+Rijssel	NOU-P	Rijsel	
+,	PC		
+desen	PD(type=d-p,subtype=oth,position=prenom)	deze	
+morgen	ADV(type=reg)	morgen	
+hier	ADV(type=reg)	hier	
+,	PC		
+gearriveert	VRB(finiteness=pastpart)	arriveren	
+,	PC		
+refereert	VRB(finiteness=fin,tense=pres)	refereren	
+,	PC		
+dat	CONJ(type=sub)	dat	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+volck	NOU-C(number=sg)	volk	
+van	ADP(type=pre)	van	
+Leopoldus	NOU-P	Leopoldus	
+,	PC		
+voor	ADP(type=pre)	voor	
+Bassee	NOU-P	La Bassée	
+ende	CONJ(type=coor)	en	
+Betune	NOU-P	Béthune	
+sijn	VRB(finiteness=fin,tense=pres)	zijn	
+ghevallen	VRB(finiteness=pastpart)	vallen	
+,	PC		
+om	ADP(type=pre)	om	
+beyde	PD(type=indef,position=free)	beide	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+plaetsen	NOU-C(number=pl)	plaats	
+te	ADP(type=pre)	te	
+belegeren	VRB(finiteness=inf)	belegeren	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+22	NUM(type=ord,position=free,representation=dig)	tweeëntwintigste	
+deser	PD(type=d-p,position=free)	deze	
+sijn	VRB(finiteness=fin,tense=pres)	zijn	
+twee	NUM(type=card,position=prenom,representation=let)	twee	
+gecommitteerde	NOU-C(number=pl)	gecommitteerde	
+van	ADP(type=pre)	van	
+Parijs	NOU-P	Parijs	
+by	ADP(type=pre)	bij	
+Leopoldus	NOU-P	Leopoldus	
+gearriveert	VRB(finiteness=pastpart)	arriveren	
+,	PC		
+hun	PD(type=poss,position=prenom)	hun	
+aenbrenghen	NOU-C(number=sg)	aanbrengen	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+noch	ADV(type=reg)	nog	
+secreet	AA(degree=pos,position=free)	secreet	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Franssen	NOU-C(number=pl)	Frans	
+komen	VRB(finiteness=fin,tense=pres)	komen	
+hun	PD(type=refl,position=free)	hun	
+,	PC		
+noch	ADV(type=reg)	nog	
+niet	ADV(type=reg)	niet	
+sterck	AA(degree=pos,position=free)	sterk	
+op	ADP(type=pre)	op	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Frontieren	NOU-C(number=pl)	frontier	
+vertoonen	VRB(finiteness=inf)	vertonen	
+.	PC		
+
+Parijs	NOU-P	Parijs	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+14	NUM(type=ord,position=prenom,representation=dig)	veertiende	
+Maert	NOU-C(number=sg)	maart	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Coning	NOU-C(number=sg)	koning	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+sijne	PD(type=poss,position=prenom)	zijn	
+Generale	AA(degree=pos,position=prenom)	generaal	
+Officiers	NOU-C(number=pl)	officier	
+genomineert	VRB(finiteness=pastpart)	nomineren	
+;	PC		
+en	CONJ(type=coor)	en	
+men	PD(type=pers,position=free)	men	
+praetendeert	VRB(finiteness=fin,tense=pres)	pretenderen	
+,	PC		
+dat	CONJ(type=sub)	dat	
+(	PC		
+soo	CONJ(type=sub)	zo	
+buytenlantse	AA(degree=pos,position=prenom)	buitenlands	
+Saken	NOU-C(number=pl)	zaak	
+geen	PD(type=indef,subtype=oth,position=prenom)	geen	
+Verandering	NOU-C(number=sg)	verandering	
+daer	ADV(type=pron)	daarin	mw_627999
+in	ADV(type=pron)	daarin	mw_627999
+brengen	VRB(finiteness=fin,tense=pres)	brengen	
+)	PC		
+sijn	PD(type=poss,position=prenom)	zijn	
+Majesteyt	NOU-C(number=sg)	majesteit	
+van	ADP(type=pre)	van	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Jaer	NOU-C(number=sg)	jaar	
+in	ADP(type=pre)	in	
+Vlaenderen	NOU-P	Vlaanderen	
+,	PC		
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Dauphijn	NOU-C(number=sg)	dauphin	
+in	ADP(type=pre)	in	
+duytslant	NOU-P	Duitsland	
+,	PC		
+Sourdis	NOU-P	Sourdis	
+in	ADP(type=pre)	in	
+Guienne	NOU-P	Guyenne	
+en	CONJ(type=coor)	en	
+Noailles	NOU-P	Noailles	
+in	ADP(type=pre)	in	
+Roussillon	NOU-P	Roussillon	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+commanderen	VRB(finiteness=inf)	commanderen	
+.	PC		
+
+Montal	NOU-P	Montal	
+keert	VRB(finiteness=fin,tense=pres)	keren	
+naer	ADP(type=pre)	naar	
+Montroyael	NOU-P	Mont Royal	
+en	CONJ(type=coor)	en	
+Chamilly	NOU-P	Chamilly	
+na	ADP(type=pre)	na	
+Straeteburg	NOU-P	Straatsburg	
+.	PC		
+
+Mr.	NOU-C(number=sg,WF=abbr)	monsieur	
+de	RES(type=for)	de	
+LAré	NOU-P(WF=mis)	Laré	
+soude	VRB(finiteness=fin,tense=past)	zullen	
+volgens	ADP(type=pre)	volgens	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+tydingen	NOU-C(number=pl)	tijding	
+uyt	ADP(type=pre)	uit	
+Savoyen	NOU-P	Savoye	
+met	ADP(type=pre)	met	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Corps	NOU-C(number=sg)	korps	
+Troupen	NOU-C(number=pl)	troep	
+uyt	ADP(type=pre)	uit	
+Languedoc	NOU-P	Languedoc	
+en	CONJ(type=coor)	en	
+2	NUM(type=card,position=prenom,representation=dig)	twee	
+Regimenten	NOU-C(number=pl)	regiment	
+Savoyaerden	NOU-C(number=pl)	Savoiaard	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Secours	NOU-C(number=sg)	secours	
+,	PC		
+na	ADP(type=pre)	na	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Dalluyden	NOU-C(number=pl)	Dallieden	
+gedestineert	VRB(finiteness=pastpart)	destineren	
+,	PC		
+bemachtigt	VRB(finiteness=pastpart)	bemachtigen	
+hebben	VRB(finiteness=inf)	hebben	
+;	PC		
+en	CONJ(type=coor)	en	
+Madame	NOU-C(number=sg)	madame	
+de	RES(type=for)	de	
+Carignan	NOU-P	Carignan	
+van	ADP(type=pre)	van	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Soon	NOU-C(number=sg)	zoon	
+in	ADP(type=pre)	in	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Kraembed	NOU-C(number=sg)	kraambed	
+bevallen	VRB(finiteness=pastpart)	bevallen	
+wesen	VRB(finiteness=inf)	wezen	
+.	PC		
+
+Met	ADP(type=pre)	met	
+jonge	AA(degree=pos,position=prenom)	jong	
+Advysen	NOU-C(number=pl)	advies	
+uyt	ADP(type=pre)	uit	
+Yrlandt	NOU-P	Ierland	
+,	PC		
+door	ADP(type=pre)	door	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Expresse	NOU-C(number=sg)	expresse	
+aen	ADP(type=pre)	aan	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Hof	NOU-C(number=sg)	hof	
+overgebracht	VRB(finiteness=pastpart)	overbrengen	
+,	PC		
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+men	PD(type=pers,position=free)	men	
+tyding	NOU-C(number=sg)	tijding	
+van	ADP(type=pre)	van	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Rescontre	NOU-C(number=sg)	rescontre	
+tussen	ADP(type=pre)	tussen	
+d'Engelsse	PD(type=d-p,subtype=oth,position=prenom)+NOU-C(number=pl)	de+Engels	
+en	CONJ(type=coor)	en	
+Yren	NOU-C(number=pl)	Ier	
+;	PC		
+maer	CONJ(type=coor)	maar	
+van	ADP(type=pre)	van	
+d'omstandigheden	PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=pl)	de+omstandigheid	
+,	PC		
+die	PD(type=d-p,position=free)	die	
+men	PD(type=pers,position=free)	men	
+seer	AA(degree=pos,position=free)	zeer	
+divers	AA(degree=pos,position=free)	divers	
+verhaelt	VRB(finiteness=fin,tense=pres)	verhalen	
+,	PC		
+niet	PD(type=indef,position=free)	niet	
+sekers	ADV(type=reg)	zekers	
+.	PC		
+
+Van	ADP(type=pre)	van	
+Brest	NOU-P	Brest	
+wert	VRB(finiteness=fin,tense=pres)	worden	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+6	NUM(type=ord,position=free,representation=dig)	zesde	
+geschreven	VRB(finiteness=pastpart)	schrijven	
+,	PC		
+dat	CONJ(type=sub)	dat	
+Mr.	NOU-C(number=sg,WF=abbr)	monsieur	
+de	RES(type=for)	de	
+Lauzun	NOU-P	Lauzun	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+inscheping	NOU-C(number=sg)	inscheping	
+van	ADP(type=pre)	van	
+Volck	NOU-C(number=sg)	volk	
+,	PC		
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+3	NUM(type=ord,position=free,representation=dig)	derde	
+aengevangen	VRB(finiteness=pastpart)	aanvangen	
+,	PC		
+ernstig	AA(degree=pos,position=free)	ernstig	
+voortset	VRB(finiteness=fin,tense=pres)	voortzetten	
+,	PC		
+dat	CONJ(type=sub)	dat	
+5	NUM(type=card,position=prenom,representation=dig)	vijf	
+Schepen	NOU-C(number=pl)	schip	
+tot	ADP(type=pre)	tot	
+versterking	NOU-C(number=sg)	versterking	
+van	ADP(type=pre)	van	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Convoy	NOU-C(number=sg)	konvooi	
+van	ADP(type=pre)	van	
+Duynkercken	NOU-P	Duinkerken	
+gearriveert	VRB(finiteness=pastpart)	arriveren	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+en	CONJ(type=coor)	en	
+dat	CONJ(type=sub)	dat	
+men	PD(type=pers,position=free)	men	
+hoopt	VRB(finiteness=fin,tense=pres)	hopen	
+,	PC		
+dat	CONJ(type=sub)	dat	
+Monsr.	NOU-C(number=sg,WF=abbr)	monsieur	
+d'Amfreville	NOU-P	d'Amfreville	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+15	NUM(type=ord,position=free,representation=dig)	vijftiende	
+met	ADP(type=pre)	met	
+'t	PD(type=d-p,position=free)	hetzelve	mw_236936
+selve	PD(type=d-p,position=free)	hetzelve	mw_236936
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+konnen	VRB(finiteness=inf)	kunnen	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+zeyl	NOU-C(number=sg)	zeil	
+gaen	VRB(finiteness=inf)	gaan	
+.	PC		
+
+Men	PD(type=pers,position=free)	men	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+ordre	NOU-C(number=sg)	order	
+gestelt	VRB(finiteness=pastpart)	stellen	
+,	PC		
+considerabele	AA(degree=pos,position=prenom)	considerabel	
+Sommen	NOU-C(number=pl)	som	
+aen	ADP(type=pre)	aan	
+Monsr.	NOU-C(number=sg,WF=abbr)	monsieur	
+d'Amelot	NOU-P	d'Amelot	
+,	PC		
+'s	PD(type=d-p,subtype=art,position=prenom)	de	
+Conings	NOU-C(number=sg)	koning	
+Ambassadeur	NOU-C(number=sg)	ambassadeur	
+in	ADP(type=pre)	in	
+Switserlant	NOU-P	Zwitserland	
+,	PC		
+over	VRB(finiteness=inf)	overzenden	mw_610639
+te	ADP(type=pre)	te	
+senden	VRB(finiteness=inf)	overzenden	mw_610639
+,	PC		
+om	ADP(type=pre)	om	
+daer	ADV(type=pron)	daarvan	mw_277044
+van	ADV(type=pron)	daarvan	mw_277044
+,	PC		
+na	CONJ(type=sub)	nadat	mw_607467
+dat	CONJ(type=sub)	nadat	mw_607467
+hy	PD(type=pers,position=free)	hij	
+het	PD(type=pers,position=free)	het	
+nodig	AA(degree=pos,position=free)	nodig	
+vint	VRB(finiteness=fin,tense=pres)	vinden	
+,	PC		
+te	ADP(type=pre)	te	
+konnen	VRB(finiteness=inf)	kunnen	
+disponeren	VRB(finiteness=inf)	disponeren	
+.	PC		
+
+Wt	ADP(type=pre)	uit	
+Leypsich	NOU-P	Leipzig	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+22	NUM(type=ord,position=free,representation=dig)	tweeëntwintigste	
+dito	NOU-C(number=sg)	dito	
+.	PC		
+
+De	PD(type=d-p,subtype=art,position=prenom)	de	
+Sweedtsche	AA(degree=pos,position=prenom)	Zweeds	
+200	NUM(type=card,position=free,representation=dig)	tweehonderd	
+sterck	AA(degree=pos,position=free)	sterk	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+dat	PD(type=d-p,subtype=oth,position=prenom)	dat	
+Stedeken	NOU-C(number=sg)	stedetje	
+Luben	NOU-P	Lübben	
+onvoorsiens	AA(degree=pos,position=free)	onvoorziens	
+overvallen	VRB(finiteness=pastpart)	overvallen	
+,	PC		
+ende	CONJ(type=coor)	en	
+onsen	PD(type=poss,position=prenom)	ons	
+Oversten	NOU-C(number=sg)	overste	
+Vnger	NOU-P	Unger	
+in	ADP(type=pre)	in	
+sijn	PD(type=poss,position=prenom)	zijn	
+Logement	NOU-C(number=sg)	logement	
+gevanghen	VRB(finiteness=pastpart)	gevangen	
+becomen	VRB(finiteness=pastpart)	bekomen	
+,	PC		
+wordt	VRB(finiteness=fin,tense=pres)	worden	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Generael	NOU-C(number=sg)	generaal	
+Wranghel	NOU-P	Wrangel	
+wel	ADV(type=reg)	wel	
+ghetracteert	VRB(finiteness=pastpart)	trakteren	
+.	PC		
+
+Alhier	ADV(type=reg)	alhier	
+wort	VRB(finiteness=fin,tense=pres)	worden	
+alles	PD(type=indef,position=free)	alles	
+datter	CONJ(type=sub)+ADV(type=reg)	dat+er	
+mancqueert	VRB(finiteness=fin,tense=pres)	mankeren	
+veerdigh	AA(degree=pos,position=free)	vaardig	
+ghemaeckt	VRB(finiteness=pastpart)	maken	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Artillerije	NOU-C(number=pl)	artilleriepaard	mw_842454
+Paerden	NOU-C(number=pl)	artilleriepaard	mw_842454
+,	PC		
+die	PD(type=d-p,position=free)	die	
+om	ADP(type=pre)	om	
+Torgau	NOU-P	Torgau	
+opgekocht	VRB(finiteness=pastpart)	opkopen	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+werden	VRB(finiteness=fin,tense=pres)	worden	
+alhier	ADV(type=reg)	alhier	
+ghebracht	VRB(finiteness=pastpart)	brengen	
+,	PC		
+soo	ADV(type=reg)	zo	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+oock	ADV(type=reg)	ook	
+100	NUM(type=card,position=prenom,representation=dig)	honderd	
+Centenaers	NOU-C(number=pl)	centenaar	
+Pulver	NOU-C(number=sg)	pulver	
+,	PC		
+ende	CONJ(type=coor)	en	
+80	NUM(type=card,position=prenom,representation=dig)	tachtig	
+Centenaers	NOU-C(number=pl)	centenaar	
+Lonten	NOU-C(number=pl)	lont	
+van	ADP(type=pre)	van	
+Dresden	NOU-P	Dresden	
+gesonden	VRB(finiteness=pastpart)	zenden	
+,	PC		
+ende	CONJ(type=coor)	en	
+alle	PD(type=indef,position=free)	al	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Volck	NOU-C(number=sg)	volk	
+wordt	VRB(finiteness=fin,tense=pres)	worden	
+met	ADP(type=pre)	met	
+nieu	AA(degree=pos,position=prenom)	nieuw	
+gheweer	NOU-C(number=sg)	geweer	
+voorsien	VRB(finiteness=pastpart)	voorzien	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Oversten	NOU-C(number=sg)	overste	
+Slangh	NOU-P	Slangh	
+light	VRB(finiteness=fin,tense=pres)	liggen	
+met	ADP(type=pre)	met	
+500	NUM(type=card,position=prenom,representation=dig)	vijfhonderd	
+Dragonders	NOU-C(number=pl)	dragonder	
+tot	ADP(type=pre)	tot	
+Mansfeldt	NOU-P	Mansfeld	
+,	PC		
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+van	ADP(type=pre)	van	
+Eysleven	NOU-P	Eisleben	
+8000	NUM(type=card,position=prenom,representation=dig)	achthonderd	
+Rijcxdaeld.	NOU-C(number=pl,WF=abbr)	rijksdaalder	
+becomen	VRB(finiteness=pastpart)	bekomen	
+,	PC		
+wil	VRB(finiteness=fin,tense=pres)	willen	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+nieu	AA(degree=pos,position=prenom)	nieuw	
+Regiment	NOU-C(number=sg)	regiment	
+oprichten	VRB(finiteness=inf)	oprichten	
+,	PC		
+daer	ADV(type=pron)	daartoe	mw_556289
+toe	ADV(type=pron)	daartoe	mw_556289
+hy	PD(type=pers,position=free)	hij	
+versoeckt	VRB(finiteness=fin,tense=pres)	verzoeken	
+10000	NUM(type=card,position=prenom,representation=dig)	tienduizend	
+Rijcxdael.	NOU-C(number=pl,WF=abbr)	rijksdaalder	
+ende	CONJ(type=coor)	en	
+500	NUM(type=card,position=prenom,representation=dig)	vijfhonderd	
+Paerden	NOU-C(number=pl)	paard	
+.	PC		
+
+Morseburgh	NOU-P	Mörsburg	
+ende	CONJ(type=coor)	en	
+Hal	NOU-P	Halle	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+oock	ADV(type=reg)	ook	
+moeten	VRB(finiteness=inf)	moeten	
+gelt	NOU-C(number=sg)	geld	
+gheven	VRB(finiteness=inf)	geven	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Generael	NOU-C(number=sg)	generaal-luitenant	mw_939717
+Luytenant	NOU-C(number=sg)	generaal-luitenant	mw_939717
+Arnheym	NOU-P	Arnheim	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+18	NUM(type=ord,position=free,representation=dig)	achttiende	
+deser	PD(type=d-p,position=free)	deze	
+'	PC		
+savondts	PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)	de+avond	
+alhier	ADV(type=reg)	alhier	
+gehcomen	VRB(finiteness=pastpart,WF=mis)	komen	
+,	PC		
+ende	CONJ(type=coor)	en	
+terstondt	ADV(type=reg)	terstond	
+tot	ADP(type=pre)	tot	
+hare	PD(type=poss,position=prenom)	haar	
+Keur-Vorstel	AA(degree=pos,position=prenom)	keurvorstelijk	
+.	PC		
+
+Doorl.	NOU-C(number=sg,WF=abbr)	doorluchtigheid	
+ontboden	VRB(finiteness=pastpart)	ontbieden	
+,	PC		
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+by	ADP(type=pre)	bij	
+deselve	PD(type=d-p,subtype=oth,position=prenom)	dezelve	
+Doorl.	NOU-C(number=sg,WF=abbr)	doorluchtigheid	
+over	ADP(type=pre)	over	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+twee	NUM(type=card,position=prenom,representation=let)	twee	
+uyren	NOU-C(number=pl)	uur	
+tijdts	NOU-C(number=sg)	tijd	
+secrete	AA(degree=pos,position=prenom)	secreet	
+audientie	NOU-C(number=sg)	audiëntie	
+gehadt	VRB(finiteness=pastpart)	hebben	
+,	PC		
+daerna	ADV(type=pron)	daarna	
+zijnse	VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)	zijn+zij	
+t'samen	ADV(type=reg)	samen	
+ter	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	te+de	
+Tafel	NOU-C(number=sg)	tafel	
+ghegaen	VRB(finiteness=pastpart)	gaan	
+,	PC		
+ende	CONJ(type=coor)	en	
+tot	ADP(type=pre)	tot	
+middernacht	NOU-C(number=sg)	middernacht	
+aldaer	ADV(type=reg)	aldaar	
+ghebleven	VRB(finiteness=pastpart)	blijven	
+.	PC		
+
+Des	PD(type=d-p,subtype=art,position=prenom)	de	
+anderen	PD(type=indef,subtype=oth,position=prenom)	ander	
+daeghs	NOU-C(number=sg)	dag	
+na	ADP(type=pre)	na	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Predicatie	NOU-C(number=sg)	predicatie	
+zijnse	VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)	zijn+zij	
+wederom	ADV(type=reg)	wederom	
+secretelijck	ADV(type=reg)	secretelijk	
+by	ADP(type=pre)	bij	
+malcanderen	PD(type=recip,position=free)	malkander	
+gheweest	VRB(finiteness=pastpart)	zijn	
+,	PC		
+haren	PD(type=poss,position=prenom)	haar	
+handel	NOU-C(number=sg)	handel	
+wordt	VRB(finiteness=fin,tense=pres)	worden	
+seer	AA(degree=pos,position=free)	zeer	
+verborgen	AA(degree=pos,position=free)	verborgen	
+gehouden	VRB(finiteness=pastpart)	houden	
+,	PC		
+maer	CONJ(type=coor)	maar	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+metter	ADV(type=reg)	mettertijd	mw_138003
+tijdt	ADV(type=reg)	mettertijd	mw_138003
+wel	ADV(type=reg)	wel	
+openbaer	AA(degree=pos,position=free)	openbaar	
+worden	VRB(finiteness=inf)	worden	
+.	PC		
+
+De	PD(type=d-p,subtype=art,position=prenom)	de	
+Sweedtsche	AA(degree=pos,position=prenom)	Zweeds	
+parthyen	NOU-C(number=pl)	partij	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+in	ADP(type=pre)	in	
+der	PD(type=d-p,subtype=art,position=prenom)	de	
+Weymarckt	NOU-P	Weymarckt	
+seer	AA(degree=pos,position=free)	zeer	
+qualijck	AA(degree=pos,position=free)	kwalijk	
+huys	VRB(finiteness=pastpart)	huishouden	mw_866546
+ghehouden	VRB(finiteness=pastpart)	huishouden	mw_866546
+,	PC		
+sint	ADV(type=reg)	sint	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Generael	NOU-C(number=sg)	generaal	
+Banier	NOU-C(number=sg)	banier	
+op	ADP(type=pre)	op	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+gantsche	AA(degree=pos,position=prenom)	gans	
+Landt	NOU-C(number=sg)	land	
+Sauvergardes	NOU-C(number=pl)	sauvegarde	
+uytghedeelt	VRB(finiteness=pastpart)	uitdelen	
+,	PC		
+ende	CONJ(type=coor)	en	
+laet	VRB(finiteness=fin,tense=pres)	laten	
+sterck	AA(degree=pos,position=free)	sterk	
+op	ADP(type=pre)	op	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+plonderen	NOU-C(number=sg)	plunderen	
+acht	VRB(finiteness=inf)	achtnemen	mw_101190
+nemen	VRB(finiteness=inf)	achtnemen	mw_101190
+.	PC		
+
+VVt	ADP(type=pre)	uit	
+Swyts	NOU-P	Zwits	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+30	NUM(type=ord,position=prenom,representation=dig)	dertigste	
+.	PC		
+
+November	NOU-C(number=sg)	november	
+1624	NUM(type=card,position=postnom,representation=dig)	1624	
+.	PC		
+
+DE	PD(type=d-p,subtype=art,position=prenom)	de	
+Francoysche	AA(degree=pos,position=prenom)	Fransoos	
+Armade	NOU-C(number=sg)	armada	
+,	PC		
+als	CONJ(type=coor)	alsmede	mw_789096
+mede	CONJ(type=coor)	alsmede	mw_789096
+dat	PD(type=d-p,subtype=oth,position=prenom)	dat	
+andere	PD(type=indef,subtype=oth,position=prenom)	ander	
+gheworven	AA(degree=pos,position=prenom)	geworven	
+volck	NOU-C(number=sg)	volk	
+,	PC		
+marcheren	VRB(finiteness=fin,tense=pres)	marcheren	
+van	ADP(type=pre)	van	
+Chur	NOU-P	Chur	
+nae	ADP(type=pre)	na	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Stadt	NOU-C(number=sg)	stad	
+Cleve	NOU-P	Kleef	
+,	PC		
+om	ADP(type=pre)	om	
+de	PD(type=d-p,position=free)	dezelve	mw_836702
+selve	PD(type=d-p,position=free)	dezelve	mw_836702
+te	ADP(type=pre)	te	
+belegheren	VRB(finiteness=inf)	belegeren	
+,	PC		
+by	ADP(type=pre)	bij	
+sich	PD(type=refl,position=free)	zich	
+hebbende	VRB(finiteness=prespart)	hebben	
+4000	NUM(type=card,position=prenom,representation=dig)	vierduizend	
+.	PC		
+
+Waghens	NOU-C(number=pl)	wagen	
+,	PC		
+doch	CONJ(type=coor)	doch	
+men	PD(type=pers,position=free)	men	
+vermeent	VRB(finiteness=fin,tense=pres)	vermenen	
+,	PC		
+datse	CONJ(type=sub)+PD(type=pers,position=free)	dat+zij	
+sich	PD(type=refl,position=free)	zich	
+niet	ADV(type=reg)	niet	
+langher	AA(degree=comp,position=free)	lang	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+houden	VRB(finiteness=inf)	houden	
+connen	VRB(finiteness=inf)	kunnen	
+,	PC		
+ofte	CONJ(type=coor)	of	
+ghewilligh	AA(degree=pos,position=free)	gewillig	
+moeten	VRB(finiteness=inf)	moeten	
+opgheven	VRB(finiteness=inf)	opgeven	
+,	PC		
+dewyle	CONJ(type=sub)	dewijl	
+cleene	AA(degree=pos,position=prenom)	klein	
+beseteinghe	NOU-C(number=sg,WF=mis)	bezetting	
+daer	ADV(type=pron)	daarin	mw_310384
+in	ADV(type=pron)	daarin	mw_310384
+light	VRB(finiteness=fin,tense=pres)	liggen	
+,	PC		
+ende	CONJ(type=coor)	en	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Stadt	NOU-C(number=sg)	stad	
+niet	ADV(type=reg)	niet	
+wel	ADV(type=reg)	wel	
+met	ADP(type=pre)	met	
+Victualie	NOU-C(number=sg)	victualie	
+ende	CONJ(type=coor)	en	
+Ammonitie	NOU-C(number=sg)	ammunitie	
+versien	VRB(finiteness=pastpart)	verzien	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+maer	CONJ(type=coor)	maar	
+dewyle	CONJ(type=sub)	dewijl	
+op	ADP(type=pre)	op	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Clevische	AA(degree=pos,position=prenom)	Klevisch	
+Frontieren	NOU-C(number=pl)	frontier	
+a	RES(type=for)	a	
+la	RES(type=for)	la	
+Rippa	RES(type=for)	rippa	
+6000	NUM(type=card,position=prenom,representation=dig)	zesduizend	
+.	PC		
+
+Spanjaerden	NOU-C(number=pl)	Spanjaard	
+ende	CONJ(type=coor)	en	
+Italianen	NOU-C(number=pl)	Italiaan	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+aenghecomen	VRB(finiteness=pastpart)	aankomen	
+,	PC		
+so	ADV(type=reg)	zo	
+moeten	VRB(finiteness=fin,tense=pres)	moeten	
+d'onse	PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=pl)	de+onze	
+voorsien	VRB(finiteness=inf)	voorzien	
+,	PC		
+datse	CONJ(type=sub)+PD(type=pers,position=free)	dat+zij	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Plaggenbergh	NOU-P	Plaggenborg	
+voor	ADP(type=pre)	voor	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+comste	NOU-C(number=sg)	komst	
+vanden	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	van+de	
+vyandt	NOU-C(number=sg)	vijand	
+innemen	VRB(finiteness=fin,tense=pres)	innemen	
+.	PC		
+
+Interim	AA(degree=pos,position=free)	interim	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+alle	PD(type=indef,subtype=oth,position=prenom)	al	
+passagien	NOU-C(number=pl)	passage	
+op	ADP(type=pre)	op	
+Veltolin	NOU-P	Veltlin	
+sterc	AA(degree=pos,position=free)	sterk	
+btsettet	VRB(finiteness=pastpart,WF=mis)	bezetten	
+,	PC		
+principalijck	ADV(type=reg)	principaallijk	
+der	PD(type=d-p,subtype=art,position=prenom)	de	
+Steygh	NOU-P	Steygh	
+laeten	VRB(finiteness=fin,tense=pres)	laten	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Francoysen	NOU-C(number=pl)	Fransoos	
+seer	AA(degree=pos,position=free)	zeer	
+verstercken	VRB(finiteness=inf)	versterken	
+,	PC		
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+volck	NOU-C(number=sg)	volk	
+te	ADP(type=pre)	te	
+voet	NOU-C(number=sg)	voet	
+ende	CONJ(type=coor)	en	
+te	ADP(type=pre)	te	
+Paerde	NOU-C(number=sg)	paard	
+trecken	VRB(finiteness=fin,tense=pres)	optrekken	mw_74856
+op	VRB(finiteness=fin,tense=pres)	optrekken	mw_74856
+,	PC		
+als	CONJ(type=coor)	alsook	mw_955162
+oock	CONJ(type=coor)	alsook	mw_955162
+mede	ADV(type=reg)	mede	
+12000	NUM(type=card,position=prenom,representation=dig)	twaalfduizend	
+Mannen	NOU-C(number=pl)	man	
+van	ADP(type=pre)	van	
+Chur	NOU-P	Chur	
+op	ADP(type=pre)	op	
+Devos	NOU-P	Davos	
+door	ADP(type=pre)	door	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Bergen	NOU-C(number=pl)	berg	
+om	ADP(type=pre)	om	
+alsoo	ADV(type=reg)	alzo	
+in	ADP(type=pre)	in	
+Veltolin	NOU-P	Veltlin	
+te	ADP(type=pre)	te	
+gheraecken	VRB(finiteness=inf)	geraken	
+,	PC		
+verschantsen	VRB(finiteness=fin,tense=pres)	verschansen	
+hun	PD(type=refl,position=free)	hun	
+mede	ADV(type=reg)	mede	
+int	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	in+het	
+gheberghte	NOU-C(number=sg)	gebergte	
+.	PC		
+
+Dat	PD(type=d-p,subtype=oth,position=prenom)	dat	
+Schauwenburghsche	AA(degree=pos,position=prenom)	Schauenburgs	
+Regiment	NOU-C(number=sg)	regiment	
+(	PC		
+so	ADV(type=reg)	zo	
+in	ADP(type=pre)	in	
+Elsas	NOU-P	Elzas	
+light	VRB(finiteness=fin,tense=pres)	liggen	
+)	PC		
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+beneffens	ADP(type=pre)	benevens	
+meer	PD(type=indef,subtype=oth,position=prenom)	meer	
+ander	PD(type=indef,subtype=oth,position=prenom)	ander	
+Crijghsvolck	NOU-C(number=sg)	krijgsvolk	
+naer	ADP(type=pre)	naar	
+Mulhausen	NOU-P	Mulhouse	
+trecken	VRB(finiteness=inf)	trekken	
+,	PC		
+om	ADP(type=pre)	om	
+de	PD(type=d-p,position=free)	dezelve	mw_805816
+selve	PD(type=d-p,position=free)	dezelve	mw_805816
+te	ADP(type=pre)	te	
+belegheren	VRB(finiteness=inf)	belegeren	
+,	PC		
+daer	ADV(type=pron)	daarin	mw_366701
+in	ADV(type=pron)	daarin	mw_366701
+liggen	VRB(finiteness=fin,tense=pres)	liggen	
+duysent	NUM(type=card,position=prenom,representation=let)	duizend	
+Soldaten	NOU-C(number=pl)	soldaat	
+van	ADP(type=pre)	van	
+die	PD(type=d-p,position=free)	die	
+van	ADP(type=pre)	van	
+Bern	NOU-P	Bern	
+,	PC		
+ende	CONJ(type=coor)	en	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+oock	ADV(type=reg)	ook	
+1800	NUM(type=card,position=prenom,representation=dig)	achttienhonderd	
+.	PC		
+
+Soldaeten	NOU-C(number=pl)	soldaat	
+van	ADP(type=pre)	van	
+die	PD(type=d-p,position=free)	die	
+van	ADP(type=pre)	van	
+Surick	NOU-P	Zurich	
+in	ADP(type=pre)	in	
+Basel	NOU-P	Bazel	
+gheleght	VRB(finiteness=pastpart)	leggen	
+werden	VRB(finiteness=inf)	worden	
+.	PC		
+
+Alle	PD(type=indef,position=free)	al	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Crijghs	NOU-C(number=sg)	krijgsvolk	mw_174432
+volck	NOU-C(number=sg)	krijgsvolk	mw_174432
+te	ADP(type=pre)	te	
+voet	NOU-C(number=sg)	voet	
+ende	CONJ(type=coor)	en	
+te	ADP(type=pre)	te	
+Paerde	NOU-C(number=sg)	paard	
+uyt	ADP(type=pre)	uit	
+Bohemen	NOU-P	Bohemen	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+aen't	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	aan+het	
+marcheren	VRB(finiteness=inf)	marcheren	
+,	PC		
+tot	ADP(type=pre)	tot	
+hulpe	NOU-C(number=sg)	hulp	
+van	ADP(type=pre)	van	
+Ertz-Hertogh	NOU-C(number=sg)	aartshertog	
+Leopoldus	NOU-P	Leopoldus	
+.	PC		
+
+'s	NOU-P	's-Gravenhage	mw_994051
+Gravenhage	NOU-P	's-Gravenhage	mw_994051
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+27	NUM(type=ord,position=prenom,representation=dig)	zevenentwintigste	
+October	NOU-C(number=sg)	oktober	
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heere	NOU-C(number=sg)	heer	
+Gioe	NOU-P	Gioe	
+,	PC		
+extraordinaris	AA(degree=pos,position=prenom)	extraordinaris	
+Envoye	NOU-C(number=sg)	envoyé	
+van	ADP(type=pre)	van	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Croone	NOU-C(number=sg)	kroon	
+Denemarcken	NOU-P	Denemarken	
+,	PC		
+voorledene	AA(degree=pos,position=prenom)	voorleden	
+Saterdagh	NOU-C(number=sg)	zaterdagnamiddag	mw_331043
+nae-middagh	NOU-C(number=sg)	zaterdagnamiddag	mw_331043
+een	PD(type=indef,subtype=art,position=prenom)	een	
+keer	NOU-C(number=sg)	keer	
+nae	ADP(type=pre)	na	
+Haerlem	NOU-P	Haarlem	
+zijnde	VRB(finiteness=prespart)	zijn	
+wesen	VRB(finiteness=inf)	wezen	
+doen	VRB(finiteness=inf)	doen	
+,	PC		
+omme	ADP(type=pre)	om	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heer	NOU-C(number=sg)	heer	
+Grave	NOU-C(number=sg)	graaf	
+Randzouw	NOU-P	Randzouw	
+en	CONJ(type=coor)	en	
+sijne	PD(type=poss,position=prenom)	zijn	
+Gemalinne	NOU-C(number=sg)	gemalin	
+(	PC		
+die	PD(type=d-p,position=free)	die	
+noch	ADV(type=reg)	nog	
+niet	ADV(type=reg)	niet	
+hier	ADV(type=reg)	hier	
+geweest	VRB(finiteness=pastpart)	zijn	
+en	ADV(type=reg)	ne	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+)	PC		
+herwaerts	ADV(type=reg)	herwaarts	
+te	ADP(type=pre)	te	
+conduiseeren	VRB(finiteness=inf)	conduiseren	
+;	PC		
+soo	ADV(type=reg)	zo	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+deselve	PD(type=d-p,position=free)	dezelve	
+te	ADV(type=reg)	samen	mw_121765
+samen	ADV(type=reg)	samen	mw_121765
+op	ADP(type=pre)	op	
+Gisteren	ADV(type=reg)	gisteren	
+nae	ADP(type=pre)	na	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Middagh	NOU-C(number=sg)	middag	
+hier	ADV(type=reg)	hier	
+gearriveert	VRB(finiteness=pastpart)	arriveren	
+.	PC		
+
+Gisteren	NOU-C(number=sg)	gisterenavond	mw_557303
+Avondt	NOU-C(number=sg)	gisterenavond	mw_557303
+,	PC		
+ten	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	te+de	
+elf	NUM(type=card,position=prenom,representation=let)	elf	
+uren	NOU-C(number=pl)	uur	
+,	PC		
+is	VRB(finiteness=fin,tense=pres)	zijn	
+in	ADP(type=pre)	in	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Maelje-baen	NOU-P	Maliebaan	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Gevecht	NOU-C(number=sg)	gevecht	
+geweest	VRB(finiteness=pastpart)	zijn	
+,	PC		
+onder	ADP(type=pre)	onder	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+lichten	NOU-C(number=sg)	lichten	
+van	ADP(type=pre)	van	
+Flambeauwen	NOU-C(number=pl)	flambouw	
+,	PC		
+tusschen	ADP(type=pre)	tussen	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+jongen	AA(degree=pos,position=prenom)	jong	
+Graef	NOU-C(number=sg)	graaf	
+van	ADP(type=pre)	van	
+Dona	NOU-P	Dona	
+,	PC		
+Ritmeester	NOU-C(number=sg)	ritmeester	
+,	PC		
+geassisteert	VRB(finiteness=pastpart)	assisteren	
+van	ADP(type=pre)	van	
+sijn	PD(type=poss,position=prenom)	zijn	
+Broeder	NOU-C(number=sg)	broeder	
+,	PC		
+en	CONJ(type=coor)	en	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heer	NOU-C(number=sg)	heer	
+van	NOU-P	Van der Mijl	mw_598950
+der	NOU-P	Van der Mijl	mw_598950
+Mijl	NOU-P	Van der Mijl	mw_598950
+,	PC		
+Capiteyn	NOU-C(number=sg)	kapitein	
+,	PC		
+geassisteert	VRB(finiteness=pastpart)	assisteren	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Grave	NOU-C(number=sg)	graaf	
+van	ADP(type=pre)	van	
+Warfuse	NOU-P	Warfusé	
+,	PC		
+waer	ADV(type=pron)	waarin	mw_511202
+in	ADV(type=pron)	waarin	mw_511202
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heer	NOU-C(number=sg)	heer	
+van	NOU-P	Van der Mijl	mw_807460
+der	NOU-P	Van der Mijl	mw_807460
+Mijl	NOU-P	Van der Mijl	mw_807460
+in	ADP(type=pre)	in	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Borst	NOU-C(number=sg)	borst	
+gestoocken	VRB(finiteness=pastpart)	steken	
+wierdt	VRB(finiteness=fin,tense=past)	worden	
+,	PC		
+en	CONJ(type=coor)	en	
+leght	VRB(finiteness=fin,tense=pres)	liggen	
+in	ADP(type=pre)	in	
+groot	AA(degree=pos,position=prenom)	groot	
+gevaer	NOU-C(number=sg)	gevaar	
+des	PD(type=d-p,subtype=art,position=prenom)	de	
+levens	NOU-C(number=sg)	leven	
+,	PC		
+doch	CONJ(type=coor)	doch	
+d'andere	PD(type=d-p,subtype=art,position=prenom)+NUM(type=ord,position=prenom,representation=let)	de+ander	
+drie	NUM(type=card,position=free,representation=let)	drie	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+haer	PD(type=refl,position=free)	haar	
+voort	ADV(type=reg)	voort	
+geabsenteert	VRB(finiteness=pastpart)	absenteren	
+:	PC		
+van	ADP(type=pre)	van	
+welcke	PD(type=w-p,position=prenom)	welk	
+saecke	NOU-C(number=sg)	zaak	
+desen	PD(type=d-p,subtype=oth,position=prenom)	deze	
+Middagh	NOU-C(number=sg)	middag	
+Informatie	NOU-C(number=sg)	informatie	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+genomen	VRB(finiteness=pastpart)	nemen	
+by	ADP(type=pre)	bij	
+Commissarissen	NOU-C(number=pl)	commissaris	
+van	ADP(type=pre)	van	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Hof	NOU-C(number=sg)	hof	
+.	PC		
+
+Wegens	ADP(type=pre)	wegens	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Verbodt	NOU-C(number=sg)	verbod	
+van	ADP(type=pre)	van	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Fransse	AA(degree=pos,position=prenom)	Frans	
+Wijnen	NOU-C(number=pl)	wijn	
+,	PC		
+&	ADV(type=reg,WF=abbr)		
+c.	ADV(type=reg,WF=abbr)	et cetera	
+verstaet	VRB(finiteness=fin,tense=pres)	verstaan	
+men	PD(type=pers,position=free)	men	
+noch	ADV(type=reg)	nog	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Expressen	NOU-C(number=sg)	expresse	
+nae	ADP(type=pre)	na	
+Groeningen	NOU-P	Groningen	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+gesonden	VRB(finiteness=pastpart)	zenden	
+,	PC		
+werdende	VRB(finiteness=prespart)	worden	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+finael	AA(degree=pos,position=prenom)	finaal	
+Advijs	NOU-C(number=sg)	advies	
+uyt	ADP(type=pre)	uit	
+Zeelant	NOU-P	Zeeland	
+noch	ADV(type=reg)	nog	
+alle	PD(type=indef,subtype=oth,position=prenom)	al	
+uren	NOU-C(number=pl)	uur	
+verwacht	VRB(finiteness=pastpart)	verwachten	
+;	PC		
+doch	CONJ(type=coor)	doch	
+soude	VRB(finiteness=fin,tense=past)	zullen	
+alles	PD(type=indef,position=free)	alles	
+anders	ADV(type=reg)	anders	
+vervaerdight	VRB(finiteness=pastpart)	vervaardigen	
+werden	VRB(finiteness=inf)	worden	
+tot	ADP(type=pre)	tot	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Publicatie	NOU-C(number=sg)	publicatie	
+,	PC		
+die	PD(type=d-p,position=free)	die	
+apparentie	NOU-C(number=sg)	apparentie	
+soude	VRB(finiteness=fin,tense=past)	zullen	
+hebben	VRB(finiteness=inf)	hebben	
+van	ADP(type=pre)	van	
+binnen	ADP(type=pre)	binnen	
+14	NUM(type=card,position=prenom,representation=dig)	veertien	
+Dagen	NOU-C(number=pl)	dag	
+te	ADP(type=pre)	te	
+geschieden	VRB(finiteness=inf)	geschieden	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heer	NOU-C(number=sg)	heer	
+van	ADP(type=pre)	van	
+Haren	NOU-P	Haren	
+,	PC		
+seght	VRB(finiteness=fin,tense=pres)	zeggen	
+men	PD(type=pers,position=free)	men	
+nu	ADV(type=reg)	nu	
+,	PC		
+dat	CONJ(type=sub)	dat	
+uyt	ADP(type=pre)	uit	
+Vrieslandt	NOU-P	Friesland	
+,	PC		
+eer	ADV(type=reg)	eer	
+voort	ADV(type=reg)	voort	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+vertrecken	VRB(finiteness=inf)	vertrekken	
+,	PC		
+noch	ADV(type=reg)	nog	
+eerst	ADV(type=reg)	eerst	
+weer	ADV(type=reg)	weer	
+herwaerts	ADV(type=reg)	herwaarts	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+komen	VRB(finiteness=inf)	komen	
+.	PC		
+
+'s	NOU-P	's-Gravenhage	mw_832855
+Gravenhage	NOU-P	's-Gravenhage	mw_832855
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+12	NUM(type=ord,position=prenom,representation=dig)	twaalfde	
+Maert	NOU-C(number=sg)	maart	
+.	PC		
+
+Soo	CONJ(type=sub)	zo	
+men	PD(type=pers,position=free)	men	
+verstaet	VRB(finiteness=fin,tense=pres)	verstaan	
+,	PC		
+is	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+nae	ADP(type=pre)	na	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+genomene	AA(degree=pos,position=prenom)	genomen	
+Resolutie	NOU-C(number=sg)	resolutie	
+van	ADP(type=pre)	van	
+haer	PD(type=poss,position=prenom)	haar	
+Hoog	NOU-C(number=pl,WF=abbr)	hoogmogende	mw_604364
+Mog	NOU-C(number=pl,WF=abbr)	hoogmogende	mw_604364
+:,	PC		
+tot	ADP(type=pre)	tot	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Wervinge	NOU-C(number=sg)	werving	
+ende	CONJ(type=coor)	en	
+Equipagie	NOU-C(number=sg)	equipage	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+noodige	AA(degree=pos,position=prenom)	nodig	
+ordres	NOU-C(number=pl)	order	
+,	PC		
+soo	ADV(type=reg)	zo	
+wel	ADV(type=reg)	wel	
+tot	ADP(type=pre)	tot	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+eene	NUM(type=card,position=free,representation=let)	een	
+als	CONJ(type=coor)	als	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+andere	NUM(type=ord,position=free,representation=let)	ander	
+,	PC		
+afgegaen	VRB(finiteness=pastpart)	afgaan	
+,	PC		
+en	CONJ(type=coor)	en	
+speciael	AA(degree=pos,position=free)	speciaal	
+over	ADP(type=pre)	over	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Equipagie	NOU-C(number=sg)	equipage	
+aen	ADP(type=pre)	aan	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+respective	AA(degree=pos,position=prenom)	respectief	
+Admiraeliteyten	NOU-C(number=pl)	admiraliteit	
+;	PC		
+en	CONJ(type=coor)	en	
+spreeckt	VRB(finiteness=fin,tense=pres)	spreken	
+men	PD(type=pers,position=free)	men	
+,	PC		
+al	ADV(type=reg)	al	
+of	CONJ(type=sub)	of	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Schepen	NOU-C(number=pl)	schip	
+van	ADP(type=pre)	van	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+extraordinaris	AA(degree=pos,position=prenom)	extraordinaris	
+Equipagie	NOU-C(number=sg)	equipage	
+voor	ADP(type=pre)	voor	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+eersten	NUM(type=ord,position=prenom,representation=let)	eerste	
+Mey	NOU-C(number=sg)	mei	
+souden	VRB(finiteness=fin,tense=past)	zullen	
+moeten	VRB(finiteness=inf)	moeten	
+vaerdig	AA(degree=pos,position=free)	vaardig	
+zijn	VRB(finiteness=inf)	zijn	
+,	PC		
+omme	ADP(type=pre)	om	
+Zee	NOU-C(number=sg)	zee	
+te	ADP(type=pre)	te	
+konnen	VRB(finiteness=inf)	kunnen	
+kiesen	VRB(finiteness=inf)	kiezen	
+:	PC		
+met	ADP(type=pre)	met	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Wervinghe	NOU-C(number=sg)	werving	
+te	ADP(type=pre)	te	
+Lande	NOU-C(number=sg)	land	
+schijnt	VRB(finiteness=fin,tense=pres)	schijnen	
+dat	PD(type=d-p,position=free)	dat	
+niet	ADV(type=reg)	niet	
+minder	ADV(type=reg)	minder	
+gespoeyt	VRB(finiteness=pastpart)	spoeden	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+werden	VRB(finiteness=inf)	worden	
+;	PC		
+hebbende	VRB(finiteness=prespart)	hebben	
+noch	ADV(type=reg)	nog	
+desen	PD(type=d-p,subtype=oth,position=prenom)	deze	
+Ochtent	NOU-C(number=sg)	ochtend	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+groot	AA(degree=pos,position=prenom)	groot	
+getal	NOU-C(number=sg)	getal	
+als	CONJ(type=sub)	als	
+Hooft-Officiers	NOU-C(number=pl)	hoofdofficier	
+van	ADP(type=pre)	van	
+Hollandt	NOU-P	Holland	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Eedt	NOU-C(number=sg)	eed	
+afgeleydt	VRB(finiteness=pastpart)	afleggen	
+voor	ADP(type=pre)	voor	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Raedt	NOU-P	Raad van State	mw_796983
+van	NOU-P	Raad van State	mw_796983
+Staete	NOU-P	Raad van State	mw_796983
+.	PC		
+
+Van	ADP(type=pre)	van	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Munsterse	AA(degree=pos,position=prenom)	Münsters	
+saecke	NOU-C(number=sg)	zaak	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+men	PD(type=pers,position=free)	men	
+niet	ADV(type=reg)	niet	
+van	ADP(type=pre)	van	
+merite	NOU-C(number=sg)	merite	
+,	PC		
+als	CONJ(type=sub)	als	
+dat	CONJ(type=sub)	dat	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+afdoeninge	NOU-C(number=sg)	afdoening	
+van	ADP(type=pre)	van	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Preliminaria	NOU-C(number=pl)	preliminaria	
+daer	ADV(type=reg)	daar	
+noch	ADV(type=reg)	nog	
+niet	ADV(type=reg)	niet	
+wel	ADV(type=reg)	wel	
+voort	VRB(finiteness=fin,tense=pres)	voortwillen	mw_81578
+en	ADV(type=reg)	ne	
+wil	VRB(finiteness=fin,tense=pres)	voortwillen	mw_81578
+:	PC		
+Ondertusschen	ADV(type=reg)	ondertussen	
+souden	VRB(finiteness=fin,tense=past)	zullen	
+hier	ADV(type=reg)	hier	
+en	CONJ(type=coor)	en	
+ginder	ADV(type=reg)	ginder	
+al	ADV(type=reg)	al	
+eenighe	PD(type=indef,subtype=oth,position=prenom)	enig	
+Troupen	NOU-C(number=pl)	troep	
+verloopen	VRB(finiteness=inf)	verlopen	
+,	PC		
+die	PD(type=d-p,position=free)	die	
+elderwaerts	ADV(type=reg)	elderwaarts	
+dienst	NOU-C(number=sg)	dienst	
+souden	VRB(finiteness=fin,tense=past)	zullen	
+soecken	VRB(finiteness=inf)	zoeken	
+.	PC		
+
+Op	ADP(type=pre)	op	
+Morgen	ADV(type=reg)	morgen	
+vermeynt	VRB(finiteness=fin,tense=pres)	vermenen	
+men	PD(type=pers,position=free)	men	
+,	PC		
+dat	CONJ(type=sub)	dat	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Grave	NOU-C(number=sg)	graaf	
+d'Ossery	RES(type=for)+NOU-P	de+Ossery	
+over	ADP(type=pre)	over	
+Sluys	NOU-P	Sluis	
+te	VRB(finiteness=inf)	terugkeren	mw_890069
+rug	VRB(finiteness=inf)	terugkeren	mw_890069
+na	ADP(type=pre)	na	
+Engelandt	NOU-P	Engeland	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+keeren	VRB(finiteness=inf)	terugkeren	mw_890069
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Envoye	NOU-C(number=sg)	envoyé	
+van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Ceurvorst	NOU-C(number=sg)	keurvorst	
+van	ADP(type=pre)	van	
+Ceulen	NOU-P	Keulen	
+,	PC		
+seght	VRB(finiteness=fin,tense=pres)	zeggen	
+men	PD(type=pers,position=free)	men	
+,	PC		
+dat	CONJ(type=sub)	dat	
+eene	PD(type=indef,subtype=art,position=prenom)	een	
+Memorie	NOU-C(number=sg)	memorie	
+alhier	ADV(type=reg)	alhier	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+overgegeven	VRB(finiteness=pastpart)	overgeven	
+.	PC		
+
+Van	ADP(type=pre)	van	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Heer	NOU-C(number=sg)	heer	
+Beverningh	NOU-P	Beverningh	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+Tydinge	NOU-C(number=sg)	tijding	
+,	PC		
+dat	CONJ(type=sub)	dat	
+wel	ADV(type=reg)	wel	
+in	ADP(type=pre)	in	
+t'stille	PD(type=d-p,subtype=art,position=prenom)+NOU-C(number=sg)	het+stille	
+binnen	ADP(type=pre)	binnen	
+Madrid	NOU-P	Madrid	
+was	VRB(finiteness=fin,tense=past)	zijn	
+gekomen	VRB(finiteness=pastpart)	komen	
+,	PC		
+maer	CONJ(type=coor)	maar	
+noch	ADV(type=reg)	nog	
+geene	PD(type=indef,subtype=oth,position=prenom)	geen	
+Audientie	NOU-C(number=sg)	audiëntie	
+hadde	VRB(finiteness=fin,tense=past)	hebben	
+gehad	VRB(finiteness=pastpart)	hebben	
+:	PC		
+doch	CONJ(type=coor)	doch	
+stonde	VRB(finiteness=fin,tense=past)	staan	
+in	ADP(type=pre)	in	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+korte	NOU-C(number=sg)	kort	
+te	ADP(type=pre)	te	
+volgen	VRB(finiteness=inf)	volgen	
+,	PC		
+hoewel	CONJ(type=sub)	hoewel	
+sijn	PD(type=poss,position=prenom)	zijn	
+Excellentie	NOU-C(number=sg)	excellentie	
+noch	ADV(type=reg)	nog	
+vry	AA(degree=pos,position=free)	vrij	
+zwack	AA(degree=pos,position=free)	zwak	
+was	VRB(finiteness=fin,tense=past)	zijn	
+.	PC		
+
+Londen	NOU-P	Londen	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+10	NUM(type=ord,position=prenom,representation=dig)	tiende	
+Ianuary	NOU-C(number=sg)	januarius	
+.	PC		
+
+Het	PD(type=d-p,subtype=art,position=prenom)	het	
+Parlament	NOU-C(number=sg)	parlement	
+gaet	VRB(finiteness=fin,tense=pres)	voortgaan	mw_915185
+voort	VRB(finiteness=fin,tense=pres)	voortgaan	mw_915185
+tegens	ADP(type=pre)	tegens	
+die	PD(type=d-p,position=free)	die	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+publijcke	AA(degree=pos,position=prenom)	publiek	
+Penningen	NOU-C(number=pl)	penning	
+tot	ADP(type=pre)	tot	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Oorlogh	NOU-C(number=sg)	oorlog	
+ghemanieert	VRB(finiteness=pastpart)	maniëren	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+.	PC		
+
+Op	ADP(type=pre)	op	
+Saterdagh	NOU-C(number=sg)	zaterdag	
+laetst	AA(degree=sup,position=free)	laat	
+begeerde	VRB(finiteness=fin,tense=past)	begeren	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Lager	NOU-P	Lagerhuis	mw_346742
+Huys	NOU-P	Lagerhuis	mw_346742
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Conferentie	NOU-C(number=sg)	conferentie	
+met	ADP(type=pre)	met	
+die	PD(type=d-p,position=free)	die	
+van	ADP(type=pre)	van	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Hooger-huys	NOU-P	Hogerhuis	
+,	PC		
+waer	ADV(type=pron)	waarin	mw_977174
+in	ADV(type=pron)	waarin	mw_977174
+het	PD(type=pers,position=free)	het	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Articulen	NOU-C(number=pl)	artikel	
+tegens	ADP(type=pre)	tegens	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Lord	NOU-C(number=sg)	lord	
+Mordant	NOU-P	Mordaunt	
+overleverden	VRB(finiteness=fin,tense=past)	overleveren	
+.	PC		
+
+Men	PD(type=pers,position=free)	men	
+bespeurt	VRB(finiteness=fin,tense=pres)	bespeuren	
+onder	ADP(type=pre)	onder	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Cooplieden	NOU-C(number=pl)	kooplieden	
+een	NUM(type=card,position=free,representation=let)	een	
+over	ADP(type=pre)	over	
+groote	AA(degree=pos,position=prenom)	groot	
+vreughde	NOU-C(number=sg)	vreugde	
+,	PC		
+dat	CONJ(type=sub)	dat	
+na	ADP(type=pre)	na	
+soo	ADV(type=reg)	zolang	mw_818926
+lang	ADV(type=reg)	zolang	mw_818926
+wachten	NOU-C(number=sg)	wachten	
+,	PC		
+endelingh	ADV(type=reg)	eindeling	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Coopvaerdy-schepen	NOU-C(number=pl)	koopvaardijschip	
+soo	ADV(type=reg)	zo	
+gheluckigh	AA(degree=pos,position=free)	gelukkig	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+t'Huys	ADV(type=reg)	thuis	
+gekomen	VRB(finiteness=pastpart)	komen	
+.	PC		
+
+Men	PD(type=pers,position=free)	men	
+meynt	VRB(finiteness=fin,tense=pres)	menen	
+dat	CONJ(type=sub)	dat	
+op	ADP(type=pre)	op	
+heden	ADV(type=reg)	heden	
+alle	PD(type=indef,position=free)	al	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Schepen	NOU-C(number=pl)	schip	
+van	ADP(type=pre)	van	
+Gottenburgh	NOU-P	Gotenburg	
+binnen	ADV(type=reg)	binnen	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+waer	ADV(type=pron)	waarvan	mw_542420
+van	ADV(type=pron)	waarvan	mw_542420
+4	NUM(type=card,position=prenom,representation=dig)	vier	
+tot	ADP(type=pre)	tot	
+Humber	NOU-P	Humber	
+,	PC		
+geladen	VRB(finiteness=pastpart)	laden	
+met	ADP(type=pre)	met	
+Kennip	NOU-C(number=sg)	kennep	
+,	PC		
+twee	NUM(type=card,position=prenom,representation=let)	twee	
+voor	ADP(type=pre)	voor	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Coningh	NOU-C(number=sg)	koning	
+,	PC		
+en	CONJ(type=coor)	en	
+twee	NUM(type=card,position=prenom,representation=let)	twee	
+voor	ADP(type=pre)	voor	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Cooplieden	NOU-C(number=pl)	kooplieden	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+gearriveert	VRB(finiteness=pastpart)	arriveren	
+.	PC		
+
+Oock	ADV(type=reg)	ook	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+onse	PD(type=poss,position=prenom)	ons	
+groote	AA(degree=pos,position=prenom)	groot	
+Vloot	NOU-C(number=sg)	vloot	
+Kool-schepen	NOU-C(number=pl)	koolschip	
+van	ADP(type=pre)	van	
+Nieuw-Casteel	NOU-P	Newcastle	
+,	PC		
+sterck	AA(degree=pos,position=free)	sterk	
+300	NUM(type=card,position=prenom,representation=dig)	driehonderd	
+Schepen	NOU-C(number=pl)	schip	
+,	PC		
+op	ADP(type=pre)	op	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Revier	NOU-C(number=sg)	rivier	
+gekomen	VRB(finiteness=pastpart)	komen	
+.	PC		
+
+Vande	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	van+de	
+zijde	NOU-C(number=sg)	zijde	
+van	ADP(type=pre)	van	
+Kent	NOU-P	Kent	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+geobserveert	VRB(finiteness=pastpart)	observeren	
+,	PC		
+dat	CONJ(type=sub)	dat	
+op	ADP(type=pre)	op	
+Vrydagh	NOU-C(number=sg)	vrijdag	
+en	CONJ(type=coor)	en	
+Saterdagh	NOU-C(number=sg)	zaterdag	
+zyn	VRB(finiteness=fin,tense=pres)	zijn	
+gepasseert	VRB(finiteness=pastpart)	passeren	
+achter	ADP(type=pre)	achter	
+Goodwins	NOU-P	Goodwin Sands	mw_841910
+Sandt	NOU-P	Goodwin Sands	mw_841910
+,	PC		
+omtrent	ADV(type=reg)	omtrent	
+2	NUM(type=card,position=prenom,representation=dig)+NUM(type=card,position=prenom,representation=dig)	tweehonderd+driehonderd	mw_927616
+a	ADP(type=pre)	à	
+300	NUM(type=card,position=prenom,representation=dig)+NUM(type=card,position=prenom,representation=dig)	tweehonderd+driehonderd	mw_927616
+Schepen	NOU-C(number=pl)	schip	
+,	PC		
+dat	CONJ(type=sub)	dat	
+wy	PD(type=pers,position=free)	wij	
+achten	VRB(finiteness=fin,tense=pres)	achten	
+dat	CONJ(type=sub)	dat	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Bordeausse	AA(degree=pos,position=prenom)	Bordeauxs	
+Vloot	NOU-C(number=sg)	vloot	
+,	PC		
+bestaende	VRB(finiteness=prespart)	bestaan	
+uyt	ADP(type=pre)	uit	
+Hollanders	NOU-C(number=pl)	Hollander	
+,	PC		
+Sweden	NOU-C(number=pl)	Zweed	
+en	CONJ(type=coor)	en	
+Deenen	NOU-C(number=pl)	Deen	
+,	PC		
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+geweest	VRB(finiteness=pastpart)	zijn	
+zijn	VRB(finiteness=inf)	zijn	
+,	PC		
+werdende	VRB(finiteness=prespart)	worden	
+geconvoyeert	VRB(finiteness=pastpart)	konvooieren	
+van	ADP(type=pre)	van	
+4	NUM(type=card,position=prenom,representation=dig)	vier	
+Hollandtse	AA(degree=pos,position=prenom)	Hollands	
+Oorlogh-schepen	NOU-C(number=pl)	oorlogsschip	
+,	PC		
+en	CONJ(type=coor)	en	
+5	NUM(type=card,position=prenom,representation=dig)	vijf	
+a	ADP(type=pre)	à	
+6	NUM(type=card,position=prenom,representation=dig)	zes	
+Gapers	NOU-C(number=pl)	gaper	
+.	PC		
+
+Wy	PD(type=pers,position=free)	wij	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+Tydinge	NOU-C(number=sg)	tijding	
+,	PC		
+dat	CONJ(type=sub)	dat	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Coningh	NOU-C(number=sg)	koning	
+van	ADP(type=pre)	van	
+Vranckrijck	NOU-P	Frankrijk	
+sijne	PD(type=poss,position=prenom)	zijn	
+meeste	AA(degree=sup,position=prenom)	meest	
+macht	NOU-C(number=sg)	macht	
+van	ADP(type=pre)	van	
+Schepen	NOU-C(number=pl)	schip	
+te	VRB(finiteness=pastpart)	samenbrengen	mw_591294
+samen	VRB(finiteness=pastpart)	samenbrengen	mw_591294
+ghebracht	VRB(finiteness=pastpart)	samenbrengen	mw_591294
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+tot	ADP(type=pre)	tot	
+Brest	NOU-P	Brest	
+,	PC		
+en	CONJ(type=coor)	en	
+dat	CONJ(type=sub)	dat	
+veel	PD(type=indef,subtype=oth,position=prenom)	veel	
+Landt-Militie	NOU-C(number=sg)	landmilitie	
+derwaerts	ADV(type=pron)	derwaarts	
+marcheerde	VRB(finiteness=fin,tense=past)	marcheren	
+,	PC		
+soo	CONJ(type=sub)	zo	
+men	PD(type=pers,position=free)	men	
+presumeert	VRB(finiteness=fin,tense=pres)	presumeren	
+,	PC		
+op	ADP(type=pre)	op	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+extraordinaris	AA(degree=pos,position=prenom)	extraordinaris	
+desseyn	NOU-C(number=sg)	dessein	
+,	PC		
+doch	CONJ(type=coor)	doch	
+wy	PD(type=pers,position=free)	wij	
+daer	ADV(type=pron)	daarvan	mw_711748
+van	ADV(type=pron)	daarvan	mw_711748
+gewaerschouwt	VRB(finiteness=pastpart)	waarschuwen	
+zijnde	VRB(finiteness=prespart)	zijn	
+,	PC		
+houden	VRB(finiteness=fin,tense=pres)	houden	
+alom	ADV(type=reg)	alom	
+goede	AA(degree=pos,position=prenom)	goed	
+wacht	NOU-C(number=sg)	wacht	
+.	PC		
+
+Wt	ADP(type=pre)	uit	
+Londen	NOU-P	Londen	
+,	PC		
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+22	NUM(type=ord,position=free,representation=dig)	tweeëntwintigste	
+dito	NOU-C(number=sg)	dito	
+.	PC		
+
+Vande	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	van+de	
+nederlaghe	NOU-C(number=sg)	nederlaag	
+des	PD(type=d-p,subtype=art,position=prenom)	de	
+Conincks	NOU-C(number=sg)	koning	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+nu	ADV(type=reg)	nu	
+alle	PD(type=indef,subtype=oth,position=prenom)	al	
+sekerheyt	NOU-C(number=sg)	zekerheid	
+,	PC		
+sijn	PD(type=poss,position=prenom)	zijn	
+gansche	AA(degree=pos,position=prenom)	gans	
+Armee	NOU-C(number=sg)	armee	
+zijnde	VRB(finiteness=prespart)	zijn	
+nu	ADV(type=reg)	nu	
+'t	ADP(type=pre,WF=mis)	te	
+eenemael	NUM(type=card,position=prenom,representation=let)+NOU-C(number=sg)	een+maal	
+verstroyt	VRB(finiteness=pastpart)	verstrooien	
+ende	CONJ(type=coor)	en	
+te	ADP(type=pre)	te	
+niet	ADV(type=reg)	niet	
+ghemaeckt	VRB(finiteness=pastpart)	maken	
+:	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+ghevangene	NOU-C(number=pl)	gevangene	
+worden	VRB(finiteness=fin,tense=pres)	worden	
+op	ADP(type=pre)	op	
+4000	NUM(type=card,position=free,representation=dig)	vierduizend	
+geschat	VRB(finiteness=pastpart)	schatten	
+,	PC		
+die	PD(type=d-p,position=free)	die	
+nu	ADV(type=reg)	nu	
+alhier	ADV(type=reg)	alhier	
+binnen	ADP(type=pre)	binnen	
+Londen	NOU-P	Londen	
+ghebracht	VRB(finiteness=pastpart)	brengen	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+onder	ADP(type=pre)	onder	
+welcke	PD(type=w-p,position=free)	welk	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Graef	NOU-C(number=sg)	graaf	
+van	ADP(type=pre)	van	
+Hamelton	NOU-P	Hamilton	
+ende	CONJ(type=coor)	en	
+vele	PD(type=indef,subtype=oth,position=prenom)	veel	
+hooghe	NOU-C(number=pl,WF=trunc)+NOU-C(number=pl)	hogestandspersoon+lagestandspersoon	mw_659176
+ende	CONJ(type=coor)	en	
+laghe	NOU-C(number=pl,WF=trunc)+NOU-C(number=pl)	hogestandspersoon+lagestandspersoon	mw_659176
+Standts-persoonen	NOU-C(number=pl,WF=trunc)+NOU-C(number=pl)	hogestandspersoon+lagestandspersoon	mw_659176
+,	PC		
+soo	ADV(type=reg)	zo	
+Engelsche	AA(degree=pos,position=prenom)	Engels	
+als	CONJ(type=coor)	als	
+Schotten	NOU-C(number=pl)	Schot	
+:	PC		
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Coninck	NOU-C(number=sg)	koning	
+selfs	PD(type=d-p,position=postnom)	zelf	
+wort	VRB(finiteness=fin,tense=pres)	worden	
+gemist	VRB(finiteness=pastpart)	missen	
+,	PC		
+ende	CONJ(type=coor)	en	
+of	CONJ(type=sub)	of	
+hy	PD(type=pers,position=free)	hij	
+doodt	AA(degree=pos,position=free)	dood	
+of	CONJ(type=coor)	of	
+levendigh	AA(degree=pos,position=free)	levendig	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+weetmen	VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)	weten+men	
+niet	ADV(type=reg)	niet	
+.	PC		
+
+Het	PD(type=d-p,subtype=art,position=prenom)	het	
+Parlement	NOU-C(number=sg)	parlement	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+door	ADP(type=pre)	door	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+streng	AA(degree=pos,position=prenom)	streng	
+Placcaet	NOU-C(number=sg)	plakkaat	
+voor	ADP(type=pre)	voor	
+Verrader	NOU-C(number=sg)	verrader	
+verklaert	VRB(finiteness=pastpart)	verklaren	
+wie	PD(type=w-p,position=free)	wie	
+des	PD(type=d-p,subtype=art,position=prenom)	de	
+Conincks	NOU-C(number=sg)	koning	
+persoon	NOU-C(number=sg)	persoon	
+verberghen	VRB(finiteness=inf)	verbergen	
+of	CONJ(type=coor)	of	
+verswijghen	VRB(finiteness=inf)	verzwijgen	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+,	PC		
+ende	CONJ(type=coor)	en	
+tot	ADP(type=pre)	tot	
+recompencie	NOU-C(number=sg)	recompensie	
+1000	NUM(type=card,position=prenom,representation=dig)	duizend	
+pont	NOU-C(number=sg)	pont	
+Sterlingh	NOU-C(number=sg)	sterling	
+belooft	VRB(finiteness=fin,tense=pres)	beloven	
+,	PC		
+wie	PD(type=w-p,position=free)	wie	
+hem	PD(type=pers,position=free)	hij	
+aen	ADP(type=pre)	aan	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+dagh	NOU-C(number=sg)	dag	
+brenghen	VRB(finiteness=inf)	brengen	
+ende	CONJ(type=coor)	en	
+overleveren	VRB(finiteness=inf)	overleveren	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+:	PC		
+In	ADP(type=pre)	in	
+somma	NOU-C(number=sg)	somma	
+het	PD(type=pers,position=free)	het	
+gaet	VRB(finiteness=fin,tense=pres)	gaan	
+hier	ADV(type=reg)	hier	
+alles	PD(type=indef,position=free)	alles	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Parlement	NOU-C(number=sg)	parlement	
+nae	ADP(type=pre)	na	
+wensch	NOU-C(number=sg)	wens	
+,	PC		
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Generael	NOU-C(number=sg)	generaal	
+Cromwel	NOU-P	Cromwell	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+alhier	ADV(type=reg)	alhier	
+in	ADP(type=pre)	in	
+persoon	NOU-C(number=sg)	persoon	
+gekomen	VRB(finiteness=pastpart)	komen	
+,	PC		
+niet	ADV(type=reg)	niet	
+te	ADP(type=pre)	te	
+paert	NOU-C(number=sg)	paard	
+,	PC		
+maer	CONJ(type=coor)	maar	
+in	ADP(type=pre)	in	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+Koetse	NOU-C(number=sg)	koets	
+rijdende	VRB(finiteness=prespart)	rijden	
+,	PC		
+niet	ADV(type=reg)	niet	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+ghevangens	NOU-C(number=pl)	gevangene	
+achter	ADP(type=pre)	achter	
+sich	PD(type=refl,position=free)	zich	
+slepende	VRB(finiteness=prespart)	slepen	
+,	PC		
+gelijck	CONJ(type=sub)	gelijk	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Romeynsche	AA(degree=pos,position=prenom)	Romeins	
+Oversten	NOU-C(number=pl)	overste	
+plachten	VRB(finiteness=fin,tense=past)	plegen	
+,	PC		
+als	CONJ(type=sub)	als	
+sy	PD(type=pers,position=free)	zij	
+hyn	PD(type=poss,position=prenom,WF=mis)	hun	
+Intree	NOU-C(number=sg)	intrede	
+deden	VRB(finiteness=fin,tense=past)	doen	
+binnen	ADP(type=pre)	binnen	
+Roomen	NOU-P	Rome	
+,	PC		
+maer	CONJ(type=coor)	maar	
+dede	VRB(finiteness=fin,tense=past)	doen	
+sijne	PD(type=poss,position=prenom)	zijn	
+gevangene	NOU-C(number=pl)	gevangene	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+andere	PD(type=indef,subtype=oth,position=prenom)	ander	
+wegh	NOU-C(number=sg)	weg	
+om	VRB(finiteness=inf)	omleiden	mw_107852
+leyden	VRB(finiteness=inf)	omleiden	mw_107852
+,	NOU-C(number=pl)		
+ende	CONJ(type=coor)	en	
+hy	PD(type=pers,position=free)	hij	
+selfs	PD(type=d-p,position=free)	zelf	
+quam	VRB(finiteness=fin,tense=past)	komen	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+ander	PD(type=indef,subtype=oth,position=prenom)	ander	
+Poort	NOU-C(number=sg)	poort	
+in	ADP(type=pre)	in	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Oversten	NOU-C(number=sg)	overste	
+Massey	NOU-P	Massey	
+was	VRB(finiteness=fin,tense=past)	zijn	
+'t	PD(type=pers,position=free)	het	
+met	ADP(type=pre)	met	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+vlucht	NOU-C(number=sg)	vlucht	
+ontkomen	VRB(finiteness=pastpart)	ontkomen	
+,	PC		
+maer	CONJ(type=coor)	maar	
+uyt	ADP(type=pre)	uit	
+noodt	NOU-C(number=sg)	nood	
+sijnder	PD(type=poss,position=prenom)	zijn	
+wonden	NOU-C(number=pl)	wond	
+ende	CONJ(type=coor)	en	
+smertelijcke	AA(degree=pos,position=prenom)	smartelijk	
+pijn	NOU-C(number=sg)	pijn	
+,	PC		
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+hy	PD(type=pers,position=free)	hij	
+sich	PD(type=refl,position=free)	zich	
+in	ADP(type=pre)	in	
+Lancasire	NOU-P	Lancashire	
+aen	ADP(type=pre)	aan	
+seker	PD(type=indef,subtype=oth,position=prenom)	zeker	
+Gouverneur	NOU-C(number=sg)	gouverneur	
+gevangen	AA(degree=pos,position=free)	gevangen	
+gegeven	VRB(finiteness=pastpart)	geven	
+:	PC		
+wat	PD(type=w-p,position=prenom)	wat	
+genade	NOU-C(number=sg)	genade	
+ende	CONJ(type=coor)	en	
+vertroostinghe	NOU-C(number=sg)	vertroosting	
+hy	PD(type=pers,position=free)	hij	
+wedervaren	VRB(finiteness=inf)	wedervaren	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+,	PC		
+leert	VRB(finiteness=fin,tense=pres)	leren	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+tijdt	NOU-C(number=sg)	tijd	
+.	PC		
+
+Wt	ADP(type=pre)	uit	
+Antwerpen	NOU-P	Antwerpen	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+5	NUM(type=ord,position=free,representation=dig)	vijfde	
+dito	NOU-C(number=sg)	dito	
+.	PC		
+
+Wy	PD(type=pers,position=free)	wij	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+nu	ADV(type=reg)	nu	
+beter	AA(degree=comp,position=free)	beter	
+ghemoet	NOU-C(number=sg)	gemoed	
+als	CONJ(type=sub)	als	
+voor	ADP(type=pre)	voor	
+vijf	NUM(type=card,position=prenom,representation=let)	vijf	
+dagen	NOU-C(number=pl)	dag	
+,	PC		
+alsoo	CONJ(type=sub)	alzo	
+men	PD(type=pers,position=free)	men	
+wil	VRB(finiteness=fin,tense=pres)	willen	
+seggen	VRB(finiteness=inf)	zeggen	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Franschen	NOU-C(number=pl)	Frans	
+voor	ADP(type=pre)	voor	
+Bourborgh	NOU-P	Bourbourg	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+afghetrocken	VRB(finiteness=pastpart)	aftrekken	
+,	PC		
+dat	CONJ(type=sub)	dat	
+anderen	PD(type=indef,position=free)	ander	
+contrarieren	VRB(finiteness=fin,tense=pres)	contrariëren	
+;	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Leden	NOU-C(number=pl)	lid	
+van	ADP(type=pre)	van	
+Vlaenderen	NOU-P	Vlaanderen	
+doen	VRB(finiteness=fin,tense=pres)	doen	
+alle	PD(type=indef,subtype=oth,position=prenom)	al	
+debvoyr	NOU-C(number=sg)	devoor	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+machtigh	AA(degree=pos,position=prenom)	machtig	
+Legher	NOU-C(number=sg)	leger	
+tot	ADP(type=pre)	tot	
+Bergen	NOU-P	Sint-Winoksbergen	mw_368477
+Wijnocx	NOU-P	Sint-Winoksbergen	mw_368477
+by	ADP(type=pre)	bij	
+malkanderen	PD(type=recip,position=free)	malkander	
+te	ADP(type=pre)	te	
+brenghen	VRB(finiteness=inf)	brengen	
+onder	ADP(type=pre)	onder	
+Don	NOU-C(number=sg)	don	
+Francisco	NOU-P	Francisco	
+de	RES(type=for)	de	
+Melo	NOU-P	Melo	
+,	PC		
+om	ADP(type=pre)	om	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Vyandt	NOU-C(number=sg)	vijand	
+aen	VRB(finiteness=inf)	aantasten	mw_463709
+te	ADP(type=pre)	te	
+tasten	VRB(finiteness=inf)	aantasten	mw_463709
+soo	CONJ(type=sub)	zo	
+het	PD(type=pers,position=free)	het	
+moghelijck	AA(degree=pos,position=free)	mogelijk	
+zy	VRB(finiteness=fin,tense=pres)	zijn	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Hertogh	NOU-C(number=sg)	hertog	
+Piccolomini	NOU-P	Piccolomini	
+(	PC		
+weten	VRB(finiteness=fin,tense=pres)	weten	
+wat	PD(type=w-p,position=free)	wat	
+seggen	VRB(finiteness=inf)	zeggen	
+)	PC		
+is	VRB(finiteness=fin,tense=pres)	zijn	
+noch	ADV(type=reg)	nog	
+niet	ADV(type=reg)	niet	
+by't	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	bij+het	
+Krijgs	NOU-C(number=sg)	krijgsvolk	mw_651155
+-	PC		
+Volck	NOU-C(number=sg)	krijgsvolk	mw_651155
+tot	ADP(type=pre)	tot	
+Berghen	NOU-P	Sint-Winoksbergen	mw_521607
+Wijnocx	NOU-P	Sint-Winoksbergen	mw_521607
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Graef	NOU-C(number=sg)	graaf	
+van	ADP(type=pre)	van	
+Isenburgh	NOU-P	Isenburg	
+blijft	VRB(finiteness=fin,tense=pres)	blijven	
+aende	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	aan+de	
+Deemer	NOU-P	Demer	
+,	PC		
+passende	VRB(finiteness=prespart)	passen	
+op	ADP(type=pre)	op	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Fransche	AA(degree=pos,position=prenom)	Frans	
+Troupen	NOU-C(number=pl)	troep	
+,	PC		
+die	PD(type=d-p,position=free)	die	
+by	ADP(type=pre)	bij	
+Maestricht	NOU-P	Maastricht	
+legghen	VRB(finiteness=fin,tense=pres)	liggen	
+;	PC		
+anders	ADV(type=reg)	anders	
+soude	VRB(finiteness=fin,tense=past)	zullen	
+hy	PD(type=pers,position=free)	hij	
+naer	ADP(type=pre)	naar	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Landt	NOU-C(number=sg)	land	
+van	ADP(type=pre)	van	
+Waes	NOU-P	Waas	
+en	CONJ(type=coor)	en	
+Vlaenderen	NOU-P	Vlaanderen	
+hier	ADV(type=reg)	hier	
+door	ADP(type=pre)	door	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+stadt	NOU-C(number=sg)	stad	
+hebben	VRB(finiteness=inf)	hebben	
+ghegaen	VRB(finiteness=pastpart)	gaan	
+,	PC		
+daer	ADV(type=reg)	daar	
+wy	PD(type=pers,position=free)	wij	
+vresen	VRB(finiteness=fin,tense=pres)	vrezen	
+dat	CONJ(type=sub)	dat	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Hollanders	NOU-C(number=pl)	Hollander	
+ons	PD(type=pers,position=free)	wij	
+weer	ADV(type=reg)	weer	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+komen	VRB(finiteness=inf)	komen	
+besoecken	VRB(finiteness=inf)	bezoeken	
+:	PC		
+Soo	CONJ(type=sub)	zoveel	mw_105547
+veel	CONJ(type=sub)	zoveel	mw_105547
+men	PD(type=pers,position=free)	men	
+hier	ADV(type=reg)	hier	
+secreetlijcks	ADV(type=reg)	secretelijks	
+kan	VRB(finiteness=fin,tense=pres)	kunnen	
+vernemen	VRB(finiteness=inf)	vernemen	
+,	PC		
+konnen	VRB(finiteness=fin,tense=pres)	kunnen	
+d	PD(type=d-p,subtype=art,position=prenom)	de	
+'	PC		
+onse	NOU-C(number=pl)	onze	
+niet	ADV(type=reg)	niet	
+Volcks	NOU-C(number=sg)	volk	
+ghenoegh	ADV(type=reg)	genoeg	
+op	VRB(finiteness=inf)	opbrengen	mw_498984
+brengen	VRB(finiteness=inf)	opbrengen	mw_498984
+om	ADP(type=pre)	om	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Francoysen	NOU-C(number=pl)	Fransoos	
+in	ADP(type=pre)	in	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Veldt	NOU-C(number=sg)	veld	
+te	ADP(type=pre)	te	
+bejeghenen	VRB(finiteness=inf)	bejegenen	
+oft	CONJ(type=coor)	of	
+resisteren	VRB(finiteness=inf)	resisteren	
+,	PC		
+dan	ADV(type=reg)	dan	
+seecker	AA(degree=pos,position=free)	zeker	
+ist	VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)	zijn+het	
+,	PC		
+daer	CONJ(type=sub)	daar	
+dese	PD(type=d-p,subtype=oth,position=prenom)	deze	
+Landen	NOU-C(number=pl)	land	
+10	NUM(type=card,position=prenom,representation=dig,WF=trunc)+NUM(type=card,position=prenom,representation=dig)	tienduizend+twaalfduizend	mw_391562
+a	ADP(type=pre)	à	
+12000	NUM(type=card,position=prenom,representation=dig,WF=trunc)+NUM(type=card,position=prenom,representation=dig)	tienduizend+twaalfduizend	mw_391562
+peerden	NOU-C(number=pl)	paard	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+gehadt	VRB(finiteness=pastpart)	hebben	
+,	PC		
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+die	PD(type=d-p,position=free)	die	
+door	ADP(type=pre)	door	
+quade	AA(degree=pos,position=prenom)	kwaad	
+betalinghe	NOU-C(number=pl)	betaling	
+soo	ADV(type=reg)	zo	
+seer	AA(degree=pos,position=free)	zeer	
+versmolten	VRB(finiteness=fin,tense=past)	versmelten	
+,	PC		
+dat	CONJ(type=sub)	dat	
+men	PD(type=pers,position=free)	men	
+qualijck	AA(degree=pos,position=free)	kwalijk	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+helft	NOU-C(number=sg)	helft	
+van	ADP(type=pre)	van	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+boven-verhaelde	ADV(type=reg)+AA(degree=pos,position=prenom)	boven+verhaald	
+ghetal	NOU-C(number=sg)	getal	
+in	ADP(type=pre)	in	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+Veldt	NOU-C(number=sg)	veld	
+kan	VRB(finiteness=fin,tense=pres)	kunnen	
+brenghen	VRB(finiteness=inf)	brengen	
+,	PC		
+alsoo	CONJ(type=sub)	alzo	
+dat	PD(type=d-p,position=free)	dat	
+dese	PD(type=d-p,subtype=oth,position=prenom)	deze	
+Lants-saecken	NOU-C(number=sg)	landszaak	
+by	ADP(type=pre)	bij	
+dit	PD(type=d-p,position=free)	dit	
+conjunctuer	NOU-C(number=sg)	conjunctuur	
+,	PC		
+seer	AA(degree=pos,position=free)	zeer	
+dangereus	ADV(type=reg)	dangereus	
+staen	VRB(finiteness=fin,tense=pres)	staan	
+,	PC		
+hoewel	CONJ(type=sub)	hoewel	
+men	PD(type=pers,position=free)	men	
+malkanderen	PD(type=recip,position=free)	malkander	
+'t	PD(type=d-p,subtype=art,position=prenom)	het	
+hart	NOU-C(number=sg)	hart	
+groot	AA(degree=pos,position=free)	groot	
+maeckt	VRB(finiteness=fin,tense=pres)	maken	
+,	PC		
+daer	ADV(type=pron)	daarvan	mw_943022
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+tijt	NOU-C(number=sg)	tijd	
+,	PC		
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+sekerheyt	NOU-C(number=sg)	zekerheid	
+van	ADV(type=pron)	daarvan	mw_943022
+baert	VRB(finiteness=fin,tense=pres)	baren	
+.	PC		
+
+VVt	ADP(type=pre)	uit	
+VVeenen	NOU-P	Wenen	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+10	NUM(type=ord,position=prenom,representation=dig)	tiende	
+.	PC		
+
+Iunij.	NOU-C(number=sg)	junius	
+1621	NUM(type=card,position=postnom,representation=dig)	1621	
+.	PC		
+
+Of	CONJ(type=coor)	ofwel	mw_525601
+wel	CONJ(type=coor)	ofwel	mw_525601
+Stensel	NOU-P	Szaniszló	
+Thurso	NOU-P	Thurzó	
+met	ADP(type=pre)	met	
+Bucquoy	NOU-P	Bucquoy	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+ghetracteert	VRB(finiteness=pastpart)	trakteren	
+,	PC		
+soo	ADV(type=reg)	zo	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+doch	ADV(type=reg)	toch	
+die	PD(type=d-p,subtype=oth,position=prenom)	die	
+Hongaren	NOU-C(number=pl)	Hongaar	
+in	ADP(type=pre)	in	
+Nieuheusel	NOU-P	Nové Zámky	
+niet	ADV(type=reg)	niet	
+daer	ADV(type=pron)	daarin	mw_937670
+inne	ADV(type=pron)	daarin	mw_937670
+consenteren	VRB(finiteness=inf)	consenteren	
+willen	VRB(finiteness=inf)	willen	
+,	PC		
+maer	CONJ(type=coor)	maar	
+verclaert	VRB(finiteness=pastpart)	verklaren	
+dat	CONJ(type=sub)	dat	
+zy	PD(type=pers,position=free)	zij	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+Thurso	NOU-P	Thurzó	
+liever	AA(degree=comp,position=free)	lief	
+wilden	VRB(finiteness=fin,tense=past)	willen	
+doot-slaen	VRB(finiteness=inf)	doodslaan	
+als	CONJ(type=sub)	als	
+sich	PD(type=refl,position=free)	zich	
+over	VRB(finiteness=inf)	overgeven	mw_337245
+te	ADP(type=pre)	te	
+gheven	VRB(finiteness=inf)	overgeven	mw_337245
+,	PC		
+waer	ADV(type=pron)	waarover	mw_249982
+over	ADV(type=pron)	waarover	mw_249982
+men	PD(type=pers,position=free)	men	
+dese	PD(type=d-p,subtype=oth,position=prenom)	deze	
+Weecke	NOU-C(number=sg)	week	
+wederom	ADV(type=reg)	wederom	
+veel	PD(type=indef,subtype=oth,position=prenom)	veel	
+Gheschut	NOU-C(number=sg)	geschut	
+,	PC		
+Coeghels	NOU-C(number=pl)	kogel	
+ende	CONJ(type=coor)	en	
+Pulver	NOU-C(number=sg)	pulver	
+van	ADP(type=pre)	van	
+hier	ADV(type=reg)	hier	
+daer	ADV(type=pron)	daarheen	mw_448345
+henen	ADV(type=pron)	daarheen	mw_448345
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+ghevoert	VRB(finiteness=pastpart)	voeren	
+,	PC		
+om	ADP(type=pre)	om	
+die	PD(type=d-p,subtype=oth,position=prenom)	dezelve	mw_221785
+selve	PD(type=d-p,subtype=oth,position=prenom)	dezelve	mw_221785
+plaets	NOU-C(number=sg)	plaats	
+te	ADP(type=pre)	te	
+beschieten	VRB(finiteness=inf)	beschieten	
+.	PC		
+
+Men	PD(type=pers,position=free)	men	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+oock	ADV(type=reg)	ook	
+ses	NUM(type=card,position=prenom,representation=let)	zeshonderdduizend	mw_607972
+hondert	NUM(type=card,position=prenom,representation=let)	zeshonderdduizend	mw_607972
+duysent	NUM(type=card,position=prenom,representation=let)	zeshonderdduizend	mw_607972
+flor.	NOU-C(number=pl,WF=abbr)	florijn	
+aen	ADP(type=pre)	aan	
+contant	AA(degree=pos,position=prenom)	contant	
+gelt	NOU-C(number=sg)	geld	
+,	PC		
+ende	CONJ(type=coor)	en	
+twee	NUM(type=card,position=prenom,representation=let)	tweehonderdduizend	mw_341391
+hondert	NUM(type=card,position=prenom,representation=let)	tweehonderdduizend	mw_341391
+duysent	NUM(type=card,position=prenom,representation=let)	tweehonderdduizend	mw_341391
+Florijnen	NOU-C(number=pl)	florijn	
+aen	ADP(type=pre)	aan	
+Clenodien	NOU-C(number=pl)	kleinodie	
+daer	ADV(type=pron)	daarheen	mw_38091
+henen	ADV(type=pron)	daarheen	mw_38091
+ghesonden	VRB(finiteness=pastpart)	zenden	
+om	ADP(type=pre)	om	
+onse	PD(type=poss,position=prenom)	ons	
+Soldaten	NOU-C(number=pl)	soldaat	
+drie	NUM(type=card,position=prenom,representation=let)	drie	
+Maenden	NOU-C(number=pl)	maand	
+soudije	NOU-C(number=sg)	soldij	
+te	ADP(type=pre)	te	
+betalen	VRB(finiteness=inf)	betalen	
+,	PC		
+Ondertusschen	ADV(type=reg)	ondertussen	
+schermutseren	VRB(finiteness=fin,tense=pres)	schermutseren	
+die	PD(type=d-p,subtype=oth,position=prenom)	die	
+Hongaren	NOU-C(number=pl)	Hongaar	
+mette	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	met+de	
+onse	NOU-C(number=pl)	onze	
+daghelijcx	ADV(type=reg)	dagelijks	
+,	PC		
+ende	CONJ(type=coor)	en	
+soude	VRB(finiteness=fin,tense=past)	zullen	
+Betlehem	NOU-P	Betlehem	
+Gabor	NOU-P	Gabor	
+tot	ADP(type=pre)	tot	
+Cascou	NOU-P	Košice	
+sich	PD(type=refl,position=free)	zich	
+seer	AA(degree=pos,position=free)	zeer	
+stercken	VRB(finiteness=inf)	sterken	
+,	PC		
+om	ADP(type=pre)	om	
+Nieuheusel	NOU-P	Nové Zámky	
+t'ontsetten	ADP(type=pre)+VRB(finiteness=inf)	te+ontzetten	
+,	PC		
+doch	CONJ(type=coor)	doch	
+men	PD(type=pers,position=free)	men	
+vermoyt	VRB(finiteness=fin,tense=pres)	vermoeden	
+dat	CONJ(type=sub)	dat	
+Setschi	NOU-P	Szécsi	
+hem	PD(type=pers,position=free)	hij	
+den	PD(type=d-p,subtype=art,position=prenom)	de	
+pas	NOU-C(number=sg)	pas	
+beletten	VRB(finiteness=inf)	beletten	
+ende	CONJ(type=coor)	en	
+op	VRB(finiteness=inf)	ophouden	mw_815101
+houden	VRB(finiteness=inf)	ophouden	mw_815101
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+.	PC		
+
+Op	ADP(type=pre)	op	
+dese	PD(type=d-p,subtype=oth,position=prenom)	deze	
+sijde	NOU-C(number=sg)	zijde	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Graef	NOU-C(number=sg)	graaf	
+Colaldo	NOU-P	Colaldo	
+des	PD(type=d-p,subtype=art,position=prenom)	de	
+Budiani	NOU-C(number=pl)	Budianus	
+goeder	NOU-C(number=pl)	goed	
+,	PC		
+behalven	ADP(type=pre)	behalve	
+dat	PD(type=d-p,subtype=oth,position=prenom)	dat	
+onwinlijcke	AA(degree=pos,position=prenom)	onwinnelijk	
+Slot	NOU-C(number=sg)	slot	
+Gijssingher	NOU-P	Gijssingher	
+,	PC		
+daer	ADV(type=pron)	daarin	mw_300398
+inne	ADV(type=pron)	daarin	mw_300398
+hy	PD(type=pers,position=free)	hij	
+selfs	PD(type=d-p,position=free)	zelf	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+,	PC		
+inghenomen	VRB(finiteness=pastpart)	innemen	
+,	PC		
+ende	CONJ(type=coor)	en	
+daer	ADV(type=pron)	daarin	mw_37705
+in	ADV(type=pron)	daarin	mw_37705
+een	PD(type=indef,subtype=art,position=prenom)	een	
+groot	AA(degree=pos,position=prenom)	groot	
+ghetal	NOU-C(number=sg)	getal	
+aen	ADP(type=pre)	aan	
+Graen	NOU-C(number=sg)	graan	
+ende	CONJ(type=coor)	en	
+Wijnen	NOU-C(number=pl)	wijn	
+becomen	VRB(finiteness=pastpart)	bekomen	
+,	PC		
+ruckt	VRB(finiteness=fin,tense=pres)	rukken	
+teghenwoordich	AA(degree=pos,position=free)	tegenwoordig	
+op	ADP(type=pre)	op	
+Papa	NOU-P	Pápa	
+ende	CONJ(type=coor)	en	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Canisische	AA(degree=pos,position=prenom)	Canisisch	
+Frontieren	NOU-C(number=pl)	frontier	
+.	PC		
+
+In	ADP(type=pre)	in	
+Ellechran	NOU-P	Ellechran	
+zijn	VRB(finiteness=fin,tense=pres)	zijn	
+wederom	ADV(type=reg)	wederom	
+ettelijcke	PD(type=indef,subtype=oth,position=prenom)	ettelijk	
+voornaemste	AA(degree=sup,position=prenom)	voornaam	
+Heeren	NOU-C(number=pl)	heer	
+ende	CONJ(type=coor)	en	
+Burghers	NOU-C(number=pl)	burger	
+ghevanghen	VRB(finiteness=pastpart)	vangen	
+,	PC		
+mette	ADP(type=pre)+PD(type=w-p,position=free)	met+dewelke	mw_640520
+welcke	ADP(type=pre)+PD(type=w-p,position=free)	met+dewelke	mw_640520
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Executie	NOU-C(number=sg)	executie	
+soo	ADV(type=reg)	zo	
+wel	ADV(type=reg)	wel	
+als	CONJ(type=coor)	als	
+dese	PD(type=d-p,subtype=oth,position=prenom)	deze	
+Weecke	NOU-C(number=sg)	week	
+mette	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	met+de	
+ghevanghenen	NOU-C(number=pl)	gevangene	
+tot	ADP(type=pre)	tot	
+Praghe	NOU-P	Praag	
+voorghenomen	VRB(finiteness=pastpart)	voornemen	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+worden	VRB(finiteness=inf)	worden	
+,	PC		
+ende	CONJ(type=coor)	en	
+sullen	VRB(finiteness=fin,tense=pres)	zullen	
+Erasmus	NOU-P	Erasmus	
+ende	CONJ(type=coor)	en	
+Georg	NOU-P	Georg	
+van	ADP(type=pre)	van	
+Landou	NOU-P	Landau	
+ghevanghenen	NOU-C(number=pl)	gevangene	
+,	PC		
+metten	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	met+de	
+eersten	NUM(type=ord,position=free,representation=let)	eerste	
+alhier	ADV(type=reg)	alhier	
+gebrocht	VRB(finiteness=pastpart)	brengen	
+worden	VRB(finiteness=inf)	worden	
+.	PC		
+
+VVt	ADP(type=pre)	uit	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Velt-leger	NOU-C(number=sg)	veldleger	
+des	PD(type=d-p,subtype=art,position=prenom)	de	
+Princë	NOU-C(number=sg)	prins	
+van	ADP(type=pre)	van	
+Orangië	NOU-P	Oranje	
+teghenvvooidich	AA(degree=pos,position=free,WF=mis)	tegenwoordig	
+by	ADP(type=pre)	bij	
+VVcfel	NOU-P(WF=mis)	Wesel	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Prince	NOU-C(number=sg)	prins	
+van	ADP(type=pre)	van	
+Orangien	NOU-P	Oranje	
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+grof	AA(degree=pos,position=prenom)	grof	
+gheschut	NOU-C(number=sg)	geschut	
+uyt	ADP(type=pre)	uit	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Ponten	NOU-C(number=pl)	pont	
+doen	VRB(finiteness=inf)	doen	
+lossen	VRB(finiteness=inf)	lossen	
+,	PC		
+ende	CONJ(type=coor)	en	
+te	ADP(type=pre)	te	
+lande	NOU-C(number=sg)	land	
+stellen	VRB(finiteness=inf)	stellen	
+,	PC		
+de	PD(type=d-p,position=free)	dezelve	mw_842891
+selve	PD(type=d-p,position=free)	dezelve	mw_842891
+oock	ADV(type=reg)	ook	
+doen	VRB(finiteness=inf)	doen	
+af	VRB(finiteness=inf)	afbranden	mw_219675
+branden	VRB(finiteness=inf)	afbranden	mw_219675
+ende	CONJ(type=coor)	en	
+suyveren	VRB(finiteness=inf)	zuiveren	
+.	PC		
+
+Den	PD(type=d-p,subtype=art,position=prenom)	de	
+Ambassadeur	NOU-C(number=sg)	ambassadeur	
+van	ADP(type=pre)	van	
+Venetien	NOU-P	Venetië	
+wert	VRB(finiteness=fin,tense=pres)	worden	
+eerstdaechs	ADV(type=reg)	eerstdaags	
+verwacht	VRB(finiteness=pastpart)	verwachten	
+ende	CONJ(type=coor)	en	
+sal	VRB(finiteness=fin,tense=pres)	zullen	
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Legher	NOU-C(number=sg)	leger	
+dan	ADV(type=reg)	dan	
+in	ADP(type=pre)	in	
+Batalie	NOU-C(number=sg)	bataille	
+staen	VRB(finiteness=inf)	staan	
+,	PC		
+en	CONJ(type=coor)	en	mw_774647
+de	CONJ(type=coor)	en	mw_774647
+met	ADP(type=pre)	met	
+grof	AA(degree=pos,position=prenom)	grof	
+gheschut	NOU-C(number=sg)	geschut	
+te	ADP(type=pre)	te	
+lande	NOU-C(number=sg)	land	
+ende	CONJ(type=coor)	en	
+water	NOU-C(number=sg)	water	
+ghewilcomt	VRB(finiteness=pastpart)	welkomen	
+werden	VRB(finiteness=inf)	worden	
+,	PC		
+ende	CONJ(type=coor)	en	
+ligghen	VRB(finiteness=fin,tense=pres)	liggen	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Iachten	NOU-C(number=pl)	jacht	
+vanden	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	van+de	
+Prince	NOU-C(number=sg)	prins	
+,	PC		
+als	CONJ(type=coor)	alsmede	mw_146112
+mede	CONJ(type=coor)	alsmede	mw_146112
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Oorloch-schepen	NOU-C(number=pl)	oorlogsschip	
+ende	CONJ(type=coor)	en	
+andere	PD(type=indef,position=free)	ander	
+al	ADV(type=reg)	al	
+in	ADP(type=pre)	in	
+goede	AA(degree=pos,position=prenom)	goed	
+ordre	NOU-C(number=sg)	order	
+.	PC		
+
+Don	NOU-C(number=sg)	don	
+Louijs	NOU-P	Luis	
+de	RES(type=for)	de	
+Valasco	NOU-P	Velasco	
+quam	VRB(finiteness=fin,tense=past)	komen	
+verganghen	AA(degree=pos,position=prenom)	vergaan	
+sondach	NOU-C(number=sg)	zondag	
+met	ADP(type=pre)	met	
+slecht	AA(degree=pos,position=prenom)	slecht	
+ghevolch	NOU-C(number=sg)	gevolg	
+binnen	ADP(type=pre)	binnen	
+Wesel	NOU-P	Wesel	
+,	PC		
+wert	VRB(finiteness=fin,tense=pres)	worden	
+met	ADP(type=pre)	met	
+eerscheuten	NOU-C(number=pl)	erescheut	
+ontfanghen	VRB(finiteness=pastpart)	ontvangen	
+ende	CONJ(type=coor)	en	
+vertrock	VRB(finiteness=fin,tense=past)	vertrekken	
+weder	ADV(type=reg)	weder	
+dien	PD(type=d-p,subtype=oth,position=prenom)	die	
+selven	PD(type=d-p,subtype=oth,position=prenom)	zelf	
+dach	NOU-C(number=sg)	dag	
+.	PC		
+
+Don	NOU-C(number=sg)	don	
+de	RES(type=for)	de	
+Valasco	NOU-P	Velasco	
+begraeft	VRB(finiteness=fin,tense=pres)	begraven	
+hem	PD(type=refl,position=free)	hij	
+seer	AA(degree=pos,position=free)	zeer	
+sterck	AA(degree=pos,position=free)	sterk	
+ontrent	ADP(type=pre)	omtrent	
+Rijnberck	NOU-P	Rheinberg	
+,	PC		
+ende	CONJ(type=coor)	en	
+geeft	VRB(finiteness=fin,tense=pres)	uitgeven	mw_188974
+uyt	VRB(finiteness=fin,tense=pres)	uitgeven	mw_188974
+dat	CONJ(type=sub)	dat	
+hem	PD(type=pers,position=free)	hij	
+noch	ADV(type=reg)	nog	
+veel	PD(type=indef,subtype=oth,position=prenom)	veel	
+volck	NOU-C(number=sg)	volk	
+toecomt	VRB(finiteness=fin,tense=pres)	toekomen	
+.	PC		
+
+Men	PD(type=pers,position=free)	men	
+hoordt	VRB(finiteness=fin,tense=pres)	horen	
+hier	ADV(type=reg)	hier	
+dat	CONJ(type=sub)	dat	
+sijn	PD(type=poss,position=prenom)	zijn	
+Ghenade	NOU-C(number=sg)	genade	
+Graef	NOU-C(number=sg)	graaf	
+Hendrick	NOU-P	Hendrik	
+noch	ADV(type=reg)	nog	
+een	PD(type=indef,subtype=art,position=prenom)	een	
+deel	NOU-C(number=sg)	deel	
+Volck	NOU-C(number=sg)	volk	
+te	ADP(type=pre)	te	
+voet	NOU-C(number=sg)	voet	
+uyt	ADP(type=pre)	uit	
+Gulick	NOU-P	Gulik	
+mede	VRB(finiteness=pastpart)	medenemen	mw_743588
+genomen	VRB(finiteness=pastpart)	medenemen	mw_743588
+heeft	VRB(finiteness=fin,tense=pres)	hebben	
+,	PC		
+ende	CONJ(type=coor)	en	
+op't	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	op+het	
+spoedichste	NOU-C(number=sg)	spoedigste	
+sijn	PD(type=poss,position=prenom)	zijn	
+tocht	NOU-C(number=sg)	tocht	
+vervolght	VRB(finiteness=fin,tense=pres)	vervolgen	
+,	PC		
+om	ADP(type=pre)	om	
+by	ADP(type=pre)	bij	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+Gheunicerde	AA(degree=pos,position=prenom,WF=mis)	geünieerd	
+Vorsten	NOU-C(number=pl)	vorst	
+te	ADP(type=pre)	te	
+komen	VRB(finiteness=inf)	komen	
+.	PC		
+
+In	ADP(type=pre)	in	
+ons	PD(type=poss,position=prenom)	ons	
+Legher	NOU-C(number=sg)	leger	
+wert	VRB(finiteness=fin,tense=pres)	worden	
+eerst-daechs	ADV(type=reg)	eerstdaags	
+noch	ADV(type=reg)	nog	
+meer	PD(type=indef,subtype=oth,position=prenom)	meer	
+Volck	NOU-C(number=sg)	volk	
+verwacht	VRB(finiteness=pastpart)	verwachten	
+,	PC		
+ende	CONJ(type=coor)	en	
+werden	VRB(finiteness=inf)	worden	
+onse	PD(type=poss,position=prenom)	ons	
+wercken	NOU-C(number=pl)	werk	
+daghelijcks	ADV(type=reg)	dagelijks	
+hoe	ADV(type=reg)	hoe	
+langher	AA(degree=comp,position=free)	lang	
+hoe	ADV(type=reg)	hoe	
+meer	ADV(type=reg)	meer	
+versterckt	VRB(finiteness=pastpart)	versterken	
+.	PC		
+
+Binnen	ADP(type=pre)	binnen	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+stadt	NOU-C(number=sg)	stad	
+Wesel	NOU-P	Wesel	
+is	VRB(finiteness=fin,tense=pres)	zijn	
+alles	PD(type=indef,position=free)	alles	
+seer	AA(degree=pos,position=free)	zeer	
+dier	AA(degree=pos,position=free)	duur	
+,	PC		
+ende	CONJ(type=coor)	en	
+veel	PD(type=indef,subtype=oth,position=prenom)	veel	
+dinghen	NOU-C(number=pl)	ding	
+qualick	AA(degree=pos,position=free)	kwalijk	
+te	ADP(type=pre)	te	
+becomen	VRB(finiteness=inf)	bekomen	
+,	PC		
+door	CONJ(type=sub)	doordien	mw_454000
+dien	CONJ(type=sub)	doordien	mw_454000
+het	PD(type=d-p,subtype=art,position=prenom)	het	
+Legher	NOU-C(number=sg)	leger	
+haer	PD(type=pers,position=free)	zij	
+soo	ADV(type=reg)	zo	
+dicht	AA(degree=pos,position=free)	dicht	
+op	ADP(type=pre)	op	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+neuse	NOU-C(number=sg)	neus	
+leyt	VRB(finiteness=fin,tense=pres)	liggen	
+,	PC		
+ende	CONJ(type=coor)	en	
+de	PD(type=d-p,subtype=art,position=prenom)	de	
+boeren	NOU-C(number=pl)	boer	
+niet	ADV(type=reg)	niet	
+veel	PD(type=indef,position=free)	veel	
+ten	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	te+het	
+besten	NOU-C(number=sg)	beste	
+hebben	VRB(finiteness=fin,tense=pres)	hebben	
+.	PC		

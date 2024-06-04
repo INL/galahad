@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.jobs
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.layer.LayerPreview
 import org.ivdnt.galahad.evaluation.metrics.FlatMetricType
@@ -20,9 +21,9 @@ class JobTest {
 
     @Test
     fun `Create a job`() {
-        val job: Job = corpus.jobs.createOrThrow("pie-tdn")
+        val job: Job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         // verify
-        assertEquals("pie-tdn", job.name)
+        assertEquals(TestConfig.TAGGER_NAME, job.name)
         assertFalse(job.isActive)
         assertEquals(0, job.assay.read<Map<String,FlatMetricType>>().size)
         assertEquals(0, job.progress.total)
@@ -38,7 +39,7 @@ class JobTest {
         // add a doc
         val name = corpus.documents.create(File.createTempFile("tmp", ".txt"))
         // create a job
-        val job: Job = corpus.jobs.createOrThrow("pie-tdn")
+        val job: Job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         // fake a tagger result
         val layer = LayerBuilder().loadDummies(100).build()
         job.document(name).setResult(layer)

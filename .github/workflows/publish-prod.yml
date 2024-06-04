@@ -1,0 +1,34 @@
+name: Prod images to docker
+
+on:
+  push:
+    tags: 
+      - '[0-9]+.[0-9]+.[0-9]+'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:     
+  prod-images-to-docker:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # The commit-version job made a commit, but default checkout still refers to the original commit that triggered this job
+      # so make sure we are looking at the right commit
+      - run: git checkout HEAD
+      - name: Version info
+        run: |
+          sed "s~{{GITHUB_REPOSITORY}}~$GITHUB_REPOSITORY~g; s/{{VERSION_LABEL}}/release/g; s/{{GITHUB_REF_TYPE}}/$GITHUB_REF_TYPE/g; s/{{GITHUB_REF_NAME}}/$GITHUB_REF_NAME/g; s/{{GITHUB_SHA}}/$GITHUB_SHA/g; s/{{GITHUB_WORKFLOW}}/$GITHUB_WORKFLOW/g; s/{{GITHUB_RUN_NUMBER}}/$GITHUB_RUN_NUMBER/g; s/{{BUILD_DATE}}/$(date)/g" version.yml.template > server/src/main/resources/version.yml
+          sed "s~{{GITHUB_REPOSITORY}}~$GITHUB_REPOSITORY~g; s/{{VERSION_LABEL}}/release/g; s/{{GITHUB_REF_TYPE}}/$GITHUB_REF_TYPE/g; s/{{GITHUB_REF_NAME}}/$GITHUB_REF_NAME/g; s/{{GITHUB_SHA}}/$GITHUB_SHA/g; s/{{GITHUB_WORKFLOW}}/$GITHUB_WORKFLOW/g; s/{{GITHUB_RUN_NUMBER}}/$GITHUB_RUN_NUMBER/g; s/{{BUILD_DATE}}/$(date)/g" version.yml.template > client/version.yml
+          cat server/src/main/resources/version.yml
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        run: ./scripts/build-and-push-all.sh
+        env:
+          VERSION_LABEL: latest

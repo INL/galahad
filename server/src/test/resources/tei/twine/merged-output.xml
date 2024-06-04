@@ -3,7 +3,7 @@
     <fileDesc><sourceDesc><listBibl xml:id="galahadMetadata">
     <bibl>
         <interpGrp type="model">
-            <interp>pie-tdn</interp>
+            <interp>pie-tdn-all</interp>
         </interpGrp>
         <interpGrp type="tagset">
             <interp>TDN-Core</interp>

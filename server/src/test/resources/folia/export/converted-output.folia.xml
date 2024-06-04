@@ -6,33 +6,33 @@
             <paragraph-annotation/>
             <sentence-annotation/>
             <token-annotation/>
-            <lemma-annotation set="pie-tdn">
-                <annotator processor="pie-tdn"/>
+            <lemma-annotation set="pie-tdn-all">
+                <annotator processor="pie-tdn-all"/>
             </lemma-annotation>
-            <pos-annotation set="pie-tdn">
-                <annotator processor="pie-tdn"/>
+            <pos-annotation set="pie-tdn-all">
+                <annotator processor="pie-tdn-all"/>
             </pos-annotation>
         </annotations>
         <provenance>
-            <processor host="galahad.ivdnt.org" name="pie-tdn" src="https://github.com/INL/taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn"/>
+            <processor host="galahad.ivdnt.org" name="pie-tdn-all" src="https://github.com/INL/taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn-all"/>
         </provenance>
     </metadata>
     <text xml:id="id_dummy_folia.text">
         <p xml:id="id_dummy_folia.p1">
             <w xml:id="id_dummy_folia.p1.w1">
                 <t>dummy</t>
-                <lemma class="dummy" processor="pie-tdn" set="pie-tdn"/>
-                <pos class="pos" head="pos" processor="pie-tdn" set="pie-tdn"/>
+                <lemma class="dummy" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <pos class="pos" head="pos" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_dummy_folia.p1.w2">
                 <t>dummy</t>
-                <lemma class="dummy" processor="pie-tdn" set="pie-tdn"/>
-                <pos class="pos" head="pos" processor="pie-tdn" set="pie-tdn"/>
+                <lemma class="dummy" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <pos class="pos" head="pos" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_dummy_folia.p1.w3">
                 <t>dummy</t>
-                <lemma class="dummy" processor="pie-tdn" set="pie-tdn"/>
-                <pos class="pos" head="pos" processor="pie-tdn" set="pie-tdn"/>
+                <lemma class="dummy" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <pos class="pos" head="pos" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
         </p>
     </text>

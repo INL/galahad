@@ -1,13 +1,14 @@
-# GaLAHaD (0.9.0)
+# GaLAHaD (1.0.0)
 Generating Linguistic Annotations for Historical Dutch
 
-[![Version, build and push to Docker Hub](https://github.com/INL/Galahad/actions/workflows/publish-dev.yml/badge.svg)](https://github.com/INL/Galahad/actions/workflows/publish-dev.yml)
+[![Dev images to docker](https://github.com/INL/Galahad/actions/workflows/publish-dev.yml/badge.svg)](https://github.com/INL/Galahad/actions/workflows/publish-dev.yml)
+[![Prod images to docker](https://github.com/INL/Galahad/actions/workflows/publish-prod.yml/badge.svg)](https://github.com/INL/Galahad/actions/workflows/publish-prod.yml)
 [![Tests](https://github.com/INL/Galahad/actions/workflows/tests.yml/badge.svg?branch=development&event=push)](https://github.com/INL/Galahad/actions/workflows/tests.yml)
 
 ### GaLAHaD-related Repositories
 - [galahad](https://github.com/INL/galahad) [you are here]
 - [galahad-train-battery](https://github.com/INL/galahad-train-battery)
-- [galahad-taggers-dockerized](https://github.com/INL/galahad-taggers-dockerized) [to be released]
+- [galahad-taggers-dockerized](https://github.com/INL/galahad-taggers-dockerized)
 - [galahad-corpus-data](https://github.com/INL/galahad-corpus-data/)
 - [int-pie](https://github.com/INL/int-pie)
 - [int-huggingface-tagger](https://github.com/INL/huggingface-tagger) [to be released]

@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.data.document
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.port.*
@@ -81,7 +82,7 @@ class DocumentTest {
             inputFile.copyTo(tempFile, true)
             val name = corpus.documents.create(tempFile)
             val doc = corpus.documents.readOrThrow(name)
-            val job = corpus.jobs.createOrThrow("pie-tdn")
+            val job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
             // create the layer based on the plaintext parsing
             val plaintext = doc.plaintext
             val layer = LayerBuilder().loadLayerFromTSV("all-formats/input/pie-tdn.tsv", plaintext).build()

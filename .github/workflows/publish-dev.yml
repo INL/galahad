@@ -1,18 +1,13 @@
-name: Development build and push
+name: Dev images to docker
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ development ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:     
-
-  build-and-push:
+  dev-images-to-docker:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -25,10 +20,6 @@ jobs:
           sed "s~{{GITHUB_REPOSITORY}}~$GITHUB_REPOSITORY~g; s/{{VERSION_LABEL}}/dev/g; s/{{GITHUB_REF_TYPE}}/$GITHUB_REF_TYPE/g; s/{{GITHUB_REF_NAME}}/$GITHUB_REF_NAME/g; s/{{GITHUB_SHA}}/$GITHUB_SHA/g; s/{{GITHUB_WORKFLOW}}/$GITHUB_WORKFLOW/g; s/{{GITHUB_RUN_NUMBER}}/$GITHUB_RUN_NUMBER/g; s/{{BUILD_DATE}}/$(date)/g" version.yml.template > server/src/main/resources/version.yml
           sed "s~{{GITHUB_REPOSITORY}}~$GITHUB_REPOSITORY~g; s/{{VERSION_LABEL}}/dev/g; s/{{GITHUB_REF_TYPE}}/$GITHUB_REF_TYPE/g; s/{{GITHUB_REF_NAME}}/$GITHUB_REF_NAME/g; s/{{GITHUB_SHA}}/$GITHUB_SHA/g; s/{{GITHUB_WORKFLOW}}/$GITHUB_WORKFLOW/g; s/{{GITHUB_RUN_NUMBER}}/$GITHUB_RUN_NUMBER/g; s/{{BUILD_DATE}}/$(date)/g" version.yml.template > client/version.yml
           cat server/src/main/resources/version.yml
-
-      - name: Build
-        run: |
-          ./scripts/build-all.sh
       
       - name: Login to Docker Hub
         uses: docker/login-action@v1
@@ -36,8 +27,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Push 
-        run: |
-            docker push instituutnederlandsetaal/galahad-proxy:dev
-            docker push instituutnederlandsetaal/galahad-server:dev
-            docker push instituutnederlandsetaal/galahad-client:dev
+      - name: Build and push
+        run: ./scripts/build-and-push-all.sh
+        env:
+          VERSION_LABEL: dev

@@ -48,13 +48,13 @@ class JobsControllerTest(
         Thread.sleep(3000)
 
         // poll progress
-        progress = pollProgress(uuid, "pie-tdn")
+        progress = pollProgress(uuid, TestConfig.TAGGER_NAME)
         assertFalse(progress.busy)
         assertEquals(1, progress.finished)
 
         // check result
-        val resultPreview = getDocumentJobResult(uuid, "pie-tdn", docName)
-        assertEquals("pie-tdn", resultPreview.name)
+        val resultPreview = getDocumentJobResult(uuid, TestConfig.TAGGER_NAME, docName)
+        assertEquals(TestConfig.TAGGER_NAME, resultPreview.name)
         assertTrue(resultPreview.summary.numWordForms > 0)
         assertTrue(resultPreview.summary.numTerms > 0)
         assertTrue(resultPreview.summary.numLemma > 0)

@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "dbnl-excerpts-19",
+    "eraFrom": "1800",
+    "eraTo": "1900",
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "dbnl-excerpts-19",
+    "sourceURL": "https://dbnl.org"
+}

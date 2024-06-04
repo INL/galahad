@@ -77,16 +77,16 @@ const assaysStore = stores.useAssays() as AssaysStore
 const corporaStore = stores.useCorpora()
 
 // Fields
-const datasetOptions = computed(() => corporaStore.datasetCorpora.map((d) => ({ value: d.uuid, text: d.name })))
+const datasetOptions = computed(() => corporaStore.datasetCorpora.map((d) => ({ value: d.uuid, text: d.name })).sort((a, b) => a.text.localeCompare(b.text)))
 const selectedDatasetUuid = ref(null)
 const selectedDatasetName = computed(() => corporaStore.datasetCorpora.find((d) => d.uuid == selectedDatasetUuid.value)?.name)
 const metricsFilter = ref(null)
 const columns = [
     { key: "tagger", label: "tagger" },
-    { key: "precision", label: "macro\nprecision" },
-    { key: "recall", label: "macro\nrecall" },
-    { key: "f1", label: "macro\nf1" },
-    { key: "accuracy", label: "micro\naccuracy" },
+    { key: "precision", label: "macro\nprecision", sortOn: i => i.precision },
+    { key: "recall", label: "macro\nrecall", sortOn: i => i.recall },
+    { key: "f1", label: "macro\nf1", sortOn: i => i.f1 },
+    { key: "accuracy", label: "micro\naccuracy", sortOn: i => i.accuracy },
     { key: "details", label: "detailed\nevaluation" },
 ]
 /**

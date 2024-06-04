@@ -1,0 +1,11 @@
+{
+    "owner": "admin",
+    "name": "letters-as-loot",
+    "eraFrom": "1600",
+    "eraTo": "1800",
+    "tagset": "TDN-Core",
+    "dataset": true,
+    "public": true,
+    "sourceName": "letters-as-loot",
+    "sourceURL": "https://brievenalsbuit.ivdnt.org/"
+}

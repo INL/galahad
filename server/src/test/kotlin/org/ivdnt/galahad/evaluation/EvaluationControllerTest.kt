@@ -31,7 +31,7 @@ class EvaluationControllerTest(
 
         // url
         val uuid = corpus.metadata.expensiveGet().uuid
-        val url = "/corpora/$uuid/jobs/pie-tdn/evaluation/download?reference=sourceLayer"
+        val url = "/corpora/$uuid/jobs/${TestConfig.TAGGER_NAME}/evaluation/download?reference=sourceLayer"
         // /GET
         val bytes = mvc.perform(
             MockMvcRequestBuilders.get(url)
@@ -45,7 +45,7 @@ class EvaluationControllerTest(
         val corpus = corpus()
         // url
         val uuid = corpus.metadata.expensiveGet().uuid
-        val url = "/corpora/$uuid/jobs/pie-tdn/evaluation/download?reference=sourceLayer&referencePos=ADJ&hypothesisPos=ADJ"
+        val url = "/corpora/$uuid/jobs/${TestConfig.TAGGER_NAME}/evaluation/download?reference=sourceLayer&referencePos=ADJ&hypothesisPos=ADJ"
         val bytes = mvc.perform(
             MockMvcRequestBuilders.get(url)
                 .headers(UserHeader.get())
@@ -64,7 +64,7 @@ class EvaluationControllerTest(
             "class" to "truePositive",
             "group" to "ADJ",
         )
-        val url = "/corpora/$uuid/jobs/pie-tdn/evaluation/metrics/download?" +
+        val url = "/corpora/$uuid/jobs/${TestConfig.TAGGER_NAME}/evaluation/metrics/download?" +
                 params.map { (k, v) -> "$k=$v" }.joinToString("&")
         val bytes = mvc.perform(
             MockMvcRequestBuilders.get(url)

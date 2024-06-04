@@ -37,7 +37,7 @@ class ExportControllerTest(
 
         val uuid = corpus.metadata.expensiveGet().uuid
         val bytes = mvc.perform(
-            MockMvcRequestBuilders.get("/corpora/$uuid/jobs/pie-tdn/export/convert")
+            MockMvcRequestBuilders.get("/corpora/$uuid/jobs/${TestConfig.TAGGER_NAME}/export/convert")
                 .param("format", "folia").headers(
                     UserHeader.get())
         ).andReturn().response.contentAsByteArray
@@ -73,7 +73,7 @@ class ExportControllerTest(
         mvc.uploadFile(Resource.get("all-formats/input/input.tei.xml"), corpus)
         // hardcode layer
         val layer: Layer = LayerBuilder().loadLayerFromTSV("all-formats/input/pie-tdn.tsv", Resource.get("all-formats/input/input.txt").readText()).build()
-        val job = corpus.jobs.createOrThrow("pie-tdn")
+        val job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         job.document("input.tei.xml").setResult(layer)
         mvc.uploadFile(Resource.get("all-formats/input/input.folia.xml"), corpus)
         return corpus
