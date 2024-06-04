@@ -83,10 +83,10 @@ const selectedDatasetName = computed(() => corporaStore.datasetCorpora.find((d) 
 const metricsFilter = ref(null)
 const columns = [
     { key: "tagger", label: "tagger" },
-    { key: "precision", label: "macro\nprecision" },
-    { key: "recall", label: "macro\nrecall" },
-    { key: "f1", label: "macro\nf1" },
-    { key: "accuracy", label: "micro\naccuracy" },
+    { key: "precision", label: "macro\nprecision", sortOn: i => i.precision },
+    { key: "recall", label: "macro\nrecall", sortOn: i => i.recall },
+    { key: "f1", label: "macro\nf1", sortOn: i => i.f1 },
+    { key: "accuracy", label: "micro\naccuracy", sortOn: i => i.accuracy },
     { key: "details", label: "detailed\nevaluation" },
 ]
 /**
