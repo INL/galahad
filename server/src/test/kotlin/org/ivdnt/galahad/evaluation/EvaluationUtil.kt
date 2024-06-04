@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.evaluation
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.data.layer.Layer
@@ -69,7 +70,7 @@ object EvaluationUtil {
         tagger: Layer,
         source: Layer,
     ) {
-        val taggerJob = corpus.jobs.createOrThrow("pie-tdn")
+        val taggerJob = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         taggerJob.document(docName).setResult(tagger)
         val sourceJob = corpus.jobs.createOrThrow(SOURCE_LAYER_NAME)
         sourceJob.document(docName).setResult(source)

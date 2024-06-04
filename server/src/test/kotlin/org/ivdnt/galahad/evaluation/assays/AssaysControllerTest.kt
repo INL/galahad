@@ -50,7 +50,7 @@ class AssaysControllerTest(
         EvaluationUtil.addLayersAsJobs(corpus, name, layer, layer)
 
         // job assay should exist
-        assertNotNull(corpus.jobs.readOrThrow("pie-tdn").assay.get<Map<String,FlatMetricType>>())
+        assertNotNull(corpus.jobs.readOrThrow(TestConfig.TAGGER_NAME).assay.get<Map<String,FlatMetricType>>())
 
         // /GET
         val assaysRequest: MvcResult = mvc.perform(
@@ -58,7 +58,7 @@ class AssaysControllerTest(
         ).andReturn()
         assays = JSON.fromStr<AssaysMatrix>(assaysRequest.response.contentAsString)
         assertEquals(1, assays.size)
-        assertEquals(1f, assays["testCorpus"]!!["lemmaPosByPos"]!!["pie-tdn"]!!.micro.accuracy, 0.00001f)
+        assertEquals(1f, assays["testCorpus"]!!["lemmaPosByPos"]!![TestConfig.TAGGER_NAME]!!.micro.accuracy, 0.00001f)
         // We don't want the source layer, as it would always 100% agree with itself.
         assertFalse(assays.containsKey("sourceLayer"))
     }

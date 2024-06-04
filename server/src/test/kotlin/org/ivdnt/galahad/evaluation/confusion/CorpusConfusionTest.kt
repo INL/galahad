@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.evaluation.confusion
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.evaluation.EvaluationUtil
 import org.ivdnt.galahad.evaluation.comparison.ConfusionLayerFilter
@@ -23,7 +24,7 @@ class CorpusConfusionTest {
     fun `Confusion of three docs summed`() {
         EvaluationUtil.add_two_docs_to_corpus(corpus)
         EvaluationUtil.addDocWithMissingMatches(corpus)
-        val cc = CorpusConfusion(corpus, "pie-tdn") // default reference is SOURCE_LAYER_NAME
+        val cc = CorpusConfusion(corpus, TestConfig.TAGGER_NAME) // default reference is SOURCE_LAYER_NAME
         // Table
         cc.table.forEach(::println)
         assertEquals(7, cc.table.size)
@@ -47,7 +48,7 @@ class CorpusConfusionTest {
     fun `To CSV`() {
         EvaluationUtil.add_two_docs_to_corpus(corpus)
         EvaluationUtil.addDocWithMissingMatches(corpus)
-        val cc = CorpusConfusion(corpus, "pie-tdn") // default reference is SOURCE_LAYER_NAME
+        val cc = CorpusConfusion(corpus, TestConfig.TAGGER_NAME) // default reference is SOURCE_LAYER_NAME
         val csv: String = cc.countsToCSV()
         assertEquals(Resource.get("evaluation/confusion/output.csv").readText(), csv)
     }
@@ -60,7 +61,7 @@ class CorpusConfusionTest {
             refTermFilter = PosLemmaTermFilter(posHeadGroup = TermComparison.MISSING_MATCH),
         )
 
-        val cc = CorpusConfusion(corpus, "pie-tdn", layerFilter = filter)
+        val cc = CorpusConfusion(corpus, TestConfig.TAGGER_NAME, layerFilter = filter)
         assertEquals(Resource.get("evaluation/confusion/let-vs-missing.csv").readText(), cc.samplesToCSV())
     }
 }

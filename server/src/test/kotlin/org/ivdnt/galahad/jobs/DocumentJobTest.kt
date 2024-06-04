@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.jobs
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.port.LayerBuilder
@@ -23,7 +24,7 @@ class DocumentJobTest {
         // add a doc
         val name = corpus.documents.create(File.createTempFile("tmp", ".txt"))
         // create a job
-        val job: Job = corpus.jobs.createOrThrow("pie-tdn")
+        val job: Job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
 
         val dj: DocumentJob = job.document(name)
         // verify

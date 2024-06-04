@@ -5,7 +5,7 @@
       <token-annotation annotator="ucto" annotatortype="auto" datetime="2017-10-01T17:32:49" set="tokconfig-nld"/>
       <observation-annotation set="https://raw.githubusercontent.com/proycon/folia/master/setdefinitions/spellingcorrection.foliaset.xml"/>
       <correction-annotation set="https://raw.githubusercontent.com/proycon/folia/master/setdefinitions/spellingcorrection.foliaset.xml"/>
-    <text-annotation/><paragraph-annotation/><sentence-annotation/><lemma-annotation set="pie-tdn"><annotator processor="pie-tdn"/></lemma-annotation><pos-annotation set="pie-tdn"><annotator processor="pie-tdn"/></pos-annotation></annotations><provenance><processor host="galahad.ivdnt.org" name="pie-tdn" src="https://github.com/INL/galahad-taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn"/></provenance>
+    <text-annotation/><paragraph-annotation/><sentence-annotation/><lemma-annotation set="pie-tdn-all"><annotator processor="pie-tdn-all"/></lemma-annotation><pos-annotation set="pie-tdn-all"><annotator processor="pie-tdn-all"/></pos-annotation></annotations><provenance><processor host="galahad.ivdnt.org" name="pie-tdn-all" src="https://github.com/INL/galahad-taggers-dockerized" type="auto" user="testUser" xml:id="pie-tdn-all"/></provenance>
     <meta id="language">nld</meta>
   </metadata>
   <text xml:id="page1263.text">

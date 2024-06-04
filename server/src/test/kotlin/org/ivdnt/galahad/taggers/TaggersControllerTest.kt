@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.taggers
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.app.GalahadApplication
 import org.ivdnt.galahad.taggers.TaggersController.TaggerHealthStatus
 import org.junit.jupiter.api.Test
@@ -18,14 +19,14 @@ class TaggersControllerTest(
     @Test
     fun getTaggers() {
         val taggers = ctrl.getTaggers()
-        assertEquals(1, taggers.count { it.id == "pie-tdn" })
+        assertEquals(1, taggers.count { it.id == TestConfig.TAGGER_NAME })
     }
 
     @Test
     fun `Get valid tagger`() {
-        val tagger = ctrl.getTagger("pie-tdn")
+        val tagger = ctrl.getTagger(TestConfig.TAGGER_NAME)
         assertNotNull(tagger)
-        assertEquals("pie-tdn", tagger?.id)
+        assertEquals(TestConfig.TAGGER_NAME, tagger?.id)
     }
 
     @Test

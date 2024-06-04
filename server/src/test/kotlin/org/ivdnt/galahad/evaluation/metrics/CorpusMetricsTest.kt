@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.evaluation.metrics
 
 import jakarta.servlet.GenericFilter
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.evaluation.EvaluationUtil
 import org.ivdnt.galahad.evaluation.comparison.MetricsLayerFilter
@@ -23,7 +24,7 @@ class CorpusMetricsTest {
         EvaluationUtil.add_two_docs_to_corpus(corpus)
 
         // Get the metrics
-        val metrics = CorpusMetrics(corpus, listOf(PosByPosMetricsSettings()), "pie-tdn") // default reference is SOURCE_LAYER_NAME
+        val metrics = CorpusMetrics(corpus, listOf(PosByPosMetricsSettings()), TestConfig.TAGGER_NAME) // default reference is SOURCE_LAYER_NAME
         // Check the global metrics
         val global = metrics.metricTypes.values.first()
         assertEquals(10, global.classes.classCount)
@@ -55,7 +56,7 @@ class CorpusMetricsTest {
 
         val termFilter = PosLemmaTermFilter(posHeadGroup = "PD+NOU-C", lemma = null)
         val filter = MetricsLayerFilter(termFilter,termFilter)
-        val filteredMetrics = CorpusMetrics(corpus, listOf(PosByPosMetricsSettings()), "pie-tdn", layerFilter = filter)
+        val filteredMetrics = CorpusMetrics(corpus, listOf(PosByPosMetricsSettings()), TestConfig.TAGGER_NAME, layerFilter = filter)
         val filteredGlobal = filteredMetrics.metricTypes.values.first()
         assertEquals(1, filteredGlobal.classes.classCount)
     }

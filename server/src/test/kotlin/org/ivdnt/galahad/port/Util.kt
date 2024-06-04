@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.MapperFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.databind.json.JsonMapper
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.corpus.MutableCorpusMetadata
@@ -194,7 +195,7 @@ class DocTestBuilder(
         val file = file ?: createTempDirectory().toFile().resolve("dummy.$ext")
         file.createNewFile()
         val docName = corpus.documents.create(file)
-        val job = corpus.jobs.createOrThrow("pie-tdn")
+        val job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         job.document(docName).setResult(layer)
         return DocumentTransformMetadata(
             corpus, job, corpus.documents.readOrThrow(docName), User("testUser")
@@ -271,7 +272,7 @@ class DocTestBuilder(
 
     fun convertToTEI(teiFile: File, layer: Layer): TestResult {
         val docName = corpus.documents.create(teiFile)
-        val job = corpus.jobs.createOrThrow("pie-tdn")
+        val job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         job.document(docName).setResult(layer)
         val exporter = LayerToTEIConverter(
             DocumentTransformMetadata(
@@ -291,14 +292,6 @@ class DocTestBuilder(
         val transformMetadata = getDummyTransformMetadata(layer, file = file)
         val result: TEIFile = TEIFile(file).merge(transformMetadata)
         return got(result.file.readText())
-//        val docName = corpus.documents.create(file)
-//        val job = corpus.jobs.createOrThrow("pie-tdn")
-//        job.document( docName ).setResult( layer )
-//        val exporter = TEILayerMerger( TEIFile(file, DocumentFormat.TeiP5), CorpusTransformMetadata.DocumentTransformMetadata(corpus, job, corpus.documents.readOrThrow( docName ),
-//            User("testUser")
-//        ))
-//
-//        return got( exporter.parser.xmlToString(false) )
     }
 
     /**

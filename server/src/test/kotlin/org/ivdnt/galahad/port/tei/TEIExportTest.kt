@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.port.tei
 
+import org.ivdnt.galahad.TestConfig
 import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.app.executeAndLogTime
 import org.ivdnt.galahad.data.corpus.Corpus
@@ -113,7 +114,7 @@ internal class TEIExportTest {
     @Test
     fun bigLayerConvertTest() {
         val tagset = TagsetStore().getOrNull("TDN-Core")!!
-        val jobName = "pie-tdn"
+        val jobName = TestConfig.TAGGER_NAME
         val testsize = 2 // Kdummies
 
         println("Starting test with testsize: $testsize Kdummies. Feel free to adjust the testsize in the test.")

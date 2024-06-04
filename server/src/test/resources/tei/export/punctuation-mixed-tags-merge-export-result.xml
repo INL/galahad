@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader><fileDesc><sourceDesc><listBibl xml:id="galahadMetadata">
     <bibl>
         <interpGrp type="model">
-            <interp>pie-tdn</interp>
+            <interp>pie-tdn-all</interp>
         </interpGrp>
         <interpGrp type="tagset">
             <interp>TDN-Core</interp>
