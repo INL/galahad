@@ -1,7 +1,4 @@
 # Docker compose file for galahad client, server and proxy
-# Note: outside of swarm mode, the deploy key requires use of the --compatibility flag
-
-version: '3'
 services:
     client:
         image: instituutnederlandsetaal/galahad-client:${APP_VERSION}
