@@ -1,7 +1,7 @@
 # Set the default label
 : ${VERSION_LABEL:=dev}
 
-./build-all.sh
+./scripts/build-all.sh
 
 echo "Will push galahad images with version <$VERSION_LABEL>. Set VERSION_LABEL to override this."
 

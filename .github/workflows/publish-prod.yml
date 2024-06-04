@@ -1,8 +1,9 @@
 name: Prod images to docker
 
 on:
-  tags: 
-    - '[0-9]+.[0-9]+.[0-9]+'
+  push:
+    tags: 
+      - '[0-9]+.[0-9]+.[0-9]+'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -28,6 +29,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        run: cd scripts && ./build-and-push-all.sh
+        run: ./scripts/build-and-push-all.sh
         env:
           VERSION_LABEL: latest
