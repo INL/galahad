@@ -16,7 +16,7 @@
 
         <template #tabs-start>
             <a href="/galahad/home">
-                <img class="painting" src="/galahad-graal-klein.png" />
+                <img class="painting" src="@/assets/galahad-graal-klein.png" />
             </a>
         </template>
 

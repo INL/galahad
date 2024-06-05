@@ -39,7 +39,7 @@
                 </div>
 
                 <figure class="right">
-                    <img src="/galahad-graal-medium.png" />
+                    <img src="@/assets/galahad-graal-medium.png" />
                     <figcaption>
                         <i>
                             &ldquo;Ende seget datmen daer doe wan<br>
