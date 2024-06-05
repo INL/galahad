@@ -27,7 +27,7 @@
             <a href="/galahad/help" target="_blank">Help</a>
             <a href="/galahad/application" target="_blank">About</a>
             <a href="/galahad/contribute" target="_blank">Contribute</a>
-            <a href="http://lancelot.ivdnt.org" target="_blank">Lancelot</a>
+            <a href="https://portal.clarin.ivdnt.org/lancelot" target="_blank">LAnCeLoT</a>
         </template>
 
     </GTabs>
