@@ -9,7 +9,7 @@ produces:
   - TOK
 model:
   name: pie-tdn-1600-1900
-  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/tdn-1600-1900
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/TDN-1600-1900
 software:
   name: int-pie
   href: https://github.com/INL/int-pie/tree/1.0.0

@@ -1,6 +1,5 @@
 {
   "name": "galahad-client",
-  "version": "0.0.2-ALPHA-SNAPSHOT",
   "private": true,
   "scripts": {
     "dev": "vite",

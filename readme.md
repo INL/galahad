@@ -1,4 +1,4 @@
-# GaLAHaD (1.0.0)
+# GaLAHaD
 Generating Linguistic Annotations for Historical Dutch
 
 [![Dev images to docker](https://github.com/INL/Galahad/actions/workflows/publish-dev.yml/badge.svg)](https://github.com/INL/Galahad/actions/workflows/publish-dev.yml)

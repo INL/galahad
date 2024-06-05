@@ -16,7 +16,7 @@
 
         <template #tabs-start>
             <a href="/galahad/home">
-                <img class="painting" src="/galahad-graal-klein.png" />
+                <img class="painting" src="@/assets/galahad-graal-klein.png" />
             </a>
         </template>
 
@@ -206,10 +206,6 @@ body {
     .tabs>.content {
         padding: 10px 0 0 0 !important;
     }
-}
-
-.logo {
-    filter: invert(100%);
 }
 
 .fade-enter-active,

@@ -2,7 +2,8 @@
     <div>
         <GTable title="Tagsets overview" :columns :items="tagsetsStore.tagsets">
             <template #help>
-                Here you can see an overview of all tagsets used by the benchmark corpora.
+                Here you can see an overview of possible tagsets to annotate Dutch. Currently only TDN-Core is used in
+                the platform.
             </template>
 
             <template #table-empty-instruction>
