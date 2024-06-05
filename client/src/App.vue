@@ -208,10 +208,6 @@ body {
     }
 }
 
-.logo {
-    filter: invert(100%);
-}
-
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.25s linear;
