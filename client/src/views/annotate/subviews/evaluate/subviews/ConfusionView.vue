@@ -1,11 +1,12 @@
 <template>
     <div>
 
-        <GTable title="Part-of-speech confusion" helpSubject="evaluate" :columns :items="rows" id="confusionTable"
+        <GTable title="Part-of-speech confusion" helpSubject="evaluation" :columns :items="rows" id="confusionTable"
             :loading="loading" sortedByField="referenceJob" :sortDesc="false" hoverRow>
             <template #help>
                 <p>
-                    The table below presents an overview of the matches (in green) and mismatches per PoS when comparing
+                    In part-of-speech confusion, an overview is given of the matches (in green) and mismatches per PoS
+                    when comparing
                     the tagging of the hypothesis layer with the reference layer. Click on any frequency below to show a
                     data sample.
                 </p>

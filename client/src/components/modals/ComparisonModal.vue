@@ -47,7 +47,7 @@ defineEmits(['hide', 'download'])
 // Fields
 const title = computed(() => {
     if (props.samples.title) return props.samples.title
-    return props.samples.agreement ? 'PoS agree samples' : 'PoS confusion samples'
+    return props.samples.agreement ? 'PoS agree samples' : 'Pos Confusion samples'
 })
 const columns = computed(() => {
     return [

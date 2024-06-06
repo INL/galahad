@@ -1,5 +1,5 @@
 <template>
-    <GTable title="Corpora" helpSubject="corpora" :columns :items="displayCorpora" :loading="corporaStore.loading"
+    <GTable title="Corpora" :columns :items="displayCorpora" :loading="corporaStore.loading"
         sortedByField="name" :sortDesc="false" :selectable="selectable" v-model="selectedCorpus"
         v-if="displayCorpora.length > 0 || (type == TableCorporaType.User && !sharedWithYou)">
 

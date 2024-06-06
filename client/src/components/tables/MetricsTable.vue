@@ -1,5 +1,5 @@
 <template>
-    <GTable :title :columns :items :loading helpSubject="evaluate" class="metricsTable" :sortedByField :noHelp>
+    <GTable :title :columns :items :loading helpSubject="evaluation" class="metricsTable" :sortedByField :noHelp>
 
         <template #help>
             <slot name="help">
