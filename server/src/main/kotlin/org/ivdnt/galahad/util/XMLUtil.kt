@@ -12,17 +12,24 @@ class XMLWriter(private val stream: OutputStream) {
     private var indent = 0 // XML indentation
 
     /**
-     * Write unindented text.
+     * Write unindented line.
      */
-    fun writeNoIndent(str: String) {
-        stream.write((str + "\n").toByteArray())
+    fun writeLineRaw(str: String) {
+        writeRaw(str + "\n")
     }
 
     /**
-     * Write indented text between tags.
+     * Write unindented text.
      */
-    fun write(str: String) {
-        writeNoIndent("    ".repeat(indent) + str)
+    fun writeRaw(str: String) {
+        stream.write(str.toByteArray())
+    }
+
+    /**
+     * Write indented line between tags.
+     */
+    fun writeLine(str: String) {
+        writeLineRaw("    ".repeat(indent) + str)
     }
 
     /**
@@ -30,7 +37,7 @@ class XMLWriter(private val stream: OutputStream) {
      * @param str an XML tag, including angular brackets.
      */
     fun openTag(str: String) {
-        write(str)
+        writeLine(str)
         indent++
     }
 
@@ -40,7 +47,7 @@ class XMLWriter(private val stream: OutputStream) {
      */
     fun closeTag(str: String) {
         indent--
-        write(str)
+        writeLine(str)
     }
 }
 

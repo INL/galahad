@@ -24,7 +24,7 @@ class LayerToFoliaConverter (
         val taggerName = tagger.id
         val writer = XMLWriter(outputStream)
         // XML Header
-        writer.writeNoIndent("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
+        writer.writeLineRaw("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
         writer.openTag("<FoLiA xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://ilk.uvt.nl/folia\" xml:id=\"$id\" generator=\"galahad.ivdnt.org\" version=\"2.5.3\">")
         // Metadata
         writeMetadata(writer, taggerName)
@@ -36,19 +36,19 @@ class LayerToFoliaConverter (
         writer.openTag("<metadata type=\"native\">")
         // Annotations
         writer.openTag("<annotations>")
-        writer.write("<text-annotation/>")
-        writer.write("<paragraph-annotation/>")
-        writer.write("<sentence-annotation/>")
-        writer.write("<token-annotation/>")
+        writer.writeLine("<text-annotation/>")
+        writer.writeLine("<paragraph-annotation/>")
+        writer.writeLine("<sentence-annotation/>")
+        writer.writeLine("<token-annotation/>")
         for (annotation in setOf("lemma", "pos")) {
             writer.openTag("<$annotation-annotation set=\"${taggerName}\">")
-            writer.write("<annotator processor=\"${taggerName}\"/>")
+            writer.writeLine("<annotator processor=\"${taggerName}\"/>")
             writer.closeTag("</$annotation-annotation>")
         }
         writer.closeTag("</annotations>")
         // Provenance
         writer.openTag("<provenance>")
-        writer.write(
+        writer.writeLine(
             "<processor host=\"galahad.ivdnt.org\" name=\"${taggerName}\" src=\"https://github.com/INL/taggers-dockerized\" type=\"auto\" user=\"${transformMetadata.user.id}\" xml:id=\"${taggerName}\"/>"
         )
         writer.closeTag("</provenance>")
@@ -72,9 +72,9 @@ class LayerToFoliaConverter (
         taggerName: String,
     ) {
         writer.openTag("<w xml:id=\"$id.p1.w${index + 1}\">")
-        writer.write("<t>${term.targets[0].literal.escapeXML()}</t>")
-        writer.write("<lemma class=\"${term.lemma?.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>")
-        writer.write(
+        writer.writeLine("<t>${term.targets[0].literal.escapeXML()}</t>")
+        writer.writeLine("<lemma class=\"${term.lemma?.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>")
+        writer.writeLine(
             "<pos class=\"${term.pos?.escapeXML()}\" head=\"${term.posHeadGroup?.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>"
         )
         writer.closeTag("</w>")

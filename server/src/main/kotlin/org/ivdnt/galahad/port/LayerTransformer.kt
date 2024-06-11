@@ -21,8 +21,11 @@ open class LayerTransformer (
 
     val punctuationTags = tagsets.getOrNull( tagger.tagset )?.punctuationTags ?: setOf()
 
-    val dateFormat: SimpleDateFormat
+    val dateTimeFormat: SimpleDateFormat
         get() = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+
+    val dateFormat: SimpleDateFormat
+        get() = SimpleDateFormat("yyyy-MM-dd")
 
 }
 
