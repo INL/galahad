@@ -19,3 +19,4 @@ dataset:
 trainedBy: "INT"
 date: "2024-06-03"
 devport: 8104
+version: "1.0.0"
