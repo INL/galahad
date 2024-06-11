@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1712653174443</ID>
+        <Name>TextProfileINT_GaLAHaD</Name>
+        <Description>A profile which describes a file processed by the GaLAHaD platform (https://portal.clarin.ivdnt.org/galahad/home)</Description>
+        <Status>development</Status>
+        <DerivedFrom>clarin.eu:cr1:p_1712653174442</DerivedFrom>
+    </Header>
+    <Component name="TextProfileINT_GaLAHaD" CardinalityMin="1" CardinalityMax="1">
+        <Element name="corpusName" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        <Component name="TextFile_GaLAHaD" ComponentRef="clarin.eu:cr1:c_1712653174437" CardinalityMin="1" CardinalityMax="1">
+            <Element name="GaLAHaDPersistentIdentifier" ConceptLink="http://hdl.handle.net/11459/CCR_C-2573_ae7c2548-8a86-ab6e-7099-e28b7697d1a2" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>A persistent identifier given by the GaLAHaD platform</Documentation>
+            </Element>
+            <Component name="Conversion_GaLAHaD" ComponentRef="clarin.eu:cr1:c_1712653174444" CardinalityMin="1" CardinalityMax="1">
+                <Element name="conversionDescription" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <Documentation>Describes the conversion process</Documentation>
+                </Element>
+                <Component name="Tool" ComponentRef="clarin.eu:cr1:c_1708423613597" CardinalityMin="1" CardinalityMax="1">
+                    <Element name="toolName" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <Documentation>Name of a tool</Documentation>
+                    </Element>
+                    <Element name="toolVersion" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                        <Documentation>Identifier of the version of the tool, e.g. a date, a version number,...</Documentation>
+                    </Element>
+                    <Element name="toolURI" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                        <Documentation>Locates the tool, e.g. by means of an URL</Documentation>
+                    </Element>
+                </Component>
+                <Component name="Organisation" ComponentRef="clarin.eu:cr1:c_1712653174406" CardinalityMin="1" CardinalityMax="1">
+                    <Element name="organisationName" ConceptLink="http://hdl.handle.net/11459/CCR_C-6243_bd27ac08-ec04-0db2-d95c-52f2a6b1e59d" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Element name="organisationURL" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                        <Documentation>Locates the website of an organisation by means of a URL. </Documentation>
+                    </Element>
+                </Component>
+            </Component>
+        </Component>
+        <Component name="Source_GaLAHaD" ComponentRef="clarin.eu:cr1:c_1712653174438" CardinalityMin="1" CardinalityMax="1">
+            <Element name="sourceID" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>The ID of the original text</Documentation>
+            </Element>
+            <Element name="sourceCollection" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Name of the collection where the text originates from</Documentation>
+            </Element>
+            <Element name="sourceCollectionURI" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>The  online location of  the source collection</Documentation>
+            </Element>
+            <Component name="DateInformation_GaLAHaD" ComponentRef="clarin.eu:cr1:c_1712653174439" CardinalityMin="0" CardinalityMax="1">
+                <Component name="Date_Period" ComponentRef="clarin.eu:cr1:c_1527668176057" CardinalityMin="1" CardinalityMax="1">
+                    <Element name="yearFrom" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Element name="yearTo" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="monthFrom" ValueScheme="gMonth" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="monthTo" ValueScheme="gMonth" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="dayFrom" ValueScheme="gDay" CardinalityMin="0" CardinalityMax="1"/>
+                    <Element name="dayTo" ValueScheme="gDay" CardinalityMin="0" CardinalityMax="1"/>
+                </Component>
+            </Component>
+        </Component>
+        <Component name="Language_GaLAHaD" ComponentRef="clarin.eu:cr1:c_1712653174441" CardinalityMin="1" CardinalityMax="1">
+            <Element name="languageName" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="dominantLanguage" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Indicates whether the language is the dominant one. The possible values for this element are "true",  "false" and "unspecified".</Documentation>
+            </Element>
+        </Component>
+        <Component name="Annotation" ComponentRef="clarin.eu:cr1:c_1712653174427" CardinalityMin="1" CardinalityMax="unbounded">
+            <Element name="annotationType" ConceptLink="http://hdl.handle.net/11459/CCR_C-2462_5b266792-7a54-9296-42e2-2318b9861fe1" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                <Documentation>Specifies the type of annotation that was provided, e.g. token annotion, phonetic annotation, POS tagging, topic annotation,...</Documentation>
+            </Element>
+            <Element name="annotationStyle" ConceptLink="http://hdl.handle.net/11459/CCR_C-2507_94b29b04-98e8-fca3-a0ef-3a44d795b0da" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Specifies whether the annotion is created inline, stand-off or a combination of both styles. </Documentation>
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>inline</item>
+                            <item>stand-off</item>
+                            <item>inline and stand-off</item>
+                            <item>unspecified</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="annotationDocumentation" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded">
+                <Documentation>Identifies the documentation of an annotion by means of a URI</Documentation>
+            </Element>
+            <Element name="annotationSet" ConceptLink="http://hdl.handle.net/11459/CCR_C-2497_6e93b9ce-1be7-248f-ab63-ba0b9c63661f" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Identifies the tagset of an annotation. e.g. by means of a URI or by means of a name</Documentation>
+            </Element>
+            <Component name="Provenance" CardinalityMin="0" CardinalityMax="1">
+                <Documentation>Provides information about the creation of an annotation</Documentation>
+                <Element name="annotationFormat" ConceptLink="http://hdl.handle.net/11459/CCR_C-2562_872eb94a-47fb-b551-2f64-13ded063259e" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                    <Documentation>Specifies the annotation format</Documentation>
+                </Element>
+                <Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                    <Documentation>Description in general prose of the annotion process</Documentation>
+                </Element>
+                <Component name="AnnotationProcess" CardinalityMin="0" CardinalityMax="5">
+                    <Documentation>Identifies the annotationMode and the person(s), organisation(s) and/or tool(s) involved</Documentation>
+                    <Element name="annotationMode" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                        <Documentation>Indicates whether the resource is annotated manually or by automatic processes or by a combination of both</Documentation>
+                        <ValueScheme>
+                            <Vocabulary>
+                                <enumeration>
+                                    <item>automatically annotated</item>
+                                    <item>manually annotated</item>
+                                    <item>manually verified</item>
+                                    <item>mixed</item>
+                                    <item>copied from source</item>
+                                    <item>unspecified</item>
+                                </enumeration>
+                            </Vocabulary>
+                        </ValueScheme>
+                    </Element>
+                    <Component name="ProcessorsAnnotators" CardinalityMin="0" CardinalityMax="1">
+                        <Documentation>Groups persons, organisations and/or tools involved in the annotation process</Documentation>
+                        <Component name="Person" ComponentRef="clarin.eu:cr1:c_1527668176056" CardinalityMin="0" CardinalityMax="unbounded">
+                            <Element name="internalPersonID" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                                <Documentation>ID which is used internally (within a collection/within a project/within an organisation/...) for a person</Documentation>
+                            </Element>
+                            <Element name="normalisedFullName" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                                <Documentation>Specifies the canonical form of a full name</Documentation>
+                            </Element>
+                            <Element name="fullNameFromSource" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>Specifies the full name as copied from the source</Documentation>
+                            </Element>
+                            <Element name="pseudonym" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded">
+                                <Documentation>Specifies a false or fictitious name, an alias</Documentation>
+                            </Element>
+                            <Element name="anonymized" ConceptLink="http://hdl.handle.net/11459/CCR_C-2548_659fd2af-ffa3-f1ee-059d-2c59533b8467" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>Indicates whether the name was anonymized. The possible values for this element are "true",  "false" and "unspecified".</Documentation>
+                            </Element>
+                            <Element name="firstName" ConceptLink="http://hdl.handle.net/11459/CCR_C-4194_10476a01-dbce-7ad5-4cb2-f6eb7e777ff0" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="infixes" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>A component of a Dutch family name or similar of other languages, generally an unaffixed prefix (https://www.wikidata.org/wiki/Property:P7377) </Documentation>
+                            </Element>
+                            <Element name="lastName" ConceptLink="http://hdl.handle.net/11459/CCR_C-4195_cfa61853-c8ef-252d-b87c-e02ae6149ea1" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="gender" CardinalityMin="0" CardinalityMax="1">
+                                <ValueScheme>
+                                    <Vocabulary>
+                                        <enumeration>
+                                            <item>male</item>
+                                            <item>female</item>
+                                            <item>non-binary</item>
+                                            <item>undisclosed</item>
+                                            <item>unspecified</item>
+                                        </enumeration>
+                                    </Vocabulary>
+                                </ValueScheme>
+                            </Element>
+                            <Element name="yearOfBirth" ConceptLink="http://hdl.handle.net/11459/CCR_C-5484_e9a0c522-add0-381d-1bc8-93431c3bde19" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="age" ConceptLink="http://hdl.handle.net/11459/CCR_C-3660_2a416158-a3e9-82ff-d3e9-ac5afed7f7c6" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="ageGroup" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>E.g. 40 - 49 years </Documentation>
+                            </Element>
+                            <Element name="yearOfDeath" ConceptLink="http://hdl.handle.net/11459/CCR_C-6794_bdba0a83-f392-b7b5-8a82-e88cca0ca87d" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="highestCompletedEducationLevel" ConceptLink="http://hdl.handle.net/11459/CCR_C-2554_9de315eb-5f32-fec4-c445-cda05f2bde00" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="placeOfBirth" ConceptLink="http://hdl.handle.net/11459/CCR_C-6268_30619261-84c3-331e-216c-fa9db668badc" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="occupation" ConceptLink="http://hdl.handle.net/11459/CCR_C-2558_319980ea-b064-d2b1-93ed-29056d553816" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+                            <Element name="placeOfResidence" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+                            <Element name="organisationName" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>The name of the organisation to which the person is affiliated.</Documentation>
+                            </Element>
+                            <Element name="religion" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="socialStatus" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+                            <Element name="externalPersonIdentifier" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>External person identifier originating from an authority file or a thesaurus, e.g. VIAF</Documentation>
+                                <AttributeList>
+                                    <Attribute name="source" ValueScheme="string">
+                                        <Documentation>Source of the externalPersonIdentifier, e.g. VIAF</Documentation>
+                                    </Attribute>
+                                </AttributeList>
+                            </Element>
+                        </Component>
+                        <Component name="Organisation" ComponentRef="clarin.eu:cr1:c_1712653174406" CardinalityMin="0" CardinalityMax="unbounded">
+                            <Element name="organisationName" ConceptLink="http://hdl.handle.net/11459/CCR_C-6243_bd27ac08-ec04-0db2-d95c-52f2a6b1e59d" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                            <Element name="organisationURL" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>Locates the website of an organisation by means of a URL. </Documentation>
+                            </Element>
+                        </Component>
+                        <Component name="Tool" ComponentRef="clarin.eu:cr1:c_1708423613597" CardinalityMin="0" CardinalityMax="unbounded">
+                            <Element name="toolName" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+                                <Documentation>Name of a tool</Documentation>
+                            </Element>
+                            <Element name="toolVersion" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>Identifier of the version of the tool, e.g. a date, a version number,...</Documentation>
+                            </Element>
+                            <Element name="toolURI" ValueScheme="string" CardinalityMin="0" CardinalityMax="1">
+                                <Documentation>Locates the tool, e.g. by means of an URL</Documentation>
+                            </Element>
+                        </Component>
+                    </Component>
+                    <Component name="Date_Period" ComponentRef="clarin.eu:cr1:c_1527668176057" CardinalityMin="0" CardinalityMax="1">
+                        <Element name="yearFrom" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                        <Element name="yearTo" ValueScheme="gYear" CardinalityMin="0" CardinalityMax="1"/>
+                        <Element name="monthFrom" ValueScheme="gMonth" CardinalityMin="0" CardinalityMax="1"/>
+                        <Element name="monthTo" ValueScheme="gMonth" CardinalityMin="0" CardinalityMax="1"/>
+                        <Element name="dayFrom" ValueScheme="gDay" CardinalityMin="0" CardinalityMax="1"/>
+                        <Element name="dayTo" ValueScheme="gDay" CardinalityMin="0" CardinalityMax="1"/>
+                    </Component>
+                </Component>
+            </Component>
+        </Component>
+    </Component>
+</ComponentSpec>

@@ -76,7 +76,7 @@ class ExportController(
         val format = DocumentFormat.fromString(formatName)
         val ctm = getCorpusTransformMetadata(corpus, job)
         setZipResponseHeader(ctm)
-        ctm.corpus.getZipped(formatMapper = {
+        ctm.corpus.getZipped(ctm, formatMapper = {
             try {
                 // Document conversions.
                 val dtm = ctm.documentMetadata(it.name)

@@ -27,6 +27,13 @@ fun createZipFile(files: Sequence<File>, outStream: OutputStream? = null): File 
         zipStream.putNextEntry(ZipEntry(f.name))
         zipStream.write(f.readBytes())
     }
+    // Always add CMDI to zips
+    val cmdis = listOf("TextProfileINT_GaLAHaD.xml", "TextProfileINT_GaLAHaD.xsd")
+    for (cmdi in cmdis) {
+        val cmdiFile = getResourceStream(cmdi)
+        zipStream.putNextEntry(ZipEntry(cmdi))
+        zipStream.write(cmdiFile!!.readBytes())
+    }
     // Close
     zipStream.flush()
     zipStream.close()
