@@ -10,10 +10,6 @@ vertelt	VRB(finiteness=fin,tense=pres)	vertellen
 ende	CONJ(type=coor)	en	
 prijst	VRB(finiteness=fin,tense=pres)	prijzen	
 dic	PD(type=d-p,subtype=oth,position=prenom,WF=mis)	die	
-(	PC		
-l.:			
-die	PD(type=d-p,subtype=oth,position=prenom)	die	
-)	PC		
 vromicheyt	NOU-C(number=sg)	vromigheid	
 zijns	PD(type=poss,position=prenom)	zijn	
 heren	NOU-C(number=sg)	heer	
@@ -408,11 +404,6 @@ is	VRB(finiteness=fin,tense=pres)	zijn
 d	PD(type=d-p,subtype=art,position=prenom)	de	
 '	PC		
 vvas	NOU-C(number=sg)	was	
-(	PC		
-uit			
-de			
-gaatjes			
-)	PC		
 ghevveken	VRB(finiteness=pastpart)	wijken	
 :	PC		
 So	ADV(type=reg)	zo	
@@ -543,13 +534,6 @@ hen	PD(type=pers,position=free)	zij
 van	ADP(type=pre)	van	
 desen	PD(type=d-p,subtype=oth,position=prenom)	deze	
 kinde	NOU-C(number=sg)	kind	
-(	PC		
-t.w.			
-van			
-den			
-pasgeboren			
-Jezus			
-)	PC		
 ghesproken	VRB(finiteness=pastpart)	spreken	
 was	VRB(finiteness=fin,tense=past)	zijn	
 ,	PC		
@@ -672,9 +656,6 @@ werck	NOU-C(number=sg)	werk
 
 Dat	CONJ(type=sub)	dat	
 hy	PD(type=pers,position=free)	hij	
-(	PC		
-Christus			
-)	PC		
 als	CONJ(type=sub)	als	
 een	PD(type=indef,subtype=art,position=prenom)	een	
 triumphelicke	AA(degree=pos,position=prenom)	triomfelijk	
@@ -682,12 +663,6 @@ koningk	NOU-C(number=sg)	koning
 …	PC		
 de	PD(type=d-p,subtype=art,position=prenom)	de	
 poorten	NOU-C(number=pl)	poort	
-(	PC		
-dat	PD(type=d-p,position=free)	dat	
-is	VRB(finiteness=fin,tense=pres)	zijn	
-de			
-kracht			
-)	PC		
 der	PD(type=d-p,subtype=art,position=prenom)	de	
 hellen	NOU-C(number=sg)	hel	
 ghebroken	VRB(finiteness=pastpart)	breken	
@@ -1266,19 +1241,6 @@ hy	PD(type=pers,position=free)	hij
 ghewinnelic	AA(degree=pos,position=free)	gewinnelijk	
 ,	PC		
 
-Riueren	VRB(finiteness=inf)	riveren	
-,	PC		
-oft	CONJ(type=coor)	of	
-neten	VRB(finiteness=inf)	neten	
-.	PC		
-Riuer	RES(type=for)	riuer	
-vn	RES(type=for)	vn	
-clou	RES(type=for)	clou	
-&	ADV(type=reg,WF=abbr)		
-c.			
-Obtundere	RES(type=for)	obtundere	
-,	PC		
-
 Maer	CONJ(type=coor)	maar	
 sal	VRB(finiteness=fin,tense=pres)	zullen	
 een	PD(type=indef,subtype=art,position=prenom)	een	
@@ -1406,12 +1368,6 @@ na	ADP(type=pre)	na
 reghel	NOU-C(number=sg)	regel	
 van	ADP(type=pre)	van	
 rechte	NOU-C(number=sg)	recht	
-(	PC		
-naar			
-recht			
-en			
-billijkheid			
-),	PC		
 
 Proba	NOU-C(number=sg)	proba	
 der	PD(type=d-p,subtype=art,position=prenom)	de	
@@ -1517,9 +1473,6 @@ te	ADP(type=pre)	te
 repareren	VRB(finiteness=inf)	repareren	
 ,	PC		
 
-(	PC		
-Hij			
-)	PC		
 heeft	VRB(finiteness=fin,tense=pres)	hebben	
 belooft	VRB(finiteness=pastpart)	beloven	
 …	PC		
@@ -1988,10 +1941,6 @@ enz.,	ADV(type=reg,WF=abbr)|ADV(type=reg,WF=abbr)	enzovoort|enzovoorts
 
 Gheraect	VRB(finiteness=fin,tense=pres)	geraken	
 mense	NOU-C(number=sg)	mens	
-(	PC		
-de			
-gierigaards			
-)	PC		
 jnder	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	in+de	
 necken	NOU-C(number=sg)	nek	
 ,	PC		
@@ -2088,14 +2037,6 @@ verloren	VRB(finiteness=pastpart)	verliezen
 gelopen	VRB(finiteness=pastpart)	lopen	
 of	CONJ(type=coor)	of	
 gejaegt	VRB(finiteness=pastpart)	jagen	
-(	PC		
-loopen			
-of			
-jagen			
-is			
-alles			
-vergeefsch			
-),	PC		
 maer	CONJ(type=coor)	maar	
 het	PD(type=pers,position=free)	het	
 is	VRB(finiteness=fin,tense=pres)	zijn	
@@ -2201,9 +2142,6 @@ moorghen	ADV(type=reg)	morgen
 Twelc	PD(type=w-p,position=free)	hetwelk	
 jc	PD(type=pers,position=free)	ik	
 lueteren	NOU-C(number=sg)	leuteren	
-(	PC		
-aarzelend			
-)	PC		
 boorghen	VRB(finiteness=inf)	borgen	
 met	ADP(type=pre)	met	
 scaemten	NOU-C(number=pl)	schaamte	
@@ -2340,10 +2278,6 @@ vii	NUM(type=card,position=prenom,representation=rom)	zeven
 l	NOU-C(number=sg,WF=abbr)	libra	
 .,	PC		
 
-(	PC		
-De			
-Israëlieten			
-)	PC		
 zijn	VRB(finiteness=fin,tense=pres)	zijn	
 ongheschendt	AA(degree=pos,position=free)	ongeschonden	
 ,	PC		
@@ -2371,9 +2305,6 @@ van	ADP(type=pre)	van
 exue	NOU-C(number=sg)	exue	
 lange	AA(degree=pos,position=free)	lang	
 onderhouden	VRB(finiteness=fin,tense=pres)	onderhouden	
-(	PC		
-achterhouden			
-),	PC		
 't	PD(type=w-p,position=free)	hetwelk	mw_888330
 welk	PD(type=w-p,position=free)	hetwelk	mw_888330
 compt	VRB(finiteness=fin,tense=pres)	komen	
@@ -2693,12 +2624,6 @@ gront	NOU-C(number=sg)	grond
 was	VRB(finiteness=fin,tense=past)	zijn	
 anders	ADV(type=reg)	anders	
 niet	PD(type=indef,position=free)	niet	
-(	PC		
-bestond			
-uit			
-niet			
-anders			
-)	PC		
 dan	CONJ(type=sub)	dan	
 cleyne	AA(degree=pos,position=prenom)	klein	
 swarte	AA(degree=pos,position=prenom)	zwart	
@@ -2948,14 +2873,6 @@ lach	VRB(finiteness=fin,tense=past)	liggen
 voor	ADP(type=pre)	voor	
 zijn	PD(type=poss,position=prenom)	zijn	
 duere	NOU-C(number=sg)	deur	
-(	PC		
-t.w.			
-die			
-van			
-zekeren			
-rijken			
-man			
-),	PC		
 vol	AA(degree=pos,position=free)	vol	
 zweren	NOU-C(number=pl)	zweer	
 ende	CONJ(type=coor)	en	
@@ -3472,9 +3389,6 @@ meer	ADV(type=reg)	meer
 broot	NOU-C(number=sg)	brood	
 ,	PC		
 
-(	PC		
-Hij			
-)	PC		
 zal	VRB(finiteness=fin,tense=pres)	zullen	
 verbueren	VRB(finiteness=inf)	verbeuren	
 VJ	NUM(type=card,position=prenom,representation=rom)	zes	
@@ -3504,10 +3418,6 @@ belijdt	VRB(finiteness=fin,tense=pres)	belijden
 dat	CONJ(type=sub)	dat	
 desen	PD(type=d-p,subtype=oth,position=prenom)	deze	
 steen	NOU-C(number=sg)	steen	
-(	PC		
-t.w.			
-Christus			
-)	PC		
 die	PD(type=d-p,position=free)	die	
 de	PD(type=d-p,subtype=art,position=prenom)	de	
 Joden	NOU-C(number=pl)	jood	
@@ -3612,13 +3522,6 @@ ghenaemt	VRB(finiteness=pastpart)	namen
 ,	PC		
 
 —	PC		
-(	PC		
-Het			
-maken			
-van			
-een			
-boomgaard			
-)	PC		
 sonder	ADP(type=pre)	zonder	
 winninghe	NOU-C(number=sg)	winning	
 van	ADP(type=pre)	van	
@@ -3721,16 +3624,6 @@ troosten	VRB(finiteness=inf)	troosten
 tot	ADP(type=pre)	tot	
 u	PD(type=poss,position=prenom)	uw	
 behoufven	NOU-C(number=sg)	behoef	
-("	PC		
-Scriftuerlick			
-Troost			
-"	PC		
-tot			
-"	PC		
-den			
-Troosteloosen			
-Zondare			
-"),	PC		
 
 —	PC		
 De	PD(type=d-p,subtype=art,position=prenom)	de	
@@ -3807,11 +3700,6 @@ stromijn	NOU-C(number=sg)	stramien
 
 Den	PD(type=d-p,subtype=art,position=prenom)	de	
 sommigen	PD(type=indef,position=free)	sommig	
-(	PC		
-zekere			
-soorten			
-"	PC		
-wijngaert")			
 brengt	VRB(finiteness=fin,tense=pres)	brengen	
 witte	AA(degree=pos,position=prenom)	wit	
 wijndruiuen	NOU-C(number=pl)	wijndruif	
@@ -4042,9 +3930,6 @@ woech	VRB(finiteness=fin,tense=past)	wegen
 —	PC		
 De	PD(type=d-p,subtype=art,position=prenom)	de	
 ionghe	AA(degree=pos,position=prenom)	jong	
-(	PC		
-ganzen			
-)	PC		
 behooren	VRB(finiteness=fin,tense=pres)	behoren	
 …	PC		
 ghevoedt	VRB(finiteness=pastpart)	voeden	
@@ -4255,9 +4140,6 @@ warandatie	NOU-C(number=sg)	warandatie
 van	ADP(type=pre)	van	
 der	PD(type=d-p,subtype=art,position=prenom)	de	
 wulle	NOU-C(number=sg)	wol	
-(	PC		
-opschrift			
-),	PC		
 
 En	CONJ(type=coor)	en	
 cont	VRB(finiteness=fin,tense=pres)	kunnen	
@@ -4689,12 +4571,6 @@ maken	VRB(finiteness=fin,tense=pres)	maken
 Alzoo	ADV(type=reg)	alzo	
 moet	VRB(finiteness=fin,tense=pres)	moeten	
 wy	PD(type=pers,position=free)	wij	
-(	PC		
-ed.			
-1616			
-:	PC		
-men			
-)	PC		
 vierigh	AA(degree=pos,position=free)	vurig	
 tot	ADP(type=pre)	tot	
 dees	PD(type=d-p,subtype=oth,position=prenom)	deze	
@@ -4743,9 +4619,6 @@ schelde	VRB(finiteness=fin,tense=pres)	schelden
 ick	PD(type=pers,position=free)	ik	
 hem	PD(type=pers,position=free)	hij	
 ,	PC		
-a.			
-w.			
-15			
 
 Begheerdi	VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)	begeren+gij	
 int	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	in+het	
@@ -5101,10 +4974,6 @@ Machabeus	NOU-P	Makkabeüs
 dans	NOU-C(number=sg)	dans	
 ,	PC		
 
-(”	PC		
-Gods	NOU-P	God	
-vyanden			
-”)	PC		
 quamen	VRB(finiteness=fin,tense=past)	komen	
 …	PC		
 voor	ADP(type=pre)	voor	
@@ -5241,18 +5110,8 @@ trout	VRB(finiteness=fin,tense=pres)	trouwen
 )	PC		
 Int	ADP(type=pre)+PD(type=d-p,subtype=art,position=prenom)	in+het	
 ongheual	NOU-C(number=sg)	ongeval	
-(	PC		
-een			
-moeder			
-spreekt			
-),	PC		
 
 Zij	PD(type=pers,position=free)	zij	
-(	PC		
-t.w.			
-de			
-ambtsdragers			
-)	PC		
 (	PC		
 zullen	VRB(finiteness=fin,tense=pres)	zullen	
 )	PC		
@@ -5450,9 +5309,6 @@ ghenatureerd	VRB(finiteness=pastpart)	natureren
 Rijckelick	AA(degree=pos,position=free)	rijkelijk	
 was	VRB(finiteness=fin,tense=past)	zijn	
 hy	PD(type=pers,position=free)	hij	
-(	PC		
-Adam			
-)	PC		
 met	ADP(type=pre)	met	
 Gods	NOU-P	God	
 gauen	NOU-C(number=pl)	gave	
@@ -5581,11 +5437,6 @@ buten	ADV(type=reg)	buiten
 
 U	PD(type=poss,position=prenom)	uw	
 woort	NOU-C(number=sg)	woord	
-(	PC		
-dat			
-van			
-God			
-)	PC		
 en	ADV(type=reg)	ne	
 is	VRB(finiteness=fin,tense=pres)	zijn	
 niet	PD(type=indef,position=free)	niet	
@@ -6160,10 +6011,6 @@ supplianten	NOU-C(number=pl)	suppliant
 elckx	PD(type=indef,position=free)	elk	
 van	ADP(type=pre)	van	
 hem	PD(type=pers,position=free)	hij	
-(	PC		
-een			
-commissie			
-)	PC		
 scerpelijck	ADV(type=reg)	scherpelijk	
 beveelt	VRB(finiteness=fin,tense=pres)	bevelen	
 ,	PC		
@@ -6352,14 +6199,6 @@ sal	VRB(finiteness=fin,tense=pres)	zullen
 
 Elcke	PD(type=indef,subtype=oth,position=prenom)	elk	
 zoede	NOU-C(number=sg)	zode	
-(	PC		
-bij			
-den			
-aanleg			
-van			
-een			
-dijk			
-)	PC		
 achter	ADV(type=reg)	achter	
 verre	AA(degree=pos,position=free)	ver	
 ouer	ADV(type=reg)	overeen	mw_72932

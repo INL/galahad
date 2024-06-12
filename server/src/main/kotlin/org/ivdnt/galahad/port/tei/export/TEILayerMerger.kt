@@ -41,7 +41,7 @@ class TEILayerMerger (
         // add headers
         // typically we expect just 1 root node.
         for( i in 0 until parser.rootNodes.length ) {
-            TEIMetadata(xmlDoc, parser.rootNodes.item(i), this).write(formatInPlace = true)
+            TEIMetadata(xmlDoc, parser.rootNodes.item(i), this, merging = true)
         }
 
         // Delete the marked notes

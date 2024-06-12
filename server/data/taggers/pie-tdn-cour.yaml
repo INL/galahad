@@ -1,5 +1,5 @@
 id: pie-tdn-cour
-description: "PIE trained on couranten"
+description: "PIE trained on newspapers"
 tagset: "TDN-Core"
 eraFrom: "1600"
 eraTo: "1700"
@@ -19,3 +19,4 @@ dataset:
 trainedBy: "INT"
 date: "2024-06-03"
 devport: 8105
+version: "1.0.0"

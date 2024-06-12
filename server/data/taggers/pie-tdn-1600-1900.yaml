@@ -1,5 +1,5 @@
 id: pie-tdn-1600-1900
-description: "PIE trained on DBNL excerpts, GTB dictionary quotations, couranten & letters as loot (1600-1900)"
+description: "PIE trained on DBNL excerpts, GTB dictionary quotations, newspapers & letters as loot (1600-1900)"
 tagset: "TDN-Core"
 eraFrom: "1600"
 eraTo: "1900"
@@ -9,13 +9,14 @@ produces:
   - TOK
 model:
   name: pie-tdn-1600-1900
-  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/TDN-1600-1900
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.2/pie/TDN-1600-1900
 software:
   name: int-pie
   href: https://github.com/INL/int-pie/tree/1.0.0
 dataset:
   name: 1600-1900
-  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/1600-1900.combination.json
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.1/combinations/1600-1900.combination.json
 trainedBy: "INT"
-date: "2024-06-03"
+date: "2024-06-12"
 devport: 8101
+version: "1.0.1"

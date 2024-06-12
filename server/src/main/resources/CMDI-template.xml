@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd:CMD xmlns:dcr="http://www.isocat.org/ns/dcr"
+ xmlns:cmd="http://www.clarin.eu/cmd/1"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:cue="http://www.clarin.eu/cmd/cues/1"
+ xmlns:cue_old="http://www.clarin.eu/cmdi/cues/1"
+ xmlns:cmdp="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1712653174443"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1712653174443/xsd" CMDVersion="1.2">
+    <cmd:Header>
+        <cmd:MdCreator>Dutch Language Institute</cmd:MdCreator>
+        <cmd:MdCreationDate>DATE</cmd:MdCreationDate>
+        <cmd:MdSelfLink></cmd:MdSelfLink>
+        <cmd:MdProfile></cmd:MdProfile>
+        <cmd:MdCollectionDisplayName>CORPUS_NAME</cmd:MdCollectionDisplayName>
+    </cmd:Header>
+    <cmd:Resources>
+        <cmd:ResourceProxyList>
+            <cmd:ResourceProxy id="landingpage">
+                <cmd:ResourceType>LandingPage</cmd:ResourceType>
+                <cmd:ResourceRef>https://resolver.ivdnt.org/PID_tei</cmd:ResourceRef>
+            </cmd:ResourceProxy>
+        </cmd:ResourceProxyList>
+        <cmd:JournalFileProxyList/>
+        <cmd:ResourceRelationList/>
+     </cmd:Resources>
+    <cmd:IsPartOfList/>
+    <cmd:Components>
+        <cmdp:TextProfileINT_GaLAHaD>
+            <cmdp:corpusName>CORPUS_NAME</cmdp:corpusName>
+            <cmdp:TextFile_GaLAHaD>
+                <cmdp:GaLAHaDPersistentIdentifier>PID_tei</cmdp:GaLAHaDPersistentIdentifier>
+                <cmdp:Conversion_GaLAHaD>
+                    <cmdp:conversionDescription>exported as FORMAT by GaLAHaD</cmdp:conversionDescription>
+                    <cmdp:Tool>
+                        <cmdp:toolName>GaLAHaD</cmdp:toolName>
+                        <cmdp:toolVersion>GALAHAD_VERSION</cmdp:toolVersion>
+                        <cmdp:toolURI>https://portal.clarin.ivdnt.org/galahad/home</cmdp:toolURI>                      
+                    </cmdp:Tool>
+                    <cmdp:Organisation>
+                        <cmdp:organisationName>Dutch Language Institute</cmdp:organisationName>
+                    </cmdp:Organisation>
+                </cmdp:Conversion_GaLAHaD>
+            </cmdp:TextFile_GaLAHaD>
+            <cmdp:Source_GaLAHaD>
+                <cmdp:sourceID>TITLE</cmdp:sourceID>
+                <cmdp:sourceCollection>SOURCE_NAME</cmdp:sourceCollection>
+                <cmdp:sourceCollectionURI>SOURCE_URL</cmdp:sourceCollectionURI>
+                <cmdp:DateInformation_GaLAHaD>
+                    <cmdp:Date_Period>
+                        <cmdp:yearFrom>ERA_FROM</cmdp:yearFrom>
+                        <cmdp:yearTo>ERA_TO</cmdp:yearTo>
+                     </cmdp:Date_Period>
+                </cmdp:DateInformation_GaLAHaD>
+            </cmdp:Source_GaLAHaD>
+            <cmdp:Language_GaLAHaD>
+                <cmdp:languageName>Dutch</cmdp:languageName>
+                <cmdp:dominantLanguage>true</cmdp:dominantLanguage>
+            </cmdp:Language_GaLAHaD>
+            <cmdp:Annotation>
+                <cmdp:annotationType>POS-tagging and lemmatisation</cmdp:annotationType>
+                <cmdp:annotationStyle>inline</cmdp:annotationStyle>
+                <cmdp:annotationSet>TAGSET</cmdp:annotationSet>
+                <cmdp:Provenance>
+                    <cmdp:annotationFormat>FORMAT</cmdp:annotationFormat>
+                    <cmdp:description>The file was automatically annotated by means of the platform GaLAHaD, which is a central hub for enriching historical Dutch.</cmdp:description>
+                    <cmdp:annotationProcess>
+                        <cmdp:annotationMode>automatically annotated</cmdp:annotationMode>
+                        <cmdp:ProcessorsAnnotators>
+                            <cmdp:Tool>
+                                <cmdp:toolName>TAGGER_NAME</cmdp:toolName>
+                                <cmdp:toolVersion>TAGGER_VERSION</cmdp:toolVersion>
+                                <cmdp:toolURI>TAGGER_URL</cmdp:toolURI>
+                            </cmdp:Tool>
+                        </cmdp:ProcessorsAnnotators>
+                        <cmdp:Date_Period>
+                            <cmdp:yearFrom>YEAR</cmdp:yearFrom>
+                            <cmdp:yearTo>YEAR</cmdp:yearTo>
+                            <cmdp:monthFrom>--MONTH</cmdp:monthFrom>
+                            <cmdp:monthTo>--MONTH</cmdp:monthTo>
+                            <cmdp:dayFrom>---DAY</cmdp:dayFrom>
+                            <cmdp:dayTo>---DAY</cmdp:dayTo>
+                        </cmdp:Date_Period>
+                    </cmdp:annotationProcess>
+                </cmdp:Provenance>
+            </cmdp:Annotation>
+        </cmdp:TextProfileINT_GaLAHaD>
+    </cmd:Components>
+</cmd:CMD>

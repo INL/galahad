@@ -3,9 +3,11 @@
         <MetricsTable title="Grouped Metrics" :loading :columns :items @download="(data) => download(data)"
             :downloading>
             <template #help>
-                <p>In PoS Metrics an overview is given of the (dis)agreement for lemma and PoS per part-of-speech. Click
-                    on
-                    the (dis)agreement value to show a data sample.</p>
+                <p>
+                    In Grouped Metrics an overview is given of the (dis)agreement for lemma and PoS per part-of-speech.
+                    For each PoS, different metrics are given by choosing the annotation and the grouping. By clicking
+                    on a percentage, a data sample is shown.
+                </p>
             </template>
             <template #prepend v-if="metrics.metrics != null">
                 <p style="text-align: center;">

@@ -48,3 +48,8 @@ fun Node.childOrNull(childTag: String): Node? {
     }
     return null
 }
+
+/** Looks for the first child node, 1 deep, or null. */
+fun Element.childOrNull(childTag: String): Element? {
+    return (this as Node).childOrNull(childTag) as Element?
+}

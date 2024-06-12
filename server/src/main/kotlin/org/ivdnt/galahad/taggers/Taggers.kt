@@ -77,6 +77,7 @@ class Taggers : BaseFileSystemStore (
         @JsonProperty("trainedBy") var trainedBy: String = "",
         @JsonProperty("date") var date: String = "",
     ) : JSONable {
+        @JsonIgnore var version: String = ""
         @JsonIgnore var devport: Int? = 0
 
         class LinkItem (

@@ -85,7 +85,7 @@
         "url": "https://www.ivdnt.org"
     },
     "issueTracker": "https://github.com/INL/galahad/issues",
-    "readme": "https://github.com/INL/Galahad/blob/development/readme.md",
+    "readme": "https://github.com/INL/Galahad/blob/release/readme.md",
     "releaseNotes": "https://github.com/INL/Galahad/releases",
     "softwareHelp": [
         {

@@ -3,9 +3,10 @@
         <MetricsTable title="Basic Global Metrics" :loading :columns :items="basicItems"
             @download="(data) => download(data)" :downloading>
             <template #help>
-                <p>In Global Metrics an overview is given of the (dis)agreement between the two layers that have been
-                    selected for lemma and PoS comparison. Click on the (dis)agreement value to show a data sample.</p>
-
+                <p>
+                    In Global Metrics an overview is given of the (dis)agreement between the two layers that have been
+                    selected for lemma and PoS comparison. By clicking on the percentage, a data sample is shown.
+                </p>
             </template>
         </MetricsTable>
 

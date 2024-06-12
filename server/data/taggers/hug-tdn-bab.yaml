@@ -1,0 +1,22 @@
+id: hug-tdn-bab
+description: "INT-Hug trained on letters as loot (Brieven als Buit)"
+tagset: "TDN-Core"
+eraFrom: "1600"
+eraTo: "1800"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: hug-tdn-bab
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_BAB
+software:
+  name: int-huggingface
+  href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
+dataset:
+  name: letters-as-loot
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/BAB.combination.json
+trainedBy: "INT"
+date: "2024-06-12"
+devport: 8113
+version: "1.0.0"

@@ -1,12 +1,16 @@
 <template>
-    <div><GCard>
-        <template #title>Contribute a dataset</template>
-        <template #help>Creating linguistic infrastructure is a lot of work. Why not do it together?</template>
-        <i>This is a placeholder for a written instrcution on how to provide a dataset, which should include an e-mail
-            adress</i>
-    </GCard></div>
+    <div>
+        <GCard noHelp>
+            <template #title>Contribute a dataset</template>
+            <p>
+                Apart from contributing new taggers to the GaLAHaD platform, you can also contribute training and
+                evaluation gold standard datasets you have produced. Please contact us at <MailAddress />.
+            </p>
+        </GCard>
+    </div>
 </template>
 
 <script setup lang='ts'>
 import { GCard } from '@/components'
+import MailAddress from '@/components/links/MailAddress.vue';
 </script>

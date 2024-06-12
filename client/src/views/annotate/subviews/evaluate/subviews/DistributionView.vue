@@ -3,7 +3,7 @@
         <div class="left">
         </div>
         <GTable class="right" :title="'Distribution of ' + (jobSelection.hypothesisJobId || 'the hypothesis layer')"
-            helpSubject="evaluate" :columns :items="itemsToDisplay" :loading="distributionStore.loading"
+            helpSubject="evaluation" :columns :items="itemsToDisplay" :loading="distributionStore.loading"
             sortedByField="count">
             <template #table-empty-instruction>
                 <p v-if="distribution.generated">No results for current filter settings.</p>

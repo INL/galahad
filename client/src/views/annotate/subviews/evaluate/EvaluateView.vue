@@ -4,7 +4,7 @@
 <template>
     <AnnotateTab>
         <!-- title-only card -->
-        <GCard :title="`Evaluate corpus ${corporaStore.activeCorpus?.name}`" helpSubject="evaluate">
+        <GCard :title="`Evaluate corpus ${corporaStore.activeCorpus?.name}`" helpSubject="evaluation">
             <template #help>
                 <component :is="help.evaluate"></component>
             </template>
@@ -26,7 +26,7 @@
             { id: 'distribution', title: 'Distribution' },
             { id: 'global_metrics', title: 'Global Metrics' },
             { id: 'grouped_metrics', title: 'Grouped Metrics' },
-            { id: 'confusion', title: 'PoS confusion' }
+            { id: 'confusion', title: 'Pos Confusion' }
         ]">
         </GTabs>
 

@@ -11,6 +11,8 @@ import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.document.Documents
 import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.jobs.Jobs
+import org.ivdnt.galahad.port.CmdiMetadata
+import org.ivdnt.galahad.port.CorpusTransformMetadata
 import org.ivdnt.galahad.taggers.Taggers
 import org.ivdnt.galahad.util.createZipFile
 import java.io.File
@@ -181,6 +183,7 @@ class Corpus(
      * Maps all [Document] found in [Documents] to the desired [DocumentFormat] and zips them. [formatMapper] should perform the mapping.
      */
     fun getZipped(
+        ctm: CorpusTransformMetadata,
         formatMapper: (Document) -> File,
         filter: (Document) -> Boolean,
         outputStream: OutputStream? = null,
@@ -189,7 +192,9 @@ class Corpus(
         var zipFile: File? = null
         val documents = documents.readAll().filter(filter)
         executeAndLogTime("Generating $name zip") {
-            zipFile = createZipFile(documents.asSequence().map(formatMapper), outputStream)
+            val convertedDocs = documents.asSequence().map(formatMapper)
+            val docsToCmdi = documents.asSequence().map { CmdiMetadata(ctm.documentMetadata(it.name)).file }
+            zipFile = createZipFile(convertedDocs + docsToCmdi, outputStream)
         }
         return zipFile!!
     }
