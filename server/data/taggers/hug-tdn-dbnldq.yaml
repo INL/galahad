@@ -1,0 +1,22 @@
+id: hug-tdn-dbnldq
+description: "INT-Hug trained on DBNL excerpts & GTB dictionary quotations"
+tagset: "TDN-Core"
+eraFrom: "1400"
+eraTo: "1900"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: hug-tdn-dbnldq
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_DBNLDQ
+software:
+  name: int-huggingface
+  href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
+dataset:
+  name: DBNLDQ
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.1/combinations/DBNLDQ.combination.json
+trainedBy: "INT"
+date: "2024-06-12"
+devport: 8116
+version: "1.0.0"

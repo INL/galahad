@@ -1,0 +1,22 @@
+id: hug-tdn-cour
+description: "INT-Hug trained on newspapers"
+tagset: "TDN-Core"
+eraFrom: "1600"
+eraTo: "1700"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: hug-tdn-cour
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_COUR
+software:
+  name: int-huggingface
+  href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
+dataset:
+  name: couranten
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/COUR.combination.json
+trainedBy: "INT"
+date: "2024-06-12"
+devport: 8115
+version: "1.0.0"

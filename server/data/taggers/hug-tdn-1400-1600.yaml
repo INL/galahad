@@ -1,0 +1,22 @@
+id: hug-tdn-1400-1600
+description: "INT-Hug trained on DBNL excerpts, GTB dictionary quotations & CLVN (1400-1600)"
+tagset: "TDN-Core"
+eraFrom: "1400"
+eraTo: "1600"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: hug-tdn-1400-1600
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_1400-1600
+software:
+  name: int-huggingface
+  href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
+dataset:
+  name: 1400-1600
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.1/combinations/1400-1600.combination.json
+trainedBy: "INT"
+date: "2024-06-12"
+devport: 8110
+version: "1.0.0"

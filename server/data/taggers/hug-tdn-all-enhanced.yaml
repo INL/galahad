@@ -1,0 +1,22 @@
+id: hug-tdn-all-enhanced
+description: "INT-Hug trained on all TDN-Core material with enhancements for separable verbs"
+tagset: "TDN-Core"
+eraFrom: "1400"
+eraTo: "1900"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: hug-tdn-all-enhanced
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_all_enhanced
+software:
+  name: int-huggingface
+  href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
+dataset:
+  name: ALL
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.1/combinations/ALL.combination.json
+trainedBy: "INT"
+date: "2024-06-12"
+devport: 8117
+version: "1.0.0"

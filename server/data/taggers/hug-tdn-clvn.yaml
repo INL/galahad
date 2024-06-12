@@ -1,0 +1,22 @@
+id: hug-tdn-clvn
+description: "INT-Hug trained on CLVN"
+tagset: "TDN-Core"
+eraFrom: "1500"
+eraTo: "1600"
+produces:
+  - LEM
+  - POS
+  - TOK
+model:
+  name: hug-tdn-clvn
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_CLVN
+software:
+  name: int-huggingface
+  href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
+dataset:
+  name: CLVN
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/CLVN.combination.json
+trainedBy: "INT"
+date: "2024-06-12"
+devport: 8114
+version: "1.0.0"
