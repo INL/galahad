@@ -1,5 +1,5 @@
 id: pie-tdn-cour
-description: "PIE trained on couranten"
+description: "PIE trained on newspapers"
 tagset: "TDN-Core"
 eraFrom: "1600"
 eraTo: "1700"
