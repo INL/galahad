@@ -9,14 +9,14 @@ produces:
   - TOK
 model:
   name: pie-tdn-dbnldq
-  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.0/pie/TDN-DBNLDQ
+  href: https://github.com/INL/galahad-taggers-dockerized/tree/1.0.2/pie/TDN-DBNLDQ
 software:
   name: int-pie
   href: https://github.com/INL/int-pie/tree/1.0.0
 dataset:
   name: DBNLDQ
-  href: https://github.com/INL/galahad-corpus-data/tree/1.0.0/combinations/DBNLDQ.combination.json
+  href: https://github.com/INL/galahad-corpus-data/tree/1.0.1/combinations/DBNLDQ.combination.json
 trainedBy: "INT"
-date: "2024-06-03"
+date: "2024-06-12"
 devport: 8106
-version: "1.0.0"
+version: "1.0.1"
