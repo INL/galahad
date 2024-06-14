@@ -118,18 +118,6 @@ const routes = [
       { path: 'tagsets', component: TagsetsView },
       { path: 'datasets', component: DatasetsView },
       { path: 'benchmarks', component: BenchmarksView },
-      {
-        path: 'evaluate', component: EvaluateView,
-        props: { basePath: "/overview/evaluate" },
-        redirect: '/overview/evaluate/distribution',
-        children: [
-          { path: 'distribution', component: DistributionView },
-          { path: 'global_metrics', component: GlobalMetricsView },
-          { path: 'grouped_metrics', component: GroupedMetricsView },
-          { path: 'confusion', component: ConfusionView }
-        ]
-      },
-      { path: 'contribute', component: ContributeTaggersView }
     ]
   }, {
     path: '/contribute', component: ContributeView, children: [
