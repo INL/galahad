@@ -6,6 +6,7 @@ import org.ivdnt.galahad.port.LayerTransformer
 import org.ivdnt.galahad.port.xml.XMLMetadata
 import org.ivdnt.galahad.util.childOrNull
 import org.ivdnt.galahad.util.getXmlBuilder
+import org.ivdnt.galahad.util.toNonEmptyString
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
@@ -166,8 +167,8 @@ class TEIMetadata(
     private fun addNotesStmt(fileDesc: Element) {
         val notesStmt = fileDesc.getOrCreateChild("notesStmt")
         addNote(notesStmt, "corpusName", corpusMetadata.name)
-        addNote(notesStmt, "sourceCollection", corpusMetadata.sourceName ?: "!No source name defined!")
-        val url = corpusMetadata.sourceURL?.toString() ?: "!No source URL defined!"
+        addNote(notesStmt, "sourceCollection", corpusMetadata.sourceName.toNonEmptyString("!No source name defined!"))
+        val url = corpusMetadata.sourceURL.toNonEmptyString("!No source URL defined!")
         addNote(notesStmt, "sourceCollectionURL", url)
     }
 

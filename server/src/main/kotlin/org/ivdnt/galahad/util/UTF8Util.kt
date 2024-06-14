@@ -25,6 +25,7 @@ fun String.escapeXML(): String {
     return this
         .replace("&","&amp;")
         .replace("<","&lt;")
+        .replace(">","&gt;")
         .replace("\"","&quot;")
 }
 

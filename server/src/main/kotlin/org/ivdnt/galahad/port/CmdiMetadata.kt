@@ -1,6 +1,8 @@
 package org.ivdnt.galahad.port
 
 import org.ivdnt.galahad.data.corpus.CorpusMetadata
+import org.ivdnt.galahad.util.escapeXML
+import org.ivdnt.galahad.util.toNonEmptyString
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -39,18 +41,18 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
             "PID" to document.uuid.toString(),
             "GALAHAD_VERSION" to galahadVersion,
             "TITLE" to docTitle,
-            "SOURCE_NAME" to (corpusMetadata.sourceName ?: "!No source name defined!"),
-            "SOURCE_URL" to (corpusMetadata.sourceURL?.toString() ?: "!No source URL defined!"),
+            "SOURCE_NAME" to corpusMetadata.sourceName.toNonEmptyString("!No source name defined!"),
+            "SOURCE_URL" to corpusMetadata.sourceURL.toNonEmptyString("!No source URL defined!"),
             "ERA_FROM" to corpusMetadata.eraFrom.toString(),
             "ERA_TO" to corpusMetadata.eraTo.toString(),
-            "TAGSET" to (tagger.tagset ?: "!No tagset defined!"),
+            "TAGSET" to tagger.tagset.toNonEmptyString("!No tagset defined!"),
             "FORMAT" to document.format.identifier,
             "TAGGER_NAME" to tagger.id,
-            "TAGGER_VERSION" to tagger.version, //TODO
+            "TAGGER_VERSION" to tagger.version,
             "TAGGER_URL" to tagger.model.href,
         )
         for ((key, value) in replacements) {
-            template = template.replace(key, value)
+            template = template.replace(key, value.escapeXML())
         }
         file = tmp_dir.resolve("CMDI-$docTitle.xml")
         file.writeText(template)
