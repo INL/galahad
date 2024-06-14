@@ -11,12 +11,12 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
         val tmp_dir: File = createTempDirectory("cmdi").toFile()
     }
 
-
     val file: File
 
     init {
         var template = this::class.java.classLoader.getResource("CMDI-template.xml")!!.readText()
         val corpusMetadata: CorpusMetadata = this.transformMetadata.corpus.metadata.expensiveGet()
+        val docTitle = document.getUploadedRawFile().nameWithoutExtension
 
         // Current year, month and day, zero-padded
         val year = SimpleDateFormat("yyyy").format(Date())
@@ -24,7 +24,12 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
         val day = SimpleDateFormat("dd").format(Date())
         val date = "$year-$month-$day"
 
-        val docTitle = document.getUploadedRawFile().nameWithoutExtension
+        // Retrieve GaLAHaD version from the same version.yml used in the client about page.
+        val versionStream = this::class.java.classLoader.getResource("version.yml")!!.openStream()
+        val versionProperties = Properties()
+        versionProperties.load(versionStream)
+        val galahadVersion = versionProperties.getProperty("VERSION")
+
         val replacements = mapOf<String, String>(
             "CORPUS_NAME" to corpusMetadata.name,
             "DATE" to date,
@@ -32,7 +37,7 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
             "MONTH" to month,
             "DAY" to day,
             "PID" to document.uuid.toString(),
-            "GALAHAD_VERSION" to (System.getenv("GALAHAD_VERSION") ?: "!Unknown version!"),
+            "GALAHAD_VERSION" to galahadVersion,
             "TITLE" to docTitle,
             "SOURCE_NAME" to (corpusMetadata.sourceName ?: "!No source name defined!"),
             "SOURCE_URL" to (corpusMetadata.sourceURL?.toString() ?: "!No source URL defined!"),
