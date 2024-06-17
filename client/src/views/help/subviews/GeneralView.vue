@@ -98,26 +98,18 @@
           fragmented, mutually incompatible, and far from providing a completely satisfactory solution.
         </p>
         <p>
-          We have addressed this problem in the CLARIAH+ task <i>Infrastructure for historical Dutch</i>, by:
+          We have addressed this problem in the CLARIAH+ task <i>Infrastructure for historical Dutch</i>, by 1.
+          defining a <a href="https://ivdnt.org/wp-content/uploads/2021/05/TDN_INT_WP_1.pdf">tagset</a> applicable to
+          all phases of historical Dutch (TDN), with mappings to the
+          tagsets used in existing historical and modern corpora, 2. by harmonising and extending <a
+            href="https://github.com/INL/galahad-corpus-data/">training and evaluation
+            material</a>, and 3. by developing an online infrastructure for historical corpus building and deployment,
+          consisting of the <a href="https://autosearch.ivdnt.org/">Autosearch</a> corpus exploration environment, the
+          <a href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</a> tool for manual correction of linguistic
+          annotation and the GaLAHaD application for the deployment and evaluation of various approaches to automatic
+          linguistic annotation.
         </p>
-        <ol>
-          <li>
-            Defining a <a href="https://ivdnt.org/wp-content/uploads/2021/05/TDN_INT_WP_1.pdf">tagset</a> applicable to
-            all phases of historical Dutch (TDN), with mappings to the
-            tagsets used in existing historical and modern corpora.
-          </li>
-          <li>
-            Harmonising and extending <a href="https://github.com/INL/galahad-corpus-data/">training and evaluation
-              material</a>.
-          </li>
-          <li>
-            Developing an online infrastructure for historical corpus building and deployment, consisting of the <a
-              href="https://autosearch.ivdnt.org/">Autosearch</a> corpus exploration environment, the <a
-              href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</a> tool for manual correction of linguistic
-            annotation and the GaLAHaD application for the deployment and evaluation of various approaches to automatic
-            linguistic annotation.
-          </li>
-        </ol>
+
 
         <!-- H2: Introducing GaLAHaD -->
         <h2 id="galahad">Introducing GaLAHaD</h2>
@@ -169,7 +161,7 @@
         <h3 id="own-corpus">Scenario 1: Annotate and evaluate your own corpus</h3>
         <p>
           You can create a corpus within the platform that you would like to annotate. Corpora you have uploaded will be
-          listed in <code>Corpora</code> under "Your corpora". When you have uploaded a corpus, you can always
+          listed in <code>Corpora</code> under "your corpora". When you have uploaded a corpus, you can always
           modify the metadata. You can also remove an uploaded corpus from the platform.
         </p>
 
@@ -201,12 +193,12 @@
         <p>
           To start a tagging job, click on <code>View & Tag</code> in the list of tools and then on <code
             class="green-marker">Start</code> to start a job. This may take a while, depending on the corpus size. The
-          progress of your job or jobs is listed per tool in the tool overview.
+          progress of your job or jobs is listed per tool in the tagger overview.
         </p>
         <p>
           The tagger status (pending, busy, error, finished) will be displayed in the status bar. Tagging is carried out
           in the background. You do not need to keep the application open. The total number of documents that is being
-          processed is given to indicate how busy the server is.
+          processed indicates how busy the server is.
         </p>
         <p>
           You can also stop and delete existing jobs. A preview of the resulting annotation layer is shown as well.
@@ -257,11 +249,13 @@
         <h3 id="explore-benchmark">Scenario 2: explore the evaluation results of the available benchmark corpora</h3>
         <ul>
           <li>Select a corpus by clicking on a row.</li>
-          <li>Click on Documents to view the content of the uploaded corpus.</li>
-          <li>Click on Jobs to get an overview of the taggers used on the benchmark corpus.</li>
-          <li>Click on Evaluate to evaluate the linguistic annotation of the selected corpus. For further information on
-            the evaluation, see the section below.</li>
+          <li>Click on <code>Documents</code> to view the content of the uploaded corpus.</li>
+          <li>Click on <code>Jobs</code> to get an overview of the taggers used on the benchmark corpus.</li>
+          <li>Click on <code>Evaluate</code> to evaluate the linguistic annotation of the selected corpus.</li>
         </ul>
+        <p>
+          For further information on the evaluation, see the section below.
+        </p>
 
         <!-- H2: Evaluation -->
         <h2 id="evaluation">On Evaluation</h2>
@@ -307,7 +301,7 @@
         <p>
           The reference layer is the annotation layer you want to compare the hypothesis layer to. It can either be the
           source layer, i.e. the annotation that was already in your corpus when uploading it to the platform, or an
-          annotation layer of another tagger you tagged your corpus with on the platform.
+          annotation layer coming from another tagger of the platform.
         </p>
 
         <h4>True positive (TP)</h4>
@@ -400,7 +394,7 @@
           available layers in your corpus will be shown in the drop-down list. Once you have selected a reference layer
           and a hypothesis layer, the evaluation metrics will be computed. The result is information on
           <code>Distribution</code>, <code>Global Metrics</code>, <code>Grouped Metrics</code> and
-          <code>Pos confusion</code>. The evaluation results are downloadable.
+          <code>Pos Confusion</code>. The evaluation results are downloadable.
         </p>
 
         <h4 id="distribution">Distribution</h4>
@@ -428,7 +422,7 @@
           have been selected for lemma and PoS comparison.
         </p>
         <p>
-          The <code>Basic Global Metrics</code> table gives information on Lemma, PoS or the combination of Lemma and
+          The <code>Basic Global Metrics</code> table gives information on lemma, PoS or the combination of Lemma and
           PoS. The <code>Extended Global Metrics</code> table gives more detailed information on the accuracy of tokens
           with a single analysis versus tokens with a multiple analysis.
         </p>
@@ -488,7 +482,7 @@
           A data sample of Group NOU-C, False Negative (Annotation PoS; Group by PoS; Both single/multiple analysis):
         </p>
         <img src="@/assets/help/grouped-metrics-sample.png" />
-        <p>
+        <p class="red">
           Note that token mismatches can occur when the tagger treats punctuation for abbreviations as a separate token
           (in abbreviations like "e.g." or "i.e.", or in "mr." in the example above).
         </p>
@@ -504,7 +498,10 @@
           The confusion table contains information on each part of speech and on the amount of no-matches. The category
           "MULTIPLE" contains combined tags like "ADP+NOU-C" or "VRB+PD+PD". These are shown in one cell, but this does
           not mean that the taggers agree on the exact tags. Click on the cell or look at the
-          <code>Global Metrics</code> for more details. No_pos refers to missing part of speech tagging.
+          <code>Global Metrics</code> for more details. NO_POS refers to missing part of speech tagging, PC refers to
+          the encoding of punctuation and <i>Missing Match</i> refers to tokens that could not be aligned (for example,
+          due to how a tagger treats punctuation in abbreviations).
+
         </p>
         <p>
           An example of a confusion matrix:
@@ -586,7 +583,9 @@ img {
   margin: 0 auto;
 }
 
-
+p.red {
+  color: red;
+}
 
 h3,
 h4 {
