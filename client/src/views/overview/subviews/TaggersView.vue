@@ -1,11 +1,10 @@
 <template>
     <div>
-        <GTable title="Taggers overview" :columns :items="taggerStore.taggers">
+        <GTable title="Taggers overview" :columns :items="taggerStore.taggers" sortedByColumn="id" :sortDesc="false">
             <template #help>
                 Here you can see an overview of all available taggers within Galahad. <br>
                 For more information on the taggers, please visit GitHub:
-                <ExternalLink
-                    href="https://github.com/INL/galahad-taggers-dockerized/">
+                <ExternalLink href="https://github.com/INL/galahad-taggers-dockerized/">
                     galahad-taggers-dockerized
                 </ExternalLink>
             </template>
@@ -86,7 +85,7 @@ const taggerStore = stores.useTaggers() as TaggersStore
 
 // Fields
 const columns = [
-    { key: "id", label: "name" },
+    { key: "id", label: "name", sortOn: (x: any) => x.id },
     { key: "description" },
     { key: "tagset" },
     { key: "era", label: "period" },
