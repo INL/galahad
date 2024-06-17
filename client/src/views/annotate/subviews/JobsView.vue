@@ -1,7 +1,7 @@
 <template>
     <AnnotateTab hideAnnotationsError>
         <GTable :title="`Jobs for corpus ${corporaStore.activeCorpus?.name}`" helpSubject="jobs" :columns
-            :items="displayJobs" :loading="jobsStore.loading" fill hoverRow sortedByField="id" :sortDesc="false"
+            :items="displayJobs" :loading="jobsStore.loading" fill hoverRow sortedByColumn="id" :sortDesc="false"
             class="jobsview">
 
             <template #help>

@@ -133,7 +133,7 @@ export default defineComponent({
         headless: { type: Boolean, default: false },
         loading: { type: Boolean, default: false },
         selectable: { type: Boolean, default: false },
-        sortedByField: { type: String, default: null },
+        sortedByColumn: { type: String, default: null },
         sortDesc: { type: Boolean, default: true },
         compact: { type: Boolean, default: false },
         showHelp: { type: Boolean, default: false },
@@ -150,7 +150,7 @@ export default defineComponent({
         return {
             page: 1,
             sortIsDesc: this.sortDesc as boolean,
-            sortedBy: this.sortedByField as null | string
+            sortedBy: this.sortedByColumn as null | string
         }
     },
     computed: {

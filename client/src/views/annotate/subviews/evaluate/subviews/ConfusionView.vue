@@ -2,7 +2,7 @@
     <div>
 
         <GTable title="Part-of-speech confusion" helpSubject="evaluation" :columns :items="rows" id="confusionTable"
-            :loading="loading" sortedByField="referenceJob" :sortDesc="false" hoverRow>
+            :loading="loading" sortedByColumn="referenceJob" :sortDesc="false" hoverRow>
             <template #help>
                 <p>
                     In part-of-speech confusion, an overview is given of the matches (in green) and mismatches per PoS

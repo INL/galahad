@@ -14,7 +14,7 @@
                 <b>*</b>: when taggers use a different tagset than the reference tagset, the score can be very low.
             </template>
 
-            <GTable headless :columns :items :loading="assaysStore.loading" noHelp sortedByField="accuracy">
+            <GTable headless :columns :items :loading="assaysStore.loading" noHelp sortedByColumn="accuracy">
 
                 <template #table-empty-instruction>
                     Select a dataset to view benchmarks.
