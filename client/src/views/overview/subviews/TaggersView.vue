@@ -88,7 +88,7 @@ const columns = [
     { key: "id", label: "name", sortOn: (x: any) => x.id },
     { key: "description" },
     { key: "tagset" },
-    { key: "era", label: "period" },
+    { key: "era", label: "period", sortOn: (x: any) => x.eraFrom.toString() + x.eraTo.toString() },
     { key: "produces" },
     { key: "model" },
     { key: "software" },
