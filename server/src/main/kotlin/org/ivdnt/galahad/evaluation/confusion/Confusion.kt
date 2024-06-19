@@ -8,6 +8,8 @@ import org.ivdnt.galahad.evaluation.comparison.TermComparison
 import org.ivdnt.galahad.port.csv.CSVFile
 
 const val MULTIPLE_POS = "MULTIPLE"
+const val OTHER_POS = "OTHER"
+const val OTHER_POS_REGEX = """^[^A-Z]"""
 
 /**
  * Generic class for the part of speech confusion of a corpus or document.
@@ -104,16 +106,15 @@ open class Confusion(private val truncate: Boolean = true): CsvSampleExporter {
 
     // Base addition function called by the others
     private fun add(pos1: String, pos2: String, evaluationEntry: EvaluationEntry) {
-        // Complex pos are mapped to a single category
-        if (pos1.contains('+')) {
-            add(MULTIPLE_POS, pos2, evaluationEntry)
-            return
+        when {
+            // Complex pos are mapped to a single category
+            pos1.contains('+') -> add(MULTIPLE_POS, pos2, evaluationEntry)
+            pos2.contains('+') -> add(pos1, MULTIPLE_POS, evaluationEntry)
+            // Non-alphabetical pos are mapped to a single category "other"
+            pos1.matches(OTHER_POS_REGEX.toRegex()) -> add(OTHER_POS, pos2, evaluationEntry)
+            pos2.matches(OTHER_POS_REGEX.toRegex()) -> add(pos1, OTHER_POS, evaluationEntry)
+            // Otherwise a simple merge
+            else -> matrix.merge(Pair(pos1, pos2), evaluationEntry) { a, b -> EvaluationEntry.add(a, b, truncate) }
         }
-        if (pos2.contains('+')) {
-            add(pos1, MULTIPLE_POS, evaluationEntry)
-            return
-        }
-
-        matrix.merge(Pair(pos1, pos2), evaluationEntry) { a, b -> EvaluationEntry.add(a, b, truncate) }
     }
 }
