@@ -17,7 +17,9 @@ import org.ivdnt.galahad.taggers.Taggers
 import org.ivdnt.galahad.util.createZipFile
 import java.io.File
 import java.io.OutputStream
+import java.nio.file.Files
 import java.util.*
+import kotlin.io.path.createTempDirectory
 
 /**
  * A corpus is a collection of documents, metadata and jobs, saved to a folder. The folder contents are:
@@ -194,7 +196,11 @@ class Corpus(
         executeAndLogTime("Generating $name zip") {
             val convertedDocs = documents.asSequence().map(formatMapper)
             val docsToCmdi = documents.asSequence().map { CmdiMetadata(ctm.documentMetadata(it.name)).file }
-            zipFile = createZipFile(convertedDocs + docsToCmdi, outputStream)
+            val cmdiZip = createZipFile(docsToCmdi, includeCMDI = true)
+            // rename the cmdiZip to "metadata"
+            val dest = File(createTempDirectory("metadata").toFile(), "metadata.zip")
+            Files.move(cmdiZip.toPath(), dest.toPath())
+            zipFile = createZipFile(convertedDocs + dest, outputStream)
         }
         return zipFile!!
     }

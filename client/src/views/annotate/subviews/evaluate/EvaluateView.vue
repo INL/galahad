@@ -60,6 +60,15 @@ const props = defineProps(['basePath'])
 
 // Methods
 /**
+ * Whether the corpusUUID or the hypothesis/reference has changed since the last generated evaluation.
+ */
+function evaluationRequestHasChanged(): boolean {
+    return evaluation.corpusUUID != corporaStore.activeUUID
+        || evaluation.hypothesis != jobSelection.hypothesisJobId
+        || evaluation.reference != jobSelection.referenceJobId
+}
+
+/**
  * Reloads the three evaluation types for the current hypothesis and reference.
  * Because distribution is affected solely by hypothesis changes, it is not reloaded by default.
  * Check whether the hypothesis has changed yourself.
@@ -71,22 +80,32 @@ function reloadEvaluationData(reloadDistribution = false) {
     const hypothesis = jobSelection.hypothesisJobId
     const reference = jobSelection.referenceJobId
 
+    // Only reload if either the corpus uuid or the hypothesis/reference has changed.
+    if (!evaluationRequestHasChanged()) {
+        return
+    }
+
     if (reference != null && hypothesis != null) {
-        confusion.reset()
-        metrics.reset()
         confusion.reloadForUUIDHypothesisReference(corporaStore.activeUUID, hypothesis, reference)
         metrics.reloadForUUIDHypothesisReference(corporaStore.activeUUID, hypothesis, reference)
     }
     // Distribution is unaffected by reference changes, so explicitly ask for it.
     if (reloadDistribution && hypothesis != null) {
-        distribution.reset()
         distribution.reloadForUUIDHypothesis(corporaStore.activeUUID, hypothesis)
     }
+
+    // Save the evaluation request, so we don't reload it again (we cache it).
+    if (hypothesis != null) evaluation.hypothesis = hypothesis
+    if (reference != null) evaluation.reference = reference
+    evaluation.corpusUUID = corporaStore.activeUUID
 }
 
 // Watches & mounts
 onMounted(() => {
     // Always reset, because e.g. the selected corpus might have changed
+    if (!evaluationRequestHasChanged()) {
+        return
+    }
     confusion.reset()
     metrics.reset()
     distribution.reset()
@@ -102,9 +121,11 @@ watch(() => corporaStore.activeCorpus, () => {
 
 // Reload data on job selection changes.
 watch(() => jobSelection.hypothesisJobId, () => {
+    if (!jobSelection.selectionsValid) return
     reloadEvaluationData(true)
 })
 watch(() => jobSelection.referenceJobId, () => {
+    if (!jobSelection.selectionsValid) return
     reloadEvaluationData()
 })
 // OnLoad, we also have to wait on validation.
@@ -113,8 +134,8 @@ watch(() => jobSelection.selectionsValid, () => {
         reloadEvaluationData(true)
     }
     // At this point, invalid selections are set to null.
-    // So we can override the reference to a default.
-    if (jobSelection.referenceJobId == null) {
+    // So we can override the reference to the sourceLayer as a default (if it exists).
+    if (jobSelection.referenceJobId == null && documentsStore.numSourceAnnotations > 0) {
         jobSelection.referenceJobId = SOURCE_LAYER
     }
 }, { immediate: true })

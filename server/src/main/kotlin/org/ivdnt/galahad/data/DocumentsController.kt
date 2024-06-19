@@ -95,7 +95,7 @@ class DocumentsController(
             zip.entries().asSequence().forEach { entry ->
                 zip.getInputStream(entry).use { input ->
                     try {
-                        if (!entry.isDirectory) {
+                        if (!entry.isDirectory && entry.name.split(".").last() != "zip"){
                             logger.info("Unzipped ${entry.name} from ${file.originalFilename}. Will convert it to document.")
                             // The entry might be in a subfolder, so extract the true file name.
                             val fileName = Paths.get(entry.name).fileName.toString()

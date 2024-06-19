@@ -1,6 +1,6 @@
 <template>
-    <GTable title="Corpora" :columns :items="displayCorpora" :loading="corporaStore.loading"
-        sortedByField="name" :sortDesc="false" :selectable="selectable" v-model="selectedCorpus"
+    <GTable title="Corpora" :columns :items="displayCorpora" :loading="corporaStore.loading" sortedByColumn="name"
+        :sortDesc="false" :selectable="selectable" v-model="selectedCorpus"
         v-if="displayCorpora.length > 0 || (type == TableCorporaType.User && !sharedWithYou)">
 
         <template #title>

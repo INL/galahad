@@ -38,6 +38,16 @@ len</w>
 
 <p><hi rend="bold">test</hi>en woord</p>
 
+<p>test<hi rend="bold">en</hi></p>
+<p>woord test<hi rend="bold">en</hi></p>
+
+<p>woord <hi rend="bold">test</hi>en woord</p>
+<p>woord test<hi rend="bold">en</hi> woord</p>
+
+<p>test<hi>en </hi></p>
+<p><hi> test</hi>en</p>
+
+
 <p><hi rend="bold">cba fed<expan>abc def</expan>ghi jkl</hi>mno</p>
 <p>
 abc <hi class="bold">def ghi<hi class="italic">jkl</hi><hi class="red"><hi class="sub">mno</hi> pqr</hi>stu xyz</hi>abc def
@@ -158,6 +168,7 @@ school</p> <!--the newline here is important-->
 
 <p>Mijnen gans goetwijlleghen dijens[t] na allen vermoeghen altijt tibi honorem<ref target="N044"><hi rend="font-size:8pt;font-weight:bold"> * </hi></ref> . Eerbare,</p>
 
+<p>ghemeynten va<damage>n<supplied resp="#Stapel">den </supplied>l</damage>ande van breuites vita<damage>m </damage>m<ex>agist</ex>rum</p>
 
 </body>
 </text>

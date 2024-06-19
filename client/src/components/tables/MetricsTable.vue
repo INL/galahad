@@ -1,5 +1,5 @@
 <template>
-    <GTable :title :columns :items :loading helpSubject="evaluation" class="metricsTable" :sortedByField :noHelp>
+    <GTable :title :columns :items :loading helpSubject="evaluation" class="metricsTable" :sortedByColumn :noHelp>
 
         <template #help>
             <slot name="help">
@@ -62,7 +62,7 @@ const props = defineProps({
     columns: { type: Array, default: [] },
     items: { type: Array, default: [] },
     loading: { type: Boolean, default: false },
-    sortedByField: { type: String, default: "count" },
+    sortedByColumn: { type: String, default: "count" },
     downloading: { type: Boolean, default: false },
     noHelp: { type: Boolean, default: false }
 })

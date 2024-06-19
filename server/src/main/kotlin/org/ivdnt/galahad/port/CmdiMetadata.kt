@@ -1,6 +1,8 @@
 package org.ivdnt.galahad.port
 
 import org.ivdnt.galahad.data.corpus.CorpusMetadata
+import org.ivdnt.galahad.util.escapeXML
+import org.ivdnt.galahad.util.toNonEmptyString
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -11,12 +13,12 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
         val tmp_dir: File = createTempDirectory("cmdi").toFile()
     }
 
-
     val file: File
 
     init {
         var template = this::class.java.classLoader.getResource("CMDI-template.xml")!!.readText()
         val corpusMetadata: CorpusMetadata = this.transformMetadata.corpus.metadata.expensiveGet()
+        val docTitle = document.getUploadedRawFile().nameWithoutExtension
 
         // Current year, month and day, zero-padded
         val year = SimpleDateFormat("yyyy").format(Date())
@@ -24,7 +26,12 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
         val day = SimpleDateFormat("dd").format(Date())
         val date = "$year-$month-$day"
 
-        val docTitle = document.getUploadedRawFile().nameWithoutExtension
+        // Retrieve GaLAHaD version from the same version.yml used in the client about page.
+        val versionStream = this::class.java.classLoader.getResource("version.yml")!!.openStream()
+        val versionProperties = Properties()
+        versionProperties.load(versionStream)
+        val galahadVersion = versionProperties.getProperty("VERSION")
+
         val replacements = mapOf<String, String>(
             "CORPUS_NAME" to corpusMetadata.name,
             "DATE" to date,
@@ -32,20 +39,20 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
             "MONTH" to month,
             "DAY" to day,
             "PID" to document.uuid.toString(),
-            "GALAHAD_VERSION" to (System.getenv("GALAHAD_VERSION") ?: "!Unknown version!"),
+            "GALAHAD_VERSION" to galahadVersion,
             "TITLE" to docTitle,
-            "SOURCE_NAME" to (corpusMetadata.sourceName ?: "!No source name defined!"),
-            "SOURCE_URL" to (corpusMetadata.sourceURL?.toString() ?: "!No source URL defined!"),
+            "SOURCE_NAME" to corpusMetadata.sourceName.toNonEmptyString("!No source name defined!"),
+            "SOURCE_URL" to corpusMetadata.sourceURL.toNonEmptyString("!No source URL defined!"),
             "ERA_FROM" to corpusMetadata.eraFrom.toString(),
             "ERA_TO" to corpusMetadata.eraTo.toString(),
-            "TAGSET" to (tagger.tagset ?: "!No tagset defined!"),
+            "TAGSET" to tagger.tagset.toNonEmptyString("!No tagset defined!"),
             "FORMAT" to document.format.identifier,
             "TAGGER_NAME" to tagger.id,
-            "TAGGER_VERSION" to tagger.version, //TODO
+            "TAGGER_VERSION" to tagger.version,
             "TAGGER_URL" to tagger.model.href,
         )
         for ((key, value) in replacements) {
-            template = template.replace(key, value)
+            template = template.replace(key, value.escapeXML())
         }
         file = tmp_dir.resolve("CMDI-$docTitle.xml")
         file.writeText(template)

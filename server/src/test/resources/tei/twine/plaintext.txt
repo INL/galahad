@@ -26,6 +26,18 @@ testen
 
 testen woord
 
+testen
+
+woord testen
+
+woord testen woord
+
+woord testen woord
+
+testen 
+
+ testen
+
 cba fedabc defghi jklmno
 
  abc def ghijklmno pqrstu xyzabc def 
@@ -132,4 +144,6 @@ vyfftich auerkomen ende met
 pater toe Aelsum (bij Akkrum), ende
 
 Mijnen gans goetwijlleghen dijens[t] na allen vermoeghen altijt tibi honorem *  . Eerbare,
+
+ghemeynten vanden lande van breuites vitam magistrum
 

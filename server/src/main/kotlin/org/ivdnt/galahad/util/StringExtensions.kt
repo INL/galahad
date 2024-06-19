@@ -8,3 +8,7 @@ fun String.matchesUpTo(textToMatch: String): Int {
     }
     return matchingIndex
 }
+
+fun Any?.toNonEmptyString(default: String): String {
+    return if (this == null || this.toString().isEmpty()) default else this.toString()
+}

@@ -1,8 +1,8 @@
 <template>
     <div>
 
-        <GTable :columns :items="documentsStore.available" :loading="documentsStore.loading"
-            :displayOnEmpty="false" sortedByField="name" :sortDesc="false" hoverRow>
+        <GTable :columns :items="documentsStore.available" :loading="documentsStore.loading" :displayOnEmpty="false"
+            sortedByColumn="name" :sortDesc="false" hoverRow>
             <template #title>
                 <span v-if="!corpus || (type == TableDocumentsType.Dataset && !corpus.dataset)">
                     No documents

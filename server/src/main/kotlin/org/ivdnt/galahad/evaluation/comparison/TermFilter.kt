@@ -1,6 +1,9 @@
 package org.ivdnt.galahad.evaluation.comparison
 
 import org.ivdnt.galahad.data.layer.Term
+import org.ivdnt.galahad.evaluation.confusion.MULTIPLE_POS
+import org.ivdnt.galahad.evaluation.confusion.OTHER_POS
+import org.ivdnt.galahad.evaluation.confusion.OTHER_POS_REGEX
 
 interface TermFilter {
     fun filter(term: Term): Boolean
@@ -11,23 +14,22 @@ class PosLemmaTermFilter (
     val lemma: String? = null,
 ) : TermFilter {
     val multiplePosFilter: (Term) -> Boolean = { t: Term -> t.isMultiPos }
+    val otherPosFilter: (Term) -> Boolean = { t: Term -> t.pos?.matches(OTHER_POS_REGEX.toRegex()) ?: false}
     val singlePosFilter: (Term) -> Boolean = { t: Term -> t.posHeadGroupOrDefault == posHeadGroup }
     val posFilter: (Term) -> Boolean
     val lemmaFilter: (Term) -> Boolean
 
     init {
-        posFilter = if (posHeadGroup == null) {
-            { _:Term -> true}
-        } else if (posHeadGroup.lowercase() == "multiple") {
-            multiplePosFilter
-        } else {
-            singlePosFilter
+        posFilter = when {
+            (posHeadGroup == null) -> { _:Term -> true}
+            (posHeadGroup.uppercase() == MULTIPLE_POS) -> multiplePosFilter
+            (posHeadGroup.uppercase() == OTHER_POS) -> otherPosFilter
+            else -> singlePosFilter
         }
 
-        lemmaFilter = if (lemma==null) {
-            { _:Term -> true}
-        } else {
-            { t:Term -> t.lemmaOrDefault == lemma}
+        lemmaFilter = when {
+            (lemma==null) ->  { _:Term -> true}
+            else -> { t:Term -> t.lemmaOrDefault == lemma}
         }
     }
 

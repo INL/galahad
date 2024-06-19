@@ -1,7 +1,7 @@
 <template>
     <AnnotateTab hideAnnotationsError>
         <GTable :title="`Jobs for corpus ${corporaStore.activeCorpus?.name}`" helpSubject="jobs" :columns
-            :items="displayJobs" :loading="jobsStore.loading" fill hoverRow sortedByField="id" :sortDesc="false"
+            :items="displayJobs" :loading="jobsStore.loading" fill hoverRow sortedByColumn="id" :sortDesc="false"
             class="jobsview">
 
             <template #help>
@@ -48,7 +48,7 @@
                     &ndash;
                     <b v-if="eraRange[1] >= d.item.tagger.eraTo">{{ d.item.tagger.eraTo }}</b><span v-else>{{
                         d.item.tagger.eraTo
-                    }}</span>
+                        }}</span>
                 </div>
             </template>
 
@@ -193,7 +193,7 @@ const columns = computed(() => {
         { key: "tagset", sortOn: x => x.tagger.tagset },
         { key: "produces", label: "type", },
         { key: "resultSummary", label: "tokens", sortOn: x => x.resultSummary.numWordForms },
-        { key: "era", label: "period", sortOn: x => x.tagger.eraFrom },
+        { key: "era", label: "period", sortOn: x => x.tagger.eraFrom.toString() + x.tagger.eraTo.toString() },
         { key: "lastModified", label: "last modified", sortOn: x => x.lastModified },
         { key: "progress", sortOn: x => x.progress.finished / x.progress.total },
     ] as Field[];

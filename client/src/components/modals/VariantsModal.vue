@@ -1,6 +1,6 @@
 <template>
     <GModal small :show="show" @hide="$emit('hide')" headless>
-        <GTable compact showHelp :columns :items="items" sortedByField="occurrences" :sortDesc="true">
+        <GTable compact showHelp :columns :items="items" sortedByColumn="occurrences" :sortDesc="true">
             <template #title>
                 Types of lemma <i>{{ variantsToDisplay?.lemma }}</i> and part-of-speech <i>{{ variantsToDisplay?.pos
                     }}</i>

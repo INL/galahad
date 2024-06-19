@@ -2,7 +2,7 @@
     <div>
 
         <GTable title="Part-of-speech confusion" helpSubject="evaluation" :columns :items="rows" id="confusionTable"
-            :loading="loading" sortedByField="referenceJob" :sortDesc="false" hoverRow>
+            :loading="loading" sortedByColumn="referenceJob" :sortDesc="false" hoverRow>
             <template #help>
                 <p>
                     In part-of-speech confusion, an overview is given of the matches (in green) and mismatches per PoS
@@ -62,7 +62,6 @@ import { storeToRefs } from 'pinia'
 // API & types
 import { Field } from '@/types/table'
 import { TermComparison, EvaluationEntry } from "@/types/evaluation"
-import { MISC } from '@/stores/evaluation/confusion'
 import * as API from '@/api/evaluation'
 import * as Utils from "@/api/utils"
 // Components
@@ -156,7 +155,7 @@ function strEqual(a: string, b: string) {
  * returns whether this pos should be sorted to the bottom.
  */
 function posToBottom(pos: string) {
-    const posses = ["NO_POS", "Missing match", MISC, "LET", "PUNCT", "PC", "MULTIPLE"]
+    const posses = ["NO_POS", "Missing match", "OTHER", "LET", "PUNCT", "PC", "MULTIPLE"]
     return posses.includes(pos)
 }
 

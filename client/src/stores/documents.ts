@@ -162,10 +162,12 @@ const documents = defineStore('documents', () => {
         API.postDocument(corporaStore.activeUUID, formData, header)
             .then(() => {
                 uploading[file?.name] = { status: 'success' }
+            })
+            .catch(error => uploading[file.name] = { status: 'error', message: error.response.data.message })
+            .finally(() => {
                 if (uploadBusyCount.value == 0)
                     reloadForActiveUserCorpus()
             })
-            .catch(error => uploading[file.name] = { status: 'error', message: error.response.data.message })
     }
 
     /**
