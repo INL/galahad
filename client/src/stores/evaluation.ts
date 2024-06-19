@@ -6,6 +6,7 @@ import stores, { AppStore, CorporaStore, JobSelectionStore } from '@/stores'
 import * as API from "@/api/evaluation"
 import * as Utils from "@/api/utils"
 import { Term, TermComparison } from "@/types/evaluation"
+import { UUID } from "@/types/corpora"
 
 // For some reason the terms are undefined sometimes
 // We handle it here
@@ -37,6 +38,10 @@ const useEvaluation = defineStore('evaluation', () => {
 
     // Fields
     const loading = ref(false)
+    /** Hypothesis, reference and corpusUUID for which the current evaluations are loaded. */
+    const hypothesis = ref(null as string | null)
+    const reference = ref(null as string | null)
+    const corpusUUID = ref(null as UUID | null)
 
     // Methods
     function downloadCSV() {
@@ -48,7 +53,7 @@ const useEvaluation = defineStore('evaluation', () => {
     }
 
     // Exports
-    return { downloadCSV, loading }
+    return { downloadCSV, loading, hypothesis, reference, corpusUUID }
 })
 
 export default useEvaluation
