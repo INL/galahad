@@ -4,9 +4,6 @@ import org.ivdnt.galahad.app.report.Report
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.port.folia.export.deepcopy
 import org.ivdnt.galahad.port.xml.getPlainTextContent
-import org.ivdnt.galahad.util.insertFirst
-import org.ivdnt.galahad.util.containedIn
-import org.ivdnt.galahad.util.matchesUpTo
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
@@ -14,19 +11,10 @@ import java.util.*
 import kotlin.collections.ArrayList
 import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.WordForm
+import org.ivdnt.galahad.util.*
 
 fun HashSet<String>.contains(s: String?, ignoreCase: Boolean = false): Boolean {
     return any { it.equals(s, ignoreCase) }
-}
-
-fun Node.wrapChildrenIn(newNode: Node) {
-    val children = this.childNodes.deepcopy()
-    for (child in children) {
-        newNode.appendChild(child)
-    }
-    // this.childnodes.length is now zero
-    newNode.parentNode.insertBefore(this, newNode)
-    this.appendChild(newNode)
 }
 
 open class TEITextMerger(
@@ -81,9 +69,16 @@ open class TEITextMerger(
         }
         if (node.nodeType == Node.TEXT_NODE) {
             val trailingText = node.textContent.substring(startIndex, node.textContent.length)
-            if (trailingText.isNotEmpty()) {
+            if (trailingText.isNotBlank()) {
                 val trailingChars = document.createTextNode(trailingText)
                 node.parentNode.insertBefore(trailingChars, node)
+            } else if (trailingText.isBlank() && trailingText.isNotEmpty()) {
+                // Remove any empty nodes after trailing text has been removed.
+                // Example scenario: <p>exa<hi>mple </hi></p>
+                // After constructing the <w>, the space before the </hi> remains. So we remove it and the parent (the <hi>).
+                if (node.getPlainTextContent() == node.parentNode.getPlainTextContent()) {
+                    deleteList.add(node.parentNode)
+                }
             }
         }
     }
@@ -164,34 +159,71 @@ open class TEITextMerger(
             // Determine up to where the sibText matches stillNeeded.
             val matchingIndex = sibText.matchesUpTo(stillNeeded)
             // Append the part that matches
-            if (sibText.length == matchingIndex) wTag.appendChild(wTag.nextSibling)
-            else {
+            if (sibText.length == matchingIndex) {
+                // The whole sibling text matches: e.g. van<ex>den</ex>
+                wTag.appendChild(wTag.nextSibling)
+            }
+            else { // The sibling text matches partially: e.g. van<ex>den graal</ex>
                 val sibClone = wTag.nextSibling.cloneNode(true)
-                val sibTextToMatch = sibText.substring(0, matchingIndex)
-                val textToMatch = wText + sibTextToMatch
-                while (wText + sibClone.getPlainTextContent() != textToMatch) {
-                    // get last element
-                    var lastChild = sibClone
-                    while (lastChild.lastChild != null) {
-                        lastChild = lastChild.lastChild
-                    }
-                    // cut or delete
-                    if (lastChild.textContent.isNotEmpty()) {
-                        val matchesUpTo: Int = lastChild.textContent.matchesUpTo(sibTextToMatch)
-                        lastChild.textContent = lastChild.textContent.substring(0, matchesUpTo)
-                    } else {
-                        lastChild.parentNode.removeChild(lastChild)
-                    }
+                val clean = wTag.nextSibling.cloneNode(false)
+                if (clean.nodeType == Node.TEXT_NODE) {
+                    clean.textContent = ""
                 }
-                wTag.appendChild(sibClone)
+                val sibTextToMatch = sibText.substring(0, matchingIndex)
+                treeTraversal(sibClone, sibTextToMatch, clean, clean)
+                wTag.appendChild(clean)
             }
             // Continue while the literal is still only partially found
         } while (!wTag.textContent.contains(wf.literal))
     }
 
+    private fun treeTraversal(node: Node, textToMatch: String, clean: Node, cleanIndex: Node): Boolean {
+        // leaf node action: either add the text as a whole, or add a part
+        if (node.nodeType == Node.TEXT_NODE) {
+            val nodeText = node.getPlainTextContent()
+            if (nodeText.isNotEmpty()) { // some text: e.g. van<ex>den graal</ex>
+                val correctedTextToMatch = textToMatch.substring(clean.getPlainTextContent().length)
+                val matchesUpTo: Int = nodeText.matchesUpTo(correctedTextToMatch)
+                cleanIndex.textContent = nodeText.substring(0, matchesUpTo)
+            } else {
+                // Nothing to do. Remember: [node] is already cloned to [clean].
+            }
+            // Are we done now?
+            if (clean.getPlainTextContent() == textToMatch) {
+                return true
+            }
+        }
+        // Not a leaf node, recurse.
+        else {
+            for (i in 0 until node.childNodes.length) {
+                val child = node.childNodes.item(i)
+                val cleanChild = child.cloneNode(false)
+                if (cleanChild.nodeType == Node.TEXT_NODE) {
+                    cleanChild.textContent = ""
+                }
+                cleanIndex.appendChild(cleanChild)
+                // And if at any point the text matches, we return.
+                if (treeTraversal(child, textToMatch, clean, cleanChild)) return true
+            }
+        }
+        // We are in a leaf node and we are not yet done.
+        return false
+    }
+
     protected open fun moveWTagUp(wTag: Element): Element {
-        // TODO this still breaks in some cases.
-        wTag.wrapChildrenIn(wTag.parentNode)
+        val refToParent = wTag.parentNode
+
+        val clonedParent = wTag.parentNode.cloneNode(false)
+        val children = wTag.childNodes.deepcopy()
+        for (child in children) {
+            clonedParent.appendChild(child)
+        }
+        wTag.appendChild(clonedParent)
+        wTag.parentNode.parentNode.insertAfter(wTag, wTag.parentNode)
+
+        if (refToParent.childOrNull("w", recurse=true) == null) {
+            deleteList.add(refToParent)
+        }
         return wTag
     }
 
@@ -278,7 +310,7 @@ open class TEITextMerger(
     }
 
     private fun getWordFormsToAdd(): List<WordForm> {
-        val string = node.textContent // TODO or getplaintextcontent() ???
+        val string = node.textContent
         val textEndOffset = offset + string.length
         val result = mutableListOf<WordForm>()
         // Go to the previous, if there is any.

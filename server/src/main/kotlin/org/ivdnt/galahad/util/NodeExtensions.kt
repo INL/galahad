@@ -38,11 +38,15 @@ fun Node.nextNonTextSibling(): Node? {
 }
 
 /** Looks for the first child node, 1 deep, or null. */
-fun Node.childOrNull(childTag: String): Node? {
+fun Node.childOrNull(childTag: String, recurse: Boolean = false): Node? {
     for (i in 0 until this.childNodes.length) {
         if (this.childNodes.item(i).nodeType == Node.ELEMENT_NODE) {
             if ((this.childNodes.item(i) as Element).tagName == childTag) {
                 return this.childNodes.item(i)
+            }
+            val childReturn = this.childNodes.item(i).childOrNull(childTag, recurse)
+            if (childReturn != null) {
+                return childReturn
             }
         }
     }
