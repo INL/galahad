@@ -1,57 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>input</title>
-            </titleStmt>
-            <publicationStmt>
-                <p>
-                    <date>2024-03-13 14:23:35</date>
-                    <idno type="sourceID">What if source id is undefined?</idno>
-                    <idno type="pid">What if no pid is defined?</idno>
-                </p>
-            </publicationStmt>
-            <sourceDesc>
-                <listBibl xml:id="inlMetadata">
-                    <bibl>
-                        <interpGrp type="questions">
-                            <interp>Welke inl data?</interp>
-                            <interp>wat als er geen is?</interp>
-                        </interpGrp>
-                    </bibl>
-                </listBibl>
-<listBibl xml:id="galahadMetadata">
-    <bibl>
-        <interpGrp type="model">
-            <interp>pie-tdn-all</interp>
-        </interpGrp>
-        <interpGrp type="tagset">
-            <interp>TDN-Core</interp>
-        </interpGrp>
-        <interpGrp type="corpus_name">
-            <interp>testCorpus</interp>
-        </interpGrp>
-        <interpGrp type="corpus_uuid">
-            <interp>059197e6-a1c9-45b3-9428-9fd28e1e8e32</interp>
-        </interpGrp>
-        <interpGrp type="date">
-            <interp>2024-03-13 14:23:35</interp>
-        </interpGrp>
-        <interpGrp type="user_id">
-            <interp>testUser</interp>
-        </interpGrp>
-        <interpGrp type="pid">
-            <interp>d9527977-7a1f-4f93-b19b-5c26c93afea6</interp>
-        </interpGrp>
-        <interpGrp type="title">
-            <interp>input</interp>
-        </interpGrp>
-    </bibl>
-</listBibl>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>input</title>
+            <respStmt>
+                <resp>linguistic annotation by GaLAHaD (https://portal.clarin.ivdnt.org/galahad)</resp>
+                <orgName xml:lang="nl">Instituut voor de Nederlandse Taal</orgName>
+                <orgName xml:lang="en">Dutch Language Institute</orgName>
+            </respStmt>
+            <respStmt>
+                <resp>exported as tei-p5 by GaLAHaD (https://portal.clarin.ivdnt.org/galahad)</resp>
+                <orgName xml:lang="nl">Instituut voor de Nederlandse Taal</orgName>
+                <orgName xml:lang="en">Dutch Language Institute</orgName>
+            </respStmt>
+        </titleStmt>
+        <publicationStmt>
+            <publisher>!Needs to be filled in!</publisher>
+            <idno type="sourceID">input</idno>
+            <idno type="GaLAHaDPersistentIdentifier">__UUID_IGNORED_BY_TEST___tei</idno>
+        </publicationStmt>
+        <notesStmt>
+            <note resp="GaLAHaD" type="corpusName">testCorpus</note>
+            <note resp="GaLAHaD" type="sourceCollection">source name</note>
+            <note resp="GaLAHaD" type="sourceCollectionURL">http://source.url</note>
+        </notesStmt>
+        <sourceDesc>
+            <ab>
+                <idno type="sourceID">input</idno>
+            </ab>
+            <ab type="date">
+                <date from="0" to="0"/>
+            </ab>
+        </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+        <appInfo resp="GaLAHaD">
+            <application ident="pie-tdn-all" version="1.0.1" xml:id="pie-tdn-all">
+                <label>POS-tagger and lemmatiser</label>
+                <ptr target="https://github.com/INL/galahad-taggers-dockerized/tree/1.0.2/pie/TDN-ALL"/>
+            </application>
+        </appInfo>
+        <editorialDecl resp="GaLAHaD">
+            <interpretation xml:id="A0001">
+                <ab subtype="POS-tagging_lemmatisation" type="linguisticAnnotation">
+                    <interpGrp type="annotationStyle">
+                        <interp>inline</interp>
+                    </interpGrp>
+                    <interpGrp type="Documentation">
+                        <interp/>
+                    </interpGrp>
+                    <interpGrp type="annotationSet">
+                        <interp>TDN-Core</interp>
+                    </interpGrp>
+                    <interpGrp type="annotationDescription">
+                        <interp>The file was automatically annotated within the platform GaLAHaD, which is a central hub for enriching historical Dutch.</interp>
+                    </interpGrp>
+                    <interpGrp type="annotationFormat">
+                        <interp>TEI xml</interp>
+                    </interpGrp>
+                </ab>
+                <ab subtype="POS-tagging_lemmatisationProvenance1" type="linguisticAnnotation">
+                    <interpGrp type="annotationMode">
+                        <interp>automatically annotated</interp>
+                    </interpGrp>
+                    <interpGrp type="processor">
+                        <interp sameAs="#pie-tdn-all"/>
+                    </interpGrp>
+                    <date from="__DATE_IGNORED_BY_TEST__" to="__DATE_IGNORED_BY_TEST__"/>
+                </ab>
+            </interpretation>
+        </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+        <langUsage>
+            <language ident="nl">
+                Dutch
+                <interpGrp type="dominantLanguage">
+                    <interp>true</interp>
+                </interpGrp>
+            </language>
+        </langUsage>
+    </profileDesc>
+</teiHeader>
     <text>
         <body>
             <div>

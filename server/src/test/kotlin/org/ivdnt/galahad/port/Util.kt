@@ -311,7 +311,7 @@ class TestResult(
 ) {
 
     fun ignoreDate(): TestResult {
-        val date = Regex("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}")
+        val date = Regex("\\d{4}-\\d{2}-\\d{2}")
 
         actual = date.replace(actual, "__DATE_IGNORED_BY_TEST__")
         expected = date.replace(expected, "__DATE_IGNORED_BY_TEST__")
