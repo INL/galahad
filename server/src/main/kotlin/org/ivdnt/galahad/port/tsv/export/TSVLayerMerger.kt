@@ -57,7 +57,7 @@ internal open class TSVLayerMerger(
         columns: MutableList<String>, layer: Layer,
         termIndex: Int,
     ) {
-        columns[sourceFile.posIndex!!] = layer.terms[termIndex].pos.toString()
-        columns[sourceFile.lemmaIndex!!] = layer.terms[termIndex].lemma.toString()
+        columns[sourceFile.posIndex!!] = layer.terms[termIndex].posOrEmpty
+        columns[sourceFile.lemmaIndex!!] = layer.terms[termIndex].lemmaOrEmpty
     }
 }

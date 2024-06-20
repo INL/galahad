@@ -34,6 +34,14 @@ data class Term(
     val lemmaOrDefault
         get() = lemma ?: NO_LEMMA
 
+    @get:JsonIgnore
+    val lemmaOrEmpty
+        get() = lemma ?: ""
+
+    @get:JsonIgnore
+    val posOrEmpty
+        get() = pos ?: ""
+
     /** Whether this term refers to multiple [WordForm]. */
     @get:JsonIgnore
     val isMultiTarget = targets.size > 1
@@ -48,23 +56,25 @@ data class Term(
     /** The head of all [pos]. E.g. "PD+NOU" for "PD(type=art)+NOU(num=sg)". */
     @get:JsonIgnore
     val posHeadGroup: String? = run {
-            // Split on +
-            if (!isMultiPos) return@run posHead
-            val result: String? = pos?.split("+")?.mapNotNull { posToPosHead(it) }?.joinToString("+")
-            result
-        }
+        // Split on +
+        if (!isMultiPos) return@run posHead
+        val result: String? = pos?.split("+")?.mapNotNull { posToPosHead(it) }?.joinToString("+")
+        result
+    }
 
-
+    @get:JsonIgnore
+    val posHeadGroupOrEmpty
+        get() = posHeadGroup ?: ""
 
     /** The features of [pos]. E.g. "num=sg" for "NOU(num=sg)". Does not support multi-pos. */
     @get:JsonIgnore
     val posFeatures: String?
         get() {
             if (pos == null) return null
-            val featureStart: Int = pos?.indexOf('(') ?: -1
-            val featureEnd: Int = pos?.indexOf(')') ?: -1
+            val featureStart: Int = pos.indexOf('(') ?: -1
+            val featureEnd: Int = pos.indexOf(')') ?: -1
             return if (featureStart != -1 && featureEnd != -1) {
-                return pos!!.slice(featureStart + 1 until featureEnd)
+                return pos.slice(featureStart + 1 until featureEnd)
             } else null
         }
 

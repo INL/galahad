@@ -107,7 +107,7 @@ class DocumentTest {
                         val result: File = doc.generateAs(formatTo, meta)
                         val expected: File = Resource.get("all-formats/output/from-$formatFrom-to-$formatTo.${formatTo.extension}")
                         val test = TestResult(expected.readText(), result.readText())
-                        test.ignoreDate().ignoreUUID().result()
+                        test.ignoreDate().ignoreUUID().ignoreTrailingWhiteSpaces().result()
                     }
                 }
             }

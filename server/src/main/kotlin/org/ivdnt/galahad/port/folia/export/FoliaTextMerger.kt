@@ -123,8 +123,8 @@ class FoliaTextMerger(
     }
 
     private fun Element.addTerm(term: Term) {
-        this.addTermFeature("lemma", term.lemma.toString())
-        this.addTermFeature("pos", term.pos.toString(), term.posHeadGroup)
+        this.addTermFeature("lemma", term.lemmaOrEmpty)
+        this.addTermFeature("pos", term.posOrEmpty, term.posHeadGroupOrEmpty)
     }
 
     private fun Element.addTermFeature(name: String, value: String, head: String? = null) {

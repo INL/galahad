@@ -234,11 +234,11 @@ open class TEITextMerger(
             n
         } else {
             val n = document.createElement("w")
-            n.setAttribute("lemma", termToAdd.lemma)
+            n.setAttribute("lemma", termToAdd.lemmaOrEmpty)
             n
         }
         // Both <w> and <pc> have a pos.
-        wTag.setAttribute(posType(), termToAdd.pos)
+        wTag.setAttribute(posType(), termToAdd.posOrEmpty)
         return wTag
     }
 
@@ -303,9 +303,9 @@ open class TEITextMerger(
         val termToAdd = layer.termForWordForm(wordFormToAdd)
         // <pc> tags do not have a lemma.
         if (element.tagName == "w") {
-            element.setAttribute("lemma", termToAdd.lemma)
+            element.setAttribute("lemma", termToAdd.lemmaOrEmpty)
         }
-        element.setAttribute(posType(), termToAdd.pos)
+        element.setAttribute(posType(), termToAdd.posOrEmpty)
         element.removeAttribute("type") // Update legacy formats to TEI p5
     }
 

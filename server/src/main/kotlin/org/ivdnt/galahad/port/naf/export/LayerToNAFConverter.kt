@@ -57,8 +57,8 @@ class LayerToNAFConverter (
                 val xterm = xmlDoc.createElement("term")
                 terms.appendChild(xterm)
                 xterm.setAttribute("id", "t$index")
-                xterm.setAttribute("lemma", term.lemma)
-                xterm.setAttribute("pos", term.pos)
+                xterm.setAttribute("lemma", term.lemmaOrEmpty)
+                xterm.setAttribute("pos", term.posOrEmpty)
 
                 val xspan = xmlDoc.createElement("span")
                 xterm.appendChild( xspan )

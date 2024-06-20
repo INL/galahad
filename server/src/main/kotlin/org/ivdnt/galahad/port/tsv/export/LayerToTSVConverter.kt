@@ -18,8 +18,8 @@ class LayerToTSVConverter(
         outputStream.write("word\tlemma\tpos\n".encodeToByteArray()) // 'word' is the blacklab default
         // Body
         result.terms.forEach {
-            // Note that this might have weird result for multi-wordform tokens
-            outputStream.write("${it.literals}\t${it.lemma}\t${it.pos}\n".encodeToByteArray())
+            // Explicitly non-null.
+            outputStream.write("${it.literals}\t${it.lemmaOrEmpty}\t${it.posOrEmpty}\n".encodeToByteArray())
         }
     }
 }
