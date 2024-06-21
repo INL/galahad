@@ -71,8 +71,8 @@ data class Term(
     val posFeatures: String?
         get() {
             if (pos == null) return null
-            val featureStart: Int = pos.indexOf('(') ?: -1
-            val featureEnd: Int = pos.indexOf(')') ?: -1
+            val featureStart: Int = pos.indexOf('(')
+            val featureEnd: Int = pos.indexOf(')')
             return if (featureStart != -1 && featureEnd != -1) {
                 return pos.slice(featureStart + 1 until featureEnd)
             } else null

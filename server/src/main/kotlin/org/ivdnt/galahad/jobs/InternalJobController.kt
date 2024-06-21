@@ -1,17 +1,19 @@
 package org.ivdnt.galahad.jobs
 
 import org.apache.logging.log4j.kotlin.Logging
-import org.ivdnt.galahad.app.*
+import org.ivdnt.galahad.app.Config
+import org.ivdnt.galahad.app.INTERNAL_JOBS_ERROR_URL
+import org.ivdnt.galahad.app.INTERNAL_JOBS_RESULT_URL
 import org.ivdnt.galahad.data.CorporaController
 import org.ivdnt.galahad.data.document.Document
-import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.document.DocumentFormat
-import org.ivdnt.galahad.port.SourceLayerableFile
+import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.port.InternalFile
+import org.ivdnt.galahad.port.SourceLayerableFile
 import org.ivdnt.galahad.port.tsv.TSVFile
 import org.ivdnt.galahad.taggers.Taggers
-import org.ivdnt.galahad.tagset.TagsetStore
 import org.ivdnt.galahad.tagset.Tagset
+import org.ivdnt.galahad.tagset.TagsetStore
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 import java.io.File

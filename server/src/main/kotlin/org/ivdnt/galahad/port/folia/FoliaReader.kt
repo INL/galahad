@@ -1,9 +1,9 @@
 package org.ivdnt.galahad.port.folia
 
+import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.data.layer.WordForm
-import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.port.folia.export.deepcopy
 import org.ivdnt.galahad.port.xml.reparseText
 import org.ivdnt.galahad.port.xml.tagName
@@ -18,8 +18,7 @@ class FoliaReader(
     val file: File,
     val nodeHandler: (node: Node, offset: Int, document: Document) -> Unit,
 ) {
-
-    val xmlDoc = getXmlBuilder().parse(file)
+    val xmlDoc: Document = getXmlBuilder().parse(file)
     val plainTextBuilder: StringBuilder = StringBuilder()
     val sourceLayer = Layer(SOURCE_LAYER_NAME)
 
@@ -83,9 +82,9 @@ class FoliaReader(
                 }
 
                 "s" -> {
-                    addNonFloatingString("\n")
+                    nonFloatingNL()
                     recurse()
-                    addNonFloatingString("\n")
+                    nonFloatingNL()
                     previousWasW = false
                 }
                 "p" -> {
@@ -103,18 +102,15 @@ class FoliaReader(
     }
 
     /** Adds a newline if the last character exists and is a non newline.*/
-    private fun addNonFloatingString(str: String) {
-        if (plainTextBuilder.isNotEmpty() && !plainTextBuilder.endsWith(str)) {
-            plainTextBuilder.append(str)
+    private fun nonFloatingNL() {
+        if (plainTextBuilder.isNotEmpty() && !plainTextBuilder.endsWith("\n")) {
+            plainTextBuilder.append("\n")
         }
     }
 
     private fun nonFloatingDoubleNL() {
-        if (plainTextBuilder.isEmpty())
-            return
-        else if (!plainTextBuilder.endsWith("\n")) {
-            plainTextBuilder.append("\n\n")
-        } else if (!plainTextBuilder.endsWith("\n\n")) {
+        nonFloatingNL()
+        if (plainTextBuilder.isNotEmpty() && !plainTextBuilder.endsWith("\n\n")) {
             plainTextBuilder.append("\n")
         }
     }

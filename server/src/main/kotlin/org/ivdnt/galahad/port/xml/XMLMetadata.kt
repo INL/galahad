@@ -29,7 +29,7 @@ open class XMLMetadata(
     }
 
     /**
-     * Add a tag to [this] with [name], [textContent], and optional [attrValue] and [targetAttr].
+     * Add a tag to [this] with [name], [textContent], and optional [attrValue]
      * Defaults to writing attribute @type.
      */
     protected fun Node.createChild(

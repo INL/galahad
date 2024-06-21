@@ -4,25 +4,25 @@ import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import com.beust.klaxon.Parser.Companion.default
 import com.fasterxml.jackson.annotation.JsonProperty
+import jakarta.servlet.http.HttpServletRequest
+import jakarta.servlet.http.HttpServletResponse
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.app.TAGGERS_URL
 import org.ivdnt.galahad.app.TAGGER_HEALTH_URL
 import org.ivdnt.galahad.app.TAGGER_URL
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.HttpMethod
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.client.RestTemplate
+import org.springframework.web.util.UriComponentsBuilder
 import java.net.URI
+import java.net.URL
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
-import org.springframework.http.HttpMethod
-import org.springframework.web.client.RestTemplate
-import org.springframework.web.util.UriComponentsBuilder
-import java.net.URL
 
 @RestController
 class TaggersController : Logging {

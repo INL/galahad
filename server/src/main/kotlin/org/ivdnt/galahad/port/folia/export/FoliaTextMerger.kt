@@ -5,11 +5,10 @@ import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.data.layer.WordForm
 import org.ivdnt.galahad.port.tei.export.TEITextMerger
-import org.ivdnt.galahad.util.insertFirst
 import org.ivdnt.galahad.port.xml.reparseText
 import org.ivdnt.galahad.port.xml.tagName
-import org.ivdnt.galahad.util.childOrNull
 import org.ivdnt.galahad.util.insertAfter
+import org.ivdnt.galahad.util.insertFirst
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node

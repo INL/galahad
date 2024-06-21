@@ -1,17 +1,15 @@
 package org.ivdnt.galahad.port.tei.export
 
 import org.ivdnt.galahad.app.report.Report
+import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer
+import org.ivdnt.galahad.data.layer.WordForm
 import org.ivdnt.galahad.port.folia.export.deepcopy
 import org.ivdnt.galahad.port.xml.getPlainTextContent
+import org.ivdnt.galahad.util.*
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
-import java.util.*
-import kotlin.collections.ArrayList
-import org.ivdnt.galahad.data.document.DocumentFormat
-import org.ivdnt.galahad.data.layer.WordForm
-import org.ivdnt.galahad.util.*
 
 fun HashSet<String>.contains(s: String?, ignoreCase: Boolean = false): Boolean {
     return any { it.equals(s, ignoreCase) }

@@ -2,6 +2,8 @@ package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
+import org.ivdnt.galahad.data.layer.Layer
+import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.evaluation.EvaluationEntry
 import org.ivdnt.galahad.port.csv.CSVFile
 import org.ivdnt.galahad.port.csv.CSVHeader

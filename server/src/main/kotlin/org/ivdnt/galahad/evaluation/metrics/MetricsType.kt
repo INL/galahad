@@ -6,7 +6,6 @@ import org.ivdnt.galahad.evaluation.CsvSampleExporter
 import org.ivdnt.galahad.evaluation.EvaluationEntry
 import org.ivdnt.galahad.evaluation.comparison.TermComparison
 import org.ivdnt.galahad.port.csv.CSVFile
-import org.ivdnt.galahad.port.csv.CSVHeader
 import org.ivdnt.galahad.util.toFixed
 
 typealias FlatMetricTypeAssay = Map<String, FlatMetricType>

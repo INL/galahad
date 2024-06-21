@@ -1,15 +1,13 @@
 package org.ivdnt.galahad.jobs
 
-import com.fasterxml.jackson.annotation.JsonProperty
+import jakarta.servlet.http.HttpServletRequest
+import jakarta.servlet.http.HttpServletResponse
 import org.ivdnt.galahad.app.JOBS_URL
 import org.ivdnt.galahad.app.JOB_URL
 import org.ivdnt.galahad.data.CorporaController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 import java.util.*
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
-import org.ivdnt.galahad.app.TAGGERS_URL
 
 @RestController
 class JobsController(

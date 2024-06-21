@@ -1,7 +1,7 @@
 package org.ivdnt.galahad.port
 
-import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.app.User
+import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.document.Document
 import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer

@@ -5,7 +5,10 @@ import org.ivdnt.galahad.FileBackedCache
 import org.ivdnt.galahad.FileBackedValue
 import org.ivdnt.galahad.app.ExpensiveGettable
 import org.ivdnt.galahad.data.layer.Layer
-import org.ivdnt.galahad.port.*
+import org.ivdnt.galahad.port.DocumentTransformMetadata
+import org.ivdnt.galahad.port.InternalFile
+import org.ivdnt.galahad.port.PlainTextableFile
+import org.ivdnt.galahad.port.SourceLayerableFile
 import org.ivdnt.galahad.port.conllu.export.LayerToConlluConverter
 import org.ivdnt.galahad.port.folia.export.LayerToFoliaConverter
 import org.ivdnt.galahad.port.naf.export.LayerToNAFConverter

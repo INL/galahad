@@ -52,7 +52,7 @@ fun getJsonMapper(): ObjectMapper {
 
 fun createCorpus(workdir: File? = null, isDataset: Boolean = false, isAdmin: Boolean = false): Corpus {
     val parent = workdir ?: createTempDirectory().toFile()
-    val corpus = Corpus(parent.resolve(UUID.randomUUID().toString()), User("you"))
+    val corpus = Corpus(parent.resolve(UUID.randomUUID().toString()))
     corpus.updateMetadata(
         MutableCorpusMetadata(
             "you",

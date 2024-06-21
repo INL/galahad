@@ -1,10 +1,10 @@
 package org.ivdnt.galahad.port.naf
 
 import org.ivdnt.galahad.data.document.DocumentFormat
+import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.data.layer.WordForm
-import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.port.DocumentTransformMetadata
 import org.ivdnt.galahad.port.PlainTextableFile
 import org.ivdnt.galahad.port.SourceLayerableFile
@@ -26,11 +26,11 @@ class NAFFile (
 
     val xmlDoc: Document = getXmlBuilder().parse(file)
 
-    val xPathfactory = XPathFactory.newInstance()
-    val xpath = xPathfactory.newXPath()
-    val expr = xpath.compile("/NAF/raw")
-    val wfExpr = xpath.compile("/NAF/text/wf")
-    val termExpr = xpath.compile("/NAF/terms/term")
+    private val xPathfactory = XPathFactory.newInstance()
+    private val xpath = xPathfactory.newXPath()
+    private val expr = xpath.compile("/NAF/raw")
+    private val wfExpr = xpath.compile("/NAF/text/wf")
+    private val termExpr = xpath.compile("/NAF/terms/term")
 
     override fun plainTextReader(): StringReader {
             return (expr.evaluate(xmlDoc, XPathConstants.NODE ) as Node).textContent.reader()
