@@ -91,7 +91,7 @@ class DocumentTest {
             // Convert to each other format
             for (formatTo in DocumentFormat.entries) {
                 val meta = DocumentTransformMetadata(
-                    corpus, job, doc, User("testUser")
+                    corpus, job, doc, User("testUser"), formatTo
                 )
                 when (formatTo) {
                     // Skip the unsupported

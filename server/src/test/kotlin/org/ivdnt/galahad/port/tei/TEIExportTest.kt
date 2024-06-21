@@ -152,7 +152,8 @@ internal class TEIExportTest {
                     corpus = corpus,
                     job = corpus.jobs.readOrThrow(jobName),
                     document = corpus.documents.readOrThrow(docName),
-                    user = User("test-user")
+                    user = User("test-user"),
+                    targetFormat = DocumentFormat.TeiP5
                 )
         ) }
 
@@ -170,7 +171,8 @@ internal class TEIExportTest {
                     corpus = corpus,
                     job = corpus.jobs.readOrThrow(jobName),
                     document = corpus.documents.readOrThrow(teiUploadedFileName),
-                    user = User("test-user")
+                    user = User("test-user"),
+                    targetFormat = DocumentFormat.TeiP5
                 )
             )
         }
