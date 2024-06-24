@@ -14,7 +14,7 @@ class PosLemmaTermFilter (
     val lemma: String? = null,
 ) : TermFilter {
     private val multiplePosFilter: (Term) -> Boolean = { t: Term -> t.isMultiPos }
-    private val otherPosFilter: (Term) -> Boolean = { t: Term -> t.pos?.matches(OTHER_POS_REGEX.toRegex()) ?: false}
+    private val otherPosFilter: (Term) -> Boolean = { t: Term -> t.pos?.contains(Regex(OTHER_POS_REGEX)) ?: false}
     private val singlePosFilter: (Term) -> Boolean = { t: Term -> t.posHeadGroupOrDefault == posHeadGroup }
     val posFilter: (Term) -> Boolean
     val lemmaFilter: (Term) -> Boolean
