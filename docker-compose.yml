@@ -2,6 +2,8 @@
 services:
     client:
         image: instituutnederlandsetaal/galahad-client:${APP_VERSION}
+        build:
+            context: client
         restart: unless-stopped
         networks:
             - proxy_network
@@ -15,6 +17,8 @@ services:
                     memory: 128M
     server:
         image: instituutnederlandsetaal/galahad-server:${APP_VERSION}
+        build:
+            context: server
         restart: unless-stopped
         volumes:
             - user-corpora-volume:/data/corpora/custom
@@ -39,6 +43,8 @@ services:
     # Simple nginx reverse proxy to combine front- and backend
     proxy:
         image: instituutnederlandsetaal/galahad-proxy:${APP_VERSION}
+        build:
+            context: proxy
         depends_on:
             - client
             - server
