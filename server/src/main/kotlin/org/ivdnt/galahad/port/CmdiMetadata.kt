@@ -37,7 +37,7 @@ class CmdiMetadata(transformMetadata: DocumentTransformMetadata) : LayerTransfor
 
     init {
         // Load CMDI template
-        val cmdiTemplate = this::class.java.classLoader.getResource("CMDI-template.xml")!!.file
+        val cmdiTemplate = this::class.java.classLoader.getResourceAsStream("CMDI-template.xml")
         val xmlDoc = getXmlBuilder().parse(cmdiTemplate)
 
         val replacements: Map<List<String>, String> = getReplacements()
