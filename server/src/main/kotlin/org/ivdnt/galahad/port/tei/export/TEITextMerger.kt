@@ -4,6 +4,7 @@ import org.ivdnt.galahad.app.report.Report
 import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.WordForm
+import org.ivdnt.galahad.evaluation.comparison.LayerComparison.Companion.truncatedPcMatch
 import org.ivdnt.galahad.port.folia.export.deepcopy
 import org.ivdnt.galahad.port.xml.getPlainTextContent
 import org.ivdnt.galahad.util.*
@@ -267,8 +268,9 @@ open class TEITextMerger(
             if (wordFormToAdd != null) {
                 // remove all whitespace within a <w>-tag (although this rarely occurs anyway).
                 val sourceLiteral = node.getPlainTextContent().replace(Regex("""\s"""), "")
-                if (wordFormToAdd.literal == sourceLiteral) {
-                    // This is a simple case since the tokenization matches
+                if (wordFormToAdd.literal == sourceLiteral // This is a simple case since the tokenization matches
+                    || truncatedPcMatch(sourceLiteral, wordFormToAdd.literal) // Also match with single punctuation (e.g. word. -> word)
+                ) {
                     mergeWTag(wordFormToAdd, element)
                 } else {
                     // Tokenization mismatch, report it

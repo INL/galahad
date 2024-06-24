@@ -277,24 +277,32 @@ class BLFXMLParser (
     }
 
     private fun handleWordOrPunctNode( node: Node ) {
-        // custom node handling
-        nodeHandler(node, offset, xmlDocument)
+        // Handle cases like <w>a</w><w>b</w> -> "a b" (add space in plaintext)
+        val needsSpacing = node.tagName() == "w" && plaintextTail.isNotBlank() && !Regex("""\s$""").containsMatchIn(plaintextTail)
+        val spaceOffset = if (needsSpacing) 1 else 0
+        val trueWordOffset = offset + spaceOffset
 
+        // Handle merging
+        nodeHandler(node, trueWordOffset, xmlDocument)
+
+        // Extraction
         val literal = literalExtractor(node).trim() // wordPathExpression.evaluate( node )
         val lem = lemmaExtractor(node) // lemPathExpression.evaluate( node )
         val pos = posExtractor(node) // posPathExpression.evaluate( node )
         val id = idExtractor(node)
 
-        val wordForm = WordForm( literal, offset, literal.length, id ?: "no-id" )
-        sourceLayer.wordForms.add( wordForm )
+        // Add the word to the source layer
+        val wordForm = WordForm(literal, trueWordOffset, literal.length, id ?: "no-id" )
+        val term = Term(lem, pos, mutableListOf(wordForm))
+        sourceLayer.wordForms.add(wordForm)
+        sourceLayer.terms.add(term)
+
+        // Add the word to the plaintext
         var text = literal.trim()
-        if (node.tagName() == "w" && plaintextTail.isNotBlank() && !Regex("""\s$""").containsMatchIn(plaintextTail)) {
-           text = " $text"
+        if (needsSpacing) {
+            text = " $text"
         }
         addPlaintext(text)
-
-        val term = Term(lem, pos, mutableListOf(wordForm))
-        sourceLayer.terms.add( term )
     }
 
     fun xmlToString(pretty: Boolean): String {

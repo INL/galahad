@@ -140,12 +140,14 @@ class LayerComparison(
         return truncatedPcMatch(aStr, bStr) || truncatedPcMatch(bStr, aStr)
     }
 
-    private fun truncatedPcMatch(aStr: String, bStr: String): Boolean {
-        if (PUNCTUATION.contains(aStr.last().toString())) {
-            if (aStr.slice(0 until aStr.lastIndex) == bStr) {
-                return true
+    companion object {
+        fun truncatedPcMatch(aStr: String, bStr: String): Boolean {
+            if (PUNCTUATION.contains(aStr.last().toString())) {
+                if (aStr.slice(0 until aStr.lastIndex) == bStr) {
+                    return true
+                }
             }
+            return false
         }
-        return false
     }
 }
