@@ -4,7 +4,8 @@
     <transition name="fade" mode="out-in">
       <!-- v-if instead of v-show such that elements inside a GModal can rely on onMounted()-->
       <div v-if="show" class="bg" @click.self="$emit('hide')">
-        <GCard :showHelp="showHelp" :title="title" :class="`content ${small ? 'my-small' : ''}`" :noHelp="noHelp" :headless="headless">
+        <GCard :showHelp="showHelp" :title="title" :class="`content ${small ? 'my-small' : ''}`" :noHelp="noHelp"
+          :headless="headless">
           <template #title>
             <slot name="title"></slot>
           </template>
@@ -63,7 +64,7 @@ export default defineComponent({
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 1000;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

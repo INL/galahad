@@ -1,5 +1,7 @@
 <template>
     <div>
+        <!-- Drag and drop from https://codepen.io/nekobog/pen/JjoZvBm -->
+        <div id="dropZone"></div>
 
         <!-- Styled label for input -->
         <label for="file-upload" class="custom-file-upload">
@@ -7,7 +9,7 @@
                 width="20" height="12" viewBox="0 0 20 12">
                 <polygon class="st0" points="10,4.2 2.2,12 0.1,9.9 10,0 19.9,9.9 17.8,12 "></polygon>
             </svg>
-            Select file(s)
+            Select file(s) or drag & drop
         </label>
         <!-- Actual input -->
         <input type="file" ref="uploadInput" name="filefield" multiple id="file-upload" style="display: none;"
@@ -69,6 +71,7 @@
 
 <script setup lang='ts'>
 // Libraries & stores
+import { onMounted, ref } from 'vue'
 import stores from '@/stores'
 import { storeToRefs } from 'pinia'
 // Components
@@ -77,9 +80,38 @@ import { GButton, GInfo } from '@/components'
 // Stores
 const documentsStore = stores.useDocuments()
 const { filesToUpload, illegalFiles, uploadBusyCount, uploadErrorCount, uploading } = storeToRefs(documentsStore)
+
+// Fields
+var dropZone = ref(null as any as HTMLElement);
+
+// Methods
+function showDropZone(e: DragEvent) {
+    if (e.dataTransfer!.types.includes('Files')) {
+        dropZone.value.style.display = "block"
+    }
+}
+function hideDropZone() {
+    dropZone.value.style.display = "none";
+}
+function handleDrop(e: DragEvent) {
+    e.preventDefault();
+    hideDropZone();
+    filesToUpload.value = [...e.dataTransfer!.files]
+}
+
+// Watches & mounts
+onMounted(() => {
+    dropZone.value = document.getElementById('dropZone') as HTMLElement;
+    // Register drag events
+    window.addEventListener('dragenter', showDropZone)
+    dropZone.value.addEventListener('dragleave', hideDropZone)
+    dropZone.value.addEventListener('drop', handleDrop)
+    // Apparently, this is needed to prevent the browser from opening the file.
+    dropZone.value.addEventListener('dragover', e => e.preventDefault())
+})
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .custom-file-upload {
     border: 0px solid #ccc;
     background-color: var(--int-theme);
@@ -103,5 +135,17 @@ ol {
     width: fit-content;
     text-align: left;
     margin: 1em auto;
+}
+
+#dropZone {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--int-theme);
+    opacity: 0.4;
+    z-index: 3;
 }
 </style>
