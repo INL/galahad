@@ -9,32 +9,36 @@
 
             <div class="flex">
                 <div class="left">
-                    <p>Historical texts are essential source material for both linguistic and digital humanities research.
-                        Adding linguistic annotation to historical text corpora helps to make the data more accessible.
-                        Users need not be concerned with historical spelling variation, and can query or analyse the data
-                        using higher-lever categories like part of speech and other grammatical properties.</p>
-                    <p>This application serves two purposes. One is to make annotation and tool evaluation easily accessible
-                        to researchers, the other to make it easy for developers to contribute their tools and models in the
-                        platform, and thus compare them to other tools with gold standard material included in the platform.
+                    <p>
+                        Historical texts are essential source material for both linguistic and digital humanities
+                        research. Adding linguistic annotation (part of speech and modern Dutch lemma) to historical
+                        text helps to make the data more accessible. Users need not be concerned with historical
+                        spelling variation when querying and analysing the data.
                     </p>
-                    <p>GaLAHaD is designed to enable end users to choose the optimal path for their material. Apart from the
-                        basic task of uploading and annotating corpus material, GaLAHaD provides options to inspect and
-                        evaluate the result of the annotation process, in order to raise the awareness of typical errors and
-                        biases in the tools. The functionality of comparing annotation layers enables users to assess the
-                        accuracy of different tools on their data. It can be used both to evaluate a layer added by an
-                        automatic tagger with respect to a gold standard reference layer, or to compare layers added by
-                        different taggers. Disagreement between layers is not only represented by global statistics, but
-                        also illustrated by examples which are immediately visible in the tool. The annotated material can
-                        be automatically uploaded to the Autosearch corpus exploration environment and to the CoBaLT tool
-                        for manual correction of linguistic annotation.</p>
-                    <p>For tool developers, the docker-based application architecture ensures easy contribution of tools to
-                        the platform. The application and taggers are hosted by the INT and accessible with any
+                    <p>
+                        GaLAHaD serves two purposes. One is to make annotation and tool evaluation easily accessible to
+                        researchers, the other to make it easy for developers to contribute their tools and models to
+                        the platform, and thus compare them to other tools with gold standard material.
+                    </p>
+                    <p>
+                        <i>GaLAHaD</i> is designed to enable end users to choose the optimal path for their material.
+                        Apart from the basic task of uploading and annotating corpus material, <i>GaLAHaD</i> provides
+                        options to inspect and evaluate the result of the annotation process, in order to raise the
+                        awareness of typical errors and biases in the tools. The functionality of comparing annotation
+                        layers enables users to assess the accuracy of different tools on their data. It can be used
+                        both to evaluate a layer added by an automatic tagger with respect to a gold standard reference
+                        layer, or to compare layers added by different taggers. Disagreement between layers is not only
+                        represented by global statistics, but also illustrated by examples which are immediately visible
+                        in the tool. The annotated material can be uploaded to the Autosearch corpus exploration
+                        environment and to the <i>LAnCeLoT</i> tool for manual correction of linguistic annotation.
+                    </p>
+                    <p>
+                        For tool developers, the docker-based application architecture ensures easy contribution of
+                        tools to the platform. The application and taggers are hosted by the INT and accessible with any
                         CLARIN-account. There is also the option to self-host an instance using the publicly available
                         docker images from the
-                        <ExternalLink href="https://hub.docker.com/u/instituutnederlandsetaal">INT docker hub
-                        </ExternalLink>
-                        or the open source code available on
-                        <ExternalLink href="https://www.github.com/INL/Galahad">GitHub</ExternalLink>.
+                        <a href="https://hub.docker.com/u/instituutnederlandsetaal">INT Docker Hub</a> or the open
+                        source code available on <a href="https://github.com/INL/galahad">GitHub</a>.
                     </p>
                 </div>
 

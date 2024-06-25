@@ -132,8 +132,9 @@
         <p>
           For tool developers, the docker-based application architecture ensures easy contribution of tools to the
           platform. The application and taggers are hosted by the INT and accessible with any CLARIN-account. There is
-          also the option to self-host an instance using the publicly available docker images from the INT docker hub or
-          the open source code available on GitHub.
+          also the option to self-host an instance using the publicly available docker images from the
+          <a href="https://hub.docker.com/u/instituutnederlandsetaal">INT Docker Hub</a> or the open source code
+          available on <a href="https://github.com/INL/galahad">GitHub</a>.
         </p>
 
         <!-- H2: Release 1.0.0 -->
