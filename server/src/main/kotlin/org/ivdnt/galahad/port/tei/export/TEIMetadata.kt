@@ -5,15 +5,11 @@ import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.port.LayerTransformer
 import org.ivdnt.galahad.port.xml.XMLMetadata
 import org.ivdnt.galahad.util.childOrNull
-import org.ivdnt.galahad.util.getXmlBuilder
 import org.ivdnt.galahad.util.toNonEmptyString
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
-import org.xml.sax.InputSource
-import java.io.ByteArrayOutputStream
 import java.io.OutputStream
-import java.io.StringReader
 import java.util.*
 import javax.xml.transform.OutputKeys
 import javax.xml.transform.Transformer

@@ -112,8 +112,8 @@ class LayerToTEIConverter(
             writer.writeRaw("<pc xml:id=\"${term.targets[0].id}\">${getLiteral()}</pc>")
         } else {
             // If it is not punctuation, safely assume it can be interpreted as <w>
-            val lemma = term.lemma?.escapeXML()
-            val pos = term.pos?.escapeXML()
+            val lemma = term.lemmaOrEmpty.escapeXML()
+            val pos = term.posOrEmpty.escapeXML()
             writer.writeRaw("<w lemma=\"$lemma\" pos=\"$pos\" xml:id=\"${term.targets[0].id}\">${getLiteral()}</w>")
         }
     }

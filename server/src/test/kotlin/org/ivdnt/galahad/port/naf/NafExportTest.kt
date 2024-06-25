@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.port.naf
 
 import org.ivdnt.galahad.data.corpus.Corpus
+import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.port.DocTest
 import org.ivdnt.galahad.port.LayerBuilder
 import org.ivdnt.galahad.port.Resource
@@ -38,7 +39,7 @@ class NafExportTest {
     @Test
     fun `Merge throws`() {
         val layer = LayerBuilder().loadDummies(1).build()
-        val meta = DocTest.builder(corpus).getDummyTransformMetadata(layer, "txt")
+        val meta = DocTest.builder(corpus).getDummyTransformMetadata(layer, DocumentFormat.Txt)
         assertThrows(Exception::class.java) {
             Resource.getDoc("naf/import/input.naf.xml").merge(meta)
         }

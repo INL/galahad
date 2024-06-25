@@ -1,17 +1,16 @@
 package org.ivdnt.galahad.port.tei.export
 
 import org.ivdnt.galahad.app.report.Report
+import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer
+import org.ivdnt.galahad.data.layer.WordForm
+import org.ivdnt.galahad.evaluation.comparison.LayerComparison.Companion.truncatedPcMatch
 import org.ivdnt.galahad.port.folia.export.deepcopy
 import org.ivdnt.galahad.port.xml.getPlainTextContent
+import org.ivdnt.galahad.util.*
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
-import java.util.*
-import kotlin.collections.ArrayList
-import org.ivdnt.galahad.data.document.DocumentFormat
-import org.ivdnt.galahad.data.layer.WordForm
-import org.ivdnt.galahad.util.*
 
 fun HashSet<String>.contains(s: String?, ignoreCase: Boolean = false): Boolean {
     return any { it.equals(s, ignoreCase) }
@@ -234,11 +233,11 @@ open class TEITextMerger(
             n
         } else {
             val n = document.createElement("w")
-            n.setAttribute("lemma", termToAdd.lemma)
+            n.setAttribute("lemma", termToAdd.lemmaOrEmpty)
             n
         }
         // Both <w> and <pc> have a pos.
-        wTag.setAttribute(posType(), termToAdd.pos)
+        wTag.setAttribute(posType(), termToAdd.posOrEmpty)
         return wTag
     }
 
@@ -269,8 +268,9 @@ open class TEITextMerger(
             if (wordFormToAdd != null) {
                 // remove all whitespace within a <w>-tag (although this rarely occurs anyway).
                 val sourceLiteral = node.getPlainTextContent().replace(Regex("""\s"""), "")
-                if (wordFormToAdd.literal == sourceLiteral) {
-                    // This is a simple case since the tokenization matches
+                if (wordFormToAdd.literal == sourceLiteral // This is a simple case since the tokenization matches
+                    || truncatedPcMatch(sourceLiteral, wordFormToAdd.literal) // Also match with single punctuation (e.g. word. -> word)
+                ) {
                     mergeWTag(wordFormToAdd, element)
                 } else {
                     // Tokenization mismatch, report it
@@ -303,9 +303,9 @@ open class TEITextMerger(
         val termToAdd = layer.termForWordForm(wordFormToAdd)
         // <pc> tags do not have a lemma.
         if (element.tagName == "w") {
-            element.setAttribute("lemma", termToAdd.lemma)
+            element.setAttribute("lemma", termToAdd.lemmaOrEmpty)
         }
-        element.setAttribute(posType(), termToAdd.pos)
+        element.setAttribute(posType(), termToAdd.posOrEmpty)
         element.removeAttribute("type") // Update legacy formats to TEI p5
     }
 

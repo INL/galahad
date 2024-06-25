@@ -9,6 +9,7 @@ import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.corpus.MutableCorpusMetadata
 import org.ivdnt.galahad.data.document.Document
+import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.data.layer.WordForm
@@ -51,7 +52,7 @@ fun getJsonMapper(): ObjectMapper {
 
 fun createCorpus(workdir: File? = null, isDataset: Boolean = false, isAdmin: Boolean = false): Corpus {
     val parent = workdir ?: createTempDirectory().toFile()
-    val corpus = Corpus(parent.resolve(UUID.randomUUID().toString()), User("you"))
+    val corpus = Corpus(parent.resolve(UUID.randomUUID().toString()))
     corpus.updateMetadata(
         MutableCorpusMetadata(
             "you",
@@ -189,16 +190,16 @@ class DocTestBuilder(
     /** The file extension is relevant, otherwise conversion will fail */
     fun getDummyTransformMetadata(
         layer: Layer,
-        ext: String? = null,
+        format: DocumentFormat,
         file: File? = null,
     ): DocumentTransformMetadata {
-        val file = file ?: createTempDirectory().toFile().resolve("dummy.$ext")
+        val file = file ?: createTempDirectory().toFile().resolve("dummy.${format.extension}")
         file.createNewFile()
         val docName = corpus.documents.create(file)
         val job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         job.document(docName).setResult(layer)
         return DocumentTransformMetadata(
-            corpus, job, corpus.documents.readOrThrow(docName), User("testUser")
+            corpus, job, corpus.documents.readOrThrow(docName), User("testUser"), format
         )
     }
 
@@ -206,7 +207,7 @@ class DocTestBuilder(
 
     fun convertToTSV(layer: Layer): TestResult {
         val exporter = LayerToTSVConverter(
-            getDummyTransformMetadata(layer, "tsv")
+            getDummyTransformMetadata(layer, DocumentFormat.Tsv)
         )
         val result = exporter.convertToFileNamed("test")
         return got(result.readText())
@@ -217,7 +218,7 @@ class DocTestBuilder(
     }
 
     fun mergeTSV(file: File, layer: Layer): TestResult {
-        val transformMetadata = getDummyTransformMetadata(layer, file = file)
+        val transformMetadata = getDummyTransformMetadata(layer, DocumentFormat.Tsv, file)
         val result: TSVFile = TSVFile(file).merge(transformMetadata)
         return got(result.file.readText())
     }
@@ -226,7 +227,7 @@ class DocTestBuilder(
 
     fun convertToConllu(layer: Layer): TestResult {
         val exporter = LayerToConlluConverter(
-            getDummyTransformMetadata(layer, "conllu")
+            getDummyTransformMetadata(layer, DocumentFormat.Conllu)
         )
         val result = exporter.convertToFileNamed("test")
         return got(result.readText())
@@ -237,7 +238,7 @@ class DocTestBuilder(
     }
 
     fun mergeConllu(file: File, layer: Layer): TestResult {
-        val transformMetadata = getDummyTransformMetadata(layer, file = file)
+        val transformMetadata = getDummyTransformMetadata(layer, DocumentFormat.Conllu, file)
         val result: ConlluFile = ConlluFile(file).merge(transformMetadata)
         return got(result.file.readText())
     }
@@ -246,7 +247,7 @@ class DocTestBuilder(
 
     fun convertToNaf(file: File, layer: Layer): TestResult {
         val exporter = LayerToNAFConverter(
-            getDummyTransformMetadata(layer, file = file)
+            getDummyTransformMetadata(layer, DocumentFormat.Naf, file)
         )
         val result = exporter.convertToFileNamed("test")
         return got(result.readText())
@@ -256,28 +257,26 @@ class DocTestBuilder(
 
     fun convertToFolia(file: File, layer: Layer): TestResult {
         val exporter = LayerToFoliaConverter(
-            getDummyTransformMetadata(layer, file = file)
+            getDummyTransformMetadata(layer, DocumentFormat.Folia, file)
         )
         val result = exporter.convertToFileNamed("test")
         return got(result.readText())
     }
 
     fun mergeFolia(file: File, layer: Layer): TestResult {
-        val transformMetadata = getDummyTransformMetadata(layer, file = file)
+        val transformMetadata = getDummyTransformMetadata(layer, DocumentFormat.Folia, file)
         val result: FoliaFile = FoliaFile(file).merge(transformMetadata)
         return got(result.file.readText())
     }
 
     // TEI
 
-    fun convertToTEI(teiFile: File, layer: Layer): TestResult {
-        val docName = corpus.documents.create(teiFile)
+    fun convertToTEI(file: File, layer: Layer): TestResult {
+        val docName = corpus.documents.create(file)
         val job = corpus.jobs.createOrThrow(TestConfig.TAGGER_NAME)
         job.document(docName).setResult(layer)
         val exporter = LayerToTEIConverter(
-            DocumentTransformMetadata(
-                corpus, job, corpus.documents.readOrThrow(docName), User("testUser")
-            )
+            getDummyTransformMetadata(layer, DocumentFormat.TeiP5, file)
         )
 
         val result = exporter.convertToFileNamed("tst")
@@ -289,7 +288,7 @@ class DocTestBuilder(
     }
 
     fun mergeTEI(file: File, layer: Layer): TestResult {
-        val transformMetadata = getDummyTransformMetadata(layer, file = file)
+        val transformMetadata = getDummyTransformMetadata(layer, DocumentFormat.TeiP5, file)
         val result: TEIFile = TEIFile(file).merge(transformMetadata)
         return got(result.file.readText())
     }

@@ -24,7 +24,6 @@ open class Distribution {
     /**
      * Is serialized and send through API, so it is in fact used.
      */
-    @Suppress("unused")
     val distribution: Set<DistributionRow>
         get() = distributionMap.entries.map {
                 DistributionRow(

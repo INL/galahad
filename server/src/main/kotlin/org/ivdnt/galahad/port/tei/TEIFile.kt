@@ -1,9 +1,9 @@
 package org.ivdnt.galahad.port.tei
 
 import org.ivdnt.galahad.app.executeAndLogTime
-import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.document.FormatInducer
+import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.port.DocumentTransformMetadata
 import org.ivdnt.galahad.port.tei.export.TEILayerMerger
 import org.ivdnt.galahad.port.xml.AnnotatedFile

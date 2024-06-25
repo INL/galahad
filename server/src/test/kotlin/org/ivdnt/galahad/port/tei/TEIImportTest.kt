@@ -13,7 +13,7 @@ internal class TEIImportTest {
         @Test
         fun `Multiple text elements`() {
             val teiFile = TEIFile(Resource.get("tei/dummies/multipletextelements.xml"))
-            assertEquals("text1\ntext2text3", teiFile.plainTextReader().readText().trim())
+            assertEquals("text1\ntext2 text3", teiFile.plainTextReader().readText().trim())
         }
 
         @Test
@@ -39,6 +39,13 @@ internal class TEIImportTest {
             val file = TEIFile(Resource.get("tei/brieven/input.tei.xml"))
             // Has no source layer
             assertPlainText("tei/brieven", file)
+        }
+
+        @Test
+        fun `Import TEI with w-tags without spaces in between`() {
+            val file = TEIFile(Resource.get("tei/nospaces/input.tei.xml"))
+            assertEquals("a a a", file.plainTextReader().readText().trim())
+
         }
     }
 

@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.port.plain
 
 import org.ivdnt.galahad.data.corpus.Corpus
+import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.port.DocTestBuilder
 import org.ivdnt.galahad.port.Resource
@@ -30,7 +31,7 @@ internal class PlainFileTest {
         val builder = DocTestBuilder(corpus)
         val file = PlainFile(Resource.get("txt/input.txt"))
         assertThrows(Exception::class.java) {
-            file.merge(builder.getDummyTransformMetadata(Layer.EMPTY, "txt"))
+            file.merge(builder.getDummyTransformMetadata(Layer.EMPTY, DocumentFormat.Txt))
         }
     }
 }

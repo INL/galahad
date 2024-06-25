@@ -3,7 +3,10 @@ package org.ivdnt.galahad.tagset
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.app.TAGSETS_URL
 import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.CrossOrigin
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
 
 @RestController

@@ -2,8 +2,8 @@ package org.ivdnt.galahad.app.report
 
 import org.apache.logging.log4j.kotlin.Logging
 import org.apache.logging.log4j.kotlin.logger
-import org.ivdnt.galahad.data.layer.WordForm
 import org.ivdnt.galahad.data.layer.Term
+import org.ivdnt.galahad.data.layer.WordForm
 
 class Report : Logging {
 
@@ -18,8 +18,8 @@ class Report : Logging {
             // println("Spotted incompatible tokenization for \"${wf.literal}\" at offset ${wf.offset}")
             // Now we do nothing, but it is good to centrally register this
             logger().warn( "REPORT: Spotted incompatible tokenization for wordforms \n" +
-                    "    - $wf1 \n" +
-                    "    - $wf2"
+                    "    - ${wf1.literal} \n" +
+                    "    - ${wf2.literal}"
             )
         }
 

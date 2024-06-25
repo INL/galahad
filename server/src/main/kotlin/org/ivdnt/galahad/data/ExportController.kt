@@ -29,12 +29,12 @@ class ExportController(
     @Autowired
     private val response: HttpServletResponse? = null
 
-    private fun getCorpusTransformMetadata(corpusID: UUID, jobName: String): CorpusTransformMetadata {
+    private fun getCorpusTransformMetadata(corpusID: UUID, jobName: String, formatName: DocumentFormat): CorpusTransformMetadata {
         // Exporting documents requires you to have write access.
         val corpus = corpora.getWriteAccessOrThrow(corpusID, request)
         val job = corpus.jobs.readOrThrow(jobName)
         return CorpusTransformMetadata(
-            corpus = corpus, job = job, user = User.getUserFromRequestOrThrow(request)
+            corpus = corpus, job = job, user = User.getUserFromRequestOrThrow(request), targetFormat = formatName
         )
     }
 
@@ -42,8 +42,9 @@ class ExportController(
         corpus: UUID,
         job: String,
         document: String,
+        format: DocumentFormat,
     ): DocumentTransformMetadata {
-        return getCorpusTransformMetadata(corpus, job).documentMetadata(document)
+        return getCorpusTransformMetadata(corpus, job, format).documentMetadata(document)
     }
 
     @GetMapping("$JOB_URL/export/convert")
@@ -74,7 +75,7 @@ class ExportController(
 
     fun exportCorpusJobInFormat(corpus: UUID, job: String, formatName: String, shouldMerge: Boolean, posHeadOnly: Boolean) {
         val format = DocumentFormat.fromString(formatName)
-        val ctm = getCorpusTransformMetadata(corpus, job)
+        val ctm = getCorpusTransformMetadata(corpus, job, format)
         setZipResponseHeader(ctm)
         ctm.corpus.getZipped(ctm, formatMapper = {
             try {
@@ -119,7 +120,7 @@ class ExportController(
         @RequestParam("posHeadOnly") posHeadOnly: Boolean,
     ): ByteArray? {
         val format = DocumentFormat.fromString(formatName)
-        val dtm = getDocumentTransformMetadata(corpus, job, document)
+        val dtm = getDocumentTransformMetadata(corpus, job, document, format)
         // TODO("set headers")
         return convertAndExportDocument(dtm, format, posHeadOnly).readBytes()
     }
@@ -140,7 +141,8 @@ class ExportController(
         @PathVariable document: String,
         @RequestParam("posHeadOnly") posHeadOnly: Boolean,
     ): ByteArray? {
-        val dtm = getDocumentTransformMetadata(corpus, job, document)
+        val doc = corpora.getWriteAccessOrThrow(corpus, request).documents.readOrThrow(document)
+        val dtm = getDocumentTransformMetadata(corpus, job, document, doc.format)
         // TODO("set headers")
         return mergeAndExportDocument(dtm, posHeadOnly).file.readBytes()
     }

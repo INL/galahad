@@ -265,7 +265,7 @@ export default defineComponent({
 
     >.header {
         background-color: var(--int-theme);
-        z-index: 100;
+        z-index: 1;
         top: 0;
         box-shadow: 0px 0px 10px black;
 

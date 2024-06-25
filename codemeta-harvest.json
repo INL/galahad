@@ -91,7 +91,7 @@
         {
             "@id": "https://portal.clarin.ivdnt.org/galahad/help",
             "@type": "WebSite",
-            "name": "GaLAHad Help",
+            "name": "GaLAHaD Help",
             "url": "https://portal.clarin.ivdnt.org/galahad/help"
         }
     ],
@@ -117,7 +117,6 @@
                 "url": "https://portal.clarin.ivdnt.org/galahad/api/v3/api-docs"
             },
             "documentation": "https://portal.clarin.ivdnt.org/galahad/api/swagger-ui/index.html",
-            "version": "1.0.0",
             "consumesData": [
                 {
                     "@type": "TextDigitalDocument",

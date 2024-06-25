@@ -1,8 +1,9 @@
 package org.ivdnt.galahad.port
 
-import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.app.User
+import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.document.Document
+import org.ivdnt.galahad.data.document.DocumentFormat
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.jobs.Job
@@ -10,7 +11,8 @@ import org.ivdnt.galahad.jobs.Job
 open class CorpusTransformMetadata(
     val corpus: Corpus,
     val job: Job,
-    val user: User
+    val user: User,
+    val targetFormat: DocumentFormat,
 ) {
 
     fun documentMetadata( document: String ): DocumentTransformMetadata {
@@ -18,7 +20,8 @@ open class CorpusTransformMetadata(
             corpus = corpus,
             job = job,
             document = corpus.documents.readOrThrow( document ),
-            user = user
+            user = user,
+            targetFormat = targetFormat,
         )
     }
 }
@@ -27,7 +30,8 @@ class DocumentTransformMetadata(
     val corpus: Corpus,
     val job: Job,
     val document: Document,
-    val user: User
+    val user: User,
+    val targetFormat: DocumentFormat
 ) {
 
     val layer: Layer = job.document(document.name).result

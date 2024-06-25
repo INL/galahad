@@ -73,9 +73,9 @@ class LayerToFoliaConverter (
     ) {
         writer.openTag("<w xml:id=\"$id.p1.w${index + 1}\">")
         writer.writeLine("<t>${term.targets[0].literal.escapeXML()}</t>")
-        writer.writeLine("<lemma class=\"${term.lemma?.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>")
+        writer.writeLine("<lemma class=\"${term.lemmaOrEmpty.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>")
         writer.writeLine(
-            "<pos class=\"${term.pos?.escapeXML()}\" head=\"${term.posHeadGroup?.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>"
+            "<pos class=\"${term.posOrEmpty.escapeXML()}\" head=\"${term.posHeadGroupOrEmpty.escapeXML()}\" processor=\"$taggerName\" set=\"$taggerName\"/>"
         )
         writer.closeTag("</w>")
     }

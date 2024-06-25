@@ -10,7 +10,7 @@ class CSVFile(
 ) : File(path.toURI()) {
 
     init {
-        this.appendText(getExcelCompatibilityHeader())
+        this.appendText(excelCompatibilityHeader)
     }
 
     /** Append Excel compatible text. */
@@ -33,12 +33,13 @@ class CSVFile(
         // This is sad and I don't know of a clean solution short of having a configuration option 'excel-compatibility'
         // We will just except this loss and accommodate Excel/Windows user who might be less technically skilled
         // and hope that the Linux crowd will be able to handle this slightly weird header themselves
-        fun getExcelCompatibilityHeader(): String {
-            // Force Excel to read the csv as UTF16LE. Needed to render e.g. 'ü'.
-            // https://en.wikipedia.org/wiki/Byte_order_mark
-            val bom = '\uFEFF'
-            return "${bom}sep=,\n"
-        }
+        val excelCompatibilityHeader: String
+            get() {
+                // Force Excel to read the csv as UTF16LE. Needed to render e.g. 'ü'.
+                // https://en.wikipedia.org/wiki/Byte_order_mark
+                val bom = '\uFEFF'
+                return "${bom}sep=,\n"
+            }
 
         fun toCSVHeader(headers: List<String>): CSVHeader {
             // This is just an alias

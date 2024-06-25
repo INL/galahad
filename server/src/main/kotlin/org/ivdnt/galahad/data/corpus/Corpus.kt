@@ -36,7 +36,6 @@ import kotlin.io.path.createTempDirectory
  */
 class Corpus(
     workDirectory: File,
-    user: User,
 ) : BaseFileSystemStore(workDirectory) {
 
     val documents = Documents(workDirectory.resolve("documents"))

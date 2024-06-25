@@ -63,9 +63,9 @@ data class TermComparison(
     val equalLemma: Boolean
         get() {
             if (refTerm.lemma == null) return true
-            if (refTerm.lemma!!.isEmpty()) return true
+            if (refTerm.lemma.isEmpty()) return true
             if (hypoTerm.lemma == null) return false
-            return hypoTerm.lemma!!.equals(refTerm.lemma!!, true)
+            return hypoTerm.lemma.equals(refTerm.lemma, true)
         }
 
     /** Whether the pos is equal. When the reference pos is empty or null, any hypothesis pos is fine. */
@@ -73,7 +73,7 @@ data class TermComparison(
     val equalPOS: Boolean
         get() {
             if (refTerm.pos == null) return true
-            if (refTerm.pos!!.isEmpty()) return true
+            if (refTerm.pos.isEmpty()) return true
             if (hypoTerm.pos == null) return false
             return hypoTerm.pos.equals(refTerm.pos, true)
         }

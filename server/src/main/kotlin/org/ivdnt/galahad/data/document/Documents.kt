@@ -3,7 +3,6 @@ package org.ivdnt.galahad.data.document
 import org.ivdnt.galahad.BaseFileSystemStore
 import org.ivdnt.galahad.app.CRUDSet
 import org.ivdnt.galahad.data.DocumentWriteType
-import org.ivdnt.galahad.data.DocumentsController
 import java.io.File
 
 /**

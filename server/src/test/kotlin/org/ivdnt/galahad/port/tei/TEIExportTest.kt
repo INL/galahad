@@ -22,6 +22,9 @@ internal class TEIExportTest {
 
     @Test
     fun `Merge pie-tdn result with heavily twined tei`() {
+        val file = TEIFile(Resource.get("tei/twine/twine.input.xml"))
+        assertPlainText("tei/twine", file)
+
         val plaintext: String = Resource.get("tei/twine/plaintext.txt").readText()
         val layer = LayerBuilder()
             .loadLayerFromTSV("tei/twine/pie-tdn.tsv", plaintext)
@@ -37,6 +40,9 @@ internal class TEIExportTest {
 
     @Test
     fun `Merge a pie-tdn layer with a tei file that only contains plaintext`() {
+        val file = TEIFile(Resource.get("tei/brieven/input.tei.xml"))
+        assertPlainText("tei/brieven", file)
+
         val plaintext: String = Resource.get("tei/brieven/plaintext.txt").readText()
         val layer = LayerBuilder()
             .loadLayerFromTSV("tei/brieven/pie.tsv", plaintext)
@@ -152,7 +158,8 @@ internal class TEIExportTest {
                     corpus = corpus,
                     job = corpus.jobs.readOrThrow(jobName),
                     document = corpus.documents.readOrThrow(docName),
-                    user = User("test-user")
+                    user = User("test-user"),
+                    targetFormat = DocumentFormat.TeiP5
                 )
         ) }
 
@@ -170,7 +177,8 @@ internal class TEIExportTest {
                     corpus = corpus,
                     job = corpus.jobs.readOrThrow(jobName),
                     document = corpus.documents.readOrThrow(teiUploadedFileName),
-                    user = User("test-user")
+                    user = User("test-user"),
+                    targetFormat = DocumentFormat.TeiP5
                 )
             )
         }

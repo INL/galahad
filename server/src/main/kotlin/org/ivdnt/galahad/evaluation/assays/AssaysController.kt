@@ -13,7 +13,6 @@ import org.ivdnt.galahad.evaluation.metrics.FlatMetricTypeAssay
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 import java.util.*
-import kotlin.collections.HashMap
 
 /**
  * {

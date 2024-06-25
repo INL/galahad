@@ -375,7 +375,7 @@ table.loading .loading-symbol {
 table .loading-symbol {
     transition: opacity 2s ease, visibility 2s ease;
     opacity: 0;
-    z-index: 3;
+    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;

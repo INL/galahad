@@ -1,10 +1,10 @@
 package org.ivdnt.galahad.port.xml
 
 import org.ivdnt.galahad.data.document.DocumentFormat
+import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.Term
 import org.ivdnt.galahad.data.layer.WordForm
-import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.port.BLFXML
 import org.ivdnt.galahad.util.getXmlBuilder
 import org.w3c.dom.Document
@@ -33,8 +33,8 @@ fun Node.tagName(): String? {
 }
 
 /**
- * Should the text text inside this node be interpreted as source text?
- * Asssumes we are already inside of a text container e.g. <text>
+ * Should the text inside this node be interpreted as source text?
+ * Assumes we are already inside a text container e.g. <text>
  */
 private fun Node.isTextable(): Boolean {
     if( this.tagName() == "note" && this.attributes.getNamedItem("type")?.textContent == "editorial" ) {
@@ -210,7 +210,7 @@ class BLFXMLParser (
 
 
 
-    private fun addPlaintext( literal: String ) {
+    private fun addPlaintext(literal: String) {
         plainTextOutputStream.write( literal.toByteArray() )
         offset += literal.length
 
@@ -277,20 +277,32 @@ class BLFXMLParser (
     }
 
     private fun handleWordOrPunctNode( node: Node ) {
-        // custom node handling
-        nodeHandler(node, offset, xmlDocument)
+        // Handle cases like <w>a</w><w>b</w> -> "a b" (add space in plaintext)
+        val needsSpacing = node.tagName() == "w" && plaintextTail.isNotBlank() && !Regex("""\s$""").containsMatchIn(plaintextTail)
+        val spaceOffset = if (needsSpacing) 1 else 0
+        val trueWordOffset = offset + spaceOffset
 
+        // Handle merging
+        nodeHandler(node, trueWordOffset, xmlDocument)
+
+        // Extraction
         val literal = literalExtractor(node).trim() // wordPathExpression.evaluate( node )
         val lem = lemmaExtractor(node) // lemPathExpression.evaluate( node )
         val pos = posExtractor(node) // posPathExpression.evaluate( node )
         val id = idExtractor(node)
 
-        val wordForm = WordForm( literal, offset, literal.length, id ?: "no-id" )
-        sourceLayer.wordForms.add( wordForm )
-        addPlaintext(literal)
-
+        // Add the word to the source layer
+        val wordForm = WordForm(literal, trueWordOffset, literal.length, id ?: "no-id" )
         val term = Term(lem, pos, mutableListOf(wordForm))
-        sourceLayer.terms.add( term )
+        sourceLayer.wordForms.add(wordForm)
+        sourceLayer.terms.add(term)
+
+        // Add the word to the plaintext
+        var text = literal.trim()
+        if (needsSpacing) {
+            text = " $text"
+        }
+        addPlaintext(text)
     }
 
     fun xmlToString(pretty: Boolean): String {

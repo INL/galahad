@@ -7,6 +7,7 @@ import org.ivdnt.galahad.FileBackedValue
 import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.data.layer.LayerPreview
 import org.ivdnt.galahad.data.layer.LayerSummary
+import org.ivdnt.galahad.jobs.DocumentJob.DocumentProcessingStatus
 import org.ivdnt.galahad.tagset.Tagset
 import java.io.File
 import java.util.*

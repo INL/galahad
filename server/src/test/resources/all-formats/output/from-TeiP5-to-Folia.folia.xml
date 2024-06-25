@@ -36,7 +36,7 @@
             </w>
             <w xml:id="id_input_tei.p1.w4">
                 <t>,</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w5">
@@ -51,17 +51,17 @@
             </w>
             <w xml:id="id_input_tei.p1.w7">
                 <t>.</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w8">
                 <t>.</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w9">
                 <t>.</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w10">
@@ -86,12 +86,12 @@
             </w>
             <w xml:id="id_input_tei.p1.w14">
                 <t>:</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w15">
                 <t>&quot;</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w16">
@@ -116,12 +116,12 @@
             </w>
             <w xml:id="id_input_tei.p1.w20">
                 <t>?</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
             <w xml:id="id_input_tei.p1.w21">
                 <t>&quot;</t>
-                <lemma class="null" processor="pie-tdn-all" set="pie-tdn-all"/>
+                <lemma class="" processor="pie-tdn-all" set="pie-tdn-all"/>
                 <pos class="LET" head="LET" processor="pie-tdn-all" set="pie-tdn-all"/>
             </w>
         </p>
