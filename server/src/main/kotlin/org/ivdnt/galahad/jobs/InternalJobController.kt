@@ -11,7 +11,7 @@ import org.ivdnt.galahad.data.layer.Layer
 import org.ivdnt.galahad.port.InternalFile
 import org.ivdnt.galahad.port.SourceLayerableFile
 import org.ivdnt.galahad.port.tsv.TSVFile
-import org.ivdnt.galahad.taggers.Taggers
+import org.ivdnt.galahad.taggers.Tagger
 import org.ivdnt.galahad.tagset.Tagset
 import org.ivdnt.galahad.tagset.TagsetStore
 import org.springframework.web.bind.annotation.*
@@ -61,8 +61,8 @@ class InternalJobController (
             val (corpusID, jobName, documentName) = dataForProcessingID( fileId ) ?: throw Exception("Processing ID not found, was this file uploaded by me?")
             val original: Document = corpora.getUncheckedCorpusAccess( corpusID ).documents.readOrThrow( documentName )
             val job: Job = corpora.getUncheckedCorpusAccess( corpusID ).jobs.readOrThrow( jobName )
-            val taggerSummary: Taggers.Summary? = job.taggers.getSummaryOrNull(job.name, null ).expensiveGet()
-            val tagset: Tagset? = tagsets.getOrNull(taggerSummary?.tagset)
+            val taggerTagger: Tagger? = job.taggerStore.getSummaryOrNull(job.name, null ).expensiveGet()
+            val tagset: Tagset? = tagsets.getOrNull(taggerTagger?.tagset)
 
             when (val uploadedFile = InternalFile.from(tempFile, DocumentFormat.Tsv).expensiveGet()) {
                 // Treat TSVFiles separately form SourceLayerableFiles, because calling sourceLayer() on a TSV

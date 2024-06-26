@@ -13,7 +13,7 @@ import org.ivdnt.galahad.data.document.SOURCE_LAYER_NAME
 import org.ivdnt.galahad.jobs.Jobs
 import org.ivdnt.galahad.port.CmdiMetadata
 import org.ivdnt.galahad.port.CorpusTransformMetadata
-import org.ivdnt.galahad.taggers.Taggers
+import org.ivdnt.galahad.taggers.Tagger
 import org.ivdnt.galahad.util.createZipFile
 import java.io.File
 import java.io.OutputStream
@@ -94,10 +94,10 @@ class Corpus(
         override fun expensiveGet() = metadataCache.get<CorpusMetadata>()
     }
 
-    val sourceTagger: ExpensiveGettable<Taggers.Summary> = object : ExpensiveGettable<Taggers.Summary> {
-        override fun expensiveGet(): Taggers.Summary {
+    val sourceTagger: ExpensiveGettable<Tagger> = object : ExpensiveGettable<Tagger> {
+        override fun expensiveGet(): Tagger {
             val metadata = metadata.expensiveGet()
-            return Taggers.Summary(
+            return Tagger(
                 id = SOURCE_LAYER_NAME,
                 description = "uploaded annotations",
                 tagset = metadata.tagset,

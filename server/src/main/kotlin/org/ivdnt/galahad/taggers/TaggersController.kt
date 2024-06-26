@@ -4,13 +4,10 @@ import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import com.beust.klaxon.Parser.Companion.default
 import com.fasterxml.jackson.annotation.JsonProperty
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.app.TAGGERS_URL
 import org.ivdnt.galahad.app.TAGGER_HEALTH_URL
 import org.ivdnt.galahad.app.TAGGER_URL
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpMethod
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
@@ -27,16 +24,13 @@ import java.net.http.HttpResponse
 @RestController
 class TaggersController : Logging {
 
-    @Autowired private val request: HttpServletRequest? = null
-    @Autowired private val response: HttpServletResponse? = null
+    private val taggerStore = TaggerStore()
 
-    private val taggers = Taggers()
+    @GetMapping( TAGGERS_URL ) @CrossOrigin fun getTaggers(): Set<Tagger> =
+        taggerStore.taggers.map { it.expensiveGet() }.toSet()
 
-    @GetMapping( TAGGERS_URL ) @CrossOrigin fun getTaggers(): Set<Taggers.Summary> =
-        taggers.summaries.map { it.expensiveGet() }.toSet()
-
-    @GetMapping( TAGGER_URL ) @CrossOrigin fun getTagger( @PathVariable tagger: String ): Taggers.Summary? =
-        taggers.getSummaryOrNull( tagger, null ).expensiveGet() // Note: sourceLayer is not a tagger here
+    @GetMapping( TAGGER_URL ) @CrossOrigin fun getTagger( @PathVariable tagger: String ): Tagger? =
+        taggerStore.getSummaryOrNull( tagger, null ).expensiveGet() // Note: sourceLayer is not a tagger here
 
     @GetMapping( TAGGER_HEALTH_URL ) @CrossOrigin fun getTaggerHealth( @PathVariable tagger: String ): TaggerHealth =
         expensiveGetHealthFor( tagger )
@@ -46,7 +40,7 @@ class TaggersController : Logging {
         // However, we still think it is representative/informative
         val client = HttpClient.newBuilder().build()
         val request = HttpRequest.newBuilder()
-            .uri(URI.create("${taggers.getURL(tagger)}/health"))
+            .uri(URI.create("${taggerStore.getURL(tagger)}/health"))
             .build()
 
         return try {
@@ -67,7 +61,7 @@ class TaggersController : Logging {
                 message = "Can connect to tagger. Taggers health response: ${response.body()}"
             )
         } catch ( e: Exception ) {
-            logger.error("Failed to connect to tagger $tagger on url ${taggers.getURL(tagger)}. Error: $e")
+            logger.error("Failed to connect to tagger $tagger on url ${taggerStore.getURL(tagger)}. Error: $e")
             // If we cannot connect, there is no use in tagging, so just return
             return TaggerHealth( status = TaggerHealthStatus.ERROR, message = "Cannot connect to tagger" )
         }
@@ -81,11 +75,11 @@ class TaggersController : Logging {
     @CrossOrigin
     fun getActiveDocsAtTaggers(): Int {
         var count = 0
-        for (tagger in taggers.summaries) {
+        for (tagger in taggerStore.taggers) {
             val name = tagger.expensiveGet().id
 
             val restTemplate = RestTemplate()
-            val endpoint = URL("${taggers.getURL(name)}/status")
+            val endpoint = URL("${taggerStore.getURL(name)}/status")
             val builder = UriComponentsBuilder.fromUri(endpoint.toURI())
             try {
                 val res = restTemplate.exchange(
