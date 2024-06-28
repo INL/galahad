@@ -48,7 +48,7 @@
                     &ndash;
                     <b v-if="eraRange[1] >= d.item.tagger.eraTo">{{ d.item.tagger.eraTo }}</b><span v-else>{{
                         d.item.tagger.eraTo
-                        }}</span>
+                    }}</span>
                 </div>
             </template>
 
@@ -296,6 +296,7 @@ table button {
 :deep(.vue-slider) .vue-slider-dot {
     width: 25px !important;
     height: 25px !important;
+    z-index: 1;
 }
 
 :deep(.vue-slider) .vue-slider-dot-handle {

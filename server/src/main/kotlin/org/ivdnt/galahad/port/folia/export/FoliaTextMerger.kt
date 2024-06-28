@@ -41,8 +41,6 @@ class FoliaTextMerger(
                 if (node.nodeType == Node.TEXT_NODE) {
                     child.textContent = text
                 }
-                // TODO reparseText overwrites embedded t-styles
-
                 // never set the offset of more than one space.
                 if (endsWithSpace && text.startsWith(" ")) {
                     offset -= 1
