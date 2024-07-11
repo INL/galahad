@@ -8,8 +8,8 @@ produces:
   - POS
   - TOK
 model:
-  name: hug-tdn-1400-1600
-  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_1400-1600
+  name: hug-tdn-1600-1900
+  href: https://github.com/INL/galahad-huggingface-models/tree/1.0.0/models/galahad/tagger/pos_model_tdn_1600-1900
 software:
   name: int-huggingface
   href: https://github.com/INL/int-huggingface-tagger/tree/1.0.0
