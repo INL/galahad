@@ -5,7 +5,7 @@ import org.ivdnt.galahad.app.NamedCRUDSet
 import org.ivdnt.galahad.data.corpus.Corpus
 import org.ivdnt.galahad.data.layer.LayerPreview
 import org.ivdnt.galahad.data.layer.LayerSummary
-import org.ivdnt.galahad.taggers.Taggers
+import org.ivdnt.galahad.taggers.TaggerStore
 import java.io.File
 
 class Jobs(
@@ -13,12 +13,12 @@ class Jobs(
     private val corpus: Corpus,
 ) : BaseFileSystemStore(workDirectory), NamedCRUDSet<String, Job, String> {
 
-    private val taggers = Taggers()
+    private val taggerStore = TaggerStore()
 
     // better be verbose than sorry
     fun readAllJobStatesIncludingPotentialJobs(): Set<State> {
         val existingJobs = readAll().map { it.state }
-        val potentialJobs = taggers.summaries.map { it.expensiveGet() }.map {
+        val potentialJobs = taggerStore.taggers.map { it.expensiveGet() }.map {
                 State(
                     it, Progress(pending = corpus.documents.readAll().size), LayerPreview.EMPTY, LayerSummary(), 0
                 )

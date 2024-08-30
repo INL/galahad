@@ -9,7 +9,6 @@ import java.io.File
 
 
 val mapper: ObjectMapper by lazy { ObjectMapper() }
-const val LOCK_SLEEP_TIME = 100L // ms to sleep before retrying to access locked file.
 
 abstract class FileBackedCache<T>(
     file: File,

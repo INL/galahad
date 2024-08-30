@@ -12,7 +12,6 @@ plugins {
 }
 
 group = "org.ivdnt"
-version = "0.0.2-ALPHA-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 java.targetCompatibility = JavaVersion.VERSION_17
 

@@ -28,7 +28,6 @@ class Documents(
     override fun delete(key: String): Document? {
         val fullyDeleted: Boolean = workDirectory.resolve(key).deleteRecursively()
         if (!fullyDeleted) println("Partial deletion of $key")
-        // TODO remember we also need to delete in associated jobs
         return readOrNull(key)
     }
 

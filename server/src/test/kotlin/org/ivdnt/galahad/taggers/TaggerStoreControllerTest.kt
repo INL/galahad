@@ -12,7 +12,7 @@ import org.springframework.test.context.ContextConfiguration
 
 @WebMvcTest(properties = ["spring.main.allow-bean-definition-overriding=true"])
 @ContextConfiguration(classes = [GalahadApplication::class])
-class TaggersControllerTest(
+class TaggerStoreControllerTest(
     @Autowired val ctrl: TaggersController
 ) {
 
