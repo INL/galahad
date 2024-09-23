@@ -38,7 +38,7 @@ dependencies {
 
 
 	implementation("com.beust:klaxon:5.6")
-	implementation("org.apache.logging.log4j:log4j-api-kotlin:1.2.0")
+	implementation("org.apache.logging.log4j:log4j-api-kotlin:1.5.0")
 
 	// yaml
 	// https://mvnrepository.com/artifact/org.yaml/snakeyaml
