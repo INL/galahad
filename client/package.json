@@ -15,7 +15,7 @@
     "content-disposition": "^0.5.4",
     "js-yaml": "^4.1.0",
     "json-loader": "^0.5.7",
-    "pinia": "^2.0.16",
+    "pinia": "^2.2.2",
     "safe-buffer": "^5.2.1",
     "uuid": "^8.3.2",
     "vue": "^3.2.37",
