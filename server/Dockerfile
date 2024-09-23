@@ -1,4 +1,4 @@
-FROM gradle:8.6-jdk17-alpine AS build
+FROM gradle:8.10-jdk17-alpine AS build
 # Note: the gradle version must match the version in build.gradle.kts
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
