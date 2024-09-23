@@ -10,7 +10,7 @@
   "dependencies": {
     "@types/uuid": "^8.3.4",
     "@vitejs/plugin-vue": "^5.0.4",
-    "axios": "^1.6.2",
+    "axios": "^1.7.4",
     "buffer": "^6.0.3",
     "content-disposition": "^0.5.4",
     "js-yaml": "^4.1.0",
