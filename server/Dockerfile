@@ -8,7 +8,7 @@ RUN echo "Contents of workdir:" && ls -l . \
     && rm build/libs/*-plain.jar \
     && echo "Contents of build/libs after removing plain jars:" && ls -l build/libs
 
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 
 # FIX CVE-2023-52425
 RUN apk --no-cache add --upgrade expat
