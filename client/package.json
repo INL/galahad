@@ -19,7 +19,7 @@
     "safe-buffer": "^5.2.1",
     "uuid": "^8.3.2",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2",
+    "vue-router": "^4.4.5",
     "vue-slider-component": "^4.1.0-beta.1"
   },
   "devDependencies": {
