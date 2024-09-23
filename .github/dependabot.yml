@@ -2,15 +2,18 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/client"
+    target-branch: "develop"
     schedule:
       interval: "daily"
       
   - package-ecosystem: "gradle"
     directory: "/server"
+    target-branch: "develop"
     schedule:
       interval: "daily"
       
   - package-ecosystem: "docker"
+    target-branch: "develop"
     directories:
       - "/server"
       - "/client"
