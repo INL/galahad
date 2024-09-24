@@ -8,7 +8,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
-    "@types/uuid": "^8.3.4",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "axios": "^1.7.4",
     "buffer": "^6.0.3",
@@ -17,7 +17,7 @@
     "json-loader": "^0.5.7",
     "pinia": "^2.2.2",
     "safe-buffer": "^5.2.1",
-    "uuid": "^8.3.2",
+    "uuid": "^10.0.0",
     "vue": "^3.2.37",
     "vue-router": "^4.4.5",
     "vue-slider-component": "^4.1.0-beta.1"
