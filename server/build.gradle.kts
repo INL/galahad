@@ -9,6 +9,9 @@ plugins {
 	kotlin("jvm") version "2.0.20"
 	kotlin("plugin.spring") version "2.0.20"
 	kotlin("plugin.serialization") version "2.0.20"
+	// auto version updates, run: gradle useLatestVersions
+	id("se.patrikerdes.use-latest-versions") version "0.2.18"
+	id("com.github.ben-manes.versions") version "0.51.0"
 }
 
 group = "org.ivdnt"
@@ -27,11 +30,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-devtools:3.3.4")
 
 	// kotlin
-	implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.22")
+	implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.20")
 	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
 	implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.20")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
-	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3") // JVM dependency
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3") // JVM dependency
 
 	// swagger
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
@@ -42,10 +45,10 @@ dependencies {
 
 	// yaml
 	// https://mvnrepository.com/artifact/org.yaml/snakeyaml
-	implementation("org.yaml:snakeyaml:2.2")
+	implementation("org.yaml:snakeyaml:2.3")
 
 	// Tests
-	testImplementation ("org.springframework.boot:spring-boot-starter-test:3.2.3")
+	testImplementation ("org.springframework.boot:spring-boot-starter-test:3.3.4")
 }
 
 tasks.test {
