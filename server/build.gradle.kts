@@ -45,7 +45,7 @@ dependencies {
 	implementation("org.yaml:snakeyaml:2.2")
 
 	// Tests
-	testImplementation ("org.springframework.boot:spring-boot-starter-test:3.2.3")
+	testImplementation ("org.springframework.boot:spring-boot-starter-test:3.3.4")
 }
 
 tasks.test {
