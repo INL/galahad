@@ -31,7 +31,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
 	implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.20")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
-	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3") // JVM dependency
+	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3") // JVM dependency
 
 	// swagger
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
