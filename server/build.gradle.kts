@@ -42,7 +42,7 @@ dependencies {
 
 	// yaml
 	// https://mvnrepository.com/artifact/org.yaml/snakeyaml
-	implementation("org.yaml:snakeyaml:2.2")
+	implementation("org.yaml:snakeyaml:2.3")
 
 	// Tests
 	testImplementation ("org.springframework.boot:spring-boot-starter-test:3.2.3")
