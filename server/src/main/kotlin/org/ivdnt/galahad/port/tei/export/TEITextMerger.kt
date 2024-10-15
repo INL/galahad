@@ -238,6 +238,7 @@ open class TEITextMerger(
         }
         // Both <w> and <pc> have a pos.
         wTag.setAttribute(posType(), termToAdd.posOrEmpty)
+        wTag.setAttribute("xml:id", termToAdd.targets.first().id)
         return wTag
     }
 
@@ -307,6 +308,10 @@ open class TEITextMerger(
         }
         element.setAttribute(posType(), termToAdd.posOrEmpty)
         element.removeAttribute("type") // Update legacy formats to TEI p5
+        // First check if the element has an id already, else add it.
+        if (element.getAttribute("xml:id").isNullOrBlank()) {
+            element.setAttribute("xml:id", termToAdd.targets.first().id)
+        }
     }
 
     private fun getWordFormsToAdd(): List<WordForm> {

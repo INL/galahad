@@ -35,6 +35,7 @@ internal class TEIExportTest {
             .ignoreTrailingWhiteSpaces()
             .ignoreDate()
             .ignoreUUID()
+            .ignoreWhiteSpaceDocumentWide()
             .result()
     }
 
@@ -52,6 +53,7 @@ internal class TEIExportTest {
             .mergeTEI(Resource.get("tei/brieven/input.tei.xml"), layer)
             .ignoreDate()
             .ignoreUUID()
+            .ignoreWhiteSpaceDocumentWide()
             .result()
     }
 
