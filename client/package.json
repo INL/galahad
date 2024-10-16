@@ -15,10 +15,10 @@
     "content-disposition": "^0.5.4",
     "js-yaml": "^4.1.0",
     "json-loader": "^0.5.7",
-    "pinia": "^2.2.2",
+    "pinia": "^2.2.4",
     "safe-buffer": "^5.2.1",
     "uuid": "^10.0.0",
-    "vue": "^3.5.8",
+    "vue": "^3.5.12",
     "vue-router": "^4.4.5",
     "vue-slider-component": "^4.1.0-beta.1"
   },
@@ -26,15 +26,15 @@
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/jest": "^29.5.13",
     "@types/js-yaml": "^4.0.9",
-    "@typescript-eslint/eslint-plugin": "^8.7.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "@vue/eslint-config-typescript": "^13.0.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-vue": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.9.0",
+    "@typescript-eslint/parser": "^8.9.0",
+    "@vue/eslint-config-typescript": "^14.1.1",
+    "eslint": "^9.12.0",
+    "eslint-plugin-vue": "^9.29.0",
     "mutationobserver-shim": "^0.3.7",
     "node-sass": "^9.0.0",
-    "sass": "^1.79.3",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.7"
+    "sass": "^1.79.5",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
   }
 }
