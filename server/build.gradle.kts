@@ -30,7 +30,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-devtools:3.3.4")
 
 	// kotlin
-	implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.20")
+	implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.21")
 	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
 	implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.20")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
