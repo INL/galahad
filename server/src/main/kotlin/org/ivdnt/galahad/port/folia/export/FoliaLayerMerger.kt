@@ -30,7 +30,7 @@ class FoliaLayerMerger(
 
         // add headers
         // typically we expect just 1 root node.
-        FoliaMetadata(reader!!.xmlDoc, reader!!.xmlDoc.firstChild, this).write()
+        FoliaMetadata(reader!!.xmlDoc, reader!!.xmlDoc.documentElement, this).write()
 
         // Delete the marked notes
         deleteList.forEach { if (it.parentNode != null) it.parentNode.removeChild(it) }

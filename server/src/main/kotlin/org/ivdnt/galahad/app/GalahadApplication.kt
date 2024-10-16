@@ -1,6 +1,12 @@
 package org.ivdnt.galahad.app
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import io.swagger.v3.oas.annotations.Hidden
+import io.swagger.v3.oas.models.servers.Server
+import io.swagger.v3.oas.models.Components
+import io.swagger.v3.oas.models.OpenAPI
+import io.swagger.v3.oas.models.info.Contact
+import io.swagger.v3.oas.models.info.License
 import jakarta.servlet.http.HttpServletRequest
 import org.apache.logging.log4j.kotlin.Logging
 import org.apache.tomcat.util.http.fileupload.FileUploadException
@@ -14,15 +20,13 @@ import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.CrossOrigin
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import org.springframework.web.filter.CommonsRequestLoggingFilter
 import java.io.File
 import java.io.IOException
 import java.math.BigDecimal
 import java.net.URI
+import java.util.*
 import java.util.concurrent.TimeUnit
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -97,11 +101,34 @@ class Config {
 		return File( workDir )
 	}
 
+	companion object {
+		fun galahadVersion(): String {
+			val versionStream = this::class.java.classLoader.getResource("version.yml")!!.openStream()
+			val versionProperties = Properties()
+			versionProperties.load(versionStream)
+			return versionProperties.getProperty("GITHUB_REF_NAME")
+		}
+	}
 }
 
 @ComponentScan("org.ivdnt.galahad")
 @SpringBootApplication
-class GalahadApplication
+class GalahadApplication {
+	@Bean
+	fun customOpenAPI(): OpenAPI {
+		return OpenAPI()
+			.components(Components())
+			.servers(listOf(Server().url("/galahad/api").description("Default Server URL")))
+			.info(
+				io.swagger.v3.oas.models.info.Info()
+					.title("GaLAHaD API")
+					.version(Config.galahadVersion())
+					.license( License().name("Apache 2.0").url("https://www.apache.org/licenses/"))
+					.description("Generating Linguistic Annotations for Historical Dutch")
+					.contact(Contact().name("GaLAHaD GitHub").url("https://github.com/inl/galahad"))
+			)
+	}
+}
 
 fun main(args: Array<String>) {
 	runApplication<GalahadApplication>(*args)
@@ -150,7 +177,7 @@ class ApplicationController : ErrorController, Logging {
 	)
 
 	@RequestMapping("/error")
-//	@ResponseBody
+	@Hidden
 	@CrossOrigin
 	fun handleError(request: HttpServletRequest): ErrorResponse {
 		val statusCode = HttpStatus.valueOf( request.getAttribute("jakarta.servlet.error.status_code") as Int? ?: 500 )

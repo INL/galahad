@@ -35,6 +35,48 @@ internal class TEIExportTest {
             .ignoreTrailingWhiteSpaces()
             .ignoreDate()
             .ignoreUUID()
+            .ignoreWhiteSpaceDocumentWide()
+            .result()
+    }
+
+    @Test
+    fun `Merge doc with alphanumeric PC`() {
+        fun asserAlphaNumericPC(folder: String) {
+            val file = TEIFile(Resource.get("$folder/input.tei.xml"))
+            assertPlainText(folder, file)
+
+            val plaintext: String = Resource.get("$folder/plaintext.txt").readText()
+            val tagset = TagsetStore().getOrNull("TDN-Core")!!
+            val layer = LayerBuilder()
+                .loadLayerFromTSV("$folder/pie-tdn.tsv", plaintext)
+                .setTagset(tagset)
+                .build()
+
+            DocTest.builder(corpus)
+                .expectingFile("$folder/merged-output.xml")
+                .mergeTEI(Resource.get("$folder/input.tei.xml"), layer)
+                .ignoreDate()
+                .ignoreUUID()
+                .result()
+        }
+        asserAlphaNumericPC("tei/alphanumericpc/with-w-tags")
+        asserAlphaNumericPC("tei/alphanumericpc/without-w-tags")
+    }
+
+    @Test
+    fun `Convert doc with alphanumeric PC`() {
+        val folder = "tei/alphanumericpc/with-w-tags"
+        val plaintext: String = Resource.get("$folder/plaintext.txt").readText()
+        val tagset = TagsetStore().getOrNull("TDN-Core")!!
+        val layer = LayerBuilder()
+            .loadLayerFromTSV("$folder/pie-tdn.tsv", plaintext)
+            .setTagset(tagset)
+            .build()
+        DocTest.builder(corpus)
+            .expectingFile("$folder/converted-output.xml")
+            .convertToTEI(Resource.get("$folder/input.tei.xml"), layer)
+            .ignoreDate()
+            .ignoreUUID()
             .result()
     }
 
@@ -52,6 +94,7 @@ internal class TEIExportTest {
             .mergeTEI(Resource.get("tei/brieven/input.tei.xml"), layer)
             .ignoreDate()
             .ignoreUUID()
+            .ignoreWhiteSpaceDocumentWide()
             .result()
     }
 

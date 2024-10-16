@@ -65,6 +65,8 @@ setInterval(() => { user.fetchUser() }, 5000)
 </script>
 
 <style lang="scss">
+@use "sass:color";
+
 @font-face {
     font-family: "Schoolboek";
     src: url("@/assets/Schoolboek-Regular.woff") format('woff'),
@@ -106,10 +108,10 @@ $galahad-theme: #62b6ff;
     --white: white;
     // Current Theme
     --int-theme: #{$galahad-theme};
-    --int-theme-lighter: #{lighten($galahad-theme, 10%)};
-    --int-theme-hover: #{darken($galahad-theme, 7%)};
-    --int-theme-active: #{darken($galahad-theme, 20%)};
-    --int-theme-outline: #{darken($galahad-theme, 15%)};
+    --int-theme-lighter: #{color.adjust($galahad-theme, $lightness: 10%)};
+    --int-theme-hover: #{color.adjust($galahad-theme, $lightness: -7%)};
+    --int-theme-active: #{color.adjust($galahad-theme, $lightness: -20%)};
+    --int-theme-outline: #{color.adjust($galahad-theme, $lightness: -15%)};
 }
 
 

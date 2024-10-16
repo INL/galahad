@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.jobs
 
+import io.swagger.v3.oas.annotations.Hidden
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.app.Config
 import org.ivdnt.galahad.app.INTERNAL_JOBS_ERROR_URL
@@ -25,6 +26,7 @@ typealias JobName = String
 typealias DocumentName = String
 
 @RestController
+@Hidden
 class InternalJobController (
     val corpora: CorporaController,
     val config: Config
@@ -48,7 +50,6 @@ class InternalJobController (
      * but for use with the taggers
      */
     @PostMapping(INTERNAL_JOBS_RESULT_URL)
-    @CrossOrigin
     fun receiveTaggerResult(
         @RequestParam(value="file_id", required=false) fileId: UUID,
         @RequestBody file: MultipartFile
@@ -112,7 +113,6 @@ class InternalJobController (
      * but for use with the taggers
      */
     @PostMapping(INTERNAL_JOBS_ERROR_URL)
-    @CrossOrigin
     fun receiveTaggerError(
         @RequestParam fileId: UUID,
         @RequestBody message: String

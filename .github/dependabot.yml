@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/client"
+    target-branch: "development"
+    schedule:
+      interval: "daily"
+      
+  - package-ecosystem: "gradle"
+    directory: "/server"
+    target-branch: "development"
+    schedule:
+      interval: "daily"
+      
+  - package-ecosystem: "docker"
+    target-branch: "development"
+    directories:
+      - "/server"
+      - "/client"
+      - "/proxy"
+    schedule:
+      interval: "daily"
+      
