@@ -8,7 +8,7 @@ plugins {
 	id("org.jetbrains.dokka") version "1.9.20"
 	kotlin("jvm") version "2.0.20"
 	kotlin("plugin.spring") version "2.0.20"
-	kotlin("plugin.serialization") version "2.0.20"
+	kotlin("plugin.serialization") version "2.0.21"
 	// auto version updates, run: gradle useLatestVersions
 	id("se.patrikerdes.use-latest-versions") version "0.2.18"
 	id("com.github.ben-manes.versions") version "0.51.0"
