@@ -32,7 +32,7 @@ dependencies {
 	// kotlin
 	implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.20")
 	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
-	implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.20")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3") // JVM dependency
 
