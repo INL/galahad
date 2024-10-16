@@ -287,9 +287,13 @@ class BLFXMLParser (
 
         // Extraction
         val literal = literalExtractor(node).trim() // wordPathExpression.evaluate( node )
-        val lem = lemmaExtractor(node) // lemPathExpression.evaluate( node )
-        val pos = posExtractor(node) // posPathExpression.evaluate( node )
+        var lem: String? = lemmaExtractor(node) // lemPathExpression.evaluate( node )
+        var pos: String? = posExtractor(node) // posPathExpression.evaluate( node )
         val id = idExtractor(node)
+
+        // Map empty strings to null
+        if(lem.isNullOrBlank()) lem = null
+        if(pos.isNullOrBlank()) pos = null
 
         // Add the word to the source layer
         val wordForm = WordForm(literal, trueWordOffset, literal.length, id ?: "no-id" )
