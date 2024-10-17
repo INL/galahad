@@ -89,7 +89,7 @@ class LayerToTEIConverter(
             }
             // none of the case above happened, so the text is not covered
             // insert plain text
-            writer.writeRaw(plaintext[offset].toString())
+            writer.writeRaw(plaintext[offset].toString().escapeXML())
             offset += 1 // actually we can look at currentTerm etc. and add multiple characters at once
         }
         currentTerm = if (sortedTerms.hasNext()) sortedTerms.next() else null

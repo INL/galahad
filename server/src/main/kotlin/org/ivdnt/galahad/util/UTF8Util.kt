@@ -20,13 +20,27 @@ fun HttpServletResponse.setContentDisposition(filename: String) {
     this.setHeader("Access-Control-Expose-Headers", "Content-Disposition")
 }
 
-/** Escape some illegals chars that we found in lemmas or pos. */
+// default support https://stackoverflow.com/a/19975244
+private val defaultReplacements = mapOf(
+    '&' to "&amp;",
+    '\"' to "&quot;",
+    '\'' to "&apos;",
+    '<' to "&lt;",
+    '>' to "&gt;"
+)
+
 fun String.escapeXML(): String {
-    return this
-        .replace("&","&amp;")
-        .replace("<","&lt;")
-        .replace(">","&gt;")
-        .replace("\"","&quot;")
+    return buildString {
+        for (char in this@escapeXML) {
+            when {
+                defaultReplacements.containsKey(char) -> append(defaultReplacements[char])
+                char.code == 0xA0 -> append(" ") // nbsp
+                char.code == 0x0D -> { } // ignore CR
+                char.isLetterOrDigit() || char.isWhitespace() || (char.code in 0x20..0x7E) -> append(char)
+                else -> append("&#${char.code};")
+            }
+        }
+    }
 }
 
 // Normally, periods (.) are allowed too, but they have a hierarchical significance, so add any periods yourself.
