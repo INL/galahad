@@ -7,8 +7,6 @@ import org.ivdnt.galahad.data.layer.WordForm
 import org.ivdnt.galahad.evaluation.comparison.LayerComparison.Companion.truncatedPcMatch
 import org.ivdnt.galahad.port.folia.export.deepcopy
 import org.ivdnt.galahad.port.xml.getPlainTextContent
-import org.ivdnt.galahad.taggers.TaggerStore
-import org.ivdnt.galahad.tagset.TagsetStore
 import org.ivdnt.galahad.util.*
 import org.w3c.dom.Document
 import org.w3c.dom.Element
@@ -235,12 +233,12 @@ open class TEITextMerger(
         val termToAdd = layer.termForWordForm(wf)
         
         val wTag = if (layer.tagset.punctuationTags.contains(termToAdd.pos) && !termToAdd.literals.contains(alphaNumeric)) {
-            val n = document.createElement("pc")
-            n
+            val element = document.createElement("pc")
+            element
         } else {
-            val n = document.createElement("w")
-            n.setAttribute("lemma", termToAdd.lemmaOrEmpty)
-            n
+            val element = document.createElement("w")
+            element.setAttribute("lemma", termToAdd.lemmaOrEmpty)
+            element
         }
 
         // Empty pos if it is a PC and it contains alphanumeric characters (so it can't be PC anyway).
