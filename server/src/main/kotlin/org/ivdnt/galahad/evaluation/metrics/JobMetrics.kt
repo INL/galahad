@@ -31,13 +31,12 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
         append(
             CsvFile.toCsvString(
                 listOf(
-                    metrics.settings.annotation,
                     metrics.settings.group,
                     metrics.macro.precision,
                     metrics.macro.recall,
                     metrics.macro.f1,
                     metrics.micro.accuracy, // todo other micros
-                    metrics.classes.hypCount,
+                    metrics.classes.hypothesis,
                     metrics.classes.truePositive.count,
                     metrics.classes.falseNegative.count,
                     metrics.classes.noMatch.count,
@@ -50,7 +49,7 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
         fun create(
             corpus: Corpus,
             docEvals: DocumentEvaluations,
-            annotation: Annotation,
+            annotations: List<Annotation>,
             group: Annotation,
         ): JobMetrics =
             JobMetrics(
@@ -58,11 +57,11 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
                     .readAll()
                     .parallelMap {
                         if (docEvals.jobs.filter == null) {
-                            docEvals.createOrThrow(it.name).getMetrics(annotation, group).metrics
+                            docEvals.createOrThrow(it.name).getMetrics(annotations, group).metrics
                         } else {
                             DocumentMetrics.create(
                                     docEvals.createOrThrow(it.name).layerComparison,
-                                    annotation,
+                                    annotations,
                                     group,
                                 )
                                 .metrics
@@ -101,8 +100,8 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
                             value.metrics.precision,
                             value.metrics.recall,
                             value.metrics.f1,
-                            value.hypCount,
-                            value.refCount,
+                            value.hypothesis,
+                            value.reference,
                             value.truePositive.count,
                             value.falsePositive.count,
                             value.falseNegative.count,

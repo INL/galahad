@@ -21,8 +21,9 @@ function resolvePath(path: string, params?: Record<string, string>, query?: Reco
         : path
 
     if (!query || Object.keys(query).length === 0) return resolvedPath
-
+    console.log("query", query)
     const searchParams = new URLSearchParams(query)
+    console.log("searchParams", searchParams)
     const queryString = searchParams.toString()
 
     return queryString ? `${resolvedPath}?${queryString}` : resolvedPath

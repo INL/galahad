@@ -2,7 +2,7 @@ import type { CorpusMetadata, MutableCorpusMetadata } from "@/types/corpora"
 import type { DocumentMetadata, Format } from "@/types/documents"
 import type { Job } from "@/types/jobs"
 import type { LayerMetadata } from "@/types/layers"
-import { formatPeriod } from "@/ts/utils"
+import { formatPeriod } from "@/ts/format"
 
 declare global {
     interface Window {

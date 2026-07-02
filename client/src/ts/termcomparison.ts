@@ -1,6 +1,5 @@
 import type { Term, TermComparison } from "@/types/evaluation"
 
-
 // For some reason the terms are undefined sometimes
 // We handle it here
 export function literalsForTerm(term: Term): string {

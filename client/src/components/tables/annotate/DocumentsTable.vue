@@ -23,7 +23,7 @@
 
         <template #cell-annotations="d: TableData<DocumentMetadata>">
             <RightFloatCell>
-                <template #left> {{ d.item.annotations.token }} </template>
+                <template #left> {{ d.item.annotations.token.toLocaleString() }} </template>
                 <template #right>
                     <InspectButton v-if="d.item.annotations.token > 0" @click="previewDocument = d.item" />
                 </template>
@@ -54,7 +54,7 @@
 <script setup lang="ts">
 import useCorpora from "@/stores/corpora"
 import useDocuments from "@/stores/documents"
-import { formatDate } from "@/ts/utils"
+import { formatDate } from "@/ts/format"
 import type { DocumentMetadata } from "@/types/documents"
 import { type Column, type TableData } from "@/types/ui/table"
 import type { LayerMetadata } from "@/types/layers"

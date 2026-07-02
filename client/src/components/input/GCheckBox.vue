@@ -18,7 +18,7 @@ function check(): void {
 .checkbox-container {
     display: block;
     position: relative;
-    padding: 0px 10px 0 35px;
+    padding: 0px 10px 0 30px;
     margin-bottom: 12px;
     cursor: pointer;
     -webkit-user-select: none;
@@ -80,10 +80,10 @@ function check(): void {
 
 /* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
+    left: 7px;
+    top: 3px;
+    width: 10px;
+    height: 15px;
     border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);

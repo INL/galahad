@@ -7,6 +7,7 @@ import org.ivdnt.galahad.evaluation.confusion.JobConfusion
 import org.ivdnt.galahad.evaluation.distribution.JobDistribution
 import org.ivdnt.galahad.evaluation.entities.JobEntities
 import org.ivdnt.galahad.evaluation.metrics.JobMetrics
+import org.ivdnt.galahad.evaluation.metrics.Metrics
 import org.ivdnt.galahad.files.GalahadFolder
 import org.ivdnt.galahad.files.ValidatedDiskValue
 import org.ivdnt.galahad.layers.CorpusLayer
@@ -40,7 +41,7 @@ class JobEvaluation(dir: File, private val corpus: Corpus, private val jobs: Job
     fun getDistribution(annotation: Annotation, group: Annotation): JobDistribution =
         object :
                 ValidatedDiskValue<JobDistribution>(
-                    dir.resolve("distribution.$annotation.$group.json")
+                    dir.resolve("distribution-$annotation-$group.json")
                 ) {
                 override fun isValid(modified: Long) =
                     modified >= maxOf(refJob.modified, hypJob.modified)
@@ -51,7 +52,7 @@ class JobEvaluation(dir: File, private val corpus: Corpus, private val jobs: Job
             .readOrCreate()
 
     fun getConfusion(annotation: Annotation): JobConfusion =
-        object : ValidatedDiskValue<JobConfusion>(dir.resolve("confusion.$annotation.json")) {
+        object : ValidatedDiskValue<JobConfusion>(dir.resolve("confusion-$annotation.json")) {
                 override fun isValid(modified: Long) =
                     modified >= maxOf(refJob.modified, hypJob.modified)
 
@@ -60,13 +61,16 @@ class JobEvaluation(dir: File, private val corpus: Corpus, private val jobs: Job
             }
             .readOrCreate()
 
-    fun getMetrics(annotation: Annotation, group: Annotation): JobMetrics =
-        object : ValidatedDiskValue<JobMetrics>(dir.resolve("metrics.$annotation.$group.json")) {
+    fun getMetrics(annotations: List<Annotation>, group: Annotation): JobMetrics =
+        object :
+                ValidatedDiskValue<JobMetrics>(
+                    dir.resolve("${Metrics.Settings(annotations,group).name}.json")
+                ) {
                 override fun isValid(modified: Long) =
                     modified >= maxOf(refJob.modified, hypJob.modified)
 
                 override fun set(): JobMetrics =
-                    JobMetrics.create(corpus, documents, annotation, group)
+                    JobMetrics.create(corpus, documents, annotations, group)
             }
             .readOrCreate()
 

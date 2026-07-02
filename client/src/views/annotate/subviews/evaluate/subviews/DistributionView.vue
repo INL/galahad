@@ -17,11 +17,7 @@
                 <GForm v-if="hypothesisAnnotations.length">
                     <fieldset>
                         <label for="annotation-select">Annotation</label>
-                        <AnnotationSelect
-                            id="annotation-select"
-                            :options="annotationOptions"
-                            v-model="selectedAnnotation"
-                        />
+                        <GSelect id="annotation-select" :options="annotationOptions" v-model="selectedAnnotation" />
                     </fieldset>
                     <fieldset v-if="distribution">
                         <label for="lemma-input">Search {{ selectedAnnotation }}</label>
@@ -38,7 +34,7 @@
                     </fieldset>
                     <fieldset>
                         <label for="group-select">Group by</label>
-                        <AnnotationSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
+                        <GSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
                     </fieldset>
                     <fieldset v-if="distribution">
                         <label for="analysis-select">Single/multiple analyses</label>
@@ -67,7 +63,7 @@
                         })"
                         :key="literal"
                     >
-                        {{ literal }} <b>{{ `${d.item.tokens[literal]}` }}</b
+                        {{ literal }} <b>{{ d.item.tokens[literal].toLocaleString() }}</b
                         >{{ index != Object.keys(d.item.tokens).length - 1 ? ", " : "" }}
                     </span>
                 </template>
@@ -83,12 +79,12 @@
                                 :key="literal"
                             >
                                 {{ literal }}
-                                <b>{{ `${d.item.tokens[literal]}` }}</b
+                                <b>{{ d.item.tokens[literal].toLocaleString() }}</b
                                 >,
                             </span>
                             <i
                                 >... and
-                                {{ Object.keys(d.item.tokens).length - 5 }}
+                                {{ (Object.keys(d.item.tokens).length - 5).toLocaleString() }}
                                 more</i
                             >
                         </template>
@@ -158,8 +154,19 @@ const typeToken = ref<TypeToken>()
 const columns = computed(() => [
     { key: "annotation", label: selectedAnnotation.value },
     { key: "group", label: selectedGroup.value },
-    { key: "count", align: "right" },
-    { key: "unique", label: "unique", align: "right", format: (t: TypeToken) => Object.keys(t.tokens).length },
+    {
+        key: "count",
+        align: "right",
+        format: (t: TypeToken) => t.count.toLocaleString(),
+        sortOn: (t: TypeToken) => t.count,
+    },
+    {
+        key: "unique",
+        label: "unique",
+        align: "right",
+        format: (t: TypeToken) => Object.keys(t.tokens).length.toLocaleString(),
+        sortOn: (t: TypeToken) => Object.keys(t.tokens).length,
+    },
     { key: "types", noSort: true },
 ])
 const items = computed((): TypeToken[] => {
@@ -178,10 +185,10 @@ const items = computed((): TypeToken[] => {
 
 // Default select options
 watchPostEffect(() => {
-    selectedAnnotation.value = annotationOptions.value[0]?.value
+    selectedAnnotation.value ??= annotationOptions.value[0]?.value
 })
 watchPostEffect(() => {
-    selectedGroup.value = groupOptions.value[1]?.value
+    selectedGroup.value ??= groupOptions.value[1]?.value
 })
 watchPostEffect(() => {
     selectedGroups.value = groupsOptions.value

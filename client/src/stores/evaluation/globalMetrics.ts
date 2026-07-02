@@ -4,18 +4,17 @@ import useCorpora from "@/stores/corpora"
 import useLayers from "@/stores/layers"
 import type { Metrics } from "@/types/evaluation/metrics"
 
-/** Stores and fetches the type token distribution. */
-const useGroupedMetrics = defineStore("groupedMetrics", () => {
+const useGlobalMetrics = defineStore("globalMetrics", () => {
     const { hypothesisId, referenceId, hypothesisLayer, referenceLayer } = storeToRefs(useLayers())
     const { corpusId, corpus } = storeToRefs(useCorpora())
     const loading = ref<boolean>(false)
-    const groupedMetrics = ref<Metrics>()
+    const globalMetrics = ref<Metrics[]>()
     const annotations = ref<string[]>()
     const group = ref<string>()
 
     function reload(): void {
-        if ([corpusId.value, hypothesisId.value, referenceId.value, group.value].includes(undefined)) return
-        if (!annotations.value?.length) return
+        if ([corpusId.value, hypothesisId.value, referenceId.value, annotations.value, group.value].includes(undefined))
+            return
         plausible.metricsEvaluated(corpus.value, hypothesisLayer.value, referenceLayer.value)
         loading.value = true
         API.getGroupedMetrics(corpusId.value, hypothesisId.value, referenceId.value, annotations.value, group.value)
@@ -25,7 +24,7 @@ const useGroupedMetrics = defineStore("groupedMetrics", () => {
 
     watch([corpusId, hypothesisId, referenceId], () => {
         groupedMetrics.value = undefined
-        annotations.value = undefined
+        annotations.value = []
         group.value = undefined
     })
     watch([annotations, group], reload)
@@ -33,4 +32,4 @@ const useGroupedMetrics = defineStore("groupedMetrics", () => {
     return { reload, loading, groupedMetrics, annotations, group }
 })
 
-export default useGroupedMetrics
+export default useGlobalMetrics

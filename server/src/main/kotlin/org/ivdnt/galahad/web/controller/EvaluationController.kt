@@ -289,9 +289,9 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
-            @RequestParam @Parameter(description = "Annotation") annotation: Annotation,
+            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
             @RequestParam @Parameter(description = "Group") group: Annotation,
-        ): JobMetrics = evaluationService.getJobMetric(corpus, layer, reference, annotation, group)
+        ): JobMetrics = evaluationService.getJobMetric(corpus, layer, reference, annotations, group)
 
         @CrossOrigin
         @GetMapping(Endpoints.Evaluation.Document.Metrics.BASE)
@@ -300,7 +300,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @PathVariable @Parameter(description = "Layer name") layer: String,
             @PathVariable @Parameter(description = "Document name") document: String,
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
-            @RequestParam @Parameter(description = "Annotation") annotation: Annotation,
+            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
             @RequestParam @Parameter(description = "Group") group: Annotation,
         ): DocumentMetrics =
             evaluationService.getDocumentMetric(
@@ -308,7 +308,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 document,
                 layer,
                 reference,
-                annotation,
+                annotations,
                 group,
             )
 
@@ -358,7 +358,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
-            @RequestParam @Parameter(description = "Annotation") annotation: Annotation,
+            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
             @RequestParam @Parameter(description = "Group") group: Annotation,
             @RequestParam
             @Parameter(description = "Classification type (e.g. true positive)")
@@ -371,7 +371,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 corpus,
                 layer,
                 reference,
-                annotation,
+                annotations,
                 group,
                 classification,
                 groupFilter,

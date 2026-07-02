@@ -236,6 +236,10 @@ table {
                 letter-spacing: 0.1rem;
                 text-transform: uppercase;
                 padding: 0.25rem 0.5rem;
+                // only if it contains sort controls
+                &:has(.sort-control) {
+                    vertical-align: bottom;
+                }
 
                 .sort-control {
                     white-space: nowrap;

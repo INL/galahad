@@ -19,14 +19,10 @@
                 <GForm v-if="commonAnnotations.length">
                     <fieldset>
                         <label for="annotation-select">Annotation</label>
-                        <AnnotationSelect
-                            id="annotation-select"
-                            :options="annotationOptions"
-                            v-model="selectedAnnotation"
-                        />
+                        <GSelect id="annotation-select" :options="annotationOptions" v-model="selectedAnnotation" />
                     </fieldset>
                 </GForm>
-                <p v-else>Select a reference layer and a hypothesis layer</p>
+                <p v-else>Select a hypothesis layer and a reference layer</p>
             </template>
 
             <!-- top left header -->
@@ -43,7 +39,7 @@
                     <!-- {{ d.value }} -->
                 </span>
                 <GButton v-else :disabled="!d.value" :class="cssClass(d)" @click="tableData = d">
-                    {{ d.value?.count ?? 0 }}
+                    {{ d.value?.count.toLocaleString() ?? 0 }}
                 </GButton>
             </template>
         </GTable>
@@ -59,9 +55,9 @@
             @hide="tableData = undefined"
         >
             <template #title>
-                Samples of {{ referenceId }} <i>{{ tableData.item.referenceAnnotation }}</i> and {{ hypothesisId }}
-                {{ tableData.column.key }}</template
-            >
+                Samples of <i>{{ hypothesisId }} {{ tableData.column.key }}</i> and
+                <i>{{ referenceId }} {{ tableData.item.referenceAnnotation }}</i>
+            </template>
         </ComparisonModal>
     </GCard>
 </template>
@@ -166,6 +162,6 @@ function cssClass(d: TableData<any>) {
 
 // Default select options
 watchPostEffect(() => {
-    selectedAnnotation.value = annotationOptions.value[0]?.value
+    selectedAnnotation.value ??= annotationOptions.value[0]?.value
 })
 </script>

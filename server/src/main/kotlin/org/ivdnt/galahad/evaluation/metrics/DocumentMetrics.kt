@@ -11,12 +11,12 @@ class DocumentMetrics(@JsonValue val metrics: Metrics) {
     companion object {
         fun create(
             layerComparison: LayerComparison,
-            annotation: Annotation,
+            annotations: List<Annotation>,
             group: Annotation,
         ): DocumentMetrics =
             DocumentMetrics(
                 Metrics(
-                    Metrics.Settings(annotation, group),
+                    Metrics.Settings(annotations, group),
                     buildMap<String, ClassificationClasses> {
                             layerComparison.matches.forEach { tc ->
                                 val mapsToAdd =
@@ -33,7 +33,7 @@ class DocumentMetrics(@JsonValue val metrics: Metrics) {
                                 } else {
                                     // handle true positive & false negative
                                     var (trueEntry, falseEntry) =
-                                        truesFalses(tc) { it.equal(annotation) }
+                                        truesFalses(tc) { t -> annotations.all { t.equal(it) } }
 
                                     if (trueEntry.count > 0) {
                                         val cls = ClassificationClasses(truePositive = trueEntry)

@@ -4,6 +4,7 @@ import useCorpora from "@/stores/corpora"
 import { useRouteQuery } from "@vueuse/router"
 import type { SelectOption } from "@/types/ui/select"
 import { SOURCE_LAYER, type Job } from "@/types/jobs"
+import { formatLayer } from "@/ts/format"
 
 /** Contains the layers for the current corpus. */
 const useLayers = defineStore("layers", () => {
@@ -27,7 +28,7 @@ const useLayers = defineStore("layers", () => {
         layers.value.find((l: LayerMetadata) => l.tagger.name === referenceId.value),
     )
     const options = computed<SelectOption[]>((): SelectOption[] =>
-        layers.value.map((l: LayerMetadata) => ({ value: l.tagger.name, text: format(l) })),
+        layers.value.map((l: LayerMetadata) => ({ value: l.tagger.name, text: formatLayer(l) })),
     )
     const hypothesisAnnotations = computed<SelectOption[]>((): SelectOption[] =>
         Object.keys(hypothesisLayer.value?.annotations ?? {}).map((s) => ({ value: s, text: s })),
@@ -51,11 +52,6 @@ const useLayers = defineStore("layers", () => {
                 loading.value = false
                 referenceId.value ??= "source"
             })
-    }
-
-    /** Format as displayed in the <select> */
-    function format(l: LayerMetadata): string {
-        return `${l.tagger.name} (${l.tagger.description}) [${l.documents} documents]`
     }
 
     function resetSelection(): void {

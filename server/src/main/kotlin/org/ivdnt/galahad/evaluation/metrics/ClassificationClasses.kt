@@ -8,10 +8,10 @@ class ClassificationClasses(
     var falseNegative: EvaluationEntry = EvaluationEntry(),
     var noMatch: EvaluationEntry = EvaluationEntry(),
 ) {
-    val hypCount: Int
+    val hypothesis: Int
         get() = truePositive.count + falsePositive.count
 
-    val refCount: Int
+    val reference: Int
         get() = truePositive.count + falseNegative.count
 
     val metrics: ClassificationMetrics

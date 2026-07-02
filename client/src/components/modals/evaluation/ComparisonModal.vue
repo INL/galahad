@@ -60,11 +60,11 @@ const emit = defineEmits<{ download: []; hide: [] }>()
 const columns = computed(() => {
     const referenceColumns = annotationOptions.value.map((i) => ({
         key: `${referenceLayer.tagger.name}-${i}`,
-        label: `${referenceLayer.tagger.name} ${i}`,
+        label: `${referenceLayer.tagger.name}<br>${i}`,
     }))
     const hypothesisColumns = annotationOptions.value.map((i) => ({
         key: `${hypothesisLayer.tagger.name}-${i}`,
-        label: `${hypothesisLayer.tagger.name} ${i}`,
+        label: `${hypothesisLayer.tagger.name}<br>${i}`,
     }))
 
     return [{ key: "token" }, ...hypothesisColumns, ...referenceColumns]

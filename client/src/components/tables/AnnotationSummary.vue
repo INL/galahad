@@ -2,12 +2,13 @@
     <dl>
         <dl v-for="[key, value] in Object.entries(annotations ?? {})" :key="key">
             <dt>{{ key }}:</dt>
-            <dd>{{ value.toLocaleString() }}</dd>
+            <dd>{{ formatDecimal(value).toLocaleString() }}</dd>
         </dl>
     </dl>
 </template>
 
 <script setup lang="ts">
+import { formatDecimal } from "@/ts/format"
 import type { AnnotationsSummary } from "@/types/documents"
 
 const { annotations } = defineProps<{ annotations?: AnnotationsSummary }>()

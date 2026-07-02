@@ -69,15 +69,6 @@ export function getMetrics(corpus: UUID, hypothesis: string, reference: string):
     return axios.get(endpoints.evaluation.metrics.base({ corpus, layer: hypothesis }, { reference }))
 }
 
-export function getGroupedMetrics(
-    corpus: UUID,
-    layer: string,
-    reference: string,
-    annotation: string,
-    group: string,
-): Promise<MetricsResponse> {
-    return axios.get(endpoints.evaluation.metrics.base({ corpus, layer }, { reference, annotation, group }))
-}
 /**
  * Download evaluation zip.
  * @param corpus UUID of the corpus.
@@ -106,23 +97,6 @@ export function getConfusionSamples(
 ): Promise<BlobResponse> {
     return getBlob(
         endpoints.evaluation.confusion.samples({ corpus, layer }, { reference, annotation, hypFilter, refFilter }),
-    )
-}
-
-export function getMetricsSamples(
-    corpus: UUID,
-    layer: string,
-    reference: string,
-    annotation: string,
-    group: string,
-    classification: string,
-    groupFilter?: string,
-): Promise<BlobResponse> {
-    return getBlob(
-        endpoints.evaluation.metrics.download(
-            { corpus, layer },
-            { reference, annotation, group, classification, groupFilter },
-        ),
     )
 }
 

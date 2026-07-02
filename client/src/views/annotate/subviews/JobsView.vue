@@ -85,7 +85,7 @@
 <script setup lang="ts">
 import type { Job, Progress } from "@/types/jobs"
 import type { Column, TableData } from "@/types/ui/table"
-import { formatDate, formatPeriod } from "@/ts/utils"
+import { formatDate, formatPeriod, formatProgress } from "@/ts/format"
 import MultiSelect from "primevue/multiselect"
 import Slider from "primevue/slider"
 import useJobs from "@/stores/jobs"
@@ -153,11 +153,6 @@ const columns = computed<Column<Job>[]>((): Column<Job>[] => [
     { key: "progress", align: "right", sortOn: (j: Job): number => j.progress.finished / j.progress.total },
     { key: "actions", hidden: !canWrite.value, noSort: true, align: "center" },
 ])
-
-function formatProgress(progress: Progress): string {
-    // Format progress with Math.floor, because e.g. toFixed(0) rounds up 99.9% to 100%, which is confusing.
-    return `${Math.floor((100 * progress.finished) / progress.total)}%`
-}
 </script>
 
 <style scoped lang="scss">

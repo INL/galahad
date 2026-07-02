@@ -20,6 +20,7 @@ import org.ivdnt.galahad.evaluation.distribution.TypeToken
 import org.ivdnt.galahad.evaluation.entities.CorpusEntities
 import org.ivdnt.galahad.evaluation.metrics.DocumentMetrics
 import org.ivdnt.galahad.evaluation.metrics.JobMetrics
+import org.ivdnt.galahad.evaluation.metrics.Metrics
 import org.ivdnt.galahad.util.toValidFileName
 import org.ivdnt.galahad.util.zipDir
 import org.springframework.stereotype.Service
@@ -60,7 +61,7 @@ class EvaluationService(private val corpora: CorporaService) {
         corpus: UUID,
         layer: String,
         reference: String = SOURCE_LAYER,
-        annotation: Annotation,
+        annotations: List<Annotation>,
         group: Annotation,
         classification: String,
         groupFilter: String? = null,
@@ -74,7 +75,7 @@ class EvaluationService(private val corpora: CorporaService) {
             else null
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(layer, reference, filter = filter))
-        val metrics = JobMetrics.create(corpusObj, jobEval.documents, annotation, group)
+        val metrics = JobMetrics.create(corpusObj, jobEval.documents, annotations, group)
         val csv =
             samplesToCSV(
                 metrics.metrics.grouped.entries
@@ -85,7 +86,7 @@ class EvaluationService(private val corpora: CorporaService) {
                 jobEval.hypJob,
                 jobEval.refJob,
             )
-        val fileName = "metrics-$annotation-$group-$classification.csv"
+        val fileName = "${Metrics.Settings(annotations, group).name}-$classification.csv"
         return samplesToZip(corpus, layer, reference, csv, fileName)
     }
 
@@ -149,9 +150,10 @@ class EvaluationService(private val corpora: CorporaService) {
 
     private fun createMetricsCsv(dir: File, corpus: UUID, hypothesis: String, reference: String) {
         dir.mkdirs()
-        val metrics = getJobMetric(corpus, hypothesis, reference, Annotation.POS, Annotation.POS)
-        val globFile = CsvFile(dir.resolve("metrics-global.csv"))
-        globFile.append(metrics.toGlobalCsv())
+        //        val metrics = getJobMetric(corpus, hypothesis, reference, Annotation.POS,
+        // Annotation.POS)
+        //        val globFile = CsvFile(dir.resolve("metrics-global.csv"))
+        //        globFile.append(metrics.toGlobalCsv())
 
         //        metrics.classesByGroup.values.forEach { mt ->
         //            val file = CsvFile(dir.resolve("metrics-${mt.settings.name}.csv"))
@@ -278,25 +280,25 @@ class EvaluationService(private val corpora: CorporaService) {
         document: String,
         hypothesis: String,
         reference: String,
-        annotation: Annotation,
+        annotations: List<Annotation>,
         group: Annotation,
     ): DocumentMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
         val docEval = jobEval.documents.createOrThrow(document)
-        return docEval.getMetrics(annotation, group)
+        return docEval.getMetrics(annotations, group)
     }
 
     fun getJobMetric(
         corpus: UUID,
         hypothesis: String,
         reference: String,
-        annotation: Annotation,
+        annotations: List<Annotation>,
         group: Annotation,
     ): JobMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
-        return jobEval.getMetrics(annotation, group)
+        return jobEval.getMetrics(annotations, group)
     }
 
     //

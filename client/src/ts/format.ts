@@ -1,3 +1,6 @@
+import type { CorpusMetadata } from "@/types/corpora"
+import type { Progress } from "@/types/jobs"
+import type { LayerMetadata } from "@/types/layers"
 import type { Period } from "@/types/taggers"
 
 // https://stackoverflow.com/a/18650828
@@ -30,4 +33,29 @@ export function formatPeriod(period: Period): string | undefined {
     } else {
         return undefined
     }
+}
+
+export function formatShared(c: CorpusMetadata): string {
+    if (c.dataset) return "Dataset"
+    const numPeople = (c.collaborators?.length ?? 0) + (c.viewers?.length ?? 0)
+    if (numPeople === 0) return "No one"
+    return numPeople === 1 ? `${numPeople} person` : `${numPeople} people`
+}
+
+export function formatProgress(progress: Progress): string {
+    // Format progress with Math.floor, because e.g. toFixed(0) rounds up 99.9% to 100%, which is confusing.
+    return `${Math.floor((100 * progress.finished) / progress.total)}%`
+}
+
+/** Format as displayed in the <select> */
+export function formatLayer(l: LayerMetadata): string {
+    return `${l.tagger.name} (${l.tagger.description}) [${l.documents} documents]`
+}
+
+// 1 -> 1.000
+// 0 -> 0.000
+// 0.1 -> 0.100
+// 0.999999 -> 0.999
+export function formatDecimal(number: number) {
+    return Number.isInteger(number) ? number : number.toPrecision(4).slice(0, 5)
 }

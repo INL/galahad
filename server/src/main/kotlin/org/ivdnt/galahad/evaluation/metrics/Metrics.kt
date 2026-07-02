@@ -17,7 +17,8 @@ class Metrics(
     val macro: ClassificationMetrics
         get() = grouped.values.map { it.metrics }.reduce { a, b -> a + b } / grouped.size.toFloat()
 
-    class Settings(val annotation: Annotation, val group: Annotation) {
-        val name: String = "${annotation.value}-${group.value}"
+    class Settings(val annotations: List<Annotation>, val group: Annotation) {
+        val name: String =
+            "metrics-${Annotation.order(annotations).joinToString("-")}-${group.value}"
     }
 }

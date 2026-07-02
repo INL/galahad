@@ -9,6 +9,7 @@ import org.ivdnt.galahad.evaluation.confusion.DocumentConfusion
 import org.ivdnt.galahad.evaluation.distribution.DocumentDistribution
 import org.ivdnt.galahad.evaluation.entities.DocumentEntities
 import org.ivdnt.galahad.evaluation.metrics.DocumentMetrics
+import org.ivdnt.galahad.evaluation.metrics.Metrics
 import org.ivdnt.galahad.evaluation.spans.DocumentSpanEvaluation
 import org.ivdnt.galahad.files.GalahadFolder
 import org.ivdnt.galahad.files.ValidatedDiskValue
@@ -70,7 +71,7 @@ class DocumentEvaluation(dir: File, private val corpus: Corpus, private val jobs
     fun getDistribution(annotation: Annotation, group: Annotation): DocumentDistribution =
         object :
                 ValidatedDiskValue<DocumentDistribution>(
-                    dir.resolve("distribution.$annotation.$group.json")
+                    dir.resolve("distribution-$annotation-$group.json")
                 ) {
                 override fun isValid(modified: Long) = modified >= lastModified
 
@@ -80,7 +81,7 @@ class DocumentEvaluation(dir: File, private val corpus: Corpus, private val jobs
             .readOrCreate()
 
     fun getConfusion(annotation: Annotation): DocumentConfusion =
-        object : ValidatedDiskValue<DocumentConfusion>(dir.resolve("confusion.$annotation.json")) {
+        object : ValidatedDiskValue<DocumentConfusion>(dir.resolve("confusion-$annotation.json")) {
                 override fun isValid(modified: Long) = modified >= lastModified
 
                 override fun set(): DocumentConfusion =
@@ -91,17 +92,17 @@ class DocumentEvaluation(dir: File, private val corpus: Corpus, private val jobs
             }
             .readOrCreate()
 
-    fun getMetrics(annotation: Annotation, group: Annotation): DocumentMetrics =
+    fun getMetrics(annotations: List<Annotation>, group: Annotation): DocumentMetrics =
         object :
                 ValidatedDiskValue<DocumentMetrics>(
-                    dir.resolve("metrics.$annotation.$group.json")
+                    dir.resolve("${Metrics.Settings(annotations, group).name}.json")
                 ) {
                 override fun isValid(modified: Long) = modified >= lastModified
 
                 override fun set(): DocumentMetrics =
                     DocumentMetrics.create(
                         layerComparison,
-                        annotation,
+                        annotations,
                         group,
                     )
             }

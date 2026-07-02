@@ -5,7 +5,7 @@
             <DifferentTagsetsHelp />
         </template>
 
-        <template #empty> Select a reference layer and a hypothesis layer to generate metrics. </template>
+        <template #empty> Select a hypothesis layer and a reference layer. </template>
 
         <template #header v-if="loading">
             <p>Generating metrics for large corpora may take a while...</p>
@@ -15,44 +15,23 @@
             <slot name="header"></slot>
         </template>
 
-        <template
-            v-for="cell in [
-                'cell-accuracy',
-                'cell-precision',
-                'cell-recall',
-                'cell-f1',
-                'cell-macroPrecision',
-                'cell-microPrecision',
-                'cell-macroRecall',
-                'cell-microRecall',
-                'cell-macroF1',
-                'cell-microF1',
-                'cell-microAccuracy',
-            ]"
-            #[cell]="data"
-        >
-            <div :key="cell" style="text-align: right">
-                {{ `${data.value ? parseFloat(data.value).toString().slice(0, 5) : 0}` }}
-            </div>
-        </template>
-
         <template v-for="cell in ['cell-falsePositive', 'cell-truePositive']" #[cell]="d: TableData<any>" :key="cell">
-            <GButton :disabled="d.value?.count === 0" @click="model = d" style="text-align: right" plain>
-                {{ `${((d.value.count / d.item.hypCount) * 100).toFixed(1)}%` }}
-                <i>({{ d.value.count.toString() }})</i>
+            <GButton :disabled="d.value?.count === 0" @click="model = d" style="justify-content: right" plain>
+                {{ `${((d.value.count / d.item.hypothesis) * 100).toFixed(1)}%` }}
+                <i>({{ d.value.count.toLocaleString() }})</i>
             </GButton>
         </template>
 
         <template v-for="cell in ['cell-falseNegative']" #[cell]="d: TableData<any>" :key="cell">
-            <GButton :disabled="d.value?.count === 0" @click="model = d" style="text-align: right" plain>
-                {{ `${((d.value.count / d.item.refCount) * 100).toFixed(1)}%` }}
-                <i>({{ d.value.count.toString() }})</i>
+            <GButton :disabled="d.value?.count === 0" @click="model = d" style="justify-content: right" plain>
+                {{ `${((d.value.count / d.item.reference) * 100).toFixed(1)}%` }}
+                <i>({{ d.value.count.toLocaleString() }})</i>
             </GButton>
         </template>
 
         <template v-for="cell in ['cell-noMatch']" #[cell]="d: TableData<any>" :key="cell">
-            <GButton :disabled="d.value?.count === 0" @click="model = d" style="text-align: right" plain>
-                {{ d.value.count.toString() }}
+            <GButton :disabled="d.value?.count === 0" @click="model = d" style="justify-content: right" plain>
+                {{ d.value.count.toLocaleString() }}
             </GButton>
         </template>
     </GTable>

@@ -19,6 +19,9 @@ import type { Column } from "@/types/ui/table"
 
 const { typeToken, annotation, group } = defineProps<{ typeToken: TypeToken; annotation: string; group: string }>()
 
-const columns: Column<TypeToken>[] = [{ key: "type" }, { key: "count" }]
+const columns: Column<{ type: string; count: number }>[] = [
+    { key: "type" },
+    { key: "count", format: (i) => i.count.toLocaleString(), sortOn: (i) => i.count },
+]
 const items = computed(() => Object.entries(typeToken.tokens).map(([type, count]) => ({ type, count })))
 </script>

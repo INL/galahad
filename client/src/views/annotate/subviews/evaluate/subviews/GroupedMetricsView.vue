@@ -8,7 +8,7 @@
             :items="filteredItems"
             @download="(data) => download(data)"
             :downloading
-            sortColumn="hypCount"
+            sortColumn="hypothesis"
         >
             <template #help>
                 <p>
@@ -22,15 +22,19 @@
                     <GForm>
                         <fieldset>
                             <label for="annotation-select">Annotation</label>
-                            <AnnotationSelect
+                            <MultiSelect
                                 id="annotation-select"
+                                v-model="selectedAnnotations"
                                 :options="annotationOptions"
-                                v-model="selectedAnnotation"
+                                optionLabel="text"
+                                optionValue="value"
+                                placeholder="Annotation"
+                                :maxSelectedLabels="5"
                             />
                         </fieldset>
                         <fieldset>
                             <label for="group-select">Group by</label>
-                            <AnnotationSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
+                            <GSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
                         </fieldset>
                         <fieldset v-if="groupedMetrics">
                             <label for="analysis-select">Single/multiple analyses</label>
@@ -46,7 +50,6 @@
                         <AnnotationSummary :annotations="groupedMetrics?.macro ?? {}" />
                     </aside>
                 </template>
-                <p v-else>Select a reference layer and a hypothesis layer</p>
             </template>
         </MetricsTable>
 
@@ -55,38 +58,39 @@
             :evaluationEntry="tableData.value"
             :hypothesisLayer
             :referenceLayer
-            :annotations="[selectedAnnotation, selectedGroup]"
+            :annotations="[...selectedAnnotations, selectedGroup]"
             :downloading
             @download="() => download(tableData)"
             @hide="tableData = undefined"
         >
             <template #title>
-                Samples of {{ referenceId }} <i>{{ tableData.item.referenceAnnotation }}</i> and {{ hypothesisId }}
-                {{ tableData.column.key }}</template
-            >
+                {{ formatCamelCase(tableData.column.key) }} samples between <i>{{ hypothesisId }}</i> and
+                <i>{{ referenceId }}</i> in
+                <i>{{ tableData.item.group }}</i>
+            </template>
         </ComparisonModal>
     </GCard>
 </template>
 
 <script setup lang="ts">
 // Libraries & stores
-import * as API from "@/api/evaluation"
+import * as API from "@/api/evaluation/metrics"
 import * as Utils from "@/api/utils"
 // API & types
-import useMetrics, { metricsPerPosColumns } from "@/stores/evaluation/metrics"
-import type MetricsFilter from "@/components/tables/MetricsFilter.vue"
 import useLayers from "@/stores/layers"
 import useCorpora from "@/stores/corpora"
 import type { SelectOption } from "@/types/ui/select"
 import useGroupedMetrics from "@/stores/evaluation/groupedMetrics"
 import type { Column, TableData } from "@/types/ui/table"
-import type { MetricsRow } from "@/types/evaluation"
+import type { Metrics, ClassificationClasses, ClassificationMetrics } from "@/types/evaluation/metrics"
+import MultiSelect from "primevue/multiselect"
+import { formatDecimal } from "@/ts/format"
 
 const { commonAnnotations, hypothesisId, referenceId, hypothesisLayer, referenceLayer } = storeToRefs(useLayers())
 const {
     loading,
     groupedMetrics,
-    annotation: selectedAnnotation,
+    annotations: selectedAnnotations,
     group: selectedGroup,
 } = storeToRefs(useGroupedMetrics())
 const { corpusId } = storeToRefs(useCorpora())
@@ -108,63 +112,88 @@ const analysesOptions: SelectOption[] = [
     { value: "multiple", text: "Multiple" },
 ]
 const selectedAnalysis = ref<string>(analysesOptions[0].value)
+const selectedAnnotation = computed<string>((): string => {
+    if (!selectedAnnotations.value?.length) return ""
+    return selectedAnnotations.value?.join("<br>")
+})
 
 // Table data
-const columns = computed((): Column<MetricsRow>[] => [
+const columns = computed((): Column<ClassificationClasses & { group: string }>[] => [
+    { key: "group", label: selectedGroup.value },
     {
-        key: "group",
-        label: selectedGroup.value,
-        sortOn: (x: MetricsRow) => (Number.isNaN(Number.parseInt(x.name)) ? x.name : Number.parseInt(x.name)),
+        key: "accuracy",
+        label: `${selectedAnnotation.value}<br>accuracy`,
+        align: "right",
+        format: (c: ClassificationClasses) => formatDecimal(c.metrics.accuracy),
+        sortOn: (c: ClassificationClasses) => c.metrics.accuracy,
     },
-    { key: "accuracy", label: `${selectedAnnotation.value}<br>accuracy`, sortOn: (x: MetricsRow) => x.accuracy },
-    { key: "precision", label: `${selectedAnnotation.value}<br>precision`, sortOn: (x: MetricsRow) => x.precision },
-    { key: "recall", label: `${selectedAnnotation.value}<br>recall`, sortOn: (x: MetricsRow) => x.recall },
-    { key: "f1", label: `${selectedAnnotation.value}<br>f1`, sortOn: (x: MetricsRow) => x.f1 },
-    { key: "hypCount", label: "count<br>(hypothesis)", align: "right", sortOn: (x: MetricsRow) => x.hypCount },
-    { key: "refCount", label: "count<br>(reference)", align: "right", sortOn: (x: MetricsRow) => x.refCount },
+    {
+        key: "precision",
+        label: `${selectedAnnotation.value}<br>precision`,
+        align: "right",
+        format: (c: ClassificationClasses) => formatDecimal(c.metrics.precision),
+        sortOn: (c: ClassificationClasses) => c.metrics.precision,
+    },
+    {
+        key: "recall",
+        label: `${selectedAnnotation.value}<br>recall`,
+        align: "right",
+        format: (c: ClassificationClasses) => formatDecimal(c.metrics.recall),
+        sortOn: (c: ClassificationClasses) => c.metrics.recall,
+    },
+    {
+        key: "f1",
+        label: `${selectedAnnotation.value}<br>f1`,
+        align: "right",
+        format: (c: ClassificationClasses) => formatDecimal(c.metrics.f1),
+        sortOn: (c: ClassificationClasses) => c.metrics.f1,
+    },
+    {
+        key: "hypothesis",
+        label: "count<br>(hypothesis)",
+        align: "right",
+        format: (c: ClassificationClasses) => c.hypothesis.toLocaleString(),
+        sortOn: (c: ClassificationClasses) => c.hypothesis,
+    },
+    {
+        key: "reference",
+        label: "count<br>(reference)",
+        align: "right",
+        format: (c: ClassificationClasses) => c.reference.toLocaleString(),
+        sortOn: (c: ClassificationClasses) => c.reference,
+    },
     {
         key: "truePositive",
         label: `${selectedAnnotation.value}<br>true positive`,
         button: true,
-        sortOn: (x: MetricsRow): number => x.truePositive.count,
+        sortOn: (c: ClassificationClasses): number => c.truePositive.count,
     },
     {
         key: "falsePositive",
         label: `${selectedAnnotation.value}<br>false positive`,
         button: true,
-        sortOn: (x: MetricsRow): number => x.falsePositive.count,
+        sortOn: (c: ClassificationClasses): number => c.falsePositive.count,
     },
     {
         key: "falseNegative",
         label: `${selectedAnnotation.value}<br>false negative`,
         button: true,
-        sortOn: (x: MetricsRow): number => x.falseNegative.count,
+        sortOn: (c: ClassificationClasses): number => c.falseNegative.count,
     },
-    { key: "noMatch", label: "no match", button: true, sortOn: (x: MetricsRow): number => x.noMatch.count },
+    { key: "noMatch", label: "no match", button: true, sortOn: (c: ClassificationClasses): number => c.noMatch.count },
 ])
-const grouped = computed(() => {
+const grouped = computed<ClassificationClasses & { group: string }>(() => {
     if (!groupedMetrics.value) return []
-    return groupedMetrics.value.grouped
-})
-const items = computed(() => {
-    if (!grouped.value) return []
-    return Object.entries(grouped.value).map((entry) => ({
-        ...entry[1],
-        group: entry[0],
-        precision: entry[1].metrics.precision,
-        recall: entry[1].metrics.recall,
-        f1: entry[1].metrics.f1,
-        accuracy: entry[1].metrics.accuracy,
-    }))
+    return Object.entries(groupedMetrics.value.grouped).map((entry) => ({ ...entry[1], group: entry[0] }))
 })
 const filteredItems = computed(() => {
     if (selectedAnalysis.value === "single") {
-        return items.value.filter((i) => !i.group.includes("+"))
+        return grouped.value.filter((i) => !i.group.includes("+"))
     }
     if (selectedAnalysis.value === "multiple") {
-        return items.value.filter((i) => i.group.includes("+"))
+        return grouped.value.filter((i) => i.group.includes("+"))
     }
-    return items.value
+    return grouped.value
 })
 
 // Methods
@@ -178,7 +207,7 @@ function download(data: TableData<any>) {
         corpusId.value,
         hypothesisId.value,
         referenceId.value,
-        selectedAnnotation.value,
+        selectedAnnotations.value,
         selectedGroup.value,
         classification,
         groupFilter,
@@ -189,12 +218,21 @@ function download(data: TableData<any>) {
         .finally(() => (downloading.value = false))
 }
 
+// Methods
+function formatCamelCase(camelCase: string) {
+    return camelCase
+        .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+        .toLowerCase()
+        .replace(/^./, (c) => c.toUpperCase())
+}
+
 // Default select options
 watchPostEffect(() => {
-    selectedAnnotation.value = annotationOptions.value[0]?.value
+    if (!annotationOptions.value?.length) return
+    selectedAnnotations.value ??= [annotationOptions.value[0]?.value]
 })
 watchPostEffect(() => {
-    selectedGroup.value = groupOptions.value[2]?.value
+    selectedGroup.value ??= groupOptions.value[2]?.value
 })
 </script>
 

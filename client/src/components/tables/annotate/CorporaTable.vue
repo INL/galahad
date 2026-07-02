@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import type { CorpusMetadata } from "@/types/corpora"
 import { type Column, type TableData } from "@/types/ui/table"
-import { formatBytes, formatDate, formatPeriod } from "@/ts/utils"
+import { formatBytes, formatDate, formatPeriod, formatShared } from "@/ts/format"
 import useCorpora from "@/stores/corpora"
 
 // --- props ---
@@ -69,13 +69,6 @@ const selectedCorpus = computed<CorpusMetadata>({
 })
 
 // --- methods ---
-function formatShared(c: CorpusMetadata): string {
-    if (c.dataset) return "Dataset"
-    const numPeople = (c.collaborators?.length ?? 0) + (c.viewers?.length ?? 0)
-    if (numPeople === 0) return "No one"
-    return numPeople === 1 ? `${numPeople} person` : `${numPeople} people`
-}
-
 function sortShared(c: CorpusMetadata): number {
     if (c.dataset) return -1
     return c.collaborators.length + c.viewers.length

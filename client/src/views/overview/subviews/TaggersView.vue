@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import useTaggers from "@/stores/static/taggers"
-import { formatPeriod } from "@/ts/utils"
+import { formatPeriod } from "@/ts/format"
 import type { Tagger } from "@/types/taggers"
 import type { Column, TableData } from "@/types/ui/table"
 
