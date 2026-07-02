@@ -1,6 +1,8 @@
-import axios from "axios"
+import axios, { type AxiosResponse } from "axios"
 import { endpoints } from "@/api"
-import { getBlob } from "@/api/utils"
+import { getBlob, type BlobResponse } from "@/api/utils"
+import type { Metrics } from "@/types/evaluation/metrics"
+import type { UUID } from "@/types/corpora"
 
 export function getGroupedMetrics(
     corpus: UUID,
@@ -8,7 +10,7 @@ export function getGroupedMetrics(
     reference: string,
     annotations: string[],
     group: string,
-): Promise<MetricsResponse> {
+): Promise<AxiosResponse<Metrics>> {
     return axios.get(endpoints.evaluation.metrics.base({ corpus, layer }, { reference, annotations, group }))
 }
 

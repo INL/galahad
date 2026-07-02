@@ -3,7 +3,6 @@ package org.ivdnt.galahad.web.controller
 object Endpoints {
     const val BASE: String = "/"
     const val VERSION: String = "/version"
-    const val BENCHMARKS: String = "/benchmarks"
     const val USER: String = "/user"
     const val SWAGGER: String = "/swagger-ui/index.html"
 
@@ -42,35 +41,34 @@ object Endpoints {
         const val ERROR: String = "$JOBS/error"
     }
 
-    object Export {
-        const val BASE: String = "${Layers.LAYER}/export"
-        const val CONVERT: String = "$BASE/convert"
-        const val MERGE: String = "$BASE/merge"
-
-        object Documents {
-            const val BASE: String = "${Layers.Documents.DOCUMENT}/export"
-            const val CONVERT: String = "$BASE/convert"
-            const val MERGE: String = "$BASE/merge"
-        }
-    }
-
     object Evaluation {
-        const val BASE: String = "${Layers.LAYER}/evaluation"
-        const val DOWNLOAD: String = "${BASE}/download"
 
-        object Metrics {
-            const val BASE: String = "${Evaluation.BASE}/metrics"
-            const val DOWNLOAD: String = "${BASE}/download"
+        object Corpus {
+            const val BASE: String = "${Corpora.CORPUS}/evaluation"
+
+            object Metrics {
+                const val BASE: String = "${Corpus.BASE}/metrics"
+            }
         }
 
-        object Confusion {
-            const val BASE: String = "${Evaluation.BASE}/confusion"
+        object Layer {
+            const val BASE: String = "${Layers.LAYER}/evaluation"
             const val DOWNLOAD: String = "${BASE}/download"
-        }
 
-        object Distribution {
-            const val BASE: String = "${Evaluation.BASE}/distribution"
-            const val DOWNLOAD: String = "${BASE}/download"
+            object Metrics {
+                const val BASE: String = "${Layer.BASE}/metrics"
+                const val DOWNLOAD: String = "${BASE}/download"
+            }
+
+            object Confusion {
+                const val BASE: String = "${Layer.BASE}/confusion"
+                const val DOWNLOAD: String = "${BASE}/download"
+            }
+
+            object Distribution {
+                const val BASE: String = "${Layer.BASE}/distribution"
+                const val DOWNLOAD: String = "${BASE}/download"
+            }
         }
 
         object Document {
@@ -91,10 +89,21 @@ object Endpoints {
                 const val DOWNLOAD: String = "${BASE}/download"
             }
         }
+    }
 
-        object Corpus {
-            const val BASE: String = "${Corpora.CORPUS}/evaluation"
-            // TODO: /entities lives here
+    object Benchmarks {
+        const val BASE: String = "${Corpora.CORPUS}/benchmarks"
+    }
+
+    object Export {
+        const val BASE: String = "${Layers.LAYER}/export"
+        const val CONVERT: String = "$BASE/convert"
+        const val MERGE: String = "$BASE/merge"
+
+        object Documents {
+            const val BASE: String = "${Layers.Documents.DOCUMENT}/export"
+            const val CONVERT: String = "$BASE/convert"
+            const val MERGE: String = "$BASE/merge"
         }
     }
 

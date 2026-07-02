@@ -22,12 +22,19 @@ const { documents } = storeToRefs(useDocuments())
 const { sourceLayer, layers } = storeToRefs(useLayers())
 
 const { reload: reloadCorpora } = useCorpora()
+const { reload: reloadDocuments } = useDocuments()
+const { reload: reloadLayers } = useLayers()
 
-onMounted(() => {
-    corpus.value = undefined
-    corpusId.value = undefined
-    documents.value = []
-    layers.value = []
-    reloadCorpora()
+onMounted(reloadCorpora)
+onMounted(reloadDocuments)
+onMounted(reloadLayers)
+
+// Deselect non-dataset
+watchPostEffect(() => {
+    if (corpusId.value && corpus.value && !corpus.value.dataset) {
+        corpusId.value = undefined
+        documents.value = []
+        layers.value = []
+    }
 })
 </script>

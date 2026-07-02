@@ -21,15 +21,17 @@ class DocumentMetrics(@JsonValue val metrics: Metrics) {
                             layerComparison.matches.forEach { tc ->
                                 val mapsToAdd =
                                     mutableListOf<MutableMap<String, ClassificationClasses>>()
-                                if (tc.hyp == Term.EMPTY) {
+                                if (tc.hyp == Term.EMPTY || tc.ref == Term.EMPTY) {
                                     // handle missing match
                                     val cls =
                                         ClassificationClasses(
                                             noMatch = EvaluationEntry(1, mutableListOf(tc))
                                         )
-                                    mapsToAdd.add(
-                                        mutableMapOf(tc.ref.annotationHeadOrMissing(group) to cls)
-                                    )
+                                    val group =
+                                        if (tc.hyp == Term.EMPTY)
+                                            tc.ref.annotationHeadOrMissing(group)
+                                        else tc.hyp.annotationHeadOrMissing(group)
+                                    mapsToAdd.add(mutableMapOf(group to cls))
                                 } else {
                                     // handle true positive & false negative
                                     var (trueEntry, falseEntry) =

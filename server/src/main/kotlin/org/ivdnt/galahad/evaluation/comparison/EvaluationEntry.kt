@@ -10,6 +10,12 @@ data class EvaluationEntry(
     //    val jsonSamples: List<TermComparison> get() =
     // samples.asSequence().shuffled().take(MAX_SAMPLE_LENGTH).toList()
 
+    fun truncate() {
+        val truncated = samples.asSequence().shuffled().take(MAX_SAMPLE_LENGTH).toMutableList()
+        samples.clear()
+        samples.addAll(truncated)
+    }
+
     companion object {
         private const val MAX_SAMPLE_LENGTH: Int = 10
 
@@ -29,8 +35,10 @@ data class EvaluationEntry(
         }
 
         fun from(a: EvaluationEntry, b: EvaluationEntry): EvaluationEntry {
-            val aCopy = EvaluationEntry(a.count, a.samples.toMutableList())
-            return add(aCopy, b)
+            return EvaluationEntry(
+                a.count + b.count,
+                (a.samples + b.samples).shuffled().take(MAX_SAMPLE_LENGTH).toMutableList(),
+            )
         }
     }
 }

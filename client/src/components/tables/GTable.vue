@@ -233,9 +233,9 @@ table {
 
             th {
                 font-size: 0.85rem;
-                letter-spacing: 0.1rem;
+                letter-spacing: 0.05rem;
                 text-transform: uppercase;
-                padding: 0.25rem 0.5rem;
+                padding: 0.25rem 0.6rem;
                 // only if it contains sort controls
                 &:has(.sort-control) {
                     vertical-align: bottom;

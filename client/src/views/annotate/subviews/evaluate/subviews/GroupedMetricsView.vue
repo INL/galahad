@@ -64,7 +64,7 @@
             @hide="tableData = undefined"
         >
             <template #title>
-                {{ formatCamelCase(tableData.column.key) }} samples between <i>{{ hypothesisId }}</i> and
+                {{ formatClassification(tableData.column.key) }} samples between <i>{{ hypothesisId }}</i> and
                 <i>{{ referenceId }}</i> in
                 <i>{{ tableData.item.group }}</i>
             </template>
@@ -84,7 +84,7 @@ import useGroupedMetrics from "@/stores/evaluation/groupedMetrics"
 import type { Column, TableData } from "@/types/ui/table"
 import type { Metrics, ClassificationClasses, ClassificationMetrics } from "@/types/evaluation/metrics"
 import MultiSelect from "primevue/multiselect"
-import { formatDecimal } from "@/ts/format"
+import { formatDecimal, formatClassification } from "@/ts/format"
 
 const { commonAnnotations, hypothesisId, referenceId, hypothesisLayer, referenceLayer } = storeToRefs(useLayers())
 const {
@@ -216,14 +216,6 @@ function download(data: TableData<any>) {
             Utils.browserDownloadResponseFile(response)
         })
         .finally(() => (downloading.value = false))
-}
-
-// Methods
-function formatCamelCase(camelCase: string) {
-    return camelCase
-        .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
-        .toLowerCase()
-        .replace(/^./, (c) => c.toUpperCase())
 }
 
 // Default select options

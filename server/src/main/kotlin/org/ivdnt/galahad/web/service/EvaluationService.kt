@@ -18,6 +18,7 @@ import org.ivdnt.galahad.evaluation.csv.CsvSampleExporter.Companion.samplesToCSV
 import org.ivdnt.galahad.evaluation.distribution.DocumentDistribution
 import org.ivdnt.galahad.evaluation.distribution.TypeToken
 import org.ivdnt.galahad.evaluation.entities.CorpusEntities
+import org.ivdnt.galahad.evaluation.metrics.CorpusMetrics
 import org.ivdnt.galahad.evaluation.metrics.DocumentMetrics
 import org.ivdnt.galahad.evaluation.metrics.JobMetrics
 import org.ivdnt.galahad.evaluation.metrics.Metrics
@@ -264,7 +265,7 @@ class EvaluationService(private val corpora: CorporaService) {
         return jobEval.getDistribution(annotation, group).typeTokens
     }
 
-    fun getJobConfusion(
+    fun getLayerConfusion(
         corpus: UUID,
         hypothesis: String,
         reference: String,
@@ -275,7 +276,7 @@ class EvaluationService(private val corpora: CorporaService) {
         return jobEval.getConfusion(annotation)
     }
 
-    fun getDocumentMetric(
+    fun getDocumentMetrics(
         corpus: UUID,
         document: String,
         hypothesis: String,
@@ -289,7 +290,7 @@ class EvaluationService(private val corpora: CorporaService) {
         return docEval.getMetrics(annotations, group)
     }
 
-    fun getJobMetric(
+    fun getLayerMetrics(
         corpus: UUID,
         hypothesis: String,
         reference: String,
@@ -316,4 +317,13 @@ class EvaluationService(private val corpora: CorporaService) {
 
     // TODO duplicate code with export service
     fun getCorpusName(corpus: UUID): String = corpora.readOrThrow(corpus).metadata.name
+
+    fun getCorpusMetrics(
+        corpus: UUID,
+        annotations: List<Annotation>,
+        group: Annotation,
+    ): CorpusMetrics {
+        val corpusObj = corpora.readOrThrow(corpus)
+        return corpusObj.evaluation.getMetrics(annotations, group)
+    }
 }

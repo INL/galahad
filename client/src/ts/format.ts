@@ -59,3 +59,10 @@ export function formatLayer(l: LayerMetadata): string {
 export function formatDecimal(number: number) {
     return Number.isInteger(number) ? number : number.toPrecision(4).slice(0, 5)
 }
+
+export function formatClassification(classification: string) {
+    return classification
+        .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+        .toLowerCase()
+        .replace(/^./, (c) => c.toUpperCase())
+}

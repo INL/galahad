@@ -1,17 +1,12 @@
-/**
- * API for fetching benchmarks.
- */
-
+import { endpoints } from "@/api"
+import type { UUID } from "@/types/corpora"
+import type { GlobalMetrics } from "@/types/evaluation/metrics"
 import axios, { type AxiosResponse } from "axios"
-import type { Benchmarks } from "@/types/assays"
 
-type BenchmarksResponse = AxiosResponse<Benchmarks>
-
-const benchmarksPath = "/benchmarks"
-
-/**
- * Fetch all benchmarks.
- */
-export function getBenchmarks(): Promise<BenchmarksResponse> {
-    return axios.get(benchmarksPath)
+export function getBenchmarks(
+    corpus: UUID,
+    annotations: string[],
+    group: string,
+): Promise<AxiosResponse<GlobalMetrics[]>> {
+    return axios.get(endpoints.benchmarks({ corpus }, { annotations, group }))
 }

@@ -13,7 +13,7 @@ import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.evaluation.confusion.JobConfusion
 import org.ivdnt.galahad.evaluation.distribution.TypeToken
-import org.ivdnt.galahad.evaluation.metrics.DocumentMetrics
+import org.ivdnt.galahad.evaluation.metrics.CorpusMetrics
 import org.ivdnt.galahad.evaluation.metrics.JobMetrics
 import org.ivdnt.galahad.exceptions.ErrorResponse
 import org.ivdnt.galahad.util.setContentDisposition
@@ -24,6 +24,12 @@ import org.springframework.web.bind.annotation.*
 @RestController
 class EvaluationController(private val evaluationService: EvaluationService) : Logging {
     @Autowired private val response: HttpServletResponse? = null
+
+    private fun setZipResponseHeader(corpus: UUID) {
+        response!!.contentType = "application/zip"
+        val corpusName = evaluationService.getCorpusName(corpus)
+        response.setContentDisposition("$corpusName-evaluation.zip")
+    }
 
     @Operation(
         summary = "Download evaluation",
@@ -48,7 +54,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
     @CrossOrigin
-    @GetMapping(Endpoints.Evaluation.DOWNLOAD)
+    @GetMapping(Endpoints.Evaluation.Layer.DOWNLOAD)
     fun download(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
         @PathVariable @Parameter(description = "Layer name") layer: String,
@@ -56,12 +62,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
     ): ByteArray {
         setZipResponseHeader(corpus)
         return evaluationService.getEvaluation(corpus, layer, reference)
-    }
-
-    private fun setZipResponseHeader(corpus: UUID) {
-        response!!.contentType = "application/zip"
-        val corpusName = evaluationService.getCorpusName(corpus)
-        response.setContentDisposition("$corpusName-evaluation.zip")
     }
 
     @RestController
@@ -95,7 +95,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 ],
         )
         @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Distribution.BASE)
+        @GetMapping(Endpoints.Evaluation.Layer.Distribution.BASE)
         fun getLayerDistribution(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
@@ -103,47 +103,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @RequestParam @Parameter(description = "Group") group: Annotation,
         ): List<TypeToken> =
             evaluationService.getLayerDistribution(corpus, layer, annotation, group)
-
-        @Operation(
-            summary = "Get document distribution",
-            description = "Get the distribution of annotations for a specific document layer.",
-        )
-        @ApiResponse(
-            responseCode = "200",
-            description = "The distribution of annotations in the document layer.",
-        )
-        @ApiResponse(
-            responseCode = "403",
-            description = "User needs read-access.",
-            content =
-                [
-                    Content(
-                        array = ArraySchema(schema = Schema(implementation = ErrorResponse::class))
-                    )
-                ],
-        )
-        @ApiResponse(
-            responseCode = "404",
-            description = "The corpus, document or layer was not found.",
-            content =
-                [
-                    Content(
-                        array = ArraySchema(schema = Schema(implementation = ErrorResponse::class))
-                    )
-                ],
-        )
-        @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Document.Distribution.BASE)
-        fun getDocumentDistribution(
-            @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
-            @PathVariable @Parameter(description = "Layer name") layer: String,
-            @PathVariable @Parameter(description = "Document name") document: String,
-            @RequestParam @Parameter(description = "Annotation") annotation: Annotation,
-            @RequestParam @Parameter(description = "Group") group: Annotation,
-        ): List<TypeToken> =
-            evaluationService
-                .getDocumentDistribution(corpus, layer, document, annotation, group)
-                .typeTokens
     }
 
     @RestController
@@ -178,13 +137,13 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 ],
         )
         @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Confusion.BASE)
-        fun getJobConfusion(
+        @GetMapping(Endpoints.Evaluation.Layer.Confusion.BASE)
+        fun getLayerConfusion(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
             @RequestParam @Parameter(description = "Annotation") annotation: Annotation,
-        ): JobConfusion = evaluationService.getJobConfusion(corpus, layer, reference, annotation)
+        ): JobConfusion = evaluationService.getLayerConfusion(corpus, layer, reference, annotation)
 
         @Operation(
             summary = "Get confusion samples",
@@ -228,7 +187,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 ],
         )
         @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Confusion.DOWNLOAD)
+        @GetMapping(Endpoints.Evaluation.Layer.Confusion.DOWNLOAD)
         fun getConfusionSamples(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
@@ -257,6 +216,14 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
 
     @RestController
     inner class MetricsEvaluationController {
+        @CrossOrigin
+        @GetMapping(Endpoints.Evaluation.Corpus.Metrics.BASE)
+        fun getCorpusMetrics(
+            @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
+            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
+            @RequestParam @Parameter(description = "Group") group: Annotation,
+        ): CorpusMetrics = evaluationService.getCorpusMetrics(corpus, annotations, group)
+
         @Operation(
             summary = "Get metrics",
             description =
@@ -284,33 +251,15 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 ],
         )
         @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Metrics.BASE)
-        fun getMetrics(
+        @GetMapping(Endpoints.Evaluation.Layer.Metrics.BASE)
+        fun getLayerMetrics(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
             @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
             @RequestParam @Parameter(description = "Group") group: Annotation,
-        ): JobMetrics = evaluationService.getJobMetric(corpus, layer, reference, annotations, group)
-
-        @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Document.Metrics.BASE)
-        fun getDocumentMetric(
-            @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
-            @PathVariable @Parameter(description = "Layer name") layer: String,
-            @PathVariable @Parameter(description = "Document name") document: String,
-            @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
-            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
-            @RequestParam @Parameter(description = "Group") group: Annotation,
-        ): DocumentMetrics =
-            evaluationService.getDocumentMetric(
-                corpus,
-                document,
-                layer,
-                reference,
-                annotations,
-                group,
-            )
+        ): JobMetrics =
+            evaluationService.getLayerMetrics(corpus, layer, reference, annotations, group)
 
         @Operation(
             summary = "Get metrics samples",
@@ -353,7 +302,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 ],
         )
         @CrossOrigin
-        @GetMapping(Endpoints.Evaluation.Metrics.DOWNLOAD)
+        @GetMapping(Endpoints.Evaluation.Layer.Metrics.DOWNLOAD)
         fun getMetricsSamples(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,

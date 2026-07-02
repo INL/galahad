@@ -7,6 +7,13 @@ export type Metrics = {
     micro: ClassificationMetrics
     macro: ClassificationMetrics
 }
+export type GlobalMetrics = {
+    layer: string
+    settings: MetricsSettings
+    classes: ClassificationClasses
+    micro: ClassificationMetrics
+    macro: ClassificationMetrics
+}
 export type MetricsSettings = { annotations: string[]; group: string }
 export type ClassificationClasses = {
     truePositive: EvaluationEntry

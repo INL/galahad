@@ -14,151 +14,194 @@
             </p>
         </template>
 
-        <GTable headless :columns :items :loading="assaysStore.loading" sortColumn="accuracy">
-            <template #empty> Select a dataset to view benchmarks. </template>
-
-            <!-- tagger name -->
-
-            <template #cell-tagger="d">
-                <ExternalLink
-                    v-if="d.item.tagger !== SOURCE_LAYER"
-                    :href="`/galahad/overview/taggers#${d.item.tagger}`"
-                >
-                    {{ d.item.tagger }}
-                </ExternalLink>
-                <div v-else>
-                    <span style="font-weight: bold">{{ d.item.tagger }}</span>
-                </div>
+        <GTable :columns :items :loading sortColumn="macroF1">
+            <template #header>
+                <GForm>
+                    <fieldset>
+                        <label for="dataset-select">Dataset</label>
+                        <GSelect id="dataset-select" :options="datasetOptions" v-model="corpusId" />
+                    </fieldset>
+                    <fieldset v-if="corpusId && corpus?.dataset">
+                        <label for="annotation-select">Annotation</label>
+                        <MultiSelect
+                            id="annotation-select"
+                            v-model="selectedAnnotations"
+                            :options="annotationOptions"
+                            optionLabel="text"
+                            optionValue="value"
+                            placeholder="Annotation"
+                            :maxSelectedLabels="5"
+                        />
+                    </fieldset>
+                    <fieldset v-if="corpusId && corpus?.dataset">
+                        <label for="group-select">Group by</label>
+                        <GSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
+                    </fieldset>
+                </GForm>
             </template>
 
-            <template #cell="d">
-                {{ d.value ? d.value.toFixed(2) : "0.00" }}<span v-if="showAsterisk(d)">*</span>
+            <template #cell-layer="d">
+                <ExternalLink :href="`/galahad/overview/taggers#${d.item.layer}`">
+                    {{ d.item.layer }}
+                </ExternalLink>
             </template>
 
             <template #cell-details="d">
-                <ExternalLink
-                    :href="`/galahad/annotate/evaluate?corpus=${selectedDatasetUuid}&hypothesis=${d.item.tagger}`"
-                >
+                <ExternalLink :href="`/galahad/annotate/evaluate?corpus=${corpusId}&hypothesis=${d.item.layer}`">
                     Details
                 </ExternalLink>
             </template>
 
-            <template #header>
-                <div class="table-controls">
-                    <div class="table-control">
-                        <label for="dataset-select">Dataset</label>
-                        <GSelect id="dataset-select" :options="datasetOptions" v-model="selectedDatasetUuid" />
-                    </div>
-                </div>
-                <MetricsFilter ref="metricsFilter" v-if="selectedDatasetUuid" :annotations="selectedAssay" />
+            <template
+                v-for="cell in ['cell-truePositive', 'cell-falseNegative']"
+                #[cell]="d: TableData<GlobalMetrics>"
+                :key="cell"
+            >
+                <GButton :disabled="d.value?.count === 0" @click="tableData = d" style="justify-content: right" plain>
+                    {{ `${((d.value.count / d.item.classes.hypothesis) * 100).toFixed(1)}%` }}
+                    <i>({{ d.value.count.toLocaleString() }})</i>
+                </GButton>
             </template>
         </GTable>
+
+        <ComparisonModal
+            v-if="tableData"
+            :evaluationEntry="tableData.value"
+            :hypothesisLayer="layers.find((l: LayerMetadata) => l.tagger.name == tableData.item.layer)"
+            :referenceLayer="sourceLayer"
+            :annotations="[...selectedAnnotations, selectedGroup]"
+            :downloading
+            @download="() => download(tableData)"
+            @hide="tableData = undefined"
+        >
+            <template #title>
+                {{ formatClassification(tableData.column.key) }} samples between <i>{{ tableData.item.layer }}</i> and
+                <i>source annotations</i>
+            </template>
+        </ComparisonModal>
     </GCard>
 </template>
 
 <script setup lang="ts">
-// Libraries & stores
-
-import type { SelectOption } from "@/types/ui/select"
-// API & Types
-import type { MetricTypeAssay } from "@/types/assays"
-import { SOURCE_LAYER } from "@/types/jobs"
-import type { TableData } from "@/types/ui/table"
-import type MetricsFilter from "@/components/tables/MetricsFilter.vue"
-import useAssays from "@/stores/assays"
 import useCorpora from "@/stores/corpora"
+import type { GlobalMetrics } from "@/types/evaluation/metrics"
+import type { CorpusMetadata } from "@/types/corpora"
+import type { SelectOption } from "@/types/ui/select"
+import type { Column, TableData } from "@/types/ui/table"
+import useLayers from "@/stores/layers"
+import useBenchmarks from "@/stores/benchmarks"
+import MultiSelect from "primevue/multiselect"
+import { formatClassification, formatDecimal } from "@/ts/format"
+import type { LayerMetadata } from "@/types/layers"
 
-// Types
-type AssayRow = { tagger: string; accuracy: number; precision: number; recall: number; f1: number }
+const { sourceAnnotations, layers, sourceLayer } = storeToRefs(useLayers())
+const { corpora, corpusId, corpus } = storeToRefs(useCorpora())
+const { reload: reloadCorpora } = useCorpora()
+const { reload: reloadLayers } = useLayers()
+const { annotations: selectedAnnotations, group: selectedGroup, benchmarks, loading } = storeToRefs(useBenchmarks())
 
-// Stores
-const assaysStore = useAssays()
-const corporaStore = useCorpora()
-
-// Fields
-const datasetOptions = computed<SelectOption[]>(() =>
-    corporaStore.datasets.map((d) => ({ value: d.uuid, text: d.name })).sort((a, b) => a.text.localeCompare(b.text)),
+const tableData = ref()
+const datasetOptions = computed<SelectOption[]>((): SelectOption[] =>
+    corpora.value
+        .filter((c: CorpusMetadata) => c.dataset)
+        .map((c: CorpusMetadata) => ({ text: c.name, value: c.uuid })),
 )
-const selectedDatasetUuid = ref<string>()
-const selectedDatasetName = computed(
-    () => corporaStore.datasets.find((d) => d.uuid === selectedDatasetUuid.value)?.name,
+const annotationOptions = computed(() =>
+    sourceAnnotations.value.filter((option: SelectOption) => !["token"].includes(option.text)),
 )
-const metricsFilter = useTemplateRef<InstanceType<typeof MetricsFilter>>("metricsFilter")
-const columns = [
-    { key: "tagger", label: "tagger" },
-    { key: "precision", label: "macro\nprecision", sortOn: (i) => i.precision },
-    { key: "recall", label: "macro\nrecall", sortOn: (i) => i.recall },
-    { key: "f1", label: "macro\nf1", sortOn: (i) => i.f1 },
-    { key: "accuracy", label: "micro\naccuracy", sortOn: (i) => i.accuracy },
-    { key: "details", label: "detailed\nevaluation" },
-]
-/**
- * Our input data is in the form:
- * {
- *     "dataset-1": {
- *         "posByPos": {
- *             "tagger-1": {
- *                 "micro": { ... }, "macro": { ... }
- *             },
- *             "tagger-2": { ... },
- *         },
- *         "lemmaByLemma": { ... },
- *     },
- *     "dataset-2": { ... },
- * }
- * We want to transform this to:
- * [
- *    { tagger: "tagger-1", microAccuracy: 0, macroPrecision: 0, ... },
- *    { ... },
- * ]
- * Filtered by the selected dataset and metric type.
- */
-const selectedAssay = computed(() => {
-    return assaysStore.assays[selectedDatasetName.value]
-})
-const items = computed(() => {
-    const metricName = metricsFilter.value?.metricName
-    return Object.entries(assaysStore.assays[selectedDatasetName.value]?.[metricName] ?? {}).map((taggerAndMetric) => {
-        const tagger: string = taggerAndMetric[0]
-        const mta: MetricTypeAssay = taggerAndMetric[1]
-        const result = {
-            tagger: tagger,
-            accuracy: mta.micro.accuracy,
-            precision: mta.macro.precision,
-            recall: mta.macro.recall,
-            f1: mta.macro.f1,
-        }
-        return result
-    })
+const groupOptions = computed<SelectOption[]>((): SelectOption[] =>
+    sourceAnnotations.value.filter((option: SelectOption) => !["head"].includes(option.text)),
+)
+const selectedAnnotation = computed<string>((): string => {
+    if (!selectedAnnotations.value?.length) return ""
+    return selectedAnnotations.value?.join("<br>")
 })
 
-// Watches & mounts
-// Only needs to load once
-onMounted(() => {
-    corporaStore.reload()
-    assaysStore.reload()
+const columns: Column<GlobalMetrics>[] = computed(() => [
+    { key: "layer", label: "tagger" },
+    {
+        key: "microAccuracy",
+        label: `${selectedAnnotation.value}<br>micro<br>accuracy`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.micro.accuracy),
+        sortOn: (g: GlobalMetrics) => g.micro.accuracy,
+    },
+    {
+        key: "microF1",
+        label: `${selectedAnnotation.value}<br>micro<br>f1`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.micro.f1),
+        sortOn: (g: GlobalMetrics) => g.micro.f1,
+    },
+    {
+        key: "macroAccuracy",
+        label: `${selectedAnnotation.value}<br>macro<br>accuracy`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.accuracy),
+        sortOn: (g: GlobalMetrics) => g.macro.accuracy,
+    },
+    {
+        key: "macroPrecision",
+        label: `${selectedAnnotation.value}<br>macro<br>precision`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.precision),
+        sortOn: (g: GlobalMetrics) => g.macro.precision,
+    },
+    {
+        key: "macroRecall",
+        label: `${selectedAnnotation.value}<br>macro<br>recall`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.recall),
+        sortOn: (g: GlobalMetrics) => g.macro.recall,
+    },
+    {
+        key: "macroF1",
+        label: `${selectedAnnotation.value}<br>macro<br>f1`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.f1),
+        sortOn: (g: GlobalMetrics) => g.macro.f1,
+    },
+    {
+        key: "truePositive",
+        label: `${selectedAnnotation.value}<br>true<br>positive`,
+        button: true,
+        sortOn: (g: GlobalMetrics) => g.classes.truePositive.count,
+    },
+    {
+        key: "falseNegative",
+        label: `${selectedAnnotation.value}<br>false<br>negative`,
+        button: true,
+        sortOn: (g: GlobalMetrics) => g.classes.falseNegative.count,
+    },
+    { key: "details", label: "detailed<br>evaluation", align: "center", noSort: true },
+])
+const items = computed((): GlobalMetrics[] => {
+    if (!benchmarks.value) return []
+    return benchmarks.value.map((g: GlobalMetrics) => ({
+        ...g,
+        truePositive: g.classes.truePositive,
+        falseNegative: g.classes.falseNegative,
+        hypothesis: g.classes.hypothesis,
+    }))
 })
 
-// Methods
-/** Calculate the score to 2 decimals */
-function score(assay: Assay, desc: AssayDescription): string {
-    // We access the object value with a string,
-    // so typescript needs some explicit typing.
-    return ((assay[desc.id as keyof Assay] as number) / assay.count).toFixed(2)
-}
+onMounted(reloadCorpora)
+onMounted(reloadLayers)
 
-/**
- * Show an asterisk for extremely low PoS scores
- */
-function showAsterisk(d: TableData<AssayRow>): boolean {
-    return !d.value || Number.parseFloat(d.value) <= 0.02
-}
+// Deselect non-dataset
+watchPostEffect(() => {
+    if (corpusId.value && corpus.value && !corpus.value.dataset) {
+        corpusId.value = undefined
+        layers.value = []
+    }
+})
+
+// Default select options
+watchPostEffect(() => {
+    if (!annotationOptions.value?.length) return
+    selectedAnnotations.value ??= [annotationOptions.value[0]?.value]
+})
+watchPostEffect(() => {
+    selectedGroup.value ??= groupOptions.value[2]?.value
+})
 </script>
-
-<style scoped lang="scss">
-.center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-</style>
