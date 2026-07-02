@@ -4,9 +4,10 @@
             title="Basic Global Metrics"
             :loading
             :columns
-            :items="basicItems"
+            :items
             @download="(data) => download(data)"
             :downloading
+            sortColumn="macroF1"
         >
             <template #help>
                 <p>
@@ -15,126 +16,91 @@
                 </p>
             </template>
         </MetricsTable>
-
-        <MetricsTable
-            title="Extended Global Metrics"
-            :loading
-            :columns
-            :items="complexItems"
-            @download="(data) => download(data)"
-            :downloading
-        />
     </div>
 </template>
 
 <script setup lang="ts">
 // Libraries & stores
-
-import * as API from "@/api/evaluation"
+import * as API from "@/api/evaluation/metrics"
 import * as Utils from "@/api/utils"
-import useCorpora from "@/stores/corpora"
 // API & types
-import useMetrics, { metricsPerPosColumns } from "@/stores/evaluation/metrics"
 import useLayers from "@/stores/layers"
+import useCorpora from "@/stores/corpora"
+import type { SelectOption } from "@/types/ui/select"
+import useGroupedMetrics from "@/stores/evaluation/groupedMetrics"
+import type { Column, TableData } from "@/types/ui/table"
+import type { Metrics, ClassificationClasses, ClassificationMetrics, GlobalMetrics } from "@/types/evaluation/metrics"
+import MultiSelect from "primevue/multiselect"
+import { formatDecimal, formatClassification } from "@/ts/format"
+import useGlobalMetrics from "@/stores/evaluation/globalMetrics"
 
-// Types
-type GlobalMetricsRow = {
-    id: string
-    name: string
-    group: string
-    count: number
-    truePositive: number
-    falseNegative: number
-    noMatch: number
-    macroPrecision: number
-    macroRecall: number
-    macroF1: number
-    microAccuracy: number
-}
+const { loading, globalMetrics } = storeToRefs(useGlobalMetrics())
 
-// Stores
-const { loading, metrics } = storeToRefs(useMetrics())
-const corporaStore = useCorpora()
-const jobSelection = useLayers()
-
-// Fields
-const downloading = ref<boolean>()
-const columns = computed(() => {
-    const withoutName = metricsPerPosColumns.filter(
-        (col) => !["precision", "recall", "f1", "falsePositive", "name"].includes(col.key),
-    )
-    const addColumns = [
-        { key: "name", label: "annotation", sortOn: (x) => x.annotation },
-        { key: "group", label: "grouped by", sortOn: (x) => x.group },
-        { key: "macroPrecision", label: "macro\nprecision", sortOn: (x) => x.macroPrecision },
-        { key: "macroRecall", label: "macro\nrecall", sortOn: (x) => x.macroRecall },
-        { key: "macroF1", label: "macro\nf1", sortOn: (x) => x.macroF1 },
-        { key: "microAccuracy", label: "micro\naccuracy", sortOn: (x) => x.microAccuracy },
-    ]
-    return addColumns.concat(withoutName)
+const columns: Column<GlobalMetrics>[] = computed(() => [
+    { key: "annotation", format: (g: GlobalMetrics) => g.settings.annotations.join(", ") },
+    { key: "group", format: (g: GlobalMetrics) => g.settings.group },
+    {
+        key: "microAccuracy",
+        label: `micro<br>accuracy`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.micro.accuracy),
+        sortOn: (g: GlobalMetrics) => g.micro.accuracy,
+    },
+    {
+        key: "microF1",
+        label: `micro<br>f1`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.micro.f1),
+        sortOn: (g: GlobalMetrics) => g.micro.f1,
+    },
+    {
+        key: "macroAccuracy",
+        label: `macro<br>accuracy`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.accuracy),
+        sortOn: (g: GlobalMetrics) => g.macro.accuracy,
+    },
+    {
+        key: "macroPrecision",
+        label: `macro<br>precision`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.precision),
+        sortOn: (g: GlobalMetrics) => g.macro.precision,
+    },
+    {
+        key: "macroRecall",
+        label: `macro<br>recall`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.recall),
+        sortOn: (g: GlobalMetrics) => g.macro.recall,
+    },
+    {
+        key: "macroF1",
+        label: `macro<br>f1`,
+        align: "right",
+        format: (g: GlobalMetrics) => formatDecimal(g.macro.f1),
+        sortOn: (g: GlobalMetrics) => g.macro.f1,
+    },
+    {
+        key: "truePositive",
+        label: `true<br>positive`,
+        button: true,
+        sortOn: (g: GlobalMetrics) => g.classes.truePositive.count,
+    },
+    {
+        key: "falseNegative",
+        label: `false<br>negative`,
+        button: true,
+        sortOn: (g: GlobalMetrics) => g.classes.falseNegative.count,
+    },
+])
+const items = computed((): GlobalMetrics[] => {
+    if (!globalMetrics.value) return []
+    return globalMetrics.value.map((g: GlobalMetrics) => ({
+        ...g,
+        truePositive: g.classes.truePositive,
+        falseNegative: g.classes.falseNegative,
+        hypothesis: g.classes.hypothesis,
+    }))
 })
-const items = computed(() => {
-    if (metrics.value == null) return []
-
-    // metrics has the form
-    // { pos: { f1, recall, ... }, lemma: { f1, recall, ... }, lemmaPos: { f1, recall, ... } }
-    // We want to transform this to
-    // [ { name: "PoS", f1, recall, ... }, { name: "Lemma", f1, recall, ... }, { name: "Lemma & PoS", f1, recall, ... } ]
-    const ret = Object.keys(metrics.value)
-        .map((key) => ({ name: key, ...metrics.value[key] }))
-        .map((i) => {
-            const annoAndGroup = annotationAndGroupFromName(i.name)
-            return {
-                id: i.name,
-                column: i.name,
-                name: i.settings.annotation,
-                group: i.settings.group,
-                count: i.classes.count,
-                truePositive: i.classes.truePositive,
-                falseNegative: i.classes.falseNegative,
-                noMatch: i.classes.noMatch,
-                microAccuracy: i.accuracy,
-                macroPrecision: i.macro.precision,
-                macroRecall: i.macro.recall,
-                macroF1: i.macro.f1,
-            }
-        })
-    return ret
-})
-const basicItems = computed(() => items.value.filter(basicMetricFilter))
-const complexItems = computed(() => items.value.filter((item) => !basicMetricFilter(item)))
-
-// Methods
-function annotationAndGroupFromName(name: string) {
-    const names = name.split("By")
-    const annotation = splitCamelCase(names[0]).toLowerCase().split(" ")
-    const group = names[1].toLowerCase()
-    return { annotation: annotation, group: group }
-}
-
-function splitCamelCase(s: string) {
-    return s.split(/(?=[A-Z])/).join(" ")
-}
-
-function download(data: Any) {
-    const classType = data.column.key
-    const setting = data.item.id
-
-    downloading.value = true
-    API.getMetricsSamples(
-        corporaStore.corpusId,
-        jobSelection.hypothesisId,
-        jobSelection.referenceId,
-        setting,
-        classType,
-    )
-        .then((response) => {
-            Utils.browserDownloadResponseFile(response)
-        })
-        .finally(() => (downloading.value = false))
-}
-
-function basicMetricFilter(item: GlobalMetricsRow): boolean {
-    return item.group === item.name || item.id.includes("lemmaPos")
-}
 </script>

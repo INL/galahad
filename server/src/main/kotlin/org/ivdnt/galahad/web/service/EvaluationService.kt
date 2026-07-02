@@ -20,6 +20,7 @@ import org.ivdnt.galahad.evaluation.distribution.TypeToken
 import org.ivdnt.galahad.evaluation.entities.CorpusEntities
 import org.ivdnt.galahad.evaluation.metrics.CorpusMetrics
 import org.ivdnt.galahad.evaluation.metrics.DocumentMetrics
+import org.ivdnt.galahad.evaluation.metrics.GlobalMetrics
 import org.ivdnt.galahad.evaluation.metrics.JobMetrics
 import org.ivdnt.galahad.evaluation.metrics.Metrics
 import org.ivdnt.galahad.util.toValidFileName
@@ -288,6 +289,25 @@ class EvaluationService(private val corpora: CorporaService) {
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
         val docEval = jobEval.documents.createOrThrow(document)
         return docEval.getMetrics(annotations, group)
+    }
+
+    fun getLayerMetrics(
+        corpus: UUID,
+        hypothesis: String,
+        reference: String,
+    ): List<GlobalMetrics> {
+        val corpusObj = corpora.readOrThrow(corpus)
+        val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
+        val hypothesisAnnotations =
+            corpusObj.layers.readOrThrow(hypothesis).metadata.annotations.keys
+        val referenceAnnotations = corpusObj.layers.readOrThrow(reference).metadata.annotations.keys
+        val commonAnnotations = hypothesisAnnotations.intersect(referenceAnnotations)
+        // remove token if present
+        return commonAnnotations
+            .filter { it != Annotation.TOKEN }
+            .map {
+                jobEval.getMetrics(listOf(it), it).metrics.toGlobal(hypothesis)
+            }
     }
 
     fun getLayerMetrics(

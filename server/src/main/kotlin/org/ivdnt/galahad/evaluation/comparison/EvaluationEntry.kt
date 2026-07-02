@@ -37,7 +37,7 @@ data class EvaluationEntry(
         fun from(a: EvaluationEntry, b: EvaluationEntry): EvaluationEntry {
             return EvaluationEntry(
                 a.count + b.count,
-                (a.samples + b.samples).shuffled().take(MAX_SAMPLE_LENGTH).toMutableList(),
+                (a.samples + b.samples).toMutableList(),
             )
         }
     }

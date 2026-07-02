@@ -9,7 +9,7 @@ class Metrics(
 ) {
     val classes: ClassificationClasses by lazy {
         grouped.values
-            .reduce { a, b -> a.add(b, truncate = false) }
+            .reduce { a, b -> a + b }
             .apply {
                 truePositive.truncate()
                 falsePositive.truncate()

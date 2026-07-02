@@ -14,7 +14,6 @@ import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.evaluation.confusion.JobConfusion
 import org.ivdnt.galahad.evaluation.distribution.TypeToken
 import org.ivdnt.galahad.evaluation.metrics.CorpusMetrics
-import org.ivdnt.galahad.evaluation.metrics.JobMetrics
 import org.ivdnt.galahad.exceptions.ErrorResponse
 import org.ivdnt.galahad.util.setContentDisposition
 import org.ivdnt.galahad.web.service.EvaluationService
@@ -256,10 +255,20 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @PathVariable @Parameter(description = "Layer name") layer: String,
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
-            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
-            @RequestParam @Parameter(description = "Group") group: Annotation,
-        ): JobMetrics =
-            evaluationService.getLayerMetrics(corpus, layer, reference, annotations, group)
+            @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>?,
+            @RequestParam @Parameter(description = "Group") group: Annotation?,
+        ): Any {
+            if (group != null && annotations != null) {
+                return evaluationService.getLayerMetrics(
+                    corpus,
+                    layer,
+                    reference,
+                    annotations,
+                    group,
+                )
+            }
+            return evaluationService.getLayerMetrics(corpus, layer, reference)
+        }
 
         @Operation(
             summary = "Get metrics samples",
