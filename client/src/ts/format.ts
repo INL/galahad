@@ -66,3 +66,7 @@ export function formatClassification(classification: string) {
         .toLowerCase()
         .replace(/^./, (c) => c.toUpperCase())
 }
+// convert NaN to 0
+export function formatNaN(number: number) {
+    return number || 0
+}

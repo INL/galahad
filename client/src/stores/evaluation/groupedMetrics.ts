@@ -12,13 +12,21 @@ const useGroupedMetrics = defineStore("groupedMetrics", () => {
     const groupedMetrics = ref<Metrics>()
     const annotations = ref<string[]>()
     const group = ref<string>()
+    const analysis = ref<string>()
 
     function reload(): void {
         if ([corpusId.value, hypothesisId.value, referenceId.value, group.value].includes(undefined)) return
         if (!annotations.value?.length) return
         plausible.metricsEvaluated(corpus.value, hypothesisLayer.value, referenceLayer.value)
         loading.value = true
-        API.getGroupedMetrics(corpusId.value, hypothesisId.value, referenceId.value, annotations.value, group.value)
+        API.getGroupedMetrics(
+            corpusId.value,
+            hypothesisId.value,
+            referenceId.value,
+            annotations.value,
+            group.value,
+            analysis.value,
+        )
             .then((res) => (groupedMetrics.value = res.data))
             .finally(() => (loading.value = false))
     }
@@ -27,10 +35,11 @@ const useGroupedMetrics = defineStore("groupedMetrics", () => {
         groupedMetrics.value = undefined
         annotations.value = undefined
         group.value = undefined
+        analysis.value = undefined
     })
-    watch([annotations, group], reload)
+    watch([annotations, group, analysis], reload)
 
-    return { reload, loading, groupedMetrics, annotations, group }
+    return { reload, loading, groupedMetrics, annotations, group, analysis }
 })
 
 export default useGroupedMetrics

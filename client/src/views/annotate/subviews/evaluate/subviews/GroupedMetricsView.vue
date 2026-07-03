@@ -5,7 +5,7 @@
             title="Grouped Metrics"
             :loading
             :columns
-            :items="filteredItems"
+            :items
             @download="(data) => download(data)"
             :downloading
             sortColumn="hypothesis"
@@ -36,14 +36,17 @@
                             <label for="group-select">Group by</label>
                             <GSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
                         </fieldset>
-                        <fieldset v-if="groupedMetrics">
+                        <fieldset>
                             <label for="analysis-select">Single/multiple analyses</label>
                             <GSelect id="analysis-select" :options="analysesOptions" v-model="selectedAnalysis" />
                         </fieldset>
                     </GForm>
                     <aside>
                         <p>Micro summary:</p>
-                        <AnnotationSummary :annotations="groupedMetrics?.micro ?? {}" />
+                        <AnnotationSummary
+                            v-if="groupedMetrics?.accuracy != undefined"
+                            :annotations="{ accuracy: groupedMetrics?.accuracy }"
+                        />
                     </aside>
                     <aside>
                         <p>Macro summary:</p>
@@ -92,6 +95,7 @@ const {
     groupedMetrics,
     annotations: selectedAnnotations,
     group: selectedGroup,
+    analysis: selectedAnalysis,
 } = storeToRefs(useGroupedMetrics())
 const { corpusId } = storeToRefs(useCorpora())
 
@@ -111,7 +115,6 @@ const analysesOptions: SelectOption[] = [
     { value: "single", text: "Single" },
     { value: "multiple", text: "Multiple" },
 ]
-const selectedAnalysis = ref<string>(analysesOptions[0].value)
 const selectedAnnotation = computed<string>((): string => {
     if (!selectedAnnotations.value?.length) return ""
     return selectedAnnotations.value?.join("<br>")
@@ -164,36 +167,32 @@ const columns = computed((): Column<ClassificationClasses & { group: string }>[]
     },
     {
         key: "truePositive",
-        label: `${selectedAnnotation.value}<br>true positive`,
+        label: `${selectedAnnotation.value}<br>true<br>positive`,
         button: true,
         sortOn: (c: ClassificationClasses): number => c.truePositive.count,
     },
     {
         key: "falsePositive",
-        label: `${selectedAnnotation.value}<br>false positive`,
+        label: `${selectedAnnotation.value}<br>false<br>positive`,
         button: true,
         sortOn: (c: ClassificationClasses): number => c.falsePositive.count,
     },
     {
         key: "falseNegative",
-        label: `${selectedAnnotation.value}<br>false negative`,
+        label: `${selectedAnnotation.value}<br>false<br>negative`,
         button: true,
         sortOn: (c: ClassificationClasses): number => c.falseNegative.count,
     },
-    { key: "noMatch", label: "no match", button: true, sortOn: (c: ClassificationClasses): number => c.noMatch.count },
+    {
+        key: "noMatch",
+        label: "no<br>match",
+        button: true,
+        sortOn: (c: ClassificationClasses): number => c.noMatch.count,
+    },
 ])
-const grouped = computed<ClassificationClasses & { group: string }>(() => {
+const items = computed<(ClassificationClasses & { group: string })[]>(() => {
     if (!groupedMetrics.value) return []
     return Object.entries(groupedMetrics.value.grouped).map((entry) => ({ ...entry[1], group: entry[0] }))
-})
-const filteredItems = computed(() => {
-    if (selectedAnalysis.value === "single") {
-        return grouped.value.filter((i) => !i.group.includes("+"))
-    }
-    if (selectedAnalysis.value === "multiple") {
-        return grouped.value.filter((i) => i.group.includes("+"))
-    }
-    return grouped.value
 })
 
 // Methods
@@ -225,6 +224,9 @@ watchPostEffect(() => {
 })
 watchPostEffect(() => {
     selectedGroup.value ??= groupOptions.value[2]?.value
+})
+watchPostEffect(() => {
+    selectedAnalysis.value ??= analysesOptions[0]?.value
 })
 </script>
 

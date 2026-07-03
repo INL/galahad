@@ -2,6 +2,7 @@ package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import org.ivdnt.galahad.annotations.Annotation
+import org.ivdnt.galahad.util.notNaN
 
 class Metrics(
     val settings: Settings,
@@ -9,35 +10,45 @@ class Metrics(
 ) {
     val classes: ClassificationClasses by lazy {
         grouped.values
-            .reduce { a, b -> a + b }
-            .apply {
+            .takeIf { it.isNotEmpty() }
+            ?.reduce { a, b -> a + b }
+            ?.apply { // TODO truncate in web controller
                 truePositive.truncate()
                 falsePositive.truncate()
                 falseNegative.truncate()
                 noMatch.truncate()
-            }
+            } ?: ClassificationClasses()
     }
 
-    val micro: ClassificationMetrics
-        get() = classes.metrics
+    val accuracy: Float
+        get() = notNaN(classes.truePositive.count / classes.hypothesis.toFloat())
 
     val macro: ClassificationMetrics
-        get() = grouped.values.map { it.metrics }.reduce { a, b -> a + b } / grouped.size.toFloat()
+        get() =
+            grouped.values
+                .takeIf { it.isNotEmpty() }
+                ?.map { it.metrics }
+                ?.reduce { a, b -> a + b }
+                ?.div(grouped.size.toFloat()) ?: ClassificationMetrics()
 
-    class Settings(val annotations: List<Annotation>, val group: Annotation) {
+    class Settings(
+        val annotations: List<Annotation>,
+        val group: Annotation,
+        val analysis: Annotation.Analysis,
+    ) {
         @JsonIgnore
         val name: String =
-            "metrics-${Annotation.order(annotations).joinToString("-")}-${group.value}"
+            "metrics-${Annotation.order(annotations).joinToString("-")}-$analysis-${group}"
     }
 
     fun toGlobal(layer: String): GlobalMetrics =
-        GlobalMetrics(layer, settings, classes, micro, macro)
+        GlobalMetrics(layer, settings, classes, accuracy, macro)
 }
 
 class GlobalMetrics(
     val layer: String,
     val settings: Metrics.Settings,
     val classes: ClassificationClasses,
-    val micro: ClassificationMetrics,
+    val accuracy: Float,
     val macro: ClassificationMetrics,
 )

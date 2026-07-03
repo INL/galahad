@@ -1,5 +1,5 @@
 import type { TypeToken } from "@/types/evaluation/distribution"
-import * as API from "@/api/evaluation"
+import * as API from "@/api/evaluation/distribution"
 import { plausible } from "@/ts/plausible"
 import useCorpora from "@/stores/corpora"
 import useLayers from "@/stores/layers"

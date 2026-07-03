@@ -14,6 +14,7 @@ class CorpusMetrics(@JsonValue val metrics: List<GlobalMetrics>) {
             corpus: Corpus,
             annotations: List<Annotation>,
             group: Annotation,
+            analysis: Annotation.Analysis,
             evaluation: CorpusEvaluation,
         ): CorpusMetrics =
             CorpusMetrics(
@@ -23,7 +24,7 @@ class CorpusMetrics(@JsonValue val metrics: List<GlobalMetrics>) {
                     .parallelMap {
                         evaluation
                             .createOrThrow(JobPair(it.name, SOURCE_LAYER))
-                            .getMetrics(annotations, group)
+                            .getMetrics(annotations, group, analysis)
                             .metrics
                             .toGlobal(it.name)
                     }

@@ -31,6 +31,14 @@ data class TermComparison(
         return equal(refAnnot, hypAnnot)
     }
 
+    fun has(annotation: Annotation, analysis: Annotation.Analysis): Boolean {
+        return when (analysis) {
+            Annotation.Analysis.SINGLE -> !hyp.isMulti(annotation) && !ref.isMulti(annotation)
+            Annotation.Analysis.MULTIPLE -> hyp.isMulti(annotation) || ref.isMulti(annotation)
+            Annotation.Analysis.BOTH -> true
+        }
+    }
+
     companion object {
         const val MISSING_MATCH: String = "MISSING_MATCH"
 

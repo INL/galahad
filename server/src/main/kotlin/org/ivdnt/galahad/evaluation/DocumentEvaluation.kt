@@ -92,10 +92,14 @@ class DocumentEvaluation(dir: File, private val corpus: Corpus, private val jobs
             }
             .readOrCreate()
 
-    fun getMetrics(annotations: List<Annotation>, group: Annotation): DocumentMetrics =
+    fun getMetrics(
+        annotations: List<Annotation>,
+        group: Annotation,
+        analysis: Annotation.Analysis,
+    ): DocumentMetrics =
         object :
                 ValidatedDiskValue<DocumentMetrics>(
-                    dir.resolve("${Metrics.Settings(annotations, group).name}.json")
+                    dir.resolve("${Metrics.Settings(annotations, group,analysis).name}.json")
                 ) {
                 override fun isValid(modified: Long) = modified >= lastModified
 
@@ -104,6 +108,7 @@ class DocumentEvaluation(dir: File, private val corpus: Corpus, private val jobs
                         layerComparison,
                         annotations,
                         group,
+                        analysis,
                     )
             }
             .readOrCreate()

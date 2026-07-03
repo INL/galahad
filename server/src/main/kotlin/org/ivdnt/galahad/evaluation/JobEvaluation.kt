@@ -61,16 +61,20 @@ class JobEvaluation(dir: File, private val corpus: Corpus, private val jobs: Job
             }
             .readOrCreate()
 
-    fun getMetrics(annotations: List<Annotation>, group: Annotation): JobMetrics =
+    fun getMetrics(
+        annotations: List<Annotation>,
+        group: Annotation,
+        analysis: Annotation.Analysis,
+    ): JobMetrics =
         object :
                 ValidatedDiskValue<JobMetrics>(
-                    dir.resolve("${Metrics.Settings(annotations,group).name}.json")
+                    dir.resolve("${Metrics.Settings(annotations,group,analysis).name}.json")
                 ) {
                 override fun isValid(modified: Long) =
                     modified >= maxOf(refJob.modified, hypJob.modified)
 
                 override fun set(): JobMetrics =
-                    JobMetrics.create(corpus, documents, annotations, group)
+                    JobMetrics.create(corpus, documents, annotations, group, analysis)
             }
             .readOrCreate()
 

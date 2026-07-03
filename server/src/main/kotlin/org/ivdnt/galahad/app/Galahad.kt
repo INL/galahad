@@ -79,3 +79,9 @@ class DocumentFormatConverter : Converter<String, DocumentFormat> {
 class AnnotationConverter : Converter<String, Annotation> {
     override fun convert(source: String): Annotation = Annotation.fromString(source)
 }
+
+@Configuration
+class AnalysisConverter : Converter<String, Annotation.Analysis> {
+    override fun convert(source: String): Annotation.Analysis =
+        Annotation.Analysis.valueOf(source.uppercase())
+}

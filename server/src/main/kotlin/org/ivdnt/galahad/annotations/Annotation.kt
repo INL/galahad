@@ -18,6 +18,14 @@ enum class Annotation(@JsonValue val value: String) {
     // Force lowercase and/or custom name.
     override fun toString(): String = value
 
+    enum class Analysis(@JsonValue val value: String) {
+        SINGLE("single"),
+        MULTIPLE("multiple"),
+        BOTH("both");
+
+        override fun toString(): String = value
+    }
+
     companion object {
         // Used by Spring.
         @JsonCreator

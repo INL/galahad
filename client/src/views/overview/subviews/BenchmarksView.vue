@@ -37,6 +37,10 @@
                         <label for="group-select">Group by</label>
                         <GSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
                     </fieldset>
+                    <fieldset v-if="corpusId && corpus?.dataset">
+                        <label for="analysis-select">Single/multiple analyses</label>
+                        <GSelect id="analysis-select" :options="analysesOptions" v-model="analysis" />
+                    </fieldset>
                 </GForm>
             </template>
 
@@ -58,8 +62,14 @@
                 :key="cell"
             >
                 <GButton :disabled="d.value?.count === 0" @click="tableData = d" style="justify-content: right" plain>
-                    {{ `${((d.value.count / d.item.classes.hypothesis) * 100).toFixed(1)}%` }}
+                    {{ `${(formatNaN(d.value.count / d.item.hypothesis) * 100).toFixed(1)}%` }}
                     <i>({{ d.value.count.toLocaleString() }})</i>
+                </GButton>
+            </template>
+
+            <template v-for="cell in ['cell-noMatch']" #[cell]="d: TableData<any>" :key="cell">
+                <GButton :disabled="d.value?.count === 0" @click="model = d" style="justify-content: right" plain>
+                    {{ d.value.count.toLocaleString() }}
                 </GButton>
             </template>
         </GTable>
@@ -89,16 +99,22 @@ import type { CorpusMetadata } from "@/types/corpora"
 import type { SelectOption } from "@/types/ui/select"
 import type { Column, TableData } from "@/types/ui/table"
 import useLayers from "@/stores/layers"
-import useBenchmarks from "@/stores/benchmarks"
+import useBenchmarks from "@/stores/evaluation/benchmarks"
 import MultiSelect from "primevue/multiselect"
-import { formatClassification, formatDecimal } from "@/ts/format"
+import { formatClassification, formatDecimal, formatNaN } from "@/ts/format"
 import type { LayerMetadata } from "@/types/layers"
 
 const { sourceAnnotations, layers, sourceLayer } = storeToRefs(useLayers())
 const { corpora, corpusId, corpus } = storeToRefs(useCorpora())
 const { reload: reloadCorpora } = useCorpora()
 const { reload: reloadLayers } = useLayers()
-const { annotations: selectedAnnotations, group: selectedGroup, benchmarks, loading } = storeToRefs(useBenchmarks())
+const {
+    annotations: selectedAnnotations,
+    group: selectedGroup,
+    benchmarks,
+    loading,
+    analysis,
+} = storeToRefs(useBenchmarks())
 
 const tableData = ref()
 const datasetOptions = computed<SelectOption[]>((): SelectOption[] =>
@@ -116,6 +132,11 @@ const selectedAnnotation = computed<string>((): string => {
     if (!selectedAnnotations.value?.length) return ""
     return selectedAnnotations.value?.join("<br>")
 })
+const analysesOptions: SelectOption[] = [
+    { value: "both", text: "Both" },
+    { value: "single", text: "Single" },
+    { value: "multiple", text: "Multiple" },
+]
 
 const columns: Column<GlobalMetrics>[] = computed(() => [
     { key: "layer", label: "tagger" },
@@ -123,15 +144,8 @@ const columns: Column<GlobalMetrics>[] = computed(() => [
         key: "microAccuracy",
         label: `${selectedAnnotation.value}<br>micro<br>accuracy`,
         align: "right",
-        format: (g: GlobalMetrics) => formatDecimal(g.micro.accuracy),
-        sortOn: (g: GlobalMetrics) => g.micro.accuracy,
-    },
-    {
-        key: "microF1",
-        label: `${selectedAnnotation.value}<br>micro<br>f1`,
-        align: "right",
-        format: (g: GlobalMetrics) => formatDecimal(g.micro.f1),
-        sortOn: (g: GlobalMetrics) => g.micro.f1,
+        format: (g: GlobalMetrics) => formatDecimal(g.accuracy),
+        sortOn: (g: GlobalMetrics) => g.accuracy,
     },
     {
         key: "macroAccuracy",
@@ -173,6 +187,7 @@ const columns: Column<GlobalMetrics>[] = computed(() => [
         button: true,
         sortOn: (g: GlobalMetrics) => g.classes.falseNegative.count,
     },
+    { key: "noMatch", label: "no<br>match", button: true },
     { key: "details", label: "detailed<br>evaluation", align: "center", noSort: true },
 ])
 const items = computed((): GlobalMetrics[] => {
@@ -181,7 +196,9 @@ const items = computed((): GlobalMetrics[] => {
         ...g,
         truePositive: g.classes.truePositive,
         falseNegative: g.classes.falseNegative,
+        noMatch: g.classes.noMatch,
         hypothesis: g.classes.hypothesis,
+        reference: g.classes.reference,
     }))
 })
 
@@ -203,5 +220,8 @@ watchPostEffect(() => {
 })
 watchPostEffect(() => {
     selectedGroup.value ??= groupOptions.value[2]?.value
+})
+watchPostEffect(() => {
+    analysis.value ??= analysesOptions[0]?.value
 })
 </script>

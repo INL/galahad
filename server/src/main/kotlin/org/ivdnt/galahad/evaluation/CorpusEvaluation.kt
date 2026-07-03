@@ -26,15 +26,25 @@ class CorpusEvaluation(dir: File, private val corpus: Corpus) :
 
     override fun throwNotFound(key: String): Nothing = throw JobNotFoundException(key)
 
-    fun getMetrics(annotations: List<Annotation>, group: Annotation): CorpusMetrics =
+    fun getMetrics(
+        annotations: List<Annotation>,
+        group: Annotation,
+        analysis: Annotation.Analysis,
+    ): CorpusMetrics =
         object :
                 ValidatedDiskValue<CorpusMetrics>(
-                    dir.resolve("${Metrics.Settings(annotations,group).name}.json")
+                    dir.resolve("${Metrics.Settings(annotations,group,analysis).name}.json")
                 ) {
                 override fun isValid(modified: Long) = modified >= corpus.modified
 
                 override fun set(): CorpusMetrics =
-                    CorpusMetrics.create(corpus, annotations, group, this@CorpusEvaluation)
+                    CorpusMetrics.create(
+                        corpus,
+                        annotations,
+                        group,
+                        analysis,
+                        this@CorpusEvaluation,
+                    )
             }
             .readOrCreate()
 

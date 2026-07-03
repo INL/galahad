@@ -1,7 +1,4 @@
-/**
- * API calls for fetching documents for a corpus, uploading and deleting documents,
- * and downloading the uploaded source document.
- */
+/** API for fetching uploading and deleting documents of a corpus layer. */
 
 import axios, { type AxiosResponse } from "axios"
 import { getBlob, type BlobResponse } from "@/api/utils"
@@ -10,20 +7,19 @@ import type { DocumentMetadata } from "@/types/documents"
 import { endpoints } from "@/api"
 import { SOURCE_LAYER } from "@/types/jobs"
 
-type DocumentsResponse = AxiosResponse<DocumentMetadata[]>
-
 /**
- * Fetch all documents for a corpus.
- * @param corpus UUID of the corpus.
+ * Fetch all documents of a corpus layer.
+ * @param corpus Corpus UUID.
+ * @param layer Layer name.
  */
-export function getDocuments(corpus: UUID, layer: string): Promise<DocumentsResponse> {
+export function getDocuments(corpus: UUID, layer: string): Promise<DocumentMetadata[]> {
     return axios.get(endpoints.documents.base({ corpus, layer }))
 }
 
 /**
- * Upload new document.
- * @param corpus UUID of the corpus.
- * @param document Document name.
+ * Upload a document.
+ * @param corpus Corpus UUID.
+ * @param document Document FormData.
  * @param contentType Content type of the document. Must be explicitly set for tsv-files. Others are induced.
  */
 export function postDocument(
@@ -35,8 +31,8 @@ export function postDocument(
 }
 
 /**
- * Delete uploaded document.
- * @param corpus UUID of the corpus.
+ * Delete a document.
+ * @param corpus Corpus UUID.
  * @param document Document name.
  */
 export function deleteDocument(corpus: UUID, document: string): Promise<AxiosResponse> {
@@ -45,7 +41,7 @@ export function deleteDocument(corpus: UUID, document: string): Promise<AxiosRes
 
 /**
  * Download the uploaded source document.
- * @param corpus UUID of the corpus.
+ * @param corpus Corpus UUID.
  * @param document Document name.
  */
 export function getRawDocument(corpus: UUID, document: string): Promise<BlobResponse> {

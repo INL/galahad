@@ -16,6 +16,44 @@
                 </p>
             </template>
         </MetricsTable>
+
+        <MetricsTable
+            v-model="tableData"
+            title="Extended Global Metrics"
+            :loading="loadingExtended"
+            :columns
+            :items="extendedItems"
+            @download="(data) => download(data)"
+            :downloading
+            sortColumn="macroF1"
+        >
+            <template #header>
+                <template v-if="commonAnnotations.length">
+                    <GForm>
+                        <fieldset>
+                            <label for="annotation-select">Annotation</label>
+                            <MultiSelect
+                                id="annotation-select"
+                                v-model="selectedAnnotations"
+                                :options="annotationOptions"
+                                optionLabel="text"
+                                optionValue="value"
+                                placeholder="Annotation"
+                                :maxSelectedLabels="5"
+                            />
+                        </fieldset>
+                        <fieldset>
+                            <label for="group-select">Group by</label>
+                            <GSelect id="group-select" :options="groupOptions" v-model="selectedGroup" />
+                        </fieldset>
+                        <fieldset>
+                            <label for="analysis-select">Single/multiple analyses</label>
+                            <GSelect id="analysis-select" :options="analysesOptions" v-model="selectedAnalysis" />
+                        </fieldset>
+                    </GForm>
+                </template>
+            </template>
+        </MetricsTable>
     </div>
 </template>
 
@@ -35,6 +73,42 @@ import { formatDecimal, formatClassification } from "@/ts/format"
 import useGlobalMetrics from "@/stores/evaluation/globalMetrics"
 
 const { loading, globalMetrics } = storeToRefs(useGlobalMetrics())
+const { commonAnnotations, hypothesisId, referenceId, hypothesisLayer, referenceLayer } = storeToRefs(useLayers())
+const {
+    loading: loadingExtended,
+    groupedMetrics,
+    annotations: selectedAnnotations,
+    group: selectedGroup,
+    analysis: selectedAnalysis,
+} = storeToRefs(useGroupedMetrics())
+
+// Form
+const annotationOptions = computed(() =>
+    // only logical annotations TODO might filter, might not
+    commonAnnotations.value.filter((option: SelectOption) => !["token"].includes(option.text)),
+)
+const groupOptions = computed(() =>
+    // only logical groups
+    commonAnnotations.value.filter((option: SelectOption) => !["head"].includes(option.text)),
+)
+const analysesOptions: SelectOption[] = [
+    { value: "both", text: "Both" },
+    { value: "single", text: "Single" },
+    { value: "multiple", text: "Multiple" },
+]
+
+const extendedItems = computed<ClassificationClasses & { group: string }>(() => {
+    if (!groupedMetrics.value) return []
+    return [
+        {
+            ...groupedMetrics.value,
+            truePositive: groupedMetrics.value.classes.truePositive,
+            falseNegative: groupedMetrics.value.classes.falseNegative,
+            hypothesis: groupedMetrics.value.classes.hypothesis,
+            reference: groupedMetrics.value.classes.reference,
+        },
+    ]
+})
 
 const columns: Column<GlobalMetrics>[] = computed(() => [
     { key: "annotation", format: (g: GlobalMetrics) => g.settings.annotations.join(", ") },
@@ -43,15 +117,8 @@ const columns: Column<GlobalMetrics>[] = computed(() => [
         key: "microAccuracy",
         label: `micro<br>accuracy`,
         align: "right",
-        format: (g: GlobalMetrics) => formatDecimal(g.micro.accuracy),
-        sortOn: (g: GlobalMetrics) => g.micro.accuracy,
-    },
-    {
-        key: "microF1",
-        label: `micro<br>f1`,
-        align: "right",
-        format: (g: GlobalMetrics) => formatDecimal(g.micro.f1),
-        sortOn: (g: GlobalMetrics) => g.micro.f1,
+        format: (g: GlobalMetrics) => formatDecimal(g.accuracy),
+        sortOn: (g: GlobalMetrics) => g.accuracy,
     },
     {
         key: "macroAccuracy",
@@ -101,6 +168,7 @@ const items = computed((): GlobalMetrics[] => {
         truePositive: g.classes.truePositive,
         falseNegative: g.classes.falseNegative,
         hypothesis: g.classes.hypothesis,
+        reference: g.classes.reference,
     }))
 })
 </script>

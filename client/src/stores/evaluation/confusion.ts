@@ -1,5 +1,5 @@
-import type { Confusion } from "@/types/evaluation"
-import * as API from "@/api/evaluation"
+import type { Confusion } from "@/types/evaluation/confusion"
+import * as API from "@/api/evaluation/confusion"
 import { plausible } from "@/ts/plausible"
 import useLayers from "@/stores/layers"
 import useCorpora from "@/stores/corpora"

@@ -63,11 +63,12 @@
 </template>
 
 <script setup lang="ts">
-import * as API from "@/api/evaluation"
+import * as API from "@/api/evaluation/confusion"
 import * as Utils from "@/api/utils"
 import useConfusion from "@/stores/evaluation/confusion"
 import useLayers from "@/stores/layers"
-import type { Confusion, EvaluationEntry, Samples } from "@/types/evaluation"
+import type { Confusion } from "@/types/evaluation/confusion"
+import type { EvaluationEntry } from "@/types/evaluation"
 import type { Column, TableData } from "@/types/ui/table"
 import type { SelectOption } from "@/types/ui/select"
 import useCorpora from "@/stores/corpora"

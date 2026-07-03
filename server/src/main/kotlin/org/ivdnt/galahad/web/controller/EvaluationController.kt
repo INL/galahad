@@ -221,7 +221,11 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
             @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
             @RequestParam @Parameter(description = "Group") group: Annotation,
-        ): CorpusMetrics = evaluationService.getCorpusMetrics(corpus, annotations, group)
+            @RequestParam
+            @Parameter(description = "Analysis")
+            analysis: Annotation.Analysis? = Annotation.Analysis.BOTH,
+        ): CorpusMetrics =
+            evaluationService.getCorpusMetrics(corpus, annotations, group, analysis!!)
 
         @Operation(
             summary = "Get metrics",
@@ -257,6 +261,9 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @RequestParam @Parameter(description = "Layer name") reference: String = SOURCE_LAYER,
             @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>?,
             @RequestParam @Parameter(description = "Group") group: Annotation?,
+            @RequestParam
+            @Parameter(description = "Analysis")
+            analysis: Annotation.Analysis? = Annotation.Analysis.BOTH,
         ): Any {
             if (group != null && annotations != null) {
                 return evaluationService.getLayerMetrics(
@@ -265,9 +272,10 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                     reference,
                     annotations,
                     group,
+                    analysis!!,
                 )
             }
-            return evaluationService.getLayerMetrics(corpus, layer, reference)
+            return evaluationService.getLayerMetrics(corpus, layer, reference, analysis!!)
         }
 
         @Operation(
@@ -319,6 +327,9 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
             @RequestParam @Parameter(description = "Group") group: Annotation,
             @RequestParam
+            @Parameter(description = "Analysis")
+            analysis: Annotation.Analysis? = Annotation.Analysis.BOTH,
+            @RequestParam
             @Parameter(description = "Classification type (e.g. true positive)")
             classification: String,
             @RequestParam @Parameter(description = "Group filter") groupFilter: String? = null,
@@ -331,6 +342,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                 reference,
                 annotations,
                 group,
+                analysis!!,
                 classification,
                 groupFilter,
             )

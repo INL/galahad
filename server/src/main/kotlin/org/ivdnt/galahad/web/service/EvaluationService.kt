@@ -65,6 +65,7 @@ class EvaluationService(private val corpora: CorporaService) {
         reference: String = SOURCE_LAYER,
         annotations: List<Annotation>,
         group: Annotation,
+        analysis: Annotation.Analysis,
         classification: String,
         groupFilter: String? = null,
     ): ByteArray {
@@ -77,7 +78,7 @@ class EvaluationService(private val corpora: CorporaService) {
             else null
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(layer, reference, filter = filter))
-        val metrics = JobMetrics.create(corpusObj, jobEval.documents, annotations, group)
+        val metrics = JobMetrics.create(corpusObj, jobEval.documents, annotations, group, analysis)
         val csv =
             samplesToCSV(
                 metrics.metrics.grouped.entries
@@ -88,7 +89,7 @@ class EvaluationService(private val corpora: CorporaService) {
                 jobEval.hypJob,
                 jobEval.refJob,
             )
-        val fileName = "${Metrics.Settings(annotations, group).name}-$classification.csv"
+        val fileName = "${Metrics.Settings(annotations, group,analysis).name}-$classification.csv"
         return samplesToZip(corpus, layer, reference, csv, fileName)
     }
 
@@ -284,17 +285,19 @@ class EvaluationService(private val corpora: CorporaService) {
         reference: String,
         annotations: List<Annotation>,
         group: Annotation,
+        analysis: Annotation.Analysis,
     ): DocumentMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
         val docEval = jobEval.documents.createOrThrow(document)
-        return docEval.getMetrics(annotations, group)
+        return docEval.getMetrics(annotations, group, analysis)
     }
 
     fun getLayerMetrics(
         corpus: UUID,
         hypothesis: String,
         reference: String,
+        analysis: Annotation.Analysis,
     ): List<GlobalMetrics> {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
@@ -306,7 +309,7 @@ class EvaluationService(private val corpora: CorporaService) {
         return commonAnnotations
             .filter { it != Annotation.TOKEN }
             .map {
-                jobEval.getMetrics(listOf(it), it).metrics.toGlobal(hypothesis)
+                jobEval.getMetrics(listOf(it), it, analysis).metrics.toGlobal(hypothesis)
             }
     }
 
@@ -316,10 +319,11 @@ class EvaluationService(private val corpora: CorporaService) {
         reference: String,
         annotations: List<Annotation>,
         group: Annotation,
+        analysis: Annotation.Analysis,
     ): JobMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
-        return jobEval.getMetrics(annotations, group)
+        return jobEval.getMetrics(annotations, group, analysis)
     }
 
     //
@@ -342,8 +346,9 @@ class EvaluationService(private val corpora: CorporaService) {
         corpus: UUID,
         annotations: List<Annotation>,
         group: Annotation,
+        analysis: Annotation.Analysis,
     ): CorpusMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
-        return corpusObj.evaluation.getMetrics(annotations, group)
+        return corpusObj.evaluation.getMetrics(annotations, group, analysis)
     }
 }

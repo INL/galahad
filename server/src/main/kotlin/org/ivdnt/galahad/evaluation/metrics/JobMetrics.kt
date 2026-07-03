@@ -35,7 +35,7 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
                     metrics.macro.precision,
                     metrics.macro.recall,
                     metrics.macro.f1,
-                    metrics.micro.accuracy, // todo other micros
+                    metrics.accuracy, // todo other micros
                     metrics.classes.hypothesis,
                     metrics.classes.truePositive.count,
                     metrics.classes.falseNegative.count,
@@ -51,18 +51,23 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
             docEvals: DocumentEvaluations,
             annotations: List<Annotation>,
             group: Annotation,
+            analysis: Annotation.Analysis,
         ): JobMetrics =
             JobMetrics(
                 corpus.documents
                     .readAll()
                     .parallelMap {
                         if (docEvals.jobs.filter == null) {
-                            docEvals.createOrThrow(it.name).getMetrics(annotations, group).metrics
+                            docEvals
+                                .createOrThrow(it.name)
+                                .getMetrics(annotations, group, analysis)
+                                .metrics
                         } else {
                             DocumentMetrics.create(
                                     docEvals.createOrThrow(it.name).layerComparison,
                                     annotations,
                                     group,
+                                    analysis,
                                 )
                                 .metrics
                         }

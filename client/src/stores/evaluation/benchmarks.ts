@@ -1,4 +1,4 @@
-import * as API from "@/api/benchmarks"
+import * as API from "@/api/evaluation/metrics"
 import useCorpora from "@/stores/corpora"
 import useLayers from "@/stores/layers"
 import type { UUID } from "@/types/corpora"
@@ -10,13 +10,14 @@ const useBenchmarks = defineStore("benchmarks", () => {
     const benchmarks = ref<GlobalMetrics[]>()
     const annotations = ref<string[]>()
     const group = ref<string>()
+    const analysis = ref<string>()
 
     function reload(): void {
-        if ([corpusId.value, group.value].includes(undefined)) return
+        if ([corpusId.value, group.value, analysis.value].includes(undefined)) return
         if (!annotations.value?.length) return
         if (!corpus.value?.dataset) return
         loading.value = true
-        API.getBenchmarks(corpusId.value, annotations.value, group.value)
+        API.getCorpusMetrics(corpusId.value, annotations.value, group.value, analysis.value)
             .then((res) => (benchmarks.value = res.data))
             .finally(() => (loading.value = false))
     }
@@ -25,10 +26,11 @@ const useBenchmarks = defineStore("benchmarks", () => {
         benchmarks.value = undefined
         annotations.value = undefined
         group.value = undefined
+        analysis.value = undefined
     })
-    watch([corpusId, corpus, annotations, group], reload)
+    watch([corpusId, corpus, annotations, group, analysis], reload)
 
-    return { loading, benchmarks, annotations, group }
+    return { loading, benchmarks, annotations, group, analysis }
 })
 
 export default useBenchmarks

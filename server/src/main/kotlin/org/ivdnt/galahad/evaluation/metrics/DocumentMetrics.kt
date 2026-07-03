@@ -13,63 +13,68 @@ class DocumentMetrics(@JsonValue val metrics: Metrics) {
             layerComparison: LayerComparison,
             annotations: List<Annotation>,
             group: Annotation,
+            analysis: Annotation.Analysis,
         ): DocumentMetrics =
             DocumentMetrics(
                 Metrics(
-                    Metrics.Settings(annotations, group),
+                    Metrics.Settings(annotations, group, analysis),
                     buildMap<String, ClassificationClasses> {
-                            layerComparison.matches.forEach { tc ->
-                                val mapsToAdd =
-                                    mutableListOf<MutableMap<String, ClassificationClasses>>()
-                                if (tc.hyp == Term.EMPTY || tc.ref == Term.EMPTY) {
-                                    // handle missing match
-                                    val cls =
-                                        ClassificationClasses(
-                                            noMatch = EvaluationEntry(1, mutableListOf(tc))
-                                        )
-                                    val group =
-                                        if (tc.hyp == Term.EMPTY)
-                                            tc.ref.annotationHeadOrMissing(group)
-                                        else tc.hyp.annotationHeadOrMissing(group)
-                                    mapsToAdd.add(mutableMapOf(group to cls))
-                                } else {
-                                    // handle true positive & false negative
-                                    var (trueEntry, falseEntry) =
-                                        truesFalses(tc) { t -> annotations.all { t.equal(it) } }
-
-                                    if (trueEntry.count > 0) {
-                                        val cls = ClassificationClasses(truePositive = trueEntry)
-                                        val groupTP = tc.hyp.annotationHeadOrMissing(group)
-                                        val classesMap = mutableMapOf(groupTP to cls)
-                                        mapsToAdd.add(classesMap)
-                                    }
-
-                                    if (falseEntry.count > 0) {
-                                        // false negative
-                                        val clsFN =
-                                            ClassificationClasses(falseNegative = falseEntry)
-                                        val groupFN = tc.ref.annotationHeadOrMissing(group)
-                                        val classesMapFN = mutableMapOf(groupFN to clsFN)
-                                        mapsToAdd.add(classesMapFN)
-                                        // handle false positive
-                                        // copy
-                                        val falseEntry2 =
-                                            EvaluationEntry(
-                                                falseEntry.count,
-                                                falseEntry.samples.toMutableList(),
+                            layerComparison.matches
+                                .filter { it.has(group, analysis) }
+                                .forEach { tc ->
+                                    val mapsToAdd =
+                                        mutableListOf<MutableMap<String, ClassificationClasses>>()
+                                    if (tc.hyp == Term.EMPTY || tc.ref == Term.EMPTY) {
+                                        // handle missing match
+                                        val cls =
+                                            ClassificationClasses(
+                                                noMatch = EvaluationEntry(1, mutableListOf(tc))
                                             )
-                                        val cls = ClassificationClasses(falsePositive = falseEntry2)
-                                        val groupFP = tc.hyp.annotationHeadOrMissing(group)
-                                        val classesMap = mutableMapOf(groupFP to cls)
-                                        mapsToAdd.add(classesMap)
+                                        val group =
+                                            if (tc.hyp == Term.EMPTY)
+                                                tc.ref.annotationHeadOrMissing(group)
+                                            else tc.hyp.annotationHeadOrMissing(group)
+                                        mapsToAdd.add(mutableMapOf(group to cls))
+                                    } else {
+                                        // handle true positive & false negative
+                                        var (trueEntry, falseEntry) =
+                                            truesFalses(tc) { t -> annotations.all { t.equal(it) } }
+
+                                        if (trueEntry.count > 0) {
+                                            val cls =
+                                                ClassificationClasses(truePositive = trueEntry)
+                                            val groupTP = tc.hyp.annotationHeadOrMissing(group)
+                                            val classesMap = mutableMapOf(groupTP to cls)
+                                            mapsToAdd.add(classesMap)
+                                        }
+
+                                        if (falseEntry.count > 0) {
+                                            // false negative
+                                            val clsFN =
+                                                ClassificationClasses(falseNegative = falseEntry)
+                                            val groupFN = tc.ref.annotationHeadOrMissing(group)
+                                            val classesMapFN = mutableMapOf(groupFN to clsFN)
+                                            mapsToAdd.add(classesMapFN)
+                                            // handle false positive
+                                            // copy
+                                            val falseEntry2 =
+                                                EvaluationEntry(
+                                                    falseEntry.count,
+                                                    falseEntry.samples.toMutableList(),
+                                                )
+                                            val cls =
+                                                ClassificationClasses(falsePositive = falseEntry2)
+                                            val groupFP = tc.hyp.annotationHeadOrMissing(group)
+                                            val classesMap = mutableMapOf(groupFP to cls)
+                                            mapsToAdd.add(classesMap)
+                                        }
+                                    }
+                                    for (map in mapsToAdd) {
+                                        this.merge(map.keys.first(), map.values.first()) { x, y ->
+                                            x.add(y, truncate = layerComparison.filter == null)
+                                        }
                                     }
                                 }
-                                for (map in mapsToAdd) {
-                                    this.merge(map.keys.first(), map.values.first()) { x, y ->
-                                        x.add(y, truncate = layerComparison.filter == null)
-                                    }
-                                }
-                            }
                         }
                         .toMutableMap(),
                 )

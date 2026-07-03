@@ -1,6 +1,4 @@
-/**
- * Utils for handling the blobs from some API responses.
- */
+/** Utils for handling blobs from some API responses. */
 
 import axios from "axios"
 import type { AxiosRequestConfig, AxiosResponse } from "axios"

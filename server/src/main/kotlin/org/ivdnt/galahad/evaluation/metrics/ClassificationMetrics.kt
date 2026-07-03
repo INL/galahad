@@ -1,10 +1,12 @@
 package org.ivdnt.galahad.evaluation.metrics
 
+import org.ivdnt.galahad.util.notNaN
+
 class ClassificationMetrics(
-    val accuracy: Float,
-    val precision: Float,
-    val recall: Float,
-    val f1: Float,
+    val accuracy: Float = 0f,
+    val precision: Float = 0f,
+    val recall: Float = 0f,
+    val f1: Float = 0f,
 ) {
     operator fun plus(o: ClassificationMetrics): ClassificationMetrics =
         ClassificationMetrics(
@@ -18,7 +20,6 @@ class ClassificationMetrics(
         ClassificationMetrics(accuracy / f, precision / f, recall / f, f1 / f)
 
     companion object {
-        fun notNaN(value: Float): Float = if (value.isNaN()) 0.0f else value
 
         fun from(classes: ClassificationClasses): ClassificationMetrics {
             val tp = classes.truePositive.count.toFloat()
@@ -27,7 +28,7 @@ class ClassificationMetrics(
             val accuracy = notNaN(tp / (tp + fp + fn))
             val precision = notNaN(tp / (tp + fp))
             val recall = notNaN(tp / (tp + fn))
-            val f1 = notNaN(2.0f * (precision * recall) / (precision + recall))
+            val f1 = notNaN(2f * (precision * recall) / (precision + recall))
             return ClassificationMetrics(accuracy, precision, recall, f1)
         }
     }

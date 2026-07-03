@@ -4,14 +4,14 @@ export type Metrics = {
     settings: MetricsSettings
     grouped: Record<string, ClassificationClasses>
     classes: ClassificationClasses
-    micro: ClassificationMetrics
+    accuracy: number
     macro: ClassificationMetrics
 }
 export type GlobalMetrics = {
     layer: string
     settings: MetricsSettings
     classes: ClassificationClasses
-    micro: ClassificationMetrics
+    accuracy: number
     macro: ClassificationMetrics
 }
 export type MetricsSettings = { annotations: string[]; group: string }
