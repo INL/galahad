@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Upgrade Galahad from 1.x.x to 2.0.0.
 #
 # In 2.0.0, lemma and pos were moved from Term.lemma and Term.pos to Term.annotation["lemma"] and Term.annotation["pos"]
@@ -6,111 +8,83 @@
 #
 # This upgrade script parses all json in the ARG1 folder and updates the json to the new format.
 
-import os
-import sys
 import json
+from argparse import ArgumentParser
+from pathlib import Path
 
 
-def upgrade_corpora(folder):
-    # list all corpora (folders) in the ARG1 folder
-    corpora = os.listdir(folder)
+def upgrade_corpora(input: Path, output: Path) -> None:
+    # list all corpora (folders) in the input folder
+    corpora = list(input.iterdir())
     total = len(corpora)
     print(f"Upgrading [{total}] corpora")
     for i, corpus in enumerate(corpora):
         print(f"[{i + 1}/{total}] Upgrading corpus {corpus}")
-        corpus_folder = os.path.join(folder, corpus)
-        upgrade_jobs(corpus_folder)
-        upgrade_docs(corpus_folder)
-        update_corpus(corpus_folder)
+        corpus_out = output / corpus.name
+        corpus_out.mkdir(parents=True, exist_ok=True)
+        update_corpus(corpus, corpus_out)
         print()
 
 
-def update_corpus(corpus):
+def update_corpus(corpus: Path, output: Path) -> None:
+    update_metadata(corpus, output)
+    update_documents(corpus, output)
+
+
+def update_metadata(corpus: Path, output: Path) -> None:
     # remove the public field from the metadata.json
-    # and add an empty language field
+    # and add a default language field
     print("  Upgrading metadata")
-    metadata_path = os.path.join(corpus, "metadata")
-    if os.path.exists(metadata_path):
+    metadata_path = corpus / "metadata"
+    if metadata_path.exists():
         # open file
-        with open(metadata_path, "r") as file:
-            metadata = json.load(file)
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
         # remove the public field
         if "public" in metadata:
             metadata.pop("public")
             print("    Removed public field from metadata.json")
         # add language field
         if "language" not in metadata:
-            metadata["language"] = ""
+            metadata["language"] = "Dutch"
             print("    Added language field to metadata.json")
-        # write
-        with open(metadata_path, "w") as file:
-            json.dump(metadata, file)
+        # remove eraTo and eraFrom fields if they exist, replace with period object with to and from fields
+        if "eraTo" in metadata or "eraFrom" in metadata:
+            era_to = metadata.pop("eraTo", None)
+            era_from = metadata.pop("eraFrom", None)
+            metadata["period"] = {"to": era_to, "from": era_from}
+            print("    Replaced eraTo and eraFrom fields with period object in metadata.json")
+        # remove sourceName and sourceURL fields if they exist, replace with source object with name and url fields
+        if "sourceName" in metadata or "sourceURL" in metadata:
+            source_name = metadata.pop("sourceName", None)
+            source_url = metadata.pop("sourceURL", None)
+            metadata["source"] = {"name": source_name, "url": source_url}
+            print("    Replaced sourceName and sourceURL fields with source object in metadata.json")
+        # write to .json
+        metadata_out = output / "metadata.json"  # 2.0 uses file extension for metadata
+        metadata_out.write_text(json.dumps(metadata), encoding="utf-8")
     else:
         print("    metadata not found")
 
 
-def upgrade_jobs(corpus):
-    # list all jobs in the corpus/jobs/ folder
-    jobs = os.listdir(os.path.join(corpus, "jobs"))
-    num_jobs = len(jobs)
-    print(f"  Upgrading [{num_jobs}] jobs")
-    for job_i, job in enumerate(jobs):
-        print(f"    [{job_i + 1}/{num_jobs}] Upgrading {job}")
-        # list all documents in the corpus/jobs/job/documents/ folder
-        documents = os.listdir(os.path.join(corpus, "jobs", job, "documents"))
-        num_docs = len(documents)
-        print(f"    Upgrading [{num_docs}] job documents")
-        for doc_i, doc in enumerate(documents):
-            print(f"      [{doc_i + 1}/{num_docs}] Upgrading {doc}")
-            # for each document folder, try to access corpus/jobs/job/documents/document/result
-            json_path = os.path.join(corpus, "jobs", job, "documents", doc, "result")
-            upgrade_json(json_path)
-
-
-def upgrade_docs(corpus):
-    # list all docs in the corpus/documents/ folder
-    documents = os.listdir(os.path.join(corpus, "documents"))
-    num_docs = len(documents)
-    print(f"    Upgrading [{num_docs}] documents")
-    for doc_i, doc in enumerate(documents):
-        print(f"      [{doc_i + 1}/{num_docs}] Upgrading {doc}")
-        json_path = os.path.join(corpus, "documents", doc, "sourceLayer")
-        upgrade_json(json_path)
-
-
-def upgrade_json(path):
-    if os.path.exists(path):
-        # read the json file
-        with open(path, "r") as file:
-            data = json.load(file)
-        # update the terms on the root
-        for term in data["terms"]:
-            upgrade_term(term)
-        # update the terms in preview
-        for term in data["preview"]["terms"]:
-            upgrade_term(term)
-        # write the updated json back to the file
-        with open(path, "w") as file:
-            json.dump(data, file)
-        print("        Successfully upgraded")
-    else:
-        print("        Json absent. No need to upgrade")
-
-
-def upgrade_term(term):
-    if "lemma" in term or "pos" in term:
-        term["annotations"] = {"lemma": term.pop("lemma"), "pos": term.pop("pos")}
+def update_documents(corpus: Path, output: Path) -> None:
+    # update all documents in the corpus
+    print("  Upgrading documents")
+    docs_folder = corpus / "documents"
+    documents = list(docs_folder.iterdir())
+    total = len(documents)
+    for i, document in enumerate(documents):
+        print(f"    [{i + 1}/{total}] Upgrading document {document}")
+        doc = docs_folder / document.name / "uploaded" / document.name
+        # copy over to output
+        doc_out = output / "layers/source/documents" / document.stem / "file" / document.name
+        doc_out.parent.mkdir(parents=True, exist_ok=True)
+        doc_out.write_text(doc.read_text(encoding="utf-8"), encoding="utf-8")
 
 
 if __name__ == "__main__":
-    # Usage
-    if len(sys.argv) != 2:
-        app_name = sys.argv[0]
-        print(f"Usage: python3 {app_name} [folder]")
-        sys.exit(1)
-
-    folder = sys.argv[1]
-    upgrade_corpora(folder)
-    # remove caches
-    print("Removing all caches")
-    os.system(f"find {folder} -type f -name '*.cache' -delete")
+    parser = ArgumentParser(description="Upgrade Galahad from 1.x.x to 2.0.0")
+    parser.add_argument("input", type=Path, help="Path to the folder containing the corpora to upgrade")
+    parser.add_argument("output", type=Path, help="Path to the folder where the upgraded corpora will be saved")
+    args = parser.parse_args()
+    args.output.mkdir(parents=True, exist_ok=True)
+    upgrade_corpora(args.input, args.output)
