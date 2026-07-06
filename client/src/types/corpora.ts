@@ -5,6 +5,7 @@ export type UUID = string
 export type CorpusMetadata = MutableCorpusMetadata & {
     uuid: UUID
     documents: number
+    annotations: Record<string, number>
     jobs: number
     processing: number
     size: number

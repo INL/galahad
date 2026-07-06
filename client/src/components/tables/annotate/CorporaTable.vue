@@ -41,20 +41,26 @@ const { filter } = defineProps<{ filter: (c: CorpusMetadata) => boolean }>()
 const { loading, corpusId, corpus, corpora } = storeToRefs(useCorpora())
 const columns: Column<CorpusMetadata>[] = [
     { key: "name" },
-    { key: "documents", label: "docs", align: "right" },
+    { key: "source" },
+    { key: "tagset" },
+    { key: "language" },
+    { key: "period", align: "center", format: (c: CorpusMetadata): string | undefined => formatPeriod(c.period) },
+    { key: "documents", label: "files", align: "right" },
+    {
+        key: "annotations",
+        label: "tokens",
+        align: "right",
+        format: (c: CorpusMetadata): number => c.annotations?.token ?? 0,
+    },
+    { key: "jobs", label: "jobs", align: "right" },
+    { key: "shared", sortOn: sortShared, format: formatShared },
     {
         key: "size",
         align: "right",
         sortOn: (c: CorpusMetadata): number => c.size,
         format: (c: CorpusMetadata): string => formatBytes(c.size),
     },
-    { key: "period", align: "center", format: (c: CorpusMetadata): string | undefined => formatPeriod(c.period) },
-    { key: "tagset" },
-    { key: "source" },
-    { key: "language" },
     { key: "modified", format: (c: CorpusMetadata): string => formatDate(c.modified) },
-    { key: "shared", sortOn: sortShared, format: formatShared },
-    { key: "jobs", label: "jobs", align: "right" },
 ]
 
 // --- computed ---

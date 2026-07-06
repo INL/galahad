@@ -1,6 +1,8 @@
 package org.ivdnt.galahad.corpora
 
 import java.util.*
+import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
+import org.ivdnt.galahad.annotations.LayerAnnotations
 
 /**
  * Metadata about a corpus, to be stored in a cache file, as its immutable fields can become
@@ -21,9 +23,10 @@ class CorpusStatistics(
     source: Source?,
     // Immutable fields
     val uuid: UUID,
+    val documents: Int,
+    val annotations: LayerAnnotations = LayerAnnotations.EMPTY,
     val jobs: Int,
     val processing: Int,
-    val documents: Int,
     val size: Long,
     val modified: Long,
 ) :
@@ -53,9 +56,12 @@ class CorpusStatistics(
                 viewers = corpus.metadata.viewers,
                 // Immutable fields
                 uuid = corpus.uuid,
+                documents = corpus.documents.readAll().size,
+                annotations =
+                    corpus.layers.readOrNull(SOURCE_LAYER)?.metadata?.annotations
+                        ?: LayerAnnotations.EMPTY,
                 jobs = corpus.jobs.readAll().size,
                 processing = corpus.jobs.readAll().count { it.metadata.progress.processing > 0 },
-                documents = corpus.documents.readAll().size,
                 size = corpus.size,
                 modified = System.currentTimeMillis(),
             )

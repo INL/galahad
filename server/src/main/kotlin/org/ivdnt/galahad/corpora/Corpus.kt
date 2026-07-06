@@ -1,5 +1,7 @@
 package org.ivdnt.galahad.corpora
 
+import java.io.File
+import java.util.*
 import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.documents.Documents
 import org.ivdnt.galahad.evaluation.CorpusEvaluation
@@ -9,8 +11,6 @@ import org.ivdnt.galahad.files.ValidatedDiskValue
 import org.ivdnt.galahad.jobs.Jobs
 import org.ivdnt.galahad.layers.CorpusLayer.Companion.DOCUMENTS_FOLDER
 import org.ivdnt.galahad.layers.CorpusLayers
-import java.io.File
-import java.util.*
 
 /**
  * A corpus is a collection of documents, metadata and jobs, saved to a folder. The folder contents
@@ -47,10 +47,13 @@ class Corpus(dir: File) : GalahadFolder(dir) {
                     override fun isValid(modified: Long) =
                         modified >=
                             maxOf(
-                                this@Corpus.documents.modified, // documents changed
+                                this@Corpus.layers
+                                    .readOrThrow(SOURCE_LAYER)
+                                    .metadata
+                                    .modified, // documents changed
                                 this@Corpus.jobs.modified, // jobs changed
                                 this@Corpus.modified, // modifications to metadata.json
-                            ) // Note the absence of layers: we don't depend on its data
+                            )
 
                     override fun set(): CorpusStatistics = CorpusStatistics.create(this@Corpus)
                 }
