@@ -64,9 +64,18 @@ const columns: Column<CorpusMetadata>[] = [
 ]
 
 // --- computed ---
-const items = computed<CorpusMetadata[]>(() => {
-    return corpora.value.filter((c: CorpusMetadata) => filter(c))
-})
+const items = ref<CorpusMetadata[]>([])
+// For some reason, this needs to be a watch.
+// You would expect a computed based on corpora.value.filter to work,
+// but is keeps triggering uncessarily.
+watch(
+    corpora,
+    () => {
+        items.value = corpora.value.filter((c: CorpusMetadata) => filter(c))
+    },
+    { immediate: true },
+)
+
 const selectedCorpus = computed<CorpusMetadata>({
     get: () => corpus.value,
     set: (value: CorpusMetadata) => {
@@ -77,6 +86,6 @@ const selectedCorpus = computed<CorpusMetadata>({
 // --- methods ---
 function sortShared(c: CorpusMetadata): number {
     if (c.dataset) return -1
-    return c.collaborators.length + c.viewers.length
+    return (c.collaborators?.length || 0) + (c.viewers?.length || 0)
 }
 </script>

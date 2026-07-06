@@ -11,10 +11,10 @@
                     <GButton green title="New" @click="newCorpus = true">
                         <i class="fa fa-plus"></i>
                     </GButton>
-                    <GButton orange title="Edit" :disabled="!canWrite" @click="editCorpus = copy(corpus)">
+                    <GButton orange title="Edit" :disabled="!canWrite || !corpusId" @click="editCorpus = copy(corpus)">
                         <i class="fa fa-pencil"></i>
                     </GButton>
-                    <GButton red title="Delete" :disabled="!canDelete" @click="deleteCorpus = corpus">
+                    <GButton red title="Delete" :disabled="!canDelete || !corpusId" @click="deleteCorpus = corpus">
                         <i class="fa fa-trash"></i>
                     </GButton>
                 </GForm>
@@ -80,7 +80,7 @@ import type { CorpusMetadata } from "@/types/corpora"
 
 const { user } = storeToRefs(useUser())
 const { create, remove, update } = useCorpora()
-const { corpus, canWrite, canDelete } = storeToRefs(useCorpora())
+const { corpus, canWrite, canDelete, corpusId } = storeToRefs(useCorpora())
 
 // Once not falsy, respective modal is shown.
 const newCorpus = ref<boolean>()

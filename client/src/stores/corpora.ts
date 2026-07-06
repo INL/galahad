@@ -19,7 +19,7 @@ const useCorpora = defineStore("corpora", () => {
     const corpus = computed<CorpusMetadata | undefined>((): CorpusMetadata | undefined =>
         corpora.value?.find((i) => i.uuid === corpusId.value),
     )
-    const isCollaborator = computed((): boolean => corpus.value?.collaborators.includes(user.value?.name) ?? false)
+    const isCollaborator = computed((): boolean => corpus.value?.collaborators?.includes(user.value?.name) ?? false)
     const isOwner = computed<boolean>((): boolean => corpus.value?.owner === user.value?.name)
 
     /** Reload all corpora. */
