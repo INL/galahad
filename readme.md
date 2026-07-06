@@ -14,7 +14,8 @@ It consists of a TypeScript Vue 3 frontend, a Kotlin Spring Boot backend, and ng
 - [galahad-taggers-dockerized](https://github.com/INL/galahad-taggers-dockerized)
 - [galahad-corpus-data](https://github.com/INL/galahad-corpus-data/)
 - [int-pie](https://github.com/INL/int-pie)
-- [int-huggingface-tagger](https://github.com/INL/huggingface-tagger)
+- [int-huggingface-tagger](https://github.com/INL/int-huggingface-tagger)
+- [galahad-huggingface-models](https://github.com/instituutnederlandsetaal/galahad-huggingface-models)
 
 ## Team
 
