@@ -1,0 +1,13 @@
+{
+  "name": "tdn-1600-1900",
+  "owner": "admin",
+  "dataset": true,
+  "period": {
+    "from": 1600,
+    "to": 1900
+  },
+  "language": "Dutch",
+  "tagset": "TDN-Core",
+  "collaborators": [],
+  "viewers": []
+}

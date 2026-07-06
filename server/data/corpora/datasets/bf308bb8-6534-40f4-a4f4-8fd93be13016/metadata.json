@@ -1,0 +1,13 @@
+{
+  "name": "dbnl-excerpts-15",
+  "owner": "admin",
+  "dataset": true,
+  "period": {
+    "from": 1400,
+    "to": 1500
+  },
+  "language": "Dutch",
+  "tagset": "TDN-Core",
+  "collaborators": [],
+  "viewers": []
+}

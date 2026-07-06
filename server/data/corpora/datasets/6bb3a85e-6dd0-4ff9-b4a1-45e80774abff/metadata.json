@@ -1,0 +1,13 @@
+{
+  "name": "crm",
+  "owner": "admin",
+  "dataset": true,
+  "period": {
+    "from": 1300,
+    "to": 1400
+  },
+  "language": "Dutch",
+  "tagset": "TDN-Core",
+  "collaborators": [],
+  "viewers": []
+}

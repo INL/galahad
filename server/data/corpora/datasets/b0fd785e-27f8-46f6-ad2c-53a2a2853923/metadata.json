@@ -1,0 +1,13 @@
+{
+  "name": "gysseling-literair",
+  "owner": "admin",
+  "dataset": true,
+  "period": {
+    "from": 1200,
+    "to": 1300
+  },
+  "language": "Dutch",
+  "tagset": "TDN-Core",
+  "collaborators": [],
+  "viewers": []
+}
