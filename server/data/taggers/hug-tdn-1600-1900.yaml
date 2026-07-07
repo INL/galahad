@@ -17,6 +17,8 @@ annotations:
         description: Tagset voor Diachroon corpusmateriaal van het Nederlands
         url: https://ivdnt.org/wp-content/uploads/2024/11/TDNV2_combi.pdf
 attributions:
+  - name: Version
+    description: 2.0.0
   - name: Dataset
     description: Galahad Corpus Data 1600-1900
     url: https://github.com/instituutnederlandsetaal/galahad-corpus-data/tree/1.0.1/combinations/1600-1900.combination.json
