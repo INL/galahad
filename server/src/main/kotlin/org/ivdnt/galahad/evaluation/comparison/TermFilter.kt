@@ -7,6 +7,10 @@ interface TermFilter {
     fun filter(term: Term): Boolean
 }
 
+class DummyTermFilter : TermFilter {
+    override fun filter(term: Term): Boolean = true
+}
+
 class CombinedTermFilter(private val filters: List<TermFilter>) : TermFilter {
     override fun filter(term: Term): Boolean = filters.all { it.filter(term) }
 }

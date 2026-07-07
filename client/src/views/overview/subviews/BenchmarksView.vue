@@ -68,7 +68,7 @@
             </template>
 
             <template v-for="cell in ['cell-noMatch']" #[cell]="d: TableData<any>" :key="cell">
-                <GButton :disabled="d.value?.count === 0" @click="model = d" style="justify-content: right" plain>
+                <GButton :disabled="d.value?.count === 0" @click="tableData = d" style="justify-content: right" plain>
                     {{ d.value.count.toLocaleString() }}
                 </GButton>
             </template>
@@ -94,6 +94,8 @@
 
 <script setup lang="ts">
 import useCorpora from "@/stores/corpora"
+import * as API from "@/api/evaluation/metrics"
+import * as Utils from "@/api/utils"
 import type { GlobalMetrics } from "@/types/evaluation/metrics"
 import type { CorpusMetadata } from "@/types/corpora"
 import type { SelectOption } from "@/types/ui/select"
@@ -103,6 +105,7 @@ import useBenchmarks from "@/stores/evaluation/benchmarks"
 import MultiSelect from "primevue/multiselect"
 import { formatClassification, formatDecimal, formatNaN } from "@/ts/format"
 import type { LayerMetadata } from "@/types/layers"
+import { SOURCE_LAYER } from "@/types/jobs"
 
 const { sourceAnnotations, layers, sourceLayer } = storeToRefs(useLayers())
 const { corpora, corpusId, corpus } = storeToRefs(useCorpora())
@@ -117,9 +120,28 @@ const {
 } = storeToRefs(useBenchmarks())
 
 const tableData = ref()
+const downloading = ref<boolean>(false)
+function download(data: TableData<any>) {
+    downloading.value = true
+    API.getMetricsSamples(
+        // TODO plausible
+        corpusId.value,
+        data.item.layer,
+        SOURCE_LAYER,
+        selectedAnnotations.value,
+        selectedGroup.value,
+        data.column.key,
+    )
+        .then((response) => {
+            Utils.browserDownloadResponseFile(response)
+        })
+        .finally(() => (downloading.value = false))
+}
+
 const datasetOptions = computed<SelectOption[]>((): SelectOption[] =>
     corpora.value
         .filter((c: CorpusMetadata) => c.dataset)
+        .toSorted((a: CorpusMetadata, b: CorpusMetadata) => a.name.localeCompare(b.name))
         .map((c: CorpusMetadata) => ({ text: c.name, value: c.uuid })),
 )
 const annotationOptions = computed(() =>

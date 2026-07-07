@@ -8,6 +8,7 @@ import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.corpora.CorpusStatistics
 import org.ivdnt.galahad.evaluation.JobPair
 import org.ivdnt.galahad.evaluation.comparison.ConfusionLayerFilter
+import org.ivdnt.galahad.evaluation.comparison.DummyFilter
 import org.ivdnt.galahad.evaluation.comparison.HeadGroupTermFilter
 import org.ivdnt.galahad.evaluation.comparison.MetricsLayerFilter
 import org.ivdnt.galahad.evaluation.confusion.JobConfusion
@@ -74,20 +75,30 @@ class EvaluationService(private val corpora: CorporaService) {
                     HeadGroupTermFilter(group, groupFilter),
                     HeadGroupTermFilter(group, groupFilter),
                 )
-            else null
+            else DummyFilter()
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(layer, reference, filter = filter))
         val metrics = JobMetrics.create(corpusObj, jobEval.documents, annotations, group, analysis)
-        val csv =
-            samplesToCSV(
-                metrics.metrics.grouped.entries
-                    .first { it.key == groupFilter }
-                    .value
-                    .classification(classification)
-                    .samples,
-                jobEval.hypJob,
-                jobEval.refJob,
-            )
+        var csv = ""
+        if (groupFilter != null) {
+            csv =
+                samplesToCSV(
+                    metrics.metrics.grouped.entries
+                        .first { it.key == groupFilter }
+                        .value
+                        .classification(classification)
+                        .samples,
+                    jobEval.hypJob,
+                    jobEval.refJob,
+                )
+        } else {
+            csv =
+                samplesToCSV(
+                    metrics.metrics.untruncatedClasses.classification(classification).samples,
+                    jobEval.hypJob,
+                    jobEval.refJob,
+                )
+        }
         val fileName = "${Metrics.Settings(annotations, group,analysis).name}-$classification.csv"
         return samplesToZip(corpus, layer, reference, csv, fileName)
     }

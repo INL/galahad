@@ -1,6 +1,7 @@
 <template>
     <div>
         <MetricsTable
+            v-model="tableData"
             title="Basic Global Metrics"
             :loading
             :columns
@@ -54,6 +55,23 @@
                 </template>
             </template>
         </MetricsTable>
+
+        <ComparisonModal
+            v-if="tableData"
+            :evaluationEntry="tableData.value"
+            :hypothesisLayer
+            :referenceLayer
+            :annotations="[...tableData.item.settings.annotations, tableData.item.settings.group]"
+            :downloading
+            @download="() => download(tableData)"
+            @hide="tableData = undefined"
+        >
+            <template #title>
+                {{ formatClassification(tableData.column.key) }} samples between <i>{{ hypothesisId }}</i> and
+                <i>{{ referenceId }}</i> in
+                <i>{{ tableData.item.group }}</i>
+            </template>
+        </ComparisonModal>
     </div>
 </template>
 
@@ -81,6 +99,26 @@ const {
     group: selectedGroup,
     analysis: selectedAnalysis,
 } = storeToRefs(useGroupedMetrics())
+const { corpusId } = storeToRefs(useCorpora())
+
+const tableData = ref()
+const downloading = ref<boolean>(false)
+function download(data: TableData<any>) {
+    downloading.value = true
+    API.getMetricsSamples(
+        // TODO plausible
+        corpusId.value,
+        hypothesisId.value,
+        referenceId.value,
+        data.item.settings.annotations,
+        data.item.settings.group,
+        data.column.key,
+    )
+        .then((response) => {
+            Utils.browserDownloadResponseFile(response)
+        })
+        .finally(() => (downloading.value = false))
+}
 
 // Form
 const annotationOptions = computed(() =>
@@ -170,5 +208,9 @@ const items = computed((): GlobalMetrics[] => {
         hypothesis: g.classes.hypothesis,
         reference: g.classes.reference,
     }))
+})
+
+watchPostEffect(() => {
+    selectedAnalysis.value ??= analysesOptions[0]?.value
 })
 </script>

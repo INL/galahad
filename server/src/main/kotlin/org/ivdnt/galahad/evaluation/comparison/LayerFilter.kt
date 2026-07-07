@@ -36,3 +36,10 @@ class MetricsLayerFilter(
     override fun filter(comp: TermComparison): Boolean =
         hypTermFilter.filter(comp.hyp) || refTermFilter.filter(comp.ref)
 }
+
+class DummyFilter : LayerFilter {
+    override val hypTermFilter: TermFilter = DummyTermFilter()
+    override val refTermFilter: TermFilter = DummyTermFilter()
+
+    override fun filter(comp: TermComparison): Boolean = true
+}

@@ -20,6 +20,12 @@ class Metrics(
             } ?: ClassificationClasses()
     }
 
+    @get:JsonIgnore
+    val untruncatedClasses: ClassificationClasses by lazy {
+        grouped.values.takeIf { it.isNotEmpty() }?.reduce { a, b -> a + b }
+            ?: ClassificationClasses()
+    }
+
     val accuracy: Float
         get() = notNaN(classes.truePositive.count / classes.hypothesis.toFloat())
 
