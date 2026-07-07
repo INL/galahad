@@ -6,17 +6,26 @@ import io.swagger.v3.oas.models.info.Contact
 import io.swagger.v3.oas.models.info.Info
 import io.swagger.v3.oas.models.info.License
 import io.swagger.v3.oas.models.servers.Server
+import jakarta.servlet.http.HttpServletRequest
+import jakarta.servlet.http.HttpServletResponse
 import java.io.File
 import java.util.*
+import org.apache.catalina.connector.Connector
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.runApplication
+import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory
+import org.springframework.boot.web.server.servlet.ServletWebServerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.convert.converter.Converter
 import org.springframework.scheduling.annotation.EnableScheduling
+import org.springframework.stereotype.Component
+import org.springframework.web.servlet.HandlerInterceptor
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 val application_profile: String = System.getenv("spring.profiles.active") ?: "prod"
 
@@ -84,4 +93,48 @@ class AnnotationConverter : Converter<String, Annotation> {
 class AnalysisConverter : Converter<String, Annotation.Analysis> {
     override fun convert(source: String): Annotation.Analysis =
         Annotation.Analysis.valueOf(source.uppercase())
+}
+
+@Configuration
+class InternalPortConfig {
+
+    @Bean
+    fun servletContainer(): ServletWebServerFactory {
+        val factory = TomcatServletWebServerFactory()
+
+        val internal =
+            Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL).apply {
+                port = 8081
+            }
+
+        factory.addAdditionalConnectors(internal)
+        return factory
+    }
+}
+
+@Component
+class InternalPortInterceptor : HandlerInterceptor {
+
+    override fun preHandle(
+        request: HttpServletRequest,
+        response: HttpServletResponse,
+        handler: Any,
+    ): Boolean {
+        val isInternal = request.localPort == 8011
+
+        if (!isInternal) {
+            response.sendError(HttpServletResponse.SC_FORBIDDEN)
+            return false
+        }
+
+        return true
+    }
+}
+
+@Configuration
+class WebConfig(private val interceptor: InternalPortInterceptor) : WebMvcConfigurer {
+
+    override fun addInterceptors(registry: InterceptorRegistry) {
+        registry.addInterceptor(interceptor).addPathPatterns("/internal/**")
+    }
 }
