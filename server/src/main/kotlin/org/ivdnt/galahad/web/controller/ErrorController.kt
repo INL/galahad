@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
+@CrossOrigin
 class ErrorController : ErrorController, Logging {
     @Autowired private val response: HttpServletResponse? = null
 
     @RequestMapping("/error")
     @Hidden
-    @CrossOrigin
     @ExceptionHandler
     private fun handleError(request: HttpServletRequest): ErrorResponse {
 

@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @RestController
 class JobsController(private val jobsService: JobsService) {
 
@@ -37,7 +38,6 @@ class JobsController(private val jobsService: JobsService) {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Jobs.BASE)
     fun getJobs(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID
@@ -60,7 +60,6 @@ class JobsController(private val jobsService: JobsService) {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Jobs.JOB)
     fun getJob(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -84,7 +83,6 @@ class JobsController(private val jobsService: JobsService) {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Jobs.PROGRESS)
     fun getJobProgress(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -108,7 +106,6 @@ class JobsController(private val jobsService: JobsService) {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @PostMapping(Endpoints.Jobs.JOB)
     fun postJob(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -135,7 +132,6 @@ class JobsController(private val jobsService: JobsService) {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @DeleteMapping(Endpoints.Jobs.JOB)
     fun deleteJob(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,

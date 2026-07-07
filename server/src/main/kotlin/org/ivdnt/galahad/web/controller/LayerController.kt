@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @RestController
 class LayerController(private val layerService: LayerService) : Logging {
 
@@ -43,7 +44,6 @@ class LayerController(private val layerService: LayerService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Layers.BASE)
     fun getLayers(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID
@@ -70,7 +70,6 @@ class LayerController(private val layerService: LayerService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Layers.LAYER)
     fun getLayer(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -91,7 +90,6 @@ class LayerController(private val layerService: LayerService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @DeleteMapping(Endpoints.Layers.LAYER)
     fun deleteLayer(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,

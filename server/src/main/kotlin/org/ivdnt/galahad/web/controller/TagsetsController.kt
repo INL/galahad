@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
 
+@CrossOrigin
 @RestController
 class TagsetsController : Logging {
     @Operation(summary = "List all tagsets", description = "List the metadata of all tagsets.")
-    @CrossOrigin
     @GetMapping(Endpoints.Tagsets.BASE)
     fun getTagsets(): Iterable<Tagset> = Tagset.tagsets.values
 
@@ -29,7 +29,6 @@ class TagsetsController : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Tagsets.TAGSET)
     fun getTagset(@PathVariable @Parameter(description = "Tagset name") tagset: String): Tagset =
         Tagset.readOrThrow(tagset)

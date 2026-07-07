@@ -5,8 +5,10 @@ import io.swagger.v3.oas.annotations.Parameter
 import io.swagger.v3.oas.annotations.media.ArraySchema
 import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.media.Schema
+import io.swagger.v3.oas.annotations.parameters.RequestBody as SwaggerRequestBody
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import jakarta.servlet.http.HttpServletResponse
+import java.util.*
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.corpora.CorpusMetadata
 import org.ivdnt.galahad.corpora.CorpusStatistics
@@ -16,9 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import java.util.*
-import io.swagger.v3.oas.annotations.parameters.RequestBody as SwaggerRequestBody
 
+@CrossOrigin
 @RestController
 class CorporaController(@Autowired private val corporaService: CorporaService) : Logging {
     @Autowired private val response: HttpServletResponse? = null
@@ -28,7 +29,6 @@ class CorporaController(@Autowired private val corporaService: CorporaService) :
         description =
             "List the metadata of all corpora the current user has access to, either as owner or shared by others.",
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Corpora.BASE)
     fun getCorpora(): List<CorpusStatistics> = corporaService.readAll()
 
@@ -49,7 +49,6 @@ class CorporaController(@Autowired private val corporaService: CorporaService) :
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Corpora.CORPUS)
     fun getCorpus(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID
@@ -73,7 +72,6 @@ class CorporaController(@Autowired private val corporaService: CorporaService) :
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @PostMapping(Endpoints.Corpora.BASE, consumes = [MediaType.APPLICATION_JSON_VALUE])
     fun postCorpus(
         @RequestBody
@@ -120,7 +118,6 @@ class CorporaController(@Autowired private val corporaService: CorporaService) :
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @PatchMapping(Endpoints.Corpora.CORPUS)
     fun updateCorpus(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -144,7 +141,6 @@ class CorporaController(@Autowired private val corporaService: CorporaService) :
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @DeleteMapping(Endpoints.Corpora.CORPUS)
     fun deleteCorpus(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID

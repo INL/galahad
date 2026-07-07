@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile
 
 // Note that some API responses have */* as content type.
 // For swagger to work, all media types have to be defined on the 200 response.
+@CrossOrigin
 @RestController
 class DocumentsController(private val documentsService: DocumentsService) : Logging {
 
@@ -46,7 +47,6 @@ class DocumentsController(private val documentsService: DocumentsService) : Logg
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Layers.Documents.BASE)
     fun getDocuments(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -74,7 +74,6 @@ class DocumentsController(private val documentsService: DocumentsService) : Logg
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Layers.Documents.DOCUMENT)
     fun getDocument(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -103,7 +102,6 @@ class DocumentsController(private val documentsService: DocumentsService) : Logg
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Layers.Documents.DOWNLOAD)
     fun getSourceDocument(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -140,7 +138,6 @@ class DocumentsController(private val documentsService: DocumentsService) : Logg
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @PostMapping(Endpoints.Layers.Documents.BASE, consumes = ["multipart/form-data"])
     fun postDocument(
         @RequestBody
@@ -167,7 +164,6 @@ class DocumentsController(private val documentsService: DocumentsService) : Logg
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @DeleteMapping(Endpoints.Layers.Documents.DOCUMENT)
     fun deleteDocument(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,

@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@CrossOrigin
 class EvaluationController(private val evaluationService: EvaluationService) : Logging {
     @Autowired private val response: HttpServletResponse? = null
 
@@ -52,7 +53,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Evaluation.Layer.DOWNLOAD)
     fun download(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -93,7 +93,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                     )
                 ],
         )
-        @CrossOrigin
         @GetMapping(Endpoints.Evaluation.Layer.Distribution.BASE)
         fun getLayerDistribution(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -135,7 +134,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                     )
                 ],
         )
-        @CrossOrigin
         @GetMapping(Endpoints.Evaluation.Layer.Confusion.BASE)
         fun getLayerConfusion(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -185,7 +183,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                     )
                 ],
         )
-        @CrossOrigin
         @GetMapping(Endpoints.Evaluation.Layer.Confusion.DOWNLOAD)
         fun getConfusionSamples(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -215,7 +212,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
 
     @RestController
     inner class MetricsEvaluationController {
-        @CrossOrigin
+
         @GetMapping(Endpoints.Evaluation.Corpus.Metrics.BASE)
         fun getCorpusMetrics(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -253,7 +250,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                     )
                 ],
         )
-        @CrossOrigin
         @GetMapping(Endpoints.Evaluation.Layer.Metrics.BASE)
         fun getLayerMetrics(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -318,7 +314,6 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
                     )
                 ],
         )
-        @CrossOrigin
         @GetMapping(Endpoints.Evaluation.Layer.Metrics.DOWNLOAD)
         fun getMetricsSamples(
             @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,

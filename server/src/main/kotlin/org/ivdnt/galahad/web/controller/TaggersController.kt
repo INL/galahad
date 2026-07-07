@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
 
+@CrossOrigin
 @RestController
 class TaggersController(private val taggersService: TaggersService) : Logging {
     @Operation(summary = "List all taggers", description = "List the metadata of all taggers.")
-    @CrossOrigin
     @GetMapping(Endpoints.Taggers.BASE)
     fun getTaggers(): Iterable<Tagger> = Tagger.taggers.values
 
@@ -31,7 +31,6 @@ class TaggersController(private val taggersService: TaggersService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Taggers.TAGGER)
     fun getTagger(@PathVariable @Parameter(description = "Tagger name") tagger: String): Tagger =
         Tagger.readOrThrow(tagger)
@@ -44,7 +43,6 @@ class TaggersController(private val taggersService: TaggersService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Taggers.HEALTH)
     fun getTaggerHealth(
         @PathVariable @Parameter(description = "Tagger name") tagger: String
@@ -54,7 +52,6 @@ class TaggersController(private val taggersService: TaggersService) : Logging {
         summary = "Number of active tagger jobs",
         description = "Get the number of active jobs. Indicates server load.",
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Taggers.QUEUE)
     fun activeJobs(): Int = JobScheduler.queueSize
 }

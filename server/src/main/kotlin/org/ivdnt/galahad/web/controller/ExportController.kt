@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import jakarta.servlet.http.HttpServletResponse
+import java.util.*
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.exceptions.ErrorResponse
@@ -14,8 +15,8 @@ import org.ivdnt.galahad.util.setContentDisposition
 import org.ivdnt.galahad.web.service.ExportService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
-import java.util.*
 
+@CrossOrigin
 @RestController
 class ExportController(private val exportService: ExportService) : Logging {
 
@@ -49,7 +50,6 @@ class ExportController(private val exportService: ExportService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @ResponseBody
     @GetMapping(Endpoints.Export.CONVERT)
     fun getCorpusConversion(
@@ -93,7 +93,6 @@ class ExportController(private val exportService: ExportService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @ResponseBody
     @GetMapping(Endpoints.Export.MERGE)
     fun getCorpusMerge(
@@ -135,7 +134,6 @@ class ExportController(private val exportService: ExportService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Export.Documents.CONVERT)
     fun getDocumentConversion(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
@@ -178,7 +176,6 @@ class ExportController(private val exportService: ExportService) : Logging {
         content =
             [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
     )
-    @CrossOrigin
     @GetMapping(Endpoints.Export.Documents.MERGE)
     fun getDocumentMerge(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
