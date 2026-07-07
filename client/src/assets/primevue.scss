@@ -4,6 +4,8 @@
 :root:root {
     --p-multiselect-background: rgb(233, 233, 237);
     --p-multiselect-border-radius: 0;
+    --p-multiselect-dropdown-width: 34px;
+    --p-multiselect-padding-y: 0.25rem;
     --p-primary-color: #{$theme};
     --p-checkbox-icon-checked-color: black;
     --p-checkbox-border-radius: 0;
@@ -20,12 +22,30 @@
             content: "select all";
         }
     }
+}
 
-    :root .p-multiselect {
-        border: none;
+:root .p-multiselect {
+    border: none;
+    height: 34px;
+    min-width: 180px;
+    transition: background 0s;
 
-        &:hover {
-            background-color: var(--int-very-light-grey-hover);
+    &:hover {
+        background-color: var(--int-very-light-grey-hover) !important;
+        .p-multiselect-dropdown {
+            background-color: var(--int-very-light-grey-hover) !important;
         }
+    }
+    &.p-focus {
+        outline: none !important;
+    }
+
+    .p-multiselect-dropdown-icon {
+        display: none;
+    }
+    .p-multiselect-dropdown {
+        background: rgb(233, 233, 237)
+            url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
+            no-repeat right 0.75rem center/8px 10px;
     }
 }
