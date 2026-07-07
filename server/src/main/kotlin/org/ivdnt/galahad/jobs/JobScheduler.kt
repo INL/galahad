@@ -46,7 +46,7 @@ object JobScheduler {
         }
         if (task?.job == job) {
             task = null
-            terminate(job)
+            terminate(job.name)
         }
         // next job now that this one is gone
         start()
@@ -94,6 +94,9 @@ object JobScheduler {
     }
 
     private fun tag(job: Job, doc: Document): UUID {
+        // Before sending to the [job] tagger, terminate all others
+        Tagger.taggers.values.filter { it.name != job.name }.forEach { terminate(it.name) }
+        // Now send
         val url = "${Tagger.readOrThrow(job.name).url}/input"
         val text = doc.layer.toString()
         val file = createTempFile().toFile().also { it.writeText(text) }
@@ -110,9 +113,9 @@ object JobScheduler {
     }
 
     /** Terminate the tagger associated with this job. */
-    private fun terminate(job: Job) {
+    private fun terminate(taggerName: String) {
         try {
-            val url = "${Tagger.readOrThrow(job.name).url}/terminate"
+            val url = "${Tagger.readOrThrow(taggerName).url}/terminate"
             RestTemplate().postForEntity<String>(url, null)
         } catch (e: Exception) {
             // Ignore. Can only hope tagger has terminated.
