@@ -6,6 +6,7 @@ import io.swagger.v3.oas.models.info.Contact
 import io.swagger.v3.oas.models.info.Info
 import io.swagger.v3.oas.models.info.License
 import io.swagger.v3.oas.models.servers.Server
+import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import java.io.File
@@ -23,9 +24,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.core.convert.converter.Converter
 import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.stereotype.Component
-import org.springframework.web.servlet.HandlerInterceptor
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
+import org.springframework.web.filter.OncePerRequestFilter
 
 val application_profile: String = System.getenv("spring.profiles.active") ?: "prod"
 
@@ -113,28 +112,21 @@ class InternalPortConfig {
 }
 
 @Component
-class InternalPortInterceptor : HandlerInterceptor {
+class InternalPortFilter : OncePerRequestFilter() {
 
-    override fun preHandle(
+    override fun shouldNotFilter(request: HttpServletRequest): Boolean =
+        !request.requestURI.startsWith("/internal/")
+
+    override fun doFilterInternal(
         request: HttpServletRequest,
         response: HttpServletResponse,
-        handler: Any,
-    ): Boolean {
-        val isInternal = request.localPort == 8011
-
-        if (!isInternal) {
+        filterChain: FilterChain,
+    ) {
+        if (request.localPort != 8081) {
             response.sendError(HttpServletResponse.SC_FORBIDDEN)
-            return false
+            return
         }
 
-        return true
-    }
-}
-
-@Configuration
-class WebConfig(private val interceptor: InternalPortInterceptor) : WebMvcConfigurer {
-
-    override fun addInterceptors(registry: InterceptorRegistry) {
-        registry.addInterceptor(interceptor).addPathPatterns("/internal/**")
+        filterChain.doFilter(request, response)
     }
 }

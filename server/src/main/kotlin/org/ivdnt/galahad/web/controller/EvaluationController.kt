@@ -63,6 +63,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
         return evaluationService.getEvaluation(corpus, layer, reference)
     }
 
+    @CrossOrigin
     @RestController
     inner class DistributionEvaluationController {
         @Operation(
@@ -103,6 +104,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
             evaluationService.getLayerDistribution(corpus, layer, annotation, group)
     }
 
+    @CrossOrigin
     @RestController
     inner class ConfusionEvaluationController {
         @Operation(
@@ -210,6 +212,7 @@ class EvaluationController(private val evaluationService: EvaluationService) : L
         }
     }
 
+    @CrossOrigin
     @RestController
     inner class MetricsEvaluationController {
 
