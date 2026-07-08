@@ -103,7 +103,7 @@ class InternalPortConfig {
 
         val internal =
             Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL).apply {
-                port = 8081
+                port = 8011
             }
 
         factory.addAdditionalConnectors(internal)
@@ -122,7 +122,7 @@ class InternalPortFilter : OncePerRequestFilter() {
         response: HttpServletResponse,
         filterChain: FilterChain,
     ) {
-        if (request.localPort != 8081) {
+        if (request.localPort != 8011) {
             response.sendError(HttpServletResponse.SC_FORBIDDEN)
             return
         }
