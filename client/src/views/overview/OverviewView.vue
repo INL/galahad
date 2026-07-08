@@ -4,7 +4,7 @@
         basePath="/overview"
         :tabs="[
             { id: 'taggers', title: 'Taggers' },
-            { id: 'tagsets', title: 'Tagsets' },
+            { id: 'principles', title: 'Principles' },
             { id: 'datasets', title: 'Datasets' },
             { id: 'benchmarks', title: 'Benchmarks' },
         ]"

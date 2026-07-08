@@ -19,7 +19,7 @@ import OverviewView from "@/views/overview/OverviewView.vue"
 import BenchmarksView from "@/views/overview/subviews/BenchmarksView.vue"
 import DatasetsView from "@/views/overview/subviews/DatasetsView.vue"
 import TaggersView from "@/views/overview/subviews/TaggersView.vue"
-import TagsetsView from "@/views/overview/subviews/TagsetsView.vue"
+import PrinciplesView from "@/views/overview/subviews/PrinciplesView.vue"
 import ContributeView from "@/views/contribute/ContributeView.vue"
 import ContributeDatasetsView from "@/views/contribute/subviews/ContributeDatasetsView.vue"
 import ContributeTaggersView from "@/views/contribute/subviews/ContributeTaggersView.vue"
@@ -83,7 +83,7 @@ const routes = [
         component: OverviewView,
         children: [
             { meta: { title: "Taggers" }, path: "taggers", component: TaggersView },
-            { meta: { title: "Tagsets" }, path: "tagsets", component: TagsetsView },
+            { meta: { title: "Principles" }, path: "principles", component: PrinciplesView },
             { meta: { title: "Datasets" }, path: "datasets", component: DatasetsView },
             { meta: { title: "Benchmarks" }, path: "benchmarks", component: BenchmarksView },
         ],

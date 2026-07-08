@@ -1,13 +1,13 @@
 <template>
     <GInput v-model="model" list="tagsets" placeholder="Tagset name" />
     <datalist id="tagsets">
-        <option v-for="tagset in tagsets" :key="tagset.name" :value="tagset.name"></option>
+        <option v-for="p in principles" :key="p.principle.name" :value="p.principle.name"></option>
     </datalist>
 </template>
 
 <script setup lang="ts">
-import useTagsets from "@/stores/static/tagsets"
+import usePrinciples from "@/stores/static/principles"
 
 const model = defineModel<string>()
-const { tagsets } = storeToRefs(useTagsets())
+const { principles } = storeToRefs(usePrinciples())
 </script>

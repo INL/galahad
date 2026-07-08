@@ -114,8 +114,8 @@ object Endpoints {
         const val HEALTH: String = "$TAGGER/health"
     }
 
-    object Tagsets {
-        const val BASE: String = "/tagsets"
-        const val TAGSET: String = "$BASE/{tagset}"
+    object Principles {
+        const val BASE: String = "/principles"
+        const val PRINCIPLE: String = "$BASE/{principle}"
     }
 }

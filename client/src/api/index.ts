@@ -78,7 +78,7 @@ export const endpoints = {
         queue: endpoint("/taggers/queue"),
         health: endpoint("/taggers/{tagger}/health"),
     },
-    tagsets: endpoint("/tagsets"),
+    principles: endpoint("/principles"),
 }
 
 /**

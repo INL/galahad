@@ -55,7 +55,7 @@
 
                     <tr>
                         <td>
-                            <label><ExternalLink href="/galahad/overview/tagsets">Tagset</ExternalLink></label>
+                            <label><ExternalLink href="/galahad/overview/principles">Tagset</ExternalLink></label>
                         </td>
                         <td>
                             <TagsetSelect v-model="tagset" />

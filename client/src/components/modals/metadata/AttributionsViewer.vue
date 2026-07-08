@@ -15,9 +15,12 @@
                         <b>{{ item.name }}:</b>
                     </dt>
                     <dd>
-                        <ExternalLink :href="item.url">
+                        <ExternalLink v-if="item.url" :href="item.url">
                             {{ item.description ?? item.url }}
                         </ExternalLink>
+                        <template v-else>
+                            {{ item.description }}
+                        </template>
                     </dd>
                 </dl>
             </li>
