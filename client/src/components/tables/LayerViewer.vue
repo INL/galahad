@@ -21,3 +21,9 @@ const columns = computed(() => Object.keys(annotations.value).map((i) => ({ key:
 const terms = computed(() => (document ? document.preview.terms : layer.preview.terms))
 const items = computed(() => terms.value.map((t) => t.annotations))
 </script>
+
+<style scoped lang="scss">
+:deep(td) {
+    padding: 0.2rem 0.4rem !important;
+}
+</style>
