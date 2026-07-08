@@ -3,13 +3,14 @@ package org.ivdnt.galahad.export
 import java.io.OutputStream
 import java.text.SimpleDateFormat
 import java.util.*
-import javax.xml.transform.TransformerFactory
-import javax.xml.transform.dom.DOMSource
-import javax.xml.transform.stream.StreamResult
 import org.ivdnt.galahad.app.Config
 import org.ivdnt.galahad.util.*
 import org.w3c.dom.Element
 import org.w3c.dom.Node
+import org.w3c.dom.bootstrap.DOMImplementationRegistry
+import org.w3c.dom.ls.DOMImplementationLS
+import org.w3c.dom.ls.LSOutput
+import org.w3c.dom.ls.LSSerializer
 
 /**
  * Constructs a CMDI file for the exported document. Uses a template CMDI file (in resources/) and
@@ -17,30 +18,44 @@ import org.w3c.dom.Node
  * filling/overwriting the metadata values in the DOM with each instance.
  */
 class CmdiMetadata(val export: DocumentExport) {
-    private val docTitle = export.document.sourceFile.withoutFormatExt
-    private val corpus = export.corpus.metadata
-    private val format = export.format.identifier
+    // Header
     private val now = Date()
     private val year = SimpleDateFormat("yyyy").format(now)
     private val month = SimpleDateFormat("MM").format(now)
     private val day = SimpleDateFormat("dd").format(now)
     private val date = "$year-$month-$day"
+    private val corpus = export.corpus.metadata
+    // Text file component
     private val uuid = export.layer.id
-    private val tagger = export.layers.metadata.tagger
-    private val tagset = tagger.principles.ifNullOrBlank { "!No tagset defined!" }
-    private val language = corpus.language.ifNullOrBlank { "Dutch" }
-    private val sourceName = corpus.source?.name?.ifNullOrBlank { "!No source name defined!" }
+    private val format = export.format.identifier
+    // Source component
+    private val docTitle = export.document.sourceFile.withoutFormatExt
+    private val sourceName = corpus.source?.name.ifNullOrBlank { "!No source name defined!" }
     private val sourceUrl =
         corpus.source?.url?.toString().ifNullOrBlank { "!No source URL defined!" }
+    private val yearFrom = corpus.period?.from ?: 0
+    private val yearTo = corpus.period?.to ?: 0
+    // Language component
+    private val language = corpus.language.ifNullOrBlank { "Dutch" }
+    // Annotation component
+    private val tagger = export.layers.metadata.tagger
+    private val taggerAttributions =
+        tagger.attributions.joinToString("\n") { "${it.name}: ${it.description} (${it.url})" }
 
     /** Write the CMDI file to the given [out]put stream. */
     fun write(out: OutputStream) {
         writeCmdHeader()
         writeCmdResources()
         writeCmdComponents()
-        TransformerFactory.newInstance()
-            .newTransformer()
-            .transform(DOMSource(xml), StreamResult(out))
+        val dom =
+            DOMImplementationRegistry.newInstance().getDOMImplementation("LS")
+                as DOMImplementationLS
+        val serializer: LSSerializer = dom.createLSSerializer()
+        serializer.setNewLine("\n")
+        serializer.domConfig.setParameter("format-pretty-print", true)
+        val destination: LSOutput = dom.createLSOutput()
+        destination.setByteStream(out)
+        serializer.write(xml, destination)
     }
 
     /**
@@ -125,7 +140,7 @@ class CmdiMetadata(val export: DocumentExport) {
      */
     private fun writeCmdComponentsTextFile(components: Element) {
         val textFileGalahad = components.child("cmdp:TextFile_GaLAHaD")
-        textFileGalahad.child("cmdp:GaLAHaDPersistentIdentifier").textContent = "${uuid}_$format"
+        textFileGalahad.child("cmdp:GaLAHaDPersistentIdentifier").textContent = uuid
         // Components.TextFile_GaLAHaD.Conversion_GaLAHaD
         val conversionGalahad = textFileGalahad.child("cmdp:Conversion_GaLAHaD")
         conversionGalahad.child("cmdp:conversionDescription").textContent =
@@ -154,8 +169,8 @@ class CmdiMetadata(val export: DocumentExport) {
         sourceGalahad.child("cmdp:sourceCollectionURI").textContent = sourceUrl
         // Components.Source_GaLAHaD.Date_Period
         sourceGalahad.child("cmdp:Date_Period").apply {
-            child("cmdp:yearFrom").textContent = "${corpus.period?.from}"
-            child("cmdp:yearTo").textContent = "${corpus.period?.to}"
+            child("cmdp:yearFrom").textContent = "$yearFrom"
+            child("cmdp:yearTo").textContent = "$yearTo"
         }
     }
 
@@ -164,7 +179,14 @@ class CmdiMetadata(val export: DocumentExport) {
      *
      * ```xml
      * <cmdp:Annotation_GaLAHaD>
-     *     <cmdp:annotationSet>TAGSET</cmdp:annotationSet>
+     *     <cmdp:annotationMethodology>
+     *         <cmdp:annotationType>ANNOTATION</cmdp:annotationType>
+     *         <cmdp:annotationStyle>inline</cmdp:annotationStyle>
+     *         <cmdp:annotationPrinciple>
+     *             ANNOTATION PRINCIPLE
+     *             (ANNOTATION PRINCIPLE URL)
+     *         </cmdp:annotationPrinciple>
+     *     </cmdp:annotationMethodology>
      *     <cmdp:Provenance>
      *         <cmdp:annotationFormat>FORMAT</cmdp:annotationFormat>
      *         <cmdp:AnnotationProcess .../>
@@ -174,7 +196,40 @@ class CmdiMetadata(val export: DocumentExport) {
      */
     private fun writeCmdComponentsAnnotation(components: Element) {
         val annotationGalahad = components.child("cmdp:Annotation_GaLAHaD")
-        annotationGalahad.child("cmdp:annotationSet").textContent = tagset
+
+        // remove all existing annotationMethodology nodes
+        val existingAnnotationMethodologies =
+            (annotationGalahad as Element).getElementsByTagName("cmdp:annotationMethodology")
+        for (i in existingAnnotationMethodologies.length - 1 downTo 0) {
+            val node = existingAnnotationMethodologies.item(i)
+            annotationGalahad.removeChild(node)
+        }
+
+        for (annotationItem in tagger.annotations) {
+            val annotationMethodology =
+                xml.createElement("cmdp:annotationMethodology").apply {
+                    val annotationType =
+                        xml.createElement("cmdp:annotationType").apply {
+                            textContent = annotationItem.annotation?.name
+                        }
+                    appendChild(annotationType)
+                    val annotationStyle =
+                        xml.createElement("cmdp:annotationStyle").apply {
+                            textContent = "inline"
+                        }
+                    appendChild(annotationStyle)
+                    val annotationPrinciple =
+                        xml.createElement("cmdp:annotationPrinciple").apply {
+                            textContent =
+                                annotationItem.principles?.joinToString("\n") {
+                                    "${it.name} (${it.url})"
+                                }
+                        }
+                    appendChild(annotationPrinciple)
+                }
+            annotationGalahad.insertFirst(annotationMethodology)
+        }
+
         // Components.Annotation_GaLAHaD.Provenance
         val provenance = annotationGalahad.child("cmdp:Provenance")
         provenance.child("cmdp:annotationFormat").textContent = format
@@ -189,11 +244,12 @@ class CmdiMetadata(val export: DocumentExport) {
      * ```xml
      * <cmdp:AnnotationProcess>
      *     <cmdp:ProcessorsAnnotators>
-     *         <cmdp:Tool>
+     *         <cmdp:Person_GaLAHaD>USER</cmdp:Person_GaLAHaD>
+     *         <cmdp:Tool_GaLAHaD>
      *             <cmdp:toolName>TAGGER_NAME</cmdp:toolName>
-     *             <cmdp:toolVersion>TAGGER_VERSION</cmdp:toolVersion>
-     *             <cmdp:toolURL>TAGGER_URL</cmdp:toolURL>
-     *         </cmdp:Tool>
+     *             <cmdp:toolLanguage>TAGGER_LANGUAGE</cmdp:toolLanguage>
+     *             <cmdp:toolAttribution>TAGGER_ATTRIBUTIONS</cmdp:toolAttribution>
+     *         </cmdp:Tool_GaLAHaD>
      *     </cmdp:ProcessorsAnnotators>
      *     <cmdp:Date_Period>
      *         <cmdp:yearFrom>YEAR</cmdp:yearFrom>
@@ -208,10 +264,13 @@ class CmdiMetadata(val export: DocumentExport) {
      */
     private fun writeCmdComponentsAnnotationProcess(annotationProcess: Node) {
         // Components.Annotation_GaLAHaD.Provenance.AnnotationProcess.ProcessorsAnnotators.Tool
-        annotationProcess.child("cmdp:ProcessorsAnnotators").child("cmdp:Tool").apply {
-            child("cmdp:toolName").textContent = tagger.name
-            // child("cmdp:toolVersion").textContent = tagger.version
-            // child("cmdp:toolURL").textContent = tagger.uri
+        annotationProcess.child("cmdp:ProcessorsAnnotators").apply {
+            child("cmdp:Person_GaLAHaD").textContent = export.user.name
+            child("cmdp:Tool_GaLAHaD").apply {
+                child("cmdp:toolName").textContent = tagger.name
+                child("cmdp:toolLanguage").textContent = tagger.language
+                child("cmdp:toolAttribution").textContent = taggerAttributions
+            }
         }
         // Components.Annotation_GaLAHaD.Provenance.AnnotationProcess.Date_Period
         annotationProcess.child("cmdp:Date_Period").apply {

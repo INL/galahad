@@ -2,14 +2,14 @@ package org.ivdnt.galahad.util
 
 import com.fasterxml.aalto.stax.InputFactoryImpl
 import com.fasterxml.aalto.stax.OutputFactoryImpl
-import org.w3c.dom.Document
-import org.w3c.dom.Element
-import org.w3c.dom.Node
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.transform.OutputKeys
 import javax.xml.transform.Transformer
 import javax.xml.transform.TransformerFactory
+import org.w3c.dom.Document
+import org.w3c.dom.Element
+import org.w3c.dom.Node
 
 abstract class XmlUtil(val xml: Document) {
     protected fun Node.getOrCreateChild(childTag: String, prepend: Boolean = false): Element {
@@ -80,8 +80,7 @@ abstract class XmlUtil(val xml: Document) {
                 // Pretty print
                 setOutputProperty(OutputKeys.INDENT, "yes")
                 // For some reason needed to print the root on a new line instead of on the same
-                // line as
-                // the doctype.
+                // line as the doctype.
                 setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
             }
 
