@@ -12,7 +12,7 @@ export type CorpusMetadata = MutableCorpusMetadata & {
     modified: number
 }
 
-export type Source = { name: string; url: string }
+export type Source = { name?: string; url?: string }
 
 export type MutableCorpusMetadata = {
     name: string

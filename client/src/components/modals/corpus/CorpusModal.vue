@@ -119,7 +119,7 @@
 <script setup lang="ts">
 import useCorpora from "@/stores/corpora"
 import useUser from "@/stores/static/user"
-import type { CorpusMetadata, MutableCorpusMetadata } from "@/types/corpora"
+import type { CorpusMetadata, MutableCorpusMetadata, Source } from "@/types/corpora"
 
 const { user } = storeToRefs(useUser())
 const { canDelete, canWrite } = storeToRefs(useCorpora())
@@ -138,8 +138,8 @@ const tagset = ref<string>()
 const language = ref<string>()
 const sourceName = ref<string>()
 const sourceUrl = ref<string>()
-const collaborators = ref<string[]>()
-const viewers = ref<string[]>()
+const collaborators = ref<string[]>([])
+const viewers = ref<string[]>([])
 
 // --- computed ---
 const showAddDialog = computed(() => {
@@ -196,17 +196,15 @@ watch(
 function confirm(): void {
     const value: CorpusMetadata = {
         name: name.value,
-        period: [periodFrom.value, periodTo.value].some((i) => i != undefined)
+        period: [periodFrom.value, periodTo.value].some((i) => i != undefined && i != "")
             ? { from: periodFrom.value, to: periodTo.value }
             : undefined,
         tagset: tagset.value,
-        language: language.value,
+        language: Boolean(language.value) ? language.value : undefined,
         dataset: dataset.value,
         collaborators: collaborators.value,
         viewers: viewers.value,
-        source: [sourceName.value, sourceUrl.value].some((i) => i != undefined)
-            ? { name: sourceName.value, url: validatesourceUrl(sourceUrl.value) }
-            : undefined,
+        source: validateSource(sourceName.value, sourceUrl.value),
         uuid: initial?.uuid,
     }
     emit("confirm", value)
@@ -225,6 +223,14 @@ function validatesourceUrl(url: string): string {
         url = `http://${url}`
     }
     return url
+}
+
+function validateSource(sourceName?: string, sourceUrl?: string): Source | undefined {
+    // undefined if everything is falsy
+    if ([sourceName, sourceUrl].every((i) => Boolean(i) == false)) {
+        return undefined
+    }
+    return { name: sourceName, url: validatesourceUrl(sourceUrl) }
 }
 </script>
 

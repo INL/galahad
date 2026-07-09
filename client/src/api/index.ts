@@ -21,7 +21,6 @@ function resolvePath(path: string, params?: Record<string, string>, query?: Reco
         : path
 
     if (!query || Object.keys(query).length === 0) return resolvedPath
-    console.log("query", query)
     // clear any undefineds from query
     Object.keys(query).forEach((key) => {
         if (query[key] === undefined) {
@@ -29,7 +28,6 @@ function resolvePath(path: string, params?: Record<string, string>, query?: Reco
         }
     })
     const searchParams = new URLSearchParams(query)
-    console.log("searchParams", searchParams)
     const queryString = searchParams.toString()
 
     return queryString ? `${resolvedPath}?${queryString}` : resolvedPath
