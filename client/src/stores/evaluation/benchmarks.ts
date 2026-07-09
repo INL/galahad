@@ -1,11 +1,13 @@
 import * as API from "@/api/evaluation/metrics"
 import useCorpora from "@/stores/corpora"
 import useLayers from "@/stores/layers"
+import { plausible } from "@/ts/plausible"
 import type { UUID } from "@/types/corpora"
 import type { GlobalMetrics } from "@/types/evaluation/metrics"
 
 const useBenchmarks = defineStore("benchmarks", () => {
     const { corpusId, corpus } = storeToRefs(useCorpora())
+    const { sourceLayer } = storeToRefs(useLayers())
     const loading = ref<boolean>(false)
     const benchmarks = ref<GlobalMetrics[]>()
     const annotations = ref<string[]>()
@@ -19,6 +21,15 @@ const useBenchmarks = defineStore("benchmarks", () => {
         loading.value = true
         API.getCorpusMetrics(corpusId.value, annotations.value, group.value, analysis.value)
             .then((res) => (benchmarks.value = res.data))
+            .then(() => {
+                plausible.evaluation.corpusMetrics(
+                    corpus.value,
+                    sourceLayer.value,
+                    annotations.value,
+                    group.value,
+                    analysis.value,
+                )
+            })
             .finally(() => (loading.value = false))
     }
 

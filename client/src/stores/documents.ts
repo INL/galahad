@@ -47,19 +47,25 @@ const useDocuments = defineStore("documents", () => {
 
     /** Delete a document. */
     function remove(name: string): void {
-        plausible.documentDeleted(corpus.value, getDocument(name))
-        API.deleteDocument(corpusId.value, name).finally(() => {
-            reload()
-            reloadLayers()
-            reloadCorpora()
-            reloadJobs()
-        })
+        API.deleteDocument(corpusId.value, name)
+            .then(() => {
+                plausible.document.deleted(corpus.value, getDocument(name))
+            })
+            .finally(() => {
+                reload()
+                reloadLayers()
+                reloadCorpora()
+                reloadJobs()
+            })
     }
 
     /** Download original source document. */
     function download(name: string): void {
-        plausible.documentDownloaded(corpus.value, getDocument(name))
-        API.getRawDocument(corpusId.value, name).then(Utils.browserDownloadResponseFile)
+        API.getRawDocument(corpusId.value, name)
+            .then(Utils.browserDownloadResponseFile)
+            .then(() => {
+                plausible.document.downloaded(corpus.value, getDocument(name))
+            })
     }
 
     function getDocument(name: string): DocumentMetadata {
@@ -97,13 +103,14 @@ const useDocuments = defineStore("documents", () => {
         // Some files need an explicit content type header.
         const header = addContentTypeHeader(formData)
 
-        plausible.documentUploaded(corpus.value, fileExtension(file))
-
         // Update status on upload, on success and on error.
         uploading[file?.name] = { status: "busy" }
         API.postDocument(corpusId.value, formData, header)
             .then(() => {
                 uploading[file?.name] = { status: "success" }
+            })
+            .then(() => {
+                plausible.document.uploaded(corpus.value, fileExtension(file))
             })
             .catch((error) => (uploading[file.name] = { status: "error", message: error.response.data.message }))
             .finally(() => {

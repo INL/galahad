@@ -12,10 +12,12 @@ const useEvaluation = defineStore("evaluation", () => {
     const loading = ref<boolean>()
 
     function downloadCSV(): void {
-        plausible.evaluationDownloaded(corpus.value, hypothesisLayer.value, referenceLayer.value)
         loading.value = true
         API.getDownloadEvaluation(corpusId.value, hypothesisId.value, referenceId.value)
             .then(Utils.browserDownloadResponseFile)
+            .then(() => {
+                plausible.evaluation.downloaded(corpus.value, hypothesisLayer.value, referenceLayer.value)
+            })
             .finally(() => (loading.value = false))
     }
 

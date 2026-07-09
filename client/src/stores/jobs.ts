@@ -38,7 +38,6 @@ const useJobs = defineStore("jobs", () => {
     }
 
     function tag(job: Job): void {
-        plausible.jobStarted(corpus.value, job)
         posting.value = true
         API.postJob(corpusId.value, job.tagger.name)
             .then(() => {
@@ -46,6 +45,9 @@ const useJobs = defineStore("jobs", () => {
                 // isBusy however depends on 'processing', so at this point it will still be false.
                 // A future poll will probably set it to true.
                 startPolling(job.tagger.name) // TODO: this is a problem, because if the state doesn't change, the polling isn't stopped.
+            })
+            .then(() => {
+                plausible.job.started(corpus.value, job)
             })
             .finally(() => {
                 posting.value = false
@@ -55,26 +57,32 @@ const useJobs = defineStore("jobs", () => {
     }
 
     function cancel(job: Job): void {
-        plausible.jobStopped(corpus.value, job)
         posting.value = true
-        API.cancelJob(corpusId.value, job.tagger.name).finally(() => {
-            posting.value = false
-            reloadCorpora(true)
-            reload(true)
-        })
+        API.cancelJob(corpusId.value, job.tagger.name)
+            .then(() => {
+                plausible.job.stopped(corpus.value, job)
+            })
+            .finally(() => {
+                posting.value = false
+                reloadCorpora(true)
+                reload(true)
+            })
     }
 
     function remove(job: Job): void {
-        plausible.jobDeleted(corpus.value, job)
         posting.value = true
-        LayerAPI.removeLayer(corpusId.value, job.tagger.name).finally(() => {
-            posting.value = false
-            reload(true)
-            reloadCorpora(true)
-            reloadLayers()
-            resetSelection()
-            stopPolling(job.tagger.name)
-        })
+        LayerAPI.removeLayer(corpusId.value, job.tagger.name)
+            .then(() => {
+                plausible.job.deleted(corpus.value, job)
+            })
+            .finally(() => {
+                posting.value = false
+                reload(true)
+                reloadCorpora(true)
+                reloadLayers()
+                resetSelection()
+                stopPolling(job.tagger.name)
+            })
     }
 
     /** Start a continuous progress poller for the given job*/

@@ -32,27 +32,34 @@ const useCorpora = defineStore("corpora", () => {
 
     /** Create a new corpus with the given metadata and set it as active. */
     function create(metadata: MutableCorpusMetadata): void {
-        plausible.corpusCreated(metadata)
         loading.value = true
         API.postCorpus(metadata)
             .then((res) => (corpusId.value = res.data))
+            .then(() => {
+                plausible.corpus.created(metadata)
+            })
             .finally(reload)
     }
 
     /** Delete and unselect corpus. */
     function remove(metadata: CorpusMetadata): void {
-        plausible.corpusDeleted(metadata)
         loading.value = true
         API.deleteCorpus(metadata.uuid)
             .then(() => (corpusId.value = undefined))
+            .then(() => {
+                plausible.corpus.deleted(metadata)
+            })
             .finally(reload)
     }
 
     /** Update metadata of existing corpus. */
     function update(metadata: CorpusMetadata): void {
-        plausible.corpusUpdated(metadata)
         loading.value = true
-        API.updateCorpus(metadata.uuid, metadata).finally(reload)
+        API.updateCorpus(metadata.uuid, metadata)
+            .then(() => {
+                plausible.corpus.updated(metadata)
+            })
+            .finally(reload)
     }
 
     return {

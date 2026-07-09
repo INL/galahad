@@ -13,7 +13,9 @@
                     @click="
                         () => {
                             expand = !expand
-                            plausible.helpClicked()
+                            if (expand) {
+                                plausible.help.clicked()
+                            }
                         }
                     "
                 >

@@ -17,7 +17,6 @@ const useGroupedMetrics = defineStore("groupedMetrics", () => {
     function reload(): void {
         if ([corpusId.value, hypothesisId.value, referenceId.value, group.value].includes(undefined)) return
         if (!annotations.value?.length) return
-        plausible.metricsEvaluated(corpus.value, hypothesisLayer.value, referenceLayer.value)
         loading.value = true
         API.getGroupedMetrics(
             corpusId.value,
@@ -28,6 +27,16 @@ const useGroupedMetrics = defineStore("groupedMetrics", () => {
             analysis.value,
         )
             .then((res) => (groupedMetrics.value = res.data))
+            .then(() => {
+                plausible.evaluation.groupedMetrics(
+                    corpus.value,
+                    hypothesisLayer.value,
+                    referenceLayer.value,
+                    annotations.value,
+                    group.value,
+                    analysis.value,
+                )
+            })
             .finally(() => (loading.value = false))
     }
 

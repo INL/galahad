@@ -14,10 +14,17 @@ const useConfusion = defineStore("confusion", () => {
 
     function reload(): void {
         if ([corpusId.value, hypothesisId.value, referenceId.value, annotation.value].includes(undefined)) return
-        plausible.confusionEvaluated(corpus.value, hypothesisLayer.value, referenceLayer.value)
         loading.value = true
         API.getConfusion(corpusId.value, hypothesisId.value, referenceId.value, annotation.value)
             .then((res) => (confusion.value = res.data))
+            .then(() => {
+                plausible.evaluation.confusion(
+                    corpus.value,
+                    hypothesisLayer.value,
+                    referenceLayer.value,
+                    annotation.value,
+                )
+            })
             .finally(() => (loading.value = false))
     }
 

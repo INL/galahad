@@ -15,6 +15,9 @@ const useGlobalMetrics = defineStore("globalMetrics", () => {
         loading.value = true
         API.getGlobalMetrics(corpusId.value, hypothesisId.value, referenceId.value)
             .then((res) => (globalMetrics.value = res.data))
+            .then(() => {
+                plausible.evaluation.globalMetrics(corpus.value, hypothesisLayer.value, referenceLayer.value)
+            })
             .finally(() => (loading.value = false))
     }
     watch([corpusId, hypothesisId, referenceId], () => {

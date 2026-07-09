@@ -32,17 +32,21 @@ const useExport = defineStore("export", () => {
             return
         }
         loading.value = true
-        plausible.corpusExported(corpus.value, hypothesisLayer.value, format.value, shouldMerge, posHeadOnly)
         API.convertCorpus(corpusId.value, hypothesisId.value, format.value, posHeadOnly)
             .then(Utils.browserDownloadResponseFile)
+            .then(() => {
+                plausible.export.exported(corpus.value, hypothesisLayer.value, format.value, false, posHeadOnly)
+            })
             .finally(() => (loading.value = false))
     }
 
     function merge(posHeadOnly: boolean): void {
         loading.value = true
-        plausible.corpusExported(corpus.value, hypothesisLayer.value, format.value, true, posHeadOnly)
         API.mergeCorpus(corpusId.value, hypothesisId.value, format.value, posHeadOnly)
             .then(Utils.browserDownloadResponseFile)
+            .then(() => {
+                plausible.export.exported(corpus.value, hypothesisLayer.value, format.value, true, posHeadOnly)
+            })
             .finally(() => (loading.value = false))
     }
 

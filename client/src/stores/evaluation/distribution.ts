@@ -15,10 +15,12 @@ const useDistribution = defineStore("distribution", () => {
 
     function reload(): void {
         if ([corpusId.value, hypothesisId.value, annotation.value, group.value].includes(undefined)) return
-        plausible.distributionEvaluated(corpus.value, hypothesisLayer.value)
         loading.value = true
         API.getDistribution(corpusId.value, hypothesisId.value, annotation.value, group.value)
             .then((res) => (distribution.value = res.data))
+            .then(() => {
+                plausible.evaluation.distribution(corpus.value, hypothesisLayer.value, annotation.value, group.value)
+            })
             .finally(() => (loading.value = false))
     }
 
