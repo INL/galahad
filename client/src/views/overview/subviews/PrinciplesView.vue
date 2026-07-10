@@ -21,6 +21,16 @@
                     {{ d.item.principle.description }}
                 </template>
             </template>
+
+            <template #cell-taggers="d: TableData<Principle>">
+                <ul>
+                    <li v-for="tagger in d.item.taggers">
+                        <ExternalLink :key="tagger" :href="`/galahad/overview/taggers#${tagger}`">
+                            {{ tagger }}
+                        </ExternalLink>
+                    </li>
+                </ul>
+            </template>
         </GTable>
     </GCard>
 </template>
@@ -28,12 +38,25 @@
 <script setup lang="ts">
 import usePrinciples from "@/stores/static/principles"
 import type { Principle } from "@/types/principles"
-import type { Column } from "@/types/ui/table"
+import type { Column, TableData } from "@/types/ui/table"
 
 const { principles: items, loading } = storeToRefs(usePrinciples())
 const columns: Column<Principle>[] = [
     { key: "name", format: (p: Principle): string => p.principle.name },
     { key: "annotation", format: (p: Principle): string => p.annotation },
     { key: "description" },
+    { key: "taggers" },
 ]
 </script>
+
+<style scoped lang="scss">
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    li {
+        list-style: none;
+    }
+}
+</style>
