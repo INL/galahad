@@ -1,5 +1,5 @@
 <template>
-    <dialog class="modal view" tabindex="-1" aria-modal="true" @click.self="$emit('hide')" role="alertdialog">
+    <dialog class="modal view" tabindex="-1" aria-modal="true" @click.self="$emit('hide')" role="alertdialog" open>
         {{ focusable }}
         <GCard class="content" :title>
             <template v-if="$slots.title" #title>

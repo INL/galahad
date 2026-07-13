@@ -17,6 +17,9 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     background-color: var(--int-very-light-grey);
+    &:has(dialog[open]) {
+        overflow: hidden;
+    }
 }
 
 h1,
