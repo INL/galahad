@@ -62,14 +62,16 @@
                 :key="cell"
             >
                 <GButton :disabled="d.value?.count === 0" @click="tableData = d" style="justify-content: right" plain>
-                    {{ `${(formatNaN(d.value.count / d.item.hypothesis) * 100).toFixed(1)}%` }}
-                    <i>({{ d.value.count.toLocaleString() }})</i>
+                    <u
+                        >{{ `${(formatNaN(d.value.count / d.item.hypothesis) * 100).toFixed(1)}%` }}
+                        <i>({{ d.value.count.toLocaleString() }})</i></u
+                    >
                 </GButton>
             </template>
 
             <template v-for="cell in ['cell-noMatch']" #[cell]="d: TableData<any>" :key="cell">
                 <GButton :disabled="d.value?.count === 0" @click="tableData = d" style="justify-content: right" plain>
-                    {{ d.value.count.toLocaleString() }}
+                    <u>{{ d.value.count.toLocaleString() }}</u>
                 </GButton>
             </template>
         </GTable>

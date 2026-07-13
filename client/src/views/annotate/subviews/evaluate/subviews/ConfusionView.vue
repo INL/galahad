@@ -39,7 +39,7 @@
                     <!-- {{ d.value }} -->
                 </span>
                 <GButton v-else :disabled="!d.value" :class="cssClass(d)" @click="tableData = d">
-                    {{ d.value?.count.toLocaleString() ?? 0 }}
+                    <u>{{ d.value?.count.toLocaleString() ?? 0 }}</u>
                 </GButton>
             </template>
         </GTable>
