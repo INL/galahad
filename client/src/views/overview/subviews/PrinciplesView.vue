@@ -23,15 +23,25 @@
             </template>
 
             <template #cell-taggers="d: TableData<Principle>">
-                <ul>
-                    <li v-for="tagger in d.item.taggers">
-                        <ExternalLink :key="tagger" :href="`/galahad/overview/taggers#${tagger}`">
-                            {{ tagger }}
-                        </ExternalLink>
-                    </li>
-                </ul>
+                <RightFloatCell>
+                    <template #left
+                        >{{ d.item.taggers.length }} {{ d.item.taggers.length == 1 ? "tagger" : "taggers" }}
+                    </template>
+                    <template #right>
+                        <InspectButton v-if="d.item.taggers.length > 0" @click="modalData = d.item" />
+                    </template>
+                </RightFloatCell>
             </template>
         </GTable>
+
+        <GModal v-if="modalData" @hide="modalData = undefined">
+            <template #title> {{ modalData.principle.name }} ({{ modalData.annotation }}) </template>
+            <ul>
+                <li v-for="tagger in modalData.taggers" :key="tagger">
+                    <ExternalLink :href="`/galahad/overview/taggers#${tagger}`">{{ tagger }}</ExternalLink>
+                </li>
+            </ul>
+        </GModal>
     </GCard>
 </template>
 
@@ -47,16 +57,5 @@ const columns: Column<Principle>[] = [
     { key: "description" },
     { key: "taggers" },
 ]
+const modalData = ref()
 </script>
-
-<style scoped lang="scss">
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    li {
-        list-style: none;
-    }
-}
-</style>
