@@ -142,6 +142,7 @@ const extendedItems = computed<ClassificationClasses & { group: string }>(() => 
             ...groupedMetrics.value,
             truePositive: groupedMetrics.value.classes.truePositive,
             falseNegative: groupedMetrics.value.classes.falseNegative,
+            noMatch: groupedMetrics.value.classes.noMatch,
             hypothesis: groupedMetrics.value.classes.hypothesis,
             reference: groupedMetrics.value.classes.reference,
         },
@@ -198,6 +199,7 @@ const columns: Column<GlobalMetrics>[] = computed(() => [
         button: true,
         sortOn: (g: GlobalMetrics) => g.classes.falseNegative.count,
     },
+    { key: "noMatch", label: `no<br>match`, button: true, sortOn: (g: GlobalMetrics) => g.classes.noMatch.count },
 ])
 const items = computed((): GlobalMetrics[] => {
     if (!globalMetrics.value) return []
@@ -205,6 +207,7 @@ const items = computed((): GlobalMetrics[] => {
         ...g,
         truePositive: g.classes.truePositive,
         falseNegative: g.classes.falseNegative,
+        noMatch: g.classes.noMatch,
         hypothesis: g.classes.hypothesis,
         reference: g.classes.reference,
     }))
