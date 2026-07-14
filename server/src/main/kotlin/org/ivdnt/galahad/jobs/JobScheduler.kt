@@ -64,10 +64,11 @@ object JobScheduler {
             }
         if (numUntagged == 0) {
             dequeue(task!!.job)
+        } else {
+            // continue this job (top of the queue)
+            task = null
+            start()
         }
-        // next document, or next job if all documents are tagged
-        task = null
-        start()
     }
 
     private fun start() {
