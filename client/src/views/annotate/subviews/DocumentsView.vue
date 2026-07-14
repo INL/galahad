@@ -4,7 +4,7 @@
             <template #help>
                 <slot name="help">
                     <DocumentsHelp />
-                    <HelpLink helpLink="formats" />
+                    <HelpLink topic="formats" />
                 </slot>
             </template>
             <template #header>

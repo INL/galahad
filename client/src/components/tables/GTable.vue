@@ -1,5 +1,5 @@
 <template>
-    <GCard :title :helpLink>
+    <GCard :title>
         <template v-if="$slots.title" #title>
             <slot name="title"></slot>
         </template>
@@ -102,14 +102,12 @@
 
 <script setup lang="ts" generic="T">
 import type { Column } from "@/types/ui/table"
-import type { HelpLink } from "@/types/ui/help"
 
 // --- props ---
 const {
     items,
     columns,
     title,
-    helpLink,
     loading,
     selectable,
     sortColumn: initSortColumn,
@@ -118,7 +116,6 @@ const {
     items: T[]
     columns: Column<T>[]
     title?: string
-    helpLink?: HelpLink | string
     loading?: boolean
     selectable?: boolean
     sortColumn?: string

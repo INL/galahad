@@ -24,9 +24,6 @@
             </hgroup>
             <GInfo v-if="expand && $slots.help">
                 <slot name="help"></slot>
-                <template v-if="helpLink" #footer>
-                    <HelpLink :helpLink />
-                </template>
             </GInfo>
         </header>
         <article v-if="article" class="content article">
@@ -40,9 +37,8 @@
 
 <script setup lang="ts">
 import { plausible } from "@/ts/plausible"
-import type { HelpLink } from "@/types/ui/help"
 
-const { helpLink, title } = defineProps<{ helpLink?: HelpLink | string; title?: string; article?: boolean }>()
+const { title, article } = defineProps<{ title?: string; article?: boolean }>()
 
 const expand = ref<boolean>()
 </script>
