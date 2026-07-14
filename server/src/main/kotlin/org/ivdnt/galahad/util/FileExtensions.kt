@@ -17,4 +17,4 @@ val File.withoutFormatExt: String
 fun File.asFormat(format: DocumentFormat): String = this.withoutFormatExt + "." + format.extension
 
 fun File.lastModifiedFile(): Long =
-    listFiles().maxOfOrNull { Files.getLastModifiedTime(it.toPath()).toMillis() } ?: 0L
+    listFiles()?.maxOfOrNull { Files.getLastModifiedTime(it.toPath()).toMillis() } ?: 0L

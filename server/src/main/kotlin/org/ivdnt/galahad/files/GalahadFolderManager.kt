@@ -29,7 +29,7 @@ abstract class GalahadFolderManager<ReadType : GalahadFolder, CreateType : Any>(
         get() =
             maxOf(
                 dir.lastModifiedFile(),
-                dir.listFiles().maxOfOrNull { it.lastModifiedFile() } ?: 0L,
+                dir.listFiles()?.maxOfOrNull { it.lastModifiedFile() } ?: 0L,
             )
 
     protected abstract fun ctor(key: String): ReadType
