@@ -76,7 +76,9 @@
         </GTable>
 
         <GModal v-if="layerId" @hide="layerId = undefined">
-            <DocumentsTable :documents :loading="documentsLoading" :layer />
+            <DocumentsTable :documents :loading="documentsLoading" :layer>
+                <template #title>Documents of {{ layer?.tagger?.name }}</template>
+            </DocumentsTable>
         </GModal>
 
         <JobModal v-if="jobId" :jobId @hide="jobId = undefined" />

@@ -1,6 +1,8 @@
 <template>
     <GTable :columns :items :loading sortColumn="name">
-        <template #title>Documents of {{ layer?.tagger?.name ?? corpus.name }}</template>
+        <template #title>
+            <slot name="title">Documents of {{ corpus.name }}</slot>
+        </template>
         <template #help>
             <slot name="help">
                 <p>

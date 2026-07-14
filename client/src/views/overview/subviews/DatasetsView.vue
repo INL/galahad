@@ -23,7 +23,7 @@
         </CorporaTable>
 
         <GModal v-if="showModal" @hide="showModal = false">
-            <DocumentsTable :layer="sourceLayer"> </DocumentsTable>
+            <DocumentsTable :layer="sourceLayer" />
         </GModal>
     </GCard>
 </template>
