@@ -1,6 +1,6 @@
 <template>
     <AnnotateTab>
-        <template #title>Export</template>
+        <template #title>Export {{ corpus.name }}</template>
 
         <template #help>
             <ExportHelp />

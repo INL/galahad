@@ -1,6 +1,7 @@
 <template>
     <AnnotateTab>
-        <GTable :columns :items :loading title="Jobs" sortColumn="name">
+        <GTable :columns :items :loading sortColumn="name">
+            <template #title>Jobs of {{ corpus.name }}</template>
             <template #help>
                 <JobsHelp />
             </template>

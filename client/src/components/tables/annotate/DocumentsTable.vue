@@ -1,9 +1,10 @@
 <template>
-    <GTable title="Documents" :columns :items :loading sortColumn="name">
+    <GTable :columns :items :loading sortColumn="name">
+        <template #title>Documents of {{ layer?.tagger?.name ?? corpus.name }}</template>
         <template #help>
             <slot name="help">
                 <p>
-                Here you can see the documents in the selected
+                    Here you can see the documents in the selected
                     {{ layer?.tagger?.name == SOURCE_LAYER ? "corpus" : "job" }}. The overview gives the document
                     <i>format</i>, a preview of the <i>text</i> and its size in <i>tokens</i>.
                 </p>

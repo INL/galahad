@@ -1,6 +1,6 @@
 <template>
     <AnnotateTab>
-        <template #title>Evaluate</template>
+        <template #title>Evaluate {{ corpus.name }}</template>
 
         <template #help>
             <EvaluateHelp />
@@ -31,9 +31,11 @@
 </template>
 
 <script setup lang="ts">
+import useCorpora from "@/stores/corpora"
 import useEvaluation from "@/stores/evaluation"
 import useLayers from "@/stores/layers"
 
+const { corpus } = storeToRefs(useCorpora())
 const { downloadCSV } = useEvaluation()
 const { loading } = storeToRefs(useEvaluation())
 const { hypothesisId, referenceId } = useLayers()
