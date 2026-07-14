@@ -61,7 +61,9 @@
                 Depuydt, Katrien, Jesse De Does, Vincent Prins, Mathieu Fannee, Roland de Bonth, Thomas Haga (2026), An
                 infrastructure for Historical Dutch Corpus Development. In: Selected papers from the CLARIN Annual
                 Conference 2025. DOI:
-                <a href="https://doi.org/10.3384/ecp222.1606">https://doi.org/10.3384/ecp222.1606</a>
+                <ExternalLink href="https://doi.org/10.3384/ecp222.1606"
+                    >https://doi.org/10.3384/ecp222.1606</ExternalLink
+                >
             </cite>
         </p>
 
