@@ -39,8 +39,8 @@ const columns: Column<Tagger>[] = [
     { key: "description" },
     { key: "language" },
     { key: "period", format: (t: Tagger): string | undefined => formatPeriod(t.period) },
-    { key: "annotations", sortOn: (t: Tagger): string => t.annotations.map((a) => a.annotation).join() },
-    { key: "attributions", noSort: true },
+    { key: "annotations", button: true, sortOn: (t: Tagger): string => t.annotations.map((a) => a.annotation).join() },
+    { key: "attributions", button: true, noSort: true },
 ]
 
 /** Mark the active row, retrieved from the url anchor. */

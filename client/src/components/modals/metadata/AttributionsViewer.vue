@@ -1,10 +1,7 @@
 <template>
-    <RightFloatCell>
-        <template #left> {{ Object.keys(items).length }} attributions </template>
-        <template #right>
-            <InspectButton @click="showModal = true" />
-        </template>
-    </RightFloatCell>
+    <GButton plain @click="showModal = true">
+        <u> {{ Object.keys(items).length }} attributions </u>
+    </GButton>
 
     <GModal v-if="showModal" @hide="showModal = false">
         <template #title>Attributions of {{ tagger.name }}</template>

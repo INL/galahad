@@ -148,7 +148,11 @@ const columns = computed<Column<Job>[]>((): Column<Job>[] => [
     { key: "name", sortOn: (j: Job): string => j.tagger.name, align: "left" },
     { key: "language", format: (j: Job): string => j.tagger.language },
     { key: "period", format: (j: Job): string | undefined => formatPeriod(j.tagger.period) },
-    { key: "annotations", sortOn: (j: Job): string => j.tagger.annotations.map((a) => a.annotation).join() },
+    {
+        key: "annotations",
+        button: true,
+        sortOn: (j: Job): string => j.tagger.annotations.map((a) => a.annotation).join(),
+    },
     { key: "documents", align: "right", format: (j: Job): number => j.progress.finished },
     { key: "modified", align: "center", format: (j: Job): string => formatDate(j.modified) },
     { key: "progress", align: "right", sortOn: (j: Job): number => j.progress.finished / j.progress.total },

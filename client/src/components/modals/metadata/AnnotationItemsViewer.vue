@@ -1,12 +1,9 @@
 <template>
-    <RightFloatCell>
-        <template #left>
+    <GButton plain @click="showModal = true" style="justify-content: left">
+        <u>
             {{ items.map((i) => i.annotation).join(", ") }}
-        </template>
-        <template #right>
-            <InspectButton @click="showModal = true" />
-        </template>
-    </RightFloatCell>
+        </u>
+    </GButton>
 
     <GModal v-if="showModal" @hide="showModal = false">
         <template #title>Annotations and principles of {{ tagger.name }}</template>

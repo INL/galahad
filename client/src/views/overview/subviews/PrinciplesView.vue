@@ -7,7 +7,7 @@
 
         <GTable :columns :items :loading sortColumn="annotation">
             <template #empty>
-                No tagsets appeared? That is not right! Please contact the INT at
+                No principles appeared? That is not right! Please contact the INT at
                 <MailAddress />
             </template>
 
@@ -21,14 +21,9 @@
             </template>
 
             <template #cell-taggers="d: TableData<Principle>">
-                <RightFloatCell>
-                    <template #left
-                        >{{ d.item.taggers.length }} {{ d.item.taggers.length == 1 ? "tagger" : "taggers" }}
-                    </template>
-                    <template #right>
-                        <InspectButton v-if="d.item.taggers.length > 0" @click="modalData = d.item" />
-                    </template>
-                </RightFloatCell>
+                <GButton @click="modalData = d.item" plain>
+                    <u>{{ d.item.taggers.length }} {{ d.item.taggers.length == 1 ? "tagger" : "taggers" }}</u>
+                </GButton>
             </template>
         </GTable>
 
@@ -54,7 +49,7 @@ const columns: Column<Principle>[] = [
     { key: "name", format: (p: Principle): string => p.principle.name },
     { key: "annotation", format: (p: Principle): string => p.annotation },
     { key: "description" },
-    { key: "taggers" },
+    { key: "taggers", button: true, sortOn: (p: Principle): number => p.taggers.length },
 ]
 const modalData = ref()
 </script>
