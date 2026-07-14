@@ -15,14 +15,12 @@ import GroupedMetricsView from "@/views/annotate/subviews/evaluate/subviews/Grou
 import ExportView from "@/views/annotate/subviews/ExportView.vue"
 import ApplicationView from "@/views/application/ApplicationView.vue"
 import AboutView from "@/views/application/subviews/AboutView.vue"
+import ContributeView from "@/views/application/subviews/ContributeView.vue"
 import OverviewView from "@/views/overview/OverviewView.vue"
 import BenchmarksView from "@/views/overview/subviews/BenchmarksView.vue"
 import DatasetsView from "@/views/overview/subviews/DatasetsView.vue"
 import TaggersView from "@/views/overview/subviews/TaggersView.vue"
 import PrinciplesView from "@/views/overview/subviews/PrinciplesView.vue"
-import ContributeView from "@/views/contribute/ContributeView.vue"
-import ContributeDatasetsView from "@/views/contribute/subviews/ContributeDatasetsView.vue"
-import ContributeTaggersView from "@/views/contribute/subviews/ContributeTaggersView.vue"
 import HelpView from "@/views/help/HelpView.vue"
 import EvaluationView from "@/views/help/subviews/EvaluationView.vue"
 import GeneralView from "@/views/help/subviews/GeneralView.vue"
@@ -74,7 +72,10 @@ const routes = [
         name: "Application",
         redirect: "/application/about",
         component: ApplicationView,
-        children: [{ meta: { title: "About" }, path: "about", component: AboutView }],
+        children: [
+            { meta: { title: "About" }, path: "about", component: AboutView },
+            { meta: { title: "Contribute" }, path: "contribute", component: ContributeView },
+        ],
     },
     {
         path: "/overview",
@@ -86,16 +87,6 @@ const routes = [
             { meta: { title: "Principles" }, path: "principles", component: PrinciplesView },
             { meta: { title: "Datasets" }, path: "datasets", component: DatasetsView },
             { meta: { title: "Benchmarks" }, path: "benchmarks", component: BenchmarksView },
-        ],
-    },
-    {
-        path: "/contribute",
-        name: "Contribute",
-        redirect: "/contribute/taggers",
-        component: ContributeView,
-        children: [
-            { meta: { title: "Contribute" }, path: "taggers", component: ContributeTaggersView },
-            { meta: { title: "Contribute" }, path: "datasets", component: ContributeDatasetsView },
         ],
     },
     {

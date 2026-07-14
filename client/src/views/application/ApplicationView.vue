@@ -4,6 +4,7 @@
         basePath="/application"
         :tabs="[
             { id: 'about', title: 'About' },
+            { id: 'contribute', title: 'Contribute' },
             { id: 'api', title: 'API' },
         ]"
     >
