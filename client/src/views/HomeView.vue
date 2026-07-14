@@ -41,8 +41,7 @@
             <figure>
                 <img
                     src="@/assets/logo/galahad-graal-klein.png"
-                    title="Verbaasd laat Galahad de graal uit zijn handen vallen als hij ziet wat erin zit."
-                    alt="Verbaasd laat Galahad de graal uit zijn handen vallen als hij ziet wat erin zit."
+                    alt="In surprise, Galahad drops the grail from his hands when he sees what's inside."
                 />
                 <figcaption>
                     <blockquote cite="https://galerij.kb.nl/kb.html#/nl/lancelot/page/45/zoom/5/lat/-66/lng/-107">

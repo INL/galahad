@@ -13,8 +13,8 @@
 
         <nav class="nav">
             <a href="/galahad/help" target="_blank">help</a>
-            <a href="/galahad/application" target="_blank">about</a>
-            <a href="/galahad/contribute" target="_blank">contribute</a>
+            <a href="/galahad/application/about" target="_blank">about</a>
+            <a href="/galahad/application/contribute" target="_blank">contribute</a>
             <a href="https://portal.clarin.ivdnt.org/lancelot" target="_blank">lancelot</a>
         </nav>
     </hgroup>
