@@ -122,3 +122,7 @@ $theme: #62b6ff;
     --int-theme-active: #{color.adjust($theme, $lightness: -20%)};
     --int-theme-outline: #{color.adjust($theme, $lightness: -15%)};
 }
+
+table tr td u {
+    text-decoration: dotted underline;
+}
