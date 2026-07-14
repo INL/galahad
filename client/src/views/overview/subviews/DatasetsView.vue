@@ -2,7 +2,8 @@
     <GCard>
         <CorporaTable title="Datasets" :filter="(c: CorpusMetadata) => c.dataset">
             <template #help>
-                <BenchmarkSetsHelp />
+                <DatasetsHelp />
+                <HelpLink topic="datasets" />
             </template>
             <template #empty>No dataset corpora available.</template>
         </CorporaTable>

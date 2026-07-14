@@ -1,5 +1,5 @@
 <template>
-    <h2>Step 3: Jobs</h2>
+    <h3>Step 3: Jobs</h3>
     <p>
         You can use some or all of the available taggers to tag your documents. Each tagger will create a linguistic
         annotation layer. Use the filters to find a tagger that works well for you or take a look at the
@@ -7,7 +7,7 @@
     </p>
     <p>
         To start a tagging job, select one of the taggers and click on
-        <InlineTextButton plain>View & Tag</InlineTextButton>.
+        <InlineTextButton plain><i class="fa fa-cogs"></i></InlineTextButton>.
     </p>
-    <HelpLink helpLink="jobs" />
+    <HelpLink topic="jobs" />
 </template>

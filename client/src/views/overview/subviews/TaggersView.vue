@@ -1,13 +1,8 @@
 <template>
     <GCard title="Taggers">
         <template #help>
-            <p>Here you can see an overview of all available taggers within GaLAHaD.</p>
-            <p>
-                For more information on the taggers, please visit
-                <ExternalLink href="https://github.com/instituutnederlandsetaal/galahad-taggers-dockerized/">
-                    galahad-taggers-dockerized on GitHub </ExternalLink
-                >.
-            </p>
+            <TaggersHelp />
+            <HelpLink topic="taggers" />
         </template>
 
         <GTable :columns :items :loading sortColumn="period">

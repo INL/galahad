@@ -1,17 +1,8 @@
 <template>
-    <GCard title="Benchmarks" helpLink="benchmarks">
+    <GCard title="Benchmarks">
         <template #help>
-            <p>
-                Benchmarks show the performance of taggers on the default datasets. The accuracy scores are given for
-                lemma, PoS, and both. For more details on the datasets, see the
-                <router-link to="/overview/datasets">datasets overview</router-link>.
-            </p>
-            <p>
-                <i>
-                    <strong>Note:</strong>
-                    When taggers use a different tagset than the reference tagset, the score can be very low.
-                </i>
-            </p>
+            <BenchmarksHelp />
+            <HelpLink topic="benchmarks" />
         </template>
 
         <GTable :columns :items :loading sortColumn="macroF1">

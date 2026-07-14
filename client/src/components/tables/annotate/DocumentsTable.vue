@@ -2,9 +2,15 @@
     <GTable title="Documents" :columns :items :loading sortColumn="name">
         <template #help>
             <slot name="help">
+                <p>
                 Here you can see the documents in the selected
-                {{ layer?.tagger?.name == SOURCE_LAYER ? "corpus" : "job" }} and a preview and summary of their
-                annotations.
+                    {{ layer?.tagger?.name == SOURCE_LAYER ? "corpus" : "job" }}. The overview gives the document
+                    <i>format</i>, a preview of the <i>text</i> and its size in <i>tokens</i>.
+                </p>
+                <p>
+                    By clicking on <InlineTextButton><i class="fa fa-info"></i></InlineTextButton> you can view the
+                    annotated <i>tokens</i> of a document.
+                </p>
             </slot>
         </template>
 

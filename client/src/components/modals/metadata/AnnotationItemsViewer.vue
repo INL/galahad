@@ -10,6 +10,14 @@
 
     <GModal v-if="showModal" @hide="showModal = false">
         <template #title>Annotations and principles of {{ tagger.name }}</template>
+        <template #help>
+            <p>
+                The principles are the guidelines that were used to create the annotations (e.g. part of speech
+                tagsets). For a list of all principles in the platform, see the
+                <router-link to="/overview/principles">principles overview</router-link>.
+            </p>
+            <HelpLink topic="principles" />
+        </template>
         <ul>
             <li v-for="item in items" :key="item.annotation">
                 {{ item.annotation }}

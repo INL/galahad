@@ -11,10 +11,7 @@
             sortColumn="macroF1"
         >
             <template #help>
-                <p>
-                    In Global Metrics an overview is given of the (dis)agreement between the two layers that have been
-                    selected for lemma and PoS comparison. By clicking on the percentage, a data sample is shown.
-                </p>
+                <GlobalMetricsHelp />
             </template>
         </MetricsTable>
 
@@ -28,6 +25,13 @@
             :downloading
             sortColumn="macroF1"
         >
+            <template #help>
+                <p>
+                    The extended global metrics allow you to calculate the scores for any combination. Select the
+                    annotation(s), grouping and analysis type you want to evaluate.
+                </p>
+                <HelpLink topic="global-metrics" displayName="global metrics" />
+            </template>
             <template #header>
                 <template v-if="commonAnnotations.length">
                     <GForm>

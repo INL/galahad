@@ -36,7 +36,7 @@
         <!-- Benchmark corpus table -->
         <CorporaTable title="Datasets" :filter="(c: CorpusMetadata) => c.dataset">
             <template #help>
-                <BenchmarkSetsHelp />
+                <DatasetsHelp />
             </template>
             <template #empty>No dataset corpora available.</template>
         </CorporaTable>

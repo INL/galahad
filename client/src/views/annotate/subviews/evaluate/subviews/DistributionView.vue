@@ -2,11 +2,7 @@
     <GCard>
         <GTable title="Type-Token Distribution" :columns :loading :items sortColumn="count">
             <template #help>
-                <p>
-                    The distribution shows what lemma, part-of-speech pairs have been assigned to which types. When
-                    there are more than five types you can click on the inspect symbol to view all types of a lemma-PoS
-                    combination.
-                </p>
+                <DistributionHelp />
             </template>
 
             <template #empty>

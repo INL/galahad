@@ -1,5 +1,5 @@
 <template>
-    <h2>Step 2: Documents</h2>
+    <h3>Step 2: Documents</h3>
     <p>
         Upload documents to a corpus. Documents can be previewed, downloaded or deleted. The platform accepts the
         following formats:

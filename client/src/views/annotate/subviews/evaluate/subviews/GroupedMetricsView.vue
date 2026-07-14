@@ -11,11 +11,7 @@
             sortColumn="hypothesis"
         >
             <template #help>
-                <p>
-                    In Grouped Metrics an overview is given of the (dis)agreement for lemma and PoS per part-of-speech.
-                    For each PoS, different metrics are given by choosing the annotation and the grouping. By clicking
-                    on a percentage, a data sample is shown.
-                </p>
+                <GroupedMetricsHelp />
             </template>
             <template #header>
                 <template v-if="commonAnnotations.length">

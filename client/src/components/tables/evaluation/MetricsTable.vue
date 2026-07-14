@@ -1,8 +1,7 @@
 <template>
-    <GTable :title :columns :items :loading helpLink="evaluation" class="metricsTable" :sortColumn>
+    <GTable :title :columns :items :loading class="metricsTable" :sortColumn>
         <template v-if="$slots.help" #help>
             <slot name="help"></slot>
-            <DifferentTagsetsHelp />
         </template>
 
         <template #empty> Select a hypothesis layer and a reference layer. </template>

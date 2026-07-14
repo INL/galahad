@@ -1,5 +1,5 @@
 <template>
-    <h2>Step 5: Export</h2>
+    <h3>Step 5: Export</h3>
     <p>
         First select the annotation layer you wish to export. You can export your annotated corpus in various formats.
         The export contains the metadata of the selected tagger. If the chosen export format is the same as the original
@@ -8,8 +8,9 @@
     </p>
     <p>You can choose not to export the PoS features, for instance <i>NOU-C</i> instead of <i>NOU-C(number=sg)</i>.</p>
     <p>
-        When choosing TEI P5 as export format, the LAnCeLoT annotation tool is available to manually correct the
-        PoS-tagging and lemmatisation of your corpus.
+        When choosing TEI P5 as export format, the
+        <ExternalLink href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</ExternalLink> annotation tool is
+        available to manually correct the PoS-tagging and lemmatisation of your corpus.
     </p>
-    <HelpLink helpLink="export" />
+    <HelpLink topic="export" />
 </template>

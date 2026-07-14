@@ -1,10 +1,8 @@
 <template>
     <GCard title="Principles">
         <template #help>
-            <p>Here you can see an overview of possible tagsets to annotate Dutch.</p>
-            <p>
-                <i>Currently only TDN-Core is used in the platform.</i>
-            </p>
+            <PrinciplesHelp />
+            <HelpLink topic="principles" />
         </template>
 
         <GTable :columns :items :loading sortColumn="annotation">
