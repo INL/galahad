@@ -45,9 +45,9 @@
             </template>
 
             <template #cell-name="d: TableData<Job>">
-                <ExternalLink :href="`/galahad/overview/taggers#${d.item.tagger.name}`">
+                <router-link :to="`/overview/taggers#${d.item.tagger.name}`">
                     {{ d.item.tagger.name }}
-                </ExternalLink>
+                </router-link>
             </template>
 
             <template #cell-annotations="d: TableData<Job>">

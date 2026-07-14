@@ -36,15 +36,15 @@
             </template>
 
             <template #cell-layer="d">
-                <ExternalLink :href="`/galahad/overview/taggers#${d.item.layer}`">
+                <router-link :to="`/overview/taggers#${d.item.layer}`">
                     {{ d.item.layer }}
-                </ExternalLink>
+                </router-link>
             </template>
 
             <template #cell-details="d">
-                <ExternalLink :href="`/galahad/annotate/evaluate?corpus=${corpusId}&hypothesis=${d.item.layer}`">
+                <router-link :to="`/annotate/evaluate?corpus=${corpusId}&hypothesis=${d.item.layer}`">
                     Details
-                </ExternalLink>
+                </router-link>
             </template>
 
             <template

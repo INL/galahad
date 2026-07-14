@@ -34,9 +34,10 @@
 
         <GModal v-if="modalData" @hide="modalData = undefined">
             <template #title> {{ modalData.principle.name }} ({{ modalData.annotation }}) </template>
+            <p>Used by:</p>
             <ul>
                 <li v-for="tagger in modalData.taggers" :key="tagger">
-                    <ExternalLink :href="`/galahad/overview/taggers#${tagger}`">{{ tagger }}</ExternalLink>
+                    <router-link :to="`/overview/taggers#${tagger}`">{{ tagger }}</router-link>
                 </li>
             </ul>
         </GModal>
