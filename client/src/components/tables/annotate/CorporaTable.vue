@@ -12,6 +12,10 @@
             <slot name="empty"></slot>
         </template>
 
+        <template v-if="$slots.files" #cell-documents="d: TableData<CorpusMetadata>">
+            <slot name="files" :item="d.item"></slot>
+        </template>
+
         <!-- source cell -->
         <template #cell-source="d: TableData<CorpusMetadata>">
             <ExternalLink v-if="d.item.source?.url" :href="d.item.source?.url">
