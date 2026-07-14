@@ -19,7 +19,6 @@ function check(): void {
     display: block;
     position: relative;
     padding: 0px 10px 0 30px;
-    margin-bottom: 12px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
