@@ -1,6 +1,6 @@
 <template>
     <GTable :columns :items>
-        <template #title>Annotations preview of {{ name }}</template>
+        <template #title>Annotations of {{ name }}</template>
         <template #header>
             <AnnotationSummary :annotations />
         </template>

@@ -10,7 +10,8 @@
                 <p>
                     Here you can see a sample of how a token was tagged by <i>{{ hypothesisLayer.tagger.name }}</i> and
                     <i>{{ referenceLayer.tagger.name }}</i
-                    >. The samples are a random selection of all tokens in this category.
+                    >. The samples are a random selection of all tokens in this category. Click on the checkboxes to
+                    show or hide columns. You can also download all samples in this category.
                 </p>
             </template>
 
@@ -24,15 +25,12 @@
             </template>
         </GTable>
         <!--Download-->
-        <p>Download all samples for this category.</p>
+        <p>Download all samples in this category.</p>
         <DownloadButton wide :loading="downloading" @click="$emit('download')" />
     </GModal>
 </template>
 
 <script setup lang="ts">
-// Libraries & stores
-
-// Types & API.
 import { literalsForTermComparison } from "@/ts/termcomparison"
 import type { TermComparison, EvaluationEntry } from "@/types/evaluation"
 import type { LayerMetadata } from "@/types/layers"

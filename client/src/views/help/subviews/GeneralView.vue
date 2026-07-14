@@ -49,7 +49,7 @@
                                         <li><a href="#grouped-metrics">Grouped Metrics</a></li>
                                         <!-- H4 -->
                                         <li>
-                                            <a href="#pos-confusion">Part of speech confusion</a>
+                                            <a href="#confusion">Part of speech confusion</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -97,18 +97,20 @@
             <p>
                 We have addressed this problem in the CLARIAH+ task
                 <i>Infrastructure for historical Dutch</i>, by 1. defining a
-                <a href="https://ivdnt.org/wp-content/uploads/2024/11/TDNV2_combi.pdf">tagset</a>
+                <ExternalLink href="https://ivdnt.org/wp-content/uploads/2024/11/TDNV2_combi.pdf">tagset</ExternalLink>
                 applicable to all phases of historical Dutch (TDN), with mappings to the tagsets used in existing
                 historical and modern corpora, and principles for
-                <a href="https://ivdnt.org/wp-content/uploads/2024/11/lemmatiseerprincipesV2_combi.pdf">lemmatisation</a
+                <ExternalLink href="https://ivdnt.org/wp-content/uploads/2024/11/lemmatiseerprincipesV2_combi.pdf"
+                    >lemmatisation</ExternalLink
                 >, 2. by harmonising and extending
-                <a href="https://github.com/instituutnederlandsetaal/galahad-corpus-data/"
-                    >training and evaluation material</a
+                <ExternalLink href="https://github.com/instituutnederlandsetaal/galahad-corpus-data/"
+                    >training and evaluation material</ExternalLink
                 >, and 3. by developing an online infrastructure for historical corpus building and deployment,
-                consisting of the <a href="https://autosearch.ivdnt.org/">Autosearch</a> corpus exploration environment,
-                the <a href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</a> tool for manual correction of
-                linguistic annotation and the GaLAHaD application for the deployment and evaluation of various
-                approaches to automatic linguistic annotation.
+                consisting of the <ExternalLink href="https://autosearch.ivdnt.org/">Autosearch</ExternalLink> corpus
+                exploration environment, the
+                <ExternalLink href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</ExternalLink> tool for manual
+                correction of linguistic annotation and the GaLAHaD application for the deployment and evaluation of
+                various approaches to automatic linguistic annotation.
             </p>
 
             <!-- H2: Introducing GaLAHaD -->
@@ -134,16 +136,33 @@
                 For tool developers, the docker-based application architecture ensures easy contribution of tools to the
                 platform. The application and taggers are hosted by the INT and accessible with any CLARIN-account.
                 There is also the option to self-host an instance using the publicly available docker images from the
-                <a href="https://hub.docker.com/u/instituutnederlandsetaal">INT Docker Hub</a>
-                or the open source code available on
-                <a href="https://github.com/instituutnederlandsetaal/galahad">GitHub</a>.
+                <ExternalLink href="https://hub.docker.com/u/instituutnederlandsetaal">INT Docker Hub</ExternalLink>
+                or the open source code available on the
+                <ExternalLink href="https://github.com/instituutnederlandsetaal/galahad">GaLAHaD GitHub</ExternalLink>.
+            </p>
+
+            <h2 id="releases">Releases</h2>
+
+            <p>
+                For detailed release notes, check the
+                <ExternalLink href="https://github.com/instituutnederlandsetaal/galahad/releases"
+                    >Releases page on GitHub</ExternalLink
+                >.
             </p>
 
             <!-- H2: Release 1.0.0 -->
-            <h2 id="release">Release 1.0.0</h2>
+            <h3 id="release-1-0-0">Release 1.0.0</h3>
             <p>
                 The tools for annotation with part of speech and lemma have all been trained on Gold Standard Data
                 enriched with the TDN core tagset.
+            </p>
+
+            <!-- H2: Release 2.0.0 -->
+            <h3 id="release-2-0-0">Release 2.0.0</h3>
+            <p>
+                GaLAHaD has been extended to support more linguistic annotations, namely dependency relations and named
+                entities; and evaluation methods have been updated accordingly. A focus has also been laid on
+                attributions and annotation principles used by tools in the platform.
             </p>
 
             <!-- H1: Application User Manual -->
@@ -156,18 +175,25 @@
 
             <!-- H2: Annotate & Evaluate -->
             <h2 id="annotate-evaluate">Annotate & Evaluate</h2>
-            <p>Click on the <code>Annotate & Evaluate</code> to start annotating and/or evaluating.</p>
+            <p>
+                Click on the <router-link to="/annotate">Annotate & Evaluate</router-link> to start annotating and/or
+                evaluating.
+            </p>
 
             <!-- H3: Scenario 1 -->
             <h3 id="corpora">Scenario 1: Annotate and evaluate your own corpus</h3>
             <p>
                 You can create a corpus within the platform that you would like to annotate. Corpora you have uploaded
-                will be listed in <code>Corpora</code> under "your corpora". When you have uploaded a corpus, you can
-                always modify the metadata. You can also remove an uploaded corpus from the platform.
+                will be listed in <InlineTextButton>Corpora</InlineTextButton> under "your corpora". When you have
+                uploaded a corpus, you can always modify the metadata. You can also remove an uploaded corpus from the
+                platform.
             </p>
 
             <h4>Define your corpus</h4>
-            <p>Click on <code class="green-marker">New</code> to create a corpus and fill in the metadata.</p>
+            <p>
+                Click on <InlineTextButton green><i class="fa fa-plus"></i></InlineTextButton> to create a corpus and
+                fill in the metadata.
+            </p>
             <p>
                 The corpus name is required. When the corpus is already tagged and lemmatised, please add the name of
                 the tagset. You can add additional metadata on the time period covered by your corpus and the source of
@@ -177,28 +203,31 @@
             <h4>Upload the corpus files</h4>
             <p>
                 The created corpus is listed under "your corpora" but does not yet contain data. Go to
-                <code>Documents</code> to upload the corpus files. The following formats are allowed: Plain text, TSV,
-                CoNLL-U, TEI P5, TEI P4, NAF and FoLiA; see
+                <InlineTextButton>Documents</InlineTextButton> to upload the corpus files. The following formats are
+                allowed: Plain text, TSV, CoNLL-U, TEI P5, TEI P4, NAF and FoLiA; see
                 <ExternalLink href="/galahad/help/formats">Formats</ExternalLink>
                 for more information.
             </p>
 
             <h4 id="jobs">Annotate your corpus</h4>
             <p>
-                After you have uploaded your file(s), please go to <code>Jobs</code> to choose one or more taggers to
-                annotate your corpus. There are filters to help you choose a tagger, but it is also possible to look at
-                the benchmark results (<code>Benchmarks</code> in <code>Taggers & Datasets</code>) of the available
-                taggers to get more insight into the performance of a tagger.
+                After you have uploaded your file(s), please go to <InlineTextButton>Jobs</InlineTextButton> to choose
+                one or more taggers to annotate your corpus. There are filters to help you choose a tagger, but it is
+                also possible to look at the benchmark results (<router-link to="/overview/benchmarks"
+                    >Benchmarks in Taggers & Datasets</router-link
+                >) of the available taggers to get more insight into the performance of a tagger.
             </p>
             <p>
-                To start a tagging job, click on <code>View & Tag</code> in the list of tools and then on
-                <code class="green-marker">Start</code> to start a job. This may take a while, depending on the corpus
-                size. The progress of your job or jobs is listed per tool in the tagger overview.
+                To start a tagging job, click on
+                <InlineTextButton><i class="fa fa fa-cogs"></i></InlineTextButton> in the list of tools and then on
+                <InlineTextButton green><i class="fa fa fa-play"></i></InlineTextButton> to start a job. This may take a
+                while, depending on the corpus size. The progress of your job or jobs is listed per tool in the tagger
+                overview.
             </p>
             <p>
-                The tagger status (pending, busy, error, finished) will be displayed in the status bar. Tagging is
-                carried out in the background. You do not need to keep the application open. The total number of
-                documents that is being processed indicates how busy the server is.
+                The tagger status (untagged, processing, error, finished) will be displayed in the status bar. Tagging
+                is carried out in the background. You do not need to keep the application open. The total number of jobs
+                that is being processed indicates how busy the server is.
             </p>
             <p>
                 You can also stop and delete existing jobs. A preview of the resulting annotation layer is shown as
@@ -211,8 +240,8 @@
                 scenario, you select part of your corpus, do a first automatic part of speech tagging and lemmatisation
                 with a tagger in the platform you think will produce the best possible automatic tagging and then
                 manually correct the annotations.
-                <a href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</a> provides an environment to do this
-                manual verification.
+                <ExternalLink href="https://portal.clarin.ivdnt.org/lancelot/">LAnCeLoT</ExternalLink> provides an
+                environment to do this manual verification.
             </p>
             <p>
                 You then upload your gold standard as a separate corpus to use for extensive evaluation so as to be able
@@ -252,9 +281,17 @@
             </h3>
             <ul>
                 <li>Select a corpus by clicking on a row.</li>
-                <li>Click on <code>Documents</code> to view the content of the uploaded corpus.</li>
-                <li>Click on <code>Jobs</code> to get an overview of the taggers used on the benchmark corpus.</li>
-                <li>Click on <code>Evaluate</code> to evaluate the linguistic annotation of the selected corpus.</li>
+                <li>
+                    Click on <InlineTextButton>Documents</InlineTextButton> to view the content of the uploaded corpus.
+                </li>
+                <li>
+                    Click on <InlineTextButton>Jobs</InlineTextButton> to get an overview of the taggers used on the
+                    benchmark corpus.
+                </li>
+                <li>
+                    Click on <InlineTextButton>Evaluate</InlineTextButton> to evaluate the linguistic annotation of the
+                    selected corpus.
+                </li>
             </ul>
             <p>For further information on the evaluation, see the section below.</p>
 
@@ -263,7 +300,7 @@
             <p>
                 It is possible to do an extensive evaluation of the linguistic annotation in the GaLAHaD platform.
                 Before we explain how to evaluate, we begin with an explanation of the terminology used in
-                <code>Evaluate</code>.
+                <InlineTextButton>Evaluate</InlineTextButton>.
             </p>
 
             <!-- H3: Evaluation terminology -->
@@ -275,11 +312,18 @@
                 <router-link to="/help/evaluation">detailed evaluation help</router-link>.
             </p>
 
-            <h4>F1</h4>
-            <p>A combined score of precision and recall, using micro-averaging.</p>
-            <div>
-                <code> F1 = 2 * (precision * recall) / (precision + recall) </code>
-            </div>
+            <h4>True positive (TP)</h4>
+            <p>
+                In the context of automatic linguistic annotation a true positive for label X is an instance that has
+                been correctly annotated with label X. (Both hypothesis and reference layer have label X.)
+            </p>
+
+            <h4>False positive (FP)</h4>
+            <p>
+                In the context of automatic linguistic annotation a false positive for label X is an instance that has
+                been annotated with label X, but should not have been. (The hypothesis layer has X, the reference layer
+                has another label.)
+            </p>
 
             <h4>False negative (FN)</h4>
             <p>
@@ -288,11 +332,10 @@
                 another label.)
             </p>
 
-            <h4>False positive (FP)</h4>
+            <h4>No match</h4>
             <p>
-                In the context of automatic linguistic annotation a false positive for label X is an instance that has
-                been annotated with label X, but should not have been. (The hypothesis layer has X, the reference layer
-                has another label.)
+                A <i>no match</i> measures the amount of instances for which there was an issue with the alignment of
+                the hypothesis and reference layers.
             </p>
 
             <h4>Hypothesis layer</h4>
@@ -307,52 +350,6 @@
                 The reference layer is the annotation layer you want to compare the hypothesis layer to. It can either
                 be the source layer, i.e. the annotation that was already in your corpus when uploading it to the
                 platform, or an annotation layer coming from another tagger of the platform.
-            </p>
-
-            <h4>True positive (TP)</h4>
-            <p>
-                In the context of automatic linguistic annotation a true positive for label X is an instance that has
-                been correctly annotated with label X. (Both hypothesis and reference layer have label X.)
-            </p>
-
-            <h4>Macro-averaging versus micro-averaging</h4>
-            <p>
-                Macro-averaging shows average performance across classes, treating each class as equally important.
-                Micro-averaging gives equal weight to every instance and shows average performance across all
-                predictions.
-            </p>
-            <p>
-                In corpus linguistics, where words have a Zipfian distribution, micro-averaging tends to obscure poor
-                performance on less frequent words.
-            </p>
-
-            <h4>Macro F1</h4>
-            <p>A combined score of macro precision and macro recall.</p>
-            <div>
-                <code> Macro F1 = 2 * (macro precision * macro recall) / (macro precision + macro recall) </code>
-            </div>
-
-            <h4>Macro precision</h4>
-            <p>Precision measured using macro-averaging.</p>
-
-            <h4>Macro recall</h4>
-            <p>Recall measured using macro-averaging.</p>
-
-            <h4>Micro accuracy</h4>
-            <p>Accuracy using micro-averaging.</p>
-
-            <h4>Multiple PoS</h4>
-            <p>
-                For tokens that in fact consist of more than one word, a multiple analysis is given. This means that one
-                token is not only assigned more than one lemma but also more than one part of speech. An example:
-                <code>int</code> analysed as <code>IN (ADP) + HET (PD)</code>. The evaluation results for part of speech
-                tagging are taking the assignment of multiple part of speech tags into account.
-            </p>
-
-            <h4>No match</h4>
-            <p>
-                A <i>no match</i> measures the amount of instances for which there was an issue with the alignment of
-                hypothesis and reference layer.
             </p>
 
             <h4>Precision</h4>
@@ -381,20 +378,64 @@
                 labelled VRB in the hypothesis layer, recall is 90%.
             </p>
 
+            <h4>F1</h4>
+            <p>A combined score of precision and recall, using micro-averaging.</p>
+            <div>
+                <code> F1 = 2 * (precision * recall) / (precision + recall) </code>
+            </div>
+
+            <h4>Macro-averaging versus micro-averaging</h4>
+            <p>
+                Macro-averaging shows average performance across classes, treating each class as equally important.
+                Micro-averaging gives equal weight to every instance and shows average performance across all
+                predictions.
+            </p>
+            <p>
+                In corpus linguistics, where words have a Zipfian distribution, micro-averaging tends to obscure poor
+                performance on less frequent words.
+            </p>
+
+            <h4>Macro F1</h4>
+            <p>A combined score of macro precision and macro recall.</p>
+            <div>
+                <code> Macro F1 = 2 * (macro precision * macro recall) / (macro precision + macro recall) </code>
+            </div>
+
+            <h4>Macro precision</h4>
+            <p>Precision measured using macro-averaging.</p>
+
+            <h4>Macro recall</h4>
+            <p>Recall measured using macro-averaging.</p>
+
+            <h4>Micro accuracy</h4>
+            <p>
+                Accuracy using micro-averaging. Note that for micro-averaging, accuracy is mathematically the same as
+                the other metrics.
+            </p>
+
+            <h4>Multiple PoS</h4>
+            <p>
+                For tokens that in fact consist of more than one word, a multiple analysis is given. This means that one
+                token is not only assigned more than one lemma but also more than one part of speech. An example:
+                <code>int</code> analysed as <code>IN (ADP) + HET (PD)</code>. The evaluation results for part of speech
+                tagging are taking the assignment of multiple part of speech tags into account.
+            </p>
+
             <!-- H3: How to evaluate -->
             <h3 id="how-to-evaluate">How to evaluate and what are the evaluation metrics</h3>
             <p>
                 To evaluate the linguistic annotation of a corpus, choose a hypothesis layer and a reference layer. The
                 available layers in your corpus will be shown in the drop-down list. Once you have selected a reference
                 layer and a hypothesis layer, the evaluation metrics will be computed. The result is information on
-                <code>Distribution</code>, <code>Global Metrics</code>, <code>Grouped Metrics</code> and
-                <code>Pos Confusion</code>. The evaluation results are downloadable.
+                <InlineTextButton>Distribution</InlineTextButton>, <InlineTextButton>Global Metrics</InlineTextButton>,
+                <InlineTextButton>Grouped Metrics</InlineTextButton> and <InlineTextButton>Confusion</InlineTextButton>.
+                The evaluation results are downloadable.
             </p>
 
             <h4 id="distribution">Distribution</h4>
             <p>
-                In <code>Distribution</code> an insight is given into the annotation of your corpus by showing what
-                lemma, part of speech pairs have been assigned to which types.
+                In <InlineTextButton>Distribution</InlineTextButton> an insight is given into the annotation of your
+                corpus by showing what annotations have been assigned to which types.
             </p>
             <p>
                 Numbers are given for <i>lemma/single PoS</i>, <i>lemma/multiple PoS</i> or
@@ -410,13 +451,13 @@
 
             <h4 id="global-metrics">Global Metrics</h4>
             <p>
-                In <code>Global Metrics</code> an overall overview is given of the (dis)agreement between the two layers
-                that have been selected for lemma and PoS comparison.
+                In <InlineTextButton>Global Metrics</InlineTextButton> an overall overview is given of the
+                (dis)agreement between the two layers that have been selected for lemma and PoS comparison.
             </p>
             <p>
-                The <code>Basic Global Metrics</code> table gives information on lemma, PoS or the combination of Lemma
-                and PoS. The <code>Extended Global Metrics</code> table gives more detailed information on the accuracy
-                of tokens with a single analysis versus tokens with a multiple analysis.
+                The <i>Basic Global Metrics</i> table gives information on lemma, PoS or the combination of Lemma and
+                PoS. The <i>Extended Global Metrics</i> table gives more detailed information on the accuracy of tokens
+                with a single analysis versus tokens with a multiple analysis.
             </p>
             <p>
                 The <b>grouped by</b> column defines the classes over which macro-averaging is computed. For example,
@@ -425,9 +466,9 @@
             </p>
             <p>
                 Grouped by and Annotation may also have different values. For instance,
-                <i>annotation=Lemma</i> and grouped <i>by=PoS</i> (in <code>Extended Global Metrics</code>) means that
-                macro precision for lemma assignment is computed by assigning equal weight to the precisions measured
-                within each PoS class separately.
+                <i>annotation=Lemma</i> and grouped <i>by=PoS</i> (in <i>Extended Global Metrics</i>) means that macro
+                precision for lemma assignment is computed by assigning equal weight to the precisions measured within
+                each PoS class separately.
             </p>
             <p>The result is presented in two different tables; an example:</p>
             <img src="@/assets/help/basic-global-metrics.png" />
@@ -446,15 +487,14 @@
 
             <h4 id="grouped-metrics">Grouped Metrics</h4>
             <p>
-                In <code>Grouped Metrics</code> an overview is given of the (dis)agreement between the two layers per
-                part of speech.
+                In <InlineTextButton>Grouped Metrics</InlineTextButton> an overview is given of the (dis)agreement
+                between the two layers per part of speech.
             </p>
             <p>
                 By default the metrics are given for the annotation part of speech, grouped by part of speech for both
-                single and multiple analysis. By changing the value of the <code>Annotation</code>,
-                <code>Group by</code> and <code>Single/multiple analysis</code>, the other available metrics per PoS can
-                be displayed. See <a href="#global-metrics">Global Metrics</a> for a further explanation of what
-                <b>grouped by</b> means.
+                single and multiple analysis. By changing the value of the <i>Annotation</i>, <i>Group by</i> and
+                <i>Single/multiple analysis</i>, the other available metrics per PoS can be displayed. See
+                <a href="#global-metrics">Global Metrics</a> for a further explanation of what <b>grouped by</b> means.
             </p>
             <p>The result is presented in a table, for example:</p>
             <img src="@/assets/help/grouped-metrics.png" />
@@ -472,20 +512,20 @@
                 token (in abbreviations like "e.g." or "i.e.", or in "mr." in the example above).
             </p>
 
-            <h4 id="pos-confusion">Part of speech confusion</h4>
+            <h4 id="confusion">Confusion table</h4>
             <p>
-                In <code>Pos Confusion</code>, an overview is given of the matches (in green) and mismatches per PoS
-                when comparing the tagging of the hypothesis layer with the reference layer. If the hypothesis layer and
-                reference layer have been tagged using a different tagset, the confusion table can give more detailed
-                insight into the part of speech tagging.
+                In <InlineTextButton>Confusion</InlineTextButton>, an overview is given of the matches (in green) and
+                mismatches per PoS when comparing the tagging of the hypothesis layer with the reference layer. If the
+                hypothesis layer and reference layer have been tagged using a different tagset, the confusion table can
+                give more detailed insight into the part of speech tagging.
             </p>
             <p>
                 The confusion table contains information on each part of speech and on the amount of no-matches. The
                 category "MULTIPLE" contains combined tags like "ADP+NOU-C" or "VRB+PD+PD". These are shown in one cell,
                 but this does not mean that the taggers agree on the exact tags. Click on the cell or look at the
-                <code>Global Metrics</code> for more details. NO_POS refers to missing part of speech tagging, PC refers
-                to the encoding of punctuation and <i>Missing Match</i> refers to tokens that could not be aligned (for
-                example, due to how a tagger treats punctuation in abbreviations).
+                <InlineTextButton>Global Metrics</InlineTextButton> for more details. NO_POS refers to missing part of
+                speech tagging, PC refers to the encoding of punctuation and <i>Missing Match</i> refers to tokens that
+                could not be aligned (for example, due to how a tagger treats punctuation in abbreviations).
             </p>
             <p>An example of a confusion matrix:</p>
             <img src="@/assets/help/pos-confusion.png" />
@@ -498,42 +538,20 @@
 
             <!-- H3: Taggers -->
             <h3 id="taggers">Taggers</h3>
-            <p>
-                Here you can find an overview of all taggers (for part of speech and lemma) the GaLAHaD platform offers.
-                The overview gives a short description of the tool, the tagset, the period the training data covered and
-                the annotation types. You can also find a link to the training data, the software and the model.
-            </p>
+            <TaggersHelp />
 
             <!-- H3: Tagsets -->
-            <h3 id="tagsets">Tagsets</h3>
-            <p>
-                Here you can find an overview of the possible tagsets used for annotation of Dutch. For now, GaLAHaD
-                offers taggers that have been trained on Gold Standard Data using the TDN core tagset.
-            </p>
+            <h3 id="principles">Principles</h3>
+            <PrinciplesHelp />
 
             <!-- H3: Datasets -->
             <h3 id="datasets">Datasets</h3>
-            <p>
-                Here you can find an overview of the test sets that have been used to benchmark the taggers. The
-                complete benchmark sets, including training and development sets can be found on Github:
-                <a href="https://github.com/instituutnederlandsetaal/galahad-corpus-data">galahad-corpus-data</a>.
-            </p>
+            <DatasetsHelp />
 
             <!-- H3: Benchmarks -->
             <h3 id="benchmarks">Benchmarks</h3>
-            <p>
-                Here you can see how well the different available taggers do on the different benchmark datasets. Choose
-                a dataset to get an overview.
-            </p>
-            <p>
-                Per tagger, macro precision, macro recall, macro F1 and micro accuracy are given; by default for the
-                annotation part of speech, grouped by part of speech for both single and multiple analysis. By changing
-                the value of the
-                <code>Annotation</code>, <code>Group by</code> and <code>Single/multiple analysis</code>, the other
-                available metrics per tagger can be displayed. See <a href="#global-metrics">Global Metrics</a> for a
-                further explanation of what grouped by means. For more detailed information on the evaluation of a
-                tagger, click on <code>Details</code>.
-            </p>
+            <BenchmarksHelp />
+
             <p>An example:</p>
             <img src="@/assets/help/benchmarks.png" />
 
@@ -588,6 +606,7 @@ a:visited {
 .right {
     overflow-y: auto;
     flex: 1;
+    padding-bottom: 3rem !important;
 }
 
 .left {
