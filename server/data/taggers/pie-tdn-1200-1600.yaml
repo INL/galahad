@@ -1,5 +1,5 @@
 name: pie-tdn-1200-1600
-description: PIE trained on DBNL excerpts, GTB dictionary quotations, CLVN & Gysseling (1200-1600)
+description: PIE trained on DBNL excerpts, GTB dictionary quotations, CLVN & Gysseling
 language: Dutch
 period:
   from: 1200

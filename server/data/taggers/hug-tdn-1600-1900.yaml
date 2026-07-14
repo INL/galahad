@@ -1,5 +1,5 @@
 name: hug-tdn-1600-1900
-description: INT-Hug trained on DBNL excerpts, GTB dictionary quotations, newspapers & letters as loot (1600-1900)
+description: INT-Hug trained on DBNL excerpts, GTB dictionary quotations, newspapers & letters as loot
 language: Dutch
 period:
   from: 1600

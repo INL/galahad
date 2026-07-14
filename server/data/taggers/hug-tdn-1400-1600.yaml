@@ -1,5 +1,5 @@
 name: hug-tdn-1400-1600
-description: INT-Hug trained on DBNL excerpts, GTB dictionary quotations & CLVN (1400-1600)
+description: INT-Hug trained on DBNL excerpts, GTB dictionary quotations & CLVN
 language: Dutch
 period:
   from: 1400
