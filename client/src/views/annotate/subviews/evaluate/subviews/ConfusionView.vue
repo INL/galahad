@@ -134,7 +134,7 @@ function strEqual(a: string, b: string) {
 
 /** returns whether this pos should be sorted to the bottom. */
 function posToBottom(pos: string) {
-    const posses = ["NO_POS", "MISSING_MATCH", "OTHER", "LET", "PUNCT", "PC", "MULTIPLE"]
+    const posses = ["NO_POS", "MISSING_MATCH", "OTHER", "MULTIPLE"]
     return posses.includes(pos)
 }
 
