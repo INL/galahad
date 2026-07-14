@@ -257,6 +257,8 @@ table {
 
     tbody {
         tr {
+            height: 1rlh;
+
             &:nth-child(even) {
                 background: #fff;
             }
@@ -267,10 +269,16 @@ table {
 
             td {
                 padding: 0.4rem;
+                :deep(button) {
+                    padding: 8px;
+                }
+
                 &.button {
-                    padding: 0;
+                    padding: 0 !important;
+                    height: 100%;
                     :deep(button) {
                         width: 100%;
+                        height: 100%;
                         border: 0;
                     }
                 }
