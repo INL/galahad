@@ -6,13 +6,13 @@
         <template #help>
             <slot name="help">
                 <p>
-                    Here you can see the documents in the selected
-                    {{ layer?.tagger?.name == SOURCE_LAYER ? "corpus" : "job" }}. The overview gives the document
+                    Here you can see the files in the selected
+                    {{ layer?.tagger?.name == SOURCE_LAYER ? "corpus" : "job" }}. The overview gives the file
                     <i>format</i>, a preview of the <i>text</i> and its size in <i>tokens</i>.
                 </p>
                 <p>
                     By clicking on <InlineTextButton><i class="fa fa-info"></i></InlineTextButton> you can view the
-                    annotated <i>tokens</i> of a document.
+                    annotated <i>tokens</i> of a file.
                 </p>
             </slot>
         </template>
@@ -25,7 +25,7 @@
         <template #header>
             <slot name="header"></slot>
             <aside v-if="layer?.documents" style="text-align: center">
-                <p>Summary of {{ items.length }} {{ items.length === 1 ? "document" : "documents" }}:</p>
+                <p>Summary of {{ items.length }} {{ items.length === 1 ? "file" : "files" }}:</p>
                 <AnnotationSummary :annotations="layer?.annotations" />
             </aside>
         </template>
