@@ -1,6 +1,6 @@
 <template>
     <GCard>
-        <CorporaTable title="Datasets" :filter="(c: CorpusMetadata) => c.dataset">
+        <CorporaTable title="Datasets" :filter="(c: CorpusMetadata) => c.dataset" :selectable="false">
             <template #help>
                 <DatasetsHelp />
                 <HelpLink topic="datasets" />
