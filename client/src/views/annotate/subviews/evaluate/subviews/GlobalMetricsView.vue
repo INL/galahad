@@ -192,6 +192,13 @@ const columns: Column<GlobalMetrics>[] = computed(() => [
         sortOn: (g: GlobalMetrics) => g.macro.f1,
     },
     {
+        key: "hypothesis",
+        label: "count",
+        align: "right",
+        format: (c: ClassificationClasses) => c.hypothesis.toLocaleString(),
+        sortOn: (c: ClassificationClasses) => c.hypothesis,
+    },
+    {
         key: "truePositive",
         label: `true<br>positive`,
         button: true,
