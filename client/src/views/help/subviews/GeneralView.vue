@@ -396,10 +396,28 @@
             </p>
 
             <h4>Macro F1</h4>
-            <p>A combined score of macro precision and macro recall.</p>
+            <p>
+                There exist two different methods for calculating macro F1 and they do not produce equivalent results.
+                Method 1 is to sum the F1 score of all classes and to divide by the number of classes. This is the
+                <em>averaged F1</em>. Method 2 is the <em>F1 of averages</em> and calculates the F1 score via much the
+                same formula as micro F1, that is:
+            </p>
             <div>
                 <code> Macro F1 = 2 * (macro precision * macro recall) / (macro precision + macro recall) </code>
             </div>
+            <p>
+                Opitz & Burst (2019) show that Method 2 is
+                <q cite="https://doi.org/10.48550/arXiv.1911.03347"
+                    >overly ‘benevolent’ towards heavily biased classifiers and can yield misleadingly high evaluation
+                    score</q
+                >. As such, they recommend Method 1, <em>averaged F1</em>. This is the method that GaLAHaD uses.
+            </p>
+            <cite
+                >Juri Opitz & Sebastian Burst (2019), Macro F1 and Macro F1. DOI:
+                <ExternalLink href="https://doi.org/10.48550/arXiv.1911.03347"
+                    >https://doi.org/10.48550/arXiv.1911.03347</ExternalLink
+                ></cite
+            >
 
             <h4>Macro precision</h4>
             <p>Precision measured using macro-averaging.</p>
