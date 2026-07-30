@@ -38,5 +38,5 @@ import useLayers from "@/stores/layers"
 const { corpus } = storeToRefs(useCorpora())
 const { downloadCSV } = useEvaluation()
 const { loading } = storeToRefs(useEvaluation())
-const { hypothesisId, referenceId } = useLayers()
+const { hypothesisId, referenceId } = storeToRefs(useLayers())
 </script>
