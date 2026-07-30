@@ -9,6 +9,7 @@
 # This upgrade script parses all json in the ARG1 folder and updates the json to the new format.
 
 import json
+import shutil
 from argparse import ArgumentParser
 from pathlib import Path
 
@@ -78,7 +79,7 @@ def update_documents(corpus: Path, output: Path) -> None:
         # copy over to output
         doc_out = output / "layers/source/documents" / document.stem / "file" / document.name
         doc_out.parent.mkdir(parents=True, exist_ok=True)
-        doc_out.write_text(doc.read_text(encoding="utf-8"), encoding="utf-8")
+        shutil.copyfile(doc, doc_out)
 
 
 if __name__ == "__main__":
