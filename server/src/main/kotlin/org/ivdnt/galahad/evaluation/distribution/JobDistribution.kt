@@ -46,7 +46,7 @@ class JobDistribution(@JsonValue val typeTokens: List<TypeToken>) {
             )
 
         fun toCsv(typeTokens: List<TypeToken>): CsvString = buildString {
-            append(CsvFile.toCsvString(listOf("lemma", "group", "count", "unique", "tokens")))
+            append(CsvFile.toCsvString(listOf("annotation", "group", "count", "unique", "tokens")))
             for (tt in typeTokens) {
                 append(
                     CsvFile.toCsvString(
@@ -55,7 +55,9 @@ class JobDistribution(@JsonValue val typeTokens: List<TypeToken>) {
                             tt.group,
                             tt.count,
                             tt.tokens.size,
-                            tt.tokens.entries.joinToString { "${it.key} (${it.value})" },
+                            tt.tokens.entries
+                                .sortedByDescending { it.value }
+                                .joinToString { "${it.key} (${it.value})" },
                         )
                     )
                 )

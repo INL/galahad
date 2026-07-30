@@ -11,40 +11,6 @@ import org.ivdnt.galahad.util.parallelMap
 
 class JobMetrics(@JsonValue val metrics: Metrics) {
 
-    fun toGlobalCsv(): CsvString = buildString {
-        append(
-            CsvFile.toCsvString(
-                listOf(
-                    "annotation",
-                    "grouped by",
-                    "macro precision",
-                    "macro recall",
-                    "macro f1",
-                    "micro accuracy",
-                    "count",
-                    "true positive",
-                    "false negative",
-                    "no match",
-                )
-            )
-        )
-        append(
-            CsvFile.toCsvString(
-                listOf(
-                    metrics.settings.group,
-                    metrics.macro.precision,
-                    metrics.macro.recall,
-                    metrics.macro.f1,
-                    metrics.accuracy, // todo other micros
-                    metrics.classes.hypothesis,
-                    metrics.classes.truePositive.count,
-                    metrics.classes.falseNegative.count,
-                    metrics.classes.noMatch.count,
-                )
-            )
-        )
-    }
-
     companion object {
         fun create(
             corpus: Corpus,
@@ -97,7 +63,8 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
                     )
                 )
             )
-            for ((key, value) in metric.grouped) {
+            for ((key, value) in
+                metric.grouped.entries.sortedByDescending { it.value.hypothesis }) {
                 append(
                     CsvFile.toCsvString(
                         listOf(

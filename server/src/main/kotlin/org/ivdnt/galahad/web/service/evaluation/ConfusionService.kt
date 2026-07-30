@@ -7,6 +7,7 @@ import org.ivdnt.galahad.evaluation.JobPair
 import org.ivdnt.galahad.evaluation.comparison.ConfusionLayerFilter
 import org.ivdnt.galahad.evaluation.comparison.HeadGroupTermFilter
 import org.ivdnt.galahad.evaluation.confusion.JobConfusion
+import org.ivdnt.galahad.evaluation.csv.CsvFile
 import org.ivdnt.galahad.evaluation.csv.CsvSampleExporter.Companion.samplesToCSV
 import org.ivdnt.galahad.web.service.CorporaService
 import org.springframework.stereotype.Service
@@ -57,10 +58,16 @@ class ConfusionService(private val corpora: CorporaService) : BaseEvaluationServ
 
     fun createConfusionCsv(dir: File, corpus: UUID, hypothesis: String, reference: String) {
         dir.mkdirs()
-        //        val confusions = getJobConfusion(corpus, hypothesis, reference)
-        //        confusions.confusion.forEach { (annotation, confusion) ->
-        //            val file = CsvFile(dir.resolve("confusion-${annotation.value}.csv"))
-        //            file.append(JobConfusion.toCsv(confusion))
-        //        }
+
+        val hypAnnotations = annotationsInLayer(corpus, hypothesis)
+        val refAnnotations = annotationsInLayer(corpus, reference)
+        val supported = setOf(Annotation.POS, Annotation.UPOS, Annotation.DEPREL)
+        val common = hypAnnotations.intersect(refAnnotations).intersect(supported)
+
+        for (annotation in common) {
+            val confusion = getLayerConfusion(corpus, hypothesis, reference, annotation)
+            val file = CsvFile(dir.resolve("confusion-$annotation.csv"))
+            file.append(JobConfusion.toCsv(confusion.confusion))
+        }
     }
 }

@@ -2,6 +2,8 @@ package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import org.ivdnt.galahad.annotations.Annotation
+import org.ivdnt.galahad.evaluation.csv.CsvFile
+import org.ivdnt.galahad.evaluation.csv.CsvString
 import org.ivdnt.galahad.util.notNaN
 
 class Metrics(
@@ -57,4 +59,40 @@ class GlobalMetrics(
     val classes: ClassificationClasses,
     val accuracy: Float,
     val macro: ClassificationMetrics,
-)
+) {
+    fun toCsv(): CsvString =
+        CsvFile.toCsvString(
+            listOf(
+                settings.annotations.joinToString(" "),
+                settings.group,
+                accuracy,
+                macro.accuracy,
+                macro.precision,
+                macro.recall,
+                macro.f1,
+                classes.hypothesis,
+                classes.truePositive.count,
+                classes.falseNegative.count,
+                classes.noMatch.count,
+            )
+        )
+
+    companion object {
+        fun getCsvHeader(): CsvString =
+            CsvFile.toCsvString(
+                listOf(
+                    "annotations",
+                    "group",
+                    "micro accuracy",
+                    "macro accuracy",
+                    "macro precision",
+                    "macro recall",
+                    "macro f1",
+                    "count",
+                    "true positive",
+                    "false negative",
+                    "no match",
+                )
+            )
+    }
+}

@@ -8,6 +8,7 @@ import org.ivdnt.galahad.evaluation.JobPair
 import org.ivdnt.galahad.evaluation.comparison.DummyFilter
 import org.ivdnt.galahad.evaluation.comparison.HeadGroupTermFilter
 import org.ivdnt.galahad.evaluation.comparison.MetricsLayerFilter
+import org.ivdnt.galahad.evaluation.csv.CsvFile
 import org.ivdnt.galahad.evaluation.csv.CsvSampleExporter.Companion.samplesToCSV
 import org.ivdnt.galahad.evaluation.metrics.*
 import org.ivdnt.galahad.web.service.CorporaService
@@ -120,14 +121,44 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
 
     fun createMetricsCsv(dir: File, corpus: UUID, hypothesis: String, reference: String) {
         dir.mkdirs()
-        //        val metrics = getJobMetric(corpus, hypothesis, reference, Annotation.POS,
-        // Annotation.POS)
-        //        val globFile = CsvFile(dir.resolve("metrics-global.csv"))
-        //        globFile.append(metrics.toGlobalCsv())
 
-        //        metrics.classesByGroup.values.forEach { mt ->
-        //            val file = CsvFile(dir.resolve("metrics-${mt.settings.name}.csv"))
-        //            file.append(JobMetric.toCsv(mt))
-        //        }
+        val hypAnnotations = annotationsInLayer(corpus, hypothesis)
+        val refAnnotations = annotationsInLayer(corpus, reference)
+        val supported =
+            setOf(
+                Annotation.POS,
+                Annotation.LEMMA,
+                Annotation.UPOS,
+                Annotation.DEPREL,
+                Annotation.NER,
+            )
+        val common = hypAnnotations.intersect(refAnnotations).intersect(supported)
+
+        val metrics =
+            getLayerMetrics(
+                corpus,
+                hypothesis,
+                reference,
+                Annotation.Analysis.BOTH,
+            )
+        val globFile = CsvFile(dir.resolve("metrics-global.csv"))
+        for (globMetric in metrics) {
+            globFile.append(GlobalMetrics.getCsvHeader())
+            globFile.append(globMetric.toCsv())
+        }
+
+        for (annotation in common) {
+            val groupedMetrics =
+                getLayerMetrics(
+                    corpus,
+                    hypothesis,
+                    reference,
+                    listOf(annotation),
+                    annotation,
+                    Annotation.Analysis.BOTH,
+                )
+            val file = CsvFile(dir.resolve("metrics-${groupedMetrics.metrics.settings.name}.csv"))
+            file.append(JobMetrics.toCsv(groupedMetrics.metrics))
+        }
     }
 }

@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletResponse
 import java.io.File
 import java.util.UUID
 import kotlin.io.path.createTempDirectory
+import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.corpora.CorpusStatistics
 import org.ivdnt.galahad.evaluation.csv.CsvFile
@@ -81,4 +82,7 @@ open class BaseEvaluationService(private val corpora: CorporaService) {
 
     // TODO duplicate code with export service
     fun getCorpusName(corpus: UUID): String = corpora.readOrThrow(corpus).metadata.name
+
+    public fun annotationsInLayer(corpus: UUID, layer: String): Set<Annotation> =
+        corpora.readOrThrow(corpus).layers.readOrThrow(layer).metadata.annotations.keys
 }
