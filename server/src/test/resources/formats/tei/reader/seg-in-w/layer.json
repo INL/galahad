@@ -1,0 +1,68 @@
+{
+  "documents": [
+    {
+      "id": "d1",
+      "paragraphs": [
+        {
+          "id": "d1.p1",
+          "sentences": [
+            {
+              "id": "d1.p1.s1",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "So",
+                    "lemma": "zo"
+                  },
+                  "id": "INT_UUID.w.52244",
+                  "offset": 0
+                },
+                {
+                  "annotations": {
+                    "token": "voer",
+                    "lemma": "varen"
+                  },
+                  "id": "INT_UUID.w.52245",
+                  "offset": 3
+                },
+                {
+                  "annotations": {
+                    "token": "hi",
+                    "lemma": "hij"
+                  },
+                  "id": "INT_UUID.w.52246",
+                  "offset": 8
+                },
+                {
+                  "annotations": {
+                    "token": "geloft",
+                    "lemma": "geloven"
+                  },
+                  "id": "INT_UUID.w.52247",
+                  "offset": 11
+                },
+                {
+                  "annotations": {
+                    "token": "mi",
+                    "lemma": "ik"
+                  },
+                  "id": "INT_UUID.w.52248",
+                  "offset": 18
+                },
+                {
+                  "annotations": {
+                    "token": "dys",
+                    "lemma": "dus"
+                  },
+                  "id": "INT_UUID.w.52249",
+                  "offset": 21
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "INT_UUID"
+}

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="INT_3e1ef9a3-dcdb-4e05-afeb-cba75312ba4d">
+    <text>
+        <body>
+            <l>
+                <s>
+                    <w lemma="zo">
+                        <seg xml:id="INT_7a03aa8e-94b0-49ad-a05e-39a8d9901a3d.w.52244">So</seg>
+                    </w>
+                    <w lemma="varen">
+                        <seg xml:id="INT_7a03aa8e-94b0-49ad-a05e-39a8d9901a3d.w.52245">voer</seg>
+                    </w>
+                    <w lemma="hij">
+                        <seg xml:id="INT_7a03aa8e-94b0-49ad-a05e-39a8d9901a3d.w.52246">hi</seg>
+                    </w>
+                    <w lemma="geloven">
+                        <seg xml:id="INT_7a03aa8e-94b0-49ad-a05e-39a8d9901a3d.w.52247">geloft</seg>
+                    </w>
+                    <w lemma="ik">
+                        <seg xml:id="INT_7a03aa8e-94b0-49ad-a05e-39a8d9901a3d.w.52248">mi</seg>
+                    </w>
+                    <w lemma="dus">
+                        <seg xml:id="INT_7a03aa8e-94b0-49ad-a05e-39a8d9901a3d.w.52249">dys</seg>
+                    </w>
+                </s>
+            </l>
+        </body>
+    </text>
+</TEI>
