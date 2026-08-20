@@ -27,6 +27,9 @@ class Layer(
     val summary: LayerAnnotations by lazy { LayerAnnotations.fromTerms(terms.asIterable()) }
 
     @get:JsonIgnore
+    val structure: LayerStructure by lazy { LayerStructure.fromDocuments(documents) }
+
+    @get:JsonIgnore
     val preview: LayerPreview by lazy { LayerPreview(terms.take(LAYER_PREVIEW_LENGTH).toList()) }
 
     /**

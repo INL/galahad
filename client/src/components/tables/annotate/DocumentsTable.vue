@@ -27,6 +27,7 @@
             <aside v-if="layer?.documents" style="text-align: center">
                 <p>Summary of {{ items.length }} {{ items.length === 1 ? "file" : "files" }}:</p>
                 <AnnotationSummary :annotations="layer?.annotations" />
+                <AnnotationSummary :annotations="layer?.structure" />
             </aside>
         </template>
 

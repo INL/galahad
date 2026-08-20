@@ -18,6 +18,7 @@ const { annotations } = defineProps<{ annotations?: AnnotationsSummary }>()
 dl {
     display: flex;
     gap: 1rem;
+    justify-content: center;
     > dl {
         display: inline-flex;
         gap: 0.25rem;

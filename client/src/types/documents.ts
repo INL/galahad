@@ -14,6 +14,7 @@ export const Format = {
 export type Format = (typeof Format)[keyof typeof Format]
 
 export type AnnotationsSummary = Record<string, number>
+export type StructureSummary = Record<string, number>
 
 export type DocumentMetadata = {
     name: string
@@ -21,5 +22,6 @@ export type DocumentMetadata = {
     text: string
     preview: LayerPreview
     annotations: AnnotationsSummary
+    structure: StructureSummary
     modified: number
 }

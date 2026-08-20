@@ -4,6 +4,7 @@ import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.annotations.LayerAnnotations
 import org.ivdnt.galahad.annotations.LayerAnnotations.Companion.plus
 import org.ivdnt.galahad.annotations.LayerPreview
+import org.ivdnt.galahad.annotations.LayerStructure
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.taggers.Tagger
 
@@ -13,6 +14,7 @@ class CorpusLayerMetadata(
     val documents: Int = 0,
     val preview: LayerPreview = LayerPreview.EMPTY,
     val annotations: LayerAnnotations = LayerAnnotations.EMPTY,
+    val structure: LayerStructure = LayerStructure.EMPTY,
     var modified: Long = 0,
 ) {
     companion object {
@@ -38,6 +40,11 @@ class CorpusLayerMetadata(
                         .takeUnless { it.isEmpty() }
                         ?.map { it.metadata.annotations }
                         ?.reduce { a, b -> a + b } ?: LayerAnnotations.EMPTY,
+                structure =
+                    docs
+                        .takeUnless { it.isEmpty() }
+                        ?.map { it.metadata.structure }
+                        ?.reduce { a, b -> a + b } ?: LayerStructure.EMPTY,
                 modified = System.currentTimeMillis(),
             )
         }
