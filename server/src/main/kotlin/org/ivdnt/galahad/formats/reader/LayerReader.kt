@@ -12,8 +12,6 @@ abstract class LayerReader {
     protected val terms: MutableList<Term> = mutableListOf()
     protected val spans: MutableMap<Annotation, MutableList<TermSpan>> = mutableMapOf()
 
-    protected var offset: Int = 0
-
     protected var docID: String? = null
     protected var parID: String? = null
     protected var sentID: String? = null

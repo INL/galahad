@@ -13,15 +13,13 @@
                   "annotations": {
                     "token": "word1"
                   },
-                  "id": "page1263.text.p.1.s.1.w.1",
-                  "offset": 0
+                  "id": "page1263.text.p.1.s.1.w.1"
                 },
                 {
                   "annotations": {
                     "token": "word2"
                   },
-                  "id": "corrected.6bbb0a87",
-                  "offset": 6
+                  "id": "corrected.6bbb0a87"
                 }
               ]
             },
@@ -32,16 +30,14 @@
                   "annotations": {
                     "token": "word3"
                   },
-                  "id": "page1263.text.p.1.s.2.w1",
-                  "offset": 12
+                  "id": "page1263.text.p.1.s.2.w1"
                 },
                 {
                   "annotations": {
                     "token": "word4",
                     "pos": "pos4"
                   },
-                  "id": "example.s.1.w.3",
-                  "offset": 18
+                  "id": "example.s.1.w.3"
                 }
               ]
             },
@@ -52,22 +48,19 @@
                   "annotations": {
                     "token": "word5"
                   },
-                  "id": "example.p.1.s.1.w.1",
-                  "offset": 24
+                  "id": "example.p.1.s.1.w.1"
                 },
                 {
                   "annotations": {
                     "token": "word6"
                   },
-                  "id": "example.p.1.s.1.w.2",
-                  "offset": 30
+                  "id": "example.p.1.s.1.w.2"
                 },
                 {
                   "annotations": {
                     "token": "word7"
                   },
-                  "id": "example.p.1.s.1.w.2",
-                  "offset": 36
+                  "id": "example.p.1.s.1.w.2"
                 }
               ]
             },
@@ -78,15 +71,13 @@
                   "annotations": {
                     "token": "word8"
                   },
-                  "id": "example.p.1.s.1.w.1",
-                  "offset": 42
+                  "id": "example.p.1.s.1.w.1"
                 },
                 {
                   "annotations": {
                     "token": "word9"
                   },
-                  "id": "example.s.1.w.3",
-                  "offset": 48
+                  "id": "example.s.1.w.3"
                 },
                 {
                   "annotations": {
@@ -94,8 +85,7 @@
                     "lemma": "lemma10",
                     "pos": "pos10"
                   },
-                  "id": "page1263.text.p.1.s.1.w.1",
-                  "offset": 54
+                  "id": "page1263.text.p.1.s.1.w.1"
                 }
               ]
             }

@@ -136,9 +136,7 @@ class ConlluReader(val file: File) : LineReader() {
         for (column in indices.keys) {
             getColumn(column, fields)?.let { annotations[column] = it }
         }
-        terms += Term(wordID(), offset, annotations, spaceAfter)
-        offset += fields[1].length
-        if (spaceAfter) offset++ // space after
+        terms += Term(wordID(), annotations, spaceAfter)
     }
 
     companion object {

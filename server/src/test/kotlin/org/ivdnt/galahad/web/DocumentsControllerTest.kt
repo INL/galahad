@@ -158,7 +158,6 @@ class DocumentsControllerTest(@Autowired val mvc: MockMvc, @Autowired val config
             for ((expectedTerm, actualTerm) in
                 expectedMetadata.preview.terms.zip(actualMetadata.preview.terms)) {
                 assertEquals(expectedTerm.id, actualTerm.id)
-                assertEquals(expectedTerm.offset, actualTerm.offset)
                 assertEquals(expectedTerm.annotations, actualTerm.annotations)
             }
         }

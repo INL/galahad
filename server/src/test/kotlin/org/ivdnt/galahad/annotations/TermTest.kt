@@ -6,25 +6,23 @@ import org.junit.jupiter.api.Test
 class TermTest {
     // upos
     private val singleUPos =
-        Term("", 0, mapOf(Annotation.TOKEN to "token", Annotation.UPOS to "NOU-C(num=sg)"))
+        Term("", mapOf(Annotation.TOKEN to "token", Annotation.UPOS to "NOU-C(num=sg)"))
 
     // ner
-    private val singleNer =
-        Term("", 0, mapOf(Annotation.TOKEN to "token", Annotation.NER to "B-LOC"))
+    private val singleNer = Term("", mapOf(Annotation.TOKEN to "token", Annotation.NER to "B-LOC"))
 
     // pos
     private val singlePos =
-        Term("", 0, mapOf(Annotation.TOKEN to "token", Annotation.POS to "NOU-C(num=sg)"))
+        Term("", mapOf(Annotation.TOKEN to "token", Annotation.POS to "NOU-C(num=sg)"))
 
     private val multiPos =
         Term(
             "",
-            0,
             mapOf(Annotation.TOKEN to "token", Annotation.POS to "PD(type=art)+NOU-C(num=sg)"),
         )
 
     private val headOnlyPos =
-        Term("", 0, mapOf(Annotation.TOKEN to "token", Annotation.POS to "NOU-C"))
+        Term("", mapOf(Annotation.TOKEN to "token", Annotation.POS to "NOU-C"))
 
     @Test
     fun `PoS head and features`() {

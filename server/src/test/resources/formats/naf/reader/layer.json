@@ -17,8 +17,7 @@
                     "head": "5",
                     "deprel": "nsubj"
                   },
-                  "id": "w1",
-                  "offset": 0
+                  "id": "w1"
                 },
                 {
                   "annotations": {
@@ -28,8 +27,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w2",
-                  "offset": 10
+                  "id": "w2"
                 },
                 {
                   "annotations": {
@@ -39,8 +37,7 @@
                     "head": "4",
                     "deprel": "nn"
                   },
-                  "id": "w3",
-                  "offset": 13
+                  "id": "w3"
                 },
                 {
                   "annotations": {
@@ -50,8 +47,7 @@
                     "head": "1",
                     "deprel": "prep_of"
                   },
-                  "id": "w4",
-                  "offset": 21
+                  "id": "w4"
                 },
                 {
                   "annotations": {
@@ -61,8 +57,7 @@
                     "head": "1",
                     "deprel": "root"
                   },
-                  "id": "w5",
-                  "offset": 29
+                  "id": "w5"
                 },
                 {
                   "annotations": {
@@ -72,8 +67,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w6",
-                  "offset": 37
+                  "id": "w6"
                 },
                 {
                   "annotations": {
@@ -84,8 +78,7 @@
                     "deprel": "amod",
                     "ner": "misc"
                   },
-                  "id": "w7",
-                  "offset": 42
+                  "id": "w7"
                 },
                 {
                   "annotations": {
@@ -95,8 +88,7 @@
                     "head": "5",
                     "deprel": "prep_with"
                   },
-                  "id": "w8",
-                  "offset": 50
+                  "id": "w8"
                 },
                 {
                   "annotations": {
@@ -106,8 +98,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w9",
-                  "offset": 57
+                  "id": "w9"
                 },
                 {
                   "annotations": {
@@ -117,8 +108,7 @@
                     "head": "11",
                     "deprel": "det"
                   },
-                  "id": "w10",
-                  "offset": 60
+                  "id": "w10"
                 },
                 {
                   "annotations": {
@@ -128,8 +118,7 @@
                     "head": "5",
                     "deprel": "prep_in"
                   },
-                  "id": "w11",
-                  "offset": 64
+                  "id": "w11"
                 },
                 {
                   "annotations": {
@@ -139,8 +128,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w12",
-                  "offset": 69
+                  "id": "w12"
                 },
                 {
                   "annotations": {
@@ -151,8 +139,7 @@
                     "deprel": "prep_of",
                     "ner": "location"
                   },
-                  "id": "w13",
-                  "offset": 72
+                  "id": "w13"
                 },
                 {
                   "annotations": {
@@ -162,8 +149,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w14",
-                  "offset": 79
+                  "id": "w14"
                 },
                 {
                   "annotations": {
@@ -173,8 +159,7 @@
                     "head": "5",
                     "deprel": "prep_in"
                   },
-                  "id": "w15",
-                  "offset": 82
+                  "id": "w15"
                 },
                 {
                   "annotations": {
@@ -184,8 +169,7 @@
                     "head": "17",
                     "deprel": "advmod"
                   },
-                  "id": "w16",
-                  "offset": 90
+                  "id": "w16"
                 },
                 {
                   "annotations": {
@@ -195,8 +179,7 @@
                     "head": "15",
                     "deprel": "tmod"
                   },
-                  "id": "w17",
-                  "offset": 95
+                  "id": "w17"
                 },
                 {
                   "annotations": {
@@ -206,8 +189,7 @@
                     "head": "19",
                     "deprel": "nsubj"
                   },
-                  "id": "w18",
-                  "offset": 102
+                  "id": "w18"
                 },
                 {
                   "annotations": {
@@ -217,8 +199,7 @@
                     "head": "15",
                     "deprel": "rcmod"
                   },
-                  "id": "w19",
-                  "offset": 107
+                  "id": "w19"
                 },
                 {
                   "annotations": {
@@ -228,8 +209,7 @@
                     "head": "21",
                     "deprel": "num"
                   },
-                  "id": "w20",
-                  "offset": 114
+                  "id": "w20"
                 },
                 {
                   "annotations": {
@@ -240,8 +220,7 @@
                     "deprel": "dobj",
                     "ner": "misc"
                   },
-                  "id": "w21",
-                  "offset": 117
+                  "id": "w21"
                 },
                 {
                   "annotations": {
@@ -251,8 +230,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w22",
-                  "offset": 124
+                  "id": "w22"
                 },
                 {
                   "annotations": {
@@ -262,8 +240,7 @@
                     "head": "15",
                     "deprel": "rcmod"
                   },
-                  "id": "w23",
-                  "offset": 128
+                  "id": "w23"
                 },
                 {
                   "annotations": {
@@ -274,7 +251,6 @@
                     "deprel": "dobj"
                   },
                   "id": "w24",
-                  "offset": 136,
                   "spaceAfter": false
                 },
                 {
@@ -285,8 +261,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w25",
-                  "offset": 141
+                  "id": "w25"
                 },
                 {
                   "annotations": {
@@ -296,8 +271,7 @@
                     "head": "15",
                     "deprel": "rcmod"
                   },
-                  "id": "w26",
-                  "offset": 143
+                  "id": "w26"
                 },
                 {
                   "annotations": {
@@ -307,8 +281,7 @@
                     "head": "29",
                     "deprel": "det"
                   },
-                  "id": "w27",
-                  "offset": 148
+                  "id": "w27"
                 },
                 {
                   "annotations": {
@@ -318,8 +291,7 @@
                     "head": "29",
                     "deprel": "nn"
                   },
-                  "id": "w28",
-                  "offset": 150
+                  "id": "w28"
                 },
                 {
                   "annotations": {
@@ -329,8 +301,7 @@
                     "head": "26",
                     "deprel": "dobj"
                   },
-                  "id": "w29",
-                  "offset": 160
+                  "id": "w29"
                 },
                 {
                   "annotations": {
@@ -340,8 +311,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w30",
-                  "offset": 170
+                  "id": "w30"
                 },
                 {
                   "annotations": {
@@ -351,8 +321,7 @@
                     "head": "32",
                     "deprel": "det"
                   },
-                  "id": "w31",
-                  "offset": 173
+                  "id": "w31"
                 },
                 {
                   "annotations": {
@@ -363,7 +332,6 @@
                     "deprel": "prep_in"
                   },
                   "id": "w32",
-                  "offset": 177,
                   "spaceAfter": false
                 },
                 {
@@ -374,8 +342,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w33",
-                  "offset": 181
+                  "id": "w33"
                 },
                 {
                   "annotations": {
@@ -386,8 +353,7 @@
                     "deprel": "nn",
                     "ner": "person"
                   },
-                  "id": "w34",
-                  "offset": 183
+                  "id": "w34"
                 },
                 {
                   "annotations": {
@@ -399,7 +365,6 @@
                     "ner": "person"
                   },
                   "id": "w35",
-                  "offset": 187,
                   "spaceAfter": false
                 },
                 {
@@ -410,8 +375,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "w36",
-                  "offset": 197
+                  "id": "w36"
                 }
               ]
             }

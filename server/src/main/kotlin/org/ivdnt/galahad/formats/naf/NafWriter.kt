@@ -95,19 +95,22 @@ class NafWriter(export: DocumentExport) : LayerWriter(export) {
         root.appendChild(text)
         val paragraphs = export.layer.documents.flatMap { it.paragraphs.asSequence() }
         var iSent = 1
+        var offset = 0
         paragraphs.forEachIndexed { iPar, paragraph ->
             paragraph.sentences.forEach { sentence ->
                 sentence.terms.forEach { t ->
                     val wf =
                         xml.createElement("wf").apply {
                             setAttribute("id", t.id)
-                            setAttribute("offset", t.offset.toString())
+                            setAttribute("offset", offset.toString())
                             setAttribute("length", t.token.length.toString())
                             setAttribute("sent", iSent.toString())
                             setAttribute("para", (iPar + 1).toString())
                             textContent = t.token
                         }
                     text.appendChild(wf)
+                    offset += t.token.length
+                    if (t.spaceAfter == null) offset += 1
                 }
                 iSent++
             }

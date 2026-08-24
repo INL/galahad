@@ -117,7 +117,7 @@ abstract class XmlReader(stream: InputStream) : LayerReader() {
                 put(Annotation.HEAD, (headI + 1).toString())
             }
 
-            terms[depI] = Term(dep.id, dep.offset, annots, dep.spaceAfter)
+            terms[depI] = Term(dep.id, annots, dep.spaceAfter)
 
             // reset
             deprel = null
@@ -134,8 +134,7 @@ abstract class XmlReader(stream: InputStream) : LayerReader() {
                 // 5)
                 val t = terms[termI]
                 val iob = (if (spanI == 0) "B-" else "I-") + span.value
-                terms[termI] =
-                    Term(t.id, t.offset, t.annotations + (Annotation.NER to iob), t.spaceAfter)
+                terms[termI] = Term(t.id, t.annotations + (Annotation.NER to iob), t.spaceAfter)
             }
         }
         // if there exists exactly one term without a DEPREL, it is the root
@@ -148,7 +147,7 @@ abstract class XmlReader(stream: InputStream) : LayerReader() {
                 put(Annotation.DEPREL, "root")
                 put(Annotation.HEAD, "0")
             }
-            terms[rootI] = Term(root.id, root.offset, annots, root.spaceAfter)
+            terms[rootI] = Term(root.id, annots, root.spaceAfter)
         }
         super.newSentence()
         nerTargets.clear()
@@ -212,9 +211,7 @@ abstract class XmlReader(stream: InputStream) : LayerReader() {
         if (nerValue != null) {
             nerTargets += terms.size
         }
-        terms += Term(wordID(), offset, annotations, spaceAfter)
-        offset += literal.length
-        if (spaceAfter) offset++
+        terms += Term(wordID(), annotations, spaceAfter)
         literal = ""
         lemma = null
         pos = null

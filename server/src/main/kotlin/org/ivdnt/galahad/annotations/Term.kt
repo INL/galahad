@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore
 
 class Term(
     val id: String,
-    val offset: Int,
     val annotations: Map<Annotation, String?>,
     spaceAfter: Boolean? = null,
 ) {
@@ -69,7 +68,7 @@ class Term(
     }
 
     companion object {
-        val EMPTY: Term = Term("", 0, mapOf(Annotation.TOKEN to ""))
+        val EMPTY: Term = Term("", mapOf(Annotation.TOKEN to ""))
         private val posAnnotations: Array<Annotation> = arrayOf(Annotation.POS, Annotation.UPOS)
         private val posHeadSeparators: Array<Char> = arrayOf('(', '|')
 

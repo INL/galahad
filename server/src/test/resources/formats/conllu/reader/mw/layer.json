@@ -18,15 +18,13 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "s1.w1",
-                  "offset": 0
+                  "id": "s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "dalla"
                   },
-                  "id": "s1.w2",
-                  "offset": 4
+                  "id": "s1.w2"
                 },
                 {
                   "annotations": {
@@ -38,7 +36,6 @@
                     "deprel": "nmod"
                   },
                   "id": "s1.w3",
-                  "offset": 10,
                   "spaceAfter": false
                 },
                 {
@@ -50,8 +47,7 @@
                     "head": "1",
                     "deprel": "punct"
                   },
-                  "id": "s1.w4",
-                  "offset": 16
+                  "id": "s1.w4"
                 }
               ]
             },
@@ -62,30 +58,26 @@
                   "annotations": {
                     "token": "Ter"
                   },
-                  "id": "s2.w1",
-                  "offset": 18
+                  "id": "s2.w1"
                 },
                 {
                   "annotations": {
                     "token": "hoogte"
                   },
-                  "id": "s2.w2",
-                  "offset": 22
+                  "id": "s2.w2"
                 },
                 {
                   "annotations": {
                     "token": "van"
                   },
                   "id": "s2.w3",
-                  "offset": 29,
                   "spaceAfter": false
                 },
                 {
                   "annotations": {
                     "token": "."
                   },
-                  "id": "s2.w4",
-                  "offset": 32
+                  "id": "s2.w4"
                 }
               ]
             }

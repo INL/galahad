@@ -13,57 +13,49 @@
                   "annotations": {
                     "token": "Punctuatie,"
                   },
-                  "id": "d1.p1.s1.w1",
-                  "offset": 0
+                  "id": "d1.p1.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "zin"
                   },
-                  "id": "d1.p1.s1.w2",
-                  "offset": 12
+                  "id": "d1.p1.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "zonder"
                   },
-                  "id": "d1.p1.s1.w3",
-                  "offset": 16
+                  "id": "d1.p1.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "tags."
                   },
-                  "id": "d1.p1.s1.w4",
-                  "offset": 23
+                  "id": "d1.p1.s1.w4"
                 },
                 {
                   "annotations": {
                     "token": "Zin"
                   },
-                  "id": "d1.p1.s1.w5",
-                  "offset": 29
+                  "id": "d1.p1.s1.w5"
                 },
                 {
                   "annotations": {
                     "token": "met"
                   },
-                  "id": "d1.p1.s1.w6",
-                  "offset": 33
+                  "id": "d1.p1.s1.w6"
                 },
                 {
                   "annotations": {
                     "token": "tags"
                   },
-                  "id": "d1.p1.s1.w7",
-                  "offset": 37
+                  "id": "d1.p1.s1.w7"
                 },
                 {
                   "annotations": {
                     "token": "."
                   },
-                  "id": "d1.p1.s1.w8",
-                  "offset": 42
+                  "id": "d1.p1.s1.w8"
                 }
               ]
             }

@@ -17,8 +17,7 @@
                     "head": "2",
                     "deprel": "amod"
                   },
-                  "id": "d1.p1.s1.w1",
-                  "offset": 0
+                  "id": "d1.p1.s1.w1"
                 },
                 {
                   "annotations": {
@@ -28,8 +27,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p1.s1.w2",
-                  "offset": 7
+                  "id": "d1.p1.s1.w2"
                 },
                 {
                   "annotations": {
@@ -39,8 +37,7 @@
                     "head": "4",
                     "deprel": "cc"
                   },
-                  "id": "d1.p1.s1.w3",
-                  "offset": 16
+                  "id": "d1.p1.s1.w3"
                 },
                 {
                   "annotations": {
@@ -50,8 +47,7 @@
                     "head": "2",
                     "deprel": "conj"
                   },
-                  "id": "d1.p1.s1.w4",
-                  "offset": 21
+                  "id": "d1.p1.s1.w4"
                 },
                 {
                   "annotations": {
@@ -60,8 +56,7 @@
                     "head": "2",
                     "deprel": "punct"
                   },
-                  "id": "d1.p1.s1.w5",
-                  "offset": 28
+                  "id": "d1.p1.s1.w5"
                 }
               ]
             },
@@ -76,8 +71,7 @@
                     "head": "4",
                     "deprel": "aux"
                   },
-                  "id": "d1.p1.s2.w1",
-                  "offset": 30
+                  "id": "d1.p1.s2.w1"
                 },
                 {
                   "annotations": {
@@ -87,8 +81,7 @@
                     "head": "4",
                     "deprel": "nsubj"
                   },
-                  "id": "d1.p1.s2.w2",
-                  "offset": 35
+                  "id": "d1.p1.s2.w2"
                 },
                 {
                   "annotations": {
@@ -98,8 +91,7 @@
                     "head": "4",
                     "deprel": "iobj"
                   },
-                  "id": "d1.p1.s2.w3",
-                  "offset": 38
+                  "id": "d1.p1.s2.w3"
                 },
                 {
                   "annotations": {
@@ -109,8 +101,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p1.s2.w4",
-                  "offset": 40
+                  "id": "d1.p1.s2.w4"
                 },
                 {
                   "annotations": {
@@ -119,8 +110,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p1.s2.w5",
-                  "offset": 50
+                  "id": "d1.p1.s2.w5"
                 },
                 {
                   "annotations": {
@@ -130,8 +120,7 @@
                     "head": "4",
                     "deprel": "conj"
                   },
-                  "id": "d1.p1.s2.w6",
-                  "offset": 52
+                  "id": "d1.p1.s2.w6"
                 },
                 {
                   "annotations": {
@@ -141,8 +130,7 @@
                     "head": "6",
                     "deprel": "advmod"
                   },
-                  "id": "d1.p1.s2.w7",
-                  "offset": 58
+                  "id": "d1.p1.s2.w7"
                 },
                 {
                   "annotations": {
@@ -151,8 +139,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p1.s2.w8",
-                  "offset": 63
+                  "id": "d1.p1.s2.w8"
                 }
               ]
             }
@@ -172,8 +159,7 @@
                     "head": "2",
                     "deprel": "expl"
                   },
-                  "id": "d1.p2.s1.w1",
-                  "offset": 65
+                  "id": "d1.p2.s1.w1"
                 },
                 {
                   "annotations": {
@@ -183,8 +169,7 @@
                     "head": "5",
                     "deprel": "cop"
                   },
-                  "id": "d1.p2.s1.w2",
-                  "offset": 68
+                  "id": "d1.p2.s1.w2"
                 },
                 {
                   "annotations": {
@@ -194,8 +179,7 @@
                     "head": "5",
                     "deprel": "case"
                   },
-                  "id": "d1.p2.s1.w3",
-                  "offset": 72
+                  "id": "d1.p2.s1.w3"
                 },
                 {
                   "annotations": {
@@ -205,8 +189,7 @@
                     "head": "5",
                     "deprel": "det"
                   },
-                  "id": "d1.p2.s1.w4",
-                  "offset": 75
+                  "id": "d1.p2.s1.w4"
                 },
                 {
                   "annotations": {
@@ -216,8 +199,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p2.s1.w5",
-                  "offset": 80
+                  "id": "d1.p2.s1.w5"
                 },
                 {
                   "annotations": {
@@ -226,8 +208,7 @@
                     "head": "5",
                     "deprel": "punct"
                   },
-                  "id": "d1.p2.s1.w6",
-                  "offset": 92
+                  "id": "d1.p2.s1.w6"
                 }
               ]
             },
@@ -253,8 +234,7 @@
                     "head": "4",
                     "deprel": "expl"
                   },
-                  "id": "d1.p2.s2.w1",
-                  "offset": 94
+                  "id": "d1.p2.s2.w1"
                 },
                 {
                   "annotations": {
@@ -265,8 +245,7 @@
                     "deprel": "nsubj",
                     "ner": "B-PER"
                   },
-                  "id": "d1.p2.s2.w2",
-                  "offset": 98
+                  "id": "d1.p2.s2.w2"
                 },
                 {
                   "annotations": {
@@ -277,8 +256,7 @@
                     "deprel": "flat",
                     "ner": "I-PER"
                   },
-                  "id": "d1.p2.s2.w3",
-                  "offset": 105
+                  "id": "d1.p2.s2.w3"
                 },
                 {
                   "annotations": {
@@ -288,8 +266,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p2.s2.w4",
-                  "offset": 111
+                  "id": "d1.p2.s2.w4"
                 },
                 {
                   "annotations": {
@@ -299,8 +276,7 @@
                     "head": "4",
                     "deprel": "aux"
                   },
-                  "id": "d1.p2.s2.w5",
-                  "offset": 119
+                  "id": "d1.p2.s2.w5"
                 },
                 {
                   "annotations": {
@@ -309,8 +285,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p2.s2.w6",
-                  "offset": 128
+                  "id": "d1.p2.s2.w6"
                 }
               ]
             }
@@ -339,8 +314,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s1.w1",
-                  "offset": 130
+                  "id": "d1.p3.s1.w1"
                 },
                 {
                   "annotations": {
@@ -351,8 +325,7 @@
                     "deprel": "nsubj",
                     "ner": "B-PER"
                   },
-                  "id": "d1.p3.s1.w2",
-                  "offset": 132
+                  "id": "d1.p3.s1.w2"
                 },
                 {
                   "annotations": {
@@ -361,8 +334,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s1.w3",
-                  "offset": 140
+                  "id": "d1.p3.s1.w3"
                 },
                 {
                   "annotations": {
@@ -372,8 +344,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p3.s1.w4",
-                  "offset": 142
+                  "id": "d1.p3.s1.w4"
                 },
                 {
                   "annotations": {
@@ -382,8 +353,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s1.w5",
-                  "offset": 151
+                  "id": "d1.p3.s1.w5"
                 },
                 {
                   "annotations": {
@@ -393,8 +363,7 @@
                     "head": "4",
                     "deprel": "cc"
                   },
-                  "id": "d1.p3.s1.w6",
-                  "offset": 153
+                  "id": "d1.p3.s1.w6"
                 },
                 {
                   "annotations": {
@@ -404,8 +373,7 @@
                     "head": "8",
                     "deprel": "det"
                   },
-                  "id": "d1.p3.s1.w7",
-                  "offset": 160
+                  "id": "d1.p3.s1.w7"
                 },
                 {
                   "annotations": {
@@ -415,8 +383,7 @@
                     "head": "6",
                     "deprel": "nsubj"
                   },
-                  "id": "d1.p3.s1.w8",
-                  "offset": 165
+                  "id": "d1.p3.s1.w8"
                 },
                 {
                   "annotations": {
@@ -425,8 +392,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s1.w9",
-                  "offset": 169
+                  "id": "d1.p3.s1.w9"
                 },
                 {
                   "annotations": {
@@ -435,8 +401,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s1.w10",
-                  "offset": 171
+                  "id": "d1.p3.s1.w10"
                 }
               ]
             },
@@ -451,8 +416,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p3.s2.w1",
-                  "offset": 173
+                  "id": "d1.p3.s2.w1"
                 },
                 {
                   "annotations": {
@@ -461,8 +425,7 @@
                     "head": "1",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s2.w2",
-                  "offset": 179
+                  "id": "d1.p3.s2.w2"
                 },
                 {
                   "annotations": {
@@ -472,8 +435,7 @@
                     "head": "5",
                     "deprel": "aux"
                   },
-                  "id": "d1.p3.s2.w3",
-                  "offset": 181
+                  "id": "d1.p3.s2.w3"
                 },
                 {
                   "annotations": {
@@ -483,8 +445,7 @@
                     "head": "4",
                     "deprel": "det"
                   },
-                  "id": "d1.p3.s2.w4",
-                  "offset": 188
+                  "id": "d1.p3.s2.w4"
                 },
                 {
                   "annotations": {
@@ -494,8 +455,7 @@
                     "head": "3",
                     "deprel": "obj"
                   },
-                  "id": "d1.p3.s2.w5",
-                  "offset": 194
+                  "id": "d1.p3.s2.w5"
                 },
                 {
                   "annotations": {
@@ -505,8 +465,7 @@
                     "head": "3",
                     "deprel": "compound:prt"
                   },
-                  "id": "d1.p3.s2.w6",
-                  "offset": 202
+                  "id": "d1.p3.s2.w6"
                 },
                 {
                   "annotations": {
@@ -515,8 +474,7 @@
                     "head": "1",
                     "deprel": "punct"
                   },
-                  "id": "d1.p3.s2.w7",
-                  "offset": 205
+                  "id": "d1.p3.s2.w7"
                 }
               ]
             }
@@ -536,8 +494,7 @@
                     "head": "4",
                     "deprel": "nsubj"
                   },
-                  "id": "d1.p4.s1.w1",
-                  "offset": 207
+                  "id": "d1.p4.s1.w1"
                 },
                 {
                   "annotations": {
@@ -547,8 +504,7 @@
                     "head": "4",
                     "deprel": "aux"
                   },
-                  "id": "d1.p4.s1.w2",
-                  "offset": 210
+                  "id": "d1.p4.s1.w2"
                 },
                 {
                   "annotations": {
@@ -558,8 +514,7 @@
                     "head": "4",
                     "deprel": "obj"
                   },
-                  "id": "d1.p4.s1.w3",
-                  "offset": 217
+                  "id": "d1.p4.s1.w3"
                 },
                 {
                   "annotations": {
@@ -569,8 +524,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p4.s1.w4",
-                  "offset": 220
+                  "id": "d1.p4.s1.w4"
                 },
                 {
                   "annotations": {
@@ -579,8 +533,7 @@
                     "head": "5",
                     "deprel": "punct"
                   },
-                  "id": "d1.p4.s1.w5",
-                  "offset": 229
+                  "id": "d1.p4.s1.w5"
                 }
               ]
             },
@@ -595,8 +548,7 @@
                     "head": "2",
                     "deprel": "subj"
                   },
-                  "id": "d1.p4.s2.w1",
-                  "offset": 231
+                  "id": "d1.p4.s2.w1"
                 },
                 {
                   "annotations": {
@@ -606,8 +558,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "d1.p4.s2.w2",
-                  "offset": 236
+                  "id": "d1.p4.s2.w2"
                 },
                 {
                   "annotations": {
@@ -617,8 +568,7 @@
                     "head": "2",
                     "deprel": "advmod"
                   },
-                  "id": "d1.p4.s2.w3",
-                  "offset": 243
+                  "id": "d1.p4.s2.w3"
                 },
                 {
                   "annotations": {
@@ -628,8 +578,7 @@
                     "head": "3",
                     "deprel": "conj"
                   },
-                  "id": "d1.p4.s2.w4",
-                  "offset": 248
+                  "id": "d1.p4.s2.w4"
                 },
                 {
                   "annotations": {
@@ -639,8 +588,7 @@
                     "head": "3",
                     "deprel": "cc"
                   },
-                  "id": "d1.p4.s2.w5",
-                  "offset": 251
+                  "id": "d1.p4.s2.w5"
                 }
               ]
             }

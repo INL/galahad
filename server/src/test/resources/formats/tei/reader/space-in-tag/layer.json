@@ -15,8 +15,7 @@
                     "lemma": "fraai",
                     "group": "mw_fraai"
                   },
-                  "id": "d1.p1.s1.w1",
-                  "offset": 0
+                  "id": "d1.p1.s1.w1"
                 },
                 {
                   "annotations": {
@@ -24,8 +23,7 @@
                     "lemma": "historie",
                     "group": "mw_historie"
                   },
-                  "id": "d1.p1.s1.w2",
-                  "offset": 7
+                  "id": "d1.p1.s1.w2"
                 },
                 {
                   "annotations": {
@@ -33,8 +31,7 @@
                     "lemma": "en",
                     "group": "mw_en"
                   },
-                  "id": "d1.p1.s1.w3",
-                  "offset": 16
+                  "id": "d1.p1.s1.w3"
                 },
                 {
                   "annotations": {
@@ -42,8 +39,7 @@
                     "lemma": "alwaar",
                     "group": "mw_alwaar"
                   },
-                  "id": "d1.p1.s1.w4",
-                  "offset": 21
+                  "id": "d1.p1.s1.w4"
                 }
               ]
             }

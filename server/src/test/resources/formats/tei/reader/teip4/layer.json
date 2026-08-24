@@ -15,8 +15,7 @@
                     "lemma": "hebben",
                     "pos": "VRB(finiteness=fin,tense=past)"
                   },
-                  "id": "w0",
-                  "offset": 0
+                  "id": "w0"
                 },
                 {
                   "annotations": {
@@ -24,8 +23,7 @@
                     "lemma": "olle",
                     "pos": "RES(type=for)"
                   },
-                  "id": "w1",
-                  "offset": 7
+                  "id": "w1"
                 },
                 {
                   "annotations": {
@@ -33,15 +31,13 @@
                     "lemma": "vogala",
                     "pos": "NOU-C(number=sg)"
                   },
-                  "id": "w2",
-                  "offset": 12
+                  "id": "w2"
                 },
                 {
                   "annotations": {
                     "token": ","
                   },
-                  "id": "w3",
-                  "offset": 19
+                  "id": "w3"
                 },
                 {
                   "annotations": {
@@ -49,8 +45,7 @@
                     "lemma": "nestatis",
                     "pos": "RES(type=for)"
                   },
-                  "id": "w4",
-                  "offset": 21
+                  "id": "w4"
                 },
                 {
                   "annotations": {
@@ -58,29 +53,25 @@
                     "lemma": "haguna",
                     "pos": "NOU-C(number=sg)"
                   },
-                  "id": "w5",
-                  "offset": 28
+                  "id": "w5"
                 },
                 {
                   "annotations": {
                     "token": "."
                   },
-                  "id": "w6",
-                  "offset": 37
+                  "id": "w6"
                 },
                 {
                   "annotations": {
                     "token": "."
                   },
-                  "id": "w7",
-                  "offset": 39
+                  "id": "w7"
                 },
                 {
                   "annotations": {
                     "token": "."
                   },
-                  "id": "w8",
-                  "offset": 41
+                  "id": "w8"
                 },
                 {
                   "annotations": {
@@ -88,8 +79,7 @@
                     "lemma": "hinas",
                     "pos": "NOU-P"
                   },
-                  "id": "w9",
-                  "offset": 43
+                  "id": "w9"
                 },
                 {
                   "annotations": {
@@ -97,8 +87,7 @@
                     "lemma": "ik",
                     "pos": "PD(type=pers,position=free)"
                   },
-                  "id": "w10",
-                  "offset": 50
+                  "id": "w10"
                 },
                 {
                   "annotations": {
@@ -106,8 +95,7 @@
                     "lemma": "en",
                     "pos": "CONJ(type=coor)"
                   },
-                  "id": "w11",
-                  "offset": 53
+                  "id": "w11"
                 },
                 {
                   "annotations": {
@@ -115,22 +103,19 @@
                     "lemma": "huben",
                     "pos": "ADV(type=reg)"
                   },
-                  "id": "w12",
-                  "offset": 58
+                  "id": "w12"
                 },
                 {
                   "annotations": {
                     "token": ":"
                   },
-                  "id": "w13",
-                  "offset": 62
+                  "id": "w13"
                 },
                 {
                   "annotations": {
                     "token": "\""
                   },
-                  "id": "w14",
-                  "offset": 64
+                  "id": "w14"
                 },
                 {
                   "annotations": {
@@ -138,8 +123,7 @@
                     "lemma": "uiteen",
                     "pos": "PD(type=w-p,position=free)"
                   },
-                  "id": "w15",
-                  "offset": 66
+                  "id": "w15"
                 },
                 {
                   "annotations": {
@@ -147,8 +131,7 @@
                     "lemma": "unibent",
                     "pos": "CONJ(type=sub)"
                   },
-                  "id": "w16",
-                  "offset": 71
+                  "id": "w16"
                 },
                 {
                   "annotations": {
@@ -156,8 +139,7 @@
                     "lemma": "wij",
                     "pos": "PD(type=pers,position=free)"
                   },
-                  "id": "w17",
-                  "offset": 79
+                  "id": "w17"
                 },
                 {
                   "annotations": {
@@ -165,22 +147,19 @@
                     "lemma": "nu",
                     "pos": "ADV(type=reg)"
                   },
-                  "id": "w18",
-                  "offset": 82
+                  "id": "w18"
                 },
                 {
                   "annotations": {
                     "token": "?"
                   },
-                  "id": "w19",
-                  "offset": 85
+                  "id": "w19"
                 },
                 {
                   "annotations": {
                     "token": "\""
                   },
-                  "id": "w20",
-                  "offset": 87
+                  "id": "w20"
                 }
               ]
             }

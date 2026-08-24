@@ -16,8 +16,7 @@ class TxtReader(val file: File) : LayerReader() {
             if (it.isNotBlank()) {
                 // split on whitespace
                 for (word in it.trim().split(Regex("""\s+"""))) {
-                    terms += Term(wordID(), offset, mapOf(Annotation.TOKEN to word))
-                    offset += word.length + 1 // +1 for space/LF
+                    terms += Term(wordID(), mapOf(Annotation.TOKEN to word))
                 }
                 /** Create a [SentenceLayer] after each LF. */
                 newSentence()

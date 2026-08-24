@@ -16,8 +16,7 @@ class DocxReader(stream: InputStream) : LayerReader() {
                 .ifBlank { null }
                 ?.split(whitespace)
                 ?.forEach { word ->
-                    terms += Term(wordID(), offset, mapOf(Annotation.TOKEN to word))
-                    offset += word.length + 1
+                    terms += Term(wordID(), mapOf(Annotation.TOKEN to word))
                 }
             newParagraph()
         }

@@ -17,8 +17,7 @@
                     "head": "2",
                     "deprel": "nsubj"
                   },
-                  "id": "empty-nodes.w1",
-                  "offset": 0
+                  "id": "empty-nodes.w1"
                 },
                 {
                   "annotations": {
@@ -28,8 +27,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "empty-nodes.w2",
-                  "offset": 4
+                  "id": "empty-nodes.w2"
                 },
                 {
                   "annotations": {
@@ -39,8 +37,7 @@
                     "head": "2",
                     "deprel": "obj"
                   },
-                  "id": "empty-nodes.w3",
-                  "offset": 10
+                  "id": "empty-nodes.w3"
                 },
                 {
                   "annotations": {
@@ -50,8 +47,7 @@
                     "head": "5",
                     "deprel": "cc"
                   },
-                  "id": "empty-nodes.w4",
-                  "offset": 17
+                  "id": "empty-nodes.w4"
                 },
                 {
                   "annotations": {
@@ -61,8 +57,7 @@
                     "head": "2",
                     "deprel": "conj"
                   },
-                  "id": "empty-nodes.w5",
-                  "offset": 21
+                  "id": "empty-nodes.w5"
                 },
                 {
                   "annotations": {
@@ -72,8 +67,7 @@
                     "head": "5",
                     "deprel": "orphan"
                   },
-                  "id": "empty-nodes.w6",
-                  "offset": 26
+                  "id": "empty-nodes.w6"
                 }
               ]
             }

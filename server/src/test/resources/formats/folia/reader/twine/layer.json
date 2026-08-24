@@ -13,85 +13,73 @@
                   "annotations": {
                     "token": "To"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w1",
-                  "offset": 0
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "obey"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w2",
-                  "offset": 3
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "or"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w3",
-                  "offset": 8
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "not"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w4",
-                  "offset": 11
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w4"
                 },
                 {
                   "annotations": {
                     "token": "to"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w5",
-                  "offset": 15
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w5"
                 },
                 {
                   "annotations": {
                     "token": "be,that"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w6",
-                  "offset": 18
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w6"
                 },
                 {
                   "annotations": {
                     "token": "is"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w7",
-                  "offset": 26
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w7"
                 },
                 {
                   "annotations": {
                     "token": "the"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w8",
-                  "offset": 29
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w8"
                 },
                 {
                   "annotations": {
                     "token": "one"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w9",
-                  "offset": 33
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w9"
                 },
                 {
                   "annotations": {
                     "token": "question"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w10",
-                  "offset": 37
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w10"
                 },
                 {
                   "annotations": {
                     "token": "that"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w11",
-                  "offset": 46
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w11"
                 },
                 {
                   "annotations": {
                     "token": "yremained."
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w12",
-                  "offset": 51
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.1.s1.w12"
                 }
               ]
             }
@@ -107,43 +95,37 @@
                   "annotations": {
                     "token": "abc"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w1",
-                  "offset": 62
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "def"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w2",
-                  "offset": 66
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "ghijklmno"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w3",
-                  "offset": 70
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "pqrstu"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w4",
-                  "offset": 80
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w4"
                 },
                 {
                   "annotations": {
                     "token": "xyzabc"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w5",
-                  "offset": 87
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w5"
                 },
                 {
                   "annotations": {
                     "token": "def"
                   },
-                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w6",
-                  "offset": 94
+                  "id": "CLVN-1-1_UUID.text.1.body.1.div.1.p.2.s1.w6"
                 }
               ]
             }

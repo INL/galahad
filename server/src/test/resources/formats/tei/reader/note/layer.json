@@ -13,36 +13,31 @@
                   "annotations": {
                     "token": "this"
                   },
-                  "id": "d1.p1.s1.w1",
-                  "offset": 0
+                  "id": "d1.p1.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "text"
                   },
-                  "id": "d1.p1.s1.w2",
-                  "offset": 5
+                  "id": "d1.p1.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "should"
                   },
-                  "id": "d1.p1.s1.w3",
-                  "offset": 10
+                  "id": "d1.p1.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "be"
                   },
-                  "id": "d1.p1.s1.w4",
-                  "offset": 17
+                  "id": "d1.p1.s1.w4"
                 },
                 {
                   "annotations": {
                     "token": "included."
                   },
-                  "id": "d1.p1.s1.w5",
-                  "offset": 20
+                  "id": "d1.p1.s1.w5"
                 }
               ]
             }

@@ -19,8 +19,7 @@ class PdfReader(stream: InputStream) : LayerReader() {
                 ?.split(whitespace)
                 ?.filter { it.isNotBlank() }
                 ?.forEach { word ->
-                    terms += Term(wordID(), offset, mapOf(Annotation.TOKEN to word))
-                    offset += word.length + 1
+                    terms += Term(wordID(), mapOf(Annotation.TOKEN to word))
                 }
         }
         newDocument()

@@ -79,9 +79,8 @@ class TsvReader(val file: File) : LineReader() {
                 columnOrNull(column.value, values)?.let { put(column.key, it) }
             }
         }
-        Term(wordID(), offset, annotations).also {
+        Term(wordID(), annotations).also {
             terms += it
-            offset += it.token.length + 1 // space
         }
     }
 

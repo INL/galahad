@@ -14,48 +14,42 @@
                     "token": "So",
                     "lemma": "zo"
                   },
-                  "id": "INT_UUID.w.52244",
-                  "offset": 0
+                  "id": "INT_UUID.w.52244"
                 },
                 {
                   "annotations": {
                     "token": "voer",
                     "lemma": "varen"
                   },
-                  "id": "INT_UUID.w.52245",
-                  "offset": 3
+                  "id": "INT_UUID.w.52245"
                 },
                 {
                   "annotations": {
                     "token": "hi",
                     "lemma": "hij"
                   },
-                  "id": "INT_UUID.w.52246",
-                  "offset": 8
+                  "id": "INT_UUID.w.52246"
                 },
                 {
                   "annotations": {
                     "token": "geloft",
                     "lemma": "geloven"
                   },
-                  "id": "INT_UUID.w.52247",
-                  "offset": 11
+                  "id": "INT_UUID.w.52247"
                 },
                 {
                   "annotations": {
                     "token": "mi",
                     "lemma": "ik"
                   },
-                  "id": "INT_UUID.w.52248",
-                  "offset": 18
+                  "id": "INT_UUID.w.52248"
                 },
                 {
                   "annotations": {
                     "token": "dys",
                     "lemma": "dus"
                   },
-                  "id": "INT_UUID.w.52249",
-                  "offset": 21
+                  "id": "INT_UUID.w.52249"
                 }
               ]
             }

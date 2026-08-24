@@ -14,8 +14,7 @@
                     "token": "286",
                     "pos": "NUM"
                   },
-                  "id": "w.0",
-                  "offset": 0
+                  "id": "w.0"
                 }
               ]
             },
@@ -28,8 +27,7 @@
                     "lemma": "van",
                     "pos": "ADP"
                   },
-                  "id": "w.1",
-                  "offset": 4
+                  "id": "w.1"
                 },
                 {
                   "annotations": {
@@ -37,16 +35,14 @@
                     "lemma": "oudoom",
                     "pos": "NOU"
                   },
-                  "id": "w.2",
-                  "offset": 8
+                  "id": "w.2"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000001",
-                  "offset": 16
+                  "id": "pc.post.0000001"
                 },
                 {
                   "annotations": {
@@ -54,8 +50,7 @@
                     "lemma": "van",
                     "pos": "ADP"
                   },
-                  "id": "w.3",
-                  "offset": 18
+                  "id": "w.3"
                 },
                 {
                   "annotations": {
@@ -63,16 +58,14 @@
                     "lemma": "hoorn",
                     "pos": "NELOC"
                   },
-                  "id": "w.4",
-                  "offset": 22
+                  "id": "w.4"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000002",
-                  "offset": 28
+                  "id": "pc.post.0000002"
                 },
                 {
                   "annotations": {
@@ -80,8 +73,7 @@
                     "lemma": "van",
                     "pos": "ADP"
                   },
-                  "id": "w.5",
-                  "offset": 30
+                  "id": "w.5"
                 },
                 {
                   "annotations": {
@@ -89,16 +81,14 @@
                     "lemma": "repiek",
                     "pos": "NELOC"
                   },
-                  "id": "w.6",
-                  "offset": 34
+                  "id": "w.6"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000003",
-                  "offset": 43
+                  "id": "pc.post.0000003"
                 },
                 {
                   "annotations": {
@@ -106,16 +96,14 @@
                     "lemma": "pijl",
                     "pos": "NOU"
                   },
-                  "id": "w.7",
-                  "offset": 45
+                  "id": "w.7"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000004",
-                  "offset": 50
+                  "id": "pc.post.0000004"
                 },
                 {
                   "annotations": {
@@ -123,16 +111,14 @@
                     "lemma": "kop",
                     "pos": "NOU"
                   },
-                  "id": "w.8",
-                  "offset": 52
+                  "id": "w.8"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000005",
-                  "offset": 57
+                  "id": "pc.post.0000005"
                 },
                 {
                   "annotations": {
@@ -140,8 +126,7 @@
                     "lemma": "n",
                     "pos": "ADV"
                   },
-                  "id": "w.9",
-                  "offset": 59
+                  "id": "w.9"
                 },
                 {
                   "annotations": {
@@ -149,8 +134,7 @@
                     "lemma": "e.",
                     "pos": "."
                   },
-                  "id": "pc.post.0000006",
-                  "offset": 63
+                  "id": "pc.post.0000006"
                 }
               ]
             },
@@ -163,24 +147,21 @@
                     "lemma": "xeres",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.10",
-                  "offset": 65
+                  "id": "w.10"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000007",
-                  "offset": 70
+                  "id": "pc.post.0000007"
                 },
                 {
                   "annotations": {
                     "token": "14",
                     "pos": "NUM"
                   },
-                  "id": "w.11",
-                  "offset": 72
+                  "id": "w.11"
                 },
                 {
                   "annotations": {
@@ -188,16 +169,14 @@
                     "lemma": "maart",
                     "pos": "NOU"
                   },
-                  "id": "w.12",
-                  "offset": 75
+                  "id": "w.12"
                 },
                 {
                   "annotations": {
                     "token": "1704",
                     "pos": "NUM"
                   },
-                  "id": "w.13",
-                  "offset": 81
+                  "id": "w.13"
                 }
               ]
             },
@@ -210,8 +189,7 @@
                     "lemma": "xeres",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.14",
-                  "offset": 86
+                  "id": "w.14"
                 },
                 {
                   "annotations": {
@@ -219,8 +197,7 @@
                     "lemma": "e.",
                     "pos": "."
                   },
-                  "id": "pc.post.0000008",
-                  "offset": 91
+                  "id": "pc.post.0000008"
                 }
               ]
             },
@@ -233,8 +210,7 @@
                     "lemma": "willem",
                     "pos": "NOU"
                   },
-                  "id": "w.15",
-                  "offset": 93
+                  "id": "w.15"
                 },
                 {
                   "annotations": {
@@ -242,8 +218,7 @@
                     "lemma": "van",
                     "pos": "NOU"
                   },
-                  "id": "w.16",
-                  "offset": 100
+                  "id": "w.16"
                 },
                 {
                   "annotations": {
@@ -251,16 +226,14 @@
                     "lemma": "onthoornen",
                     "pos": "NOU"
                   },
-                  "id": "w.17",
-                  "offset": 104
+                  "id": "w.17"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000009",
-                  "offset": 113
+                  "id": "pc.post.0000009"
                 },
                 {
                   "annotations": {
@@ -268,8 +241,7 @@
                     "lemma": "jan",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.18",
-                  "offset": 115
+                  "id": "w.18"
                 },
                 {
                   "annotations": {
@@ -277,8 +249,7 @@
                     "lemma": "van",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.19",
-                  "offset": 120
+                  "id": "w.19"
                 },
                 {
                   "annotations": {
@@ -286,16 +257,14 @@
                     "lemma": "hoorn",
                     "pos": "NEPER"
                   },
-                  "id": "w.20",
-                  "offset": 124
+                  "id": "w.20"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000010",
-                  "offset": 130
+                  "id": "pc.post.0000010"
                 },
                 {
                   "annotations": {
@@ -303,8 +272,7 @@
                     "lemma": "abraham",
                     "pos": "NOU"
                   },
-                  "id": "w.21",
-                  "offset": 132
+                  "id": "w.21"
                 },
                 {
                   "annotations": {
@@ -312,8 +280,7 @@
                     "lemma": "van",
                     "pos": "NOU"
                   },
-                  "id": "w.22",
-                  "offset": 140
+                  "id": "w.22"
                 },
                 {
                   "annotations": {
@@ -321,16 +288,14 @@
                     "lemma": "repiek",
                     "pos": "NOU"
                   },
-                  "id": "w.23",
-                  "offset": 144
+                  "id": "w.23"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000011",
-                  "offset": 153
+                  "id": "pc.post.0000011"
                 },
                 {
                   "annotations": {
@@ -338,8 +303,7 @@
                     "lemma": "leuren",
                     "pos": "NEPER"
                   },
-                  "id": "w.24",
-                  "offset": 155
+                  "id": "w.24"
                 },
                 {
                   "annotations": {
@@ -347,16 +311,14 @@
                     "lemma": "pijl",
                     "pos": "NOU"
                   },
-                  "id": "w.25",
-                  "offset": 163
+                  "id": "w.25"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000012",
-                  "offset": 168
+                  "id": "pc.post.0000012"
                 },
                 {
                   "annotations": {
@@ -364,8 +326,7 @@
                     "lemma": "jan",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.26",
-                  "offset": 170
+                  "id": "w.26"
                 },
                 {
                   "annotations": {
@@ -373,16 +334,14 @@
                     "lemma": "kops",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.27",
-                  "offset": 178
+                  "id": "w.27"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000013",
-                  "offset": 183
+                  "id": "pc.post.0000013"
                 },
                 {
                   "annotations": {
@@ -390,8 +349,7 @@
                     "lemma": "manueel",
                     "pos": "NOU"
                   },
-                  "id": "w.28",
-                  "offset": 185
+                  "id": "w.28"
                 },
                 {
                   "annotations": {
@@ -399,16 +357,14 @@
                     "lemma": "born",
                     "pos": "NOU"
                   },
-                  "id": "w.29",
-                  "offset": 192
+                  "id": "w.29"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000014",
-                  "offset": 201
+                  "id": "pc.post.0000014"
                 },
                 {
                   "annotations": {
@@ -416,8 +372,7 @@
                     "lemma": "christoffel, christoffel",
                     "pos": "NOU"
                   },
-                  "id": "w.30",
-                  "offset": 203
+                  "id": "w.30"
                 },
                 {
                   "annotations": {
@@ -425,8 +380,7 @@
                     "lemma": "van",
                     "pos": "NOU"
                   },
-                  "id": "w.31",
-                  "offset": 215
+                  "id": "w.31"
                 },
                 {
                   "annotations": {
@@ -434,16 +388,14 @@
                     "lemma": "zwol",
                     "pos": "NOU"
                   },
-                  "id": "w.32",
-                  "offset": 219
+                  "id": "w.32"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000015",
-                  "offset": 225
+                  "id": "pc.post.0000015"
                 },
                 {
                   "annotations": {
@@ -451,8 +403,7 @@
                     "lemma": "herm",
                     "pos": "NEPER"
                   },
-                  "id": "w.33",
-                  "offset": 227
+                  "id": "w.33"
                 },
                 {
                   "annotations": {
@@ -460,8 +411,7 @@
                     "lemma": "de",
                     "pos": "NEPER"
                   },
-                  "id": "w.34",
-                  "offset": 234
+                  "id": "w.34"
                 },
                 {
                   "annotations": {
@@ -469,16 +419,14 @@
                     "lemma": "wild",
                     "pos": "NEPER"
                   },
-                  "id": "w.35",
-                  "offset": 237
+                  "id": "w.35"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000016",
-                  "offset": 243
+                  "id": "pc.post.0000016"
                 },
                 {
                   "annotations": {
@@ -486,8 +434,7 @@
                     "lemma": "abraham",
                     "pos": "NOU"
                   },
-                  "id": "w.36",
-                  "offset": 245
+                  "id": "w.36"
                 },
                 {
                   "annotations": {
@@ -495,16 +442,14 @@
                     "lemma": "douglas",
                     "pos": "NOU"
                   },
-                  "id": "w.37",
-                  "offset": 253
+                  "id": "w.37"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000017",
-                  "offset": 261
+                  "id": "pc.post.0000017"
                 },
                 {
                   "annotations": {
@@ -512,8 +457,7 @@
                     "lemma": "adam",
                     "pos": "NOU"
                   },
-                  "id": "w.38",
-                  "offset": 263
+                  "id": "w.38"
                 },
                 {
                   "annotations": {
@@ -521,8 +465,7 @@
                     "lemma": "van",
                     "pos": "NOU"
                   },
-                  "id": "w.39",
-                  "offset": 268
+                  "id": "w.39"
                 },
                 {
                   "annotations": {
@@ -530,8 +473,7 @@
                     "lemma": "rijn",
                     "pos": "NOU"
                   },
-                  "id": "w.40",
-                  "offset": 272
+                  "id": "w.40"
                 },
                 {
                   "annotations": {
@@ -539,8 +481,7 @@
                     "lemma": "en",
                     "pos": "NOU"
                   },
-                  "id": "w.41",
-                  "offset": 277
+                  "id": "w.41"
                 },
                 {
                   "annotations": {
@@ -548,8 +489,7 @@
                     "lemma": "atrium",
                     "pos": "NOU"
                   },
-                  "id": "w.42",
-                  "offset": 280
+                  "id": "w.42"
                 },
                 {
                   "annotations": {
@@ -557,8 +497,7 @@
                     "lemma": "van",
                     "pos": "NOU"
                   },
-                  "id": "w.43",
-                  "offset": 288
+                  "id": "w.43"
                 },
                 {
                   "annotations": {
@@ -566,8 +505,7 @@
                     "lemma": "maat",
                     "pos": "NOU"
                   },
-                  "id": "w.44",
-                  "offset": 292
+                  "id": "w.44"
                 },
                 {
                   "annotations": {
@@ -575,16 +513,14 @@
                     "lemma": "stel",
                     "pos": "NOU"
                   },
-                  "id": "w.45",
-                  "offset": 296
+                  "id": "w.45"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000018",
-                  "offset": 301
+                  "id": "pc.post.0000018"
                 },
                 {
                   "annotations": {
@@ -592,16 +528,14 @@
                     "lemma": "batavia ",
                     "pos": "NOU"
                   },
-                  "id": "w.46",
-                  "offset": 303
+                  "id": "w.46"
                 },
                 {
                   "annotations": {
                     "token": "14",
                     "pos": "NUM"
                   },
-                  "id": "w.47",
-                  "offset": 311
+                  "id": "w.47"
                 },
                 {
                   "annotations": {
@@ -609,16 +543,14 @@
                     "lemma": "maart",
                     "pos": "NOU"
                   },
-                  "id": "w.48",
-                  "offset": 314
+                  "id": "w.48"
                 },
                 {
                   "annotations": {
                     "token": "1704",
                     "pos": "NUM"
                   },
-                  "id": "w.49",
-                  "offset": 320
+                  "id": "w.49"
                 },
                 {
                   "annotations": {
@@ -626,8 +558,7 @@
                     "lemma": "e.",
                     "pos": "."
                   },
-                  "id": "pc.post.0000019",
-                  "offset": 325
+                  "id": "pc.post.0000019"
                 }
               ]
             }
@@ -645,8 +576,7 @@
                     "lemma": "kol",
                     "pos": "NOU"
                   },
-                  "id": "w.50",
-                  "offset": 327
+                  "id": "w.50"
                 },
                 {
                   "annotations": {
@@ -654,8 +584,7 @@
                     "lemma": "e.",
                     "pos": "."
                   },
-                  "id": "pc.post.0000020",
-                  "offset": 331
+                  "id": "pc.post.0000020"
                 }
               ]
             },
@@ -668,24 +597,21 @@
                     "lemma": "ark",
                     "pos": "NEPER"
                   },
-                  "id": "w.51",
-                  "offset": 333
+                  "id": "w.51"
                 },
                 {
                   "annotations": {
                     "token": "1563",
                     "pos": "NUM"
                   },
-                  "id": "w.52",
-                  "offset": 339
+                  "id": "w.52"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000022",
-                  "offset": 344
+                  "id": "pc.post.0000022"
                 },
                 {
                   "annotations": {
@@ -693,24 +619,21 @@
                     "lemma": "fol.",
                     "pos": "ADJ"
                   },
-                  "id": "w.53",
-                  "offset": 346
+                  "id": "w.53"
                 },
                 {
                   "annotations": {
                     "token": "2180-2183",
                     "pos": "NUM"
                   },
-                  "id": "w.54",
-                  "offset": 351
+                  "id": "w.54"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000024",
-                  "offset": 361
+                  "id": "pc.post.0000024"
                 },
                 {
                   "annotations": {
@@ -718,24 +641,21 @@
                     "lemma": "kopie",
                     "pos": "NOU"
                   },
-                  "id": "w.55",
-                  "offset": 363
+                  "id": "w.55"
                 },
                 {
                   "annotations": {
                     "token": "1573",
                     "pos": "NUM"
                   },
-                  "id": "w.56",
-                  "offset": 369
+                  "id": "w.56"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000025",
-                  "offset": 374
+                  "id": "pc.post.0000025"
                 },
                 {
                   "annotations": {
@@ -743,16 +663,14 @@
                     "lemma": "fol.",
                     "pos": "ADJ"
                   },
-                  "id": "w.57",
-                  "offset": 376
+                  "id": "w.57"
                 },
                 {
                   "annotations": {
                     "token": "493-496",
                     "pos": "NUM"
                   },
-                  "id": "w.58",
-                  "offset": 381
+                  "id": "w.58"
                 },
                 {
                   "annotations": {
@@ -760,8 +678,7 @@
                     "lemma": "e.",
                     "pos": "NUM"
                   },
-                  "id": "pc.floating.0000027",
-                  "offset": 389
+                  "id": "pc.floating.0000027"
                 }
               ]
             }
@@ -779,8 +696,7 @@
                     "lemma": "men",
                     "pos": "PRN"
                   },
-                  "id": "w.95",
-                  "offset": 393
+                  "id": "w.95"
                 },
                 {
                   "annotations": {
@@ -788,8 +704,7 @@
                     "lemma": "wel",
                     "pos": "ADV"
                   },
-                  "id": "w.96",
-                  "offset": 397
+                  "id": "w.96"
                 },
                 {
                   "annotations": {
@@ -797,8 +712,7 @@
                     "lemma": "zullen",
                     "pos": "VRB"
                   },
-                  "id": "w.97",
-                  "offset": 401
+                  "id": "w.97"
                 },
                 {
                   "annotations": {
@@ -806,8 +720,7 @@
                     "lemma": "mogen",
                     "pos": "VRB"
                   },
-                  "id": "w.98",
-                  "offset": 407
+                  "id": "w.98"
                 },
                 {
                   "annotations": {
@@ -815,16 +728,14 @@
                     "lemma": "prognosticeren",
                     "pos": "VRB"
                   },
-                  "id": "w.99",
-                  "offset": 413
+                  "id": "w.99"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000034",
-                  "offset": 428
+                  "id": "pc.post.0000034"
                 },
                 {
                   "annotations": {
@@ -832,8 +743,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.100",
-                  "offset": 430
+                  "id": "w.100"
                 },
                 {
                   "annotations": {
@@ -841,8 +751,7 @@
                     "lemma": "zoon",
                     "pos": "NOU"
                   },
-                  "id": "w.101",
-                  "offset": 433
+                  "id": "w.101"
                 },
                 {
                   "annotations": {
@@ -850,8 +759,7 @@
                     "lemma": "van",
                     "pos": "ADP"
                   },
-                  "id": "w.102",
-                  "offset": 438
+                  "id": "w.102"
                 },
                 {
                   "annotations": {
@@ -859,8 +767,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.103",
-                  "offset": 442
+                  "id": "w.103"
                 },
                 {
                   "annotations": {
@@ -868,8 +775,7 @@
                     "lemma": "pangeran",
                     "pos": "NOU"
                   },
-                  "id": "w.104",
-                  "offset": 446
+                  "id": "w.104"
                 },
                 {
                   "annotations": {
@@ -877,8 +783,7 @@
                     "lemma": "poger",
                     "pos": "NOU"
                   },
-                  "id": "w.105",
-                  "offset": 455
+                  "id": "w.105"
                 },
                 {
                   "annotations": {
@@ -886,8 +791,7 @@
                     "lemma": "met",
                     "pos": "ADP"
                   },
-                  "id": "w.106",
-                  "offset": 462
+                  "id": "w.106"
                 },
                 {
                   "annotations": {
@@ -895,8 +799,7 @@
                     "lemma": "zijn",
                     "pos": "PRN"
                   },
-                  "id": "w.107",
-                  "offset": 466
+                  "id": "w.107"
                 },
                 {
                   "annotations": {
@@ -904,8 +807,7 @@
                     "lemma": "opstand",
                     "pos": "NOU"
                   },
-                  "id": "w.108",
-                  "offset": 471
+                  "id": "w.108"
                 },
                 {
                   "annotations": {
@@ -913,8 +815,7 @@
                     "lemma": "tegen",
                     "pos": "ADP"
                   },
-                  "id": "w.109",
-                  "offset": 479
+                  "id": "w.109"
                 },
                 {
                   "annotations": {
@@ -922,8 +823,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.110",
-                  "offset": 485
+                  "id": "w.110"
                 },
                 {
                   "annotations": {
@@ -931,16 +831,14 @@
                     "lemma": "nieuw",
                     "pos": "ADJ"
                   },
-                  "id": "w.111",
-                  "offset": 489
+                  "id": "w.111"
                 },
                 {
                   "annotations": {
                     "token": "Soesoehoenang",
                     "pos": "NOU"
                   },
-                  "id": "w.112",
-                  "offset": 497
+                  "id": "w.112"
                 },
                 {
                   "annotations": {
@@ -948,8 +846,7 @@
                     "lemma": "zijn",
                     "pos": "PRN"
                   },
-                  "id": "w.113",
-                  "offset": 511
+                  "id": "w.113"
                 },
                 {
                   "annotations": {
@@ -957,8 +854,7 @@
                     "lemma": "intentie",
                     "pos": "NOU"
                   },
-                  "id": "w.114",
-                  "offset": 516
+                  "id": "w.114"
                 },
                 {
                   "annotations": {
@@ -966,8 +862,7 @@
                     "lemma": "bezwaarlijk",
                     "pos": "ADJ"
                   },
-                  "id": "w.115",
-                  "offset": 525
+                  "id": "w.115"
                 },
                 {
                   "annotations": {
@@ -975,8 +870,7 @@
                     "lemma": "zullen",
                     "pos": "VRB"
                   },
-                  "id": "w.116",
-                  "offset": 537
+                  "id": "w.116"
                 },
                 {
                   "annotations": {
@@ -984,16 +878,14 @@
                     "lemma": "bereiken",
                     "pos": "VRB"
                   },
-                  "id": "w.117",
-                  "offset": 541
+                  "id": "w.117"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000035",
-                  "offset": 550
+                  "id": "pc.post.0000035"
                 },
                 {
                   "annotations": {
@@ -1001,8 +893,7 @@
                     "lemma": "de",
                     "pos": "CON"
                   },
-                  "id": "w.118",
-                  "offset": 552
+                  "id": "w.118"
                 },
                 {
                   "annotations": {
@@ -1010,8 +901,7 @@
                     "lemma": "wij",
                     "pos": "PRN"
                   },
-                  "id": "w.119",
-                  "offset": 555
+                  "id": "w.119"
                 },
                 {
                   "annotations": {
@@ -1019,8 +909,7 @@
                     "lemma": "el",
                     "pos": "VRB"
                   },
-                  "id": "w.120",
-                  "offset": 559
+                  "id": "w.120"
                 },
                 {
                   "annotations": {
@@ -1028,8 +917,7 @@
                     "lemma": "hij",
                     "pos": "PRN"
                   },
-                  "id": "w.121",
-                  "offset": 562
+                  "id": "w.121"
                 },
                 {
                   "annotations": {
@@ -1037,8 +925,7 @@
                     "lemma": "reeds",
                     "pos": "ADV"
                   },
-                  "id": "w.122",
-                  "offset": 566
+                  "id": "w.122"
                 },
                 {
                   "annotations": {
@@ -1046,8 +933,7 @@
                     "lemma": "met",
                     "pos": "ADP"
                   },
-                  "id": "w.123",
-                  "offset": 572
+                  "id": "w.123"
                 },
                 {
                   "annotations": {
@@ -1055,8 +941,7 @@
                     "lemma": "zijn",
                     "pos": "PRN"
                   },
-                  "id": "w.124",
-                  "offset": 576
+                  "id": "w.124"
                 },
                 {
                   "annotations": {
@@ -1064,8 +949,7 @@
                     "lemma": "bij",
                     "pos": "ADJ"
                   },
-                  "id": "w.125",
-                  "offset": 581
+                  "id": "w.125"
                 },
                 {
                   "annotations": {
@@ -1073,8 +957,7 @@
                     "lemma": "hebben",
                     "pos": "ADJ"
                   },
-                  "id": "w.126",
-                  "offset": 585
+                  "id": "w.126"
                 },
                 {
                   "annotations": {
@@ -1082,8 +965,7 @@
                     "lemma": "macht",
                     "pos": "NOU"
                   },
-                  "id": "w.127",
-                  "offset": 594
+                  "id": "w.127"
                 },
                 {
                   "annotations": {
@@ -1091,8 +973,7 @@
                     "lemma": "na",
                     "pos": "ADP"
                   },
-                  "id": "w.128",
-                  "offset": 600
+                  "id": "w.128"
                 },
                 {
                   "annotations": {
@@ -1100,8 +981,7 @@
                     "lemma": "het",
                     "pos": "ART"
                   },
-                  "id": "w.129",
-                  "offset": 603
+                  "id": "w.129"
                 },
                 {
                   "annotations": {
@@ -1109,8 +989,7 @@
                     "lemma": "district",
                     "pos": "NOU"
                   },
-                  "id": "w.130",
-                  "offset": 607
+                  "id": "w.130"
                 },
                 {
                   "annotations": {
@@ -1118,8 +997,7 @@
                     "lemma": "van",
                     "pos": "ADP"
                   },
-                  "id": "w.131",
-                  "offset": 616
+                  "id": "w.131"
                 },
                 {
                   "annotations": {
@@ -1127,8 +1005,7 @@
                     "lemma": "kariboe",
                     "pos": "NELOC"
                   },
-                  "id": "w.132",
-                  "offset": 620
+                  "id": "w.132"
                 },
                 {
                   "annotations": {
@@ -1136,8 +1013,7 @@
                     "lemma": "zullen",
                     "pos": "VRB"
                   },
-                  "id": "w.133",
-                  "offset": 628
+                  "id": "w.133"
                 },
                 {
                   "annotations": {
@@ -1145,8 +1021,7 @@
                     "lemma": "zijn",
                     "pos": "VRB"
                   },
-                  "id": "w.134",
-                  "offset": 634
+                  "id": "w.134"
                 },
                 {
                   "annotations": {
@@ -1154,16 +1029,14 @@
                     "lemma": "wijken",
                     "pos": "VRB"
                   },
-                  "id": "w.135",
-                  "offset": 639
+                  "id": "w.135"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000036",
-                  "offset": 647
+                  "id": "pc.post.0000036"
                 },
                 {
                   "annotations": {
@@ -1171,8 +1044,7 @@
                     "lemma": "tenware",
                     "pos": "CON"
                   },
-                  "id": "w.136",
-                  "offset": 649
+                  "id": "w.136"
                 },
                 {
                   "annotations": {
@@ -1180,8 +1052,7 @@
                     "lemma": "dat",
                     "pos": "CON"
                   },
-                  "id": "w.137",
-                  "offset": 657
+                  "id": "w.137"
                 },
                 {
                   "annotations": {
@@ -1189,8 +1060,7 @@
                     "lemma": "die",
                     "pos": "PRN"
                   },
-                  "id": "w.138",
-                  "offset": 661
+                  "id": "w.138"
                 },
                 {
                   "annotations": {
@@ -1198,8 +1068,7 @@
                     "lemma": "van",
                     "pos": "ADP"
                   },
-                  "id": "w.139",
-                  "offset": 665
+                  "id": "w.139"
                 },
                 {
                   "annotations": {
@@ -1207,8 +1076,7 @@
                     "lemma": "begallen",
                     "pos": "NELOC"
                   },
-                  "id": "w.140",
-                  "offset": 669
+                  "id": "w.140"
                 },
                 {
                   "annotations": {
@@ -1216,8 +1084,7 @@
                     "lemma": "en",
                     "pos": "CON"
                   },
-                  "id": "w.141",
-                  "offset": 678
+                  "id": "w.141"
                 },
                 {
                   "annotations": {
@@ -1225,8 +1092,7 @@
                     "lemma": "medio",
                     "pos": "NEPER"
                   },
-                  "id": "w.142",
-                  "offset": 681
+                  "id": "w.142"
                 },
                 {
                   "annotations": {
@@ -1234,8 +1100,7 @@
                     "lemma": "aan",
                     "pos": "ADP"
                   },
-                  "id": "w.143",
-                  "offset": 688
+                  "id": "w.143"
                 },
                 {
                   "annotations": {
@@ -1243,8 +1108,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.144",
-                  "offset": 692
+                  "id": "w.144"
                 },
                 {
                   "annotations": {
@@ -1252,8 +1116,7 @@
                     "lemma": "ander",
                     "pos": "ADJ"
                   },
-                  "id": "w.145",
-                  "offset": 695
+                  "id": "w.145"
                 },
                 {
                   "annotations": {
@@ -1261,16 +1124,14 @@
                     "lemma": "kant",
                     "pos": "NOU"
                   },
-                  "id": "w.146",
-                  "offset": 702
+                  "id": "w.146"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000037",
-                  "offset": 707
+                  "id": "pc.post.0000037"
                 },
                 {
                   "annotations": {
@@ -1278,8 +1139,7 @@
                     "lemma": "over",
                     "pos": "ADP"
                   },
-                  "id": "w.147",
-                  "offset": 709
+                  "id": "w.147"
                 },
                 {
                   "annotations": {
@@ -1287,8 +1147,7 @@
                     "lemma": "het",
                     "pos": "ART"
                   },
-                  "id": "w.148",
-                  "offset": 714
+                  "id": "w.148"
                 },
                 {
                   "annotations": {
@@ -1296,8 +1155,7 @@
                     "lemma": "reeds",
                     "pos": "ADV"
                   },
-                  "id": "w.149",
-                  "offset": 718
+                  "id": "w.149"
                 },
                 {
                   "annotations": {
@@ -1305,8 +1163,7 @@
                     "lemma": "aangedaan",
                     "pos": "ADJ"
                   },
-                  "id": "w.150",
-                  "offset": 724
+                  "id": "w.150"
                 },
                 {
                   "annotations": {
@@ -1314,8 +1171,7 @@
                     "lemma": "kwaad",
                     "pos": "ADJ"
                   },
-                  "id": "w.151",
-                  "offset": 734
+                  "id": "w.151"
                 },
                 {
                   "annotations": {
@@ -1323,8 +1179,7 @@
                     "lemma": "traktement",
                     "pos": "NOU"
                   },
-                  "id": "w.152",
-                  "offset": 740
+                  "id": "w.152"
                 },
                 {
                   "annotations": {
@@ -1332,8 +1187,7 @@
                     "lemma": "aan",
                     "pos": "ADP"
                   },
-                  "id": "w.153",
-                  "offset": 751
+                  "id": "w.153"
                 },
                 {
                   "annotations": {
@@ -1341,8 +1195,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.154",
-                  "offset": 755
+                  "id": "w.154"
                 },
                 {
                   "annotations": {
@@ -1350,8 +1203,7 @@
                     "lemma": "haar",
                     "pos": "PRN"
                   },
-                  "id": "w.155",
-                  "offset": 758
+                  "id": "w.155"
                 },
                 {
                   "annotations": {
@@ -1359,8 +1211,7 @@
                     "lemma": "misnoegen",
                     "pos": "VRB"
                   },
-                  "id": "w.156",
-                  "offset": 763
+                  "id": "w.156"
                 },
                 {
                   "annotations": {
@@ -1368,8 +1219,7 @@
                     "lemma": "en",
                     "pos": "CON"
                   },
-                  "id": "w.157",
-                  "offset": 772
+                  "id": "w.157"
                 },
                 {
                   "annotations": {
@@ -1377,8 +1227,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.158",
-                  "offset": 775
+                  "id": "w.158"
                 },
                 {
                   "annotations": {
@@ -1386,8 +1235,7 @@
                     "lemma": "laatst",
                     "pos": "ADJ"
                   },
-                  "id": "w.159",
-                  "offset": 778
+                  "id": "w.159"
                 },
                 {
                   "annotations": {
@@ -1395,8 +1243,7 @@
                     "lemma": "reeds",
                     "pos": "ADV"
                   },
-                  "id": "w.160",
-                  "offset": 786
+                  "id": "w.160"
                 },
                 {
                   "annotations": {
@@ -1404,8 +1251,7 @@
                     "lemma": "op",
                     "pos": "ADV"
                   },
-                  "id": "w.161",
-                  "offset": 792
+                  "id": "w.161"
                 },
                 {
                   "annotations": {
@@ -1413,8 +1259,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.162",
-                  "offset": 795
+                  "id": "w.162"
                 },
                 {
                   "annotations": {
@@ -1422,8 +1267,7 @@
                     "lemma": "been",
                     "pos": "NOU"
                   },
-                  "id": "w.163",
-                  "offset": 798
+                  "id": "w.163"
                 },
                 {
                   "annotations": {
@@ -1431,8 +1275,7 @@
                     "lemma": "raken",
                     "pos": "VRB"
                   },
-                  "id": "w.164",
-                  "offset": 803
+                  "id": "w.164"
                 },
                 {
                   "annotations": {
@@ -1440,16 +1283,14 @@
                     "lemma": "zijn",
                     "pos": "VRB"
                   },
-                  "id": "w.165",
-                  "offset": 811
+                  "id": "w.165"
                 },
                 {
                   "annotations": {
                     "token": ",",
                     "pos": ","
                   },
-                  "id": "pc.post.0000038",
-                  "offset": 818
+                  "id": "pc.post.0000038"
                 },
                 {
                   "annotations": {
@@ -1457,8 +1298,7 @@
                     "lemma": "hij",
                     "pos": "PRN"
                   },
-                  "id": "w.166",
-                  "offset": 820
+                  "id": "w.166"
                 },
                 {
                   "annotations": {
@@ -1466,8 +1306,7 @@
                     "lemma": "incommoderen",
                     "pos": "VRB"
                   },
-                  "id": "w.167",
-                  "offset": 824
+                  "id": "w.167"
                 },
                 {
                   "annotations": {
@@ -1475,8 +1314,7 @@
                     "lemma": "en",
                     "pos": "CON"
                   },
-                  "id": "w.168",
-                  "offset": 839
+                  "id": "w.168"
                 },
                 {
                   "annotations": {
@@ -1484,8 +1322,7 @@
                     "lemma": "de",
                     "pos": "ART"
                   },
-                  "id": "w.169",
-                  "offset": 842
+                  "id": "w.169"
                 },
                 {
                   "annotations": {
@@ -1493,8 +1330,7 @@
                     "lemma": "hand",
                     "pos": "NOU"
                   },
-                  "id": "w.170",
-                  "offset": 845
+                  "id": "w.170"
                 },
                 {
                   "annotations": {
@@ -1502,8 +1338,7 @@
                     "lemma": "vol",
                     "pos": "ADJ"
                   },
-                  "id": "w.171",
-                  "offset": 852
+                  "id": "w.171"
                 },
                 {
                   "annotations": {
@@ -1511,8 +1346,7 @@
                     "lemma": "werk",
                     "pos": "NOU"
                   },
-                  "id": "w.172",
-                  "offset": 856
+                  "id": "w.172"
                 },
                 {
                   "annotations": {
@@ -1520,8 +1354,7 @@
                     "lemma": "geven",
                     "pos": "VRB"
                   },
-                  "id": "w.173",
-                  "offset": 861
+                  "id": "w.173"
                 },
                 {
                   "annotations": {
@@ -1529,8 +1362,7 @@
                     "lemma": "e.",
                     "pos": "."
                   },
-                  "id": "pc.post.0000039",
-                  "offset": 867
+                  "id": "pc.post.0000039"
                 }
               ]
             }
@@ -1548,8 +1380,7 @@
                     "lemma": "jan",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.219",
-                  "offset": 869
+                  "id": "w.219"
                 },
                 {
                   "annotations": {
@@ -1557,8 +1388,7 @@
                     "lemma": "van",
                     "pos": "NEPER_NEPER"
                   },
-                  "id": "w.220",
-                  "offset": 874
+                  "id": "w.220"
                 },
                 {
                   "annotations": {
@@ -1566,8 +1396,7 @@
                     "lemma": "hoorn",
                     "pos": "NEPER"
                   },
-                  "id": "w.221",
-                  "offset": 878
+                  "id": "w.221"
                 }
               ]
             }
@@ -1584,8 +1413,7 @@
                     "token": "15",
                     "pos": "NUM"
                   },
-                  "id": "w.222",
-                  "offset": 884
+                  "id": "w.222"
                 },
                 {
                   "annotations": {
@@ -1593,16 +1421,14 @@
                     "lemma": "augustus",
                     "pos": "NOU"
                   },
-                  "id": "w.223",
-                  "offset": 887
+                  "id": "w.223"
                 },
                 {
                   "annotations": {
                     "token": "1704",
                     "pos": "NUM"
                   },
-                  "id": "w.224",
-                  "offset": 896
+                  "id": "w.224"
                 },
                 {
                   "annotations": {
@@ -1610,16 +1436,14 @@
                     "lemma": "e",
                     "pos": "NUM"
                   },
-                  "id": "pc.floating.0000048",
-                  "offset": 901
+                  "id": "pc.floating.0000048"
                 },
                 {
                   "annotations": {
                     "token": "30",
                     "pos": "NUM"
                   },
-                  "id": "w.226",
-                  "offset": 903
+                  "id": "w.226"
                 },
                 {
                   "annotations": {
@@ -1627,16 +1451,14 @@
                     "lemma": "oktober",
                     "pos": "NOU"
                   },
-                  "id": "w.227",
-                  "offset": 906
+                  "id": "w.227"
                 },
                 {
                   "annotations": {
                     "token": "1709",
                     "pos": "NUM"
                   },
-                  "id": "w.228",
-                  "offset": 914
+                  "id": "w.228"
                 }
               ]
             }

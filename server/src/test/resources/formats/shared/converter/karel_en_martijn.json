@@ -17,8 +17,7 @@
                     "head": "2",
                     "deprel": "amod"
                   },
-                  "id": "karel.p1.s1.w1",
-                  "offset": 0
+                  "id": "karel.p1.s1.w1"
                 },
                 {
                   "annotations": {
@@ -28,8 +27,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "karel.p1.s1.w2",
-                  "offset": 7
+                  "id": "karel.p1.s1.w2"
                 },
                 {
                   "annotations": {
@@ -39,8 +37,7 @@
                     "head": "4",
                     "deprel": "cc"
                   },
-                  "id": "karel.p1.s1.w3",
-                  "offset": 16
+                  "id": "karel.p1.s1.w3"
                 },
                 {
                   "annotations": {
@@ -51,7 +48,6 @@
                     "deprel": "conj"
                   },
                   "id": "karel.p1.s1.w4",
-                  "offset": 21,
                   "spaceAfter": false
                 },
                 {
@@ -61,8 +57,7 @@
                     "head": "2",
                     "deprel": "punct"
                   },
-                  "id": "karel.p1.s1.w5",
-                  "offset": 27
+                  "id": "karel.p1.s1.w5"
                 }
               ]
             },
@@ -77,8 +72,7 @@
                     "head": "4",
                     "deprel": "aux"
                   },
-                  "id": "karel.p1.s2.w1",
-                  "offset": 29
+                  "id": "karel.p1.s2.w1"
                 },
                 {
                   "annotations": {
@@ -88,8 +82,7 @@
                     "head": "4",
                     "deprel": "nsubj"
                   },
-                  "id": "karel.p1.s2.w2",
-                  "offset": 34
+                  "id": "karel.p1.s2.w2"
                 },
                 {
                   "annotations": {
@@ -99,8 +92,7 @@
                     "head": "4",
                     "deprel": "iobj"
                   },
-                  "id": "karel.p1.s2.w3",
-                  "offset": 37
+                  "id": "karel.p1.s2.w3"
                 },
                 {
                   "annotations": {
@@ -111,7 +103,6 @@
                     "deprel": "root"
                   },
                   "id": "karel.p1.s2.w4",
-                  "offset": 39,
                   "spaceAfter": false
                 },
                 {
@@ -121,8 +112,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "karel.p1.s2.w5",
-                  "offset": 48
+                  "id": "karel.p1.s2.w5"
                 },
                 {
                   "annotations": {
@@ -132,8 +122,7 @@
                     "head": "4",
                     "deprel": "conj"
                   },
-                  "id": "karel.p1.s2.w6",
-                  "offset": 50
+                  "id": "karel.p1.s2.w6"
                 },
                 {
                   "annotations": {
@@ -144,7 +133,6 @@
                     "deprel": "advmod"
                   },
                   "id": "karel.p1.s2.w7",
-                  "offset": 56,
                   "spaceAfter": false
                 },
                 {
@@ -154,8 +142,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "karel.p1.s2.w8",
-                  "offset": 60
+                  "id": "karel.p1.s2.w8"
                 }
               ]
             }
@@ -175,8 +162,7 @@
                     "head": "2",
                     "deprel": "expl"
                   },
-                  "id": "karel.p2.s1.w1",
-                  "offset": 62
+                  "id": "karel.p2.s1.w1"
                 },
                 {
                   "annotations": {
@@ -186,8 +172,7 @@
                     "head": "5",
                     "deprel": "cop"
                   },
-                  "id": "karel.p2.s1.w2",
-                  "offset": 65
+                  "id": "karel.p2.s1.w2"
                 },
                 {
                   "annotations": {
@@ -197,8 +182,7 @@
                     "head": "5",
                     "deprel": "case"
                   },
-                  "id": "karel.p2.s1.w3",
-                  "offset": 69
+                  "id": "karel.p2.s1.w3"
                 },
                 {
                   "annotations": {
@@ -208,8 +192,7 @@
                     "head": "5",
                     "deprel": "det"
                   },
-                  "id": "karel.p2.s1.w4",
-                  "offset": 72
+                  "id": "karel.p2.s1.w4"
                 },
                 {
                   "annotations": {
@@ -220,7 +203,6 @@
                     "deprel": "root"
                   },
                   "id": "karel.p2.s1.w5",
-                  "offset": 77,
                   "spaceAfter": false
                 },
                 {
@@ -230,8 +212,7 @@
                     "head": "5",
                     "deprel": "punct"
                   },
-                  "id": "karel.p2.s1.w6",
-                  "offset": 88
+                  "id": "karel.p2.s1.w6"
                 }
               ]
             },
@@ -257,8 +238,7 @@
                     "head": "4",
                     "deprel": "expl"
                   },
-                  "id": "karel.p2.s2.w1",
-                  "offset": 90
+                  "id": "karel.p2.s2.w1"
                 },
                 {
                   "annotations": {
@@ -269,8 +249,7 @@
                     "deprel": "nsubj",
                     "ner": "B-PER"
                   },
-                  "id": "karel.p2.s2.w2",
-                  "offset": 94
+                  "id": "karel.p2.s2.w2"
                 },
                 {
                   "annotations": {
@@ -281,8 +260,7 @@
                     "deprel": "flat",
                     "ner": "I-PER"
                   },
-                  "id": "karel.p2.s2.w3",
-                  "offset": 101
+                  "id": "karel.p2.s2.w3"
                 },
                 {
                   "annotations": {
@@ -292,8 +270,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "karel.p2.s2.w4",
-                  "offset": 107
+                  "id": "karel.p2.s2.w4"
                 },
                 {
                   "annotations": {
@@ -304,7 +281,6 @@
                     "deprel": "aux"
                   },
                   "id": "karel.p2.s2.w5",
-                  "offset": 115,
                   "spaceAfter": false
                 },
                 {
@@ -314,8 +290,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "karel.p2.s2.w6",
-                  "offset": 123
+                  "id": "karel.p2.s2.w6"
                 }
               ]
             }
@@ -350,7 +325,6 @@
                     "deprel": "punct"
                   },
                   "id": "martijn.p1.s1.w1",
-                  "offset": 125,
                   "spaceAfter": false
                 },
                 {
@@ -363,7 +337,6 @@
                     "ner": "B-PER"
                   },
                   "id": "martijn.p1.s1.w2",
-                  "offset": 126,
                   "spaceAfter": false
                 },
                 {
@@ -373,8 +346,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "martijn.p1.s1.w3",
-                  "offset": 133
+                  "id": "martijn.p1.s1.w3"
                 },
                 {
                   "annotations": {
@@ -385,7 +357,6 @@
                     "deprel": "root"
                   },
                   "id": "martijn.p1.s1.w4",
-                  "offset": 135,
                   "spaceAfter": false
                 },
                 {
@@ -395,8 +366,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "martijn.p1.s1.w5",
-                  "offset": 143
+                  "id": "martijn.p1.s1.w5"
                 },
                 {
                   "annotations": {
@@ -406,8 +376,7 @@
                     "head": "4",
                     "deprel": "cc"
                   },
-                  "id": "martijn.p1.s1.w6",
-                  "offset": 145
+                  "id": "martijn.p1.s1.w6"
                 },
                 {
                   "annotations": {
@@ -417,8 +386,7 @@
                     "head": "8",
                     "deprel": "det"
                   },
-                  "id": "martijn.p1.s1.w7",
-                  "offset": 152
+                  "id": "martijn.p1.s1.w7"
                 },
                 {
                   "annotations": {
@@ -429,7 +397,6 @@
                     "deprel": "nsubj"
                   },
                   "id": "martijn.p1.s1.w8",
-                  "offset": 157,
                   "spaceAfter": false
                 },
                 {
@@ -440,7 +407,6 @@
                     "deprel": "punct"
                   },
                   "id": "martijn.p1.s1.w9",
-                  "offset": 160,
                   "spaceAfter": false
                 },
                 {
@@ -450,8 +416,7 @@
                     "head": "4",
                     "deprel": "punct"
                   },
-                  "id": "martijn.p1.s1.w10",
-                  "offset": 161
+                  "id": "martijn.p1.s1.w10"
                 }
               ]
             },
@@ -467,7 +432,6 @@
                     "deprel": "root"
                   },
                   "id": "martijn.p1.s2.w1",
-                  "offset": 163,
                   "spaceAfter": false
                 },
                 {
@@ -477,8 +441,7 @@
                     "head": "1",
                     "deprel": "punct"
                   },
-                  "id": "martijn.p1.s2.w2",
-                  "offset": 168
+                  "id": "martijn.p1.s2.w2"
                 },
                 {
                   "annotations": {
@@ -488,8 +451,7 @@
                     "head": "5",
                     "deprel": "aux"
                   },
-                  "id": "martijn.p1.s2.w3",
-                  "offset": 170
+                  "id": "martijn.p1.s2.w3"
                 },
                 {
                   "annotations": {
@@ -499,8 +461,7 @@
                     "head": "4",
                     "deprel": "det"
                   },
-                  "id": "martijn.p1.s2.w4",
-                  "offset": 177
+                  "id": "martijn.p1.s2.w4"
                 },
                 {
                   "annotations": {
@@ -510,8 +471,7 @@
                     "head": "3",
                     "deprel": "obj"
                   },
-                  "id": "martijn.p1.s2.w5",
-                  "offset": 183
+                  "id": "martijn.p1.s2.w5"
                 },
                 {
                   "annotations": {
@@ -522,7 +482,6 @@
                     "deprel": "compound:prt"
                   },
                   "id": "martijn.p1.s2.w6",
-                  "offset": 191,
                   "spaceAfter": false
                 },
                 {
@@ -532,8 +491,7 @@
                     "head": "1",
                     "deprel": "punct"
                   },
-                  "id": "martijn.p1.s2.w7",
-                  "offset": 193
+                  "id": "martijn.p1.s2.w7"
                 }
               ]
             }
@@ -553,8 +511,7 @@
                     "head": "4",
                     "deprel": "nsubj"
                   },
-                  "id": "martijn.p2.s1.w1",
-                  "offset": 195
+                  "id": "martijn.p2.s1.w1"
                 },
                 {
                   "annotations": {
@@ -564,8 +521,7 @@
                     "head": "4",
                     "deprel": "aux"
                   },
-                  "id": "martijn.p2.s1.w2",
-                  "offset": 198
+                  "id": "martijn.p2.s1.w2"
                 },
                 {
                   "annotations": {
@@ -575,8 +531,7 @@
                     "head": "4",
                     "deprel": "obj"
                   },
-                  "id": "martijn.p2.s1.w3",
-                  "offset": 205
+                  "id": "martijn.p2.s1.w3"
                 },
                 {
                   "annotations": {
@@ -587,7 +542,6 @@
                     "deprel": "root"
                   },
                   "id": "martijn.p2.s1.w4",
-                  "offset": 208,
                   "spaceAfter": false
                 },
                 {
@@ -597,8 +551,7 @@
                     "head": "5",
                     "deprel": "punct"
                   },
-                  "id": "martijn.p2.s1.w5",
-                  "offset": 216
+                  "id": "martijn.p2.s1.w5"
                 }
               ]
             },
@@ -613,8 +566,7 @@
                     "head": "2",
                     "deprel": "subj"
                   },
-                  "id": "martijn.p2.s2.w1",
-                  "offset": 218
+                  "id": "martijn.p2.s2.w1"
                 },
                 {
                   "annotations": {
@@ -624,8 +576,7 @@
                     "head": "0",
                     "deprel": "root"
                   },
-                  "id": "martijn.p2.s2.w2",
-                  "offset": 223
+                  "id": "martijn.p2.s2.w2"
                 },
                 {
                   "annotations": {
@@ -635,8 +586,7 @@
                     "head": "2",
                     "deprel": "advmod"
                   },
-                  "id": "martijn.p2.s2.w3",
-                  "offset": 230
+                  "id": "martijn.p2.s2.w3"
                 },
                 {
                   "annotations": {
@@ -646,8 +596,7 @@
                     "head": "3",
                     "deprel": "conj"
                   },
-                  "id": "martijn.p2.s2.w4",
-                  "offset": 235
+                  "id": "martijn.p2.s2.w4"
                 },
                 {
                   "annotations": {
@@ -657,8 +606,7 @@
                     "head": "3",
                     "deprel": "cc"
                   },
-                  "id": "martijn.p2.s2.w5",
-                  "offset": 238
+                  "id": "martijn.p2.s2.w5"
                 }
               ]
             }

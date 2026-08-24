@@ -124,7 +124,7 @@ class NafReader(file: File) : LayerReader() {
                     val spaceAfter =
                         nextWordform?.offset != (wordform.offset + wordform.token.length)
 
-                    terms += Term(wordform.id, wordform.offset, annotations, spaceAfter)
+                    terms += Term(wordform.id, annotations, spaceAfter)
                 }
                 // collect all spans that refer to one of the terms in this sentence
                 val termIds = terms.map { it.id }
@@ -154,8 +154,7 @@ class NafReader(file: File) : LayerReader() {
                 // 5)
                 val t = terms[termI]
                 val iob = (if (spanI == 0) "B-" else "I-") + span.value
-                terms[termI] =
-                    Term(t.id, t.offset, t.annotations + (Annotation.NER to iob), t.spaceAfter)
+                terms[termI] = Term(t.id, t.annotations + (Annotation.NER to iob), t.spaceAfter)
             }
         }
         super.newSentence()

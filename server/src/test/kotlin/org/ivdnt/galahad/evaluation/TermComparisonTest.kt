@@ -22,7 +22,6 @@ class TermComparisonTest {
             val hypoTerm =
                 Term(
                     "",
-                    0,
                     mapOf(
                         Annotation.TOKEN to "dummy",
                         Annotation.LEMMA to hypoLemma,
@@ -32,7 +31,6 @@ class TermComparisonTest {
             val refTerm =
                 Term(
                     "",
-                    0,
                     mapOf(
                         Annotation.TOKEN to "dummy",
                         Annotation.LEMMA to refLemma,

@@ -25,7 +25,8 @@ class DocumentSpanEvaluation(
                                     span.indices.map { index ->
                                         val term = sentence.terms[index]
                                         layerComparison.matches.find {
-                                            it.ref.offset == term.offset
+                                            it.ref.token ==
+                                                term.token // TODO FIXME: used to be offset
                                         }!!
                                     }
 

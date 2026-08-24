@@ -13,29 +13,25 @@
                   "annotations": {
                     "token": "Fraaie"
                   },
-                  "id": "d1.p1.s1.w1",
-                  "offset": 0
+                  "id": "d1.p1.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "historie"
                   },
-                  "id": "d1.p1.s1.w2",
-                  "offset": 7
+                  "id": "d1.p1.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "ende"
                   },
-                  "id": "d1.p1.s1.w3",
-                  "offset": 16
+                  "id": "d1.p1.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "alwaer."
                   },
-                  "id": "d1.p1.s1.w4",
-                  "offset": 21
+                  "id": "d1.p1.s1.w4"
                 }
               ]
             },
@@ -46,43 +42,37 @@
                   "annotations": {
                     "token": "Magh"
                   },
-                  "id": "d1.p1.s2.w1",
-                  "offset": 29
+                  "id": "d1.p1.s2.w1"
                 },
                 {
                   "annotations": {
                     "token": "'k"
                   },
-                  "id": "d1.p1.s2.w2",
-                  "offset": 34
+                  "id": "d1.p1.s2.w2"
                 },
                 {
                   "annotations": {
                     "token": "u"
                   },
-                  "id": "d1.p1.s2.w3",
-                  "offset": 37
+                  "id": "d1.p1.s2.w3"
                 },
                 {
                   "annotations": {
                     "token": "vertellen,"
                   },
-                  "id": "d1.p1.s2.w4",
-                  "offset": 39
+                  "id": "d1.p1.s2.w4"
                 },
                 {
                   "annotations": {
                     "token": "hoirt"
                   },
-                  "id": "d1.p1.s2.w5",
-                  "offset": 50
+                  "id": "d1.p1.s2.w5"
                 },
                 {
                   "annotations": {
                     "token": "naer."
                   },
-                  "id": "d1.p1.s2.w6",
-                  "offset": 56
+                  "id": "d1.p1.s2.w6"
                 }
               ]
             }
@@ -98,36 +88,31 @@
                   "annotations": {
                     "token": "'t"
                   },
-                  "id": "d1.p2.s1.w1",
-                  "offset": 62
+                  "id": "d1.p2.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "Was"
                   },
-                  "id": "d1.p2.s1.w2",
-                  "offset": 65
+                  "id": "d1.p2.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "op"
                   },
-                  "id": "d1.p2.s1.w3",
-                  "offset": 69
+                  "id": "d1.p2.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "enen"
                   },
-                  "id": "d1.p2.s1.w4",
-                  "offset": 72
+                  "id": "d1.p2.s1.w4"
                 },
                 {
                   "annotations": {
                     "token": "avondstonde."
                   },
-                  "id": "d1.p2.s1.w5",
-                  "offset": 77
+                  "id": "d1.p2.s1.w5"
                 }
               ]
             },
@@ -138,36 +123,31 @@
                   "annotations": {
                     "token": "Dat"
                   },
-                  "id": "d1.p2.s2.w1",
-                  "offset": 90
+                  "id": "d1.p2.s2.w1"
                 },
                 {
                   "annotations": {
                     "token": "koning"
                   },
-                  "id": "d1.p2.s2.w2",
-                  "offset": 94
+                  "id": "d1.p2.s2.w2"
                 },
                 {
                   "annotations": {
                     "token": "Carel"
                   },
-                  "id": "d1.p2.s2.w3",
-                  "offset": 101
+                  "id": "d1.p2.s2.w3"
                 },
                 {
                   "annotations": {
                     "token": "slaepen"
                   },
-                  "id": "d1.p2.s2.w4",
-                  "offset": 107
+                  "id": "d1.p2.s2.w4"
                 },
                 {
                   "annotations": {
                     "token": "beghonde."
                   },
-                  "id": "d1.p2.s2.w5",
-                  "offset": 115
+                  "id": "d1.p2.s2.w5"
                 }
               ]
             }
@@ -183,36 +163,31 @@
                   "annotations": {
                     "token": "\"Martijn,"
                   },
-                  "id": "d1.p3.s1.w1",
-                  "offset": 125
+                  "id": "d1.p3.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "slaepstu?"
                   },
-                  "id": "d1.p3.s1.w2",
-                  "offset": 135
+                  "id": "d1.p3.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "slaept"
                   },
-                  "id": "d1.p3.s1.w3",
-                  "offset": 145
+                  "id": "d1.p3.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "dijn"
                   },
-                  "id": "d1.p3.s1.w4",
-                  "offset": 152
+                  "id": "d1.p3.s1.w4"
                 },
                 {
                   "annotations": {
                     "token": "sin?\""
                   },
-                  "id": "d1.p3.s1.w5",
-                  "offset": 157
+                  "id": "d1.p3.s1.w5"
                 }
               ]
             },
@@ -223,36 +198,31 @@
                   "annotations": {
                     "token": "Sprec!"
                   },
-                  "id": "d1.p3.s2.w1",
-                  "offset": 163
+                  "id": "d1.p3.s2.w1"
                 },
                 {
                   "annotations": {
                     "token": "hebstu"
                   },
-                  "id": "d1.p3.s2.w2",
-                  "offset": 170
+                  "id": "d1.p3.s2.w2"
                 },
                 {
                   "annotations": {
                     "token": "gheen"
                   },
-                  "id": "d1.p3.s2.w3",
-                  "offset": 177
+                  "id": "d1.p3.s2.w3"
                 },
                 {
                   "annotations": {
                     "token": "spreken"
                   },
-                  "id": "d1.p3.s2.w4",
-                  "offset": 183
+                  "id": "d1.p3.s2.w4"
                 },
                 {
                   "annotations": {
                     "token": "in?"
                   },
-                  "id": "d1.p3.s2.w5",
-                  "offset": 191
+                  "id": "d1.p3.s2.w5"
                 }
               ]
             }
@@ -268,29 +238,25 @@
                   "annotations": {
                     "token": "Du"
                   },
-                  "id": "d1.p4.s1.w1",
-                  "offset": 195
+                  "id": "d1.p4.s1.w1"
                 },
                 {
                   "annotations": {
                     "token": "dinkes"
                   },
-                  "id": "d1.p4.s1.w2",
-                  "offset": 198
+                  "id": "d1.p4.s1.w2"
                 },
                 {
                   "annotations": {
                     "token": "mi"
                   },
-                  "id": "d1.p4.s1.w3",
-                  "offset": 205
+                  "id": "d1.p4.s1.w3"
                 },
                 {
                   "annotations": {
                     "token": "verdoren."
                   },
-                  "id": "d1.p4.s1.w4",
-                  "offset": 208
+                  "id": "d1.p4.s1.w4"
                 }
               ]
             },
@@ -301,36 +267,31 @@
                   "annotations": {
                     "token": "Dune"
                   },
-                  "id": "d1.p4.s2.w1",
-                  "offset": 218
+                  "id": "d1.p4.s2.w1"
                 },
                 {
                   "annotations": {
                     "token": "achtes"
                   },
-                  "id": "d1.p4.s2.w2",
-                  "offset": 223
+                  "id": "d1.p4.s2.w2"
                 },
                 {
                   "annotations": {
                     "token": "meer"
                   },
-                  "id": "d1.p4.s2.w3",
-                  "offset": 230
+                  "id": "d1.p4.s2.w3"
                 },
                 {
                   "annotations": {
                     "token": "no"
                   },
-                  "id": "d1.p4.s2.w4",
-                  "offset": 235
+                  "id": "d1.p4.s2.w4"
                 },
                 {
                   "annotations": {
                     "token": "min"
                   },
-                  "id": "d1.p4.s2.w5",
-                  "offset": 238
+                  "id": "d1.p4.s2.w5"
                 }
               ]
             }

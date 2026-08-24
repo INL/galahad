@@ -23,12 +23,10 @@ class LayerBuilder {
         lemma: String? = "dummy",
         pos: String? = "pos",
     ): LayerBuilder {
-        val baseOffset = terms.lastOrNull()?.offset ?: 0
         for (i in 0 until amount) {
             terms +=
                 Term(
                     id = "",
-                    offset = baseOffset + i * literal.length,
                     annotations =
                         mapOf(
                             Annotation.LEMMA to lemma,
@@ -48,12 +46,10 @@ class LayerBuilder {
 
     fun loadText(text: String): LayerBuilder {
         val words: List<String> = text.split(" ")
-        var offset = terms.lastOrNull()?.offset ?: 0
         for (i in words.indices) {
             terms +=
                 Term(
                     id = "",
-                    offset = offset,
                     annotations =
                         mapOf(
                             Annotation.TOKEN to words[i],
@@ -61,7 +57,6 @@ class LayerBuilder {
                             Annotation.POS to "pos",
                         ),
                 )
-            offset += words[i].length + 1 // + space
         }
         return this
     }
