@@ -7,7 +7,7 @@ import org.ivdnt.galahad.taggers.Tagger
 import org.springframework.stereotype.Service
 
 @Service
-class LayerService(private val corpora: CorporaService) : Logging {
+class LayersService(private val corpora: CorporaService) : Logging {
     fun readAll(corpus: UUID): List<CorpusLayerMetadata> =
         corpora.readOrThrow(corpus).layers.readAll().map { it.metadata }
 

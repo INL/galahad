@@ -13,14 +13,14 @@ import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.exceptions.ErrorResponse
 import org.ivdnt.galahad.layers.CorpusLayerMetadata
 import org.ivdnt.galahad.taggers.Tagger
-import org.ivdnt.galahad.web.service.LayerService
+import org.ivdnt.galahad.web.service.LayersService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @CrossOrigin
 @RestController
-class LayerController(private val layerService: LayerService) : Logging {
+class LayersController(private val layersService: LayersService) : Logging {
 
     @Autowired private val response: HttpServletResponse? = null
 
@@ -47,7 +47,7 @@ class LayerController(private val layerService: LayerService) : Logging {
     @GetMapping(Endpoints.Layers.BASE)
     fun getLayers(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID
-    ): List<CorpusLayerMetadata> = layerService.readAll(corpus)
+    ): List<CorpusLayerMetadata> = layersService.readAll(corpus)
 
     @Operation(
         summary = "Get single layer metadata",
@@ -74,7 +74,7 @@ class LayerController(private val layerService: LayerService) : Logging {
     fun getLayer(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
         @PathVariable @Parameter(description = "Layer name") layer: String,
-    ): CorpusLayerMetadata = layerService.readOrThrow(corpus, layer)
+    ): CorpusLayerMetadata = layersService.readOrThrow(corpus, layer)
 
     @Operation(summary = "Delete single layer", description = "Delete a layer and its jobs.")
     @ApiResponse(responseCode = "204", description = "Layer deleted.")
@@ -95,7 +95,7 @@ class LayerController(private val layerService: LayerService) : Logging {
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
         @PathVariable @Parameter(description = "Layer name") layer: String,
     ): ResponseEntity<String> {
-        layerService.deleteOrThrow(corpus, layer)
+        layersService.deleteOrThrow(corpus, layer)
         return ResponseEntity.noContent().build()
     }
 
@@ -110,6 +110,6 @@ class LayerController(private val layerService: LayerService) : Logging {
         tagger: Tagger,
     ) {
         response?.status = HttpServletResponse.SC_CREATED
-        layerService.createOrThrow(corpus, tagger)
+        layersService.createOrThrow(corpus, tagger)
     }
 }
