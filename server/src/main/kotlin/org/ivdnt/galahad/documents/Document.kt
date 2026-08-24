@@ -6,7 +6,6 @@ import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.files.DiskValue
 import org.ivdnt.galahad.files.GalahadFolder
 import org.ivdnt.galahad.formats.ParsedFile
-import org.ivdnt.galahad.util.ThreadPoolUtil
 
 /**
  * Documents are saved as folders with their file name as folder name, including extension.
@@ -61,10 +60,8 @@ class Document(dir: File) : GalahadFolder(dir), Logging {
             // metadata; needs to be serialized as well
             DiskValue<DocumentMetadata>(dir.resolve(METADATA_FILE))
                 .write(DocumentMetadata.create(parsedFile))
-            // move uploaded file in the background
-            ThreadPoolUtil.pool.execute {
-                file.copyTo(dir.resolve(FILE_FOLDER).resolve(file.name), overwrite = true)
-            }
+            // move uploaded file
+            file.copyTo(dir.resolve(FILE_FOLDER).resolve(file.name), overwrite = true)
             // The same document object is now valid: it's folder data has been filled.
             return doc
         }
