@@ -5,6 +5,7 @@ import javax.xml.XMLConstants
 import org.codehaus.stax2.XMLStreamWriter2
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.LayerAnnotations.Companion.contains
+import org.ivdnt.galahad.annotations.Term
 import org.ivdnt.galahad.annotations.TermSpan
 import org.ivdnt.galahad.export.DocumentExport
 import org.ivdnt.galahad.export.LayerWriter
@@ -56,6 +57,7 @@ class TeiWriter(export: DocumentExport) : LayerWriter(export) {
                             t.lemma?.let { writer.writeAttribute("lemma", it) }
                         }
                         t.pos?.let { writer.writeAttribute("pos", it) }
+                        t.upos?.let { Term.features(it)?.let { writer.writeAttribute("msd", it) } }
                         if (t.spaceAfter == false) writer.writeAttribute("join", "right")
 
                         if (t.group != null) {
@@ -70,6 +72,7 @@ class TeiWriter(export: DocumentExport) : LayerWriter(export) {
                             writer.writeEndElement() // name
                         }
                     }
+                    // TODO at some point to be replaced by @depN and @depR
                     // at the end of a sentence, write deprels. Example:
                     // <linkGrp targFunc="head argument" type="UD-SYN">
                     //     <link target="#d1.p1.s1.w1 #d1.p1.s1.w2" ana="ud-syn:det"/>
