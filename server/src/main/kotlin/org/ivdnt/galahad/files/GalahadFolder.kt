@@ -15,4 +15,6 @@ abstract class GalahadFolder(protected val dir: File) {
 
     val size: Long
         get() = dir.walkTopDown().filter { it.isFile }.sumOf { it.length() }
+
+    fun deleteRecursively(): Boolean = dir.deleteRecursively()
 }

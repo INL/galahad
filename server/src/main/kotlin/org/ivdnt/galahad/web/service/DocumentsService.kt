@@ -7,6 +7,7 @@ import java.util.*
 import java.util.zip.ZipInputStream
 import kotlin.io.path.createTempDirectory
 import org.apache.logging.log4j.kotlin.Logging
+import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.documents.Document
 import org.ivdnt.galahad.documents.DocumentMetadata
 import org.ivdnt.galahad.exceptions.FileUploadException
@@ -36,11 +37,21 @@ class DocumentsService(private val corpora: CorporaService) : Logging {
 
     fun deleteOrThrow(corpus: UUID, layer: String, document: String) {
         // try to delete the document first as it may throw not found
-        corpora.writeOrThrow(corpus).layers.readOrThrow(layer).documents.deleteOrThrow(document)
-        // Delete all jobs and results of this document.
-        corpora.writeOrThrow(corpus).jobs.readAll().forEach {
-            it.results.deleteOrNull(document) // Doesn't matter if null.
-        } // TODO: delete all evaluations
+        val corpObj = corpora.writeOrThrow(corpus)
+        corpObj.layers.readOrThrow(layer).documents.deleteOrThrow(document)
+
+        // Delete this document in all layers if it was deleted in the source layer
+        if (layer == SOURCE_LAYER) {
+            corpObj.layers.readAll().forEach { l ->
+                l.documents.deleteOrNull(document) // Doesn't matter if null.
+            }
+            // Delete all jobs and results of this document.
+            corpObj.jobs.readAll().forEach {
+                it.results.deleteOrNull(document) // Doesn't matter if null.
+            }
+        }
+        // Delete all evaluation cache
+        corpObj.evaluation.deleteRecursively()
     }
 
     private fun uploadZipFile(layer: CorpusLayer, file: MultipartFile) {

@@ -21,7 +21,9 @@ class LayersService(private val corpora: CorporaService) : Logging {
 
     fun deleteOrThrow(corpus: UUID, layer: String) {
         // Delete all jobs for this layer
-        corpora.writeOrThrow(corpus).jobs.deleteOrThrow(layer) // TODO: delete all evaluations
+        corpora.writeOrThrow(corpus).jobs.deleteOrThrow(layer)
+        // Delete all evaluations
+        corpora.writeOrThrow(corpus).evaluation.deleteRecursively()
         // Now delete it as write access
         corpora.writeOrThrow(corpus).layers.deleteOrThrow(layer)
     }
