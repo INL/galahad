@@ -32,7 +32,7 @@ const useDocuments = defineStore("documents", () => {
     const illegalFiles = computed((): File[] => {
         return filesToUpload.value.filter((x: any) => {
             const ext = x.name.split(".").at(-1)
-            return !["xml", "tsv", "txt", "zip", "conllu", "naf", "pdf", "docx"].includes(ext)
+            return !["xml", "tsv", "txt", "zip", "conllu", "naf", "pdf", "docx", "tei"].includes(ext)
         })
     })
 
