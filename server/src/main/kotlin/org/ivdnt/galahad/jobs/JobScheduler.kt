@@ -46,7 +46,7 @@ object JobScheduler {
         }
         if (task?.job == job) {
             task = null
-            terminate(job.name)
+            terminateAll()
         }
         // next job now that this one is gone
         start()
@@ -121,6 +121,10 @@ object JobScheduler {
         } catch (e: Exception) {
             // Ignore. Can only hope tagger has terminated.
         }
+    }
+
+    private fun terminateAll() {
+        Tagger.taggers.values.forEach { terminate(it.name) }
     }
 
     private class Task(val uuid: UUID, val job: Job, val doc: String) {
