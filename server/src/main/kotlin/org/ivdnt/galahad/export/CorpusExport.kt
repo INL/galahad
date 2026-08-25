@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.export
 
+import java.io.OutputStream
 import org.apache.logging.log4j.kotlin.Logging
 import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
@@ -11,7 +12,6 @@ import org.ivdnt.galahad.documents.Documents
 import org.ivdnt.galahad.exceptions.MergeNotImplementedException
 import org.ivdnt.galahad.layers.CorpusLayer
 import org.ivdnt.galahad.util.*
-import java.io.OutputStream
 
 class CorpusExport(
     val corpus: Corpus,
@@ -64,16 +64,12 @@ class CorpusExport(
             posHead = posHead,
         )
 
-    // TODO should this match for teip5 == tei p4 legacy?
-    private fun mergeFormatMatches(it: Document, format: DocumentFormat): Boolean =
-        it.metadata.format == format
-
     private fun formatMapper(doc: Document, out: OutputStream) {
         try {
             // Document conversions.
             val docExport = document(doc)
-            if (merge && mergeFormatMatches(doc, format)) {
-                logger.info("Merging ${doc.name} of format ${doc.metadata.format}")
+            if (merge) {
+                logger.info("Merging ${doc.name} in format $format")
                 docExport.merge(out)
             } else {
                 logger.info("Converting ${doc.name} of format ${doc.metadata.format} to $format")
