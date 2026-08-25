@@ -1,7 +1,6 @@
 package org.ivdnt.galahad.jobs
 
 import org.ivdnt.galahad.corpora.Corpus
-import org.ivdnt.galahad.taggers.Tagger
 import org.ivdnt.galahad.util.TestUtil
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
@@ -20,8 +19,7 @@ class JobsTest {
         val name = TestUtil.TAGGER
         // Check if empty
         assertEquals(0, corpus.jobs.readAll().size)
-        val numTaggers = Tagger.taggers.size // +1 for source layer
-        assertEquals(numTaggers, corpus.jobs.readAll().size)
+        assertEquals(0, corpus.jobs.readAll().size)
         assertNull(corpus.jobs.readOrNull(name))
         assertThrows(Exception::class.java) { corpus.jobs.readOrThrow(name) }
         // Create
@@ -29,7 +27,6 @@ class JobsTest {
         // Check if created
         assertNotNull(job)
         assertEquals(1, corpus.jobs.readAll().size)
-        assertEquals(numTaggers, corpus.jobs.readAll().size)
         assertNotNull(corpus.jobs.readOrNull(name))
         assertNotNull(corpus.jobs.readOrThrow(name))
         // delete

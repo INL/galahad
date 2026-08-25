@@ -1,8 +1,8 @@
 package org.ivdnt.galahad.web
 
 import org.ivdnt.galahad.app.Galahad
-import org.ivdnt.galahad.exceptions.TagsetNotFoundException
-import org.ivdnt.galahad.taggers.Tagset
+import org.ivdnt.galahad.exceptions.PrincipleNotFoundException
+import org.ivdnt.galahad.taggers.Principle
 import org.ivdnt.galahad.util.TestConfig
 import org.ivdnt.galahad.util.TestUtil
 import org.ivdnt.galahad.util.andDeserialize
@@ -20,39 +20,38 @@ import org.springframework.test.web.servlet.get
 @SpringBootTest(properties = ["spring.main.allow-bean-definition-overriding=true"])
 @AutoConfigureMockMvc
 @ContextConfiguration(classes = [Galahad::class, TestConfig::class])
-class TagsetsControllerTest(@Autowired val mvc: MockMvc) {
+class PrinciplesControllerTest(@Autowired val mvc: MockMvc) {
     @Test
-    fun `Can get tagsets`() {
-        val tagsets: List<Tagset> =
-            mvc.get("/tagsets")
+    fun `Can get principles`() {
+        val principles: List<Principle> =
+            mvc.get("/principles")
                 .andExpect {
                     status { isOk() }
                     content { contentType(MediaType.APPLICATION_JSON) }
                 }
                 .andReturn()
                 .andDeserialize()
-        assertEquals(1, tagsets.count { it.name == TestUtil.TAGSET_NAME })
-        assert(tagsets.sumOf { it.punctuation.size } > 0)
+        assertEquals(1, principles.count { it.principle.name == TestUtil.TAGSET_NAME })
     }
 
     @Test
     fun `Can get single tagset`() {
-        val tagset: Tagset =
-            mvc.get("/tagsets/${TestUtil.TAGSET_NAME}")
+        val principle: Principle =
+            mvc.get("/principles/${TestUtil.TAGSET_NAME}")
                 .andExpect {
                     status { isOk() }
                     content { contentType(MediaType.APPLICATION_JSON) }
                 }
                 .andReturn()
                 .andDeserialize()
-        assertEquals(TestUtil.TAGSET_NAME, tagset.name)
+        assertEquals(TestUtil.TAGSET_NAME, principle.principle.name)
     }
 
     @Test
     fun `Can't get invalid tagset`() {
-        mvc.get("/tagsets/invalid").andExpect {
+        mvc.get("/principles/invalid").andExpect {
             status { isNotFound() }
-            match { it.resolvedException is TagsetNotFoundException }
+            match { it.resolvedException is PrincipleNotFoundException }
         }
     }
 }

@@ -8,10 +8,6 @@ data class Principle(
     val principle: Tagger.LinkItem,
     val taggers: List<String>,
 ) {
-    // TODO for now this has its own yaml file
-    // in the future we want to extract all unique principles from
-    // all the tools in the platform to avoid duplication
-    // Although that does mean we can't include principles we don't have taggers for
     companion object {
         val principles: List<Principle> by lazy {
             Tagger.taggers.values

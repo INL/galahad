@@ -2,6 +2,7 @@ package org.ivdnt.galahad.documents
 
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.util.TestUtil
+import org.ivdnt.galahad.util.withoutFormatExt
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -18,22 +19,22 @@ class DocumentsTest {
     @Test
     fun `Create and delete files`() {
         // Add two files
-        addFile("formats/shared/converter/karel_en_martijn.folia.xml")
-        addFile("formats/shared/converter/karel_en_martijn.conllu")
+        addFile("web/corpus/karel.tei.xml")
+        addFile("web/corpus/martijn.tei.xml")
         // 2 files exist
-        assertDocsinDocuments(setOf("karel_en_martijn.folia.xml", "karel_en_martijn.conllu"))
+        assertDocsinDocuments(setOf("karel", "martijn"))
         // Delete the first
-        deleteFile("karel_en_martijn.folia.xml")
+        deleteFile("karel")
         // 1 is left
-        assertDocsinDocuments(setOf("karel_en_martijn.conllu"))
+        assertDocsinDocuments(setOf("martijn"))
         // Try to access deleted file
-        assertFileDeleted("karel_en_martijn.folia.xml")
+        assertFileDeleted("karel")
         // Delete the last file
-        deleteFile("karel_en_martijn.conllu")
+        deleteFile("martijn")
         // 0 left
         assertDocsinDocuments(setOf())
         // Try to access deleted file
-        assertFileDeleted("karel_en_martijn.conllu")
+        assertFileDeleted("martijn")
     }
 
     private fun addFile(path: String) {
@@ -44,8 +45,8 @@ class DocumentsTest {
         assertFalse(file.name in corpus.documents.readAll().map { it.name })
         // The file is created
         val doc = corpus.documents.createOrThrow(file)
-        assertEquals(file.name, doc.name)
-        assert(file.name in corpus.documents.readAll().map { it.name })
+        assertEquals(file.withoutFormatExt, doc.name)
+        assert(file.withoutFormatExt in corpus.documents.readAll().map { it.name })
     }
 
     /**

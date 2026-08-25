@@ -14,14 +14,13 @@ class DocumentMetadataTest() {
     @BeforeEach
     fun initCorpus() {
         corpus = TestUtil.createCorpus()
-        val files = get("formats/shared/converter").listFiles()
-        files.forEach { corpus.documents.createOrThrow(it) }
     }
 
     @Test
     fun `Properties for an unannotated file`() {
-        val meta = corpus.documents.readOrThrow("karel_en_martijn.txt").metadata
-        assertEquals("karel_en_martijn.txt", meta.name)
+        corpus.documents.createOrThrow(get("formats/shared/converter/karel_en_martijn.txt"))
+        val meta = corpus.documents.readOrThrow("karel_en_martijn").metadata
+        assertEquals("karel_en_martijn", meta.name)
         assertEquals(DocumentFormat.Txt, meta.format)
         assert(meta.text.contains("Fraaie historie ende alwaer"))
         val total = meta.annotations.annotations[Annotation.TOKEN]
@@ -30,8 +29,9 @@ class DocumentMetadataTest() {
 
     @Test
     fun `Properties for an annotated file`() {
-        val meta = corpus.documents.readOrThrow("karel_en_martijn.tei.xml").metadata
-        assertEquals("karel_en_martijn.tei.xml", meta.name)
+        corpus.documents.createOrThrow(get("formats/shared/converter/karel_en_martijn.tei.xml"))
+        val meta = corpus.documents.readOrThrow("karel_en_martijn").metadata
+        assertEquals("karel_en_martijn", meta.name)
         assertEquals(DocumentFormat.TeiP5, meta.format)
         assert(meta.text.contains("Fraaie historie ende alwaer"))
         val total = meta.annotations.annotations[Annotation.TOKEN]
