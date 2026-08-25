@@ -1,0 +1,671 @@
+{
+  "documents": [
+    {
+      "id": "karel",
+      "paragraphs": [
+        {
+          "id": "karel.p1",
+          "sentences": [
+            {
+              "id": "karel.p1.s1",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "Fraaie",
+                    "lemma": "fraai",
+                    "pos": "AA(degree=pos,position=prenom)",
+                    "upos": "ADJ(Degree=Pos)",
+                    "head": "2",
+                    "deprel": "amod"
+                  },
+                  "id": "karel.p1.s1.w1"
+                },
+                {
+                  "annotations": {
+                    "token": "historie",
+                    "lemma": "historie",
+                    "pos": "NOU-C(number=sg)",
+                    "upos": "NOUN(Gender=Com|Number=Sing)",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "karel.p1.s1.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "ende",
+                    "lemma": "en",
+                    "pos": "CONJ(type=coor)",
+                    "upos": "PROPN",
+                    "head": "4",
+                    "deprel": "cc"
+                  },
+                  "id": "karel.p1.s1.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "alwaer",
+                    "lemma": "alwaar",
+                    "pos": "ADV(type=reg)",
+                    "upos": "PROPN",
+                    "head": "2",
+                    "deprel": "conj"
+                  },
+                  "id": "karel.p1.s1.w4",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ".",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "2",
+                    "deprel": "punct"
+                  },
+                  "id": "karel.p1.s1.w5"
+                }
+              ]
+            },
+            {
+              "id": "karel.p1.s2",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "Magh",
+                    "lemma": "mogen",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "PROPN(Gender=Neut|Number=Sing)",
+                    "head": "4",
+                    "deprel": "aux"
+                  },
+                  "id": "karel.p1.s2.w1"
+                },
+                {
+                  "annotations": {
+                    "token": "'k",
+                    "lemma": "ik",
+                    "pos": "PD(type=pers,position=free)",
+                    "upos": "AUX(Number=Sing|Tense=Pres|VerbForm=Fin)",
+                    "head": "4",
+                    "deprel": "nsubj"
+                  },
+                  "id": "karel.p1.s2.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "u",
+                    "lemma": "u",
+                    "pos": "PD(type=pers,position=free)",
+                    "upos": "PRON(Case=Acc|Person=2|PronType=Prs)",
+                    "head": "4",
+                    "deprel": "iobj"
+                  },
+                  "id": "karel.p1.s2.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "vertellen",
+                    "lemma": "vertellen",
+                    "pos": "VRB(finiteness=inf)",
+                    "upos": "VERB(VerbForm=Inf)",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "karel.p1.s2.w4",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ",",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "karel.p1.s2.w5"
+                },
+                {
+                  "annotations": {
+                    "token": "hoirt",
+                    "lemma": "naarhoren",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "NOUN(Gender=Com|Number=Sing)",
+                    "head": "4",
+                    "deprel": "conj"
+                  },
+                  "id": "karel.p1.s2.w6"
+                },
+                {
+                  "annotations": {
+                    "token": "naer",
+                    "lemma": "naarhoren",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "PROPN",
+                    "head": "6",
+                    "deprel": "advmod"
+                  },
+                  "id": "karel.p1.s2.w7",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ".",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "karel.p1.s2.w8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "karel.p2",
+          "sentences": [
+            {
+              "id": "karel.p2.s1",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "'t",
+                    "lemma": "het",
+                    "pos": "PD(type=pers,position=free)",
+                    "upos": "PRON(Person=3|PronType=Prs)",
+                    "head": "2",
+                    "deprel": "expl"
+                  },
+                  "id": "karel.p2.s1.w1"
+                },
+                {
+                  "annotations": {
+                    "token": "Was",
+                    "lemma": "zijn",
+                    "pos": "VRB(finiteness=fin,tense=past)",
+                    "upos": "AUX(Number=Sing|Tense=Past|VerbForm=Fin)",
+                    "head": "5",
+                    "deprel": "cop"
+                  },
+                  "id": "karel.p2.s1.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "op",
+                    "lemma": "op",
+                    "pos": "ADP(type=pre)",
+                    "upos": "ADP",
+                    "head": "5",
+                    "deprel": "case"
+                  },
+                  "id": "karel.p2.s1.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "enen",
+                    "lemma": "een",
+                    "pos": "PD(type=indef,subtype=art,position=prenom)",
+                    "upos": "NOUN(Number=Plur)",
+                    "head": "5",
+                    "deprel": "det"
+                  },
+                  "id": "karel.p2.s1.w4"
+                },
+                {
+                  "annotations": {
+                    "token": "avondstonde",
+                    "lemma": "avondstond",
+                    "pos": "NOU-C(number=sg)",
+                    "upos": "PROPN",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "karel.p2.s1.w5",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ".",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "5",
+                    "deprel": "punct"
+                  },
+                  "id": "karel.p2.s1.w6"
+                }
+              ]
+            },
+            {
+              "id": "karel.p2.s2",
+              "spans": {
+                "ner": [
+                  {
+                    "indices": [
+                      1,
+                      2
+                    ],
+                    "value": "PER"
+                  }
+                ]
+              },
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "Dat",
+                    "lemma": "dat",
+                    "pos": "CONJ(type=sub)",
+                    "upos": "SCONJ",
+                    "head": "4",
+                    "deprel": "expl"
+                  },
+                  "id": "karel.p2.s2.w1"
+                },
+                {
+                  "annotations": {
+                    "token": "koning",
+                    "lemma": "koning",
+                    "pos": "NOU-C(number=sg)",
+                    "upos": "NOUN(Gender=Com|Number=Sing)",
+                    "head": "4",
+                    "deprel": "nsubj",
+                    "ner": "B-PER"
+                  },
+                  "id": "karel.p2.s2.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "Carel",
+                    "lemma": "Carel",
+                    "pos": "NOU-P",
+                    "upos": "PROPN",
+                    "head": "2",
+                    "deprel": "flat",
+                    "ner": "I-PER"
+                  },
+                  "id": "karel.p2.s2.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "slaepen",
+                    "lemma": "slaap",
+                    "pos": "NOU-C(number=pl)",
+                    "upos": "PROPN",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "karel.p2.s2.w4"
+                },
+                {
+                  "annotations": {
+                    "token": "beghonde",
+                    "lemma": "beginnen",
+                    "pos": "VRB(finiteness=fin,tense=past)",
+                    "upos": "VERB(VerbForm=Part)",
+                    "head": "4",
+                    "deprel": "aux"
+                  },
+                  "id": "karel.p2.s2.w5",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ".",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "karel.p2.s2.w6"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "martijn",
+      "paragraphs": [
+        {
+          "id": "martijn.p1",
+          "sentences": [
+            {
+              "id": "martijn.p1.s1",
+              "spans": {
+                "ner": [
+                  {
+                    "indices": [
+                      1
+                    ],
+                    "value": "PER"
+                  }
+                ]
+              },
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "\"",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s1.w1",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": "Martijn",
+                    "lemma": "Martijn",
+                    "pos": "NOU-P",
+                    "upos": "PROPN(Gender=Com|Number=Sing)",
+                    "head": "4",
+                    "deprel": "nsubj",
+                    "ner": "B-PER"
+                  },
+                  "id": "martijn.p1.s1.w2",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ",",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s1.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "slaepstu",
+                    "lemma": "slapen+du",
+                    "pos": "VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)",
+                    "upos": "NOUN(Gender=Com|Number=Sing)",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "martijn.p1.s1.w4",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": "?",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s1.w5"
+                },
+                {
+                  "annotations": {
+                    "token": "slaept",
+                    "lemma": "slapen",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "PROPN",
+                    "head": "4",
+                    "deprel": "cc"
+                  },
+                  "id": "martijn.p1.s1.w6"
+                },
+                {
+                  "annotations": {
+                    "token": "dijn",
+                    "lemma": "dijn",
+                    "pos": "PD(type=poss,position=prenom)",
+                    "upos": "SYM",
+                    "head": "8",
+                    "deprel": "det"
+                  },
+                  "id": "martijn.p1.s1.w7"
+                },
+                {
+                  "annotations": {
+                    "token": "sin",
+                    "lemma": "zin",
+                    "pos": "NOU-C(number=sg)",
+                    "upos": "PROPN(Gender=Com|Number=Sing)",
+                    "head": "6",
+                    "deprel": "nsubj"
+                  },
+                  "id": "martijn.p1.s1.w8",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": "?",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s1.w9",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": "\"",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "4",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s1.w10"
+                }
+              ]
+            },
+            {
+              "id": "martijn.p1.s2",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "Sprec",
+                    "lemma": "spreken",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "PROPN(Gender=Com|Number=Sing)",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "martijn.p1.s2.w1",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": "!",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "1",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s2.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "hebstu",
+                    "lemma": "inhebben+du",
+                    "pos": "VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)",
+                    "upos": "NOUN(Gender=Com|Number=Sing)",
+                    "head": "5",
+                    "deprel": "aux"
+                  },
+                  "id": "martijn.p1.s2.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "gheen",
+                    "lemma": "geen",
+                    "pos": "PD(type=indef,subtype=oth,position=prenom)",
+                    "upos": "PROPN",
+                    "head": "4",
+                    "deprel": "det"
+                  },
+                  "id": "martijn.p1.s2.w4"
+                },
+                {
+                  "annotations": {
+                    "token": "spreken",
+                    "lemma": "spreken",
+                    "pos": "NOU-C(number=sg)",
+                    "upos": "VERB(VerbForm=Inf)",
+                    "head": "3",
+                    "deprel": "obj"
+                  },
+                  "id": "martijn.p1.s2.w5"
+                },
+                {
+                  "annotations": {
+                    "token": "in",
+                    "lemma": "inhebben+du",
+                    "pos": "VRB(finiteness=fin,tense=pres)+PD(type=pers,position=free)",
+                    "upos": "ADP",
+                    "head": "3",
+                    "deprel": "compound:prt"
+                  },
+                  "id": "martijn.p1.s2.w6",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": "?",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "1",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p1.s2.w7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "martijn.p2",
+          "sentences": [
+            {
+              "id": "martijn.p2.s1",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "Du",
+                    "lemma": "du",
+                    "pos": "PD(type=pers,position=free)",
+                    "upos": "PROPN",
+                    "head": "4",
+                    "deprel": "nsubj"
+                  },
+                  "id": "martijn.p2.s1.w1"
+                },
+                {
+                  "annotations": {
+                    "token": "dinkes",
+                    "lemma": "dunken",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "PROPN",
+                    "head": "4",
+                    "deprel": "aux"
+                  },
+                  "id": "martijn.p2.s1.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "mi",
+                    "lemma": "ik",
+                    "pos": "PD(type=pers,position=free)",
+                    "upos": "PROPN",
+                    "head": "4",
+                    "deprel": "obj"
+                  },
+                  "id": "martijn.p2.s1.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "verdoren",
+                    "lemma": "verdoren",
+                    "pos": "VRB(finiteness=inf)",
+                    "upos": "PROPN",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "martijn.p2.s1.w4",
+                  "spaceAfter": false
+                },
+                {
+                  "annotations": {
+                    "token": ".",
+                    "pos": "PC",
+                    "upos": "PUNCT",
+                    "head": "5",
+                    "deprel": "punct"
+                  },
+                  "id": "martijn.p2.s1.w5"
+                }
+              ]
+            },
+            {
+              "id": "martijn.p2.s2",
+              "terms": [
+                {
+                  "annotations": {
+                    "token": "Dune",
+                    "lemma": "du+ne",
+                    "pos": "PD(type=pers,position=free)+ADV(type=reg)",
+                    "upos": "PROPN",
+                    "head": "2",
+                    "deprel": "subj"
+                  },
+                  "id": "martijn.p2.s2.w1"
+                },
+                {
+                  "annotations": {
+                    "token": "achtes",
+                    "lemma": "achten",
+                    "pos": "VRB(finiteness=fin,tense=pres)",
+                    "upos": "PROPN",
+                    "head": "0",
+                    "deprel": "root"
+                  },
+                  "id": "martijn.p2.s2.w2"
+                },
+                {
+                  "annotations": {
+                    "token": "meer",
+                    "lemma": "meer",
+                    "pos": "PD(type=indef,position=free)",
+                    "upos": "ADV",
+                    "head": "2",
+                    "deprel": "advmod"
+                  },
+                  "id": "martijn.p2.s2.w3"
+                },
+                {
+                  "annotations": {
+                    "token": "no",
+                    "lemma": "noch",
+                    "pos": "CONJ(type=coor)",
+                    "upos": "NOUN(Number=Plur)",
+                    "head": "3",
+                    "deprel": "conj"
+                  },
+                  "id": "martijn.p2.s2.w4"
+                },
+                {
+                  "annotations": {
+                    "token": "min",
+                    "lemma": "min",
+                    "pos": "PD(type=indef,position=free)",
+                    "upos": "ADV",
+                    "head": "3",
+                    "deprel": "cc"
+                  },
+                  "id": "martijn.p2.s2.w5"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "e51560ff-81a2-4ddd-ba04-c7eb07af6d2b"
+}

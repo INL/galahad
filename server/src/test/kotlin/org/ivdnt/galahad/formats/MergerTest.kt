@@ -22,13 +22,12 @@ abstract class MergerTest {
 
     fun merge() {
         val input: File = TestUtil.get("formats/$folder/input.${format.extension}")
-        TestUtil.get("formats/$folder/layer.conllu") // TODO perhaps use json
+        val merge = TestUtil.get("formats/$folder/input.json")
         val output: File = TestUtil.get("formats/$folder/output.${format.extension}")
 
         val doc = corpus.documents.createOrThrow(input)
         // set merge layer as a job
-        //        val job = corpus.jobs.createOrThrow("spacy")
-        //        job.setLayer(doc, ParsedFile.create(merge).layer)
+        corpus.layers.createOrThrow("spacy").documents.createOrThrow(merge)
 
         // merge
         val corpusExport = CorpusExport(corpus, "spacy", format, User.DEFAULT_USER, true, false)
