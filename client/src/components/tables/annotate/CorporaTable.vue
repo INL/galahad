@@ -45,16 +45,23 @@ const { filter } = defineProps<{ filter: (c: CorpusMetadata) => boolean }>()
 const { loading, corpusId, corpus, corpora } = storeToRefs(useCorpora())
 const columns: Column<CorpusMetadata>[] = [
     { key: "name" },
-    { key: "source" },
+    { key: "source", sortOn: (c: CorpusMetadata) => c.source?.name ?? c.source?.url },
     { key: "tagset" },
     { key: "language" },
     { key: "period", align: "center", format: (c: CorpusMetadata): string | undefined => formatPeriod(c.period) },
-    { key: "documents", label: "files", align: "right" },
+    {
+        key: "documents",
+        label: "files",
+        align: "right",
+        format: (c: CorpusMetadata): string => c.documents.toLocaleString(),
+        sortOn: (c: CorpusMetadata): number => c.documents,
+    },
     {
         key: "annotations",
         label: "tokens",
         align: "right",
-        format: (c: CorpusMetadata): number => c.annotations?.token ?? 0,
+        format: (c: CorpusMetadata): string => (c.annotations?.token ?? 0).toLocaleString(),
+        sortOn: (c: CorpusMetadata): number => c.annotations?.token,
     },
     { key: "jobs", label: "jobs", align: "right" },
     { key: "shared", sortOn: sortShared, format: formatShared },
@@ -64,7 +71,11 @@ const columns: Column<CorpusMetadata>[] = [
         sortOn: (c: CorpusMetadata): number => c.size,
         format: (c: CorpusMetadata): string => formatBytes(c.size),
     },
-    { key: "modified", format: (c: CorpusMetadata): string => formatDate(c.modified) },
+    {
+        key: "modified",
+        format: (c: CorpusMetadata): string => formatDate(c.modified),
+        sortOn: (c: CorpusMetadata): number => c.modified,
+    },
 ]
 
 // --- computed ---
