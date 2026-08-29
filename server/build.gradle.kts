@@ -1,7 +1,7 @@
 plugins {
     // Source: https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
     kotlin("jvm") version "2.3.20"
-    kotlin("plugin.spring") version "2.3.20"
+    kotlin("plugin.spring") version "2.3.21"
     // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     id("org.springframework.boot") version "4.0.5"
     // Source: https://mvnrepository.com/artifact/io.spring.dependency-management/io.spring.dependency-management.gradle.plugin
