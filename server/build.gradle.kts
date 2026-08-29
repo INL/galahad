@@ -3,7 +3,7 @@ plugins {
     kotlin("jvm") version "2.3.20"
     kotlin("plugin.spring") version "2.3.20"
     // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-    id("org.springframework.boot") version "4.0.5"
+    id("org.springframework.boot") version "4.0.6"
     // Source: https://mvnrepository.com/artifact/io.spring.dependency-management/io.spring.dependency-management.gradle.plugin
     id("io.spring.dependency-management") version "1.1.7"
 }
