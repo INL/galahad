@@ -25,7 +25,7 @@ class TeiMetadataWriter(val writer: PrettyXMLWriter, val export: DocumentExport)
     val annotationSet =
         if (export.tagger.name == SOURCE_LAYER)
             export.corpus.metadata.tagset.ifNullOrBlank { "!No tagset defined!" }
-        else export.tagger.principles
+        else export.tagger.principleNames
 
     fun write() {
         writer.wrapIn("teiHeader") {
