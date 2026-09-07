@@ -66,7 +66,7 @@
 
             <template #cell-progress="d: TableData<Job>">
                 <GSpinner v-if="d.item.progress.processing" small inline />
-                <span v-if="d.item.progress.errors.length" class="error">error</span>
+                <span v-if="d.item.progress.failed > 0" class="error">error</span>
                 {{ d.item.progress.total === 0 ? "0%" : formatProgress(d.item.progress) }}
             </template>
 
