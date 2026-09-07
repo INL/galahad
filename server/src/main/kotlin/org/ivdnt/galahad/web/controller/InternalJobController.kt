@@ -43,9 +43,8 @@ class InternalJobController(val corpora: CorporaService, val config: Config) : L
     fun receiveTaggerResult(
         @RequestParam(value = "file_id", required = false) fileId: UUID,
         @RequestBody file: MultipartFile,
-    ): String {
+    ) {
         JobScheduler.receive(fileId, file.inputStream, file.originalFilename!!)
-        return "DELETE"
     }
 
     //    /**
