@@ -25,6 +25,7 @@ class LayersService(private val corpora: CorporaService) : Logging {
         // Delete all evaluations
         corpora.writeOrThrow(corpus).evaluation.deleteRecursively()
         // Now delete it as write access
-        corpora.writeOrThrow(corpus).layers.deleteOrThrow(layer)
+        // Use delete or null, since the layer may have no actual files due to a failed job.
+        corpora.writeOrThrow(corpus).layers.deleteOrNull(layer)
     }
 }
