@@ -1,35 +1,46 @@
 package org.ivdnt.galahad.util
 
+import java.net.URI
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.TypeDescription
 import org.yaml.snakeyaml.introspector.Property
-import org.yaml.snakeyaml.nodes.Node
 import org.yaml.snakeyaml.nodes.NodeTuple
 import org.yaml.snakeyaml.nodes.Tag
-import org.yaml.snakeyaml.representer.Represent
 import org.yaml.snakeyaml.representer.Representer
 
+/**
+ * YAML representer for pretty printing [org.ivdnt.galahad.taggers.Tagger] in evaluation metadata.
+ */
 class EvaluationMetadataRepresenter(options: DumperOptions) : Representer(options) {
-    init {
-        this.nullRepresenter = RepresentNull()
-    }
-
+    // Turns off explicit type description.
     override fun addTypeDescription(td: TypeDescription?): TypeDescription? = null
 
+    // Custom representation
     override fun representJavaBeanProperty(
         javaBean: Any?,
         property: Property?,
         propertyValue: Any?,
         customTag: Tag?,
     ): NodeTuple? {
-        // if value of property is null, ignore it. Thereby not serializing it.
         return if (propertyValue == null) {
+            // if value of property is null, ignore it. Thereby not serializing it.
             null
         } else if (propertyValue is Collection<*> && propertyValue.isEmpty()) {
+            // Ignore empty collections
             null
         } else if (property?.name == "port") {
+            // Hide tagger.port
             return null
+        } else if (propertyValue is URI) {
+            // Force stringify URI. Otherwise, they are blank for some reason
+            return super.representJavaBeanProperty(
+                javaBean,
+                property,
+                propertyValue.toString(),
+                customTag,
+            )
         } else {
+            // Default
             super.representJavaBeanProperty(
                 javaBean,
                 property,
@@ -37,9 +48,5 @@ class EvaluationMetadataRepresenter(options: DumperOptions) : Representer(option
                 customTag,
             )
         }
-    }
-
-    private inner class RepresentNull : Represent {
-        override fun representData(data: Any?): Node? = representScalar(Tag.NULL, "")
     }
 }

@@ -1,11 +1,12 @@
 package org.ivdnt.galahad.corpora
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import java.util.*
 import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.exceptions.CorpusInvalidException
 import org.ivdnt.galahad.exceptions.UserUnauthorizedException
-import java.net.URL
-import java.util.*
+import org.ivdnt.galahad.metadata.Period
+import org.ivdnt.galahad.metadata.Source
 
 /**
  * Corpus metadata that can be changed by the user. Although technically [owner] should only be set
@@ -22,9 +23,6 @@ open class CorpusMetadata(
     var collaborators: MutableSet<String>? = null,
     var viewers: MutableSet<String>? = null,
 ) {
-    data class Source(var name: String?, var url: URL?)
-
-    data class Period(var from: Int = 0, var to: Int = 0)
 
     @JsonIgnore var id: UUID? = null
 

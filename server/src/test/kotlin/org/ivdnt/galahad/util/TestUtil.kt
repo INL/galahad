@@ -9,6 +9,8 @@ import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.corpora.Corpora
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.corpora.CorpusMetadata
+import org.ivdnt.galahad.metadata.Period
+import org.ivdnt.galahad.metadata.Source
 import org.springframework.http.HttpHeaders
 
 object TestUtil {
@@ -55,10 +57,10 @@ object TestUtil {
                 "testCorpus",
                 user.name,
                 dataset,
-                CorpusMetadata.Period(1200, 1300),
+                Period(1200, 1300),
                 "Dutch",
                 "TDN-Core",
-                CorpusMetadata.Source("source name", URL("http://source.url")),
+                Source("source name", URL("http://source.url")),
                 mutableSetOf("collaborator"),
                 mutableSetOf("viewer"),
             )

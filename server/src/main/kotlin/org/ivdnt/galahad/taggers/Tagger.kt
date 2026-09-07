@@ -3,67 +3,56 @@ package org.ivdnt.galahad.taggers
 import com.fasterxml.jackson.annotation.JsonIgnore
 import java.io.File
 import java.net.URI
-import java.net.URL
-import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.app.application_profile
 import org.ivdnt.galahad.corpora.Corpus
-import org.ivdnt.galahad.corpora.CorpusMetadata
 import org.ivdnt.galahad.exceptions.TaggerNotFoundException
+import org.ivdnt.galahad.metadata.AnnotationItem
+import org.ivdnt.galahad.metadata.MetadataItem
+import org.ivdnt.galahad.metadata.Period
 import org.yaml.snakeyaml.LoaderOptions
 import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.constructor.Constructor
 
+/** Metadata of a tagger (annotation tool). */
 data class Tagger(
-    // The id should be equal to the filename
-    // i.e. mytagger.yaml should have id 'mytagger'
-    // This ought te be set when loading from file
-    // This name will be used as hostname
-    // So can only contain certain characters
+    /** Name of the tagger, used as docker hostname. */
     var name: String = "",
+    /** Short description of the tagger and training data. */
     var description: String? = "",
+    /** Language of the training data. */
     var language: String? = "", // TODO multiple languages
-    var period: CorpusMetadata.Period? = null,
+    /** Period covered by the training data. */
+    var period: Period? = null,
+    /** Annotations produced by the tagger, including principles guiding them. */
     var annotations: List<AnnotationItem> = emptyList(),
-    var attributions: List<LinkItem> = emptyList(),
+    /** Attributions related to the tagger, its training data and software. */
+    var attributions: List<MetadataItem> = emptyList(),
+    /** Hosted port for local development only. */
+    @JsonIgnore var port: Int? = 0,
 ) {
-    @JsonIgnore var port: Int? = 0
-
-    // Has to be a getter, because taggers are first initialized with an empty constructor,
-    // and then filled from yaml, meaning that devport is 0 at the time of initialization
+    /** Comma-separated names of principles used by the tagger. */
     @get:JsonIgnore
-    val url: URL
-        get() =
-            if ("dev" in application_profile) {
-                URI("http://localhost:$port").toURL()
-            } else {
-                URI("http://$name:8080").toURL()
-            }
-
-    //    // TODO: doubtful anyone needs this. instead grab the anotations of the current processing
-    // document, as they may differ from the tagger
-    //    @get:JsonIgnore
-    //    val annotationSet: Set<Annotation>
-    //        get() = annotations.map { it.annotation!! }.toSet()
-
-    @get:JsonIgnore
-    val principles: String
+    val principleNames: String
         get() = annotations.mapNotNull { it.principles }.flatten().joinToString { it.name!! }
 
-    data class LinkItem(
-        var name: String? = null,
-        var description: String? = null,
-        var url: String? = null,
-    )
-
-    data class AnnotationItem(
-        var annotation: Annotation? = null,
-        var principles: List<LinkItem>? = null,
-    )
+    // Has to be a getter, because taggers are first initialized with an empty constructor,
+    // and then filled from yaml, meaning that devport is 0 at the time of initialization.
+    /** Base URL of the tagger API. */
+    @get:JsonIgnore
+    val url: URI
+        get() =
+            if ("dev" in application_profile) {
+                URI("http://localhost:$port")
+            } else {
+                URI("http://$name:8080")
+            }
 
     companion object {
+        /** YAML data directory. */
         private const val TAGGERS_DIR: String = "data/taggers"
 
+        /** List of taggers present in the data directory. */
         val taggers: Map<String, Tagger> =
             File(TAGGERS_DIR)
                 .listFiles()
@@ -78,10 +67,10 @@ data class Tagger(
                 }
                 .associateBy { it.name }
 
-        // TODO remove parameter corpus, given that each corpusLayer now has a tagger
-        // TODO remove the when SOURCE_LAYER all together
+        /** Read tagger by name or throw if absent. */
         fun readOrThrow(id: String): Tagger = taggers[id] ?: throw TaggerNotFoundException(id)
 
+        /** Create a custom tagger of the source layer for a given corpus. */
         fun createSourceTagger(corpus: Corpus): Tagger {
             val metadata = corpus.metadata
             val produces =

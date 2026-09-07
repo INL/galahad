@@ -3,6 +3,8 @@ package org.ivdnt.galahad.corpora
 import java.util.*
 import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.annotations.LayerAnnotations
+import org.ivdnt.galahad.metadata.Period
+import org.ivdnt.galahad.metadata.Source
 
 /**
  * Metadata about a corpus, to be stored in a cache file, as its immutable fields can become
