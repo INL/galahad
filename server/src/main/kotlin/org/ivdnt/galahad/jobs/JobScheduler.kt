@@ -107,7 +107,7 @@ object JobScheduler {
                 HttpHeaders().apply { contentType = MediaType.MULTIPART_FORM_DATA },
             )
         val response = RestTemplate().postForEntity<String>(url, entity)
-        if (response.statusCode != HttpStatus.OK) {
+        if (response.statusCode != HttpStatus.ACCEPTED) {
             throw Exception("Error while tagging: ${response.statusCode}")
         }
         return UUID.fromString(response.body) ?: throw Exception("No UUID received from tagger")
