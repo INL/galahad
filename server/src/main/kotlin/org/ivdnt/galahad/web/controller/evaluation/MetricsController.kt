@@ -8,10 +8,11 @@ import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import java.util.*
 import org.apache.logging.log4j.kotlin.Logging
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.evaluation.metrics.CorpusMetrics
 import org.ivdnt.galahad.exceptions.ErrorResponse
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.web.controller.Endpoints
 import org.ivdnt.galahad.web.service.evaluation.MetricsService
 import org.springframework.web.bind.annotation.*
@@ -25,9 +26,7 @@ class MetricsController(private val metricsService: MetricsService) : Logging {
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,
         @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
         @RequestParam @Parameter(description = "Group") group: Annotation,
-        @RequestParam
-        @Parameter(description = "Analysis")
-        analysis: Annotation.Analysis? = Annotation.Analysis.BOTH,
+        @RequestParam @Parameter(description = "Analysis") analysis: Analysis? = Analysis.BOTH,
     ): CorpusMetrics = metricsService.getCorpusMetrics(corpus, annotations, group, analysis!!)
 
     @Operation(
@@ -55,9 +54,7 @@ class MetricsController(private val metricsService: MetricsService) : Logging {
         @RequestParam @Parameter(description = "Layer name") reference: String = Layer.SOURCE_LAYER,
         @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>?,
         @RequestParam @Parameter(description = "Group") group: Annotation?,
-        @RequestParam
-        @Parameter(description = "Analysis")
-        analysis: Annotation.Analysis? = Annotation.Analysis.BOTH,
+        @RequestParam @Parameter(description = "Analysis") analysis: Analysis? = Analysis.BOTH,
     ): Any {
         if (group != null && annotations != null) {
             return metricsService.getLayerMetrics(
@@ -107,9 +104,7 @@ class MetricsController(private val metricsService: MetricsService) : Logging {
         @RequestParam @Parameter(description = "Layer name") reference: String = Layer.SOURCE_LAYER,
         @RequestParam @Parameter(description = "Annotations") annotations: List<Annotation>,
         @RequestParam @Parameter(description = "Group") group: Annotation,
-        @RequestParam
-        @Parameter(description = "Analysis")
-        analysis: Annotation.Analysis? = Annotation.Analysis.BOTH,
+        @RequestParam @Parameter(description = "Analysis") analysis: Analysis? = Analysis.BOTH,
         @RequestParam
         @Parameter(description = "Classification type (e.g. true positive)")
         classification: String,

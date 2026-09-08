@@ -1,7 +1,6 @@
 package org.ivdnt.galahad.formats
 
 import java.io.File
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.formats.conllu.ConlluFile
 import org.ivdnt.galahad.formats.docx.DocxFile
@@ -13,6 +12,7 @@ import org.ivdnt.galahad.formats.reader.LayerReader
 import org.ivdnt.galahad.formats.tei.TeiFile
 import org.ivdnt.galahad.formats.tsv.TsvFile
 import org.ivdnt.galahad.formats.txt.TxtFile
+import org.ivdnt.galahad.layer.Layer
 
 /** A document parsed as a file of a certain file type, e.g. TEI, TSV, Folia. */
 abstract class ParsedFile protected constructor() {

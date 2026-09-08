@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletResponse
 import java.io.File
 import java.util.*
 import org.apache.catalina.connector.Connector
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -89,9 +90,8 @@ class AnnotationConverter : Converter<String, Annotation> {
 }
 
 @Configuration
-class AnalysisConverter : Converter<String, Annotation.Analysis> {
-    override fun convert(source: String): Annotation.Analysis =
-        Annotation.Analysis.valueOf(source.uppercase())
+class AnalysisConverter : Converter<String, Analysis> {
+    override fun convert(source: String): Analysis = Analysis.valueOf(source.uppercase())
 }
 
 @Configuration

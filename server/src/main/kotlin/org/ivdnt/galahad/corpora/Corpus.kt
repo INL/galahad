@@ -2,13 +2,13 @@ package org.ivdnt.galahad.corpora
 
 import java.io.File
 import java.util.*
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.documents.Documents
 import org.ivdnt.galahad.evaluation.CorpusEvaluation
 import org.ivdnt.galahad.files.DiskValue
 import org.ivdnt.galahad.files.GalahadFolder
 import org.ivdnt.galahad.files.ValidatedDiskValue
 import org.ivdnt.galahad.jobs.Jobs
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.layers.CorpusLayer.Companion.DOCUMENTS_FOLDER
 import org.ivdnt.galahad.layers.CorpusLayers
 
@@ -26,20 +26,30 @@ import org.ivdnt.galahad.layers.CorpusLayers
  * access. Viewers have read access. Admins have access to all corpora with read and write access.
  */
 class Corpus(dir: File) : GalahadFolder(dir) {
+    /** Folder name of the corpus. */
     val uuid: UUID = UUID.fromString(dir.name)
     // TODO still used in quite a lot of evaluations when they should use layers
+    /** Shortcut to the source layer documents. */
     val documents: Documents =
         Documents(dir.resolve(LAYERS_FOLDER).resolve(SOURCE_LAYER).resolve(DOCUMENTS_FOLDER))
+
+    /** Layers of this corpus. */
     val layers: CorpusLayers = CorpusLayers(dir.resolve(LAYERS_FOLDER), this)
+
+    /** Jobs for layers of this corpus. */
     val jobs: Jobs = Jobs(dir.resolve(JOBS_FOLDER), this)
+
+    /** Evaluations between layers of this corpus. */
     val evaluation: CorpusEvaluation = CorpusEvaluation(dir.resolve(EVALUATIONS_FOLDER), this)
 
+    /** Editable corpus metadata. */
     var metadata: CorpusMetadata
         get() = DiskValue<CorpusMetadata>(dir.resolve(METADATA_FILE)).readOrThrow()
         set(value) {
             DiskValue<CorpusMetadata>(dir.resolve(METADATA_FILE)).write(value)
         }
 
+    /** Computed corpus statistics. Cached and validated. */
     val statistics: CorpusStatistics
         get() =
             object : ValidatedDiskValue<CorpusStatistics>(dir.resolve(STATISTICS_FILE)) {
@@ -60,12 +70,18 @@ class Corpus(dir: File) : GalahadFolder(dir) {
                 .readOrCreate()
 
     companion object {
+        /** Metadata path. */
         private const val METADATA_FILE = "metadata.json"
+        /** Statistics path. */
         private const val STATISTICS_FILE = "statistics.json"
+        /** Jobs data directory. */
         private const val JOBS_FOLDER = "jobs"
+        /** Layers data directory. */
         private const val LAYERS_FOLDER = "layers"
+        /** Evaluations data directory. */
         private const val EVALUATIONS_FOLDER = "evaluations"
 
+        /** Create a new corpus folder from metadata. */
         fun create(dir: File, metadata: CorpusMetadata): Corpus {
             // clean, trim, validate, and set owner; might throw
             val cleanMetadata = CorpusMetadata.clean(metadata)

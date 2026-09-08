@@ -6,10 +6,6 @@ data class EvaluationEntry(
     val count: Int = 0,
     val samples: MutableList<TermComparison> = mutableListOf(),
 ) {
-    //    @get:JsonProperty("samples")
-    //    val jsonSamples: List<TermComparison> get() =
-    // samples.asSequence().shuffled().take(MAX_SAMPLE_LENGTH).toList()
-
     fun truncate() {
         val truncated = samples.asSequence().shuffled().take(MAX_SAMPLE_LENGTH).toMutableList()
         samples.clear()

@@ -1,11 +1,11 @@
 package org.ivdnt.galahad.layers
 
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
-import org.ivdnt.galahad.annotations.LayerAnnotations
-import org.ivdnt.galahad.annotations.LayerAnnotations.Companion.plus
-import org.ivdnt.galahad.annotations.LayerPreview
-import org.ivdnt.galahad.annotations.LayerStructure
 import org.ivdnt.galahad.corpora.Corpus
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
+import org.ivdnt.galahad.layer.LayerAnnotations
+import org.ivdnt.galahad.layer.LayerAnnotations.Companion.plus
+import org.ivdnt.galahad.layer.LayerPreview
+import org.ivdnt.galahad.layer.LayerStructure
 import org.ivdnt.galahad.taggers.Tagger
 
 /** Cache-able layer metadata. */

@@ -99,6 +99,23 @@ class LayersController(private val layersService: LayersService) : Logging {
         return ResponseEntity.noContent().build()
     }
 
+    @Operation(
+        summary = "Create a new layer",
+        description = "Create a layer for the provided custom tagger.",
+    )
+    @ApiResponse(responseCode = "201", description = "Layer created.")
+    @ApiResponse(
+        responseCode = "403",
+        description = "User needs write-access.",
+        content =
+            [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
+    )
+    @ApiResponse(
+        responseCode = "404",
+        description = "Corpus not found.",
+        content =
+            [Content(array = ArraySchema(schema = Schema(implementation = ErrorResponse::class)))],
+    )
     @PostMapping(Endpoints.Layers.BASE)
     fun postLayer(
         @PathVariable @Parameter(description = "Corpus UUID") corpus: UUID,

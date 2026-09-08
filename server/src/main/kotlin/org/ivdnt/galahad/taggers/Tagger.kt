@@ -3,10 +3,10 @@ package org.ivdnt.galahad.taggers
 import com.fasterxml.jackson.annotation.JsonIgnore
 import java.io.File
 import java.net.URI
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.app.application_profile
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.exceptions.TaggerNotFoundException
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.metadata.AnnotationItem
 import org.ivdnt.galahad.metadata.MetadataItem
 import org.ivdnt.galahad.metadata.Period

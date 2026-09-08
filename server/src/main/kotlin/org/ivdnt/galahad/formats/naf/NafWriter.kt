@@ -4,9 +4,9 @@ import java.io.OutputStream
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.LayerAnnotations.Companion.contains
 import org.ivdnt.galahad.export.DocumentExport
 import org.ivdnt.galahad.export.LayerWriter
+import org.ivdnt.galahad.layer.LayerAnnotations.Companion.contains
 import org.ivdnt.galahad.util.XmlUtil
 import org.ivdnt.galahad.util.withoutFormatExt
 import org.w3c.dom.Document

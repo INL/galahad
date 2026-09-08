@@ -1,6 +1,6 @@
 package org.ivdnt.galahad.export
 
-import org.ivdnt.galahad.annotations.DocumentLayer
+import java.io.OutputStream
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.exceptions.InvalidDocumentFormatException
 import org.ivdnt.galahad.formats.conllu.ConlluWriter
@@ -10,7 +10,7 @@ import org.ivdnt.galahad.formats.naf.NafWriter
 import org.ivdnt.galahad.formats.tei.TeiWriter
 import org.ivdnt.galahad.formats.tsv.TsvWriter
 import org.ivdnt.galahad.formats.txt.TxtWriter
-import java.io.OutputStream
+import org.ivdnt.galahad.layer.DocumentLayer
 
 abstract class LayerWriter protected constructor(protected val export: DocumentExport) {
     protected val documents: Array<DocumentLayer> = export.layer.documents

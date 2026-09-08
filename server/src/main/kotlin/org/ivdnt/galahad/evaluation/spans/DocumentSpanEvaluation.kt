@@ -2,9 +2,9 @@ package org.ivdnt.galahad.evaluation.spans
 
 import com.fasterxml.jackson.annotation.JsonValue
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.evaluation.comparison.LayerComparison
 import org.ivdnt.galahad.evaluation.comparison.TermComparison
+import org.ivdnt.galahad.layer.Layer
 
 class SpanEvaluation(var correct: Int, var incorrect: Int)
 

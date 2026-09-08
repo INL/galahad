@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.evaluation.comparison
 
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.Term
 
@@ -31,11 +32,11 @@ data class TermComparison(
         return equal(refAnnot, hypAnnot)
     }
 
-    fun has(annotation: Annotation, analysis: Annotation.Analysis): Boolean {
+    fun has(annotation: Annotation, analysis: Analysis): Boolean {
         return when (analysis) {
-            Annotation.Analysis.SINGLE -> !hyp.isMulti(annotation) && !ref.isMulti(annotation)
-            Annotation.Analysis.MULTIPLE -> hyp.isMulti(annotation) || ref.isMulti(annotation)
-            Annotation.Analysis.BOTH -> true
+            Analysis.SINGLE -> !hyp.isMulti(annotation) && !ref.isMulti(annotation)
+            Analysis.MULTIPLE -> hyp.isMulti(annotation) || ref.isMulti(annotation)
+            Analysis.BOTH -> true
         }
     }
 

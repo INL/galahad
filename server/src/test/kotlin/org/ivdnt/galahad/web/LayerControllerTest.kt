@@ -1,13 +1,13 @@
 package org.ivdnt.galahad.web
 
 import java.util.*
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.app.Config
 import org.ivdnt.galahad.app.Galahad
 import org.ivdnt.galahad.exceptions.CorpusNotFoundException
 import org.ivdnt.galahad.exceptions.JobNotFoundException
 import org.ivdnt.galahad.exceptions.LayerNotFoundException
 import org.ivdnt.galahad.exceptions.UserUnauthorizedException
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.layers.CorpusLayerMetadata
 import org.ivdnt.galahad.util.TestConfig
 import org.ivdnt.galahad.util.TestUtil

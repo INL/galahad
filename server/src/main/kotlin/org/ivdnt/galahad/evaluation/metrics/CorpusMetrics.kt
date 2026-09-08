@@ -1,11 +1,12 @@
 package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonValue
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.evaluation.CorpusEvaluation
 import org.ivdnt.galahad.evaluation.JobPair
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.util.parallelMap
 
 class CorpusMetrics(@JsonValue val metrics: List<GlobalMetrics>) {
@@ -14,7 +15,7 @@ class CorpusMetrics(@JsonValue val metrics: List<GlobalMetrics>) {
             corpus: Corpus,
             annotations: List<Annotation>,
             group: Annotation,
-            analysis: Annotation.Analysis,
+            analysis: Analysis,
             evaluation: CorpusEvaluation,
         ): CorpusMetrics =
             CorpusMetrics(

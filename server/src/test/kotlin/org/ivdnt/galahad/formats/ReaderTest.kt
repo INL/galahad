@@ -1,7 +1,7 @@
 package org.ivdnt.galahad.formats
 
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.documents.DocumentFormat
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.util.JsonUtil
 import org.ivdnt.galahad.util.TestUtil
 import org.junit.jupiter.api.Assertions.assertEquals

@@ -11,6 +11,10 @@ import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.export.CorpusExport
 import org.ivdnt.galahad.export.DocumentExport
 import org.ivdnt.galahad.formats.tsv.TsvFile
+import org.ivdnt.galahad.layer.DocumentLayer
+import org.ivdnt.galahad.layer.Layer
+import org.ivdnt.galahad.layer.ParagraphLayer
+import org.ivdnt.galahad.layer.SentenceLayer
 import org.junit.jupiter.api.Assertions.assertEquals
 
 class LayerBuilder {

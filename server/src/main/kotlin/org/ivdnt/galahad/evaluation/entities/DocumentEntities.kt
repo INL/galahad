@@ -1,8 +1,8 @@
 package org.ivdnt.galahad.evaluation.entities
 
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.annotations.Term.Companion.toSpacedString
+import org.ivdnt.galahad.layer.Layer
 
 class DocumentEntities(val entities: List<Entity>, val summary: Map<String, Int>, val total: Int) {
     class Entity(val label: String, val form: String, val count: Int)

@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.evaluation
 
 import java.io.File
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.evaluation.confusion.JobConfusion
@@ -64,7 +65,7 @@ class JobEvaluation(dir: File, private val corpus: Corpus, private val jobs: Job
     fun getMetrics(
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): JobMetrics =
         object :
                 ValidatedDiskValue<JobMetrics>(

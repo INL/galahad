@@ -7,10 +7,10 @@ import java.util.*
 import java.util.zip.ZipInputStream
 import kotlin.io.path.createTempDirectory
 import org.apache.logging.log4j.kotlin.Logging
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.documents.Document
 import org.ivdnt.galahad.documents.DocumentMetadata
 import org.ivdnt.galahad.exceptions.FileUploadException
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.layers.CorpusLayer
 import org.ivdnt.galahad.util.ThreadPoolUtil
 import org.springframework.stereotype.Service

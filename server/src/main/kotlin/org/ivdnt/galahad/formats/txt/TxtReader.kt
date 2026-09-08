@@ -2,9 +2,9 @@ package org.ivdnt.galahad.formats.txt
 
 import java.io.File
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.annotations.Term
 import org.ivdnt.galahad.formats.reader.LayerReader
+import org.ivdnt.galahad.layer.Layer
 
 /**
  * Reads a .txt file and creates an [Layer] from it. [SentenceLayer] and [ParagraphLayer] are

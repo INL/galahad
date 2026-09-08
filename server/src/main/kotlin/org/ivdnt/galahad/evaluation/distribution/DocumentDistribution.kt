@@ -2,7 +2,7 @@ package org.ivdnt.galahad.evaluation.distribution
 
 import com.fasterxml.jackson.annotation.JsonValue
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
+import org.ivdnt.galahad.layer.Layer
 
 /** Type-token distribution of terms in a layer. */
 class DocumentDistribution(@JsonValue val typeTokens: List<TypeToken>) {

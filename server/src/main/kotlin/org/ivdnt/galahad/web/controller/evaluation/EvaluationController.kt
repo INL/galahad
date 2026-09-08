@@ -8,8 +8,8 @@ import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import java.util.*
 import org.apache.logging.log4j.kotlin.Logging
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.exceptions.ErrorResponse
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.web.controller.Endpoints
 import org.ivdnt.galahad.web.service.evaluation.EvaluationService
 import org.springframework.web.bind.annotation.*

@@ -29,6 +29,6 @@ class CorpusLayer(dir: File, private val corpus: Corpus) : GalahadFolder(dir) {
     companion object {
         private const val METADATA_FILE = "metadata.json"
         private const val TAGGER_FILE = "tagger.json"
-        const val DOCUMENTS_FOLDER = "documents"
+        const val DOCUMENTS_FOLDER: String = "documents"
     }
 }

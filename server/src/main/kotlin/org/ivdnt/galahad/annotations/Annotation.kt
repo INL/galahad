@@ -18,22 +18,14 @@ enum class Annotation(@JsonValue val value: String) {
     // Force lowercase and/or custom name.
     override fun toString(): String = value
 
-    enum class Analysis(@JsonValue val value: String) {
-        SINGLE("single"),
-        MULTIPLE("multiple"),
-        BOTH("both");
-
-        override fun toString(): String = value
-    }
-
     companion object {
         // Used by Spring.
         @JsonCreator
         fun fromString(s: String): Annotation =
             entries.firstOrNull { it.value == s.lowercase() } ?: throw InvalidAnnotationException(s)
 
-        /** Get annotations in consistent enum declaration order. */
-        fun order(other: Iterable<Annotation>): Set<Annotation> =
+        /** Sort annotations in consistent enum declaration order. */
+        fun sort(other: Iterable<Annotation>): Set<Annotation> =
             entries.filter { it in other }.toSet()
     }
 }

@@ -2,6 +2,10 @@ package org.ivdnt.galahad.formats.reader
 
 import org.ivdnt.galahad.annotations.*
 import org.ivdnt.galahad.annotations.Annotation
+import org.ivdnt.galahad.layer.DocumentLayer
+import org.ivdnt.galahad.layer.Layer
+import org.ivdnt.galahad.layer.ParagraphLayer
+import org.ivdnt.galahad.layer.SentenceLayer
 
 abstract class LayerReader {
     val layer: Layer by lazy { read() }

@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.evaluation
 
 import java.io.File
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.evaluation.entities.CorpusEntities
@@ -29,7 +30,7 @@ class CorpusEvaluation(dir: File, private val corpus: Corpus) :
     fun getMetrics(
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): CorpusMetrics =
         object :
                 ValidatedDiskValue<CorpusMetrics>(

@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonValue
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.evaluation.DocumentEvaluations
@@ -17,7 +18,7 @@ class JobMetrics(@JsonValue val metrics: Metrics) {
             docEvals: DocumentEvaluations,
             annotations: List<Annotation>,
             group: Annotation,
-            analysis: Annotation.Analysis,
+            analysis: Analysis,
         ): JobMetrics =
             JobMetrics(
                 corpus.documents

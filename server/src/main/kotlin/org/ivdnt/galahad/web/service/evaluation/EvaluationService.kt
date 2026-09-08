@@ -3,7 +3,7 @@ package org.ivdnt.galahad.web.service.evaluation
 import java.io.File
 import java.util.*
 import kotlin.io.path.createTempDirectory
-import org.ivdnt.galahad.annotations.Layer
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.util.zipDir
 import org.ivdnt.galahad.web.service.CorporaService
 import org.springframework.beans.factory.annotation.Autowired

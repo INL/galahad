@@ -1,8 +1,8 @@
 package org.ivdnt.galahad.corpora
 
 import java.util.*
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
-import org.ivdnt.galahad.annotations.LayerAnnotations
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
+import org.ivdnt.galahad.layer.LayerAnnotations
 import org.ivdnt.galahad.metadata.Period
 import org.ivdnt.galahad.metadata.Source
 

@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.evaluation.csv.CsvFile
 import org.ivdnt.galahad.evaluation.csv.CsvString
@@ -42,11 +43,11 @@ class Metrics(
     class Settings(
         val annotations: List<Annotation>,
         val group: Annotation,
-        val analysis: Annotation.Analysis,
+        val analysis: Analysis,
     ) {
         @JsonIgnore
         val name: String =
-            "metrics-${Annotation.order(annotations).joinToString("-")}-$analysis-${group}"
+            "metrics-${Annotation.sort(annotations).joinToString("-")}-$analysis-${group}"
     }
 
     fun toGlobal(layer: String): GlobalMetrics =

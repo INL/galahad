@@ -5,9 +5,9 @@ import java.io.File
 import java.util.UUID
 import kotlin.io.path.createTempDirectory
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.corpora.CorpusStatistics
 import org.ivdnt.galahad.evaluation.csv.CsvFile
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.taggers.Tagger
 import org.ivdnt.galahad.util.EvaluationMetadataRepresenter
 import org.ivdnt.galahad.util.setContentDisposition

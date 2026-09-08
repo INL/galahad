@@ -2,10 +2,10 @@ package org.ivdnt.galahad.documents
 
 import java.io.File
 import org.apache.logging.log4j.kotlin.Logging
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.files.DiskValue
 import org.ivdnt.galahad.files.GalahadFolder
 import org.ivdnt.galahad.formats.ParsedFile
+import org.ivdnt.galahad.layer.Layer
 
 /**
  * Documents are saved as folders with their file name as folder name, including extension.

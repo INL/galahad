@@ -4,12 +4,12 @@ import java.io.OutputStream
 import javax.xml.XMLConstants
 import org.codehaus.stax2.XMLStreamWriter2
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.LayerAnnotations.Companion.contains
 import org.ivdnt.galahad.annotations.Term
 import org.ivdnt.galahad.annotations.TermSpan
 import org.ivdnt.galahad.export.DocumentExport
 import org.ivdnt.galahad.export.LayerWriter
 import org.ivdnt.galahad.formats.reader.PrettyXMLWriter
+import org.ivdnt.galahad.layer.LayerAnnotations.Companion.contains
 import org.ivdnt.galahad.util.XmlUtil.Companion.outputFactory
 
 class TeiWriter(export: DocumentExport) : LayerWriter(export) {

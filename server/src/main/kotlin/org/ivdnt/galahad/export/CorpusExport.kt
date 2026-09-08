@@ -2,14 +2,14 @@ package org.ivdnt.galahad.export
 
 import java.io.OutputStream
 import org.apache.logging.log4j.kotlin.Logging
-import org.ivdnt.galahad.annotations.Layer
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.documents.Document
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.documents.Documents
 import org.ivdnt.galahad.exceptions.MergeNotImplementedException
+import org.ivdnt.galahad.layer.Layer
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.layers.CorpusLayer
 import org.ivdnt.galahad.util.*
 

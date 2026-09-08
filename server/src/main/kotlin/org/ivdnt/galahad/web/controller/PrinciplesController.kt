@@ -24,7 +24,7 @@ class PrinciplesController : Logging {
     @GetMapping(Endpoints.Principles.BASE)
     fun getPrinciples(): Iterable<Principle> = Principle.principles
 
-    @Operation(summary = "Get principle by id", description = "Metadata of the principle.")
+    @Operation(summary = "Get principle by name", description = "Metadata of the principle.")
     @ApiResponse(responseCode = "200", description = "Metadata of the principle.")
     @ApiResponse(
         responseCode = "404",

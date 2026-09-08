@@ -1,8 +1,8 @@
 package org.ivdnt.galahad.evaluation
 
 import java.io.File
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.evaluation.comparison.LayerComparison
 import org.ivdnt.galahad.evaluation.confusion.DocumentConfusion
@@ -13,6 +13,7 @@ import org.ivdnt.galahad.evaluation.metrics.Metrics
 import org.ivdnt.galahad.evaluation.spans.DocumentSpanEvaluation
 import org.ivdnt.galahad.files.GalahadFolder
 import org.ivdnt.galahad.files.ValidatedDiskValue
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.layers.CorpusLayer
 
 /**
@@ -95,7 +96,7 @@ class DocumentEvaluation(dir: File, private val corpus: Corpus, private val jobs
     fun getMetrics(
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): DocumentMetrics =
         object :
                 ValidatedDiskValue<DocumentMetrics>(

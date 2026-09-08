@@ -4,11 +4,11 @@ import java.io.File
 import java.util.*
 import java.util.zip.ZipInputStream
 import kotlin.io.path.createTempDirectory
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.app.Config
 import org.ivdnt.galahad.app.Galahad
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.exceptions.*
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.util.TestConfig
 import org.ivdnt.galahad.util.TestUtil
 import org.ivdnt.galahad.util.TestUtil.WEB_CORPUS

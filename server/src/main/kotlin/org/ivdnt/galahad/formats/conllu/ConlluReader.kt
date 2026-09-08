@@ -2,9 +2,9 @@ package org.ivdnt.galahad.formats.conllu
 
 import java.io.File
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer
 import org.ivdnt.galahad.annotations.Term
 import org.ivdnt.galahad.formats.reader.LineReader
+import org.ivdnt.galahad.layer.Layer
 
 class ConlluReader(val file: File) : LineReader() {
     private val ignorableMultiWordIds: MutableList<String> = mutableListOf()

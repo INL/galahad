@@ -1,10 +1,10 @@
 package org.ivdnt.galahad.formats.tei
 
 import java.text.SimpleDateFormat
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.export.DocumentExport
 import org.ivdnt.galahad.formats.reader.PrettyXMLWriter
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.util.ifNullOrBlank
 import org.ivdnt.galahad.util.toVarArg
 import org.ivdnt.galahad.util.withoutFormatExt

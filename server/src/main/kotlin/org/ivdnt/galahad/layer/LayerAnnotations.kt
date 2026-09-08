@@ -1,11 +1,16 @@
-package org.ivdnt.galahad.annotations
+package org.ivdnt.galahad.layer
 
 import com.fasterxml.jackson.annotation.JsonValue
+import org.ivdnt.galahad.annotations.Annotation
+import org.ivdnt.galahad.annotations.Term
 
-/** Stores the size of the [Layer] in terms of number of [WordForm], [Term], lemma and pos. */
+/**
+ * Stores the size of the [Layer] in terms of number of [WordForm],
+ * [org.ivdnt.galahad.annotations.Term], lemma and pos.
+ */
 data class LayerAnnotations(@JsonValue val annotations: Map<Annotation, Int>) {
     val keys: Set<Annotation>
-        get() = Annotation.order(annotations.keys)
+        get() = Annotation.Companion.sort(annotations.keys)
 
     companion object {
         val EMPTY: LayerAnnotations = LayerAnnotations(emptyMap<Annotation, Int>())

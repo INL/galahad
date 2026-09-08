@@ -1,9 +1,9 @@
 package org.ivdnt.galahad.documents
 
-import org.ivdnt.galahad.annotations.LayerAnnotations
-import org.ivdnt.galahad.annotations.LayerPreview
-import org.ivdnt.galahad.annotations.LayerStructure
 import org.ivdnt.galahad.formats.ParsedFile
+import org.ivdnt.galahad.layer.LayerAnnotations
+import org.ivdnt.galahad.layer.LayerPreview
+import org.ivdnt.galahad.layer.LayerStructure
 import org.ivdnt.galahad.util.withoutFormatExt
 
 data class DocumentMetadata(
@@ -32,7 +32,7 @@ data class DocumentMetadata(
                 format = file.format,
                 text = text.take(PREVIEW_LENGTH) + if (text.length > PREVIEW_LENGTH) "..." else "",
                 preview = file.layer.preview,
-                annotations = file.layer.summary,
+                annotations = file.layer.annotations,
                 structure = file.layer.structure,
                 modified = System.currentTimeMillis(),
             )

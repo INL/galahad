@@ -1,6 +1,7 @@
 package org.ivdnt.galahad.evaluation.metrics
 
 import com.fasterxml.jackson.annotation.JsonValue
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.Term
 import org.ivdnt.galahad.evaluation.comparison.EvaluationEntry
@@ -13,7 +14,7 @@ class DocumentMetrics(@JsonValue val metrics: Metrics) {
             layerComparison: LayerComparison,
             annotations: List<Annotation>,
             group: Annotation,
-            analysis: Annotation.Analysis,
+            analysis: Analysis,
         ): DocumentMetrics =
             DocumentMetrics(
                 Metrics(

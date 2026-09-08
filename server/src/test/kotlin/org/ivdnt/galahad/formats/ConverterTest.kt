@@ -2,14 +2,14 @@ package org.ivdnt.galahad.formats
 
 import java.io.ByteArrayOutputStream
 import java.io.File
-import org.ivdnt.galahad.annotations.Layer
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.app.User
 import org.ivdnt.galahad.corpora.Corpus
 import org.ivdnt.galahad.documents.Document
 import org.ivdnt.galahad.documents.DocumentFormat
 import org.ivdnt.galahad.export.CorpusExport
 import org.ivdnt.galahad.files.DiskValue
+import org.ivdnt.galahad.layer.Layer
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.util.TestUtil
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach

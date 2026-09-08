@@ -2,8 +2,8 @@ package org.ivdnt.galahad.web.service.evaluation
 
 import java.io.File
 import java.util.*
+import org.ivdnt.galahad.annotations.Analysis
 import org.ivdnt.galahad.annotations.Annotation
-import org.ivdnt.galahad.annotations.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.evaluation.JobPair
 import org.ivdnt.galahad.evaluation.comparison.DummyFilter
 import org.ivdnt.galahad.evaluation.comparison.HeadGroupTermFilter
@@ -11,6 +11,7 @@ import org.ivdnt.galahad.evaluation.comparison.MetricsLayerFilter
 import org.ivdnt.galahad.evaluation.csv.CsvFile
 import org.ivdnt.galahad.evaluation.csv.CsvSampleExporter.Companion.samplesToCSV
 import org.ivdnt.galahad.evaluation.metrics.*
+import org.ivdnt.galahad.layer.Layer.Companion.SOURCE_LAYER
 import org.ivdnt.galahad.web.service.CorporaService
 import org.springframework.stereotype.Service
 
@@ -24,7 +25,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
         reference: String,
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): DocumentMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
@@ -36,7 +37,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
         corpus: UUID,
         hypothesis: String,
         reference: String,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): List<GlobalMetrics> {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
@@ -58,7 +59,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
         reference: String,
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): JobMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         val jobEval = corpusObj.evaluation.createOrThrow(JobPair(hypothesis, reference))
@@ -69,7 +70,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
         corpus: UUID,
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
     ): CorpusMetrics {
         val corpusObj = corpora.readOrThrow(corpus)
         return corpusObj.evaluation.getMetrics(annotations, group, analysis)
@@ -81,7 +82,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
         reference: String = SOURCE_LAYER,
         annotations: List<Annotation>,
         group: Annotation,
-        analysis: Annotation.Analysis,
+        analysis: Analysis,
         classification: String,
         groupFilter: String? = null,
     ): ByteArray {
@@ -139,7 +140,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
                 corpus,
                 hypothesis,
                 reference,
-                Annotation.Analysis.BOTH,
+                Analysis.BOTH,
             )
         val globFile = CsvFile(dir.resolve("metrics-global.csv"))
         for (globMetric in metrics) {
@@ -155,7 +156,7 @@ class MetricsService(private val corpora: CorporaService) : BaseEvaluationServic
                     reference,
                     listOf(annotation),
                     annotation,
-                    Annotation.Analysis.BOTH,
+                    Analysis.BOTH,
                 )
             val file = CsvFile(dir.resolve("metrics-${groupedMetrics.metrics.settings.name}.csv"))
             file.append(JobMetrics.toCsv(groupedMetrics.metrics))

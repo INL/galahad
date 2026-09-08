@@ -1,7 +1,7 @@
 package org.ivdnt.galahad.files
 
 import kotlin.io.path.createTempFile
-import org.ivdnt.galahad.annotations.Layer
+import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.util.JsonUtil
 import org.ivdnt.galahad.util.LayerBuilder
 import org.junit.jupiter.api.Assertions.assertEquals
