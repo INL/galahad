@@ -14,14 +14,22 @@ import org.ivdnt.galahad.formats.tsv.TsvFile
 import org.ivdnt.galahad.formats.txt.TxtFile
 import org.ivdnt.galahad.layer.Layer
 
-/** A document parsed as a file of a certain file type, e.g. TEI, TSV, Folia. */
+/**
+ * A parsed [file] of a certain [DocumentFormat] e.g. TEI, TSV, Folia.
+ * Allows accessing the annotation layer.
+ */
 abstract class ParsedFile protected constructor() {
+    /** Original file to be parsed. */
     abstract val file: File
+    /** Format in which it has been parsed. */
     abstract val format: DocumentFormat
+    /** Annotation layer retrieved from [file]. */
     val layer: Layer by lazy { reader.layer }
+    /** Parser implementation. Reads [layer] from [file]. */
     protected abstract val reader: LayerReader
 
     companion object {
+        /** Parse [file] into a certain [DocumentFormat]. */
         fun create(file: File): ParsedFile {
             return when (val format = DocumentFormat.fromFile(file)) {
                 DocumentFormat.Tsv -> TsvFile(file)

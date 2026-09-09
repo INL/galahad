@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonValue
 import org.ivdnt.galahad.annotations.Annotation
 import org.ivdnt.galahad.annotations.Term
 
-/**
- * Stores the size of the [Layer] in terms of number of [WordForm],
- * [org.ivdnt.galahad.annotations.Term], lemma and pos.
- */
+/** Stores the non-null count of each annotation type. */
 data class LayerAnnotations(@JsonValue val annotations: Map<Annotation, Int>) {
     val keys: Set<Annotation>
         get() = Annotation.sort(annotations.keys)

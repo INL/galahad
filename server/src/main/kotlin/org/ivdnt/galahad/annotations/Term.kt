@@ -8,6 +8,8 @@ class Term(
     val annotations: Map<Annotation, String?>,
     spaceAfter: Boolean? = null,
 ) {
+    // Default to null to save space in serialization where null is ignored.
+    // Set to false to join two terms/tokens in plaintext.
     val spaceAfter: Boolean? = if (spaceAfter == false) false else null
     @get:JsonIgnore val space: String = if (spaceAfter == false) "" else " "
 

@@ -7,6 +7,13 @@ import org.ivdnt.galahad.layer.Layer
 import org.ivdnt.galahad.layer.ParagraphLayer
 import org.ivdnt.galahad.layer.SentenceLayer
 
+/**
+ * Base implementation of a file parser.
+ *
+ * Should read individual terms and their annotations,
+ * as well as structures like sentences, paragraphs and documents.
+ * Reads IDs where relevant or assigns default IDs.
+ */
 abstract class LayerReader {
     val layer: Layer by lazy { read() }
 
