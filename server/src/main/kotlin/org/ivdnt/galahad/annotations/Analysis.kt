@@ -8,5 +8,6 @@ enum class Analysis(@JsonValue val value: String) {
     MULTIPLE("multiple"),
     BOTH("both");
 
+    // Force lowercase value name
     override fun toString(): String = value
 }

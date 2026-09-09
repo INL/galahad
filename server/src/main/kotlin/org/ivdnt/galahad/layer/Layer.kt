@@ -37,7 +37,7 @@ class Layer(
     override fun toString(): String = documents.joinToString("\n\n") + "\n"
 
     companion object {
-        /** Empty utility layer. */
+        /** Empty utility layer for comparison. */
         val EMPTY: Layer = Layer(emptyList(), "")
 
         /** Name of the user uploaded layer. */

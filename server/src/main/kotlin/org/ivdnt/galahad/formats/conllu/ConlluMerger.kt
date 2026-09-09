@@ -50,7 +50,7 @@ class ConlluMerger(export: DocumentExport) : TsvMerger(export) {
                 // Split UPOS into head and features
                 val term: Term = termComparisons[termIndex].hyp
                 val head: String = term.annotationHead(Annotation.UPOS) ?: "_"
-                val features: String = Term.features(term.annotations[Annotation.UPOS]) ?: "_"
+                val features: String = term.features(Annotation.UPOS) ?: "_"
                 columns[3] = head
                 columns[5] = features
             }

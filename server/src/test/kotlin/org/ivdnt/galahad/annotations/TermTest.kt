@@ -28,11 +28,11 @@ class TermTest {
     fun `PoS head and features`() {
         // single pos
         assertEquals("NOU-C", singlePos.annotationHead(Annotation.POS))
-        assertEquals("num=sg", Term.features(singlePos.pos))
+        assertEquals("num=sg", singlePos.features(Annotation.POS))
 
         // upos
         assertEquals("NOU-C", singleUPos.annotationHead(Annotation.UPOS))
-        assertEquals("num=sg", Term.features(singleUPos.upos))
+        assertEquals("num=sg", singleUPos.features(Annotation.UPOS))
 
         // ner
         assertEquals("LOC", singleNer.annotationHead(Annotation.NER))
@@ -43,6 +43,6 @@ class TermTest {
 
         // head only pos
         assertEquals("NOU-C", headOnlyPos.annotationHead(Annotation.POS))
-        assertEquals(null, Term.features(headOnlyPos.pos))
+        assertEquals(null, headOnlyPos.features(Annotation.POS))
     }
 }

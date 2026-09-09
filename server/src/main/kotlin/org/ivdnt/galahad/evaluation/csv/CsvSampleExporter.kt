@@ -33,10 +33,10 @@ class CsvSampleExporter {
             comps?.forEach { termComp ->
                 val literal = termComp.hyp.token.ifEmpty { termComp.ref.token }
                 val hypoAnnots = hypoColumns.map {
-                    termComp.hyp.annotations[it] ?: Term.missingName(it)
+                    termComp.hyp.annotationOrMissing(it)
                 }
                 val refAnnots = refColumns.map {
-                    termComp.ref.annotations[it] ?: Term.missingName(it)
+                    termComp.ref.annotationOrMissing(it)
                 }
                 csv += CsvFile.toCsvString(listOf(literal) + hypoAnnots + refAnnots)
             }

@@ -57,7 +57,7 @@ class TeiWriter(export: DocumentExport) : LayerWriter(export) {
                             t.lemma?.let { writer.writeAttribute("lemma", it) }
                         }
                         t.pos?.let { writer.writeAttribute("pos", it) }
-                        t.upos?.let { Term.features(it)?.let { writer.writeAttribute("msd", it) } }
+                        t.upos?.let { t.features(Annotation.UPOS)?.let { writer.writeAttribute("msd", it) } }
                         if (t.spaceAfter == false) writer.writeAttribute("join", "right")
 
                         if (t.group != null) {

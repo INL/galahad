@@ -3,29 +3,25 @@ package org.ivdnt.galahad.annotations
 import com.fasterxml.jackson.annotation.JsonIgnore
 
 class Term(
+    /** Term id, e.g. XML id. */
     val id: String,
     val annotations: Map<Annotation, String?>,
     spaceAfter: Boolean? = null,
 ) {
     val spaceAfter: Boolean? = if (spaceAfter == false) false else null
-
     @get:JsonIgnore val space: String = if (spaceAfter == false) "" else " "
 
+    // Quick access to annotations
     @get:JsonIgnore val token: String = annotations[Annotation.TOKEN]!!
-
     @get:JsonIgnore val lemma: String? = annotations[Annotation.LEMMA]
-
     @get:JsonIgnore val pos: String? = annotations[Annotation.POS]
+    @get:JsonIgnore val upos: String? = annotations[Annotation.UPOS]
+    @get:JsonIgnore val head: String? = annotations[Annotation.HEAD]
+    @get:JsonIgnore val deprel: String? = annotations[Annotation.DEPREL]
+    @get:JsonIgnore val ner: String? = annotations[Annotation.NER]
     @get:JsonIgnore val group: String? = annotations[Annotation.GROUP]
 
-    @get:JsonIgnore val upos: String? = annotations[Annotation.UPOS]
-
-    @get:JsonIgnore val head: String? = annotations[Annotation.HEAD]
-
-    @get:JsonIgnore val deprel: String? = annotations[Annotation.DEPREL]
-
-    @get:JsonIgnore val ner: String? = annotations[Annotation.NER]
-
+    /** Is this annotation multi-analyses. */
     fun isMulti(annotation: Annotation): Boolean = annotations[annotation]?.contains("+") == true
 
     /**
@@ -55,9 +51,9 @@ class Term(
             }
         }
         // for POS & UPOS
-        else if (annotation in posAnnotations) {
+        else if (annotation in POS_ANNOTATIONS) {
             return if (isMulti(annotation)) {
-                // Split on + and transform each part
+                // Split on + and transform each part due to potential presence of features
                 value.split("+").joinToString("+") { singlePosToHead(it) }
             } else {
                 singlePosToHead(value)
@@ -67,44 +63,41 @@ class Term(
         return value
     }
 
+    /** The features of [value]. E.g. "num=sg" for "NOU(num=sg)". Does not support multi-pos. */
+    fun features(annotation: Annotation): String? {
+        val value = annotations[annotation] ?: return null
+        val featureStart: Int = value.indexOf('(')
+        val featureEnd: Int = value.indexOf(')')
+        return if (featureStart != -1 && featureEnd != -1) {
+            value.slice(featureStart + 1 until featureEnd)
+        } else null
+    }
+
+    // simply uppercase and prepend "NO_"
+    private fun missingName(annotation: Annotation): String = "NO_${annotation.value.uppercase()}"
+
+    /** Returns the head of a pos string. E.g. NOU for NOU(num=sg). Does not support multi-pos. */
+    private fun singlePosToHead(pos: String): String {
+        for (separator in POS_HEAD_SEPARATORS) {
+            if (separator in pos) {
+                val head = pos.split(separator)[0]
+                // presumably head won't be empty, but this way we could
+                // parse something like (VRB) if anyone would ever use that
+                return head.ifEmpty { pos }
+            }
+        }
+        return pos
+    }
+
     companion object {
+        /** Empty utility term for comparison. */
         val EMPTY: Term = Term("", mapOf(Annotation.TOKEN to ""))
-        private val posAnnotations: Array<Annotation> = arrayOf(Annotation.POS, Annotation.UPOS)
-        private val posHeadSeparators: Array<Char> = arrayOf('(', '|')
+        /** What annotations are part of speech. For handling features. */
+        private val POS_ANNOTATIONS = arrayOf(Annotation.POS, Annotation.UPOS)
+        /** What characters separate part of speech head and features. */
+        private val POS_HEAD_SEPARATORS = arrayOf('(', '|')
 
-        // simply uppercase and prepend "NO_"
-        fun missingName(annotation: Annotation): String = "NO_${annotation.value.uppercase()}"
-
-        /** The features of [pos]. E.g. "num=sg" for "NOU(num=sg)". Does not support multi-pos. */
-        fun features(pos: String?): String? {
-            if (pos == null) return null
-            val featureStart: Int = pos.indexOf('(')
-            val featureEnd: Int = pos.indexOf(')')
-            return if (featureStart != -1 && featureEnd != -1) {
-                return pos.slice(featureStart + 1 until featureEnd)
-            } else null
-        }
-
-        fun singlePosToHead(pos: String): String {
-            for (separator in posHeadSeparators) {
-                if (separator in pos) {
-                    val head = pos.split(separator)[0]
-                    // presumably head won't be empty, but this way we could
-                    // parse something like (VRB) if anyone would ever use that
-                    return head.ifEmpty { pos }
-                }
-            }
-            return pos
-        }
-
-        fun Array<Term>.toSpacedString(): String = buildString {
-            this@toSpacedString.forEachIndexed { i, t ->
-                append(t.token)
-                // Never add a space for the last term
-                if (i != this@toSpacedString.lastIndex) append(t.space)
-            }
-        }
-
+        /** Build string for plain text with spaces. */
         fun List<Term>.toSpacedString(): String = buildString {
             this@toSpacedString.forEachIndexed { i, t ->
                 append(t.token)

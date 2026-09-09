@@ -1,5 +1,6 @@
 package org.ivdnt.galahad.formats.conllu
 
+import org.ivdnt.galahad.annotations.Annotation
 import java.io.OutputStream
 import java.io.PrintWriter
 import org.ivdnt.galahad.annotations.Term
@@ -21,9 +22,9 @@ class ConlluWriter(export: DocumentExport) : LayerWriter(export) {
                     sent.terms.forEachIndexed { termI, t ->
                         val token = t.token
                         val lemma = t.lemma ?: "_"
-                        val upos = t.upos?.let { Term.singlePosToHead(it) } ?: "_"
+                        val upos = t.upos?.let { t.annotationHead(Annotation.UPOS) } ?: "_"
                         val xpos = t.pos ?: "_"
-                        val feats = t.upos?.let { Term.features(it) } ?: "_"
+                        val feats = t.upos?.let { t.features(Annotation.UPOS) } ?: "_"
                         val deprel = t.deprel ?: "_"
                         val deps = "_"
                         val head = t.head ?: "_"

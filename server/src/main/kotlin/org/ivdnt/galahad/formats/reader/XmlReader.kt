@@ -156,7 +156,8 @@ abstract class XmlReader(stream: InputStream) : LayerReader() {
     private fun newSpan() {
         newWordform()
         if (nerValue == null) return
-        spans.getOrPut(Annotation.NER, ::mutableListOf) += TermSpan(nerTargets, nerValue!!)
+        // toList for copying
+        spans.getOrPut(Annotation.NER, ::mutableListOf) += TermSpan(nerTargets.toList(), nerValue!!)
         nerValue = null
         nerTargets.clear()
     }
