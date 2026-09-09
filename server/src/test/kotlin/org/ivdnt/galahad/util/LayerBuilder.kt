@@ -67,13 +67,13 @@ class LayerBuilder {
 
     fun build(): Layer =
         Layer(
-            arrayOf(
+            listOf(
                 DocumentLayer(
                     "",
-                    arrayOf(
+                    listOf(
                         ParagraphLayer(
                             "",
-                            arrayOf(SentenceLayer("", terms.toTypedArray(), emptyMap())),
+                            listOf(SentenceLayer("", terms, emptyMap())),
                         )
                     ),
                 )

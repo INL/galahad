@@ -13,12 +13,12 @@ class SentenceLayer(
     /** Sentence ID. (E.g. conllu: "sent_id".) */
     val id: String,
     /** Terms in this sentence. */
-    val terms: Array<Term>,
+    val terms: List<Term>,
     /** An empty map can be given as argument, for which we want to force this.spans to be null. */
-    spans: Map<Annotation, Array<TermSpan>>?,
+    spans: Map<Annotation, List<TermSpan>>?,
 ) {
     /** TermSpans in this sentence per annotation type. */
-    val spans: Map<Annotation, Array<TermSpan>>? = spans?.ifEmpty { null }
+    val spans: Map<Annotation, List<TermSpan>>? = spans?.ifEmpty { null }
 
     /**
      * Sentence as string, concatenating all terms with spaces when [Term.spaceAfter] isn't falsy.

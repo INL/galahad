@@ -143,7 +143,7 @@ class NafReader(file: File) : LayerReader() {
             newParagraph()
         }
         newDocument()
-        return Layer(documents.toTypedArray(), id)
+        return Layer(documents, id)
     }
 
     override fun newSentence() {

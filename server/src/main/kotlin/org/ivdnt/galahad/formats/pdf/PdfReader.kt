@@ -23,7 +23,7 @@ class PdfReader(stream: InputStream) : LayerReader() {
                 }
         }
         newDocument()
-        return Layer(documents.toTypedArray())
+        return Layer(documents)
     }
 
     companion object {

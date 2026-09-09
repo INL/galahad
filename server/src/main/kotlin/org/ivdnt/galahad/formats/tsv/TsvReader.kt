@@ -20,7 +20,7 @@ class TsvReader(val file: File) : LineReader() {
             }
         }
         newDocument()
-        return Layer(documents.toTypedArray())
+        return Layer(documents)
     }
 
     /**

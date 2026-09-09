@@ -5,7 +5,7 @@ class ParagraphLayer(
     /** Paragraph ID. (E.g. conllu: "newpar id".) */
     val id: String,
     /** Sentences in this paragraph. */
-    val sentences: Array<SentenceLayer>,
+    val sentences: List<SentenceLayer>,
 ) {
     /** Paragraph as string, concatenating all sentences with newlines. */
     override fun toString(): String = sentences.joinToString("\n")

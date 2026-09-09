@@ -13,7 +13,7 @@ import org.ivdnt.galahad.formats.txt.TxtWriter
 import org.ivdnt.galahad.layer.DocumentLayer
 
 abstract class LayerWriter protected constructor(protected val export: DocumentExport) {
-    protected val documents: Array<DocumentLayer> = export.layer.documents
+    protected val documents: List<DocumentLayer> = export.layer.documents
 
     abstract fun convert(out: OutputStream)
 

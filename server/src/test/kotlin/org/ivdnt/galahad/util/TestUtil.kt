@@ -12,6 +12,7 @@ import org.ivdnt.galahad.corpora.CorpusMetadata
 import org.ivdnt.galahad.metadata.Period
 import org.ivdnt.galahad.metadata.Source
 import org.springframework.http.HttpHeaders
+import java.net.URI
 
 object TestUtil {
     const val TAGGER: String = "pie-tdn-all"
@@ -60,7 +61,7 @@ object TestUtil {
                 Period(1200, 1300),
                 "Dutch",
                 "TDN-Core",
-                Source("source name", URL("http://source.url")),
+                Source("source name", URI("http://source.url")),
                 mutableSetOf("collaborator"),
                 mutableSetOf("viewer"),
             )

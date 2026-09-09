@@ -10,12 +10,12 @@ import org.ivdnt.galahad.annotations.Term
  */
 data class LayerAnnotations(@JsonValue val annotations: Map<Annotation, Int>) {
     val keys: Set<Annotation>
-        get() = Annotation.Companion.sort(annotations.keys)
+        get() = Annotation.sort(annotations.keys)
 
     companion object {
-        val EMPTY: LayerAnnotations = LayerAnnotations(emptyMap<Annotation, Int>())
+        val EMPTY: LayerAnnotations = LayerAnnotations(emptyMap())
 
-        fun fromTerms(terms: Iterable<Term>): LayerAnnotations =
+        fun fromTerms(terms: List<Term>): LayerAnnotations =
             LayerAnnotations(
                 annotations =
                     terms

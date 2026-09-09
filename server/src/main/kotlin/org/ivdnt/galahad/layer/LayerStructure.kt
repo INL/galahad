@@ -18,7 +18,7 @@ class LayerStructure(
         val EMPTY: LayerStructure = LayerStructure(0, 0, 0)
 
         /** Obtain the structure from an array of DocumentLayers. */
-        fun fromDocuments(documents: Array<DocumentLayer>): LayerStructure =
+        fun fromDocuments(documents: List<DocumentLayer>): LayerStructure =
             LayerStructure(
                 documents.size,
                 documents.sumOf { it.paragraphs.size },

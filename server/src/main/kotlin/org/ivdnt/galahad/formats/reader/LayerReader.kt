@@ -46,7 +46,8 @@ abstract class LayerReader {
     protected open fun newDocument() {
         newParagraph()
         if (paragraphs.isNotEmpty()) {
-            documents.add(DocumentLayer(docID(), paragraphs.toTypedArray()))
+            // toList for copying
+            documents.add(DocumentLayer(docID(), paragraphs.toList()))
             paragraphs.clear()
         }
     }
@@ -54,7 +55,8 @@ abstract class LayerReader {
     protected open fun newParagraph() {
         newSentence()
         if (sentences.isNotEmpty()) {
-            paragraphs.add(ParagraphLayer(parID(), sentences.toTypedArray()))
+            // toList for copying
+            paragraphs.add(ParagraphLayer(parID(), sentences.toList()))
             sentences.clear()
         }
     }
@@ -62,11 +64,12 @@ abstract class LayerReader {
     protected open fun newSentence() {
         newWordform()
         if (terms.isNotEmpty()) {
+            // toList for copying
             sentences.add(
                 SentenceLayer(
                     sentID(),
-                    terms.toTypedArray(),
-                    spans.mapValues { it.value.toTypedArray() }.toMap(),
+                    terms.toList(),
+                    spans.mapValues { it.value },
                 )
             )
             terms.clear()

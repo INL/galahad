@@ -60,7 +60,7 @@ abstract class XmlReader(stream: InputStream) : LayerReader() {
             }
         }
         parseDocuments()
-        return Layer(documents.toTypedArray(), rootID)
+        return Layer(documents, rootID)
     }
 
     private fun parseDocuments() {

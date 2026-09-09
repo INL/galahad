@@ -27,6 +27,6 @@ class TxtReader(val file: File) : LayerReader() {
         }
         /** Create a single [DocumentLayer]. */
         newDocument()
-        return Layer(documents.toTypedArray())
+        return Layer(documents)
     }
 }

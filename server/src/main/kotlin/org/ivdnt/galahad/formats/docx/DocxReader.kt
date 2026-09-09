@@ -21,7 +21,7 @@ class DocxReader(stream: InputStream) : LayerReader() {
             newParagraph()
         }
         newDocument()
-        return Layer(documents.toTypedArray())
+        return Layer(documents)
     }
 
     companion object {

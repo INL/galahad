@@ -40,7 +40,7 @@ class ConlluReader(val file: File) : LineReader() {
         }
         // create a document for the remaining tokens
         newDocument()
-        return Layer(documents.toTypedArray())
+        return Layer(documents)
     }
 
     override fun newSentence() {
